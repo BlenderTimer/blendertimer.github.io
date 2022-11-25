@@ -1,6 +1,86 @@
-<html>
-  <body>
-    <h1>404<h1>
-      <button onclick="history.back()">Back</button>
-  </body>
+<!-- Color Palette
+White: #F5F5F5 rgba(245,245,245,1.0)
+Dark1: 1E1E1E rgba(30,30,30,1.0)
+-->
+<! DOCTYPE html5>
+<html xmlns="https://www.blendertimer.com">
+	<head>
+		<title>BlenderTimer</title>
+		<link href="./files/images/Logo-BT-32.png" rel="shortcut icon"/>
+	</head>
+	<body onload="baseLoad()" id="body-id" style="background: #500">
+		<h1 id="primary-404" style="margin-top: -8vw">404</h1>
+        <div id="text-404"><p>Oh this is a dead end.</p><p>Just in case you couldn't tell.</p></div>
+        <button onclick="history.back()" id="back-button">Go Back</button>
+	</body>
 </html>
+<style>
+* {
+    margin: 0;
+     padding: 0;
+ }
+body, html {
+    max-height: 100%;
+    box-sizing: border-box;
+}
+    
+body {
+    background: #1E1E1E;
+    color: #F5F5F5;
+    transition: 0.3s cubic-bezier(0.57, 3.28, 0.27,-2.09);
+}
+
+#primary-404 {
+    font-family: monospace;
+    font-size: 15vh;
+    text-align: center;
+    margin-top: 30vh;
+    display: block;
+    text-shadow: 0px 10px 20px rgba(0,0,0,0.7);
+    transition: 0.2s cubic-bezier(0.83, 3.07, 0.52, 0.37);
+}
+
+#back-button {
+    width: auto;
+    display: block;
+    text-align: center;
+    font-family: monospace;
+    color: #F5F5F5;
+    font-size: 3vh;
+    padding: 0.8vh 5vh;
+    cursor: pointer;
+    background: #3E3E3E;
+    border: 2px solid #2E2E2E;
+    border-radius: 100px;
+    margin: 5vh auto;
+    transition: 0.3s cubic-bezier(0.83, 3.07, 0.52, 0.37);
+    outline: none;
+    text-shadow: 0px 0px 8px rgba(0,0,0,0.5);
+    box-shadow: 0px 0px 15px rgba(0,0,0,0.5);
+}
+
+#back-button:hover {
+    padding: 0.8vh 7vh;
+    background: #1E1E1E;
+    border: 2px solid #3E3E3E;
+}
+
+#text-404 {
+    width: 100%;
+    display: block;
+    box-sizing: border-box;
+    text-align: center;
+    font-family: monospace;
+    font-size: 4vh;
+    text-shadow: 0px 0px 12px rgba(0,0,0,1);
+    padding: 0px 8vh;
+}
+</style>
+<script type="text/javascript">
+	function baseLoad() {
+        var p404 = document.getElementById('primary-404');
+        var bodyId = document.getElementById('body-id');
+        p404.style.marginTop = "30vh";
+        bodyId.style.background = "#1E1E1E";
+    }
+</script>
