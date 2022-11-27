@@ -1,16 +1,15 @@
-<! DOCTYPE html5>
 <html xmlns="https://www.blendertimer.com">
 	<head>
 		<title>BlenderTimer</title>
-		<link href="./files/images/Logo-BT-32.png" rel="shortcut icon"/>
+		<link href="./6912519/images/Logo-BT-32.png" rel="shortcut icon"/>
 		<link rel="stylesheet" type="text/css" href="./7-5-14-5-18-1-12/general.css"/>
 	</head>
-	<body onload="baseLoad()">
-		<div id="warning-banner" onclick="hideWarningBanner()"><div id="warning-banner-main"><img id="wb-close" src="./files/images/close-x.png"><p>UNDER CONSTRUCTION</p></div></div>
+	<body onload="baseLoad()" onresize="determineDisplayMenu()">
+		<div id="warning-banner" onclick="hideWarningBanner()" style="margin: 0px 0px -100px 0px; opacity: 0"><div id="warning-banner-main"><img id="wb-close" src="./6912519/images/close-x.png"><p>UNDER CONSTRUCTION</p></div></div>
 		<div id="background-plate"></div>
 		<div id="banner-menu">
 			<nav>
-				<a href="./" id="nav-home"><img id="nav-home-img" src="./files/images/nav-logohome.png"></a>
+				<a href="./" id="nav-home"><img id="nav-home-img" src="./6912519/images/nav-logohome.png"></a>
 				<ul id="large-menu" style="display: none">
 					<li><a href="#">Placeholder</a>
 						<ul>
@@ -21,12 +20,21 @@
 					</li>
 					<li><a href="/about">About</a></li>
 				</ul>
-				<div id="small-menu" style="display: none"><img src="./files/images/menu-bars.png"></div>
+				<li id="small-menu" style="display: none" onclick="smallMenuToggle()"><img src="./6912519/images/menu-bars.png"></li>
+				<div id="small-menu-main" style="margin: -180px 6% 0px 0px; box-shadow: 0px 20px 20px rgba(0,0,0,0.0)">
+					<a href="#" class="small-menu-button-0">Placeholder</a>
+					<a href="#" class="small-menu-button-1">One</a>
+					<a href="#" class="small-menu-button-1">Two</a>
+					<a href="#" class="small-menu-button-1">Three</a>
+					<a href="/about" class="small-menu-button-0">About</a>
+				</div>
 			</nav>
 		</div>
-		<div id="content-main">
-			<div class="content">
-				<b id="blah">Yep, nothing here yet.🤦‍♂️</b>
+		<div id="content-main" style="opacity: 0; transition: 0.65s cubic-bezier(0.22, 0.93, 0.46, 1.03); transform: scaleY(0.1) scaleX(0.1)">
+			<div id="welcome-block">
+				<h1 id="welcome-text-main">Welcome to BlenderTimer.com!</h1>
+				<b>Check out the latest video!<b>
+				<iframe width="100%" src="https://www.youtube.com/embed/jxU3c0Gjboo" id="latest-video-video"></iframe>
 			</div>
 		</div>
 	</body>
