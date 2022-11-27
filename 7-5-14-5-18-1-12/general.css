@@ -14,13 +14,11 @@
 }
 body, html {
 	height: 100%;
-	box-sizing: border-box;
 }
 
 body {
 	background: #080808;
 	color: #000;
-	box-sizing: border-box;
 }
 
 #warning-banner {
