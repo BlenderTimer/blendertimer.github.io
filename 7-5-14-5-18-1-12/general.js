@@ -5,6 +5,7 @@ var largeMenu = document.getElementById('large-menu');
 var blah = document.getElementById('blah');
 var smallMenuMain = document.getElementById('small-menu-main');
 var contentMain = document.getElementById('content-main');
+var navDropdown = document.all["nav-dropdown"]
 var smallMenuOpen = false
 
 window.onscroll = function(){
