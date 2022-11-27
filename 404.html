@@ -3,9 +3,8 @@
 		<title>BlenderTimer</title>
 		<link href="./6912519/images/Logo-BT-32-404.png" rel="shortcut icon"/>
 	</head>
-	<body onload="baseLoad()" id="body-id">
-		<!--<h1 id="primary-404" style="margin-top: -8vw">404</h1>-->
-        <img src="..../404.gif" id="primary-404" style="width: 100%; margin-top: -8vh">
+	<body onload="baseLoad()" id="body-id" style="background: #880000">
+		<h1 id="primary-404" style="margin-top: -8vw">404</h1>
         <div id="text-404"><p>Welp...some days are just like that.</p></div>
         <button onclick="history.back()" id="back-button">I'm going home</button>
 	</body>
@@ -25,7 +24,6 @@ body {
     color: #F5F5F5;
     transition: 0.3s cubic-bezier(0.57, 3.28, 0.27,-2.09);
 }
-/*
 #primary-404 {
     font-family: monospace;
     font-size: 15vh;
@@ -33,10 +31,6 @@ body {
     margin-top: 30vh;
     display: block;
     text-shadow: 0px 10px 20px rgba(0,0,0,0.7);
-    transition: 0.2s cubic-bezier(0.83, 3.07, 0.52, 0.37);
-}
-*/
-#primary-404 {
     transition: 0.2s cubic-bezier(0.83, 3.07, 0.52, 0.37);
 }
 #back-button {
@@ -77,10 +71,9 @@ body {
 </style>
 <script type="text/javascript">
 	function baseLoad() {
-        //var p404 = document.getElementById('primary-404');
         var p404 = document.getElementById('primary-404');
-        //var bodyId = document.getElementById('body-id');
-        p404.style.marginTop = "25vh";
-        //bodyId.style.background = "#1E1E1E";
+        var bodyId = document.getElementById('body-id');
+        p404.style.marginTop = "30vh";
+        bodyId.style.background = "#1E1E1E";
     }
 </script>
