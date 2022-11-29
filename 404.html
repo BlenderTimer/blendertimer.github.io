@@ -5,8 +5,8 @@
 	</head>
 	<body onload="baseLoad()" id="body-id" style="background: #880000">
 		<h1 id="primary-404" style="margin-top: -8vw">404</h1>
-        <div id="text-404"><p>Welp...some days are just like that.</p></div>
-        <button onclick="history.back()" id="back-button">I'm going home</button>
+        <div id="text-404"><p id="t-404-l1"></p><p id="t-404-l2" style="display: none"></p><p id="t-404-l3" style="display: none"></p></div>
+        <button onclick="history.back()" id="back-button"></button>
 	</body>
 </html>
 <style>
@@ -68,12 +68,72 @@ body {
     text-shadow: 0px 0px 12px rgba(0,0,0,1);
     padding: 0px 8vh;
 }
+
+#text-404 p {
+    margin: 10px 0px;
+}
 </style>
 <script type="text/javascript">
+    var p404 = document.getElementById('primary-404');
+    var t404L1 = document.getElementById('t-404-l1');
+    var t404L2 = document.getElementById('t-404-l2');
+    var t404L3 = document.getElementById('t-404-l3');
+    var back404 = document.getElementById('back-button');
+    var bodyId = document.getElementById('body-id');
+    var rndm = Math.floor(Math.random() * 5)
+    function writeL2() {
+        t404L2.style.display = "block";
+        }
+    function writeL3() {
+        t404L3.style.display = "block";
+        }
 	function baseLoad() {
-        var p404 = document.getElementById('primary-404');
-        var bodyId = document.getElementById('body-id');
         p404.style.marginTop = "30vh";
         bodyId.style.background = "#1E1E1E";
+        if (rndm == 0) {
+        	t404L1.innerHTML = "Welp...some days are just like that.";
+            t404L2.style.display = "none";
+            t404L2.innerHTML = "";
+            t404L3.style.display = "none";
+            t404L3.innerHTML = "";
+        	back404.textContent = "I'm going home";
+    	}
+    	else if (rndm == 1) {
+    		t404L1.innerHTML = "You literally just broke the entire website.";
+            t404L2.style.display = "none";
+            t404L2.innerHTML = "Just kidding. ;)";
+            t404L3.style.display = "none";
+            t404L3.innerHTML = "";
+        	back404.textContent = "Get me out of here";
+            setTimeout(function(){writeL2()}, 2500);
+    	}
+    	else if (rndm == 2) {
+    		t404L1.innerHTML = "What are you doing?";
+            t404L2.style.display = "none";
+            t404L2.innerHTML = "There's no gold here.";
+            t404L3.style.display = "none";
+            t404L3.innerHTML = "Are you lost?";
+        	back404.textContent = "I don't really know.";
+            setTimeout(function(){writeL2()}, 1500);
+            setTimeout(function(){writeL3()}, 3000);
+    	}
+    	else if (rndm == 3) {
+    		t404L1.innerHTML = "That's a 404.";
+            t404L2.style.display = "none";
+    		t404L2.innerHTML = "Just in case you couldn't tell.";
+            t404L3.style.display = "none";
+            t404L3.innerHTML = "";
+        	back404.textContent = "I can read";
+            setTimeout(function(){writeL2()}, 2500);
+    	}
+    	else if (rndm == 4) {
+    		t404L1.innerHTML = "Wrong way.";
+            t404L2.style.display = "none";
+    		t404L2.innerHTML = "At least it's not a one way street!";
+            t404L3.style.display = "none";
+            t404L3.innerHTML = "";
+        	back404.textContent = "Turn around";
+            setTimeout(function(){writeL2()}, 2000);
+    	}
     }
 </script>
