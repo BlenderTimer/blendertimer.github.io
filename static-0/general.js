@@ -35,7 +35,6 @@ function baseLoad() {
 	determineDisplayMenu()
 	contentMain.style.marginLeft = "5%";
 	contentMain.style.opacity = "1";
-	contentMain.style.transform = "scaleY(1) scaleX(1)";
 	warningBanner.style.margin = "0px 0px 0px 0px";
 	warningBanner.style.opacity = "1";
 }
