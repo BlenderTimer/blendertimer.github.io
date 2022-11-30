@@ -80,7 +80,7 @@ body {
     var t404L3 = document.getElementById('t-404-l3');
     var back404 = document.getElementById('back-button');
     var bodyId = document.getElementById('body-id');
-    var rndm = Math.floor(Math.random() * 5)
+    var rndm = Math.floor(Math.random() * 6)
     function writeL2() {
         t404L2.style.display = "block";
         }
@@ -135,5 +135,14 @@ body {
         	back404.textContent = "Turn around";
             setTimeout(function(){writeL2()}, 2000);
     	}
+        else if (rndm == 5) {
+            t404L1.innerHTML = "Well...this is a dead end.";
+            t404L2.style.display = "none";
+            t404L2.innerHTML = "I guess you'll have to try a different way.";
+            t404L3.style.display = "none";
+            t404L3.innerHTML = "";
+            back404.textContent = "Ok";
+            setTimeout(function(){writeL2()}, 2000);
+        }
     }
 </script>

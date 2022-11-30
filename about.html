@@ -1,0 +1,61 @@
+<html xmlns="https://www.blendertimer.com/about">
+	<head>
+		<title>About - BlenderTimer</title>
+		<link href="./static-0/files/images/Logo-BT-32.png" rel="shortcut icon"/>
+		<link rel="stylesheet" type="text/css" href="./static-0/general.css"/>
+		<link rel="stylesheet" type="text/css" href="./static-0/about.css"/>
+	</head>
+	<body onload="baseLoad()" onresize="determineDisplayMenu()">
+		<div id="warning-banner" onclick="hideWarningBanner()" style="margin: 0px 0px -100px 0px; opacity: 0; display: none"><div id="warning-banner-main"><img id="wb-close" src="./static-0/files/images/close-x.png"><p>UNDER CONSTRUCTION</p></div></div>
+		<div id="background-plate"></div>
+		<div id="banner-menu">
+			<nav>
+				<a href="./" id="nav-home"><img id="nav-home-img" src="./static-0/files/images/nav-logohome.png"></a>
+				<!--====================  LARGE MENU  ====================-->
+				<ul id="large-menu" style="display: none">
+					<li><a href="/about">About</a>
+						<ul>
+							<li><a href="/contact">Contact</a></li>
+						</ul>
+					</li>
+				</ul>
+				<li id="small-menu" style="display: none" onclick="smallMenuToggle()"><img src="./static-0/files/images/menu-bars.png"></li>
+				<!--====================  SMALL MENU  ====================-->
+				<div id="small-menu-main">
+					<a href="/about" class="small-menu-button-0">About</a>
+					<a href="/contact" class="small-menu-button-1">Contact</a>
+				</div>
+			</nav>
+		</div>
+		<div id="content-main" style="opacity: 0; transition: 0.65s cubic-bezier(0.22, 0.93, 0.46, 1.03); transform: scaleY(0.1) scaleX(0.1)">
+			<div id="about-block">
+				<h4>About BlenderTimer</h4>
+				<div id="about-main">
+					<div id="left-elements">
+						<img id="about-logo" src="./static-0/files/images/Logo-BT-256.png">
+						<div id="social-platforms">
+							<h4>BlenderTimer Social</h4>
+							<a class="social" href="https://www.youtube.com/BlenderTimer"><img src="./static-0/files/images/Logo-YT-32.png"><b class="social-text">YouTube</b></a>
+							<a class="social" href="https://pixabay.com/users/blendertimer-9538909/"><img src="./static-0/files/images/Logo-Pix-32.png"><b class="social-text">Pixabay</b></a>
+							<a class="social" href="https://www.instagram.com/blendertimer"><img src="./static-0/files/images/Logo-Ig-32.png"><b class="social-text">Instagram</b></a>
+							<a class="social" href="https://blenderartists.org/u/blendertimer/activity/portfolio"><img src="./static-0/files/images/Logo-BA-32.png"><b class="social-text">Blender Artists</b></a>
+						</div>
+					</div>
+					<div id="right-elements">
+						<article>
+						<p>Hi! I'm Daniel Roberts, founder of </p><a href="https://www.blendertimer.com" target="_blank">BlenderTimer</a><p>! I started BlenderTimer back in early 2016 for no real purpose (other than fun of course). I'm a self taught photographer, videographer, digital artist (3D and 2D), YouTube creator, Pixabay Ambassador, programmer/developer (mainly in HTML, CSS, JavaScript, .Net, and Python), DIYer, and kinda a musician. I'm currently based in the USA.</p>
+						</article>
+						<p>I started making educational YouTube videos in late November, 2021, though I uploaded the first video on March 16, 2022. I animate all the videos in </p><a href="https://www.blender.org" target="_blank">Blender</a><p>, create the music in </p><a href="https://lmms.io" target="_blank">LMMS</a><p>, and narrate the videos.</p>
+					</div>
+					<div id="fun-stats">
+						<h4>Here's some stats just for fun.</h4>
+						<funstat><h5 class="fun-stat-title">First YouTube Video:</h5><a href="https://www.youtube.com/watch?v=yaPhKc31zPs" target="_blank">The Basics of the Solar System in 10 Minutes!</a></funstat>
+						<funstat><h5 class="fun-stat-title">First YouTube Video Uploaded On:</h5><p>March 16, 2022</p></funstat>
+						<funstat><h5 class="fun-stat-title">Average YouTube Video Creation Time:</h5><p>61 days</p></funstat>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
+<script src="./static-0/general.js" type="text/javascript"></script>
