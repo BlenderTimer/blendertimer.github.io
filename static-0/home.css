@@ -24,7 +24,7 @@
 }
 
 #revolver-map {
-	width: 25vw;
+	width: 100%;
 	height: auto;
 	margin: 0px;
 	text-align: center;
@@ -38,4 +38,5 @@
 #revolver-map-0 {
 	border-radius: 8px;
 	overflow: hidden;
+	margin-top: 10px;
 }
