@@ -348,6 +348,15 @@ nav ul li ul li a:hover {
 	cursor: default;
 }
 
+#content-main h6 {
+	font-size: 10pt;
+	color: #E5E5E5;
+	font-weight: bold;
+	width: auto;
+	display: inline-block;
+	cursor: default;
+}
+
 #content-main b {
 	font-size: 12pt;
 	color: #E5E5E5;
