@@ -80,7 +80,7 @@ body {
     var t404L3 = document.getElementById('t-404-l3');
     var back404 = document.getElementById('back-button');
     var bodyId = document.getElementById('body-id');
-    var rndm = Math.floor(Math.random() * 6)
+    var rndm = Math.floor(Math.random() * 10)
     function writeL2() {
         t404L2.style.display = "block";
         }
@@ -143,6 +143,45 @@ body {
             t404L3.innerHTML = "";
             back404.textContent = "Ok";
             setTimeout(function(){writeL2()}, 2000);
+        }
+        else if (rndm == 6) {
+            t404L1.innerHTML = "So...";
+            t404L2.style.display = "none";
+            t404L2.innerHTML = "Where exactly were you going?";
+            t404L3.style.display = "none";
+            t404L3.innerHTML = "";
+            back404.textContent = "I don't know.";
+            setTimeout(function(){writeL2()}, 1500);
+        }
+        else if (rndm == 7) {
+            t404L1.innerHTML = "Excuse me? You can't come here.";
+            t404L2.style.display = "none";
+            t404L2.innerHTML = "Mainly 'cause it doesn't exist.";
+            t404L3.style.display = "none";
+            t404L3.innerHTML = "LOL";
+            back404.textContent = "Ok, whatever";
+            setTimeout(function(){writeL2()}, 1500);
+            setTimeout(function(){writeL3()}, 3000);
+        }
+        else if (rndm == 8) {
+            t404L1.innerHTML = "That is what I like to call...";
+            t404L2.style.display = "none";
+            t404L2.innerHTML = "absolutely nothing.";
+            t404L3.style.display = "none";
+            t404L3.innerHTML = "hehe";
+            back404.textContent = "Stop";
+            setTimeout(function(){writeL2()}, 2000);
+            setTimeout(function(){writeL3()}, 3000);
+        }
+        else if (rndm == 9) {
+            t404L1.innerHTML = "Congratulations! You've found a 404!";
+            t404L2.style.display = "none";
+            t404L2.innerHTML = "These things are valuable you know.";
+            t404L3.style.display = "none";
+            t404L3.innerHTML = "Right?";
+            back404.textContent = "No";
+            setTimeout(function(){writeL2()}, 1500);
+            setTimeout(function(){writeL3()}, 4000);
         }
     }
 </script>
