@@ -12,10 +12,10 @@ window.onscroll = function(){
 	bgPlate.style.backgroundPosition = "0px " + (document.scrollingElement.scrollTop * -0.15) + "px";
 }
 
-	function hideWarningBanner(){
-		warningBanner.style.transition = "0.3s cubic-bezier(0.79, 0.01, 1, 0.65)";
-		warningBanner.style.margin = "0px 0px -100px 0px";
-		warningBanner.style.opacity = "0";
+function hideWarningBanner(){
+	warningBanner.style.transition = "0.3s cubic-bezier(0.79, 0.01, 1, 0.65)";
+	warningBanner.style.margin = "0px 0px -100px 0px";
+	warningBanner.style.opacity = "0";
 }
 
 function determineDisplayMenu() {
@@ -37,6 +37,7 @@ function baseLoad() {
 	contentMain.style.opacity = "1";
 	warningBanner.style.margin = "0px 0px 0px 0px";
 	warningBanner.style.opacity = "1";
+	bgPlate.style.backgroundPosition = "0px " + (document.scrollingElement.scrollTop * -0.15) + "px";
 }
 
 function smallMenuToggle() {

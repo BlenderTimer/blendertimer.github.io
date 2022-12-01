@@ -354,8 +354,20 @@ nav ul li ul li a:hover {
 	font-weight: bold;
 	width: auto;
 	display: inline-block;
-	cursor: default;
 }
+
+#content-main h7 {
+	font-size: 25pt;
+	color: #2E2E2E;
+	font-weight: bold;
+	width: calc(100% - 100px);
+	text-align: center;
+	display: block;
+	margin-top: 26%;
+	position: absolute;
+	z-index: -0;
+}
+
 
 #content-main b {
 	font-size: 12pt;
