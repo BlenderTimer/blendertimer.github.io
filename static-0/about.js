@@ -16,7 +16,7 @@ function contactLinkToggle() {
 		contactLink.style.marginLeft = "-10px";
 		contactLink.style.background = "#353535";
 		contactLink.style.boxShadow = "0px 0px 20px rgba(0,0,0,0.5)";
-		setTimeout(function(){contactText.textContent = "Copied to clipboard!";}, 80);
+		setTimeout(function(){contactText.textContent = "Copied to clipboard!";}, 150);
 		navigator.clipboard.writeText("inquiries.blendertimer@gmail.com");
 		linkOpen = true;
 	}
