@@ -26,6 +26,7 @@
 #revolver-map {
 	width: 100%;
 	height: auto;
+	min-height: 10vw;
 	margin: 0px;
 	text-align: center;
 	border-radius: 10px;
