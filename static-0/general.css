@@ -312,7 +312,7 @@ nav ul li ul li a:hover {
 	font-family: monospace;
 	font-size: 15pt;
 	color: #F5F5F5;
-	min-height: 80%;
+	min-height: calc(100% - 50px - 100px);
 	border-radius: 10px;
 	box-sizing: border-box;
     padding: 30px;

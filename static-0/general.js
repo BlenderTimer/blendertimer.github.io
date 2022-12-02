@@ -54,3 +54,7 @@ function smallMenuToggle() {
 		smallMenuOpen = true;
 	}
 }
+
+function redirect(url) {
+	window.location = url;
+}
