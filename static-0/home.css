@@ -27,7 +27,7 @@
 }
 
 #submitavideoidea {
-	width: 33.33%;
+	width: calc(33.33% - 20px);
 	height: 300px;
 	margin: 0px;
 	text-align: center;
@@ -39,12 +39,12 @@
 	float: left;
 }
 
-#savi-bulb-img {
+.misc-content-img {
 	height: 50%;
 	margin: 0px 0px 20px 0px;
 }
 
-#submitavideoidea-button {
+.misc-content-button {
     width: auto;
     display: block;
     text-align: center;
@@ -63,10 +63,36 @@
     box-shadow: 0px 0px 15px rgba(0,0,0,0.5);
 }
 
-#submitavideoidea-button:hover {
+.misc-content-button:hover {
     padding: 5px 40px;
     background: #1E1E1E;
     border: 2px solid #3E3E3E;
+}
+
+#channel-milestones {
+	width: calc(33.33% - 20px);
+	height: 300px;
+	margin: 0px 30px;
+	text-align: center;
+	border-radius: 10px;
+	background: #252525;
+	box-shadow: 0px 0px 20px rgba(0,0,0,0.3);
+	padding: 20px;
+	box-sizing: border-box;
+	float: left;
+}
+
+#fun-demos {
+	width: calc(33.33% - 20px);
+	height: 300px;
+	margin: 0px;
+	text-align: center;
+	border-radius: 10px;
+	background: #252525;
+	box-shadow: 0px 0px 20px rgba(0,0,0,0.3);
+	padding: 20px;
+	box-sizing: border-box;
+	float: left;
 }
 
 #site-activity-block {
@@ -92,4 +118,17 @@
 	border-radius: 8px;
 	overflow: hidden;
 	margin-top: 10px;
+}
+
+
+#revolver-map-0 h7 {
+	font-size: 25pt;
+	color: #2E2E2E;
+	font-weight: bold;
+	width: calc(100% - 100px);
+	text-align: center;
+	display: block;
+	margin-top: 26%;
+	position: absolute;
+	z-index: -0;
 }
