@@ -1,15 +1,23 @@
 var tlCanvas = document.getElementById("tl-canvas");
 var tl2d = tlCanvas.getContext("2d");
 var timeline = document.getElementById("timeline");
-var initialTime = new Date(2020, 0, 0).getTime();
+var initialTime = new Date(2021, 3, 21).getTime();
 var currentTime = new Date().getTime();
 var currentDay = Math.floor(currentTime / 84000000) + 1;
 var initialDay = Math.floor(initialTime / 84000000);
 var totalDaysLive = Math.floor(currentDay - initialDay);
 var lineSpacing = 30;
 //----------MILESTONES----------
+var channelStarted = Math.floor(new Date(2021, 3, 21).getTime() / 84000000);
 var firstVideoUpload = Math.floor(new Date(2022, 2, 16).getTime() / 84000000);
+var views10000 = Math.floor(new Date(2022, 6, 3).getTime() / 84000000);
+var subscribers1000 = Math.floor(new Date(2022, 6, 5).getTime() / 84000000);
+var views100000 = Math.floor(new Date(2022, 6, 6).getTime() / 84000000);
+var subscribers5000 = Math.floor(new Date(2022, 7, 16).getTime() / 84000000);
+var subscribers10000 = Math.floor(new Date(2022, 7, 30).getTime() / 84000000);
+var views1000000 = Math.floor(new Date(2022, 8, 10).getTime() / 84000000);
 var firstShortUpload = Math.floor(new Date(2022, 10, 30).getTime() / 84000000);
+var watchHours100000 = Math.floor(new Date(2022, 10, 31).getTime() / 84000000);
 //------------------------------
 function addLine(x, height) {
 	tl2d.beginPath();
@@ -105,48 +113,65 @@ function addYear(year, x, newyear) {
 	}
 }
 
-function addMilestone(title, desl1, desl2, x) {
+function addMilestone(title, desl1, desl2, yOffset, desOffset, titleOffset, x) {
 	tl2d.fillStyle = "#006AAF";
-	tl2d.fillRect(x + 15, 106, 30, 40);
+	tl2d.fillRect(x + 15, 106 - yOffset, 30, 40);
 	tl2d.fillStyle = "#0087C1";
-	tl2d.fillRect(x, 100, 40, 40);
+	tl2d.fillRect(x, 100 - yOffset, 40, 40);
 	tl2d.beginPath();
-	tl2d.moveTo(x + 15, 140);
-	tl2d.lineTo(x + 40, 140);
-	tl2d.lineTo(x + 15, 146);
+	tl2d.moveTo(x + 15, 140 - yOffset);
+	tl2d.lineTo(x + 40, 140 - yOffset);
+	tl2d.lineTo(x + 15, 146 - yOffset);
 	tl2d.closePath();
 	tl2d.fillStyle = "#003D64";
 	tl2d.fill();
 	tl2d.beginPath();
-	tl2d.moveTo(x + 45, 106);
-	tl2d.lineTo(x + 58, 106);
-	tl2d.lineTo(x + 45, 127);
+	tl2d.moveTo(x + 45, 106 - yOffset);
+	tl2d.lineTo(x + 58, 106 - yOffset);
+	tl2d.lineTo(x + 45, 127 - yOffset);
 	tl2d.closePath();
 	tl2d.fillStyle = "#006AAF";
 	tl2d.fill();
 	tl2d.beginPath();
-	tl2d.moveTo(x + 45, 127);
-	tl2d.lineTo(x + 58, 146);
-	tl2d.lineTo(x + 45, 146);
+	tl2d.moveTo(x + 45, 127 - yOffset);
+	tl2d.lineTo(x + 58, 146 - yOffset);
+	tl2d.lineTo(x + 45, 146 - yOffset);
 	tl2d.closePath();
 	tl2d.fillStyle = "#006AAF";
 	tl2d.fill();
 	tl2d.beginPath();
 	tl2d.moveTo(x, 300);
-	tl2d.lineTo(x, 100);
+	tl2d.lineTo(x, 100 - yOffset);
 	tl2d.strokeStyle = "#484F5F";
 	tl2d.lineWidth = 3;
 	tl2d.lineCap = "round";
 	tl2d.stroke();
-	tl2d.font = "bold 15pt monospace";
-	tl2d.fillStyle = "#BBBBBB";
-	tl2d.fillText(title, x, 80);
-	tl2d.font = "12pt monospace";
-	tl2d.fillStyle = "#555555";
-	tl2d.fillText(desl1, x + 20, 175);
-	tl2d.font = "12pt monospace";
-	tl2d.fillStyle = "#555555";
-	tl2d.fillText(desl2, x + 20, 195);
+	if (titleOffset == true) {
+		tl2d.font = "bold 15pt monospace";
+		tl2d.fillStyle = "#BBBBBB";
+		tl2d.fillText(title, x + 75, 132.5 - yOffset);
+	}
+	else {
+		tl2d.font = "bold 15pt monospace";
+		tl2d.fillStyle = "#BBBBBB";
+		tl2d.fillText(title, x, 80 - yOffset);
+	}
+	if (desOffset == true) {
+		tl2d.font = "12pt monospace";
+		tl2d.fillStyle = "#555555";
+		tl2d.fillText(desl1, x + 70, 122 - yOffset);
+		tl2d.font = "12pt monospace";
+		tl2d.fillStyle = "#555555";
+		tl2d.fillText(desl2, x + 70, 142 - yOffset);
+	}
+	else {
+		tl2d.font = "12pt monospace";
+		tl2d.fillStyle = "#555555";
+		tl2d.fillText(desl1, x + 20, 175 - yOffset);
+		tl2d.font = "12pt monospace";
+		tl2d.fillStyle = "#555555";
+		tl2d.fillText(desl2, x + 20, 195 - yOffset);
+	}
 }
 
 function drawTimeline() {
@@ -156,11 +181,35 @@ function drawTimeline() {
 	var lastYear = 0;
 	while (i < currentDay) {
 		//----------MILESTONES----------
-		if (i == firstVideoUpload) {
-			addMilestone("First Video!", "First video uploaded:", "The Basics of the Solar System in 10 Minutes!", (i - initialDay) * lineSpacing + 25);
+		if (i == channelStarted) {
+			addMilestone("Channel Started!", "", "", 0, false, false, (i - initialDay) * lineSpacing + 25);
+		}
+		else if (i == firstVideoUpload) {
+			addMilestone("First Video!", "First video uploaded:", "The Basics of the Solar System in 10 Minutes!", 0, false, false, (i - initialDay) * lineSpacing + 25);
+		}
+		else if (i == views10000) {
+			addMilestone("10,000 Views!", "", "", 20, false, true, (i - initialDay) * lineSpacing + 25);
+		}
+		else if (i == subscribers1000) {
+			addMilestone("1,000 Subscribers!", "", "", -40, false, true, (i - initialDay) * lineSpacing + 25);
+		}
+		else if (i == views100000) {
+			addMilestone("100,000 Views!", "", "", -100, false, true, (i - initialDay) * lineSpacing + 25);
+		}
+		else if (i == subscribers5000) {
+			addMilestone("5,000 Subscribers!", "", "", 0, false, false, (i - initialDay) * lineSpacing + 25);
+		}
+		else if (i == subscribers10000) {
+			addMilestone("10,000 Subscribers!", "", "", 0, false, false, (i - initialDay) * lineSpacing + 25);
+		}
+		else if (i == views1000000) {
+			addMilestone("1,000,000 Views!", "", "", 0, false, false, (i - initialDay) * lineSpacing + 25);
 		}
 		else if (i == firstShortUpload) {
-			addMilestone("First Short!", "First short uploaded:", "The INTERROBANG - Fantastic Fact 01", (i - initialDay) * lineSpacing + 25);
+			addMilestone("First Short!", "First short uploaded:", "The INTERROBANG - Fantastic Fact 01", 0, true, false, (i - initialDay) * lineSpacing + 25);
+		}
+		else if (i == watchHours100000) {
+			addMilestone("100,000 watch hours!", "", "", -60, false, true, (i - initialDay) * lineSpacing + 25);
 		}
 		//------------------------------
 		if (new Date(i * 84000000).getUTCDate() == 1) {
