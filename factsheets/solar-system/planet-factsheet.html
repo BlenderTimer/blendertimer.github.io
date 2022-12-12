@@ -23,6 +23,9 @@
 		<div id="factsheet" style="display: block">
 			<table id="unit-table">
 				<tr><th style="opacity: 0; box-shadow: none; cursor: default">N/A</th></tr>
+				<tr><th onclick="infoPopup('Mean Diameter', 'The mean diameter of the planet from the equatorial and polar diameter.')">Mean Diameter</th></tr>
+				<tr><th onclick="infoPopup('Equatorial Diameter', 'The diameter of the planet from the equator.')">Equatorial Diameter</th></tr>
+				<tr><th onclick="infoPopup('Polar Diameter', 'The diameter of the planet from one pole to the opposite pole. (i.e. North Pole to South Pole)')">Polar Diameter</th></tr>
 				<tr><th onclick="infoPopup('Moons', 'The number of moons (natural satellites) the planet has orbiting around it.')">Moons</th></tr>
 				<tr><th onclick="infoPopup('Global Magnetic Field', 'The force that allows devices such as compasses to work. True if a global magnetic field is present, false if not.')">Global Magnetic Field</th></tr>
 				<tr><th onclick="infoPopup('Ring System', 'True if a ring system is present, false if not. This value will be true even if the ring system is faint.')">Ring System</th></tr>
@@ -39,7 +42,40 @@
 					<th class="uranus">Uranus</th>
 					<th class="neptune">Neptune</th>
 				</tr>
-				<tr>
+				<tr> <!-- Mean Diameter -->
+					<td style="width: 196px; min-width: 196px; max-width: 196px"></td>
+					<td class="mercury">3031.919 miles</td>
+					<td class="venus">7520.828 miles</td>
+					<td class="earth">7913.162 miles</td>
+					<td class="mars">4208.175 miles</td>
+					<td class="jupiter">85,964.219 miles</td>
+					<td class="saturn">71,229.023 miles</td>
+					<td class="uranus">31,399.130 miles</td>
+					<td class="neptune">30,512.432 miles</td>
+				</tr>
+				<tr> <!-- Equatorial Diameter -->
+					<td style="width: 196px; min-width: 196px; max-width: 196px"></td>
+					<td class="mercury">3031.919 miles</td>
+					<td class="venus">7520.828 miles</td>
+					<td class="earth">7926.210 miles</td>
+					<td class="mars">4220.602 miles</td>
+					<td class="jupiter">88,846.139 miles</td>
+					<td class="saturn">74,897.598 miles</td>
+					<td class="uranus">31,763.253 miles</td>
+					<td class="neptune">30,775.272 miles</td>
+				</tr>
+				<tr> <!-- Polar Diameter -->
+					<td style="width: 196px; min-width: 196px; max-width: 196px"></td>
+					<td class="mercury">3031.919 miles</td>
+					<td class="venus">7520.828 miles</td>
+					<td class="earth">7900.114 miles</td>
+					<td class="mars">4195.747 miles</td>
+					<td class="jupiter">83,082.299 miles</td>
+					<td class="saturn">67,560.447 miles</td>
+					<td class="uranus">31,035.006 miles</td>
+					<td class="neptune">30,249.592 miles</td>
+				</tr>
+				<tr> <!-- Moons -->
 					<td style="width: 196px; min-width: 196px; max-width: 196px"></td>
 					<td class="mercury">0</td>
 					<td class="venus">0</td>
@@ -50,7 +86,7 @@
 					<td class="uranus">27</td>
 					<td class="neptune">14</td>
 				</tr>
-				<tr>
+				<tr> <!-- Global Magnetic Field -->
 					<td style="width: 196px; min-width: 196px; max-width: 196px"></td>
 					<td class="mercury">True</td>
 					<td class="venus">False</td>
@@ -61,7 +97,7 @@
 					<td class="uranus">True</td>
 					<td class="neptune">True</td>
 				</tr>
-				<tr>
+				<tr> <!-- Ring System -->
 					<td style="width: 196px; min-width: 196px; max-width: 196px"></td>
 					<td class="mercury">False</td>
 					<td class="venus">False</td>
