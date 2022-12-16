@@ -22,7 +22,7 @@
 		<h2 id="no-factsheet" style="opacity: 0; display: none">Factsheet Unavailable<h2>
 		<div id="factsheet" style="display: block">
 			<table id="unit-table">
-				<tr><th style="opacity: 0; box-shadow: none; cursor: default">N/A</th></tr>
+				<tr><th style="background: #151515; border-color: #888888" onclick="switchUnits()" id="units">Units: Imperial</th></tr>
 				<tr><th onclick="infoPopup('Mean Diameter', 'The mean diameter of the planet from the equatorial and polar diameter.')">Mean Diameter</th></tr>
 				<tr><th onclick="infoPopup('Equatorial Diameter', 'The diameter of the planet from the equator.')">Equatorial Diameter</th></tr>
 				<tr><th onclick="infoPopup('Polar Diameter', 'The diameter of the planet from one pole to the opposite pole. (i.e. North Pole to South Pole)')">Polar Diameter</th></tr>
@@ -447,6 +447,10 @@ body {
 	var popupBackground = document.getElementById('popup-background');
 	var ipdTitle = document.getElementById('ipd-title');
 	var ipdText = document.getElementById('ipd-text');
+	var units = document.getElementById('units');
+	var infoI = [];
+	var infoM = [];
+
 	function baseLoad() {
 		noFactsheet.style.opacity = "1";
 		factsheet.style.height = primaryTable.offsetHeight;
@@ -467,16 +471,23 @@ body {
 	function copy(event) {
   		var target = event.target || event.srcElement;
   		var copyText = target.innerText || target.textContent;
-        navigator.clipboard.writeText(copyText)
+        navigator.clipboard.writeText(copyText);
 	}
 
 	var thlist = document.getElementById("primary-table").querySelectorAll("th");
 	var tdlist = document.getElementById("primary-table").querySelectorAll("td");
 	for (var i=0; i < thlist.length; i++) {
-  		thlist[i].addEventListener("click", copy)
+  		thlist[i].addEventListener("click", copy);
 	}
 	for (var i=0; i < tdlist.length; i++) {
-  		tdlist[i].addEventListener("click", copy)
+  		tdlist[i].addEventListener("click", copy);
+  		infoI.push(tdlist[i].textContent);
+  		if (tdlist[i].textContent.search("miles") > -1) {
+			infoM.push(((tdlist[i].textContent.substring(0, tdlist[i].textContent.indexOf("miles") - 1)) * 1.609344).toFixed(3) + " kilometers");
+  		}
+  		else {
+  			infoM.push(tdlist[i].textContent);
+  		}
 	}
 
 	function infoPopup(title, text) {
@@ -501,5 +512,26 @@ body {
 		infoPopupDiv.style.opacity = "0";
 		popupBackground.style.opacity = "0";
 		setTimeout(function() {infoPopupDiv.style.display = "none"; popupBackground.style.display = "none"}, 500);
+	}
+
+	function switchUnits() {
+		if (units.textContent == "Units: Imperial") {
+			units.style.transform = "scaleX(0)";
+			setTimeout(function() {units.style.transform = "scaleX(1)";
+				units.textContent = "Units: Metric";
+				for (var i=0; i < tdlist.length; i++) {
+  					tdlist[i].textContent = infoM[i];
+  				}
+  			}, 200);
+		}
+		else {
+			units.style.transform = "scaleX(0)";
+			setTimeout(function() {units.style.transform = "scaleX(1)";
+				units.textContent = "Units: Imperial";
+				for (var i=0; i < tdlist.length; i++) {
+  					tdlist[i].textContent = infoI[i];
+  				}
+  			}, 200);
+		}
 	}
 </script>
