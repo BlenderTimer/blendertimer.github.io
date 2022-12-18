@@ -23,6 +23,7 @@
 		<div id="factsheet" style="display: block">
 			<table id="unit-table">
 				<tr><th style="background: #151515; border-color: #888888" onclick="switchUnits()" id="units">Units: Imperial</th></tr>
+				<tr><th onclick="infoPopup('Type', 'The planet type. Terrestrial or Gaseous.')">Type</th></tr>
 				<tr><th onclick="infoPopup('Mean Diameter', 'The mean diameter of the planet from the equatorial and polar diameter.')">Mean Diameter</th></tr>
 				<tr><th onclick="infoPopup('Equatorial Diameter', 'The diameter of the planet from the equator.')">Equatorial Diameter</th></tr>
 				<tr><th onclick="infoPopup('Polar Diameter', 'The diameter of the planet from one pole to the opposite pole. (i.e. North Pole to South Pole)')">Polar Diameter</th></tr>
@@ -42,12 +43,23 @@
 					<th class="uranus">Uranus</th>
 					<th class="neptune">Neptune</th>
 				</tr>
+				<tr> <!-- Type -->
+					<td style="width: 196px; min-width: 196px; max-width: 196px"></td>
+					<td class="mercury">Terrestrial</td>
+					<td class="venus">Terrestrial</td>
+					<td class="earth">Terrestrial</td>
+					<td class="mars">Terrestrial</td>
+					<td class="jupiter">Gaseous</td>
+					<td class="saturn">Gaseous</td>
+					<td class="uranus">Gaseous</td>
+					<td class="neptune">Gaseous</td>
+				</tr>
 				<tr> <!-- Mean Diameter -->
 					<td style="width: 196px; min-width: 196px; max-width: 196px"></td>
-					<td class="mercury">3031.919 miles</td>
-					<td class="venus">7520.828 miles</td>
-					<td class="earth">7913.162 miles</td>
-					<td class="mars">4208.175 miles</td>
+					<td class="mercury">3,031.919 miles</td>
+					<td class="venus">7,520.828 miles</td>
+					<td class="earth">7,913.162 miles</td>
+					<td class="mars">4,208.175 miles</td>
 					<td class="jupiter">85,964.219 miles</td>
 					<td class="saturn">71,229.023 miles</td>
 					<td class="uranus">31,399.130 miles</td>
@@ -55,10 +67,10 @@
 				</tr>
 				<tr> <!-- Equatorial Diameter -->
 					<td style="width: 196px; min-width: 196px; max-width: 196px"></td>
-					<td class="mercury">3031.919 miles</td>
-					<td class="venus">7520.828 miles</td>
-					<td class="earth">7926.210 miles</td>
-					<td class="mars">4220.602 miles</td>
+					<td class="mercury">3,031.919 miles</td>
+					<td class="venus">7,520.828 miles</td>
+					<td class="earth">7,926.210 miles</td>
+					<td class="mars">4,220.602 miles</td>
 					<td class="jupiter">88,846.139 miles</td>
 					<td class="saturn">74,897.598 miles</td>
 					<td class="uranus">31,763.253 miles</td>
@@ -66,10 +78,10 @@
 				</tr>
 				<tr> <!-- Polar Diameter -->
 					<td style="width: 196px; min-width: 196px; max-width: 196px"></td>
-					<td class="mercury">3031.919 miles</td>
-					<td class="venus">7520.828 miles</td>
-					<td class="earth">7900.114 miles</td>
-					<td class="mars">4195.747 miles</td>
+					<td class="mercury">3,031.919 miles</td>
+					<td class="venus">7,520.828 miles</td>
+					<td class="earth">7,900.114 miles</td>
+					<td class="mars">4,195.747 miles</td>
 					<td class="jupiter">83,082.299 miles</td>
 					<td class="saturn">67,560.447 miles</td>
 					<td class="uranus">31,035.006 miles</td>
@@ -482,12 +494,27 @@ body {
 	for (var i=0; i < tdlist.length; i++) {
   		tdlist[i].addEventListener("click", copy);
   		infoI.push(tdlist[i].textContent);
+  		//Convert units to metric and write them to an array
   		if (tdlist[i].textContent.search("miles") > -1) {
-			infoM.push(((tdlist[i].textContent.substring(0, tdlist[i].textContent.indexOf("miles") - 1)) * 1.609344).toFixed(3) + " kilometers");
+  			var otc = tdlist[i].textContent; //Original Units
+  			var tc = tdlist[i].textContent.replace(/,/g,""); //Units with all commas (,) removed
+			infoM.push(addCommas(((tc.substring(0, tc.indexOf("miles") - 1)) * 1.609344).toFixed(3)) + " kilometers");
   		}
   		else {
   			infoM.push(tdlist[i].textContent);
   		}
+	}
+
+	function addCommas(number) {
+		var i = number.toString().length - 4;
+		var sn = number.toString()
+		while (i > 0) {
+			i -= 3
+			if (i > 0) {
+				sn = sn.substring(0,i) + "," + sn.substring(i,sn.length);
+			}
+		}
+		return sn
 	}
 
 	function infoPopup(title, text) {
