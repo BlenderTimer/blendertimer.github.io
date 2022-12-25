@@ -89,7 +89,7 @@ body {
     var t404L3 = document.getElementById('t-404-l3');
     var back404 = document.getElementById('back-button');
     var bodyId = document.getElementById('body-id');
-    var rndm = Math.floor(Math.random() * 10)
+    var rndm = Math.floor(Math.random() * 20)
     function writeL2() {
         t404L2.style.display = "block";
         }
@@ -191,6 +191,101 @@ body {
             back404.textContent = "No";
             setTimeout(function(){writeL2()}, 1500);
             setTimeout(function(){writeL3()}, 4000);
+        }
+        else if (rndm == 10) {
+            t404L1.innerHTML = "Some days...";
+            t404L2.style.display = "none";
+            t404L2.innerHTML = "you just fail.";
+            t404L3.style.display = "none";
+            t404L3.innerHTML = "";
+            back404.textContent = "Yeah";
+            setTimeout(function(){writeL2()}, 1500);
+        }
+        else if (rndm == 11) {
+            t404L1.innerHTML = "You're trapped now!";
+            t404L2.style.display = "none";
+            t404L2.innerHTML = "Downloading virus...";
+            t404L3.style.display = "none";
+            t404L3.innerHTML = "Just kidding. ;)";
+            back404.textContent = "Allow download";
+            setTimeout(function(){writeL2()}, 1000);
+            setTimeout(function(){writeL3()}, 4000);
+        }
+        else if (rndm == 12) {
+            t404L1.innerHTML = "Bonk!";
+            t404L2.style.display = "none";
+            t404L2.innerHTML = "";
+            t404L3.style.display = "none";
+            t404L3.innerHTML = "";
+            back404.textContent = "Ouch";
+        }
+        else if (rndm == 13) {
+            t404L1.innerHTML = "Sorry but...";
+            t404L2.style.display = "none";
+            t404L2.innerHTML = "it's your fault.";
+            t404L3.style.display = "none";
+            t404L3.innerHTML = "Wait, unless I...";
+            back404.textContent = "Not my fault";
+            setTimeout(function(){writeL2()}, 1500);
+            setTimeout(function(){writeL3()}, 3000);
+        }
+        else if (rndm == 14) {
+            t404L1.innerHTML = "Either you made a mistake.";
+            t404L2.style.display = "none";
+            t404L2.innerHTML = "Or I did.";
+            t404L3.style.display = "none";
+            t404L3.innerHTML = "It's definitely the first.";
+            back404.textContent = "No";
+            setTimeout(function(){writeL2()}, 1500);
+            setTimeout(function(){writeL3()}, 4000);
+        }
+        else if (rndm == 15) {
+            t404L1.innerHTML = "Look I tried...";
+            t404L2.style.display = "none";
+            t404L2.innerHTML = "to give you a 404.";
+            t404L3.style.display = "none";
+            t404L3.innerHTML = "Wait, no, I mean...";
+            back404.textContent = "Yes";
+            setTimeout(function(){writeL2()}, 1500);
+            setTimeout(function(){writeL3()}, 2000);
+        }
+        else if (rndm == 16) {
+            t404L1.innerHTML = "I leave for two seconds...";
+            t404L2.style.display = "none";
+            t404L2.innerHTML = "...and you immediately break everything.";
+            t404L3.style.display = "none";
+            t404L3.innerHTML = "";
+            back404.textContent = "Hehe";
+            setTimeout(function(){writeL2()}, 1500);
+        }
+        else if (rndm == 17) {
+            t404L1.innerHTML = "You've arrived!";
+            t404L2.style.display = "none";
+            t404L2.innerHTML = "...at the wrong spot.";
+            t404L3.style.display = "none";
+            t404L3.innerHTML = "";
+            back404.textContent = "Oops";
+            setTimeout(function(){writeL2()}, 1500);
+        }
+        else if (rndm == 18) {
+            t404L1.innerHTML = "Let's just say...";
+            t404L2.style.display = "none";
+            t404L2.innerHTML = "...it's your fault.";
+            t404L3.style.display = "none";
+            t404L3.innerHTML = "'Cause I refuse to take credit.";
+            back404.textContent = "Not my fault";
+            setTimeout(function(){writeL2()}, 1500);
+            setTimeout(function(){writeL3()}, 3000);
+        }
+        else if (rndm == 19) {
+            t404L1.innerHTML = "Wasn't my fault!";
+            t404L2.style.display = "none";
+            t404L2.innerHTML = "I refuse to take credit!";
+            t404L3.style.display = "none";
+            t404L3.innerHTML = "Only debit.";
+            back404.textContent = "Ummmm";
+            setTimeout(function(){writeL2()}, 1500);
+            setTimeout(function(){writeL3()}, 3000);
         }
     }
 </script>
