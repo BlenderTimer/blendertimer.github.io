@@ -49,7 +49,7 @@ function smallMenuToggle() {
 	}
 	else{
 		smallMenuMain.style.boxShadow = "0px 20px 20px rgba(0,0,0,0.5)";
-		smallMenuMain.style.width = "150px";
+		smallMenuMain.style.width = "200px";
 		smallMenuMain.style.opacity = "1";
 		smallMenuOpen = true;
 	}
