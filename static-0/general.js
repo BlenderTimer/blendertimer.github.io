@@ -2,6 +2,7 @@ var bgPlate = document.getElementById('background-plate');
 var warningBanner = document.getElementById('warning-banner');
 var smallMenu = document.getElementById('small-menu');
 var largeMenu = document.getElementById('large-menu');
+var largeMenuItem = document.getElementsByClassName('large-menu-item');
 var blah = document.getElementById('blah');
 var smallMenuMain = document.getElementById('small-menu-main');
 var contentMain = document.getElementById('content-main');
@@ -19,14 +20,18 @@ function hideWarningBanner(){
 }
 
 function determineDisplayMenu() {
-	if (window.innerWidth < 700){
+	if (window.innerWidth < 800){
 		smallMenu.style.display = "block";
-		largeMenu.style.display = "none";
+		for (var i=0; i < largeMenuItem.length; i++) {
+  			largeMenuItem[i].style.display = "none";
+		}
 		smallMenuMain.style.display = "block";
 	}
 	else{
 		smallMenu.style.display = "none";
-		largeMenu.style.display = "block";
+		for (var i=0; i < largeMenuItem.length; i++) {
+  			largeMenuItem[i].style.display = "block";
+		}
 		smallMenuMain.style.display = "none";
 	}
 }
