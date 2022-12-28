@@ -3,7 +3,6 @@ var warningBanner = document.getElementById('warning-banner');
 var smallMenu = document.getElementById('small-menu');
 var largeMenu = document.getElementById('large-menu');
 var largeMenuItem = document.getElementsByClassName('large-menu-item');
-var blah = document.getElementById('blah');
 var smallMenuMain = document.getElementById('small-menu-main');
 var contentMain = document.getElementById('content-main');
 var navDropdown = document.all["nav-dropdown"]
