@@ -12,6 +12,12 @@
 	margin: 0;
 	padding: 0;
 }
+
+::selection {
+	background: #EEEEEE;
+	color: #404040;
+}
+
 body, html {
 	height: auto;
 	min-height: 100%;
