@@ -18,6 +18,7 @@ var subscribers10000 = Math.floor(new Date(2022, 7, 30).getTime() / 84000000);
 var views1000000 = Math.floor(new Date(2022, 8, 10).getTime() / 84000000);
 var firstShortUpload = Math.floor(new Date(2022, 10, 30).getTime() / 84000000);
 var watchHours100000 = Math.floor(new Date(2022, 10, 31).getTime() / 84000000);
+var views2000000 = Math.floor(new Date(2022, 11, 28).getTime() / 84000000);
 //------------------------------
 function addLine(x, height) {
 	tl2d.beginPath();
@@ -210,6 +211,9 @@ function drawTimeline() {
 		}
 		else if (i == watchHours100000) {
 			addMilestone("100,000 watch hours!", "", "", -60, false, true, (i - initialDay) * lineSpacing + 25);
+		}
+		else if (i == views2000000) {
+			addMilestone("2,000,000 Views!", "", "", 0, false, false, (i - initialDay) * lineSpacing + 25);
 		}
 		//------------------------------
 		if (new Date(i * 84000000).getUTCDate() == 1) {
