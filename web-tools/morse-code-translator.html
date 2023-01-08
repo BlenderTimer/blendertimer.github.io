@@ -16,12 +16,9 @@
 				var sub2 = originalTextArea.value.toString().substr(oTIsel - 3, 3)
 				var sectA = originalTextArea.value.toString().substring(0, oTIsel - 1)
 				var sectB = originalTextArea.value.toString().substring(oTIsel, originalTextArea.value.toString().length)
-				console.log("sectA [" + sectA + "]")
-				console.log("sectB [" + sectB + "]")
-				console.log("sub1 [" + sub1 + "]")
-				if (smartType == true) {
+				if (smartType == true && translatorType == 1) {
 					if (lastOTValue.length < originalTextArea.value.toString().length) {
-						if (sub1 == " ") { //--------- Replace single spaces [ ] with three
+						if (sub1 == " ") { //--------- Replace single spaces [ ] with three [   ]
 							originalTextArea.value = sectA + "  " + sectB;
 							originalTextArea.selectionStart = oTIsel + 1;
 							originalTextArea.selectionEnd = oTIsel + 1;
@@ -42,6 +39,11 @@
 							originalTextArea.value = originalTextArea.value.toString().substring(1, originalTextArea.value.toString().length);
 							originalTextArea.selectionStart = oTIsel;
 							originalTextArea.selectionEnd = oTIsel;
+						}
+					}
+					else {
+						if (sub1 == " ") {
+							originalTextArea.value = sectA + sectB;
 						}
 					}
 				}
@@ -146,7 +148,7 @@
 				</div>
 			</div>
 		</div>
-		<p id="version">Tool version: 1.2</p>
+		<p id="version">Tool version: 1.3</p>
 	</body>
 </html>
 <style>
@@ -579,22 +581,6 @@ body {
   		}
 	}
 
-	function baseLoad() {
-		document.body.style.opacity = 1;
-		setTimeout(function() {document.getElementById('loading').style.display = "none"; document.body.style.overflow = "auto"}, 100);
-	}
-
-	function smartTypeToggle() {
-		if (smartType == false) {
-			otSmartType.style.background = "#1E801E";
-			smartType = true;
-		}
-		else {
-			otSmartType.style = "";
-			smartType = false;
-		}
-	}
-
 	function setType(type) {
 		if (type == "EtoMC") {
 			translatorType = 0;
@@ -629,6 +615,26 @@ body {
 			originalTextTitle.textContent = "Morse Code:";
 			originalTextArea.placeholder = "Type the Morse Code you want to translate here!";
 			translatedTextTitle.textContent = "English Text:";
+		}
+	}
+
+	function baseLoad() {
+		document.body.style.opacity = 1;
+		setTimeout(function() {document.getElementById('loading').style.display = "none";
+			document.body.style.overflow = "auto";
+			if (window.location.toString().indexOf("?from-morse-code") > -1 || window.location.toString().indexOf("?from") > -1 || window.location.toString().indexOf("?from-mc") > -1 || window.location.toString().indexOf("?fromMC") > -1 || window.location.toString().indexOf("?fmc") > -1 || window.location.toString().indexOf("?to-english") > -1 || window.location.toString().indexOf("?toEnglish") > -1 || window.location.toString().indexOf("?toE") > -1 || window.location.toString().indexOf("?to-e") > -1) {
+    			setType("MCtoE");
+    	}}, 100);
+	}
+
+	function smartTypeToggle() {
+		if (smartType == false) {
+			otSmartType.style.background = "#1E801E";
+			smartType = true;
+		}
+		else {
+			otSmartType.style = "";
+			smartType = false;
 		}
 	}
 
@@ -734,7 +740,6 @@ body {
 				i += 1
 			}
 			i = 0;
-			console.log(letters)
 			text = "";
 			while (i < letters.length) {
 				letter = letters[i];
