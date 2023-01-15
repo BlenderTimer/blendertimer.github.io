@@ -27,10 +27,9 @@ jobs:
         echo "url-count = ${{ steps.sitemap.outputs.url-count }}"
         echo "excluded-count = ${{ steps.sitemap.outputs.excluded-count }}"
     
-    - name: Commit and push
-      run: |
-          git config --global user.name 'BlenderTimer'
-          git config --global user.email 'blendertimer.d@gmail.com'
-          git add sitemap.xml
-          git commit -m "Automated sitemap update" sitemap.xml
-          git push
+    - name: Update resources
+      uses: cicirello/generate-sitemap@v1
+      with:
+        file-path: /sitemap.xml
+        commit-msg: Update resources
+        github-token: ${{ secrets.GITHUB_TOKEN }}
