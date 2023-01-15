@@ -29,10 +29,8 @@ jobs:
     
     - name: Commit and push
       run: |
-        if [[ `git status --porcelain sitemap.xml` ]]; then
           git config --global user.name 'BlenderTimer'
           git config --global user.email 'blendertimer.d@gmail.com'
           git add sitemap.xml
           git commit -m "Automated sitemap update" sitemap.xml
           git push
-        fi
