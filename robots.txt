@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /static-0/
+Disallow: /404/
+Allow: /
+
+Sitemap: https://blendertimer.com/sitemap.xml
