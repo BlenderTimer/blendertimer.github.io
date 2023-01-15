@@ -1,6 +1,6 @@
 User-agent: *
 Disallow: /static-0/
-Disallow: /404/
+Disallow: /404.html
 Allow: /
 
 Sitemap: https://blendertimer.com/sitemap.xml
