@@ -3,6 +3,7 @@ name: Generate xml sitemap
 on:
   push:
     branches: [ main ]
+  workflow_dispatch:
 
 jobs:
   sitemap_job:
@@ -11,7 +12,7 @@ jobs:
 
     steps:
     - name: Checkout the repo
-      uses: actions/checkout@v2
+      uses: actions/checkout@v3
       with:
         fetch-depth: 0 
 
@@ -26,10 +27,13 @@ jobs:
         echo "sitemap-path = ${{ steps.sitemap.outputs.sitemap-path }}"
         echo "url-count = ${{ steps.sitemap.outputs.url-count }}"
         echo "excluded-count = ${{ steps.sitemap.outputs.excluded-count }}"
-    
-    - name: Update resources
-      uses: cicirello/generate-sitemap@v1
-      with:
-        file-path: /sitemap.xml
-        commit-msg: Update resources
-        github-token: ${{ secrets.GITHUB_TOKEN }}
+
+    - name: Commit and push
+      run: |
+        if [[ `git status --porcelain sitemap.xml` ]]; then
+          git config --global user.name 'Daniel Roberts'
+          git config --global user.email 'BlenderTimer@users.noreply.github.com'
+          git add sitemap.xml
+          git commit -m "Automated sitemap update" sitemap.xml
+          git push
+        fi
