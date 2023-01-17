@@ -11,17 +11,18 @@
 	margin: auto;
 }
 
-
 .copy-fdid {
-	background: rgba(37,37,37,0);
+	background: #353535;
 	cursor: pointer;
 	transition: 0.3s;
 	position: absolute;
-	right: 50px;
+	right: 15px;
+	margin-top: -33px;
 	width: 30px;
 	height: 30px;
 	padding: 2px;
 	border-radius: 20px;
+	box-shadow: 0px 0px 15px rgba(0,0,0,0.3);
 }
 
 .copy-fdid:hover {
@@ -194,7 +195,8 @@
 	background: #3A3A3A;
 	border: none;
 	border-radius: 5px;
-	width: 300px;
+	width: 100%;
+	max-width: 300px;
 	resize: none;
 	color: #D0D0D0;
 	padding: 10px;

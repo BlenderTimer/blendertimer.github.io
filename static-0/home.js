@@ -1,27 +1,67 @@
 var submitAVideoIdea = document.getElementById('submitavideoidea');
 var channelMilestones = document.getElementById('channel-milestones');
 var funDemos = document.getElementById('fun-demos');
+var welcomeText = document.getElementById('welcome-text-main');
 var latestContent = document.getElementById('latest-content');
 var latestVideo = document.getElementById('latest-video-video');
 var latestShort = document.getElementById('latest-video-short');
 var videoFound = false;
 var shortFound = false;
-
 function determineLayout() {
-	if (window.innerWidth < 600){
+    if (window.innerWidth < 350) {
+        submitAVideoIdea.style.width = "100%";
+        channelMilestones.style.width = "100%";
+        funDemos.style.width = "100%";
+        welcomeText.style.fontSize = "17pt";
+        latestVideo.style.width = "100%";
+        latestVideo.style.marginBottom = "30px";
+        latestShort.style.width = "100%";
+        latestContent.style.flexWrap = "wrap";
+        latestContent.style.height = "auto";
+    }
+	else if (window.innerWidth < 600) {
 		submitAVideoIdea.style.width = "100%";
 		channelMilestones.style.width = "100%";
 		funDemos.style.width = "100%";
+        welcomeText.style.fontSize = "6.5vw";
+        latestVideo.style.width = "100%";
+        latestVideo.style.marginBottom = "30px";
+        latestShort.style.width = "80%";
+        latestContent.style.flexWrap = "wrap";
+        latestContent.style.height = "auto";
 	}
 	else if (window.innerWidth < 800){
 		submitAVideoIdea.style.width = "calc(50% - 20px)";
 		channelMilestones.style.width = "calc(50% - 20px)";
 		funDemos.style.width = "calc(50% - 20px)";
+        welcomeText.style.fontSize = "30pt";
+        latestVideo.style.width = "100%";
+        latestVideo.style.marginBottom = "30px";
+        latestShort.style.width = "50%";
+        latestContent.style.flexWrap = "wrap";
+        latestContent.style.height = "auto";
 	}
-	else{
+    else if (window.innerWidth < 900){
+        submitAVideoIdea.style.width = "calc(50% - 20px)";
+        channelMilestones.style.width = "calc(50% - 20px)";
+        funDemos.style.width = "calc(50% - 20px)";
+        welcomeText.style.fontSize = "30pt";
+        latestVideo.style.width = "100%";
+        latestVideo.style.marginBottom = "30px";
+        latestShort.style.width = "50%";
+        latestContent.style.flexWrap = "wrap";
+        latestContent.style.height = "auto";
+    }
+	else {
 		submitAVideoIdea.style.width = "calc(33.33% - 20px)";
 		channelMilestones.style.width = "calc(33.33% - 20px)";
 		funDemos.style.width = "calc(33.33% - 20px)";
+        welcomeText.style.fontSize = "30pt";
+        latestVideo.style.width = "auto";
+        latestVideo.style.marginBottom = "0px";
+        latestShort.style.width = "auto";
+        latestContent.style.flexWrap = "nowrap";
+        latestContent.style.height = "30vw";
 	}
 }
 

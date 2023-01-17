@@ -19,7 +19,7 @@ function hideWarningBanner(){
 }
 
 function determineDisplayMenu() {
-	if (window.innerWidth < 800){
+	if (window.innerWidth < 1000){
 		smallMenu.style.display = "block";
 		for (var i=0; i < largeMenuItem.length; i++) {
   			largeMenuItem[i].style.display = "none";

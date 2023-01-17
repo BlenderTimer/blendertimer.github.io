@@ -1,4 +1,5 @@
 var initialTime = new Date().getTime();
+var copyFDIDBtns = document.getElementsByClassName("copy-fdid");
 
 function copyFDID(FDID) {
 	if (window.location.toString().search("#" + FDID) > -1) {
@@ -44,6 +45,10 @@ var erisDTKilometers = document.getElementById("eris-dt-km");
 
 var sunDTMiles = document.getElementById("sun-dt-mi");
 var sunDTKilometers = document.getElementById("sun-dt-km");
+var stdSun = document.getElementById("std-c-sun-block");
+var sunDTBlock1 = document.getElementById("sun-dt-block1");
+var sunDTBlock2 = document.getElementById("sun-dt-block2");
+var sunDTBlock3 = document.getElementById("sun-dt-block3");
 
 function setPlanetDistance(planet) {
 	if (planet == "mercury") {
@@ -184,16 +189,77 @@ function hmywoepCalculate() {
 
 //==========General==========
 function determineLayout() {
-	if (window.innerWidth < 1000) {
+	if (window.innerWidth < 450) {
+		for (var i=0; i < ptdCPlanetBlocks.length; i++) {
+  			ptdCPlanetBlocks[i].style.width = "100%";
+		}
+		for (var i=0; i < dptdCPlanetBlocks.length; i++) {
+  			dptdCPlanetBlocks[i].style.width = "100%";
+		}
+		stdSun.style.height = "auto";
+		sunDTBlock1.style.marginRight = "0px";
+		sunDTBlock1.style.marginLeft =  "calc(50% - 95px)";
+		sunDTBlock1.style.position = "relative";
+		sunDTBlock2.style.marginTop = "215px";
+		sunDTBlock2.style.marginLeft = "0px";
+		sunDTBlock2.style.width = "calc(100% - 120px)";
+		sunDTBlock3.style.float = "left";
+		sunDTBlock3.style.marginTop = "50px";
+		sunDTBlock3.style.marginLeft = "calc(50% - 95px)";
+		hmywoepInput.style.width = "100%";
+		hmywoepInput.style.marginBottom = "20px";
+		hmywoepResult.style.width = "100%";
+		hmywoepResult.style.height = "auto";
+		hmywoepLB.placeholder = "Your weight in lb";
+		hmywoepKG.placeholder = "Your weight in kg";
+	}
+	else if (window.innerWidth < 600) {
+		for (var i=0; i < ptdCPlanetBlocks.length; i++) {
+  			ptdCPlanetBlocks[i].style.width = "100%";
+		}
+		for (var i=0; i < dptdCPlanetBlocks.length; i++) {
+  			dptdCPlanetBlocks[i].style.width = "100%";
+		}
+		stdSun.style.height = "auto";
+		sunDTBlock1.style.marginRight = "0px";
+		sunDTBlock1.style.marginLeft =  "calc(50% - 95px)";
+		sunDTBlock1.style.position = "relative";
+		sunDTBlock2.style.marginTop = "215px";
+		sunDTBlock2.style.marginLeft = "0px";
+		sunDTBlock2.style.width = "calc(100% - 120px)";
+		sunDTBlock3.style.float = "left";
+		sunDTBlock3.style.marginTop = "50px";
+		sunDTBlock3.style.marginLeft = "calc(50% - 95px)";
+		hmywoepInput.style.width = "100%";
+		hmywoepInput.style.marginBottom = "20px";
+		hmywoepResult.style.width = "100%";
+		hmywoepResult.style.height = "auto";
+		hmywoepLB.placeholder = "Your weight in pounds";
+		hmywoepKG.placeholder = "Your weight in kilograms";
+	}
+	else if (window.innerWidth < 1000) {
 		for (var i=0; i < ptdCPlanetBlocks.length; i++) {
   			ptdCPlanetBlocks[i].style.width = "50%";
 		}
 		for (var i=0; i < dptdCPlanetBlocks.length; i++) {
   			dptdCPlanetBlocks[i].style.width = "100%";
 		}
+		stdSun.style.height = "auto";
+		sunDTBlock1.style.marginRight = "0px";
+		sunDTBlock1.style.marginLeft =  "calc(50% - 95px)";
+		sunDTBlock1.style.position = "relative";
+		sunDTBlock2.style.marginTop = "215px";
+		sunDTBlock2.style.marginLeft = "0px";
+		sunDTBlock2.style.width = "calc(100% - 120px)";
+		sunDTBlock3.style.float = "left";
+		sunDTBlock3.style.marginTop = "50px";
+		sunDTBlock3.style.marginLeft = "calc(50% - 95px)";
 		hmywoepInput.style.width = "100%";
 		hmywoepInput.style.marginBottom = "20px";
 		hmywoepResult.style.width = "100%";
+		hmywoepResult.style.height = "auto";
+		hmywoepLB.placeholder = "Your weight in pounds";
+		hmywoepKG.placeholder = "Your weight in kilograms";
 	}
 	else {
 		for (var i=0; i < ptdCPlanetBlocks.length; i++) {
@@ -202,8 +268,21 @@ function determineLayout() {
 		for (var i=0; i < dptdCPlanetBlocks.length; i++) {
   			dptdCPlanetBlocks[i].style.width = "20%";
 		}
+		stdSun.style.height = "230px";
+		sunDTBlock1.style.marginRight = "20px";
+		sunDTBlock1.style.marginLeft = "0px";
+		sunDTBlock1.style.position = "absolute";
+		sunDTBlock2.style.marginTop = "72px";
+		sunDTBlock2.style.marginLeft = "190px";
+		sunDTBlock2.style.width = "calc(100% - 500px)";
+		sunDTBlock3.style.float = "right";
+		sunDTBlock3.style.marginTop = "0px";
+		sunDTBlock3.style.marginLeft = "0px";
 		hmywoepInput.style.width = "calc(50% - 10px)";
 		hmywoepInput.style.marginBottom = "0px";
 		hmywoepResult.style.width = "calc(50% - 10px)";
+		hmywoepResult.style.height = "210px";
+		hmywoepLB.placeholder = "Your weight in pounds";
+		hmywoepKG.placeholder = "Your weight in kilograms";
 	}
 }
