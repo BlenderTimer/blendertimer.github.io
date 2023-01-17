@@ -1,5 +1,6 @@
-BT-SC License - Last updated: 11/22/2022
+License: BT-SC
+Last updated: 1/16/2023
 
-Every file available in this repository is not to be copied or sold for any purpose, commercial or non-commercial.
+No resource available under this license may be copied or sold for any purpose, commercial or non-commercial. This license strictly prohibits any modification to, complete recreation, duplication, or sale of any resource it protects without written permission from the copyright owner.
 
 This license is subject to change at any time.
