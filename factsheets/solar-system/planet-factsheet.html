@@ -1095,6 +1095,9 @@ body {
 			units.style.transform = "scaleX(0)";
 			setTimeout(function() {units.style.transform = "scaleX(1)";
 				units.textContent = "Units: Metric";
+				if (window.location.toString().indexOf("?metric") == -1) {
+					window.history.pushState("metric", document.title, "?metric");
+				}
 				for (var i=0; i < tdlist.length; i++) {
   					tdlist[i].textContent = infoM[i];
   				}
@@ -1104,6 +1107,9 @@ body {
 			units.style.transform = "scaleX(0)";
 			setTimeout(function() {units.style.transform = "scaleX(1)";
 				units.textContent = "Units: Imperial";
+				if (window.location.toString().indexOf("?metric") > -1) {
+					window.history.pushState("imperial", document.title, window.location.toString().substring(0,window.location.toString().length - 7));
+				}
 				for (var i=0; i < tdlist.length; i++) {
   					tdlist[i].textContent = infoI[i];
   				}
