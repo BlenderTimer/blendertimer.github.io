@@ -16,7 +16,7 @@
 		<link rel="stylesheet" type="text/css" href="./static-0/general.css"/>
 		<link rel="stylesheet" type="text/css" href="./static-0/about.css"/>
 	</head>
-	<body onload="baseLoad(), determineLayout()" onresize="determineDisplayMenu(), determineLayout()">
+	<body onload="baseLoad(), determineLayout(), init()" onresize="determineDisplayMenu(), determineLayout()">
 		<div id="warning-banner" onclick="hideWarningBanner()" style="margin: 0px 0px -100px 0px; opacity: 0; display: none"><div id="warning-banner-main"><img id="wb-close" src="./static-0/files/images/close-x.png"><p>UNDER CONSTRUCTION</p></div></div>
 		<div id="background-plate"></div>
 		<div id="banner-menu">
@@ -28,6 +28,7 @@
 					<li class="large-menu-item" style="display: none"><a href="./web-tools">Web Tools</a></li>
 					<li class="large-menu-item" style="display: none"><a href="./about">About</a>
 						<ul>
+							<li><a href="./about#faq">FAQs</a></li>
 							<li><a href="./about#contact">Contact</a></li>
 						</ul>
 					</li>
@@ -38,6 +39,7 @@
 					<a href="./factsheets" class="small-menu-button-0">Factsheets</a>
 					<a href="./web-tools" class="small-menu-button-0">Web Tools</a>
 					<a href="./about" class="small-menu-button-0">About</a>
+					<a href="./about#faq" class="small-menu-button-1">FAQs</a>
 					<a href="./about#contact" class="small-menu-button-1">Contact</a>
 				</div>
 			</nav>
@@ -54,6 +56,7 @@
 						<div id="social-platforms">
 							<h4>BlenderTimer Social</h4>
 							<a class="social" href="https://www.youtube.com/BlenderTimer"><img src="./static-0/files/images/Logo-YT-64.png"><h6 class="social-text">YouTube</h6></a>
+							<a class="social" href="https://discord.gg/EBYeZ3E58c"><img src="./static-0/files/images/Logo-Discord-64.png"><h6 class="social-text">Discord</h6></a>
 							<a class="social" href="https://pixabay.com/users/blendertimer-9538909/"><img src="./static-0/files/images/Logo-Pix-64.png"><h6 class="social-text">Pixabay</h6></a>
 							<a class="social" href="https://www.instagram.com/blendertimer"><img src="./static-0/files/images/Logo-Ig-64.png"><h6 class="social-text">Instagram</h6></a>
 							<a class="social" href="https://blenderartists.org/u/blendertimer/activity/portfolio"><img src="./static-0/files/images/Logo-BA-64.png"><h6 class="social-text">Blender Artists</h6></a>
@@ -91,6 +94,25 @@
 							<p>I started making educational YouTube videos in late November, 2021, though I uploaded the first video on March 16, 2022. I animate all the videos in </p><a href="https://www.blender.org" target="_blank">Blender</a><p>, create the music in </p><a href="https://lmms.io" target="_blank">LMMS</a><p>, and narrate the videos.</p>
 						</article>
 						<div class="spr"></div>
+					</div>
+					<div id="faq">
+						<h4>FAQs.</h4>
+						<div class="faq-block">
+							<h4>What software do you use?</h4>
+							<p>I create all the animations in </p><a href="https://www.blender.org" target="_blank">Blender</a><p>, create the music in </p><a href="https://lmms.io" target="_blank">LMMS</a><p>, edit any audio (such as narration and SFX) in </p><a href="https://www.audacityteam.org" target="_blank">Audacity</a><p>, create vector graphics in </p><a href="https://inkscape.org" target="_blank">Inkscape</a><p>, and edit other types of images in </p><a href="https://www.gimp.org" target="_blank">GIMP</a><p>.</p>
+						</div>
+						<div class="faq-block">
+							<h4>Is that your voice narrating your videos?</h4>
+							<p>Yes, I narrate my videos.</p>
+						</div>
+						<div class="faq-block">
+							<h4>How did you learn to use Blender?</h4>
+							<p>I learned mostly from experimenting and trial-and-error, however I also learned quite bit from YouTube tutorials as well.</p>
+						</div>
+						<div class="faq-block">
+							<h4>Do you have any tips for becoming successful on YouTube?</h4>
+							<p>The main advice I can give is quality over quantity. At this point most content available on YouTube is not high quality so everyone loves it when they happen upon a great quality production.</p>
+						</div>
 					</div>
 					<div id="fun-stats">
 						<h4>Here's some stats just for fun.</h4>
