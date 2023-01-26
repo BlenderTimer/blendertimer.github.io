@@ -6,10 +6,18 @@ var linkOpen = false
 var logoTimelineLogos = document.getElementsByClassName('logo-timeline-logo');
 var lastLogo = document.getElementById('last-logo');
 var lastLogoText = document.getElementById('last-logo-text');
+var faq = document.getElementById('faq');
 var funStats = document.getElementById('fun-stats');
 var leftElements = document.getElementById('left-elements');
 var rightElements = document.getElementById('right-elements');
 var topspr = document.getElementById('topspr');
+
+function init() {
+	if (window.location.toString().indexOf("#contact") > -1) {
+		setTimeout(function() {contactMain.style.background = "#B02525"}, 50);
+		setTimeout(function() {contactMain.style.background = "#252525"}, 2000);
+	}
+}
 
 function contactLinkToggle() {
 	if (linkOpen == true){
@@ -56,8 +64,8 @@ function lastLogoV(m) {
 
 function determineLayout() {
 	if (window.innerWidth < 800) {
-		funStats.style.width = "100%";
-		funStats.style.marginTop = "15px";
+		faq.style.width = "100%";
+		faq.style.marginTop = "15px";
 		leftElements.style.maxWidth = "256px";
 		leftElements.style.width = "256px";
 		leftElements.style.marginLeft = "calc(50% - 128px)";
@@ -66,8 +74,8 @@ function determineLayout() {
 		topspr.style.display = "block";
 	}
 	else if (window.innerWidth < 1000) {
-		funStats.style.width = "100%";
-		funStats.style.marginTop = "30px";
+		faq.style.width = "100%";
+		faq.style.marginTop = "30px";
 		leftElements.style.maxWidth = "256px";
 		leftElements.style.width = "30vw";
 		leftElements.style.marginLeft = "0px";
@@ -76,8 +84,8 @@ function determineLayout() {
 		topspr.style.display = "none";
 	}
 	else {
-		funStats.style.width = "calc(100% - 256px - 30px)";
-		funStats.style.marginTop = "15px";
+		faq.style.width = "calc(100% - 256px - 30px)";
+		faq.style.marginTop = "15px";
 		leftElements.style.maxWidth = "256px";
 		leftElements.style.width = "30vw";
 		leftElements.style.marginLeft = "0px";
