@@ -1,0 +1,234 @@
+body, html {
+	height: auto;
+	margin: 0px;
+	box-sizing: border-box;
+	padding: 20px;
+	box-shadow: 0px 0px 50px rgba(0,0,0,0.8) inset;
+}
+
+body {
+	background: #1E1E1E;
+	color: #F5F5F5;
+	font-family: monospace;
+	font-size: 12pt;
+	box-shadow: none;
+}
+
+::selection {
+	background: #EEEEEE;
+	color: #404040;
+}
+
+#nav-home {
+	background: rgba(30,30,30,0);
+	width: 150px;
+	position: absolute;
+	transition: 0.5s;
+	margin: 0px 0px 0px 0px;
+	padding: 7px 15px;
+	border-radius: 30px;
+}
+
+#nav-home:hover {
+	background: #2E2E2E;
+	width: 170px;
+	margin: -3px 0px 0px -10px;
+	box-shadow: 0px 0px 15px rgba(0,0,0,0.2);
+}
+
+#title {
+	text-align: center;
+	font-size: 25pt;
+	font-weight: bold;
+	text-shadow: 0px 0px 15px rgba(0,0,0,1);
+	cursor: default;
+	margin: 0px 0px 30px 0px;
+	width: calc(100% - 400px);
+}
+
+.spr {
+	width: 90%;
+	height: 2px;
+	min-height: 2px;
+	max-height: 2px;
+	background: #FFFFFF10;
+	box-shadow: 0px 0px 10px #00000030;
+	margin: 5px auto 10px auto;
+}
+
+#no-sources {
+	text-align: center;
+	font-size: 25pt;
+	font-weight: bold;
+	color: #2E2E2E;
+	cursor: default;
+	position: absolute;
+	width: 100%;
+	box-sizing: border-box;
+	margin: 0px -40px;
+	bottom: 45vh;
+	transition: 1s;
+	text-shadow: 0px 0px 15px rgba(0,0,0,0.3);
+}
+
+#base {
+	width: 100%;
+	margin: 0px 0px 30px 0px;
+	border-radius: 10px;
+	background: #252525;
+	box-shadow: 0px 0px 20px rgba(0,0,0,0.3);
+	padding: 40px 50px 40px 50px;
+	box-sizing: border-box;
+	float: left;
+	display: block;
+}
+
+#base h3 {
+	font-size: 15pt;
+	cursor: default;
+	margin: 0px 0px 10px 10px;
+	color: #CCCCCC;
+}
+
+#info {
+	display: flex;
+	flex: 1;
+	flex-wrap: nowrap;
+	padding: 0px;
+	margin-top: 0px;
+	width: 100%;
+	height: auto;
+}
+
+.vI {
+	width: 100%;
+	height: auto;
+	display: block;
+
+}
+
+#info b {
+	font-size: 12pt !important;
+	cursor: default;
+	display: inline-block !important;
+	margin: 0px 0px 10px 0px !important;
+}
+
+#info p {
+	font-size: 12pt !important;
+	display: inline-block !important;
+	margin: 0px 0px 10px 0px !important;
+	color: #D0D0D0;
+}
+
+#left-info {
+	width: calc(100% - 310px);
+	display: block;
+}
+
+#left-info a {
+	font-size: 12pt;
+	color: #85C5F5;
+	display: inline-block;
+	text-decoration: none;
+	transition: 0.3s;
+	cursor: pointer;
+	margin: 0px 0px 10px 0px !important;
+}
+
+#left-info a:hover {
+	text-shadow: 0px 0px 10px rgba(133,197,245,0.5);
+}
+
+#right-info {
+	width: 300px;
+	display: block;
+	margin-left: 10px;
+}
+
+#thumbnail {
+	border-radius: 5px;
+	display: block;
+	float: center;
+	margin: 0px auto 0px auto;
+	width: 100%;
+	max-width: 300px;
+	border: 2px solid #555555;
+	box-sizing: border-box;
+	box-shadow: 0px 0px 20px rgba(0,0,0,0.5);
+	transition: ease 0.5s;
+	transform-origin: 300px 168.74px;
+	cursor: pointer;
+}
+
+#thumbnail:hover {
+	transform: scaleX(1.03) scaleY(1.03);
+}
+
+#view-thumb {
+	display: block;
+	position: relative;
+	z-index: 999999;
+	width: 25px;
+	height: 25px;
+	top: -15px;
+	right: -10px;
+	float: right;
+	box-shadow: 0px 0px 10px rgba(0,0,0,0.3);
+	border-radius: 15px;
+	transition: ease 0.5s;
+}
+
+#thumbnail:hover + #view-thumb {
+	transform: scaleX(1.2) scaleY(1.2);
+	box-shadow: 0px 0px 10px rgba(255,255,255,0.2);
+}
+
+#view-thumb:hover {
+	transform: scaleX(1.2) scaleY(1.2);
+	box-shadow: 0px 0px 10px rgba(255,255,255,0.2);
+}
+
+#view-thumb img {
+	width: 25px;
+	height: 25px;
+}
+
+#sources {
+	background: #181818;
+	padding: 20px;
+	margin-top: 20px;
+	border-radius: 10px;
+	box-shadow: 0px 0px 30px rgba(0,0,0,0.2) inset;
+	display: block;
+}
+
+#sources a {
+	font-size: 12pt;
+	cursor: pointer;
+	color: #AAAAAA;
+	text-decoration: none;
+	font-weight: normal;
+	margin-left: 10px;
+	margin-bottom: 10px;
+	background: #252525;
+	width: calc(100% - 20px);
+	display: block;
+	height: auto;
+	border-radius: 10px;
+	padding: 8px 15px 8px 15px;
+	box-sizing: border-box;
+	box-shadow: 0px 0px 10px rgba(0,0,0,0.3);
+	transition: 0.3s;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+#sources a:hover {
+	background: #353535;
+	box-shadow: 0px 0px 10px rgba(0,0,0,0.5);
+}
+
+#sources b {
+	color: #CCCCCC;
+}
