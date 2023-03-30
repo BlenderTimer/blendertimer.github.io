@@ -232,3 +232,45 @@ body {
 #sources b {
 	color: #CCCCCC;
 }
+
+#sources p {
+	color: #555555;
+	margin-left: 10px;
+	cursor: default;
+}
+
+#subtitles {
+	background: #181818;
+	padding: 0px;
+	margin-top: 20px;
+	border-radius: 10px;
+	box-shadow: 0px 0px 30px rgba(0,0,0,0.2) inset;
+	display: block;
+}
+
+#subtitles h3 {
+	font-size: 15pt;
+	cursor: default;
+	margin: 0px 0px 10px 30px;
+	padding-top: 20px;
+	color: #CCCCCC;
+}
+
+#cc {
+	width: 100%;
+	height: auto;
+	cursor: text;
+	padding-bottom: 20px;
+}
+
+#subtitles p {
+	font-size: 12pt;
+	color: #AAAAAA;
+	text-decoration: none;
+	font-weight: normal;
+	display: block;
+	height: auto;
+	width: calc(100% - 60px);
+	margin: 0px 0px 0px 30px;
+	cursor: text;
+}
