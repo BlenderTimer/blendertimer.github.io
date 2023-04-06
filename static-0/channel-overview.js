@@ -27,8 +27,8 @@ $.get(
        	viewC = parseInt(data.items[0].statistics.viewCount);
        	subC = parseInt(data.items[0].statistics.subscriberCount);
        	vidC = parseInt(data.items[0].statistics.videoCount);
-		totalViews.innerHTML = viewC.toLocaleString("en-US")
-		totalSubscribers.innerHTML = subC.toLocaleString("en-US")
-		totalVideos.innerHTML = vidC.toLocaleString("en-US")
+		totalViews.innerHTML = viewC.toLocaleString(navigator.language)
+		totalSubscribers.innerHTML = subC.toLocaleString(navigator.language)
+		totalVideos.innerHTML = vidC.toLocaleString(navigator.language)
 	}
 );
