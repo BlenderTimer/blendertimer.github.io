@@ -25,7 +25,7 @@
 			<div class="setting"><label for="image">Image Source:</label><input id="image" type="text" oninput="setImage()"></div>
 			<div class="spr"></div>
 			<div class="setting"><label for="speed">Speed:</label><input id="speed" type="number" value="1"></div>
-			<div class="setting"><label for="bounce-r">Bounce Randomness:</label><input id="bounce-r" type="number" value="1"></div>
+			<div class="setting"><label for="bounce-r">Bounce Randomness:</label><input id="bounce-r" type="number" value="3"></div>
 			<div class="spr"></div>
 			<div class="setting"><label for="angle">Angle:</label><input id="angle" type="checkbox"></div>
 			<div class="setting"><label for="trace-length">Trace Length:</label><input id="trace-length" type="number" value="0"></div>
@@ -155,7 +155,7 @@ body {
 		height:100,
 		color:"rgba(100,200,255,1)",
 		speed:1,
-		bounceRan:5,
+		bounceRan:3,
 		image:false,
 		x:0,
 		y:0,
@@ -214,7 +214,7 @@ body {
 		else if (obj.x >= (canvas.width - obj.width)) {
 			obj.bounce = "right";
 			obj.angle = 180 - obj.angle;
-			obj.x -= 1;
+			obj.x = canvas.width - obj.width - 0.01;
 			if (!obj.bounceRan == 0) {
 				obj.angle += Math.random() * obj.bounceRan;
 			}
@@ -222,7 +222,7 @@ body {
 		else if (obj.x <= 0) {
 			obj.bounce = "left";
 			obj.angle = 180 - obj.angle;
-			obj.x += 1;
+			obj.x = 0.01;
 			if (!obj.bounceRan == 0) {
 				obj.angle += Math.random() * obj.bounceRan;
 			}
@@ -233,7 +233,7 @@ body {
 		else if (obj.y >= (canvas.height - obj.height)) {
 			obj.bounce = "bottom";
 			obj.angle = 360 - obj.angle;
-			obj.y -= 1;
+			obj.y = canvas.height - obj.height - 0.01;
 			if (!obj.bounceRan == 0) {
 				obj.angle += Math.random() * obj.bounceRan;
 			}
@@ -241,7 +241,7 @@ body {
 		else if (obj.y <= 0) {
 			obj.bounce = "top";
 			obj.angle = 360 - obj.angle;
-			obj.y += 1;
+			obj.y = 0.01;
 			if (!obj.bounceRan == 0) {
 				obj.angle += Math.random() * obj.bounceRan;
 			}
