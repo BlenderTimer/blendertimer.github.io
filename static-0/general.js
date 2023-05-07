@@ -69,15 +69,18 @@ function baseLoad() {
 	bgPlate.style.backgroundPosition = "0px " + (document.scrollingElement.scrollTop * -0.15) + "px";
 	for (var i=0; i < ulul.length; i++) {
 		ululHeights.push(ulul[i].offsetHeight);
+		ulul[i].style.height = "0px";
 	}
 }
 
 function setululHeight(ululId, action) {
 	if (action == 'enter') {
-		ulul[ululId].style.height = ululHeights[ululId];
+		ulul[ululId].style.height = ululHeights[ululId].toString() + "px";
+		console.log("SHOW");
 	}
 	else {
-		ulul[ululId].style.height = 0;
+		ulul[ululId].style.height = "0px";
+		console.log("HIDE");
 	}
 }
 

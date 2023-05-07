@@ -132,9 +132,20 @@ function setPages() {
 		currentPage = 1;
 	}
 	pgFirst.href = "./video-sources-pg1";
-
-	pgPrevious.href = "./video-sources-pg";
-	pgNext.href = "./video-sources-pg";
+	if (currentPage == 1) {
+		pgPrevious.href = "./video-sources-pg1";
+		pgPrevious.style.pointerEvents = "None";
+	}
+	else {
+		pgPrevious.href = "./video-sources-pg" + (currentPage - 1).toString();
+	}
+	if (currentPage == pages) {
+		pgNext.href = "./video-sources-pg" + pages.toString();
+		pgNext.style.pointerEvents = "None";
+	}
+	else {
+		pgNext.href = "./video-sources-pg" + (currentPage + 1).toString();
+	}
 	pgLast.href = "./video-sources-pg" + pages.toString();
 }
 
@@ -252,9 +263,9 @@ function search() {
 			match0.innerHTML = bestMatch;
 			match1.innerHTML = bestMatch2;
 			match2.innerHTML = bestMatch3;
-			match0.href = "./video-sources/" + bestMatchURL + ".html"
-			match1.href = "./video-sources/" + bestMatch2URL + ".html"
-			match2.href = "./video-sources/" + bestMatch3URL + ".html"
+			match0.href = "./video-sources/" + bestMatchURL
+			match1.href = "./video-sources/" + bestMatch2URL
+			match2.href = "./video-sources/" + bestMatch3URL
 		}
 		else {
 			match0.innerHTML = "";
