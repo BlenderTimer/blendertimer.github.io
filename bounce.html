@@ -274,7 +274,7 @@ body {
 	function init() {
 		if (window.location.toString().indexOf("?") > -1) {
 			var loc = window.location.toString().substr(window.location.toString().indexOf("?"),window.location.toString().length);
-			loc = loc.replace(/\?/g,"&").toLowerCase()
+			loc = loc.replace(/\?/g,"&")
 			urlSettings = loc.split("&");
 			urlSettings.shift();
 			for (var i=0; i < urlSettings.length; i++) {
@@ -410,7 +410,7 @@ body {
 			loc = window.location.toString().substr(window.location.toString().indexOf("?"),window.location.toString().length);
 			loc = loc.replace(/\?/g,"&");
 		}
-		loc = loc.toLowerCase();
+		loc = loc;
 		var urlSettings = loc.split("&");
 		urlSettings.shift();
 		var l = urlSettings.length;
@@ -979,7 +979,7 @@ body {
 		url = l
 		if (window.location.toString().indexOf("?") > -1) {
 			var loc = window.location.toString().substr(window.location.toString().indexOf("?"),window.location.toString().length);
-			loc = loc.replace(/\?/g,"&").toLowerCase()
+			loc = loc.replace(/\?/g,"&")
 			var urlSettings = loc.split("&");
 			urlSettings.shift();
 			var newSettings = [];
