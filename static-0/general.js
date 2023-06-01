@@ -76,11 +76,9 @@ function baseLoad() {
 function setululHeight(ululId, action) {
 	if (action == 'enter') {
 		ulul[ululId].style.height = ululHeights[ululId].toString() + "px";
-		console.log("SHOW");
 	}
 	else {
 		ulul[ululId].style.height = "0px";
-		console.log("HIDE");
 	}
 }
 
