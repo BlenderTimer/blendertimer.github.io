@@ -10,6 +10,7 @@ var contentMain = document.getElementById('content-main');
 var navDropdown = document.all["nav-dropdown"]
 var smallMenuOpen = false
 var ululHeights = [];
+var revolveButton = document.getElementById('revolve-button');
 
 window.onscroll = function(){
 	bgPlate.style.backgroundPosition = "0px " + (document.scrollingElement.scrollTop * -0.15) + "px";
@@ -33,6 +34,7 @@ function determineDisplayMenu() {
 		smallMenuMain.style.display = "block";
 		contentMain.style.margin = "50px 0px 0px 0px";
 		contentMain.style.borderRadius = "0px";
+		revolveButton.style.marginRight = "50px";
 	}
 	else if (window.innerWidth < 1000) {
 		smallMenu.style.display = "block";
@@ -45,6 +47,7 @@ function determineDisplayMenu() {
 		smallMenuMain.style.display = "block";
 		contentMain.style.margin = "50px 5vw 50px 5vw";
 		contentMain.style.borderRadius = "10px";
+		revolveButton.style.marginRight = "50px";
 	}
 	else {
 		smallMenu.style.display = "none";
@@ -57,6 +60,7 @@ function determineDisplayMenu() {
 		smallMenuMain.style.display = "none";
 		contentMain.style.margin = "50px 5vw 50px 5vw";
 		contentMain.style.borderRadius = "10px";
+		revolveButton.style.marginRight = "0px";
 	}
 }
 
@@ -94,7 +98,7 @@ function smallMenuToggle() {
 		smallMenuMain.style.boxShadow = "0px 20px 20px rgba(0,0,0,0.5)";
 		smallMenuMain.style.width = "200px";
 		smallMenuMain.style.opacity = "1";
-		smallMenu.style.background = "#2E2E2E";
+		smallMenu.style.background = "#303030";
 		smallMenuOpen = true;
 	}
 }
