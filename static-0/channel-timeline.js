@@ -20,7 +20,7 @@ var firstShortUpload = Math.floor(new Date(2022, 10, 30).getTime() / 84000000);
 var watchHours100000 = Math.floor(new Date(2022, 10, 31).getTime() / 84000000);
 var views2000000 = Math.floor(new Date(2022, 11, 28).getTime() / 84000000);
 var subscribers20000 = Math.floor(new Date(2023, 0, 21).getTime() / 84000000);
-var views3000000 = Math.floor(new Date(2023, 4, 30).getTime() / 84000000);
+var views3000000 = Math.floor(new Date(2023, 4, 31).getTime() / 84000000);
 //------------------------------
 function addLine(x, height) {
 	tl2d.beginPath();
