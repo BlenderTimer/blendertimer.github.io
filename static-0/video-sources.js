@@ -68,6 +68,12 @@ var videos = [
 		url:"11-The-Great-Molasses-Flood",
 		page:1
 	},
+	{
+		name:"Why are You Scared of Sharks? - Fantastic Fact 04",
+		tui:12,
+		url:"12-Why-are-You-Scared-of-Sharks",
+		page:1
+	},
 ];
 
 //--------------------------------------
