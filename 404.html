@@ -19,7 +19,7 @@
         <li id="revolve-button" style="display:none"><script type="text/javascript" src="https://rf.revolvermaps.com/0/0/3.js?i=5cgjr9bkw1v&b=0&s=40&m=2&cl=555555&co=000000&cd=ffffff&v0=25&v1=100&r=1" async="async"></script></li>
 		<h1 id="primary-404" style="margin-top: -8vw">404</h1>
         <div id="text-404"><p id="t-404-l1"></p><p id="t-404-l2" style="display: none"></p><p id="t-404-l3" style="display: none"></p></div>
-        <button onclick="history.back()" id="back-button" type="button"></button>
+        <button onclick="history.back()" id="back-button" type="button" style="display: none"></button>
 	</body>
 </html>
 <style>
@@ -45,6 +45,7 @@ body {
     display: block;
     text-shadow: 0px 10px 20px rgba(0,0,0,0.7);
     transition: 0.2s cubic-bezier(0.83, 3.07, 0.52, 0.37);
+    cursor: default;
 }
 #back-button {
     width: auto;
@@ -80,6 +81,7 @@ body {
     font-size: 4vh;
     text-shadow: 0px 0px 12px rgba(0,0,0,1);
     padding: 0px 8vh;
+    cursor: default;
 }
 
 #text-404 p {
@@ -291,5 +293,6 @@ body {
             setTimeout(function(){writeL2()}, 1500);
             setTimeout(function(){writeL3()}, 3000);
         }
+        back404.style.display = "block";
     }
 </script>
