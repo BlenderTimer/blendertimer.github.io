@@ -1,6 +1,6 @@
 User-agent: *
 Disallow: /static-0/
-Disallow: /web-tools/compare-size.html
+Disallow: /web-tools/compare-size
 Allow: /
 
 Sitemap: https://blendertimer.com/sitemap.xml
