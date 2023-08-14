@@ -16,7 +16,7 @@
 		<link rel="stylesheet" type="text/css" href="./static-0/general.css"/>
 		<link rel="stylesheet" type="text/css" href="./static-0/about.css"/>
 	</head>
-	<body onload="baseLoad(), determineLayout(), init()" onresize="determineDisplayMenu(), determineLayout()">
+	<body onload="baseLoad(), determineLayout(), init()" onresize="resizeB(), determineDisplayMenu(), determineLayout()">
 		<div id="warning-banner" onclick="hideWarningBanner()" style="margin: 0px 0px -100px 0px; opacity: 0; display: none"><div id="warning-banner-main"><img id="wb-close" src="./static-0/files/images/close-x.png"><p>UNDER CONSTRUCTION</p></div></div>
 		<div id="background-plate"></div>
 		<div id="banner-menu">
@@ -68,6 +68,17 @@
 		<div id="loader" style="width: 100%; height: calc(100% - 50px); top: 50px; left: 0px; position: fixed; z-index: -99999">
 			<img src="./static-0/files/images/loading-general.gif" style="width: 100px; height: 100px; position: fixed; left: calc(50% - 50px); top: calc(50% - 25px); filter: drop-shadow(0px 0px 15px #000000)">
 		</div>
+		<div id="popup-background" onmouseenter="popupCloseBegin(true)" onmouseleave="popupCloseBegin(false)" onclick="popupClose()" style="display: none; opacity: 0"></div>
+		<div id="contact-popup-div" style="display: none; opacity: 0"><canvas id="close-x-button" width="30px" height="30px" onmouseenter="popupCloseBegin(true)" onmouseleave="popupCloseBegin(false)" onclick="popupClose()"></canvas><h3 id="cpd-title">Title</h3><div id="cpd-text-div">
+			<form action="https://formspree.io/f/mgejanbv" method="POST" id="contact-form">
+  				<label for="email">Your email:</label> <b>*</b><input type="email" name="email" maxlength=75 required>
+  				<label for="name">Your name:</label><input type="text" name="name" maxlength=50>
+  				<label for="company">Company:</label><input type="text" name="company" maxlength=50>
+  				<label for="subject">Subject:</label> <b>*</b><input type="text" name="subject" maxlength="75" required>
+  				<label for="message">Message:</label> <b>*</b><textarea name="message" maxlength=10000 required></textarea>
+ 				<button type="submit">Send Message</button>
+			</form>
+		</div></div>
 		<div id="content-main" style="opacity: 0; transition: 1s ease">
 			<div id="about-block">
 				<h4>About BlenderTimer</h4>
@@ -84,6 +95,7 @@
 						</div>
 						<div id="contact">
 							<h4>Contact</h4>
+							<a id="contact-form-link" onclick="contactPopup('Contact')"><img src="./static-0/files/images/Logo-Mail-64.png" id="contact-form-image"><h6 id="contact-form-text">Contact</h6></a>
 							<a id="contact-link" onclick="contactLinkToggle()" onmouseleave="contactLinkMouseLeave()" onmouseenter="contactLinkMouseEnter()"><img src="./static-0/files/images/Logo-Mail-64.png" id="contact-image"><h6 id="contact-text">Email</h6></a>
 						</div>
 					</div>
