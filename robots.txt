@@ -1,6 +1,5 @@
 User-agent: *
 Disallow: /static-0/
-Disallow: /web-tools/compare-size
 Disallow: /licenses/
 Allow: /
 
