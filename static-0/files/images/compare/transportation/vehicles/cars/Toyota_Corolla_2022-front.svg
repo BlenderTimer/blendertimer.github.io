@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="862.72284"
+   height="619.12695"
+   viewBox="0 0 228.26209 163.81068"
+   version="1.1"
+   id="svg8"
+   inkscape:version="0.92.4 (5da689c313, 2019-01-14)"
+   sodipodi:docname="Toyota_Corolla_2022-front.svg">
+  <defs
+     id="defs2">
+    <inkscape:path-effect
+       effect="mirror_symmetry"
+       start_point="498.08204,0"
+       end_point="498.08204,835.39845"
+       center_point="498.08204,417.69922"
+       id="path-effect834"
+       is_visible="true"
+       mode="vertical"
+       discard_orig_path="false"
+       fuse_paths="false"
+       oposite_fuse="false" />
+    <inkscape:path-effect
+       effect="mirror_symmetry"
+       start_point="1500,0"
+       end_point="1500,3000"
+       center_point="1500,1500"
+       id="path-effect865"
+       is_visible="true"
+       mode="vertical"
+       discard_orig_path="false"
+       fuse_paths="false"
+       oposite_fuse="false" />
+    <inkscape:path-effect
+       effect="mirror_symmetry"
+       start_point="396.875,-496.75002"
+       end_point="396.875,296.99998"
+       center_point="396.875,-99.87502"
+       id="path-effect854"
+       is_visible="true"
+       mode="vertical"
+       discard_orig_path="false"
+       fuse_paths="false"
+       oposite_fuse="false" />
+    <inkscape:path-effect
+       effect="mirror_symmetry"
+       start_point="396.875,-496.75002"
+       end_point="396.875,296.99998"
+       center_point="396.875,-99.87502"
+       id="path-effect843"
+       is_visible="true"
+       mode="vertical"
+       discard_orig_path="false"
+       fuse_paths="false"
+       oposite_fuse="false" />
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.175"
+     inkscape:cx="81.200182"
+     inkscape:cy="89.08117"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:pagecheckerboard="true"
+     inkscape:showpageshadow="false"
+     borderlayer="true"
+     units="px"
+     showguides="true"
+     inkscape:guide-bbox="true"
+     inkscape:snap-page="true"
+     inkscape:snap-object-midpoints="true"
+     inkscape:snap-global="true"
+     inkscape:window-width="1366"
+     inkscape:window-height="713"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0" />
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-258.55348,116.36985)">
+    <path
+       transform="matrix(0.26458333,0,0,0.26458333,240.90032,-143.12274)"
+       style="fill:#555555;fill-opacity:1;stroke:none;stroke-width:0.99999994px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 498.08203,101.11328 v 537.91016 h 236.33594 l 5.01367,-8.68555 h 30.30469 v 70.71094 c 0,10.63286 8.56049,19.1914 19.19336,19.1914 h 56.56836 c 10.63286,0 19.19336,-8.55854 19.19336,-19.1914 v -70.71094 h 3.02929 c 0,0 7.07109,-213.14339 5.05078,-221.22461 -2.0203,-8.08122 -12.12109,-26.26367 -12.12109,-26.26367 v -56.56836 c 0,0 21.53,-1.4155 39.90039,-3.53516 26.26394,-3.03045 35.35584,-25.25436 24.24414,-44.44726 -11.11166,-19.1929 -76.26724,-21.71871 -87.3789,-11.61719 -11.1117,10.10153 -9.0918,45.45703 -9.0918,45.45703 0,0 -36.36375,-88.89312 -55.55664,-128.28906 -19.1929,-39.39594 -21.21449,-56.5688 -37.37696,-60.60938 -16.16243,-4.04061 -66.81909,-22.12695 -237.30859,-22.12695 z m 2e-5,0 V 639.02344 H 261.74611 l -5.01367,-8.68555 h -30.30469 v 70.71094 c 0,10.63286 -8.56049,19.1914 -19.19336,19.1914 h -56.56836 c -10.63286,0 -19.19336,-8.55854 -19.19336,-19.1914 v -70.71094 h -3.02929 c 0,0 -7.07109,-213.14339 -5.05078,-221.22461 2.0203,-8.08122 12.12109,-26.26367 12.12109,-26.26367 v -56.56836 c 0,0 -21.53,-1.4155 -39.900395,-3.53516 -26.26394,-3.03045 -35.35584,-25.25436 -24.24414,-44.44726 11.11166,-19.1929 76.267245,-21.71871 87.378905,-11.61719 11.1117,10.10153 9.0918,45.45703 9.0918,45.45703 0,0 36.36375,-88.89312 55.55664,-128.28906 19.1929,-39.39594 21.21449,-56.5688 37.37696,-60.60938 16.16243,-4.04061 66.81909,-22.12695 237.30859,-22.12695 z"
+       id="path829"
+       inkscape:connector-curvature="0" />
+  </g>
+</svg>
