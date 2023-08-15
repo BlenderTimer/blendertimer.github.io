@@ -6,7 +6,7 @@
 
 .web-tool-block {
 	width: calc(25% - 20px);
-	margin: 10px;
+	margin: 10px !important;
 	border-radius: 10px;
 	background: #252525;
 	box-shadow: 0px 0px 20px rgba(0,0,0,0.3);
@@ -24,8 +24,10 @@
 	transform: scaleX(1.05) scaleY(1.05);
 	box-shadow: 0px 0px 15px rgba(0,0,0,0.5), 0px 0px 25px rgba(0,0,0,0.3) inset;
 	background: #353535;
+	text-shadow: none !important;
 	border: 2px solid #808080;
 }
+
 .web-tool-block h4 {
 	color: #DDDDDD !important;
 	cursor: pointer !important;
