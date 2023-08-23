@@ -218,10 +218,44 @@ body {
 	background: #222222;
 }
 
+.small-menu-new {
+	font-family: monospace;
+	font-size: 10px;
+	font-weight: bold;
+	width: auto;
+	height: auto;
+	text-align: center;
+	padding: 2px 3px;
+	border-radius: 2px;
+	background: #3388EE;
+	color: #F5F5F5;
+	position: absolute;
+	z-index: 999999;
+	right: 8px;
+	margin-top: -17px;
+}
+
+.small-menu-new-1 {
+	font-family: monospace;
+	font-size: 10px;
+	font-weight: bold;
+	width: 8px;
+	height: 8px;
+	text-align: center;
+	padding: 0px;
+	border-radius: 5px;
+	background: #3388EE;
+	color: #F5F5F5;
+	position: absolute;
+	z-index: 999999;
+	right: 8px;
+	margin-top: -13px;
+}
+
 nav {
 	width: 100%;
 	height: 50px;
-	padding: 0px 0px 0px 10%;
+	padding: 0px 0px 0px 10vw;
 	box-sizing: border-box;
 	background-color: #1E1E1E;
 	position: fixed;
@@ -253,7 +287,7 @@ nav ul li a {
 	background: #1E1E1E;
 	padding: 17px 0px 0px 0px;
 	height: 50px;
-	margin: 0px 10px;
+	margin: 0px 5px;
 	width: 170px;
 	text-align: center;
 	border-radius: 0px 0px 0px 0px;
@@ -305,7 +339,7 @@ nav ul li ul {
 	position: absolute;
 	background: #1E1E1E;
 	padding: 0px;
-	margin: 0px 10px;
+	margin: 0px 5px;
 	width: 170px;
 	top: 0px;
 	border-radius: 0px !important;
@@ -318,7 +352,6 @@ nav ul li ul {
 
 nav ul li:hover ul {
 	opacity: 1;
-	width: 170px;
 	background: #303030;
 	top: 50px;
 	height: auto;
@@ -332,12 +365,13 @@ nav ul li ul li {
 	float: left;
 	list-style: none;
 	position: relative;
+	width: 100%;
 }
 
 nav ul li ul li a {
 	color: #D5D5D5 !important;
 	display: block !important;
-	width: 170px !important;
+	width: 100% !important;
 	box-sizing: border-box !important;
 	text-decoration: none !important;
 	font-weight: bold !important;
@@ -366,6 +400,40 @@ nav ul li ul li a:hover {
 	border-radius: 0px;
 	text-shadow: 0px 0px 10px rgba(255,255,255,0.3) !important;
 	transition: 0.2s ease !important;
+}
+
+.large-menu-new {
+	font-family: monospace;
+	font-size: 10px;
+	font-weight: bold;
+	width: auto;
+	height: auto;
+	text-align: center;
+	padding: 2px 3px;
+	border-radius: 2px;
+	background: #3388EE;
+	color: #F5F5F5;
+	position: absolute;
+	z-index: 999999;
+	right: -5px;
+	margin-top: 5px;
+}
+
+.large-menu-newDD {
+	font-family: monospace;
+	font-size: 10px;
+	font-weight: bold;
+	width: 8px;
+	height: 8px;
+	text-align: center;
+	padding: 0px;
+	border-radius: 5px;
+	background: #3388EE;
+	color: #F5F5F5;
+	position: absolute;
+	z-index: 999999;
+	right: 5px;
+	margin-top: 16px;
 }
 
 #nav-home {
