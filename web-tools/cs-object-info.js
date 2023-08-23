@@ -2526,3 +2526,7 @@ var objects = [
         lastModified:"2023/08/15", // YYYY/MM/DD
     },
 ];
+
+//	———————— STEPS FOR UPDATING ————————
+//	1. Update the tool version on line 134.
+//	2. Regenerate SEO tags by opening "generate-compare-tags.html" and then pasting the result.
