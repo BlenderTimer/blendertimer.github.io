@@ -1,13 +1,13 @@
 var navLinks = [
 	{
 		title:"YouTube Channel",
-		url:"https://www.youtube.com/BlenderTimer",
+		url:"./channel",
 		width:170,
 		date:new Date(2023, 3, 1), //year, month(from 0), day
 		dropdownURLs:[
 			{
 				title:"Overview",
-				url:"./channel",
+				url:"./channel-overview",
 				date:new Date(2022, 4, 7), //year, month(from 0), day
 			},
 			{
