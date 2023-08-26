@@ -1,6 +1,7 @@
 User-agent: *
 Disallow: /static-0/
 Disallow: /licenses/
+Disallow: /08a2e399-e7bb-4994-8195-109b1c364407
 Allow: /
 
 Sitemap: https://blendertimer.com/sitemap.xml
