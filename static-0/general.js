@@ -23,6 +23,21 @@ function hideWarningBanner(){
 	warningBanner.style.opacity = "0";
 }
 
+function determineHTMLLinks() {
+	if (window.location.toString().startsWith("file://")) {
+		for (var i=0; i < document.querySelectorAll('a').length; i++) {
+			if (document.querySelectorAll('a')[i].href) {
+				if (document.querySelectorAll('a')[i].href.toString().endsWith("/")) {
+					document.querySelectorAll('a')[i].href = document.querySelectorAll('a')[i].href.toString().substring(0, document.querySelectorAll('a')[i].href.toString().length - 1) + ".html";
+				}
+				else {
+					document.querySelectorAll('a')[i].href = document.querySelectorAll('a')[i].href + ".html";
+				}
+			}
+		}
+	}
+}
+
 function determineDisplayMenu() {
 	if (window.innerWidth < (navLinksWidths + (window.innerWidth / 10) + 298)) {
 		smallMenu.style.display = "block";
@@ -70,6 +85,7 @@ function baseLoad() {
 		ululHeights.push(ulul[i].offsetHeight);
 		ulul[i].style.height = "0px";
 	}
+	determineHTMLLinks();
 }
 
 function loadMenu() {
