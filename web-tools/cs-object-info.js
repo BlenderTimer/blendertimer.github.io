@@ -2525,8 +2525,33 @@ var objects = [
         dateAdded:"2023/08/15", // YYYY/MM/DD
         lastModified:"2023/08/15", // YYYY/MM/DD
     },
+    {
+        name:"Maple Leaf (Generic)",
+        defaultAngle: 2,
+        sideImage:"",
+        hasSideImage:false,
+        sideImageAlign:"none",
+        sideImageArtist: "",
+        frontImage:"",
+        hasFrontImage:false,
+        frontImageAlign:"none",
+        frontImageArtist: "",
+        topImage:"Maple_Leaf_Generic-top",
+        hasTopImage:true,
+        topImageAlign:"none",
+        topImageArtist: "Daniel Roberts (BlenderTimer)",
+        width:0.000083242,
+        length:0.0000762,
+        height:0.000005,
+        category1:"nature",
+        category2:"plants",
+        category3:"trees",
+        tags:["leaves"], // don't include anything in categories or name
+        dateAdded:"2023/08/26", // YYYY/MM/DD
+        lastModified:"2023/08/26", // YYYY/MM/DD
+    },
 ];
 
 //	———————— STEPS FOR UPDATING ————————
-//	1. Update the tool version on line 134.
+//	1. Update the tool version.
 //	2. Regenerate SEO tags by opening "generate-compare-tags.html" and then pasting the result.
