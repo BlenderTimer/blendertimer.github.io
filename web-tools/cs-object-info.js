@@ -2550,6 +2550,56 @@ var objects = [
         dateAdded:"2023/08/26", // YYYY/MM/DD
         lastModified:"2023/08/26", // YYYY/MM/DD
     },
+    {
+        name:"Bagger 293",
+        defaultAngle: 0,
+        sideImage:"Bagger_293-side",
+        hasSideImage:true,
+        sideImageAlign:"bottom",
+        sideImageArtist: "felax",
+        frontImage:"",
+        hasFrontImage:false,
+        frontImageAlign:"none",
+        frontImageArtist: "",
+        topImage:"",
+        hasTopImage:false,
+        topImageAlign:"none",
+        topImageArtist: "",
+        width:0.046,
+        length:0.1814,
+        height:0.096,
+        category1:"transportation",
+        category2:"vehicles",
+        category3:"construction",
+        tags:["terrestrial"], // don't include anything in categories or name
+        dateAdded:"2023/08/29", // YYYY/MM/DD
+        lastModified:"2023/08/29", // YYYY/MM/DD
+    },
+    {
+        name:"Olympus Mons (Mars)",
+        defaultAngle: 1,
+        sideImage:"",
+        hasSideImage:false,
+        sideImageAlign:"bottom",
+        sideImageArtist: "",
+        frontImage:"Olympus_Mons_Mars-front",
+        hasFrontImage:true,
+        frontImageAlign:"bottom",
+        frontImageArtist: "felax",
+        topImage:"",
+        hasTopImage:false,
+        topImageAlign:"none",
+        topImageArtist: "",
+        width:181.225,
+        length:181.225,
+        height:21.229,
+        category1:"nature",
+        category2:"geography",
+        category3:"mountains",
+        tags:["hill", "summit", "volcano"], // don't include anything in categories or name
+        dateAdded:"2023/08/29", // YYYY/MM/DD
+        lastModified:"2023/08/29", // YYYY/MM/DD
+    },
 ];
 
 //	———————— STEPS FOR UPDATING ————————
