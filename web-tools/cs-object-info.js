@@ -7,14 +7,17 @@ var objects = [
         hasSideImage:true,
         sideImageAlign:"none",
         sideImageArtist: "Daniel Roberts (BlenderTimer)",
+        sideImageDate:"2023/07/29", // YYYY/MM/DD
 		frontImage:"Earth-front",
 		hasFrontImage:true,
         frontImageAlign:"none",
         frontImageArtist: "Daniel Roberts (BlenderTimer)",
+        frontImageDate:"2023/07/29", // YYYY/MM/DD
 		topImage:"Earth-top",
 		hasTopImage:true,
         topImageAlign:"none",
         topImageArtist: "Daniel Roberts (BlenderTimer)",
+        topImageDate:"2023/07/29", // YYYY/MM/DD
 		width:12755.999,
 		length:12755.999,
 		height:12714.001,
@@ -32,14 +35,17 @@ var objects = [
         hasSideImage:true,
         sideImageAlign:"bottom",
         sideImageArtist: "Daniel Roberts (BlenderTimer)",
+        sideImageDate:"2023/07/28", // YYYY/MM/DD
 		frontImage:"Toyota_Tacoma_2022-front",
 		hasFrontImage:true,
         frontImageAlign:"bottom",
         frontImageArtist: "Daniel Roberts (BlenderTimer)",
+        frontImageDate:"2023/07/28", // YYYY/MM/DD
 		topImage:"Toyota_Tacoma_2022-top",
 		hasTopImage:true,
         topImageAlign:"none",
         topImageArtist: "Daniel Roberts (BlenderTimer)",
+        topImageDate:"2023/07/28", // YYYY/MM/DD
 		width:0.00191008,
 		length:0.00539242,
 		height:0.00179324,
@@ -57,14 +63,17 @@ var objects = [
         hasSideImage:true,
         sideImageAlign:"none",
         sideImageArtist: "Daniel Roberts (BlenderTimer)",
+        sideImageDate:"2023/07/29", // YYYY/MM/DD
 		frontImage:"Red_Blood_Cell-front",
 		hasFrontImage:true,
         frontImageAlign:"none",
         frontImageArtist: "Daniel Roberts (BlenderTimer)",
+        frontImageDate:"2023/07/29", // YYYY/MM/DD
 		topImage:"Red_Blood_Cell-top",
 		hasTopImage:true,
         topImageAlign:"none",
         topImageArtist: "Daniel Roberts (BlenderTimer)",
+        topImageDate:"2023/07/29", // YYYY/MM/DD
 		width:0.0000000072,
 		length:0.0000000072,
 		height:0.0000000019,
@@ -82,14 +91,17 @@ var objects = [
         hasSideImage:true,
         sideImageAlign:"bottom",
         sideImageArtist: "Daniel Roberts (BlenderTimer)",
+        sideImageDate:"2023/07/28", // YYYY/MM/DD
 		frontImage:"Human_Male-front",
 		hasFrontImage:true,
         frontImageAlign:"bottom",
         frontImageArtist: "Daniel Roberts (BlenderTimer)",
+        frontImageDate:"2023/07/28", // YYYY/MM/DD
 		topImage:"Human_Male-top",
 		hasTopImage:true,
         topImageAlign:"none",
         topImageArtist: "Daniel Roberts (BlenderTimer)",
+        topImageDate:"2023/07/28", // YYYY/MM/DD
 		width:0.0005021,
 		length:0.000295,
 		height:0.0017526,
@@ -107,14 +119,17 @@ var objects = [
         hasSideImage:true,
         sideImageAlign:"none",
         sideImageArtist: "Daniel Roberts (BlenderTimer)",
+        sideImageDate:"2023/08/01", // YYYY/MM/DD
 		frontImage:"Atom_Generic-front",
 		hasFrontImage:true,
         frontImageAlign:"none",
         frontImageArtist: "Daniel Roberts (BlenderTimer)",
+        frontImageDate:"2023/08/01", // YYYY/MM/DD
 		topImage:"Atom_Generic-top",
 		hasTopImage:true,
         topImageAlign:"none",
         topImageArtist: "Daniel Roberts (BlenderTimer)",
+        topImageDate:"2023/08/01", // YYYY/MM/DD
 		width:0.0000000000001,
 		length:0.0000000000001,
 		height:0.0000000000001,
@@ -132,14 +147,17 @@ var objects = [
         hasSideImage:true,
         sideImageAlign:"none",
         sideImageArtist: "Daniel Roberts (BlenderTimer)",
+        sideImageDate:"2023/08/01", // YYYY/MM/DD
 		frontImage:"Mercury-front",
 		hasFrontImage:true,
         frontImageAlign:"none",
         frontImageArtist: "Daniel Roberts (BlenderTimer)",
+        frontImageDate:"2023/08/01", // YYYY/MM/DD
 		topImage:"Mercury-top",
 		hasTopImage:true,
         topImageAlign:"none",
         topImageArtist: "Daniel Roberts (BlenderTimer)",
+        topImageDate:"2023/08/01", // YYYY/MM/DD
 		width:4879.401,
 		length:4879.401,
 		height:4879.401,
@@ -157,14 +175,17 @@ var objects = [
         hasSideImage:true,
         sideImageAlign:"none",
         sideImageArtist: "Daniel Roberts (BlenderTimer)",
+        sideImageDate:"2023/08/01", // YYYY/MM/DD
 		frontImage:"Venus-front",
 		hasFrontImage:true,
         frontImageAlign:"none",
         frontImageArtist: "Daniel Roberts (BlenderTimer)",
+        frontImageDate:"2023/08/01", // YYYY/MM/DD
 		topImage:"Venus-top",
 		hasTopImage:true,
         topImageAlign:"none",
         topImageArtist: "Daniel Roberts (BlenderTimer)",
+        topImageDate:"2023/08/01", // YYYY/MM/DD
 		width:12103.599,
 		length:12103.599,
 		height:12103.599,
@@ -182,14 +203,17 @@ var objects = [
         hasSideImage:true,
         sideImageAlign:"none",
         sideImageArtist: "Daniel Roberts (BlenderTimer)",
+        sideImageDate:"2023/08/01", // YYYY/MM/DD
 		frontImage:"Mars-front",
 		hasFrontImage:true,
         frontImageAlign:"none",
         frontImageArtist: "Daniel Roberts (BlenderTimer)",
+        frontImageDate:"2023/08/01", // YYYY/MM/DD
 		topImage:"Mars-top",
 		hasTopImage:true,
         topImageAlign:"none",
         topImageArtist: "Daniel Roberts (BlenderTimer)",
+        topImageDate:"2023/08/01", // YYYY/MM/DD
 		width:6772.401,
 		length:6772.401,
 		height:6752.400,
@@ -207,14 +231,17 @@ var objects = [
         hasSideImage:true,
         sideImageAlign:"none",
         sideImageArtist: "Daniel Roberts (BlenderTimer)",
+        sideImageDate:"2023/08/01", // YYYY/MM/DD
 		frontImage:"Jupiter-front",
 		hasFrontImage:true,
         frontImageAlign:"none",
         frontImageArtist: "Daniel Roberts (BlenderTimer)",
+        frontImageDate:"2023/08/01", // YYYY/MM/DD
 		topImage:"Jupiter-top",
 		hasTopImage:true,
         topImageAlign:"none",
         topImageArtist: "Daniel Roberts (BlenderTimer)",
+        topImageDate:"2023/08/01", // YYYY/MM/DD
 		width:142984.001,
 		length:142984.001,
 		height:133707.999,
@@ -232,14 +259,17 @@ var objects = [
         hasSideImage:true,
         sideImageAlign:"none",
         sideImageArtist: "Daniel Roberts (BlenderTimer)",
+        sideImageDate:"2023/08/01", // YYYY/MM/DD
 		frontImage:"Saturn_without_rings-front",
 		hasFrontImage:true,
         frontImageAlign:"none",
         frontImageArtist: "Daniel Roberts (BlenderTimer)",
+        frontImageDate:"2023/08/01", // YYYY/MM/DD
 		topImage:"Saturn_without_rings-top",
 		hasTopImage:true,
         topImageAlign:"none",
         topImageArtist: "Daniel Roberts (BlenderTimer)",
+        topImageDate:"2023/08/01", // YYYY/MM/DD
 		width:120536.000,
 		length:120536.000,
 		height:108728.000,
@@ -257,14 +287,17 @@ var objects = [
         hasSideImage:true,
         sideImageAlign:"none",
         sideImageArtist: "Daniel Roberts (BlenderTimer)",
+        sideImageDate:"2023/08/01", // YYYY/MM/DD
 		frontImage:"Uranus-front",
 		hasFrontImage:true,
         frontImageAlign:"none",
         frontImageArtist: "Daniel Roberts (BlenderTimer)",
+        frontImageDate:"2023/08/01", // YYYY/MM/DD
 		topImage:"Uranus-top",
 		hasTopImage:true,
         topImageAlign:"none",
         topImageArtist: "Daniel Roberts (BlenderTimer)",
+        topImageDate:"2023/08/01", // YYYY/MM/DD
 		width:51118.001,
 		length:51118.001,
 		height:49946.001,
@@ -282,14 +315,17 @@ var objects = [
         hasSideImage:true,
         sideImageAlign:"none",
         sideImageArtist: "Daniel Roberts (BlenderTimer)",
+        sideImageDate:"2023/08/01", // YYYY/MM/DD
 		frontImage:"Neptune-front",
 		hasFrontImage:true,
         frontImageAlign:"none",
         frontImageArtist: "Daniel Roberts (BlenderTimer)",
+        frontImageDate:"2023/08/01", // YYYY/MM/DD
 		topImage:"Neptune-top",
 		hasTopImage:true,
         topImageAlign:"none",
         topImageArtist: "Daniel Roberts (BlenderTimer)",
+        topImageDate:"2023/08/01", // YYYY/MM/DD
 		width:49527.999,
 		length:49527.999,
 		height:48681.999,
@@ -307,14 +343,17 @@ var objects = [
         hasSideImage:true,
         sideImageAlign:"none",
         sideImageArtist: "Daniel Roberts (BlenderTimer)",
+        sideImageDate:"2023/08/01", // YYYY/MM/DD
 		frontImage:"The_Sun-front",
 		hasFrontImage:true,
         frontImageAlign:"none",
         frontImageArtist: "Daniel Roberts (BlenderTimer)",
+        frontImageDate:"2023/08/01", // YYYY/MM/DD
 		topImage:"The_Sun-top",
 		hasTopImage:true,
         topImageAlign:"none",
         topImageArtist: "Daniel Roberts (BlenderTimer)",
+        topImageDate:"2023/08/01", // YYYY/MM/DD
 		width:1391982.781,
 		length:1391982.781,
 		height:1391982.781,
@@ -332,14 +371,17 @@ var objects = [
         hasSideImage:true,
         sideImageAlign:"none",
         sideImageArtist: "Daniel Roberts (BlenderTimer)",
+        sideImageDate:"2023/08/02", // YYYY/MM/DD
 		frontImage:"Sirius_A-front",
 		hasFrontImage:true,
         frontImageAlign:"none",
         frontImageArtist: "Daniel Roberts (BlenderTimer)",
+        frontImageDate:"2023/08/02", // YYYY/MM/DD
 		topImage:"Sirius_A-top",
 		hasTopImage:true,
         topImageAlign:"none",
         topImageArtist: "Daniel Roberts (BlenderTimer)",
+        topImageDate:"2023/08/02", // YYYY/MM/DD
 		width:2365720,
 		length:2365720,
 		height:2365720,
@@ -357,14 +399,17 @@ var objects = [
         hasSideImage:true,
         sideImageAlign:"none",
         sideImageArtist: "Daniel Roberts (BlenderTimer)",
+        sideImageDate:"2023/08/02", // YYYY/MM/DD
         frontImage:"Ceres-front",
         hasFrontImage:true,
         frontImageAlign:"none",
         frontImageArtist: "Daniel Roberts (BlenderTimer)",
+        frontImageDate:"2023/08/02", // YYYY/MM/DD
         topImage:"Ceres-top",
         hasTopImage:true,
         topImageAlign:"none",
         topImageArtist: "Daniel Roberts (BlenderTimer)",
+        topImageDate:"2023/08/02", // YYYY/MM/DD
         width:974.6,
         length:974.6,
         height:909.4,
@@ -382,14 +427,17 @@ var objects = [
         hasSideImage:true,
         sideImageAlign:"none",
         sideImageArtist: "Daniel Roberts (BlenderTimer)",
+        sideImageDate:"2023/08/02", // YYYY/MM/DD
         frontImage:"Pluto-front",
         hasFrontImage:true,
         frontImageAlign:"none",
         frontImageArtist: "Daniel Roberts (BlenderTimer)",
+        frontImageDate:"2023/08/02", // YYYY/MM/DD
         topImage:"Pluto-top",
         hasTopImage:true,
         topImageAlign:"none",
         topImageArtist: "Daniel Roberts (BlenderTimer)",
+        topImageDate:"2023/08/02", // YYYY/MM/DD
         width:2376,
         length:2376,
         height:2376,
@@ -407,14 +455,17 @@ var objects = [
         hasSideImage:true,
         sideImageAlign:"none",
         sideImageArtist: "Daniel Roberts (BlenderTimer)",
+        sideImageDate:"2023/08/02", // YYYY/MM/DD
         frontImage:"Makemake-front",
         hasFrontImage:true,
         frontImageAlign:"none",
         frontImageArtist: "Daniel Roberts (BlenderTimer)",
+        frontImageDate:"2023/08/02", // YYYY/MM/DD
         topImage:"Makemake-top",
         hasTopImage:true,
         topImageAlign:"none",
         topImageArtist: "Daniel Roberts (BlenderTimer)",
+        topImageDate:"2023/08/02", // YYYY/MM/DD
         width:1434,
         length:1434,
         height:1422,
@@ -432,14 +483,17 @@ var objects = [
         hasSideImage:true,
         sideImageAlign:"none",
         sideImageArtist: "Daniel Roberts (BlenderTimer)",
+        sideImageDate:"2023/08/02", // YYYY/MM/DD
         frontImage:"Haumea-front",
         hasFrontImage:true,
         frontImageAlign:"none",
         frontImageArtist: "Daniel Roberts (BlenderTimer)",
+        frontImageDate:"2023/08/02", // YYYY/MM/DD
         topImage:"Haumea-top",
         hasTopImage:true,
         topImageAlign:"none",
         topImageArtist: "Daniel Roberts (BlenderTimer)",
+        topImageDate:"2023/08/02", // YYYY/MM/DD
         width:1960,
         length:1518,
         height:996,
@@ -457,14 +511,17 @@ var objects = [
         hasSideImage:true,
         sideImageAlign:"none",
         sideImageArtist: "Daniel Roberts (BlenderTimer)",
+        sideImageDate:"2023/08/02", // YYYY/MM/DD
         frontImage:"Eris-front",
         hasFrontImage:true,
         frontImageAlign:"none",
         frontImageArtist: "Daniel Roberts (BlenderTimer)",
+        frontImageDate:"2023/08/02", // YYYY/MM/DD
         topImage:"Eris-top",
         hasTopImage:true,
         topImageAlign:"none",
         topImageArtist: "Daniel Roberts (BlenderTimer)",
+        topImageDate:"2023/08/02", // YYYY/MM/DD
         width:2326,
         length:2326,
         height:2326,
@@ -482,14 +539,17 @@ var objects = [
         hasSideImage:true,
         sideImageAlign:"none",
         sideImageArtist: "Daniel Roberts (BlenderTimer)",
+        sideImageDate:"2023/08/02", // YYYY/MM/DD
         frontImage:"Polaris-front",
         hasFrontImage:true,
         frontImageAlign:"none",
         frontImageArtist: "Daniel Roberts (BlenderTimer)",
+        frontImageDate:"2023/08/02", // YYYY/MM/DD
         topImage:"Polaris-top",
         hasTopImage:true,
         topImageAlign:"none",
         topImageArtist: "Daniel Roberts (BlenderTimer)",
+        topImageDate:"2023/08/02", // YYYY/MM/DD
         width:52177999,
         length:52177999,
         height:52177999,
@@ -507,14 +567,17 @@ var objects = [
         hasSideImage:true,
         sideImageAlign:"none",
         sideImageArtist: "Daniel Roberts (BlenderTimer)",
+        sideImageDate:"2023/08/02", // YYYY/MM/DD
         frontImage:"VY_Canis_Majoris-front",
         hasFrontImage:true,
         frontImageAlign:"none",
         frontImageArtist: "Daniel Roberts (BlenderTimer)",
+        frontImageDate:"2023/08/02", // YYYY/MM/DD
         topImage:"VY_Canis_Majoris-top",
         hasTopImage:true,
         topImageAlign:"none",
         topImageArtist: "Daniel Roberts (BlenderTimer)",
+        topImageDate:"2023/08/02", // YYYY/MM/DD
         width:1974699999,
         length:1974699999,
         height:1974699999,
@@ -532,14 +595,17 @@ var objects = [
         hasSideImage:true,
         sideImageAlign:"none",
         sideImageArtist: "Daniel Roberts (BlenderTimer)",
+        sideImageDate:"2023/08/03", // YYYY/MM/DD
         frontImage:"UY_Scuti-front",
         hasFrontImage:true,
         frontImageAlign:"none",
         frontImageArtist: "Daniel Roberts (BlenderTimer)",
+        frontImageDate:"2023/08/03", // YYYY/MM/DD
         topImage:"UY_Scuti-top",
         hasTopImage:true,
         topImageAlign:"none",
         topImageArtist: "Daniel Roberts (BlenderTimer)",
+        topImageDate:"2023/08/03", // YYYY/MM/DD
         width:2375999998,
         length:2375999998,
         height:2375999998,
@@ -557,14 +623,17 @@ var objects = [
         hasSideImage:true,
         sideImageAlign:"none",
         sideImageArtist: "Daniel Roberts (BlenderTimer)",
+        sideImageDate:"2023/08/03", // YYYY/MM/DD
         frontImage:"Stephenson_2_18-front",
         hasFrontImage:true,
         frontImageAlign:"none",
         frontImageArtist: "Daniel Roberts (BlenderTimer)",
+        frontImageDate:"2023/08/03", // YYYY/MM/DD
         topImage:"Stephenson_2_18-top",
         hasTopImage:true,
         topImageAlign:"none",
         topImageArtist: "Daniel Roberts (BlenderTimer)",
+        topImageDate:"2023/08/03", // YYYY/MM/DD
         width:2991599998,
         length:2991599998,
         height:2991599998,
@@ -582,14 +651,17 @@ var objects = [
         hasSideImage:true,
         sideImageAlign:"bottom",
         sideImageArtist: "Daniel Roberts (BlenderTimer)",
+        sideImageDate:"2023/08/05", // YYYY/MM/DD
 		frontImage:"Human_Female-front",
 		hasFrontImage:true,
         frontImageAlign:"bottom",
         frontImageArtist: "Daniel Roberts (BlenderTimer)",
+        frontImageDate:"2023/08/05", // YYYY/MM/DD
 		topImage:"Human_Female-top",
 		hasTopImage:true,
         topImageAlign:"none",
         topImageArtist: "Daniel Roberts (BlenderTimer)",
+        topImageDate:"2023/08/05", // YYYY/MM/DD
 		width:0.0005221,
 		length:0.000390,
 		height:0.0016256,
@@ -607,14 +679,17 @@ var objects = [
         hasSideImage:true,
         sideImageAlign:"bottom",
         sideImageArtist: "Daniel Roberts (BlenderTimer)",
+        sideImageDate:"2023/08/07", // YYYY/MM/DD
         frontImage:"Toyota_Corolla_2022-front",
         hasFrontImage:true,
         frontImageAlign:"bottom",
         frontImageArtist: "Daniel Roberts (BlenderTimer)",
+        frontImageDate:"2023/08/07", // YYYY/MM/DD
         topImage:"Toyota_Corolla_2022-top",
         hasTopImage:true,
         topImageAlign:"none",
         topImageArtist: "Daniel Roberts (BlenderTimer)",
+        topImageDate:"2023/08/07", // YYYY/MM/DD
         width:0.00178054,
         length:0.00463042,
         height:0.0014351,
@@ -632,14 +707,17 @@ var objects = [
         hasSideImage:true,
         sideImageAlign:"bottom",
         sideImageArtist: "Daniel Roberts (BlenderTimer)",
+        sideImageDate:"", // YYYY/MM/DD
         frontImage:"",
         hasFrontImage:false,
         frontImageAlign:"bottom",
         frontImageArtist: "",
+        frontImageDate:"", // YYYY/MM/DD
         topImage:"",
         hasTopImage:false,
         topImageAlign:"none",
         topImageArtist: "",
+        topImageDate:"", // YYYY/MM/DD
         width:0.001000,
         length:0.004000,
         height:0.0054864,
@@ -657,14 +735,17 @@ var objects = [
         hasSideImage:true,
         sideImageAlign:"none",
         sideImageArtist: "Daniel Roberts (BlenderTimer)",
+        sideImageDate:"2023/08/07", // YYYY/MM/DD
         frontImage:"",
         hasFrontImage:false,
         frontImageAlign:"none",
         frontImageArtist: "",
+        frontImageDate:"", // YYYY/MM/DD
         topImage:"",
         hasTopImage:false,
         topImageAlign:"none",
         topImageArtist: "",
+        topImageDate:"", // YYYY/MM/DD
         width:0.0033528,
         length:0.0158496,
         height:0.0033528,
@@ -682,14 +763,17 @@ var objects = [
         hasSideImage:true,
         sideImageAlign:"bottom",
         sideImageArtist: "Daniel Roberts (BlenderTimer)",
+        sideImageDate:"2023/08/07", // YYYY/MM/DD
         frontImage:"",
         hasFrontImage:false,
         frontImageAlign:"bottom",
         frontImageArtist: "",
+        frontImageDate:"", // YYYY/MM/DD
         topImage:"",
         hasTopImage:false,
         topImageAlign:"none",
         topImageArtist: "",
+        topImageDate:"", // YYYY/MM/DD
         width:0.0000300,
         length:0.0000381,
         height:0.0000242,
@@ -707,14 +791,17 @@ var objects = [
         hasSideImage:true,
         sideImageAlign:"none",
         sideImageArtist: "Daniel Roberts (BlenderTimer)",
+        sideImageDate:"2023/08/07", // YYYY/MM/DD
         frontImage:"",
         hasFrontImage:false,
         frontImageAlign:"none",
         frontImageArtist: "",
+        frontImageDate:"", // YYYY/MM/DD
         topImage:"",
         hasTopImage:false,
         topImageAlign:"none",
         topImageArtist: "",
+        topImageDate:"", // YYYY/MM/DD
         width:0.0015,
         length:0.004572,
         height:0.0015,
@@ -732,14 +819,17 @@ var objects = [
         hasSideImage:true,
         sideImageAlign:"bottom",
         sideImageArtist: "Daniel Roberts (BlenderTimer)",
+        sideImageDate:"2023/08/07", // YYYY/MM/DD
         frontImage:"",
         hasFrontImage:false,
         frontImageAlign:"bottom",
         frontImageArtist: "",
+        frontImageDate:"", // YYYY/MM/DD
         topImage:"",
         hasTopImage:false,
         topImageAlign:"none",
         topImageArtist: "",
+        topImageDate:"", // YYYY/MM/DD
         width:0.000005,
         length:0.000006,
         height:0.000004,
@@ -757,14 +847,17 @@ var objects = [
         hasSideImage:true,
         sideImageAlign:"bottom",
         sideImageArtist: "Daniel Roberts (BlenderTimer)",
+        sideImageDate:"2023/08/07", // YYYY/MM/DD
         frontImage:"",
         hasFrontImage:false,
         frontImageAlign:"bottom",
         frontImageArtist: "",
+        frontImageDate:"", // YYYY/MM/DD
         topImage:"",
         hasTopImage:false,
         topImageAlign:"none",
         topImageArtist: "",
+        topImageDate:"", // YYYY/MM/DD
         width:0.000085,
         length:0.000254,
         height:0.000096,
@@ -782,14 +875,17 @@ var objects = [
         hasSideImage:false,
         sideImageAlign:"bottom",
         sideImageArtist: "",
+        sideImageDate:"", // YYYY/MM/DD
         frontImage:"Burj_Khalifa-front",
         hasFrontImage:true,
         frontImageAlign:"bottom",
         frontImageArtist: "Daniel Roberts (BlenderTimer)",
+        frontImageDate:"2023/08/07", // YYYY/MM/DD
         topImage:"",
         hasTopImage:false,
         topImageAlign:"none",
         topImageArtist: "",
+        topImageDate:"", // YYYY/MM/DD
         width:0.2,
         length:0.2,
         height:0.8296656,
@@ -807,14 +903,17 @@ var objects = [
         hasSideImage:false,
         sideImageAlign:"bottom",
         sideImageArtist: "",
+        sideImageDate:"", // YYYY/MM/DD
         frontImage:"Empire_State_Building-front",
         hasFrontImage:true,
         frontImageAlign:"bottom",
         frontImageArtist: "Daniel Roberts (BlenderTimer)",
+        frontImageDate:"2023/08/07", // YYYY/MM/DD
         topImage:"",
         hasTopImage:false,
         topImageAlign:"none",
         topImageArtist: "",
+        topImageDate:"", // YYYY/MM/DD
         width:0.15,
         length:0.15,
         height:0.4431792,
@@ -832,14 +931,17 @@ var objects = [
         hasSideImage:true,
         sideImageAlign:"none",
         sideImageArtist: "Daniel Roberts (BlenderTimer)",
+        sideImageDate:"2023/08/07", // YYYY/MM/DD
         frontImage:"Proxima_Centauri-front",
         hasFrontImage:true,
         frontImageAlign:"none",
         frontImageArtist: "Daniel Roberts (BlenderTimer)",
+        frontImageDate:"2023/08/07", // YYYY/MM/DD
         topImage:"Proxima_Centauri-top",
         hasTopImage:true,
         topImageAlign:"none",
         topImageArtist: "Daniel Roberts (BlenderTimer)",
+        topImageDate:"2023/08/07", // YYYY/MM/DD
         width:214557.7421,
         length:214557.7421,
         height:214557.7421,
@@ -857,14 +959,17 @@ var objects = [
         hasSideImage:false,
         sideImageAlign:"none",
         sideImageArtist: "",
+        sideImageDate:"", // YYYY/MM/DD
         frontImage:"Water_Molecule-front",
         hasFrontImage:true,
         frontImageAlign:"none",
         frontImageArtist: "Daniel Roberts (BlenderTimer)",
+        frontImageDate:"2023/08/07", // YYYY/MM/DD
         topImage:"",
         hasTopImage:false,
         topImageAlign:"none",
         topImageArtist: "",
+        topImageDate:"", // YYYY/MM/DD
         width:0.00000000000029,
         length:0.00000000000029,
         height:0.000000000000225,
@@ -882,14 +987,17 @@ var objects = [
         hasSideImage:false,
         sideImageAlign:"bottom",
         sideImageArtist: "",
+        sideImageDate:"", // YYYY/MM/DD
         frontImage:"Currant_Peak_Nevada-front",
         hasFrontImage:true,
         frontImageAlign:"bottom",
         frontImageArtist: "Daniel Roberts (BlenderTimer)",
+        frontImageDate:"2023/08/07", // YYYY/MM/DD
         topImage:"",
         hasTopImage:false,
         topImageAlign:"none",
         topImageArtist: "",
+        topImageDate:"", // YYYY/MM/DD
         width:12.5826799,
         length:12.5826799,
         height:3.5106864,
@@ -907,14 +1015,17 @@ var objects = [
         hasSideImage:false,
         sideImageAlign:"bottom",
         sideImageArtist: "",
+        sideImageDate:"", // YYYY/MM/DD
         frontImage:"Denali_Alaska-front",
         hasFrontImage:true,
         frontImageAlign:"bottom",
         frontImageArtist: "Daniel Roberts (BlenderTimer)",
+        frontImageDate:"", // YYYY/MM/DD
         topImage:"",
         hasTopImage:false,
         topImageAlign:"none",
         topImageArtist: "",
+        topImageDate:"", // YYYY/MM/DD
         width:33.72128666,
         length:33.72128666,
         height:6.190488,
@@ -932,14 +1043,17 @@ var objects = [
         hasSideImage:false,
         sideImageAlign:"bottom",
         sideImageArtist: "",
+        sideImageDate:"", // YYYY/MM/DD
         frontImage:"Mt_Rainier_Washington-front",
         hasFrontImage:true,
         frontImageAlign:"bottom",
         frontImageArtist: "Daniel Roberts (BlenderTimer)",
+        frontImageDate:"2023/08/07", // YYYY/MM/DD
         topImage:"",
         hasTopImage:false,
         topImageAlign:"none",
         topImageArtist: "",
+        topImageDate:"", // YYYY/MM/DD
         width:28.821500582,
         length:28.821500582,
         height:4.392168,
@@ -957,14 +1071,17 @@ var objects = [
         hasSideImage:false,
         sideImageAlign:"bottom",
         sideImageArtist: "",
+        sideImageDate:"", // YYYY/MM/DD
         frontImage:"Mt_Saint_Helens_Washington-front",
         hasFrontImage:true,
         frontImageAlign:"bottom",
         frontImageArtist: "Daniel Roberts (BlenderTimer)",
+        frontImageDate:"2023/08/07", // YYYY/MM/DD
         topImage:"",
         hasTopImage:false,
         topImageAlign:"none",
         topImageArtist: "",
+        topImageDate:"", // YYYY/MM/DD
         width:15.603457768,
         length:15.603457768,
         height:2.5490424,
@@ -982,14 +1099,17 @@ var objects = [
         hasSideImage:false,
         sideImageAlign:"bottom",
         sideImageArtist: "",
+        sideImageDate:"", // YYYY/MM/DD
         frontImage:"Hyperion_Tallest_Tree-front",
         hasFrontImage:true,
         frontImageAlign:"bottom",
         frontImageArtist: "Daniel Roberts (BlenderTimer)",
+        frontImageDate:"2023/08/07", // YYYY/MM/DD
         topImage:"",
         hasTopImage:false,
         topImageAlign:"none",
         topImageArtist: "",
+        topImageDate:"", // YYYY/MM/DD
         width:0.047997846,
         length:0.047997846,
         height:0.11591544,
@@ -1007,14 +1127,17 @@ var objects = [
         hasSideImage:true,
         sideImageAlign:"none",
         sideImageArtist: "Daniel Roberts (BlenderTimer)",
+        sideImageDate:"2023/08/07", // YYYY/MM/DD
         frontImage:"Alpha_Centauri_A-front",
         hasFrontImage:true,
         frontImageAlign:"none",
         frontImageArtist: "Daniel Roberts (BlenderTimer)",
+        frontImageDate:"2023/08/07", // YYYY/MM/DD
         topImage:"Alpha_Centauri_A-top",
         hasTopImage:true,
         topImageAlign:"none",
         topImageArtist: "Daniel Roberts (BlenderTimer)",
+        topImageDate:"2023/08/07", // YYYY/MM/DD
         width:1702235.336,
         length:1702235.336,
         height:1702235.336,
@@ -1032,14 +1155,17 @@ var objects = [
         hasSideImage:true,
         sideImageAlign:"none",
         sideImageArtist: "Daniel Roberts (BlenderTimer)",
+        sideImageDate:"2023/08/07", // YYYY/MM/DD
         frontImage:"Alpha_Centauri_B-front",
         hasFrontImage:true,
         frontImageAlign:"none",
         frontImageArtist: "Daniel Roberts (BlenderTimer)",
+        frontImageDate:"2023/08/07", // YYYY/MM/DD
         topImage:"Alpha_Centauri_B-top",
         hasTopImage:true,
         topImageAlign:"none",
         topImageArtist: "Daniel Roberts (BlenderTimer)",
+        topImageDate:"2023/08/07", // YYYY/MM/DD
         width:1400000,
         length:1400000,
         height:1400000,
@@ -1057,14 +1183,17 @@ var objects = [
         hasSideImage:true,
         sideImageAlign:"none",
         sideImageArtist: "Daniel Roberts (BlenderTimer)",
+        sideImageDate:"2023/08/07", // YYYY/MM/DD
         frontImage:"Rigel-front",
         hasFrontImage:true,
         frontImageAlign:"none",
         frontImageArtist: "Daniel Roberts (BlenderTimer)",
+        frontImageDate:"2023/08/07", // YYYY/MM/DD
         topImage:"Rigel-top",
         hasTopImage:true,
         topImageAlign:"none",
         topImageArtist: "Daniel Roberts (BlenderTimer)",
+        topImageDate:"2023/08/07", // YYYY/MM/DD
         width:109781465.33,
         length:109781465.33,
         height:109781465.33,
@@ -1082,14 +1211,17 @@ var objects = [
         hasSideImage:true,
         sideImageAlign:"none",
         sideImageArtist: "Daniel Roberts (BlenderTimer)",
+        sideImageDate:"2023/08/07", // YYYY/MM/DD
         frontImage:"Arcturus-front",
         hasFrontImage:true,
         frontImageAlign:"none",
         frontImageArtist: "Daniel Roberts (BlenderTimer)",
+        frontImageDate:"2023/08/07", // YYYY/MM/DD
         topImage:"Arcturus-top",
         hasTopImage:true,
         topImageAlign:"none",
         topImageArtist: "Daniel Roberts (BlenderTimer)",
+        topImageDate:"2023/08/07", // YYYY/MM/DD
         width:35341194.24,
         length:35341194.24,
         height:35341194.24,
@@ -1107,14 +1239,17 @@ var objects = [
         hasSideImage:true,
         sideImageAlign:"none",
         sideImageArtist: "Daniel Roberts (BlenderTimer)",
+        sideImageDate:"2023/08/07", // YYYY/MM/DD
         frontImage:"Betelgeuse-front",
         hasFrontImage:true,
         frontImageAlign:"none",
         frontImageArtist: "Daniel Roberts (BlenderTimer)",
+        frontImageDate:"2023/08/07", // YYYY/MM/DD
         topImage:"Betelgeuse-top",
         hasTopImage:true,
         topImageAlign:"none",
         topImageArtist: "Daniel Roberts (BlenderTimer)",
+        topImageDate:"2023/08/07", // YYYY/MM/DD
         width:1234171795.51,
         length:1234171795.51,
         height:1234171795.51,
@@ -1132,14 +1267,17 @@ var objects = [
         hasSideImage:true,
         sideImageAlign:"none",
         sideImageArtist: "Daniel Roberts (BlenderTimer)",
+        sideImageDate:"2023/08/07", // YYYY/MM/DD
         frontImage:"Pollux-front",
         hasFrontImage:true,
         frontImageAlign:"none",
         frontImageArtist: "Daniel Roberts (BlenderTimer)",
+        frontImageDate:"2023/08/07", // YYYY/MM/DD
         topImage:"Pollux-top",
         hasTopImage:true,
         topImageAlign:"none",
         topImageArtist: "Daniel Roberts (BlenderTimer)",
+        topImageDate:"2023/08/07", // YYYY/MM/DD
         width:12244371.96,
         length:12244371.96,
         height:12244371.96,
@@ -1157,14 +1295,17 @@ var objects = [
         hasSideImage:true,
         sideImageAlign:"none",
         sideImageArtist: "Daniel Roberts (BlenderTimer)",
+        sideImageDate:"2023/08/07", // YYYY/MM/DD
         frontImage:"Aldebaran-front",
         hasFrontImage:true,
         frontImageAlign:"none",
         frontImageArtist: "Daniel Roberts (BlenderTimer)",
+        frontImageDate:"2023/08/07", // YYYY/MM/DD
         topImage:"Aldebaran-top",
         hasTopImage:true,
         topImageAlign:"none",
         topImageArtist: "Daniel Roberts (BlenderTimer)",
+        topImageDate:"2023/08/07", // YYYY/MM/DD
         width:61277920,
         length:61277920,
         height:61277920,
@@ -1182,14 +1323,17 @@ var objects = [
         hasSideImage:true,
         sideImageAlign:"none",
         sideImageArtist: "Daniel Roberts (BlenderTimer)",
+        sideImageDate:"2023/08/07", // YYYY/MM/DD
         frontImage:"Antares-front",
         hasFrontImage:true,
         frontImageAlign:"none",
         frontImageArtist: "Daniel Roberts (BlenderTimer)",
+        frontImageDate:"2023/08/07", // YYYY/MM/DD
         topImage:"Antares-top",
         hasTopImage:true,
         topImageAlign:"none",
         topImageArtist: "Daniel Roberts (BlenderTimer)",
+        topImageDate:"2023/08/07", // YYYY/MM/DD
         width:946149431.04,
         length:946149431.04,
         height:946149431.04,
@@ -1207,14 +1351,17 @@ var objects = [
         hasSideImage:true,
         sideImageAlign:"none",
         sideImageArtist: "Daniel Roberts (BlenderTimer)",
+        sideImageDate:"2023/08/07", // YYYY/MM/DD
         frontImage:"Earths_Moon-front",
         hasFrontImage:true,
         frontImageAlign:"none",
         frontImageArtist: "Daniel Roberts (BlenderTimer)",
+        frontImageDate:"2023/08/07", // YYYY/MM/DD
         topImage:"Earths_Moon-top",
         hasTopImage:true,
         topImageAlign:"none",
         topImageArtist: "Daniel Roberts (BlenderTimer)",
+        topImageDate:"2023/08/07", // YYYY/MM/DD
         width:3476.2,
         length:3476.2,
         height:3472,
@@ -1232,14 +1379,17 @@ var objects = [
         hasSideImage:true,
         sideImageAlign:"none",
         sideImageArtist: "Daniel Roberts (BlenderTimer)",
+        sideImageDate:"2023/08/07", // YYYY/MM/DD
         frontImage:"EBLM_J0555_57Ab-front",
         hasFrontImage:true,
         frontImageAlign:"none",
         frontImageArtist: "Daniel Roberts (BlenderTimer)",
+        frontImageDate:"2023/08/07", // YYYY/MM/DD
         topImage:"EBLM_J0555_57Ab-top",
         hasTopImage:true,
         topImageAlign:"none",
         topImageArtist: "Daniel Roberts (BlenderTimer)",
+        topImageDate:"2023/08/07", // YYYY/MM/DD
         width:118000,
         length:118000,
         height:118000,
@@ -1257,14 +1407,17 @@ var objects = [
         hasSideImage:false,
         sideImageAlign:"none",
         sideImageArtist: "",
+        sideImageDate:"", // YYYY/MM/DD
         frontImage:"",
         hasFrontImage:false,
         frontImageAlign:"none",
         frontImageArtist: "",
+        frontImageDate:"", // YYYY/MM/DD
         topImage:"Mycoplasma_Gallisepticum-top",
         hasTopImage:true,
         topImageAlign:"none",
         topImageArtist: "Daniel Roberts (BlenderTimer)",
+        topImageDate:"2023/08/08", // YYYY/MM/DD
         width:0.0000000018,
         length:0.000000002,
         height:0.0000000007,
@@ -1282,14 +1435,17 @@ var objects = [
         hasSideImage:false,
         sideImageAlign:"none",
         sideImageArtist: "",
+        sideImageDate:"", // YYYY/MM/DD
         frontImage:"Water_Drop-front",
         hasFrontImage:true,
         frontImageAlign:"none",
         frontImageArtist: "Daniel Roberts (BlenderTimer)",
+        frontImageDate:"2023/08/08", // YYYY/MM/DD
         topImage:"",
         hasTopImage:false,
         topImageAlign:"none",
         topImageArtist: "",
+        topImageDate:"", // YYYY/MM/DD
         width:0.000003,
         length:0.000003,
         height:0.0000044,
@@ -1307,14 +1463,17 @@ var objects = [
         hasSideImage:true,
         sideImageAlign:"none",
         sideImageArtist: "Daniel Roberts (BlenderTimer)",
+        sideImageDate:"2023/08/08", // YYYY/MM/DD
         frontImage:"",
         hasFrontImage:false,
         frontImageAlign:"none",
         frontImageArtist: "",
+        frontImageDate:"", // YYYY/MM/DD
         topImage:"",
         hasTopImage:false,
         topImageAlign:"none",
         topImageArtist: "",
+        topImageDate:"", // YYYY/MM/DD
         width:0.0000002,
         length:0.0000002,
         height:0.00000023,
@@ -1332,14 +1491,17 @@ var objects = [
         hasSideImage:false,
         sideImageAlign:"none",
         sideImageArtist: "",
+        sideImageDate:"", // YYYY/MM/DD
         frontImage:"Adenovirus-front",
         hasFrontImage:true,
         frontImageAlign:"none",
         frontImageArtist: "Daniel Roberts (BlenderTimer)",
+        frontImageDate:"2023/08/08", // YYYY/MM/DD
         topImage:"",
         hasTopImage:false,
         topImageAlign:"none",
         topImageArtist: "",
+        topImageDate:"", // YYYY/MM/DD
         width:0.00000000002,
         length:0.00000000002,
         height:0.00000000002,
@@ -1357,14 +1519,17 @@ var objects = [
         hasSideImage:true,
         sideImageAlign:"bottom",
         sideImageArtist: "Daniel Roberts (BlenderTimer)",
+        sideImageDate:"2023/08/08", // YYYY/MM/DD
         frontImage:"",
         hasFrontImage:false,
         frontImageAlign:"bottom",
         frontImageArtist: "",
+        frontImageDate:"", // YYYY/MM/DD
         topImage:"",
         hasTopImage:false,
         topImageAlign:"none",
         topImageArtist: "",
+        topImageDate:"", // YYYY/MM/DD
         width:0.00010,
         length:0.00022,
         height:0.00020066,
@@ -1382,14 +1547,17 @@ var objects = [
         hasSideImage:true,
         sideImageAlign:"none",
         sideImageArtist: "Daniel Roberts (BlenderTimer)",
+        sideImageDate:"2023/08/08", // YYYY/MM/DD
         frontImage:"",
         hasFrontImage:false,
         frontImageAlign:"none",
         frontImageArtist: "",
+        frontImageDate:"", // YYYY/MM/DD
         topImage:"",
         hasTopImage:false,
         topImageAlign:"none",
         topImageArtist: "",
+        topImageDate:"", // YYYY/MM/DD
         width:0.00003,
         length:0.000072,
         height:0.00011,
@@ -1407,14 +1575,17 @@ var objects = [
         hasSideImage:true,
         sideImageAlign:"bottom",
         sideImageArtist: "Daniel Roberts (BlenderTimer)",
+        sideImageDate:"2023/08/08", // YYYY/MM/DD
         frontImage:"",
         hasFrontImage:false,
         frontImageAlign:"bottom",
         frontImageArtist: "",
+        frontImageDate:"", // YYYY/MM/DD
         topImage:"",
         hasTopImage:false,
         topImageAlign:"none",
         topImageArtist: "",
+        topImageDate:"", // YYYY/MM/DD
         width:0.0003,
         length:0.000762,
         height:0.0006,
@@ -1432,14 +1603,17 @@ var objects = [
         hasSideImage:true,
         sideImageAlign:"none",
         sideImageArtist: "Daniel Roberts (BlenderTimer)",
+        sideImageDate:"", // YYYY/MM/DD
         frontImage:"",
         hasFrontImage:false,
         frontImageAlign:"none",
         frontImageArtist: "",
+        frontImageDate:"", // YYYY/MM/DD
         topImage:"",
         hasTopImage:false,
         topImageAlign:"none",
         topImageArtist: "",
+        topImageDate:"", // YYYY/MM/DD
         width:0.00044958,
         length:0.00044958,
         height:0.001042324,
@@ -1457,14 +1631,17 @@ var objects = [
         hasSideImage:false,
         sideImageAlign:"bottom",
         sideImageArtist: "",
+        sideImageDate:"", // YYYY/MM/DD
         frontImage:"Mt_Everest_Nepal-front",
         hasFrontImage:true,
         frontImageAlign:"bottom",
         frontImageArtist: "Daniel Roberts (BlenderTimer)",
+        frontImageDate:"2023/08/08", // YYYY/MM/DD
         topImage:"",
         hasTopImage:false,
         topImageAlign:"none",
         topImageArtist: "",
+        topImageDate:"", // YYYY/MM/DD
         width:34.835261981,
         length:34.835261981,
         height:8.8489536,
@@ -1482,14 +1659,17 @@ var objects = [
         hasSideImage:false,
         sideImageAlign:"bottom",
         sideImageArtist: "",
+        sideImageDate:"", // YYYY/MM/DD
         frontImage:"Spruce-front",
         hasFrontImage:true,
         frontImageAlign:"bottom",
         frontImageArtist: "Daniel Roberts (BlenderTimer)",
+        frontImageDate:"2023/08/08", // YYYY/MM/DD
         topImage:"",
         hasTopImage:false,
         topImageAlign:"none",
         topImageArtist: "",
+        topImageDate:"", // YYYY/MM/DD
         width:0.006,
         length:0.006,
         height:0.012192,
@@ -1507,14 +1687,17 @@ var objects = [
         hasSideImage:false,
         sideImageAlign:"none",
         sideImageArtist: "",
+        sideImageDate:"", // YYYY/MM/DD
         frontImage:"Bernardinelli_Bernstein_Largest_Comet-front",
         hasFrontImage:true,
         frontImageAlign:"none",
         frontImageArtist: "Daniel Roberts (BlenderTimer)",
+        frontImageDate:"2023/08/08", // YYYY/MM/DD
         topImage:"",
         hasTopImage:false,
         topImageAlign:"none",
         topImageArtist: "",
+        topImageDate:"", // YYYY/MM/DD
         width:119,
         length:119,
         height:119,
@@ -1532,14 +1715,17 @@ var objects = [
         hasSideImage:false,
         sideImageAlign:"none",
         sideImageArtist: "",
+        sideImageDate:"", // YYYY/MM/DD
         frontImage:"Halleys_Comet-front",
         hasFrontImage:true,
         frontImageAlign:"none",
         frontImageArtist: "Daniel Roberts (BlenderTimer)",
+        frontImageDate:"2023/08/08", // YYYY/MM/DD
         topImage:"",
         hasTopImage:false,
         topImageAlign:"none",
         topImageArtist: "",
+        topImageDate:"", // YYYY/MM/DD
         width:14.9669,
         length:8.04672,
         height:8.04672,
@@ -1557,14 +1743,17 @@ var objects = [
         hasSideImage:false,
         sideImageAlign:"none",
         sideImageArtist: "",
+        sideImageDate:"", // YYYY/MM/DD
         frontImage:"",
         hasFrontImage:false,
         frontImageAlign:"none",
         frontImageArtist: "",
+        frontImageDate:"", // YYYY/MM/DD
         topImage:"Segue_2_Smallest_Galaxy-top",
         hasTopImage:true,
         topImageAlign:"none",
         topImageArtist: "Daniel Roberts (BlenderTimer)",
+        topImageDate:"2023/08/09", // YYYY/MM/DD
         width:1049100454195200,
         length:1049100454195200,
         height:1049100454195200,
@@ -1582,14 +1771,17 @@ var objects = [
         hasSideImage:false,
         sideImageAlign:"none",
         sideImageArtist: "",
+        sideImageDate:"", // YYYY/MM/DD
         frontImage:"",
         hasFrontImage:false,
         frontImageAlign:"none",
         frontImageArtist: "",
+        frontImageDate:"", // YYYY/MM/DD
         topImage:"The_Milky_Way-top",
         hasTopImage:true,
         topImageAlign:"none",
         topImageArtist: "Daniel Roberts (BlenderTimer)",
+        topImageDate:"2023/08/09", // YYYY/MM/DD
         width:621370700000000000,
         length:621370700000000000,
         height:621370700000000000,
@@ -1607,14 +1799,17 @@ var objects = [
         hasSideImage:false,
         sideImageAlign:"none",
         sideImageArtist: "",
+        sideImageDate:"", // YYYY/MM/DD
         frontImage:"",
         hasFrontImage:false,
         frontImageAlign:"none",
         frontImageArtist: "",
+        frontImageDate:"", // YYYY/MM/DD
         topImage:"Saturn_with_rings-top",
         hasTopImage:true,
         topImageAlign:"none",
         topImageArtist: "Daniel Roberts (BlenderTimer)",
+        topImageDate:"2023/08/09", // YYYY/MM/DD
         width:333270,
         length:333270,
         height:108728,
@@ -1632,14 +1827,17 @@ var objects = [
         hasSideImage:false,
         sideImageAlign:"none",
         sideImageArtist: "",
+        sideImageDate:"", // YYYY/MM/DD
         frontImage:"",
         hasFrontImage:false,
         frontImageAlign:"none",
         frontImageArtist: "",
+        frontImageDate:"", // YYYY/MM/DD
         topImage:"Uranus_with_rings-top",
         hasTopImage:true,
         topImageAlign:"none",
         topImageArtist: "Daniel Roberts (BlenderTimer)",
+        topImageDate:"2023/08/09", // YYYY/MM/DD
         width:106454,
         length:106454,
         height:49946.001,
@@ -1657,14 +1855,17 @@ var objects = [
         hasSideImage:false,
         sideImageAlign:"none",
         sideImageArtist: "",
+        sideImageDate:"", // YYYY/MM/DD
         frontImage:"",
         hasFrontImage:false,
         frontImageAlign:"none",
         frontImageArtist: "",
+        frontImageDate:"", // YYYY/MM/DD
         topImage:"Antarctica-top",
         hasTopImage:true,
         topImageAlign:"none",
         topImageArtist: "Daniel Roberts (BlenderTimer)",
+        topImageDate:"2023/08/09", // YYYY/MM/DD
         width:4500,
         length:5500,
         height:4.881372,
@@ -1682,14 +1883,17 @@ var objects = [
         hasSideImage:false,
         sideImageAlign:"none",
         sideImageArtist: "",
+        sideImageDate:"", // YYYY/MM/DD
         frontImage:"Deimos_Mars_Moon-front",
         hasFrontImage:true,
         frontImageAlign:"none",
         frontImageArtist: "Daniel Roberts (BlenderTimer)",
+        frontImageDate:"2023/08/09", // YYYY/MM/DD
         topImage:"",
         hasTopImage:false,
         topImageAlign:"none",
         topImageArtist: "",
+        topImageDate:"", // YYYY/MM/DD
         width:12.4,
         length:15,
         height:11,
@@ -1707,14 +1911,17 @@ var objects = [
         hasSideImage:false,
         sideImageAlign:"none",
         sideImageArtist: "",
+        sideImageDate:"", // YYYY/MM/DD
         frontImage:"Phobos_Mars_Moon-front",
         hasFrontImage:true,
         frontImageAlign:"none",
         frontImageArtist: "Daniel Roberts (BlenderTimer)",
+        frontImageDate:"2023/08/09", // YYYY/MM/DD
         topImage:"",
         hasTopImage:false,
         topImageAlign:"none",
         topImageArtist: "",
+        topImageDate:"", // YYYY/MM/DD
         width:22,
         length:27,
         height:18,
@@ -1732,14 +1939,17 @@ var objects = [
         hasSideImage:false,
         sideImageAlign:"bottom",
         sideImageArtist: "",
+        sideImageDate:"", // YYYY/MM/DD
         frontImage:"Eiffel_Tower-front",
         hasFrontImage:true,
         frontImageAlign:"bottom",
         frontImageArtist: "Daniel Roberts (BlenderTimer)",
+        frontImageDate:"2023/08/09", // YYYY/MM/DD
         topImage:"",
         hasTopImage:false,
         topImageAlign:"none",
         topImageArtist: "",
+        topImageDate:"", // YYYY/MM/DD
         width:0.125,
         length:0.125,
         height:0.33,
@@ -1757,14 +1967,17 @@ var objects = [
         hasSideImage:true,
         sideImageAlign:"bottom",
         sideImageArtist: "Daniel Roberts (BlenderTimer)",
+        sideImageDate:"2023/08/09", // YYYY/MM/DD
         frontImage:"Airbus_A330_300-front",
         hasFrontImage:true,
         frontImageAlign:"bottom",
         frontImageArtist: "Daniel Roberts (BlenderTimer)",
+        frontImageDate:"2023/08/09", // YYYY/MM/DD
         topImage:"Airbus_A330_300-top",
         hasTopImage:true,
         topImageAlign:"none",
         topImageArtist: "Daniel Roberts (BlenderTimer)",
+        topImageDate:"2023/08/09", // YYYY/MM/DD
         width:0.0600456,
         length:0.0636522984,
         height:0.016764,
@@ -1782,14 +1995,17 @@ var objects = [
         hasSideImage:false,
         sideImageAlign:"bottom",
         sideImageArtist: "",
+        sideImageDate:"", // YYYY/MM/DD
         frontImage:"Saturn_V-front",
         hasFrontImage:true,
         frontImageAlign:"bottom",
         frontImageArtist: "Daniel Roberts (BlenderTimer)",
+        frontImageDate:"2023/08/09", // YYYY/MM/DD
         topImage:"",
         hasTopImage:false,
         topImageAlign:"none",
         topImageArtist: "",
+        topImageDate:"", // YYYY/MM/DD
         width:0.013454118,
         length:0.013454118,
         height:0.111,
@@ -1807,14 +2023,17 @@ var objects = [
         hasSideImage:false,
         sideImageAlign:"bottom",
         sideImageArtist: "",
+        sideImageDate:"", // YYYY/MM/DD
         frontImage:"Space_Shuttle_Fully_Assembled-front",
         hasFrontImage:true,
         frontImageAlign:"bottom",
         frontImageArtist: "Daniel Roberts (BlenderTimer)",
+        frontImageDate:"2023/08/09", // YYYY/MM/DD
         topImage:"",
         hasTopImage:false,
         topImageAlign:"none",
         topImageArtist: "",
+        topImageDate:"", // YYYY/MM/DD
         width:0.025417299,
         length:0.025417299,
         height:0.0560832,
@@ -1832,14 +2051,17 @@ var objects = [
         hasSideImage:true,
         sideImageAlign:"bottom",
         sideImageArtist: "Daniel Roberts (BlenderTimer)",
+        sideImageDate:"2023/08/10", // YYYY/MM/DD
         frontImage:"Cessna_172_Skyhawk-front",
         hasFrontImage:true,
         frontImageAlign:"bottom",
         frontImageArtist: "Daniel Roberts (BlenderTimer)",
+        frontImageDate:"2023/08/10", // YYYY/MM/DD
         topImage:"Cessna_172_Skyhawk-top",
         hasTopImage:true,
         topImageAlign:"none",
         topImageArtist: "Daniel Roberts (BlenderTimer)",
+        topImageDate:"2023/08/10", // YYYY/MM/DD
         width:0.0110236,
         length:0.0082804,
         height:0.00272,
@@ -1857,14 +2079,17 @@ var objects = [
         hasSideImage:false,
         sideImageAlign:"none",
         sideImageArtist: "",
+        sideImageDate:"", // YYYY/MM/DD
         frontImage:"Human_Liver-front",
         hasFrontImage:true,
         frontImageAlign:"none",
         frontImageArtist: "Daniel Roberts (BlenderTimer)",
+        frontImageDate:"2023/08/10", // YYYY/MM/DD
         topImage:"",
         hasTopImage:false,
         topImageAlign:"none",
         topImageArtist: "",
+        topImageDate:"", // YYYY/MM/DD
         width:0.00016,
         length:0.0001,
         height:0.0001,
@@ -1882,14 +2107,17 @@ var objects = [
         hasSideImage:true,
         sideImageAlign:"none",
         sideImageArtist: "Daniel Roberts (BlenderTimer)",
+        sideImageDate:"2023/08/10", // YYYY/MM/DD
         frontImage:"",
         hasFrontImage:false,
         frontImageAlign:"none",
         frontImageArtist: "",
+        frontImageDate:"", // YYYY/MM/DD
         topImage:"",
         hasTopImage:false,
         topImageAlign:"none",
         topImageArtist: "",
+        topImageDate:"", // YYYY/MM/DD
         width:0.00009144,
         length:0.0001651,
         height:0.0001397,
@@ -1907,14 +2135,17 @@ var objects = [
         hasSideImage:true,
         sideImageAlign:"bottom",
         sideImageArtist: "Daniel Roberts (BlenderTimer)",
+        sideImageDate:"2023/08/10", // YYYY/MM/DD
         frontImage:"",
         hasFrontImage:false,
         frontImageAlign:"bottom",
         frontImageArtist: "",
+        frontImageDate:"", // YYYY/MM/DD
         topImage:"",
         hasTopImage:false,
         topImageAlign:"none",
         topImageArtist: "",
+        topImageDate:"", // YYYY/MM/DD
         width:0.00019144,
         length:0.0002451,
         height:0.0002297,
@@ -1932,14 +2163,17 @@ var objects = [
         hasSideImage:false,
         sideImageAlign:"none",
         sideImageArtist: "",
+        sideImageDate:"", // YYYY/MM/DD
         frontImage:"",
         hasFrontImage:false,
         frontImageAlign:"none",
         frontImageArtist: "",
+        frontImageDate:"", // YYYY/MM/DD
         topImage:"Human_Hand_Closed-top",
         hasTopImage:true,
         topImageAlign:"none",
         topImageArtist: "Daniel Roberts (BlenderTimer)",
+        topImageDate:"2023/08/10", // YYYY/MM/DD
         width:0.00009482,
         length:0.00016288,
         height:0.00003297,
@@ -1957,14 +2191,17 @@ var objects = [
         hasSideImage:false,
         sideImageAlign:"none",
         sideImageArtist: "",
+        sideImageDate:"", // YYYY/MM/DD
         frontImage:"",
         hasFrontImage:false,
         frontImageAlign:"none",
         frontImageArtist: "",
+        frontImageDate:"", // YYYY/MM/DD
         topImage:"Human_Hand_Open-top",
         hasTopImage:true,
         topImageAlign:"none",
         topImageArtist: "Daniel Roberts (BlenderTimer)",
+        topImageDate:"2023/08/10", // YYYY/MM/DD
         width:0.00013482,
         length:0.00016288,
         height:0.00003297,
@@ -1982,14 +2219,17 @@ var objects = [
         hasSideImage:false,
         sideImageAlign:"none",
         sideImageArtist: "",
+        sideImageDate:"", // YYYY/MM/DD
         frontImage:"Human_Heart-front",
         hasFrontImage:true,
         frontImageAlign:"none",
         frontImageArtist: "Daniel Roberts (BlenderTimer)",
+        frontImageDate:"2023/08/10", // YYYY/MM/DD
         topImage:"",
         hasTopImage:false,
         topImageAlign:"none",
         topImageArtist: "",
+        topImageDate:"", // YYYY/MM/DD
         width:0.0001,
         length:0.00006,
         height:0.00017,
@@ -2007,14 +2247,17 @@ var objects = [
         hasSideImage:false,
         sideImageAlign:"none",
         sideImageArtist: "",
+        sideImageDate:"0", // YYYY/MM/DD
         frontImage:"Human_Kidney-front",
         hasFrontImage:true,
         frontImageAlign:"none",
         frontImageArtist: "Daniel Roberts (BlenderTimer)",
+        frontImageDate:"2023/08/10", // YYYY/MM/DD
         topImage:"",
         hasTopImage:false,
         topImageAlign:"none",
         topImageArtist: "",
+        topImageDate:"", // YYYY/MM/DD
         width:0.00008,
         length:0.000023,
         height:0.000115,
@@ -2032,14 +2275,17 @@ var objects = [
         hasSideImage:true,
         sideImageAlign:"none",
         sideImageArtist: "Daniel Roberts (BlenderTimer)",
+        sideImageDate:"2023/08/10", // YYYY/MM/DD
         frontImage:"American_Penny_one_cent_piece-front",
         hasFrontImage:true,
         frontImageAlign:"none",
         frontImageArtist: "Daniel Roberts (BlenderTimer)",
+        frontImageDate:"2023/08/10", // YYYY/MM/DD
         topImage:"American_Penny_one_cent_piece-top",
         hasTopImage:true,
         topImageAlign:"none",
         topImageArtist: "Daniel Roberts (BlenderTimer)",
+        topImageDate:"2023/08/10", // YYYY/MM/DD
         width:0.00001905,
         length:0.00001905,
         height:0.00000152,
@@ -2057,14 +2303,17 @@ var objects = [
         hasSideImage:true,
         sideImageAlign:"none",
         sideImageArtist: "Daniel Roberts (BlenderTimer)",
+        sideImageDate:"2023/08/10", // YYYY/MM/DD
         frontImage:"",
         hasFrontImage:false,
         frontImageAlign:"none",
         frontImageArtist: "",
+        frontImageDate:"", // YYYY/MM/DD
         topImage:"",
         hasTopImage:false,
         topImageAlign:"none",
         topImageArtist: "",
+        topImageDate:"", // YYYY/MM/DD
         width:0.0000004,
         length:0.0000004,
         height:0.00000045,
@@ -2082,14 +2331,17 @@ var objects = [
         hasSideImage:true,
         sideImageAlign:"none",
         sideImageArtist: "Daniel Roberts (BlenderTimer)",
+        sideImageDate:"2023/08/10", // YYYY/MM/DD
         frontImage:"",
         hasFrontImage:false,
         frontImageAlign:"none",
         frontImageArtist: "",
+        frontImageDate:"", // YYYY/MM/DD
         topImage:"",
         hasTopImage:false,
         topImageAlign:"none",
         topImageArtist: "",
+        topImageDate:"", // YYYY/MM/DD
         width:0.028194,
         length:0.2690622,
         height:0.0733425,
@@ -2107,14 +2359,17 @@ var objects = [
         hasSideImage:false,
         sideImageAlign:"none",
         sideImageArtist: "",
+        sideImageDate:"", // YYYY/MM/DD
         frontImage:"",
         hasFrontImage:false,
         frontImageAlign:"none",
         frontImageArtist: "",
+        frontImageDate:"", // YYYY/MM/DD
         topImage:"CD_Compact_Disk-top",
         hasTopImage:true,
         topImageAlign:"none",
         topImageArtist: "Daniel Roberts (BlenderTimer)",
+        topImageDate:"2023/08/10", // YYYY/MM/DD
         width:0.00012,
         length:0.00012,
         height:0.0000012,
@@ -2132,14 +2387,17 @@ var objects = [
         hasSideImage:true,
         sideImageAlign:"bottom",
         sideImageArtist: "Daniel Roberts (BlenderTimer)",
+        sideImageDate:"2023/08/11", // YYYY/MM/DD
         frontImage:"Concorde-front",
         hasFrontImage:true,
         frontImageAlign:"bottom",
         frontImageArtist: "Daniel Roberts (BlenderTimer)",
+        frontImageDate:"2023/08/11", // YYYY/MM/DD
         topImage:"Concorde-top",
         hasTopImage:true,
         topImageAlign:"none",
         topImageArtist: "Daniel Roberts (BlenderTimer)",
+        topImageDate:"2023/08/11", // YYYY/MM/DD
         width:0.0256032,
         length:0.0615696,
         height:0.0125,
@@ -2157,14 +2415,17 @@ var objects = [
         hasSideImage:true,
         sideImageAlign:"none",
         sideImageArtist: "Daniel Roberts (BlenderTimer)",
+        sideImageDate:"2023/08/11", // YYYY/MM/DD
         frontImage:"",
         hasFrontImage:false,
         frontImageAlign:"none",
         frontImageArtist: "",
+        frontImageDate:"", // YYYY/MM/DD
         topImage:"",
         hasTopImage:false,
         topImageAlign:"none",
         topImageArtist: "",
+        topImageDate:"", // YYYY/MM/DD
         width:0.035,
         length:0.295,
         height:0.069,
@@ -2182,14 +2443,17 @@ var objects = [
         hasSideImage:false,
         sideImageAlign:"bottom",
         sideImageArtist: "",
+        sideImageDate:"", // YYYY/MM/DD
         frontImage:"Statue_of_Liberty-front",
         hasFrontImage:true,
         frontImageAlign:"bottom",
         frontImageArtist: "Daniel Roberts (BlenderTimer)",
+        frontImageDate:"2023/08/12", // YYYY/MM/DD
         topImage:"",
         hasTopImage:false,
         topImageAlign:"none",
         topImageArtist: "",
+        topImageDate:"", // YYYY/MM/DD
         width:0.103816625,
         length:0.103816625,
         height:0.0929894,
@@ -2207,14 +2471,17 @@ var objects = [
         hasSideImage:false,
         sideImageAlign:"bottom",
         sideImageArtist: "",
+        sideImageDate:"", // YYYY/MM/DD
         frontImage:"Oak-front",
         hasFrontImage:true,
         frontImageAlign:"bottom",
         frontImageArtist: "Daniel Roberts (BlenderTimer)",
+        frontImageDate:"2023/08/13", // YYYY/MM/DD
         topImage:"",
         hasTopImage:false,
         topImageAlign:"none",
         topImageArtist: "",
+        topImageDate:"", // YYYY/MM/DD
         width:0.042400589,
         length:0.042400589,
         height:0.03048,
@@ -2232,14 +2499,17 @@ var objects = [
         hasSideImage:false,
         sideImageAlign:"bottom",
         sideImageArtist: "",
+        sideImageDate:"", // YYYY/MM/DD
         frontImage:"Ponderosa_Pine-front",
         hasFrontImage:true,
         frontImageAlign:"bottom",
         frontImageArtist: "Daniel Roberts (BlenderTimer)",
+        frontImageDate:"2023/08/13", // YYYY/MM/DD
         topImage:"",
         hasTopImage:false,
         topImageAlign:"none",
         topImageArtist: "",
+        topImageDate:"", // YYYY/MM/DD
         width:0.009145168,
         length:0.009145168,
         height:0.03048,
@@ -2257,14 +2527,17 @@ var objects = [
         hasSideImage:true,
         sideImageAlign:"none",
         sideImageArtist: "Daniel Roberts (BlenderTimer)",
+        sideImageDate:"2023/08/13", // YYYY/MM/DD
         frontImage:"",
         hasFrontImage:false,
         frontImageAlign:"none",
         frontImageArtist: "",
+        frontImageDate:"", // YYYY/MM/DD
         topImage:"",
         hasTopImage:false,
         topImageAlign:"none",
         topImageArtist: "",
+        topImageDate:"", // YYYY/MM/DD
         width:0.0000381,
         length:0.0002032,
         height:0.00011806,
@@ -2282,14 +2555,17 @@ var objects = [
         hasSideImage:false,
         sideImageAlign:"none",
         sideImageArtist: "",
+        sideImageDate:"", // YYYY/MM/DD
         frontImage:"Tomato-front",
         hasFrontImage:true,
         frontImageAlign:"none",
         frontImageArtist: "Daniel Roberts (BlenderTimer)",
+        frontImageDate:"2023/08/13", // YYYY/MM/DD
         topImage:"",
         hasTopImage:false,
         topImageAlign:"none",
         topImageArtist: "",
+        topImageDate:"", // YYYY/MM/DD
         width:0.0001,
         length:0.0001,
         height:0.000085,
@@ -2307,14 +2583,17 @@ var objects = [
         hasSideImage:true,
         sideImageAlign:"none",
         sideImageArtist: "Daniel Roberts (BlenderTimer)",
+        sideImageDate:"2023/08/13", // YYYY/MM/DD
         frontImage:"",
         hasFrontImage:false,
         frontImageAlign:"none",
         frontImageArtist: "",
+        frontImageDate:"", // YYYY/MM/DD
         topImage:"",
         hasTopImage:false,
         topImageAlign:"none",
         topImageArtist: "",
+        topImageDate:"", // YYYY/MM/DD
         width:0.0050,
         length:0.027,
         height:0.004955632,
@@ -2332,14 +2611,17 @@ var objects = [
         hasSideImage:true,
         sideImageAlign:"bottom",
         sideImageArtist: "Daniel Roberts (BlenderTimer)",
+        sideImageDate:"2023/08/13", // YYYY/MM/DD
         frontImage:"",
         hasFrontImage:false,
         frontImageAlign:"bottom",
         frontImageArtist: "",
+        frontImageDate:"", // YYYY/MM/DD
         topImage:"",
         hasTopImage:false,
         topImageAlign:"none",
         topImageArtist: "",
+        topImageDate:"", // YYYY/MM/DD
         width:0.0001,
         length:0.0004826,
         height:0.000391748,
@@ -2357,14 +2639,17 @@ var objects = [
         hasSideImage:true,
         sideImageAlign:"bottom",
         sideImageArtist: "Daniel Roberts (BlenderTimer)",
+        sideImageDate:"2023/08/13", // YYYY/MM/DD
         frontImage:"German_Shepherd-front",
         hasFrontImage:true,
         frontImageAlign:"bottom",
         frontImageArtist: "Daniel Roberts (BlenderTimer)",
+        frontImageDate:"2023/08/13", // YYYY/MM/DD
         topImage:"",
         hasTopImage:false,
         topImageAlign:"none",
         topImageArtist: "",
+        topImageDate:"2023/08/13", // YYYY/MM/DD
         width:0.00035,
         length:0.0010795,
         height:0.000847878,
@@ -2382,14 +2667,17 @@ var objects = [
         hasSideImage:false,
         sideImageAlign:"none",
         sideImageArtist: "",
+        sideImageDate:"", // YYYY/MM/DD
         frontImage:"",
         hasFrontImage:false,
         frontImageAlign:"none",
         frontImageArtist: "",
+        frontImageDate:"", // YYYY/MM/DD
         topImage:"Caspian_Sea_Largest_Lake-top",
         hasTopImage:true,
         topImageAlign:"none",
         topImageArtist: "Daniel Roberts (BlenderTimer)",
+        topImageDate:"2023/08/13", // YYYY/MM/DD
         width:1207.01,
         length:621.869,
         height:1.025,
@@ -2407,14 +2695,17 @@ var objects = [
         hasSideImage:true,
         sideImageAlign:"none",
         sideImageArtist: "Daniel Roberts (BlenderTimer)",
+        sideImageDate:"2023/08/14", // YYYY/MM/DD
         frontImage:"Planet_9_Hypothetical-front",
         hasFrontImage:true,
         frontImageAlign:"none",
         frontImageArtist: "Daniel Roberts (BlenderTimer)",
+        frontImageDate:"2023/08/14", // YYYY/MM/DD
         topImage:"Planet_9_Hypothetical-top",
         hasTopImage:true,
         topImageAlign:"none",
         topImageArtist: "Daniel Roberts (BlenderTimer)",
+        topImageDate:"2023/08/14", // YYYY/MM/DD
         width:40000,
         length:40000,
         height:40000,
@@ -2432,14 +2723,17 @@ var objects = [
         hasSideImage:false,
         sideImageAlign:"none",
         sideImageArtist: "",
+        sideImageDate:"", // YYYY/MM/DD
         frontImage:"",
         hasFrontImage:false,
         frontImageAlign:"none",
         frontImageArtist: "",
+        frontImageDate:"", // YYYY/MM/DD
         topImage:"Hercules_Corona_Borealis_Great_Wall-top",
         hasTopImage:true,
         topImageAlign:"none",
         topImageArtist: "Daniel Roberts (BlenderTimer)",
+        topImageDate:"2023/08/14", // YYYY/MM/DD
         width:94607304726000000000000,
         length:82265919340000000000000,
         height:82265919340000000000000,
@@ -2457,14 +2751,17 @@ var objects = [
         hasSideImage:false,
         sideImageAlign:"none",
         sideImageArtist: "",
+        sideImageDate:"", // YYYY/MM/DD
         frontImage:"",
         hasFrontImage:false,
         frontImageAlign:"none",
         frontImageArtist: "",
+        frontImageDate:"", // YYYY/MM/DD
         topImage:"Observable_Universe-top",
         hasTopImage:true,
         topImageAlign:"none",
         topImageArtist: "Daniel Roberts (BlenderTimer)",
+        topImageDate:"2023/08/14", // YYYY/MM/DD
         width:889308664423000000000000,
         length:889308664423000000000000,
         height:889308664423000000000000,
@@ -2482,14 +2779,17 @@ var objects = [
         hasSideImage:true,
         sideImageAlign:"none",
         sideImageArtist: "Daniel Roberts (BlenderTimer)",
+        sideImageDate:"2023/08/15", // YYYY/MM/DD
         frontImage:"",
         hasFrontImage:false,
         frontImageAlign:"none",
         frontImageArtist: "",
+        frontImageDate:"", // YYYY/MM/DD
         topImage:"",
         hasTopImage:false,
         topImageAlign:"none",
         topImageArtist: "",
+        topImageDate:"", // YYYY/MM/DD
         width:154209907000000000000,
         length:154209907000000000000,
         height:74710554540000000000,
@@ -2507,14 +2807,17 @@ var objects = [
         hasSideImage:true,
         sideImageAlign:"none",
         sideImageArtist: "Daniel Roberts (BlenderTimer)",
+        sideImageDate:"2023/08/15", // YYYY/MM/DD
         frontImage:"",
         hasFrontImage:false,
         frontImageAlign:"none",
         frontImageArtist: "",
+        frontImageDate:"", // YYYY/MM/DD
         topImage:"",
         hasTopImage:false,
         topImageAlign:"none",
         topImageArtist: "",
+        topImageDate:"", // YYYY/MM/DD
         width:9460730000000000000,
         length:9460730000000000000,
         height:4583469366000000000,
@@ -2532,14 +2835,17 @@ var objects = [
         hasSideImage:false,
         sideImageAlign:"none",
         sideImageArtist: "",
+        sideImageDate:"", // YYYY/MM/DD
         frontImage:"",
         hasFrontImage:false,
         frontImageAlign:"none",
         frontImageArtist: "",
+        frontImageDate:"", // YYYY/MM/DD
         topImage:"Maple_Leaf_Generic-top",
         hasTopImage:true,
         topImageAlign:"none",
         topImageArtist: "Daniel Roberts (BlenderTimer)",
+        topImageDate:"2023/08/26", // YYYY/MM/DD
         width:0.000083242,
         length:0.0000762,
         height:0.000005,
@@ -2557,14 +2863,17 @@ var objects = [
         hasSideImage:true,
         sideImageAlign:"bottom",
         sideImageArtist: "felax",
+        sideImageDate:"2023/08/29", // YYYY/MM/DD
         frontImage:"",
         hasFrontImage:false,
         frontImageAlign:"none",
         frontImageArtist: "",
+        frontImageDate:"", // YYYY/MM/DD
         topImage:"",
         hasTopImage:false,
         topImageAlign:"none",
         topImageArtist: "",
+        topImageDate:"", // YYYY/MM/DD
         width:0.046,
         length:0.1814,
         height:0.096,
@@ -2582,14 +2891,17 @@ var objects = [
         hasSideImage:false,
         sideImageAlign:"bottom",
         sideImageArtist: "",
+        sideImageDate:"", // YYYY/MM/DD
         frontImage:"Olympus_Mons_Mars-front",
         hasFrontImage:true,
         frontImageAlign:"bottom",
         frontImageArtist: "felax",
+        frontImageDate:"2023/08/29", // YYYY/MM/DD
         topImage:"",
         hasTopImage:false,
         topImageAlign:"none",
         topImageArtist: "",
+        topImageDate:"", // YYYY/MM/DD
         width:181.225,
         length:181.225,
         height:21.229,
@@ -2600,8 +2912,38 @@ var objects = [
         dateAdded:"2023/08/29", // YYYY/MM/DD
         lastModified:"2023/08/29", // YYYY/MM/DD
     },
+    {
+        name:"TON 618 (Black Hole)",
+        defaultAngle: 1,
+        sideImage:"",
+        hasSideImage:false,
+        sideImageAlign:"bottom",
+        sideImageArtist: "",
+        sideImageDate:"", // YYYY/MM/DD
+        frontImage:"TON_618_Black_Hole-front",
+        hasFrontImage:true,
+        frontImageAlign:"none",
+        frontImageArtist: "Daniel Roberts (BlenderTimer)",
+        frontImageDate:"2023/08/29", // YYYY/MM/DD
+        topImage:"",
+        hasTopImage:false,
+        topImageAlign:"none",
+        topImageArtist: "",
+        topImageDate:"", // YYYY/MM/DD
+        width:390000000000,
+        length:390000000000,
+        height:390000000000,
+        category1:"space",
+        category2:"galaxies",
+        category3:"black_holes",
+        tags:["quasar", "second largest", "2nd"], // don't include anything in categories or name
+        dateAdded:"2023/08/29", // YYYY/MM/DD
+        lastModified:"2023/08/29", // YYYY/MM/DD
+    },
 ];
 
 //	———————— STEPS FOR UPDATING ————————
 //	1. Update the tool version.
-//	2. Regenerate SEO tags by opening "generate-compare-tags.html" and then pasting the result.
+//	2. Regenerate SEO tags.
+//  3. Upload image(s) to Github (/web-tools/compare-size/images/...).
+//  4. Upload compare-size.html and cs-object-info.js to Github (/web-tools/).

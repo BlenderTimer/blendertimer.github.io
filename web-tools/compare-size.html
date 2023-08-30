@@ -15,7 +15,7 @@
 		<meta charset="UTF-8">
 		<link rel="icon" href="../favicon.png" type="image/x-icon"/>
 	</head>
-	<body onload="baseLoad(), determineLayout(), loadObjects()" onresize="resizeB(), determineLayout()" style="background: #1E1E1E">
+	<body onload="baseLoad(), determineLayout(), loadObjects(), loadContributors()" onresize="resizeB(), determineLayout()" style="background: #1E1E1E">
 		<li id="revolve-button" style="display:none"><script type="text/javascript" src="https://rf.revolvermaps.com/0/0/3.js?i=5cgjr9bkw1v&b=0&s=40&m=2&cl=555555&co=000000&cd=ffffff&v0=25&v1=100&r=1" async="async"></script></li>
 		<div id="loading"style="font-family: monospace; display: block; position: absolute; width: 100%; height: 100%; top: 0px; left: 0px; background: #1E1E1E; z-index: 999999; text-align: center; font-size: 12px; white-space: nowrap; padding: calc(50vh - 12px) 0px 0px 0px; text-shadow: 0px 0px 20px rgba(0,0,0,0.8); color: #AAAAAA; box-shadow: 0px 0px 50px rgba(0,0,0,0.8) inset"><h1 id="loading-text">Loading web tool...<h1></div>
 		<div id="rotate-device"style="font-family: monospace; display: none; position: fixed; width: 100%; height: 100%; top: 0px; left: 0px; background: #1E1E1E; z-index: 999999; text-align: center; font-size: 9px; white-space: nowrap; padding: calc(50vh - 12px - 64px) 0px 0px 0px; text-shadow: 0px 0px 20px rgba(0,0,0,0.8); color: #AAAAAA; box-shadow: 0px 0px 50px rgba(0,0,0,0.8) inset"><h1>Please rotate your device!<h1><img src="data:image/png;base64,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" style="height: 128px; width: 128px"></div>
@@ -61,19 +61,22 @@
 					<div class="oi"><b>Length (Imperial): </b><p id="oi-lengthI">N/A</p></div>
 					<div class="oi"><b>Height (Imperial): </b><p id="oi-heightI">N/A</p></div>
 					<div class="spr"></div>
-					<div class="oi"><b>Default Angle: </b><a id="oi-defaultangle" target="_blank">N/A</a></div>
-					<div class="oi"><b>Side Image: </b><a id="oi-sideimage" target="_blank">N/A</a></div>
-					<div class="oi"><b>Has Side Image: </b><p id="oi-hassideimage">N/A</p></div>
-					<div class="oi"><b>Side Image Align: </b><p id="oi-sideimagealign">N/A</p></div>
-					<div class="oi"><b>Side Image Artist: </b><p id="oi-sideimageartist">N/A</p></div>
-					<div class="oi"><b>Front Image: </b><a id="oi-frontimage" target="_blank">N/A</a></div>
-					<div class="oi"><b>Has Front Image: </b><p id="oi-hasfrontimage">N/A</p></div>
-					<div class="oi"><b>Front Image Align: </b><p id="oi-frontimagealign">N/A</p></div>
-					<div class="oi"><b>Front Image Artist: </b><p id="oi-frontimageartist">N/A</p></div>
-					<div class="oi"><b>Top Image: </b><a id="oi-topimage" target="_blank">N/A</a></div>
-					<div class="oi"><b>Has Top Image: </b><p id="oi-hastopimage">N/A</p></div>
-					<div class="oi"><b>Top Image Align: </b><p id="oi-topimagealign">N/A</p></div>
-					<div class="oi"><b>Top Image Artist: </b><p id="oi-topimageartist">N/A</p></div>
+					<div class="oi"><b>Default Angle: </b><p id="oi-defaultangle">N/A</p></div>
+					<div class="oi"><b id="oi-sideimaget">Side Image: </b><a id="oi-sideimage" target="_blank">N/A</a></div>
+					<div class="oi"><b id="oi-hassideimaget">Has Side Image: </b><p id="oi-hassideimage">N/A</p></div>
+					<div class="oi"><b id="oi-sideimagealignt">Side Image Align: </b><p id="oi-sideimagealign">N/A</p></div>
+					<div class="oi"><b id="oi-sideimageartistt">Side Image Artist: </b><p id="oi-sideimageartist">N/A</p></div>
+					<div class="oi"><b id="oi-sideimagedatet">Side Image Date: </b><p id="oi-sideimagedate">N/A</p></div>
+					<div class="oi"><b id="oi-frontimaget">Front Image: </b><a id="oi-frontimage" target="_blank">N/A</a></div>
+					<div class="oi"><b id="oi-hasfrontimaget">Has Front Image: </b><p id="oi-hasfrontimage">N/A</p></div>
+					<div class="oi"><b id="oi-frontimagealignt">Front Image Align: </b><p id="oi-frontimagealign">N/A</p></div>
+					<div class="oi"><b id="oi-frontimageartistt">Front Image Artist: </b><p id="oi-frontimageartist">N/A</p></div>
+					<div class="oi"><b id="oi-frontimagedatet">Front Image Date: </b><p id="oi-frontimagedate">N/A</p></div>
+					<div class="oi"><b id="oi-topimaget">Top Image: </b><a id="oi-topimage" target="_blank">N/A</a></div>
+					<div class="oi"><b id="oi-hastopimaget">Has Top Image: </b><p id="oi-hastopimage">N/A</p></div>
+					<div class="oi"><b id="oi-topimagealignt">Top Image Align: </b><p id="oi-topimagealign">N/A</p></div>
+					<div class="oi"><b id="oi-topimageartistt">Top Image Artist: </b><p id="oi-topimageartist">N/A</p></div>
+					<div class="oi"><b id="oi-topimagedatet">Top Image Date: </b><p id="oi-topimagedate">N/A</p></div>
 				</div>
 			</div>
 			<div id="imageinfo-text-div" style="display: none">
@@ -127,8 +130,20 @@
 				<div class="spr"></div>
 				<div id="contribute">
 					<h3>Want to contribute?</h3>
+					<p>Like the tool and want to help out?</p>
 					<a id="svg-form-btn" onclick="svgFormPopup()">Submit Object Images!</a>
 					<a id="request-form-btn" onclick="requestFormPopup()">Request Objects!</a>
+				</div>
+				<div class="spr"></div>
+				<div id="contributors">
+					<h3 id="cont-title">Image Contributors</h3>
+					<p id="cont-subtitle">HUGE thanks to the contributors who make this free web tool possible!</p>
+					<select name="cont-sort" id="cont-sort" onChange="loadContributors()">
+						<option value="latest">Latest</option>
+						<option value="contributions">Contributions</option>
+						<option value="name">Name</option>
+					</select>
+					<div id="contributor-list"></div>
 				</div>
 				<div class="spr"></div>
 				<h3>Object Tags</h3>
@@ -222,6 +237,7 @@
 					<p>[Object compared to] vs Statue of Liberty, Lady</p>
 					<p>[Object compared to] vs Stephenson 2-18, Ball, Heat, Hot, Hypergiant, M6, Red, Sphere, St2-18</p>
 					<p>[Object compared to] vs Sugar (Granule), Sediment</p>
+					<p>[Object compared to] vs TON 618 (Black Hole), 2nd, Quasar, Second largest</p>
 					<p>[Object compared to] vs The Milky Way, Our</p>
 					<p>[Object compared to] vs The Sun, Ball, Dwarf, Fire, G type, G-type, G2-v, G2v, Gtype, Heat, Hot, Sol, Solar, Solar system, Sphere, Yellow</p>
 					<p>[Object compared to] vs Titanic (RMS), Boat, Royal mail ship</p>
@@ -240,7 +256,7 @@
 				</div>
 			</div>
 		</div>
-		<p id="version">Tool version: 0.0.5</p>
+		<p id="version">Tool version: 0.0.6</p>
 	</body>
 </html>
 <style>
@@ -1085,9 +1101,17 @@ body {
 
 #contribute h3 {
 	text-align: center;
-	margin: 0px 0px 15px 0px;
+	margin: 0px 0px 5px 0px;
 	font-size: 20px;
 	color: #F5F5F5;
+	cursor: default;
+}
+
+#contribute p {
+	text-align: center;
+	margin: 0px 0px 15px 0px;
+	font-size: 12pt;
+	color: #A5A5A5;
 	cursor: default;
 }
 
@@ -1133,6 +1157,148 @@ body {
 
 #request-form-btn:hover {
 	background: #3A3A3A;
+}
+
+#contributors {
+	width: 100%;
+	height: auto;
+	margin-top: 20px;
+}
+
+#contributors h3 {
+	text-align: center;
+	margin: 0px 0px 5px 0px;
+	font-size: 20px;
+	color: #F5F5F5;
+	cursor: default;
+}
+
+#contributors p {
+	text-align: center;
+	margin: 0px 0px 15px 0px;
+	font-size: 12pt;
+	color: #A5A5A5;
+	cursor: default;
+}
+
+#cont-sort {
+	display: block;
+	position: relative;
+	color: #F5F5F5;
+	margin: 0px 0px 10px 0px;
+	width: 100%;
+	max-width: 200px;
+	text-align: left;
+	box-sizing: border-box;
+	background: #151515;
+	outline: none;
+	border: none;
+	font-size: 12pt;
+	padding: 3px;
+	border-radius: 3px;
+}
+
+#contributor-list {
+	height: 50vh;
+	min-height: 300px;
+	width: 100%;
+	border-radius: 5px;
+	margin: 0px 0px 10px 0px;
+	background: #101010;
+	transition: 0.3s;
+	padding: 0px;
+	box-sizing: border-box;
+	box-shadow: 0px 0px 20px rgba(0,0,0,0.5) inset;
+	overflow-x: hidden;
+	overflow-y: auto;
+}
+
+#contributor-list::-webkit-scrollbar {
+	background: #303030;
+	border-radius: 0px 5px 5px 0px;
+	width: 10px;
+}
+
+#contributor-list::-webkit-scrollbar-thumb {
+	background: #555555;
+	border-radius: 5px;
+	height: 20px;
+	border: 3px solid #303030;
+}
+
+#contributor-list::-webkit-scrollbar-thumb:hover {
+	background: #707070;
+}
+
+.cont-div {
+	padding: 0px;
+	margin: 10px;
+	display: block;
+	background: #252525;
+	cursor: pointer;
+	transition: 0.3s;
+	border-radius: 5px;
+	overflow: hidden;
+}
+
+.cont-div:hover {
+	background: #353535;
+}
+
+.cont-div h1 {
+	width: 100%;
+	background: #2266DD;
+	color: #F5F5F5;
+	display: block;
+	box-sizing: border-box;
+	padding: 5px 10px;
+	margin: 0px;
+	text-align: center;
+	font-size: 12pt;
+	cursor: pointer !important;
+	transition: 0.3s;
+}
+
+.cont-div:hover h1 {
+	background: #3377EE;
+}
+
+.cont-stats {
+	width: 100%;
+	height: auto;
+	margin: 0px;
+	padding: 3px 0px;
+	display: block;
+}
+
+.cont-stats-2 {
+	width: 100%;
+	height: auto;
+	margin: 0px;
+	padding: 0px 0px;
+	display: block;
+}
+
+.cont-stats b {
+	width: auto !important;
+	color: #E5E5E5 !important;
+	display: inline-block !important;
+	padding: 3px 0px 3px 10px !important;
+	margin: 0px !important;
+	text-align: left !important;
+	font-size: 12pt !important;
+	cursor: pointer !important;
+}
+
+.cont-stats p {
+	width: auto !important;
+	color: #C0C0C0 !important;
+	display: inline-block !important;
+	padding: 3px 10px !important;
+	margin: 0px !important;
+	text-align: left !important;
+	font-size: 12pt !important;
+	cursor: pointer !important;
 }
 
 #object-tags {
@@ -1456,20 +1622,59 @@ body {
 		document.getElementById('oi-heightI').innerHTML = (objects[objectID].height * 0.62137119) + "mi | " + (objects[objectID].height * 3280.8398832) + "ft | " + (objects[objectID].height * 39370.0785984) + "in";
     	document.getElementById('oi-defaultangle').innerHTML = objects[objectID].defaultAngle + " (" + angleToText(objects[objectID].defaultAngle) + ")";
     	document.getElementById('oi-sideimage').innerHTML = objects[objectID].sideImage;
-    	document.getElementById('oi-sideimage').href = "../static-0/files/images/compare/" + objects[objectID].category1 + "/" + objects[objectID].category2 + "/" + objects[objectID].category3 + "/" + objects[objectID].sideImage + ".svg";
+    	document.getElementById('oi-sideimage').href = "./compare-size/images/" + objects[objectID].category1 + "/" + objects[objectID].category2 + "/" + objects[objectID].category3 + "/" + objects[objectID].sideImage + ".svg";
     	document.getElementById('oi-hassideimage').innerHTML = toYesNo(objects[objectID].hasSideImage.toString());
     	document.getElementById('oi-sideimagealign').innerHTML = toProperCase(objects[objectID].sideImageAlign);
     	document.getElementById('oi-sideimageartist').innerHTML = objects[objectID].sideImageArtist;
+    	document.getElementById('oi-sideimagedate').innerHTML = objects[objectID].sideImageDate;
+    	if (objects[objectID].hasSideImage == true) {
+    		document.getElementById('oi-sideimage').parentElement.style.display = "block";
+    		document.getElementById('oi-sideimagealign').parentElement.style.display = "block";
+    		document.getElementById('oi-sideimageartist').parentElement.style.display = "block";
+    		document.getElementById('oi-sideimagedate').parentElement.style.display = "block";
+    	}
+    	else {
+    		document.getElementById('oi-sideimage').parentElement.style.display = "none";
+    		document.getElementById('oi-sideimagealign').parentElement.style.display = "none";
+    		document.getElementById('oi-sideimageartist').parentElement.style.display = "none";
+    		document.getElementById('oi-sideimagedate').parentElement.style.display = "none";
+    	}
     	document.getElementById('oi-frontimage').innerHTML = objects[objectID].frontImage;
-    	document.getElementById('oi-frontimage').href = "../static-0/files/images/compare/" + objects[objectID].category1 + "/" + objects[objectID].category2 + "/" + objects[objectID].category3 + "/" + objects[objectID].frontImage + ".svg";
+    	document.getElementById('oi-frontimage').href = "./compare-size/images/" + objects[objectID].category1 + "/" + objects[objectID].category2 + "/" + objects[objectID].category3 + "/" + objects[objectID].frontImage + ".svg";
     	document.getElementById('oi-frontimagealign').innerHTML = toProperCase(objects[objectID].frontImageAlign);
     	document.getElementById('oi-hasfrontimage').innerHTML = toYesNo(objects[objectID].hasFrontImage.toString());
     	document.getElementById('oi-frontimageartist').innerHTML = objects[objectID].frontImageArtist;
+    	document.getElementById('oi-frontimagedate').innerHTML = objects[objectID].frontImageDate;
+    	if (objects[objectID].hasFrontImage == true) {
+    		document.getElementById('oi-frontimage').parentElement.style.display = "block";
+    		document.getElementById('oi-frontimagealign').parentElement.style.display = "block";
+    		document.getElementById('oi-frontimageartist').parentElement.style.display = "block";
+    		document.getElementById('oi-frontimagedate').parentElement.style.display = "block";
+    	}
+    	else {
+    		document.getElementById('oi-frontimage').parentElement.style.display = "none";
+    		document.getElementById('oi-frontimagealign').parentElement.style.display = "none";
+    		document.getElementById('oi-frontimageartist').parentElement.style.display = "none";
+    		document.getElementById('oi-frontimagedate').parentElement.style.display = "none";
+    	}
     	document.getElementById('oi-topimage').innerHTML = objects[objectID].topImage;
-    	document.getElementById('oi-topimage').href = "../static-0/files/images/compare/" + objects[objectID].category1 + "/" + objects[objectID].category2 + "/" + objects[objectID].category3 + "/" + objects[objectID].topImage + ".svg";
+    	document.getElementById('oi-topimage').href = "./compare-size/images/" + objects[objectID].category1 + "/" + objects[objectID].category2 + "/" + objects[objectID].category3 + "/" + objects[objectID].topImage + ".svg";
     	document.getElementById('oi-hastopimage').innerHTML = toYesNo(objects[objectID].hasTopImage.toString());
     	document.getElementById('oi-topimagealign').innerHTML = toProperCase(objects[objectID].topImageAlign);
     	document.getElementById('oi-topimageartist').innerHTML = objects[objectID].topImageArtist;
+    	document.getElementById('oi-topimagedate').innerHTML = objects[objectID].topImageDate;
+    	if (objects[objectID].hasTopImage == true) {
+    		document.getElementById('oi-topimage').parentElement.style.display = "block";
+    		document.getElementById('oi-topimagealign').parentElement.style.display = "block";
+    		document.getElementById('oi-topimageartist').parentElement.style.display = "block";
+    		document.getElementById('oi-topimagedate').parentElement.style.display = "block";
+    	}
+    	else {
+    		document.getElementById('oi-topimage').parentElement.style.display = "none";
+    		document.getElementById('oi-topimagealign').parentElement.style.display = "none";
+    		document.getElementById('oi-topimageartist').parentElement.style.display = "none";
+    		document.getElementById('oi-topimagedate').parentElement.style.display = "none";
+    	}
     	addObjectTitle.style.display = "none";
     	imageInfoTitle.style.display = "none";
     	svgFormTitle.style.display = "none";
@@ -1653,7 +1858,7 @@ body {
 		// Side Image
 		if (objects[objectID].hasSideImage == true) {
 			var objSide = document.createElement("img");
-			objSide.src = "../static-0/files/images/compare/" + objects[objectID].category1 + "/" + objects[objectID].category2 + "/" + objects[objectID].category3 + "/" + objects[objectID].sideImage + ".svg";
+			objSide.src = "./compare-size/images/" + objects[objectID].category1 + "/" + objects[objectID].category2 + "/" + objects[objectID].category3 + "/" + objects[objectID].sideImage + ".svg";
 			objSide.id = objsCompare[objsCompare.length - 1].name + "-sideImage";
 			objSide.classList.add("object-image");
 			objSide.width = objects[objectID].length * compareZoom;
@@ -1685,7 +1890,7 @@ body {
 		// Front Image
 		if (objects[objectID].hasFrontImage == true) {
 			var objFront = document.createElement("img");
-			objFront.src = "../static-0/files/images/compare/" + objects[objectID].category1 + "/" + objects[objectID].category2 + "/" + objects[objectID].category3 + "/" + objects[objectID].frontImage + ".svg";
+			objFront.src = "./compare-size/images/" + objects[objectID].category1 + "/" + objects[objectID].category2 + "/" + objects[objectID].category3 + "/" + objects[objectID].frontImage + ".svg";
 			objFront.id = objsCompare[objsCompare.length - 1].name + "-frontImage";
 			objFront.classList.add("object-image");
 			objFront.width = objects[objectID].width * compareZoom;
@@ -1717,7 +1922,7 @@ body {
 		// Top Image
 		if (objects[objectID].hasTopImage == true) {
 			var objTop = document.createElement("img");
-			objTop.src = "../static-0/files/images/compare/" + objects[objectID].category1 + "/" + objects[objectID].category2 + "/" + objects[objectID].category3 + "/" + objects[objectID].topImage + ".svg";
+			objTop.src = "./compare-size/images/" + objects[objectID].category1 + "/" + objects[objectID].category2 + "/" + objects[objectID].category3 + "/" + objects[objectID].topImage + ".svg";
 			objTop.id = objsCompare[objsCompare.length - 1].name + "-topImage";
 			objTop.classList.add("object-image");
 			objTop.width = objects[objectID].length * compareZoom;
@@ -2263,10 +2468,214 @@ body {
     	}
 	}
 
+	var searchCont = "";
+	var contributors = [];
+
+	function checkObjectCont(object) {
+  		return object == object;
+	}
+
+	function loadContributors() {
+		var conts = [];
+		contributors = [];
+		var sortBy = document.getElementById('cont-sort').value;
+		var contList = document.getElementById('contributor-list');
+		var totalContributions = 0;
+		var contDate = new Date();
+		var objsCont = objects.filter(checkObjectCont);
+		objsCont.sort((a, b) => (a.originalObjectID < b.originalObjectID) ? 1 : -1);
+		for (var i=0; i < objsCont.length; i++) {
+			if (objsCont[i].sideImageArtist.toString().length > 0) {
+				if (!conts.includes(objsCont[i].sideImageArtist.toString())) {
+					conts.push(objsCont[i].sideImageArtist.toString());
+					contDate = new Date(parseInt(objsCont[i].sideImageDate.toString().substring(0, 4)), parseInt(objsCont[i].sideImageDate.toString().substring(5, 7)) - 1, parseInt(objsCont[i].sideImageDate.toString().substring(8, 10)));
+					contributors.push({name:objsCont[i].sideImageArtist.toString(),contributions:0,lastContribution:objsCont[i].sideImage,lastContributionDate:contDate.getTime()});
+				}
+			}
+			if (objsCont[i].frontImageArtist.toString().length > 0) {
+				if (!conts.includes(objsCont[i].frontImageArtist.toString())) {
+					conts.push(objsCont[i].frontImageArtist.toString());
+					contDate = new Date(parseInt(objsCont[i].frontImageDate.toString().substring(0, 4)), parseInt(objsCont[i].frontImageDate.toString().substring(5, 7)) - 1, parseInt(objsCont[i].frontImageDate.toString().substring(8, 10)));
+					contributors.push({name:objsCont[i].frontImageArtist.toString(),contributions:0,lastContribution:objsCont[i].frontImage,lastContributionDate:contDate.getTime()});
+				}
+			}
+			if (objsCont[i].topImageArtist.toString().length > 0) {
+				if (!conts.includes(objsCont[i].topImageArtist.toString())) {
+					conts.push(objsCont[i].topImageArtist.toString());
+					contDate = new Date(parseInt(objsCont[i].topImageDate.toString().substring(0, 4)), parseInt(objsCont[i].topImageDate.toString().substring(5, 7)) - 1, parseInt(objsCont[i].topImageDate.toString().substring(8, 10)));
+					contributors.push({name:objsCont[i].topImageArtist.toString(),contributions:0,lastContribution:objsCont[i].topImage,lastContributionDate:contDate.getTime()});
+				}
+			}
+		}
+		for (var i=0; i < objsCont.length; i++) {
+			if (conts.indexOf(objsCont[i].sideImageArtist.toString()) > -1) {
+				contributors[conts.indexOf(objsCont[i].sideImageArtist.toString())].contributions += 1;
+				totalContributions += 1;
+			}
+			if (conts.indexOf(objsCont[i].frontImageArtist.toString()) > -1) {
+				contributors[conts.indexOf(objsCont[i].frontImageArtist.toString())].contributions += 1;
+				totalContributions += 1;
+			}
+			if (conts.indexOf(objsCont[i].topImageArtist.toString()) > -1) {
+				contributors[conts.indexOf(objsCont[i].topImageArtist.toString())].contributions += 1;
+				totalContributions += 1;
+			}
+			for (var i2=0; i2 < contributors.length; i2++) {
+				if (conts.indexOf(objsCont[i].sideImageArtist.toString()) > -1) {
+					contDate = new Date(parseInt(objsCont[i].sideImageDate.toString().substring(0, 4)), parseInt(objsCont[i].sideImageDate.toString().substring(5, 7)) - 1, parseInt(objsCont[i].sideImageDate.toString().substring(8, 10)));
+					if (contDate.getTime() > contributors[conts.indexOf(objsCont[i].sideImageArtist.toString())].lastContributionDate) {
+						contributors[conts.indexOf(objsCont[i].sideImageArtist.toString())].lastContributionDate = contDate;
+						contributors[conts.indexOf(objsCont[i].sideImageArtist.toString())].lastContribution = objsCont[i].sideImage;
+					}
+				}
+				if (conts.indexOf(objsCont[i].frontImageArtist.toString()) > -1) {
+					contDate = new Date(parseInt(objsCont[i].frontImageDate.toString().substring(0, 4)), parseInt(objsCont[i].frontImageDate.toString().substring(5, 7)) - 1, parseInt(objsCont[i].frontImageDate.toString().substring(8, 10)));
+					if (contDate.getTime() > contributors[conts.indexOf(objsCont[i].frontImageArtist.toString())].lastContributionDate) {
+						contributors[conts.indexOf(objsCont[i].frontImageArtist.toString())].lastContributionDate = contDate;
+						contributors[conts.indexOf(objsCont[i].frontImageArtist.toString())].lastContribution = objsCont[i].frontImage;
+					}
+				}
+				if (conts.indexOf(objsCont[i].topImageArtist.toString()) > -1) {
+					contDate = new Date(parseInt(objsCont[i].topImageDate.toString().substring(0, 4)), parseInt(objsCont[i].topImageDate.toString().substring(5, 7)) - 1, parseInt(objsCont[i].topImageDate.toString().substring(8, 10)));
+					if (contDate.getTime() > contributors[conts.indexOf(objsCont[i].topImageArtist.toString())].lastContributionDate) {
+						contributors[conts.indexOf(objsCont[i].topImageArtist.toString())].lastContributionDate = contDate;
+						contributors[conts.indexOf(objsCont[i].topImageArtist.toString())].lastContribution = objsCont[i].topImage;
+					}
+				}
+			}
+		}
+		document.getElementById('cont-subtitle').innerHTML = "HUGE thanks to the " + conts.length.toLocaleString(navigator.language) + " contributors who have contributed " + totalContributions.toLocaleString(navigator.language) + " images to make this free web tool possible!";
+		if (sortBy == "contributions") {
+			contributors.sort((a, b) => (a.contributions < b.contributions) ? 1 : (a.contributions === b.contributions) ? ((a.name > b.name) ? 1 : -1) : -1);
+		}
+		else if (sortBy == "name") {
+			contributors.sort((a, b) => (a.name > b.name) ? 1 : (a.name === b.name) ? ((a.contributions < b.contributions) ? 1 : -1) : -1);
+		}
+		else {
+			contributors.sort((a, b) => (a.lastContributionDate < b.lastContributionDate) ? 1 : (a.lastContributionDate === b.lastContributionDate) ? ((a.contributions < b.contributions) ? 1 : -1) : -1);
+		}
+		for (var i=0; i < contributors.length; i++) {
+			if (document.getElementById("contributor-" + i.toString())) {
+				document.getElementById("contributor-" + i.toString()).remove()
+			}
+	  		var cont = document.createElement("div");
+	  		cont.id = "contributor-" + i.toString();
+	  		cont.classList.add("c-" + i.toString());
+	  		cont.classList.add("cont-div");
+	  		cont.addEventListener("click", function(event) {
+				var element = event.target || event.srcElement;
+				addObjectPopup();
+				search("artist:" + contributors[parseInt(element.classList[0].toString().substring(2, element.classList[0].toString().length))].name);
+			});
+	  		var contName = document.createElement("h1");
+	  		contName.innerHTML = contributors[i].name;
+	  		contName.classList.add("c-" + i.toString());
+	  		cont.appendChild(contName);
+	  		var contStats = document.createElement("div");
+	  		contStats.classList.add("c-" + i.toString());
+	  		contStats.classList.add("cont-stats");
+	  		//Contributions
+	  		var contStats2 = document.createElement("div");
+	  		contStats2.classList.add("c-" + i.toString());
+	  		contStats2.classList.add("cont-stats-2");
+	  		var contContsT = document.createElement("b");
+	  		contContsT.classList.add("c-" + i.toString());
+	  		contContsT.innerHTML = "Contributions:";
+	  		var contConts = document.createElement("p");
+	  		contConts.classList.add("c-" + i.toString());
+	  		contConts.innerHTML = contributors[i].contributions;
+	  		contStats2.appendChild(contContsT);
+	  		contStats2.appendChild(contConts);
+	  		contStats.appendChild(contStats2);
+	  		//Contributions
+	  		var contStats5 = document.createElement("div");
+	  		contStats5.classList.add("c-" + i.toString());
+	  		contStats5.classList.add("cont-stats-2");
+	  		var contLastContT = document.createElement("b");
+	  		contLastContT.classList.add("c-" + i.toString());
+	  		contLastContT.innerHTML = "Latest contribution:";
+	  		var contLastCont = document.createElement("p");
+	  		contLastCont.classList.add("c-" + i.toString());
+	  		contLastCont.innerHTML = contributors[i].lastContribution + " (" + new Date(contributors[i].lastContributionDate).getFullYear().toString() + "/" + (new Date(contributors[i].lastContributionDate).getMonth() + 1).toString() + "/" + new Date(contributors[i].lastContributionDate).getDate().toString() + ")";
+	  		contStats5.appendChild(contLastContT);
+	  		contStats5.appendChild(contLastCont);
+	  		contStats.appendChild(contStats5);
+	  		//Contributor Level
+	  		var contStats3 = document.createElement("div");
+	  		contStats3.classList.add("cont-stats-2");
+	  		contStats3.classList.add("c-" + i.toString());
+	  		var contLevelT = document.createElement("b");
+	  		contLevelT.classList.add("c-" + i.toString());
+	  		contLevelT.innerHTML = "Contributor level:";
+	  		var contLevel = document.createElement("p");
+	  		contLevel.classList.add("c-" + i.toString());
+	  		var contStats4 = document.createElement("div");
+	  		contStats4.classList.add("cont-stats-2");
+	  		contStats4.classList.add("c-" + i.toString());
+	  		var contNextLevelT = document.createElement("b");
+	  		contNextLevelT.classList.add("c-" + i.toString());
+	  		contNextLevelT.innerHTML = "Next level:";
+	  		var contNextLevel = document.createElement("p");
+	  		contNextLevel.classList.add("c-" + i.toString());
+	  		if (contributors[i].contributions >= 1000) {
+	  			contLevel.innerHTML = "Legend (achieved at 1000 contributions)";
+	  			contNextLevel.innerHTML = "None (max level reached)";
+	  		}
+	  		else if (contributors[i].contributions >= 750) {
+	  			contLevel.innerHTML = "Incredible (achieved at 750 contributions)";
+	  			contNextLevel.innerHTML = "Legend (" + (1000 - contributors[i].contributions).toString() + " contributions left)";
+	  		}
+	  		else if (contributors[i].contributions >= 500) {
+	  			contLevel.innerHTML = "Outstanding (achieved at 500 contributions)";
+	  			contNextLevel.innerHTML = "Incredible (" + (750 - contributors[i].contributions).toString() + " contributions left)";
+	  		}
+	  		else if (contributors[i].contributions >= 250) {
+	  			contLevel.innerHTML = "Amazing (achieved at 250 contributions)";
+	  			contNextLevel.innerHTML = "Outstanding (" + (500 - contributors[i].contributions).toString() + " contributions left)";
+	  		}
+	  		else if (contributors[i].contributions >= 100) {
+	  			contLevel.innerHTML = "Remarkable (achieved at 100 contributions)";
+	  			contNextLevel.innerHTML = "Amazing (" + (250 - contributors[i].contributions).toString() + " contributions left)";
+	  		}
+	  		else if (contributors[i].contributions >= 75) {
+	  			contLevel.innerHTML = "Phenomenal (achieved at 75 contributions)";
+	  			contNextLevel.innerHTML = "Remarkable (" + (100 - contributors[i].contributions).toString() + " contributions left)";
+	  		}
+	  		else if (contributors[i].contributions >= 50) {
+	  			contLevel.innerHTML = "Super (achieved at 50 contributions)";
+	  			contNextLevel.innerHTML = "Phenomenal (" + (75 - contributors[i].contributions).toString() + " contributions left)";
+	  		}
+	  		else if (contributors[i].contributions >= 25) {
+	  			contLevel.innerHTML = "Great (achieved at 25 contributions)";
+	  			contNextLevel.innerHTML = "Super (" + (50 - contributors[i].contributions).toString() + " contributions left)";
+	  		}
+	  		else if (contributors[i].contributions >= 10) {
+	  			contLevel.innerHTML = "Better (achieved at 10 contributions)";
+	  			contNextLevel.innerHTML = "Great (" + (25 - contributors[i].contributions).toString() + " contributions left)";
+	  		}
+	  		else {
+	  			contLevel.innerHTML = "Good (achieved at 1 contribution)";
+	  			contNextLevel.innerHTML = "Better (" + (10 - contributors[i].contributions).toString() + " contributions left)";
+	  		}
+	  		contStats3.appendChild(contLevelT);
+	  		contStats3.appendChild(contLevel);
+	  		contStats.appendChild(contStats3);
+	  		contStats4.appendChild(contNextLevelT);
+	  		contStats4.appendChild(contNextLevel);
+	  		contStats.appendChild(contStats4);
+
+	  		cont.appendChild(contStats);
+	  		contList.appendChild(cont);
+		}
+	}
+
     var searchObjects = [];
     var newSearch = true;
 
-    function search() {
+    function search(query) {
+    	if (query) {
+    		searchBar.value = query;
+    	}
     	if (event.key == "Enter") {
     		addObject(document.getElementById("search-objects-search").children[2].id.substring(document.getElementById("search-objects-search").children[2].id.indexOf("-") + 1,document.getElementById("search-objects-search").children[2].id.lastIndexOf("-")))
     	};
