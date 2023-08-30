@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="178.10179mm"
+   height="176.95876mm"
+   viewBox="0 0 178.10179 176.95876"
+   version="1.1"
+   id="svg8"
+   inkscape:version="0.92.4 (5da689c313, 2019-01-14)"
+   sodipodi:docname="Phobos_Mars_Moon-front.svg">
+  <defs
+     id="defs2" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.49497475"
+     inkscape:cx="427.65846"
+     inkscape:cy="248.3884"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:pagecheckerboard="true"
+     inkscape:showpageshadow="false"
+     borderlayer="true"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:window-width="1600"
+     inkscape:window-height="837"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-15.219926,-74.215117)">
+    <path
+       style="opacity:1;fill:#555555;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:4.06500006;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:markers stroke fill"
+       d="m 166.48507,238.94822 c -9.43656,6.10889 -11.32585,4.00117 -20.0193,7.78093 -8.69346,3.77977 -14.74108,1.88988 -22.3006,3.2128 -7.55952,1.32292 -29.482142,2.07887 -35.718749,-0.37798 -6.236608,-2.45684 -29.482142,-14.36309 -31.372024,-16.81994 -1.889879,-2.45684 -3.96875,-4.34672 -8.882438,-6.42559 -4.913691,-2.07887 -12.851191,-13.41816 -19.465775,-26.08036 -6.614583,-12.6622 -14.47706,-38.06242 -13.407982,-43.94235 1.069078,-5.87993 -0.988748,-31.61046 4.967414,-41.37535 2.941896,-4.82313 6.792445,-6.19862 8.930601,-8.87132 2.138156,-2.67269 11.49259,-11.492587 15.501633,-13.363475 4.009044,-1.870886 27.261492,-10.156241 29.399648,-12.027128 2.138156,-1.870887 16.036171,-5.345391 18.708867,-5.345391 2.672694,0 22.985175,-2.939964 32.072345,0.801809 9.08716,3.741773 23.25244,9.354433 28.0633,13.096206 4.81085,3.741774 8.01808,7.750817 9.88897,9.621705 1.87089,1.870884 4.81085,5.879924 8.28535,8.285354 3.47451,2.40543 17.63979,19.51067 19.51068,33.67596 1.87089,14.16528 4.00904,24.85606 1.60362,34.74504 -2.40543,9.88897 0.37438,25.71094 -6.94901,40.3577 -5.34539,10.69078 -9.49607,17.01763 -18.81655,23.05138 z"
+       id="path827"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="sssccsssscsssscccscss" />
+  </g>
+</svg>
