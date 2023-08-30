@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="2947.0876"
+   height="2301.9219"
+   viewBox="0 0 779.75025 609.05018"
+   version="1.1"
+   id="svg8"
+   inkscape:version="0.92.4 (5da689c313, 2019-01-14)"
+   sodipodi:docname="Water_Molecule-side.svg"
+   inkscape:export-filename="G:\Pictures\My Pictures\Vectors and SVGs\Misc\Water Molecule.png"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96">
+  <defs
+     id="defs2" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#000720"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.12374369"
+     inkscape:cx="1576.102"
+     inkscape:cy="878.55053"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     borderlayer="true"
+     inkscape:showpageshadow="false"
+     inkscape:pagecheckerboard="true"
+     units="px"
+     inkscape:window-width="1600"
+     inkscape:window-height="837"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:snap-object-midpoints="true"
+     inkscape:snap-global="true"
+     inkscape:snap-text-baseline="false"
+     inkscape:snap-center="true"
+     showguides="true"
+     inkscape:guide-bbox="true"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0" />
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-6.9998512,404.40012)">
+    <path
+       style="opacity:1;fill:#555555;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:51.86039352;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:normal"
+       d="m 682.06641,349.04297 c -190.79785,-0.66259 -380.20185,81.91208 -509.75196,241.62891 -227.156331,280.05138 -184.276007,691.22452 95.77539,918.38082 77.21035,62.6272 147.68871,91.1728 214.04102,93.8184 a 1019.3037,1019.3037 0 0 0 -1.44141,28.7871 1019.3037,1019.3037 0 0 0 1019.30465,1019.3027 1019.3037,1019.3037 0 0 0 1019.3028,-1019.3027 1019.3037,1019.3037 0 0 0 -1.0196,-28.7988 c 66.2471,-2.7397 136.608,-31.3022 213.6739,-93.8223 280.0332,-227.1787 322.8799,-638.35542 95.7011,-918.38866 -227.1787,-280.03325 -638.3554,-322.87988 -918.3886,-95.70117 -64.502,52.32762 -104.7501,104.96458 -125.7442,158.41211 a 1019.3037,1019.3037 0 0 0 -283.5254,-41.00586 1019.3037,1019.3037 0 0 0 -283.6054,40.78125 C 1195.3724,599.74528 1155.1354,547.16539 1090.6953,494.89648 970.36072,397.29025 825.81821,349.54218 682.06641,349.04297 Z"
+       transform="matrix(0.26458333,0,0,0.26458333,0,-496.75002)"
+       id="path815"
+       inkscape:connector-curvature="0" />
+  </g>
+</svg>
