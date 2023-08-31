@@ -2940,6 +2940,62 @@ var objects = [
         dateAdded:"2023/08/29", // YYYY/MM/DD
         lastModified:"2023/08/29", // YYYY/MM/DD
     },
+    {
+        name:"Grand Canyon (Arizona)",
+        defaultAngle: 1,
+        sideImage:"",
+        hasSideImage:false,
+        sideImageAlign:"bottom",
+        sideImageArtist: "",
+        sideImageDate:"", // YYYY/MM/DD
+        frontImage:"Grand_Canyon_Arizona-front",
+        hasFrontImage:true,
+        frontImageAlign:"none",
+        frontImageArtist: "Daniel Roberts (BlenderTimer)",
+        frontImageDate:"2023/08/30", // YYYY/MM/DD
+        topImage:"",
+        hasTopImage:false,
+        topImageAlign:"none",
+        topImageArtist: "",
+        topImageDate:"", // YYYY/MM/DD
+        width:28.96,
+        length:445.788,
+        height:1.829,
+        category1:"nature",
+        category2:"geography",
+        category3:"canyons",
+        tags:["earth", "usa", "national park"], // don't include anything in categories or name
+        dateAdded:"2023/08/30", // YYYY/MM/DD
+        lastModified:"2023/08/30", // YYYY/MM/DD
+    },
+    {
+        name:"Valles Marineris (Mars)",
+        defaultAngle: 1,
+        sideImage:"",
+        hasSideImage:false,
+        sideImageAlign:"bottom",
+        sideImageArtist: "",
+        sideImageDate:"", // YYYY/MM/DD
+        frontImage:"Valles_Marineris_Mars-front",
+        hasFrontImage:true,
+        frontImageAlign:"none",
+        frontImageArtist: "Daniel Roberts (BlenderTimer)",
+        frontImageDate:"2023/08/30", // YYYY/MM/DD
+        topImage:"Valles_Marineris_Mars-top",
+        hasTopImage:true,
+        topImageAlign:"none",
+        topImageArtist: "Daniel Roberts (BlenderTimer)",
+        topImageDate:"2023/08/30", // YYYY/MM/DD
+        width:200,
+        length:3000,
+        height:7,
+        category1:"nature",
+        category2:"geography",
+        category3:"canyons",
+        tags:["largest",], // don't include anything in categories or name
+        dateAdded:"2023/08/30", // YYYY/MM/DD
+        lastModified:"2023/08/30", // YYYY/MM/DD
+    },
 ];
 
 //	———————— STEPS FOR UPDATING ————————

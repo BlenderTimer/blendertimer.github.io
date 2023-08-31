@@ -186,6 +186,7 @@
 					<p>[Object compared to] vs Eris, Ball, Small, Solar system, Sphere</p>
 					<p>[Object compared to] vs German Shepherd, Adult, Dog, Domestic</p>
 					<p>[Object compared to] vs Giraffe, Adult, Giraffa camelopardalis, Tall</p>
+					<p>[Object compared to] vs Grand Canyon (Arizona), Earth, National park, Usa</p>
 					<p>[Object compared to] vs Great White Shark, Adult, Carcharodon carcharias, Predator</p>
 					<p>[Object compared to] vs Halley's Comet, Ice, Rock</p>
 					<p>[Object compared to] vs Haumea, Ball, Small, Solar system, Sphere</p>
@@ -250,13 +251,14 @@
 					<p>[Object compared to] vs Uranus, Ball, Solar system, Sphere</p>
 					<p>[Object compared to] vs Uranus (with rings), Dust, Rock</p>
 					<p>[Object compared to] vs VY Canis Majoris, 4ii, Ball, Cma, Heat, Hot, Hypergiant, M3, M4, Pulsating, Pulsing, Red, Sphere</p>
+					<p>[Object compared to] vs Valles Marineris (Mars), Largest</p>
 					<p>[Object compared to] vs Venus, Ball, Solar system, Sphere</p>
 					<p>[Object compared to] vs Water Drop, H20, Liquid</p>
 					<p>[Object compared to] vs Water Molecule, Atom, H20, Hydrogen, Neutron, Nucleus, Oxygen, Proton</p>
 				</div>
 			</div>
 		</div>
-		<p id="version">Tool version: 0.0.6</p>
+		<p id="version">Tool version: 0.0.7</p>
 	</body>
 </html>
 <style>
@@ -2301,7 +2303,9 @@ body {
 			canvasShadow.style.width = compareCanvas.offsetWidth.toString() + "px";
 			canvasShadow.style.height = compareCanvas.offsetHeight.toString() + "px";
 			canvasShadow.style.display = "block";
-			downloadImageBTN.href = compareCanvas.toDataURL("image/png").replace("image/png", "image/octet-stream");
+			if (!window.location.toString().startsWith("file://")) {
+				downloadImageBTN.href = compareCanvas.toDataURL("image/png").replace("image/png", "image/octet-stream");
+			}
 			//console.log("draw end (Zoom: " + compareZoom.toString() + ")");
 			times += 1;
     	}
