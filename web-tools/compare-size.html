@@ -2338,7 +2338,7 @@ body {
 			if (!window.location.toString().startsWith("file://")) {
 				var filename = "";
 				for (var obj=0; obj < objsCompare.length; obj++) {
-					if objsCompare[obj].removed !== true {
+					if (objsCompare[obj].removed !== true) {
 						if (obj == 0) {
 							filename = objects[objsCompare[obj].id].name;
 						}
