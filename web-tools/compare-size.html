@@ -2339,10 +2339,10 @@ body {
 				var filename = "";
 				for (var obj=0; obj < objsCompare.length; obj++) {
 					if (obj == 0) {
-						filename = objects[objsCompare[i].id].name;
+						filename = objects[objsCompare[obj].id].name;
 					}
 					else {
-						filename = " compared to " + objects[objsCompare[i].id].name;
+						filename = " compared to " + objects[objsCompare[obj].id].name;
 					}
 				}
 				downloadImageBTN.href = compareCanvas.toDataURL("image/png").replace("image/png", "image/octet-stream");
