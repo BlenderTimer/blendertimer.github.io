@@ -126,6 +126,7 @@
 					<canvas id="compare-canvas" width="300" height="300">
 					</canvas>
 				</div>
+				<a id="copy-image-btn" onclick="copyCanvasImage()">Copy Image</a>
 				<a id="download-image-btn" href="" download="Comparison.png">Download Image</a><img src="../static-0/files/images/object-info.png" id="image-info" onclick="imageInfoPopup()">
 				<div class="spr"></div>
 				<div id="contribute">
@@ -507,6 +508,18 @@ body {
 	color: #AAAAAA !important;
 	background: #353535;
 	text-shadow: 0px 0px 10px rgba(255,255,255,0.4) !important;
+}
+
+.new-object-badge {
+	font-size: 9pt;
+	font-weight: bold;
+	color: #F5F5F5;
+	background: #3388EE;
+	float: right;
+	padding: 0px 3px;
+	margin-top: 2px;
+	border-radius: 2px;
+	pointer-events: none;
 }
 
 #objectinfo-text-div {
@@ -1060,7 +1073,7 @@ body {
 	box-shadow: 0px 0px 20px rgba(0,0,0,0.5) inset;
 }
 
-#download-image-btn {
+#copy-image-btn {
 	display: block;
 	background: #353535;
 	color: #F5F5F5;
@@ -1070,6 +1083,25 @@ body {
 	cursor: pointer;
 	box-shadow: 0px 0px 10px #0005;
 	margin: 10px 0px 20px auto;
+	transition: 0.3s;
+	height: 40px;
+	box-sizing: border-box;
+}
+
+#copy-image-btn:hover {
+	background: #3A3A3A;
+}
+
+#download-image-btn {
+	display: block;
+	background: #353535;
+	color: #F5F5F5;
+	text-decoration: none;
+	padding: 11px 30px;
+	border-radius: 20px;
+	cursor: pointer;
+	box-shadow: 0px 0px 10px #0005;
+	margin: 10px 0px 20px 20px;
 	transition: 0.3s;
 	height: 40px;
 	box-sizing: border-box;
@@ -2304,11 +2336,29 @@ body {
 			canvasShadow.style.height = compareCanvas.offsetHeight.toString() + "px";
 			canvasShadow.style.display = "block";
 			if (!window.location.toString().startsWith("file://")) {
+				var filename = "";
+				for (var obj=0; obj < objsCompare.length; obj++) {
+					if (obj == 0) {
+						filename = objsCompare[obj].name;
+					}
+					else {
+						filename = " compared to " + objsCompare[obj].name;
+					}
+				}
 				downloadImageBTN.href = compareCanvas.toDataURL("image/png").replace("image/png", "image/octet-stream");
+				downloadImageBTN.download = filename;
 			}
 			//console.log("draw end (Zoom: " + compareZoom.toString() + ")");
 			times += 1;
     	}
+    }
+
+    function copyCanvasImage() {
+    	navigator.clipboard.write([
+        new ClipboardItem({
+            'image/png': compareCanvas.toDataURL("image/png")
+        })
+    ]);
     }
 
     var startX = 0;
@@ -2569,7 +2619,7 @@ body {
 	  		cont.addEventListener("click", function(event) {
 				var element = event.target || event.srcElement;
 				addObjectPopup();
-				search("artist:" + contributors[parseInt(element.classList[0].toString().substring(2, element.classList[0].toString().length))].name);
+				search("artist:" + contributors[parseInt(element.classList[0].toString().substring(2, element.classList[0].toString().length))].name,"date");
 			});
 	  		var contName = document.createElement("h1");
 	  		contName.innerHTML = contributors[i].name;
@@ -2578,16 +2628,20 @@ body {
 	  		var contStats = document.createElement("div");
 	  		contStats.classList.add("c-" + i.toString());
 	  		contStats.classList.add("cont-stats");
+	  		contStats.style.pointerEvents = "none";
 	  		//Contributions
 	  		var contStats2 = document.createElement("div");
 	  		contStats2.classList.add("c-" + i.toString());
 	  		contStats2.classList.add("cont-stats-2");
+	  		contStats2.style.pointerEvents = "none";
 	  		var contContsT = document.createElement("b");
 	  		contContsT.classList.add("c-" + i.toString());
 	  		contContsT.innerHTML = "Contributions:";
+	  		contContsT.style.pointerEvents = "none";
 	  		var contConts = document.createElement("p");
 	  		contConts.classList.add("c-" + i.toString());
 	  		contConts.innerHTML = contributors[i].contributions;
+	  		contConts.style.pointerEvents = "none";
 	  		contStats2.appendChild(contContsT);
 	  		contStats2.appendChild(contConts);
 	  		contStats.appendChild(contStats2);
@@ -2595,12 +2649,15 @@ body {
 	  		var contStats5 = document.createElement("div");
 	  		contStats5.classList.add("c-" + i.toString());
 	  		contStats5.classList.add("cont-stats-2");
+	  		contStats5.style.pointerEvents = "none";
 	  		var contLastContT = document.createElement("b");
 	  		contLastContT.classList.add("c-" + i.toString());
 	  		contLastContT.innerHTML = "Latest contribution:";
+	  		contLastContT.style.pointerEvents = "none";
 	  		var contLastCont = document.createElement("p");
 	  		contLastCont.classList.add("c-" + i.toString());
 	  		contLastCont.innerHTML = contributors[i].lastContribution + " (" + new Date(contributors[i].lastContributionDate).getFullYear().toString() + "/" + (new Date(contributors[i].lastContributionDate).getMonth() + 1).toString() + "/" + new Date(contributors[i].lastContributionDate).getDate().toString() + ")";
+	  		contLastCont.style.pointerEvents = "none";
 	  		contStats5.appendChild(contLastContT);
 	  		contStats5.appendChild(contLastCont);
 	  		contStats.appendChild(contStats5);
@@ -2608,19 +2665,25 @@ body {
 	  		var contStats3 = document.createElement("div");
 	  		contStats3.classList.add("cont-stats-2");
 	  		contStats3.classList.add("c-" + i.toString());
+	  		contStats3.style.pointerEvents = "none";
 	  		var contLevelT = document.createElement("b");
 	  		contLevelT.classList.add("c-" + i.toString());
 	  		contLevelT.innerHTML = "Contributor level:";
+	  		contLevelT.style.pointerEvents = "none";
 	  		var contLevel = document.createElement("p");
 	  		contLevel.classList.add("c-" + i.toString());
+	  		contLevel.style.pointerEvents = "none";
 	  		var contStats4 = document.createElement("div");
 	  		contStats4.classList.add("cont-stats-2");
 	  		contStats4.classList.add("c-" + i.toString());
+	  		contStats4.style.pointerEvents = "none";
 	  		var contNextLevelT = document.createElement("b");
 	  		contNextLevelT.classList.add("c-" + i.toString());
 	  		contNextLevelT.innerHTML = "Next level:";
+	  		contNextLevelT.style.pointerEvents = "none";
 	  		var contNextLevel = document.createElement("p");
 	  		contNextLevel.classList.add("c-" + i.toString());
+	  		contNextLevel.style.pointerEvents = "none";
 	  		if (contributors[i].contributions >= 1000) {
 	  			contLevel.innerHTML = "Legend (achieved at 1000 contributions)";
 	  			contNextLevel.innerHTML = "None (max level reached)";
@@ -2667,7 +2730,6 @@ body {
 	  		contStats4.appendChild(contNextLevelT);
 	  		contStats4.appendChild(contNextLevel);
 	  		contStats.appendChild(contStats4);
-
 	  		cont.appendChild(contStats);
 	  		contList.appendChild(cont);
 		}
@@ -2676,9 +2738,13 @@ body {
     var searchObjects = [];
     var newSearch = true;
 
-    function search(query) {
+    function search(query, searchSort) {
     	if (query) {
     		searchBar.value = query;
+    	}
+    	if (searchSort) {
+    		newSearch = false;
+    		sort.value = searchSort;
     	}
     	if (event.key == "Enter") {
     		addObject(document.getElementById("search-objects-search").children[2].id.substring(document.getElementById("search-objects-search").children[2].id.indexOf("-") + 1,document.getElementById("search-objects-search").children[2].id.lastIndexOf("-")))
@@ -2712,6 +2778,13 @@ body {
 						var element = event.target || event.srcElement;
 						addObject(element.id.substring(element.id.indexOf("-") + 1,element.id.lastIndexOf("-")))
 					});
+					var objDate = new Date(parseInt(searchObjects[i].lastModified.toString().substring(0, 4)), parseInt(searchObjects[i].lastModified.toString().substring(5, 7)) - 1, parseInt(searchObjects[i].lastModified.toString().substring(8, 10)));
+					if ((((Date.now() - objDate.getTime()) / 1000 / 60 / 60 / 24) < 7)) {
+						var objNew = document.createElement("b");
+						objNew.innerHTML = "NEW";
+						objNew.classList.add("new-object-badge");
+						objName.appendChild(objNew);
+					}
 					document.getElementById("search-objects-search").appendChild(objName);
 				}
 				if (window.innerWidth < 600) {
@@ -2827,6 +2900,13 @@ body {
 						var element = event.target || event.srcElement;
 						addObject(element.id.substring(element.id.indexOf("-") + 1,element.id.lastIndexOf("-")))
 					});
+					var objDate = new Date(parseInt(searchObjects[i].lastModified.toString().substring(0, 4)), parseInt(searchObjects[i].lastModified.toString().substring(5, 7)) - 1, parseInt(searchObjects[i].lastModified.toString().substring(8, 10)));
+					if ((((Date.now() - objDate.getTime()) / 1000 / 60 / 60 / 24) < 7)) {
+						var objNew = document.createElement("b");
+						objNew.innerHTML = "NEW";
+						objNew.classList.add("new-object-badge");
+						objName.appendChild(objNew);
+					}
 					document.getElementById("search-objects-search").appendChild(objName);
 				}
 				if (window.innerWidth < 600) {
