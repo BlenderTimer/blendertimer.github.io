@@ -2339,14 +2339,14 @@ body {
 				var filename = "";
 				for (var obj=0; obj < objsCompare.length; obj++) {
 					if (obj == 0) {
-						filename = objsCompare[obj].name;
+						filename = objects[objsCompare[i].id].name;
 					}
 					else {
-						filename = " compared to " + objsCompare[obj].name;
+						filename = " compared to " + objects[objsCompare[i].id].name;
 					}
 				}
 				downloadImageBTN.href = compareCanvas.toDataURL("image/png").replace("image/png", "image/octet-stream");
-				downloadImageBTN.download = filename;
+				downloadImageBTN.download = filename + ".png";
 			}
 			//console.log("draw end (Zoom: " + compareZoom.toString() + ")");
 			times += 1;
