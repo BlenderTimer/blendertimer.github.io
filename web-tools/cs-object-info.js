@@ -2992,9 +2992,37 @@ var objects = [
         category1:"nature",
         category2:"geography",
         category3:"canyons",
-        tags:["largest",], // don't include anything in categories or name
+        tags:["largest"], // don't include anything in categories or name
         dateAdded:"2023/08/30", // YYYY/MM/DD
         lastModified:"2023/08/30", // YYYY/MM/DD
+    },
+    {
+        name:"Tyrannosaurus Rex (TRex)",
+        defaultAngle: 0,
+        sideImage:"Tyrannosaurus_Rex_TRex-side",
+        hasSideImage:true,
+        sideImageAlign:"bottom",
+        sideImageArtist: "Daniel Roberts (BlenderTimer)",
+        sideImageDate:"2023/09/02", // YYYY/MM/DD
+        frontImage:"",
+        hasFrontImage:false,
+        frontImageAlign:"none",
+        frontImageArtist: "",
+        frontImageDate:"", // YYYY/MM/DD
+        topImage:"",
+        hasTopImage:false,
+        topImageAlign:"none",
+        topImageArtist: "",
+        topImageDate:"", // YYYY/MM/DD
+        width:0.003,
+        length:0.0124,
+        height:0.00618,
+        category1:"nature",
+        category2:"animals",
+        category3:"reptiles",
+        tags:["dinosaur"], // don't include anything in categories or name
+        dateAdded:"2023/09/02", // YYYY/MM/DD
+        lastModified:"2023/09/02", // YYYY/MM/DD
     },
 ];
 
