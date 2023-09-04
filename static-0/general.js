@@ -127,13 +127,13 @@ function loadMenu() {
 		}
 		var largeLinkA = document.createElement('a');
 		largeLinkA.innerHTML = navLinks[i].title;
-		largeLinkA.style.width = navLinks[i].width;
+		largeLinkA.style.width = navLinks[i].width + "px";
 		if (navLinks[i].url.length > 0) {
 			largeLinkA.href = navLinks[i].url;
 		};
 		largeLink.appendChild(largeLinkA);
 		var largeLinkUL = document.createElement('ul');
-		largeLinkUL.style.width = navLinks[i].width;
+		largeLinkUL.style.width = navLinks[i].width + "px";
 		if (navLinks[i].dropdownURLs) {
 			for (var i2=0; i2 < navLinks[i].dropdownURLs.length; i2++) {
 				var daysSinceAddedDD = (new Date().getTime() - navLinks[i].dropdownURLs[i2].date.getTime()) / 1000 / 60 / 60 / 24;
