@@ -2880,7 +2880,7 @@ var objects = [
         category1:"transportation",
         category2:"vehicles",
         category3:"construction",
-        tags:["terrestrial"], // don't include anything in categories or name
+        tags:["terrestrial", "equipment", "digger", "dig", "mining"], // don't include anything in categories or name
         dateAdded:"2023/08/29", // YYYY/MM/DD
         lastModified:"2023/08/29", // YYYY/MM/DD
     },
@@ -3023,6 +3023,34 @@ var objects = [
         tags:["dinosaur"], // don't include anything in categories or name
         dateAdded:"2023/09/02", // YYYY/MM/DD
         lastModified:"2023/09/02", // YYYY/MM/DD
+    },
+    {
+        name:"BelAZ 75710",
+        defaultAngle: 0,
+        sideImage:"BelAZ_75710-side",
+        hasSideImage:true,
+        sideImageAlign:"bottom",
+        sideImageArtist: "Daniel Roberts (BlenderTimer)",
+        sideImageDate:"2023/09/03", // YYYY/MM/DD
+        frontImage:"",
+        hasFrontImage:false,
+        frontImageAlign:"none",
+        frontImageArtist: "",
+        frontImageDate:"", // YYYY/MM/DD
+        topImage:"",
+        hasTopImage:false,
+        topImageAlign:"none",
+        topImageArtist: "",
+        topImageDate:"", // YYYY/MM/DD
+        width:0.00987,
+        length:0.0206,
+        height:0.00826,
+        category1:"transportation",
+        category2:"vehicles",
+        category3:"construction",
+        tags:["terrestrial", "dump", "truck", "equipment", "mining"], // don't include anything in categories or name
+        dateAdded:"2023/09/03", // YYYY/MM/DD
+        lastModified:"2023/09/03", // YYYY/MM/DD
     },
 ];
 
