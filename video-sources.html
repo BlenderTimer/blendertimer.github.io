@@ -17,7 +17,7 @@
 		<link rel="stylesheet" type="text/css" href="./static-0/general.css"/>
 		<link rel="stylesheet" type="text/css" href="./static-0/video-sources.css"/>
 	</head>
-	<body onload="baseLoad(), determineLayout(), setPages(), search(), checkVideo()" onresize="determineDisplayMenu(), determineLayout()">
+	<body onload="baseLoad(), determineLayout(), setPages(), checkVideo()" onresize="determineDisplayMenu(), determineLayout()">
 		<div id="warning-banner" onclick="hideWarningBanner()" style="margin: 0px 0px -100px 0px; opacity: 0; display: none"><div id="warning-banner-main"><img id="wb-close" src="./static-0/files/images/close-x.png"><p>UNDER CONSTRUCTION</p></div></div>
 		<div id="background-plate"></div>
 		<div id="banner-menu">
@@ -36,109 +36,132 @@
 			<img src="./static-0/files/images/loading-general.gif" style="width: 100px; height: 100px; position: fixed; left: calc(50% - 50px); top: calc(50% - 25px); filter: drop-shadow(0px 0px 15px #000000)">
 		</div>
 		<div id="content-main" style="opacity: 0; transition: 1s ease">
-			<h3>Video Sources</h3>
+			<h3 id="content-title">Video Sources</h3>
 			<div id="search">
-				<input placeholder="Search Videos" type="text" id="searchbar" onkeydown="search()">
-				<p id="no-results" style="display: none">No results found.</p>
-				<a id="match-0" style="display: none"></a>
-				<a id="match-1" style="display: none"></a>
-				<a id="match-2" style="display: none"></a>
+				<input placeholder="Search Videos" type="text" id="searchbar" onkeydown="search2()">
 			</div>
+			<p id="no-results" style="display: none">No results found.</p>
 			<div id="primary-block">
 				<div id="13" class="video-block">
 					<a href="./video-sources/13-When-MASSIVE-Becomes-TINY" class="video-block-link">
 						<img src="./static-0/files/images/videotype-fullvideo.png" class="video-type" data-toggle="tooltip" title="This is a full video.">
 						<img src="./static-0/files/images/videoThumb-13-When_MASSIVE_Becomes_TINY-180.png" class="video-thumbnail">
-						<h4>When MASSIVE Becomes TINY</h4>
+						<div class="video-title">
+							<h4>When MASSIVE Becomes TINY</h4>
+						</div>
 					</a>
 				</div>
 				<div id="12" class="video-block">
 					<a href="./video-sources/12-Why-are-You-Scared-of-Sharks" class="video-block-link">
 						<img src="./static-0/files/images/videotype-short.png" class="video-type" data-toggle="tooltip" title="This video is a short.">
 						<img src="./static-0/files/images/videoThumb-12-Why_are_You_Scared_of_Sharks_-_Fantastic_Fact_04-180.png" class="video-thumbnail">
-						<h4>Why are You Scared of Sharks? - Fantastic Fact 04</h4>
+						<div class="video-title">
+							<h4>Why are You Scared of Sharks? - Fantastic Fact 04</h4>
+						</div>
 					</a>
 				</div>
 				<div id="11" class="video-block">
 					<a href="./video-sources/11-The-Great-Molasses-Flood" class="video-block-link">
 						<img src="./static-0/files/images/videotype-fullvideo.png" class="video-type" data-toggle="tooltip" title="This is a full video.">
 						<img src="./static-0/files/images/videoThumb-11-The_Great_Molasses_Flood-180.png" class="video-thumbnail">
-						<h4>The Great Molasses Flood</h4>
+						<div class="video-title">
+							<h4>The Great Molasses Flood</h4>
+						</div>
 					</a>
 				</div>
 				<div id="10" class="video-block">
 					<a href="./video-sources/10-This-Heart-is-Different" class="video-block-link">
 						<img src="./static-0/files/images/videotype-short.png" class="video-type" data-toggle="tooltip" title="This video is a short.">
 						<img src="./static-0/files/images/videoThumb-10-This_Heart_is_Different_-_Fantastic_Fact_03-180.png" class="video-thumbnail">
-						<h4>This Heart is Different - Fantastic Fact 03</h4>
+						<div class="video-title">
+							<h4>This Heart is Different - Fantastic Fact 03</h4>
+						</div>
 					</a>
 				</div>
 				<div id="9" class="video-block">
 					<a href="./video-sources/9-15-Facts-That-are-Nearly-IMPOSSIBLE-to-Believe" class="video-block-link">
 						<img src="./static-0/files/images/videotype-fullvideo.png" class="video-type" data-toggle="tooltip" title="This is a full video.">
 						<img src="./static-0/files/images/videoThumb-9-15_Facts_That_are_Nearly_IMPOSSIBLE_to_Believe-180.png" class="video-thumbnail">
-						<h4>15 Facts That are Nearly IMPOSSIBLE to Believe!</h4>
+						<div class="video-title">
+							<h4>15 Facts That are Nearly IMPOSSIBLE to Believe!</h4>
+						</div>
 					</a>
 				</div>
 				<div id="8" class="video-block">
 					<a href="./video-sources/8-This-Animal-is-as-LOUD-as-an-ATOMIC-BOMB" class="video-block-link">
 						<img src="./static-0/files/images/videotype-short.png" class="video-type" data-toggle="tooltip" title="This video is a short.">
 						<img src="./static-0/files/images/videoThumb-8-This_Animal_is_as_LOUD_as_an_ATOMIC_BOMB_-_Fantastic_Fact_02-180.png" class="video-thumbnail">
-						<h4>This Animal is as LOUD as an ATOMIC BOMB! - Fantastic Fact 02</h4>
+						<div class="video-title">
+							<h4>This Animal is as LOUD as an ATOMIC BOMB! - Fantastic Fact 02</h4>
+						</div>
 					</a>
 				</div>
 				<div id="7" class="video-block">
 					<a href="./video-sources/7-A-Superior-Language" class="video-block-link">
 						<img src="./static-0/files/images/videotype-fullvideo.png" class="video-type" data-toggle="tooltip" title="This is a full video.">
 						<img src="./static-0/files/images/videoThumb-7-A_Superior_Language-180.png" class="video-thumbnail">
-						<h4>A Superior Language</h4>
+						<div class="video-title">
+							<h4>A Superior Language</h4>
+						</div>
 					</a>
 				</div>
 				<div id="6" class="video-block">
 					<a href="./video-sources/6-The-INTERROBANG" class="video-block-link">
 						<img src="./static-0/files/images/videotype-short.png" class="video-type" data-toggle="tooltip" title="This video is a short.">
 						<img src="./static-0/files/images/videoThumb-6-The_INTERROBANG_-_Fantastic_Fact_01-180.png" class="video-thumbnail">
-						<h4>The INTERROBANG - Fantastic Fact 01</h4>
+						<div class="video-title">
+							<h4>The INTERROBANG - Fantastic Fact 01</h4>
+						</div>
 					</a>
 				</div>
 				<div id="5" class="video-block">
 					<a href="./video-sources/5-More-Than-10-INSANE-Facts-About-Water" class="video-block-link">
 						<img src="./static-0/files/images/videotype-fullvideo.png" class="video-type" data-toggle="tooltip" title="This is a full video.">
 						<img src="./static-0/files/images/videoThumb-5-More_Than_10_INSANE_Facts_About_Water-180.png" class="video-thumbnail">
-						<h4>More Than 10 INSANE Facts About Water</h4>
+						<div class="video-title">
+							<h4>More Than 10 INSANE Facts About Water</h4>
+						</div>
 					</a>
 				</div>
 				<div id="4" class="video-block">
 					<a href="./video-sources/4-What-You-Didn't-Know-About-Roman-Numerals" class="video-block-link">
 						<img src="./static-0/files/images/videotype-fullvideo.png" class="video-type" data-toggle="tooltip" title="This is a full video.">
 						<img src="./static-0/files/images/videoThumb-4-What_You_Didn't_Know_About_Roman_Numerals-180.png" class="video-thumbnail">
-						<h4>What You Didn't Know About Roman Numerals</h4>
+						<div class="video-title">
+							<h4>What You Didn't Know About Roman Numerals</h4>
+						</div>
 					</a>
 				</div>
 				<div id="3" class="video-block">
 					<a href="./video-sources/3-You-Can't-Touch-Anything" class="video-block-link">
 						<img src="./static-0/files/images/videotype-fullvideo.png" class="video-type" data-toggle="tooltip" title="This is a full video.">
 						<img src="./static-0/files/images/videoThumb-3-You_Can't_Touch_Anything-180.png" class="video-thumbnail">
-						<h4>You Can't Touch Anything</h4>
+						<div class="video-title">
+							<h4>You Can't Touch Anything</h4>
+						</div>
 					</a>
 				</div>
 				<div id="2" class="video-block">
 					<a href="./video-sources/2-The-Speed-of-Light-is-EXTREMELY-Slow" class="video-block-link">
 						<img src="./static-0/files/images/videotype-fullvideo.png" class="video-type" data-toggle="tooltip" title="This is a full video.">
 						<img src="./static-0/files/images/videoThumb-2-The_Speed_of_Light_is_EXTREMELY_Slow-180.png" class="video-thumbnail">
-						<h4>The Speed of Light is EXTREMELY Slow</h4>
+						<div class="video-title">
+							<h4>The Speed of Light is EXTREMELY Slow</h4>
+						</div>
 					</a>
 				</div>
 				<div id="1" class="video-block">
 					<a href="./video-sources/1-The-Basics-of-the-Solar-System-in-10-Minutes" class="video-block-link">
 						<img src="./static-0/files/images/videotype-fullvideo.png" class="video-type" data-toggle="tooltip" title="This is a full video.">
 						<img src="./static-0/files/images/videoThumb-1-The_Basics_of_the_Solar_System_in_10_Minutes-180.png" class="video-thumbnail">
-						<h4>The Basics of the Solar System in 10 Minutes!</h4>
+						<div class="video-title">
+							<h4>The Basics of the Solar System in 10 Minutes!</h4>
+						</div>
 					</a>
 				</div>
 			</div>
 			<div id="pages">
-				<b style="cursor: default">PAGE</b><input value="1" type="text" id="cp" oninput="pageInput()" onkeydown="pageKey(event)"><a id="pg-first" href=""><<</a><a id="pg-previous" href=""><</a><a id="pg-next" href="">></a><a id="pg-last" href="">>></a>
+				<div id="page-controls"><b style="cursor: default">PAGE</b><input value="1" type="text" id="cp" oninput="pageInput()" onkeydown="pageKey(event)"><a id="pg-first" href="">|<</a><a id="pg-previous" href=""><</a><a id="pg-next" href="">></a><a id="pg-last" href="">>|</a></div>
 			</div>
 		</div>
 	</body>
