@@ -16,9 +16,9 @@ var navLinks = [
 				date:new Date(2023, 3, 1), //year, month(from 0), day
 			},
 			{
-				title:"Timeline",
-				url:"./channel-timeline",
-				date:new Date(2022, 11, 4), //year, month(from 0), day
+				title:"Milestones",
+				url:"./channel-milestones",
+				date:new Date(2023, 8, 6), //year, month(from 0), day
 			},
 			{
 				title:"Submit a video idea!",
