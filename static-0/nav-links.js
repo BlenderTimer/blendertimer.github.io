@@ -3,7 +3,7 @@ var navLinks = [
 		title:"YouTube Channel",
 		url:"./channel",
 		width:170,
-		date:new Date(2023, 3, 1), //year, month(from 0), day
+		date:new Date(2023, 8, 6), //year, month(from 0), day
 		dropdownURLs:[
 			{
 				title:"Overview",
