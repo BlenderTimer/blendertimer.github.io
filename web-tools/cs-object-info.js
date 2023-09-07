@@ -3052,6 +3052,62 @@ var objects = [
         dateAdded:"2023/09/03", // YYYY/MM/DD
         lastModified:"2023/09/03", // YYYY/MM/DD
     },
+    {
+        name:"James Webb Space Telescope (JWST)",
+        defaultAngle: 0,
+        sideImage:"James_Webb_Space_Telescope_JWST-side",
+        hasSideImage:true,
+        sideImageAlign:"none",
+        sideImageArtist: "felax",
+        sideImageDate:"2023/09/07", // YYYY/MM/DD
+        frontImage:"",
+        hasFrontImage:false,
+        frontImageAlign:"none",
+        frontImageArtist: "",
+        frontImageDate:"", // YYYY/MM/DD
+        topImage:"",
+        hasTopImage:false,
+        topImageAlign:"none",
+        topImageArtist: "",
+        topImageDate:"", // YYYY/MM/DD
+        width:0.012,
+        length:0.022,
+        height:0.013,
+        category1:"technology",
+        category2:"modern",
+        category3:"telescopes",
+        tags:["mirror"], // don't include anything in categories or name
+        dateAdded:"2023/09/07", // YYYY/MM/DD
+        lastModified:"2023/09/07", // YYYY/MM/DD
+    },
+    {
+        name:"Space Needle",
+        defaultAngle: 1,
+        sideImage:"",
+        hasSideImage:false,
+        sideImageAlign:"none",
+        sideImageArtist: "",
+        sideImageDate:"", // YYYY/MM/DD
+        frontImage:"Space_Needle-front",
+        hasFrontImage:true,
+        frontImageAlign:"bottom",
+        frontImageArtist: "felax",
+        frontImageDate:"2023/09/07", // YYYY/MM/DD
+        topImage:"",
+        hasTopImage:false,
+        topImageAlign:"none",
+        topImageArtist: "",
+        topImageDate:"", // YYYY/MM/DD
+        width:0.043,
+        length:0.043,
+        height:0.1844,
+        category1:"structures",
+        category2:"buildings",
+        category3:"skyscrapers",
+        tags:["seattle"], // don't include anything in categories or name
+        dateAdded:"2023/09/07", // YYYY/MM/DD
+        lastModified:"2023/09/07", // YYYY/MM/DD
+    },
 ];
 
 //	———————— STEPS FOR UPDATING ————————
