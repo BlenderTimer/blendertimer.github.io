@@ -1413,6 +1413,7 @@ body {
     var sort = document.getElementById('sort');
     var addObjectGlow = document.getElementById('add-object-glow');
     var addObjectBTN = document.getElementById('add-object');
+    var urlComplete = false;
 
     var cursor = new Object();
 	cursor.x = 0;
@@ -1572,6 +1573,22 @@ body {
 		setTimeout(function() {drawComparison()},500);
 		setTimeout(function() {drawComparison()},1000);
 		setTimeout(function() {drawComparison()},2000);
+    }
+
+    function loadObjectsFromURL() {
+    	var url = "";
+    	if (window.location.toString().indexOf("?") > -1) {
+    		url = window.location.toString().replaceAll("?", "&");
+    		url = url.substring(url.indexOf("&") + 1, url.length);
+    		for (var i=0; i < url.split("&").length; i++) {
+    			for (var i2=0; i2 < objects.length; i2++) {
+    				if (objects[i2].originalObjectID == parseInt(url.split("&")[i])) {
+    					addObject(i2);
+    				}
+    			}
+    		}
+    	}
+    	urlComplete = true
     }
 
     function addObjectFlash() {
@@ -1823,7 +1840,7 @@ body {
 		setTimeout(function() {addObjectPopupDiv.style.display = "none"; popupBackground.style.display = "none"}, 500);
 	}
 
-    function addObject(objectID) {
+    function addObject(objectID, redraw) {
     	objsCompare.push({name:"object-" + (objsCompare.length + 1).toString(),id:objectID,removed:false,selected:false,angle:objects[objectID].defaultAngle,x:0,y:0,width:objects[objectID].length * compareZoom,height:objects[objectID].height * compareZoom,offsetX:0,offsetY:0,new:true,userModified:false});
     	// Object Base
     	var objDiv = document.createElement("div");
@@ -2036,10 +2053,12 @@ body {
 		popupClose();
 		noObjects.style.display = "none";
 		objectsShowing = true;
-		setTimeout(function() {drawComparison()},100);
-		setTimeout(function() {drawComparison()},500);
-		setTimeout(function() {drawComparison()},1000);
-		setTimeout(function() {drawComparison()},2000);
+		if (!(redraw == false)) {
+			setTimeout(function() {drawComparison()},100);
+			setTimeout(function() {drawComparison()},500);
+			setTimeout(function() {drawComparison()},1000);
+			setTimeout(function() {drawComparison()},2000);
+		}
     }
 
     function selectObject() {
@@ -2122,6 +2141,28 @@ body {
     }
 
     function drawComparison() {
+    	if (urlComplete == true) {
+    		var url = "";
+	    	if (window.location.toString().indexOf("?") > -1) {
+	    		url = window.location.toString().substring(0, window.location.toString().indexOf("?"));
+	    	}
+	    	else {
+	    		url = window.location.toString();
+	    	}
+	    	var objs = 0;
+	    	for (var i=0; i < objsCompare.length; i++) {
+	    		if (objsCompare[i].removed == false) {
+	    			if (objs == 0) {
+	    				url += "?" + objects[objsCompare[i].id].originalObjectID;
+	    			}
+	    			else {
+	    				url += "&" + objects[objsCompare[i].id].originalObjectID;
+	    			}
+	    			objs += 1;
+	    		}
+	    	}
+	    	window.history.pushState("draw-comparison", document.title, url);
+    	}
     	var firstAlign = true;
     	var align = "none";
     	//console.log("draw start");
@@ -2962,6 +3003,7 @@ body {
 			objectsCount.innerHTML = searchObjects.length + " OBJECTS";
 		}
 		search();
+		loadObjectsFromURL();
 	}
 </script>
 <script src="./cs-object-info.js" type="text/javascript"></script>
