@@ -29,8 +29,14 @@ function loadMilestones() {
 		if (milestoneList.children[i].classList.length > 1) {
 			milestones[milestones.length - 1].titleOffset = milestoneList.children[i].classList[1];
 		}
+		else {
+			milestones[milestones.length - 1].titleOffset = "no";
+		}
 		if (milestoneList.children[i].classList.length > 2) {
 			milestones[milestones.length - 1].noLine = milestoneList.children[i].classList[2];
+		}
+		else {
+			milestones[milestones.length - 1].noLine = "no";
 		}
 	}
 	drawTimeline();
@@ -343,7 +349,7 @@ function drawMilestone(ms, x) {
 	tl2d.closePath();
 	tl2d.fillStyle = "#006AAF";
 	tl2d.fill();
-	if (!(ms.noLine)) {
+	if (ms.noLine == "no") {
 		tl2d.beginPath();
 		tl2d.moveTo(x, tlHeight);
 		tl2d.lineTo(x, 100 - (ms.offset * -1) - milestoneOffset);
@@ -352,12 +358,20 @@ function drawMilestone(ms, x) {
 		tl2d.lineCap = "round";
 		tl2d.stroke();
 	}
-	if (ms.titleOffset) {
+	console.log(ms.titleOffset)
+	if (ms.titleOffset == "after") {
 		tl2d.font = "bold 15pt monospace";
 		tl2d.fillStyle = "#E0E0E0";
 		tl2d.textAlign = 'left';
 		tl2d.textBaseline = 'middle';
 		tl2d.fillText(ms.text, x + 65, tlHeight - 172 - (ms.offset * -1) - milestoneOffset);
+	}
+	else if (ms.titleOffset == "center") {
+		tl2d.font = "bold 15pt monospace";
+		tl2d.fillStyle = "#E0E0E0";
+		tl2d.textAlign = 'center';
+		tl2d.textBaseline = 'bottom';
+		tl2d.fillText(ms.text, x + 30, tlHeight - 205 - (ms.offset * -1) - milestoneOffset);
 	}
 	else {
 		tl2d.font = "bold 15pt monospace";
