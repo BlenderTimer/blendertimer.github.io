@@ -3108,6 +3108,62 @@ var objects = [
         dateAdded:"2023/09/07", // YYYY/MM/DD
         lastModified:"2023/09/07", // YYYY/MM/DD
     },
+    {
+        name:"Airbus A380-800",
+        defaultAngle: 0,
+        sideImage:"Airbus_A380_800-side",
+        hasSideImage:true,
+        sideImageAlign:"bottom",
+        sideImageArtist: "Daniel Roberts (BlenderTimer)",
+        sideImageDate:"2023/09/07", // YYYY/MM/DD
+        frontImage:"Airbus_A380_800-front",
+        hasFrontImage:true,
+        frontImageAlign:"bottom",
+        frontImageArtist: "Daniel Roberts (BlenderTimer)",
+        frontImageDate:"2023/09/07", // YYYY/MM/DD
+        topImage:"Airbus_A380_800-top",
+        hasTopImage:true,
+        topImageAlign:"none",
+        topImageArtist: "Daniel Roberts (BlenderTimer)",
+        topImageDate:"2023/09/07", // YYYY/MM/DD
+        width:0.0798,
+        length:0.07272,
+        height:0.0241,
+        category1:"transportation",
+        category2:"aircraft",
+        category3:"airplanes",
+        tags:["airliner"], // don't include anything in categories or name
+        dateAdded:"2023/09/07", // YYYY/MM/DD
+        lastModified:"2023/09/07", // YYYY/MM/DD
+    },
+    {
+        name:"Boeing 747",
+        defaultAngle: 0,
+        sideImage:"Boeing_747-side",
+        hasSideImage:true,
+        sideImageAlign:"bottom",
+        sideImageArtist: "Daniel Roberts (BlenderTimer)",
+        sideImageDate:"2023/09/07", // YYYY/MM/DD
+        frontImage:"Boeing_747-front",
+        hasFrontImage:true,
+        frontImageAlign:"bottom",
+        frontImageArtist: "Daniel Roberts (BlenderTimer)",
+        frontImageDate:"2023/09/07", // YYYY/MM/DD
+        topImage:"Boeing_747-top",
+        hasTopImage:true,
+        topImageAlign:"none",
+        topImageArtist: "Daniel Roberts (BlenderTimer)",
+        topImageDate:"2023/09/07", // YYYY/MM/DD
+        width:0.0596,
+        length:0.0706,
+        height:0.0193,
+        category1:"transportation",
+        category2:"aircraft",
+        category3:"airplanes",
+        tags:["airliner"], // don't include anything in categories or name
+        dateAdded:"2023/09/07", // YYYY/MM/DD
+        lastModified:"2023/09/07", // YYYY/MM/DD
+    },
 ];
 
 //	———————— STEPS FOR UPDATING ————————

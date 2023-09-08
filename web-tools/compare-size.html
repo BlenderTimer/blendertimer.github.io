@@ -39,7 +39,7 @@
 					<option value="height">Height</option>
 					<option value="date">Date</option>
 				</select>
-				<input placeholder="Search Objects" type="text" id="searchbar" onkeydown="search()">
+				<input placeholder="Search Objects" type="text" id="searchbar" onkeydown="searchCheck(event)">
 				<div id="search-objects-search" class="search-objects" style="display: none">
 					<p id="no-search-results">No results.</p>
 					<p id="wait-search-results">Searching...</p>
@@ -147,10 +147,11 @@
 					<div id="contributor-list"></div>
 				</div>
 				<div class="spr"></div>
-				<h3>Object Tags</h3>
+				<h3 style="text-align: center; width: 100%">Object Tags</h3>
 				<div id="object-tags">
 					<p>[Object compared to] vs Adenovirus, Disease, {image artists: Daniel Roberts (BlenderTimer)}</p>
 					<p>[Object compared to] vs Airbus A330-300, Airliner, {image artists: Daniel Roberts (BlenderTimer), Daniel Roberts (BlenderTimer), Daniel Roberts (BlenderTimer)}</p>
+					<p>[Object compared to] vs Airbus A380-800, Airliner, {image artists: Daniel Roberts (BlenderTimer), Daniel Roberts (BlenderTimer), Daniel Roberts (BlenderTimer)}</p>
 					<p>[Object compared to] vs Alcyoneus, Stars, {image artists: Daniel Roberts (BlenderTimer)}</p>
 					<p>[Object compared to] vs Aldebaran, Ball, Heat, Hot, K5+, K5+ iii, Orange, Red, Red-orange, Sphere, {image artists: Daniel Roberts (BlenderTimer), Daniel Roberts (BlenderTimer), Daniel Roberts (BlenderTimer)}</p>
 					<p>[Object compared to] vs Alpha Centauri A, Ball, G-type, G2, G2-v, Gtype, Heat, Hot, Rigil kentaurus, Sphere, {image artists: Daniel Roberts (BlenderTimer), Daniel Roberts (BlenderTimer), Daniel Roberts (BlenderTimer)}</p>
@@ -167,6 +168,7 @@
 					<p>[Object compared to] vs Bernardinelli-Bernstein (Largest Comet), Ice, Rock, {image artists: Daniel Roberts (BlenderTimer)}</p>
 					<p>[Object compared to] vs Betelgeuse, Ball, Heat, Hot, M1, M1-2, Red, Sphere, {image artists: Daniel Roberts (BlenderTimer), Daniel Roberts (BlenderTimer), Daniel Roberts (BlenderTimer)}</p>
 					<p>[Object compared to] vs Blue Whale, Adult, Balaenoptera musculus, Baleen, Long, {image artists: Daniel Roberts (BlenderTimer)}</p>
+					<p>[Object compared to] vs Boeing 747, Airliner, {image artists: Daniel Roberts (BlenderTimer), Daniel Roberts (BlenderTimer), Daniel Roberts (BlenderTimer)}</p>
 					<p>[Object compared to] vs Burj Khalifa, Dubai, {image artists: Daniel Roberts (BlenderTimer)}</p>
 					<p>[Object compared to] vs CD (Compact Disk), Portable, {image artists: Daniel Roberts (BlenderTimer)}</p>
 					<p>[Object compared to] vs Caspian Sea (Largest Lake), Water, {image artists: Daniel Roberts (BlenderTimer)}</p>
@@ -263,7 +265,7 @@
 				</div>
 			</div>
 		</div>
-		<p id="version">Tool version: 0.1.0</p>
+		<p id="version">Tool version: 0.1.1</p>
 	</body>
 </html>
 <style>
@@ -768,7 +770,6 @@ body {
 	position: absolute;
 	margin-top: -40px;
 	z-index: 0;
-	transition: 1s;
 	background: #3388EE00;
 }
 
@@ -1406,8 +1407,6 @@ body {
     var manualZoom = document.getElementById('manual-zoom');
     var zoomLevel = document.getElementById('zoom-level');
     var zoomLevelRange = document.getElementById('zoom-level-range');
-    var ctrlKey = false;
-    var shiftKey = false;
     var searchBar = document.getElementById('searchbar');
     var objectsCount = document.getElementById('objects-count');
     var svgFormFirst = true;
@@ -1416,6 +1415,10 @@ body {
     var addObjectGlow = document.getElementById('add-object-glow');
     var addObjectBTN = document.getElementById('add-object');
     var urlComplete = false;
+    var searchSelected = 2;
+
+    var ctrlKey = false;
+    var shiftKey = false;
 
     var cursor = new Object();
 	cursor.x = 0;
@@ -1453,6 +1456,20 @@ body {
     			}
     		}
     	}
+    	else if (event.key == "ArrowUp") {
+    		if (event.type == "keydown") {
+    			if (addObjectPopupDiv.style.display == "block") {
+    				setSearchSelection("up")
+    			}
+    		}
+    	}
+    	else if (event.key == "ArrowDown") {
+    		if (event.type == "keydown") {
+    			if (addObjectPopupDiv.style.display == "block") {
+    				setSearchSelection("down")
+    			}
+    		}
+    	}
     }
     document.addEventListener("mousemove", getCursorPosition);
     canvasShadow.addEventListener("mousedown", canvasMouseDown);
@@ -1480,6 +1497,7 @@ body {
 			cxbc.stroke();
     		document.getElementById('loading').style.display = "none";
     		webTool.style.transition = "1s"
+    		addObjectGlow.style.transition = "1s";
     		addObjectFlash();
     		setInterval(function() {
     			if (objectsShowing == false) {
@@ -2781,6 +2799,14 @@ body {
     var searchObjects = [];
     var newSearch = true;
 
+    function searchCheck(e) {
+    	if (!(e.key == "ArrowUp") && !(e.key == "ArrowDown")) {
+    		search();
+    	}
+    }
+
+    var searchMouseOver = false;
+
     function search(query, searchSort) {
     	if (query) {
     		searchBar.value = query;
@@ -2790,8 +2816,12 @@ body {
     		sort.value = searchSort;
     	}
     	if (event.key == "Enter") {
-    		addObject(document.getElementById("search-objects-search").children[2].id.substring(document.getElementById("search-objects-search").children[2].id.indexOf("-") + 1,document.getElementById("search-objects-search").children[2].id.lastIndexOf("-")))
-    	};
+    		addObject(document.getElementById("search-objects-search").children[searchSelected].id.substring(document.getElementById("search-objects-search").children[searchSelected].id.indexOf("-") + 1,document.getElementById("search-objects-search").children[searchSelected].id.lastIndexOf("-")))
+    	}
+    	else if (event.key == "Escape") {
+    		popupClose();
+    	}
+    	searchBar.focus();
     	setTimeout(function() {
     		document.getElementById("search-objects-search").scrollTop = 0;
     		document.getElementById('no-search-results').style.display = "block";
@@ -2820,6 +2850,25 @@ body {
 					objName.addEventListener("click", function(event) {
 						var element = event.target || event.srcElement;
 						addObject(element.id.substring(element.id.indexOf("-") + 1,element.id.lastIndexOf("-")))
+					});
+					objName.addEventListener('mouseenter', function(event) {
+						var element = event.target || event.srcElement;
+						element.style.transition = "0s";
+						element.style.color = "#AAAAAA";
+						element.style.background = "#353535";
+						element.style.textShadow = "0px 0px 10px rgba(255,255,255,0.4)";
+						setSearchSelection('clear');
+						setTimeout(function() {searchMouseOver = true}, 10);
+					});
+					objName.addEventListener('mouseleave', function(event) {
+						var element = event.target || event.srcElement;
+						element.style.transition = "0.3s";
+						element.style.color = null;
+						element.style.background = null;
+						element.style.textShadow = null;
+						var i2 = 0;
+						searchMouseOver = false
+						setTimeout(function() {setSearchSelection('redraw')}, 500);
 					});
 					var objDate = new Date(parseInt(searchObjects[i].lastModified.toString().substring(0, 4)), parseInt(searchObjects[i].lastModified.toString().substring(5, 7)) - 1, parseInt(searchObjects[i].lastModified.toString().substring(8, 10)));
 					if ((((Date.now() - objDate.getTime()) / 1000 / 60 / 60 / 24) < 7)) {
@@ -2960,7 +3009,51 @@ body {
 				}
    	 		}
    	 		document.getElementById('wait-search-results').style.display = "none";
+   	 		setSearchSelection("reset");
     	}, 1)
+	}
+
+	function setSearchSelection(set) {
+		if (set == "up") {
+			if (searchSelected > 2) {
+				searchSelected -= 1;
+			}
+			else {
+				searchSelected = 2;
+			}
+		}
+		if (set == "down") {
+			if (searchSelected < document.getElementById("search-objects-search").children.length - 1) {
+				searchSelected += 1;
+			}
+			else {
+				searchSelected = document.getElementById("search-objects-search").children.length - 1
+			}
+		}
+		if (set == "reset") {
+			searchSelected = 2;
+		}
+		for (var i=0; i < (document.getElementById("search-objects-search").children.length - 2); i++) {
+			document.getElementById("search-objects-search").children[i + 2].style.color = null;
+			document.getElementById("search-objects-search").children[i + 2].style.background = null;
+			document.getElementById("search-objects-search").children[i + 2].style.textShadow = null;
+		}
+		if (document.getElementById("search-objects-search").children[searchSelected] && !(set == "clear")  && !(searchMouseOver == true)) {
+			if (set == "redraw") {
+				document.getElementById("search-objects-search").children[searchSelected].style.transition = "1s";
+			}
+			document.getElementById("search-objects-search").children[searchSelected].style.color = "#AAAAAA";
+			document.getElementById("search-objects-search").children[searchSelected].style.background = "#353535";
+			document.getElementById("search-objects-search").children[searchSelected].style.textShadow = "0px 0px 10px rgba(255,255,255,0.4)";
+			setTimeout(function() {document.getElementById("search-objects-search").children[searchSelected].style.transition = "0.3s"}, 300)
+			var s = (searchSelected * 25) + (searchSelected * 5);
+			if (s > (document.getElementById("search-objects-search").scrollTop + document.getElementById("search-objects-search").offsetHeight) && set == "down") {
+				document.getElementById("search-objects-search").scrollTop = (searchSelected * 25) + (searchSelected * 5) - document.getElementById("search-objects-search").offsetHeight;
+			}
+			else if (s < (document.getElementById("search-objects-search").scrollTop + 75) && set == "up") {
+				document.getElementById("search-objects-search").scrollTop = (searchSelected * 25) + (searchSelected * 5) - 75;
+			}
+		}
 	}
 
 	function sortSearchObjects(allowRelevance) {
