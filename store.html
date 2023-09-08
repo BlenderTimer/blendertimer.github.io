@@ -9,44 +9,56 @@
             
             gtag('config', 'G-SYR26MG6YV');
         </script>
-		<title>Compare - BlenderTimer</title>
+		<title>BlenderTimer Shop</title>
 		<meta name="description" content="Shop for all sorts of cool BlenderTimer merch and gear! Shirts, hats, hoodies, mugs, puzzles, water bottles, stickers, magnets, and more!">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<link rel="icon" href="./favicon.png" type="image/x-icon"/>
-		<link rel="stylesheet" type="text/css" href="./static-0/general.css"/>
-		<link rel="stylesheet" type="text/css" href="./static-0/compare.css"/>
-		<meta http-equiv="Refresh" content="0; url='https://shop.blendertimer.com'"/>
+		<link rel="icon" href="./favicon.png" type="image/x-icon">
+		<meta http-equiv="Refresh" content="0; url='https://shop.blendertimer.com'">
 	</head>
-	<body onload="baseLoad()" onresize="determineDisplayMenu()">
-		<div id="warning-banner" onclick="hideWarningBanner()" style="margin: 0px 0px -100px 0px; opacity: 0; display: none"><div id="warning-banner-main"><img id="wb-close" src="./static-0/files/images/close-x.png"><p>UNDER CONSTRUCTION</p></div></div>
-		<div id="background-plate"></div>
-		<div id="banner-menu">
-			<nav>
-				<!--====================  LARGE MENU  ====================-->
-				<ul id="large-menu">
-					<li id="nav-home"><a href="./"><img src="./static-0/files/images/nav-logohome.png"></a></li>
-				</ul>
-				<li id="revolve-button" title="Current visitors on this site."><script type="text/javascript" src="https://rf.revolvermaps.com/0/0/3.js?i=5cgjr9bkw1v&b=0&s=40&m=2&cl=555555&co=000000&cd=ffffff&v0=25&v1=100&r=1" async="async"></script></li>
-				<!--====================  SMALL MENU  ====================-->
-				<li id="small-menu" style="display: none" onclick="smallMenuToggle()"><img src="./static-0/files/images/menu-bars.png"></li>
-				<div id="small-menu-main"></div>
-			</nav>
+	<body onload="determineLayout()" onresize="determineLayout()">
+		<li id="revolve-button" style="display:none"><script type="text/javascript" src="https://rf.revolvermaps.com/0/0/3.js?i=5cgjr9bkw1v&b=0&s=40&m=2&cl=555555&co=000000&cd=ffffff&v0=25&v1=100&r=1" async="async"></script></li>
+		<div id="loader" style="width: 100%; height: 100%; top: 0px; left: 0px; position: fixed; z-index: -99999">
+			<img src="./static-0/files/images/loading-general.gif" style="width: 100px; height: 100px; position: fixed; left: calc(50% - 50px); top: calc(50% - 50px); filter: drop-shadow(0px 0px 15px #000000)">
 		</div>
-		<div id="loader" style="width: 100%; height: calc(100% - 50px); top: 50px; left: 0px; position: fixed; z-index: -99999">
-			<img src="./static-0/files/images/loading-general.gif" style="width: 100px; height: 100px; position: fixed; left: calc(50% - 50px); top: calc(50% - 25px); filter: drop-shadow(0px 0px 15px #000000)">
-		</div>
-		<div id="content-main" style="opacity: 0; transition: 1s ease">
-			<div id="primary-block">
-				
-			</div>
-		</div>
+		<a href="https://www.blendertimer.com/web-tools"><img src="./static-0/files/images/nav-logohome.png" id="nav-home"></a>
 	</body>
 </html>
 <style>
-	#primary-block {
-		text-align: center;
-		height: 20%;
-	}
+body, html {
+	height: auto;
+	margin: 0px;
+	box-sizing: border-box;
+	padding: 20px;
+	box-shadow: 0px 0px 50px rgba(0,0,0,0.8) inset;
+}
+
+body {
+	background: #1E1E1E;
+	color: #F5F5F5;
+	font-family: monospace;
+	font-size: 12pt;
+	box-shadow: none;
+}
+
+::selection {
+	background: #EEEEEE;
+	color: #404040;
+}
+
+#nav-home {
+	background: rgba(30,30,30,0);
+	width: 150px;
+	position: absolute;
+	transition: 0.5s;
+	margin: 0px 0px 0px 0px;
+	padding: 7px 15px;
+	border-radius: 30px;
+}
+
+#nav-home:hover {
+	background: #2E2E2E;
+	width: 170px;
+	margin: -3px 0px 0px -10px;
+	box-shadow: 0px 0px 15px rgba(0,0,0,0.2);
+}
 </style>
-<script src="./static-0/nav-links.js" type="text/javascript"></script>
-<script src="./static-0/general.js" type="text/javascript"></script>
