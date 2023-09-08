@@ -16,8 +16,8 @@
 		<link rel="icon" href="../favicon.png" type="image/x-icon"/>
 	</head>
 	<body onload="baseLoad(), determineLayout(), loadObjects(), loadContributors()" onresize="resizeB(), determineLayout()" style="background: #1E1E1E">
-		<li id="revolve-button" style="display:none"><script type="text/javascript" src="https://rf.revolvermaps.com/0/0/3.js?i=5cgjr9bkw1v&b=0&s=40&m=2&cl=555555&co=000000&cd=ffffff&v0=25&v1=100&r=1" async="async"></script></li>
-		<div id="loading"style="font-family: monospace; display: block; position: absolute; width: 100%; height: 100%; top: 0px; left: 0px; background: #1E1E1E; z-index: 999999; text-align: center; font-size: 12px; white-space: nowrap; padding: calc(50vh - 12px) 0px 0px 0px; text-shadow: 0px 0px 20px rgba(0,0,0,0.8); color: #AAAAAA; box-shadow: 0px 0px 50px rgba(0,0,0,0.8) inset"><h1 id="loading-text">Loading web tool...<h1></div>
+		<li id="revolve-button" style="display: block; position: absolute; right: 40px"><script type="text/javascript" src="https://rf.revolvermaps.com/0/0/3.js?i=5cgjr9bkw1v&b=0&s=40&m=2&cl=555555&co=000000&cd=ffffff&v0=25&v1=100&r=1" async="async"></script></li>
+		<div id="loading"style="font-family: monospace; display: block; position: fixed; width: 100%; height: 100%; top: 0px; left: 0px; background: #1E1E1E; z-index: 999999; text-align: center; font-size: 12px; white-space: nowrap; padding: calc(50vh - 12px) 0px 0px 0px; text-shadow: 0px 0px 20px rgba(0,0,0,0.8); color: #AAAAAA; box-shadow: 0px 0px 50px rgba(0,0,0,0.8) inset"><h1 id="loading-text">Loading web tool...<h1></div>
 		<div id="rotate-device"style="font-family: monospace; display: none; position: fixed; width: 100%; height: 100%; top: 0px; left: 0px; background: #1E1E1E; z-index: 999999; text-align: center; font-size: 9px; white-space: nowrap; padding: calc(50vh - 12px - 64px) 0px 0px 0px; text-shadow: 0px 0px 20px rgba(0,0,0,0.8); color: #AAAAAA; box-shadow: 0px 0px 50px rgba(0,0,0,0.8) inset"><h1>Please rotate your device!<h1><img src="data:image/png;base64,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" style="height: 128px; width: 128px"></div>
 		<div id="popup-background" onmouseenter="popupCloseBegin(true)" onmouseleave="popupCloseBegin(false)" onclick="popupClose()" style="display: none; opacity: 0"></div>
 		<div id="addobject-popup-div" style="display: none; opacity: 0">
@@ -106,11 +106,13 @@
 					<div id="compare-objects">
 						<p id="no-objects">No objects.</p>
 					</div>
-					<input type="checkbox" id="manual-zoom" title="Manual Zoom Level" onclick="toggleManualZoom()">
+					<p style="margin: 10px 0px -5px 5px; height: auto; color: #555555; cursor: default">Size offset:</p>
+					<button id="manual-zoom" onclick="toggleManualZoom()">Enable Manual Offset</button>
 					<img id="zoom-minus" title="Manual Zoom Level" class="zoom-btns"src="../static-0/files/images/zoom-minus.png" onclick="zoom('-')">
 					<input type="range" id="zoom-level-range" value="9500" min="1000" max="20000" title="Manual Zoom Level" oninput="setManualZoom(1)" onmouseup="setZoomRange()" disabled>
 					<img id="zoom-plus" title="Manual Zoom Level" class="zoom-btns"src="../static-0/files/images/zoom-plus.png" onclick="zoom('+')">
 					<input type="number" id="zoom-level" value="10000" min="0.000001" title="Manual Zoom Level" oninput="setManualZoom(0)" disabled>
+					<p style="margin: 60px 0px 0px 5px; height: auto; color: #555555; cursor: default">Align selected objects:</p>
 					<div style="display: flex; width: 100%; height: 30px; justify-content: space-between;">
 						<img id="align-left" class="align-btns" title="Align selected object(s) to the left" src="../static-0/files/images/align-left.png" onclick="alignObject('left')">
 						<img id="align-center" class="align-btns" title="Align selected object(s) to the center" src="../static-0/files/images/align-center.png" onclick="alignObject('center')">
@@ -210,6 +212,7 @@
 					<p>[Object compared to] vs Jellyfish (Generic), Cyaneidae, Scyphozoa, {image artists: Daniel Roberts (BlenderTimer)}</p>
 					<p>[Object compared to] vs Jupiter, Ball, Solar system, Sphere, {image artists: Daniel Roberts (BlenderTimer), Daniel Roberts (BlenderTimer), Daniel Roberts (BlenderTimer)}</p>
 					<p>[Object compared to] vs Ladybug, Adult, Beetle, Coccinellidae, Ladybeetle, Ladybird, {image artists: Daniel Roberts (BlenderTimer)}</p>
+					<p>[Object compared to] vs Lego Stud, Brick, Bump, {image artists: Daniel Roberts (BlenderTimer)}</p>
 					<p>[Object compared to] vs Makemake, Ball, Small, Solar system, Sphere, {image artists: Daniel Roberts (BlenderTimer), Daniel Roberts (BlenderTimer), Daniel Roberts (BlenderTimer)}</p>
 					<p>[Object compared to] vs Maple Leaf (Generic), Leaves, {image artists: Daniel Roberts (BlenderTimer)}</p>
 					<p>[Object compared to] vs Mars, Ball, Solar system, Sphere, {image artists: Daniel Roberts (BlenderTimer), Daniel Roberts (BlenderTimer), Daniel Roberts (BlenderTimer)}</p>
@@ -265,7 +268,7 @@
 				</div>
 			</div>
 		</div>
-		<p id="version">Tool version: 0.1.1</p>
+		<p id="version">Tool version: 0.1.2</p>
 	</body>
 </html>
 <style>
@@ -957,8 +960,17 @@ body {
 	float: left;
 }
 
+.object-position p {
+	height: auto;
+	display: inline-block;
+	width: 20px;
+	float: left;
+	margin: 15px 5px 0px 0px;
+	color: #555555;
+}
+
 .object-x {
-	display: block;
+	display: inline-block;
 	float: left;
 	outline: none;
 	border: none;
@@ -968,12 +980,12 @@ body {
 	padding: 5px;
 	border-radius: 5px;
 	box-shadow: 0px 0px 10px rgba(0,0,0,0.5) inset;
-	margin: 10px 0px;
-	width: calc(50% - 5px);
+	margin: 10px 10px 10px 0px;
+	width: calc(50% - 30px);
 }
 
 .object-y {
-	display: block;
+	display: inline-block;
 	float: right;
 	outline: none;
 	border: none;
@@ -984,23 +996,29 @@ body {
 	border-radius: 5px;
 	box-shadow: 0px 0px 10px rgba(0,0,0,0.5) inset;
 	margin: 10px 0px;
-	width: calc(50% - 5px);
+	width: calc(50% - 30px);
 }
 
 #manual-zoom {
 	display: block;
-	float: left;
 	outline: none;
 	border: none;
-	background: #101010;
+	background: #353535;
 	color: #F5F5F5AA;
 	font-size: 12pt;
+	font-family: monospace;
 	padding: 5px;
 	border-radius: 5px;
-	box-shadow: 0px 0px 10px rgba(0,0,0,0.5) inset;
-	margin: 10px 5px 10px 0px;
-	width: 30px;
-	height: 30px;
+	box-shadow: 0px 0px 10px #0005;
+	margin: 10px 0px 0px 0px;
+	width: 100%;
+	height: auto;
+	cursor: pointer;
+	transition: 0.3s;
+}
+
+#manual-zoom:hover {
+	background: #404040;
 }
 
 .zoom-btns {
@@ -1028,7 +1046,7 @@ body {
 	font-size: 12pt;
 	padding: 5px;
 	margin: 10px 5px 10px 5px;
-	width: calc(50% - 20px);
+	width: calc(50% + 15px);
 	height: 30px;
 }
 
@@ -2029,6 +2047,8 @@ body {
     	objPosition.id = objsCompare[objsCompare.length - 1].name + "-position";
 		objPosition.classList.add("object-position");
 		// Object X
+		var objXTitle = document.createElement('p');
+		objXTitle.innerHTML = "X: ";
 		var objX = document.createElement("input");
 		objX.type = "number"
 		objX.id = objsCompare[objsCompare.length - 1].name + "-x";
@@ -2041,8 +2061,11 @@ body {
 			objsCompare[element.id.substring(element.id.indexOf("-") + 1,element.id.indexOf("-x")) - 1].userModified = true;
 			drawComparison()
 		});
+		objPosition.appendChild(objXTitle);
 		objPosition.appendChild(objX);
 		// Object Y
+		var objYTitle = document.createElement('p');
+		objYTitle.innerHTML = "Y: ";
 		var objY = document.createElement("input");
 		objY.type = "number"
 		objY.id = objsCompare[objsCompare.length - 1].name + "-y";
@@ -2055,6 +2078,7 @@ body {
 			objsCompare[element.id.substring(element.id.indexOf("-") + 1,element.id.indexOf("-y")) - 1].userModified = true;
 			drawComparison()
 		});
+		objPosition.appendChild(objYTitle);
 		objPosition.appendChild(objY);
 		// Object ID
 		var objID = document.createElement("p");
@@ -2528,16 +2552,28 @@ body {
     }
 
     function toggleManualZoom() {
-    	if (manualZoom.checked) {
-    		zoomLevel.disabled = null;
-    		zoomLevelRange.disabled = null;
-    		CompareZoomAuto = false;
+    	if (CompareZoomAuto == false) {
+    		zoomLevel.disabled = "disabled";
+    		zoomLevelRange.disabled = "disabled";
+    		document.getElementById('zoom-plus').style.background = "#25252500";
+    		document.getElementById('zoom-minus').style.background = "#25252500";
+    		manualZoom.innerHTML = "Enable Manual Offset";
+    		manualZoom.style.background = null;
+    		manualZoom.style.boxShadow = null;
+    		manualZoom.style.color = null;
+    		CompareZoomAuto = true;
     		drawComparison();
     	}
     	else {
-    		zoomLevel.disabled = "disabled";
-    		zoomLevelRange.disabled = "disabled";
-    		CompareZoomAuto = true;
+    		zoomLevel.disabled = null;
+    		zoomLevelRange.disabled = null;
+    		document.getElementById('zoom-plus').style.background = null;
+    		document.getElementById('zoom-minus').style.background = null;
+    		manualZoom.innerHTML = "Disable Manual Offset";
+    		manualZoom.style.background = "#101010";
+    		manualZoom.style.boxShadow = "0px 0px 10px rgba(0,0,0,0.5) inset";
+    		manualZoom.style.color = "#555555";
+    		CompareZoomAuto = false;
     		drawComparison();
     	}
     }

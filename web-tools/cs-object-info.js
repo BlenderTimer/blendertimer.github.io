@@ -3164,6 +3164,34 @@ var objects = [
         dateAdded:"2023/09/07", // YYYY/MM/DD
         lastModified:"2023/09/07", // YYYY/MM/DD
     },
+    {
+        name:"Lego Stud",
+        defaultAngle: 2,
+        sideImage:"",
+        hasSideImage:false,
+        sideImageAlign:"bottom",
+        sideImageArtist: "",
+        sideImageDate:"", // YYYY/MM/DD
+        frontImage:"",
+        hasFrontImage:false,
+        frontImageAlign:"bottom",
+        frontImageArtist: "",
+        frontImageDate:"", // YYYY/MM/DD
+        topImage:"Lego_Stud-top",
+        hasTopImage:true,
+        topImageAlign:"none",
+        topImageArtist: "Daniel Roberts (BlenderTimer)",
+        topImageDate:"2023/09/08", // YYYY/MM/DD
+        width:0.0000048,
+        length:0.0000048,
+        height:0.0000016,
+        category1:"miscellaneous",
+        category2:"toys",
+        category3:"lego",
+        tags:["brick", "bump"], // don't include anything in categories or name
+        dateAdded:"2023/09/08", // YYYY/MM/DD
+        lastModified:"2023/09/08", // YYYY/MM/DD
+    },
 ];
 
 //	———————— STEPS FOR UPDATING ————————
