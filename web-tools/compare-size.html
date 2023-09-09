@@ -178,6 +178,7 @@
 					<p>[Object compared to] vs Cessna 172 Skyhawk, Civilian, Private, {image artists: Daniel Roberts (BlenderTimer), Daniel Roberts (BlenderTimer), Daniel Roberts (BlenderTimer)}</p>
 					<p>[Object compared to] vs Chameleon, Adult, Chamaeleonidae, {image artists: Daniel Roberts (BlenderTimer)}</p>
 					<p>[Object compared to] vs Concorde, Aerospatiale, Aérospatiale- bac concorde supersonic transport, {image artists: Daniel Roberts (BlenderTimer), Daniel Roberts (BlenderTimer), Daniel Roberts (BlenderTimer)}</p>
+					<p>[Object compared to] vs Coronavirus, 19, Covid, {image artists: Daniel Roberts (BlenderTimer)}</p>
 					<p>[Object compared to] vs Cruise Ship (Generic), Boat, Leisure, Luxury, {image artists: Daniel Roberts (BlenderTimer)}</p>
 					<p>[Object compared to] vs Currant Peak (Nevada), Climb, Hill, Summit, {image artists: Daniel Roberts (BlenderTimer)}</p>
 					<p>[Object compared to] vs Deimos (Mars' Moon), Natural satellite, Solar system, {image artists: Daniel Roberts (BlenderTimer)}</p>
@@ -212,6 +213,7 @@
 					<p>[Object compared to] vs Jellyfish (Generic), Cyaneidae, Scyphozoa, {image artists: Daniel Roberts (BlenderTimer)}</p>
 					<p>[Object compared to] vs Jupiter, Ball, Solar system, Sphere, {image artists: Daniel Roberts (BlenderTimer), Daniel Roberts (BlenderTimer), Daniel Roberts (BlenderTimer)}</p>
 					<p>[Object compared to] vs Ladybug, Adult, Beetle, Coccinellidae, Ladybeetle, Ladybird, {image artists: Daniel Roberts (BlenderTimer)}</p>
+					<p>[Object compared to] vs Lego Car 01, Vehicle, {image artists: Daniel Roberts (BlenderTimer), Daniel Roberts (BlenderTimer), Daniel Roberts (BlenderTimer)}</p>
 					<p>[Object compared to] vs Lego Stud, Brick, Bump, {image artists: Daniel Roberts (BlenderTimer)}</p>
 					<p>[Object compared to] vs Makemake, Ball, Small, Solar system, Sphere, {image artists: Daniel Roberts (BlenderTimer), Daniel Roberts (BlenderTimer), Daniel Roberts (BlenderTimer)}</p>
 					<p>[Object compared to] vs Maple Leaf (Generic), Leaves, {image artists: Daniel Roberts (BlenderTimer)}</p>
@@ -268,7 +270,7 @@
 				</div>
 			</div>
 		</div>
-		<p id="version">Tool version: 0.1.2</p>
+		<p id="version">Tool version: 0.1.3</p>
 	</body>
 </html>
 <style>
@@ -899,7 +901,7 @@ body {
 }
 
 .object-angles {
-	width: calc(100% - 30px);
+	width: calc(100% - 120px);
 	margin: 0px;
 	display: block;
 	float: left;
@@ -920,11 +922,24 @@ body {
 	background: #303030FF;
 }
 
+.object-move {
+	display: block;
+	float: left;
+	height: 30px;
+	width: 30px;
+	background: #1E1E1E00;
+	border-radius: 20px;
+	cursor: pointer;
+	transition: 0.3s;
+}
+
+.object-move:hover {
+	background: #303030FF;
+}
+
 .object-info {
 	display: block;
-	float: right;
-	position: relative;
-	right: 32px;
+	float: left;
 	height: 30px;
 	width: 30px;
 	background: #1E1E1E00;
@@ -939,12 +954,11 @@ body {
 
 .object-remove {
 	display: block;
-	float: right;
+	float: left;
 	height: 30px;
 	width: 30px;
 	background: #1E1E1E00;
 	border-radius: 20px;
-	margin-top: -30px;
 	cursor: pointer;
 	transition: 0.3s;
 }
@@ -1409,15 +1423,13 @@ body {
 	var svgFormBTN = document.getElementById('svg-form-btn');
 	var requestFormBTN = document.getElementById('request-form-btn');
     var objsCompare = [];
-    var currentObjects = 0;
     var selCompareObj = "";
     var selCompareObjID = 0;
     var compareTools = document.getElementById('compare-tools');
+    var compareObjects = document.getElementById('compare-objects');
     var compareDisplay = document.getElementById('compare-display');
     var compareCanvas = document.getElementById('compare-canvas');
     var canvasShadow = document.getElementById('canvas-shadow');
-    var noObjects = document.getElementById('no-objects');
-    var objectsShowing = false;
     var compareZoom = 10000;
     var CompareZoomAuto = true;
     var cMouse = false;
@@ -1518,7 +1530,7 @@ body {
     		addObjectGlow.style.transition = "1s";
     		addObjectFlash();
     		setInterval(function() {
-    			if (objectsShowing == false) {
+    			if (objsCompare.length < 1) {
     				addObjectFlash();
     			}
     		},3000);
@@ -1878,231 +1890,276 @@ body {
 		setTimeout(function() {addObjectPopupDiv.style.display = "none"; popupBackground.style.display = "none"}, 500);
 	}
 
+	function redrawObjsCompareList() {
+		while (compareObjects.firstChild) {
+    		compareObjects.removeChild(compareObjects.lastChild);
+  		}
+  		if (objsCompare.length < 1) {
+			var no = document.createElement('p')
+  			no.id = "no-objects";
+  			no.innerHTML = "No objects.";
+  			compareObjects.appendChild(no);
+		}
+		for (var i=0; i < objsCompare.length; i++) {
+			// Object Base
+    		var objDiv = document.createElement("div");
+    		objDiv.id = objsCompare[i].name + "-base";
+			objDiv.classList.add("object");
+			// Object Name
+			var objName = document.createElement("h1");
+			objName.innerHTML = objects[objsCompare[i].id].name;
+			objName.id = objsCompare[i].name;
+			objName.title = objects[objsCompare[i].id].name;
+			objName.style.userSelect = "none";
+			objName.addEventListener("click", function(event) {
+				var element = event.target || event.srcElement;
+				selCompareObj = element.id;
+				selCompareObjID = element.id.substring(element.id.indexOf("-") + 1,element.id.length) - 1;
+				if (objsCompare[element.id.substring(element.id.indexOf("-") + 1,element.id.length) - 1].selected == false) {
+					objsCompare[element.id.substring(element.id.indexOf("-") + 1,element.id.length) - 1].selected = true;
+				}
+				else {
+					objsCompare[element.id.substring(element.id.indexOf("-") + 1,element.id.length) - 1].selected = false;
+				}
+				selectObject()
+			});
+			// Object Controls
+			var objControls = document.createElement("div");
+    		objControls.id = objsCompare[i].name + "-controls";
+			objControls.classList.add("object-controls");
+			// Object Angles
+			var objAngles = document.createElement("div");
+    		objAngles.id = objsCompare[i].name + "-angles";
+			objAngles.classList.add("object-angles");
+			// Object Move Up
+			var objMoveUp = document.createElement("img");
+			objMoveUp.src = "../static-0/files/images/compare-up.png";
+			objMoveUp.id = objsCompare[i].name + "-moveup";
+			objMoveUp.classList.add("object-move");
+			objMoveUp.title = "Move Up";
+			objMoveUp.addEventListener("click", function(event) {
+				var element = event.target || event.srcElement;
+				moveUp(element.id.substring(element.id.indexOf("-") + 1,element.id.indexOf("-moveup")) - 1);
+			});
+			// Object Move Down
+			var objMoveDown = document.createElement("img");
+			objMoveDown.src = "../static-0/files/images/compare-down.png";
+			objMoveDown.id = objsCompare[i].name + "-movedown";
+			objMoveDown.classList.add("object-move");
+			objMoveDown.title = "Move Down";
+			objMoveDown.addEventListener("click", function(event) {
+				var element = event.target || event.srcElement;
+				moveDown(element.id.substring(element.id.indexOf("-") + 1,element.id.indexOf("-movedown")) - 1);
+			});
+			// Object Info
+			var objInfo = document.createElement("img");
+			objInfo.src = "../static-0/files/images/object-info.png";
+			objInfo.id = objsCompare[i].name + "-info";
+			objInfo.classList.add("object-info");
+			objInfo.title = "More Info";
+			objInfo.addEventListener("click", function(event) {
+				var element = event.target || event.srcElement;
+				objectInfoPopup(objsCompare[element.id.substring(element.id.indexOf("-") + 1,element.id.indexOf("-info")) - 1].id);
+			});
+			// Object Remove
+			var objRemove = document.createElement("img");
+			objRemove.src = "../static-0/files/images/close-x2.png";
+			objRemove.id = objsCompare[i].name + "-remove";
+			objRemove.classList.add("object-remove");
+			objRemove.title = "Remove";
+			objRemove.addEventListener("click", function(event) {
+				var element = event.target || event.srcElement;
+				objsCompare.splice(element.id.substring(element.id.indexOf("-") + 1,element.id.indexOf("-remove")) - 1, 1);
+				for (i=0; i < objsCompare.length; i++) {
+					objsCompare[i].name = "object-" + (i + 1);
+				}
+				redrawObjsCompareList();
+				drawComparison()
+			});
+			// Side Image
+			if (objects[objsCompare[i].id].hasSideImage == true) {
+				var objSide = document.createElement("img");
+				objSide.src = "./compare-size/images/" + objects[objsCompare[i].id].category1 + "/" + objects[objsCompare[i].id].category2 + "/" + objects[objsCompare[i].id].category3 + "/" + objects[objsCompare[i].id].sideImage + ".svg";
+				objSide.id = objsCompare[i].name + "-sideImage";
+				objSide.classList.add("object-image");
+				objSide.width = objects[objsCompare[i].id].length * compareZoom;
+				objSide.style.display = "none";
+				objDiv.appendChild(objSide);
+				// Object S
+				var objS = document.createElement("img");
+				objS.src = "../static-0/files/images/compare-side.png";
+				objS.id = objsCompare[i].name + "-s";
+				objS.classList.add("object-angle");
+				objS.title = "Side";
+				if (objsCompare[i].angle == 0) {
+					objS.style.background = "#303030FF";
+				}
+				objS.addEventListener("click", function(event) {
+					var element = event.target || event.srcElement;
+					if (objects[document.getElementById(element.id.substring(0,element.id.indexOf("-s")) + "-id").textContent].hasFrontImage == true) {
+						document.getElementById(element.id.substring(0,element.id.indexOf("-s")) + "-f").style.background = null;
+					};
+					if (objects[document.getElementById(element.id.substring(0,element.id.indexOf("-s")) + "-id").textContent].hasTopImage == true) {
+						document.getElementById(element.id.substring(0,element.id.indexOf("-s")) + "-t").style.background = null;
+					};
+					element.style.background = "#303030FF";
+					objsCompare[element.id.substring(element.id.indexOf("-") + 1,element.id.indexOf("-s")) - 1].angle = 0;
+					drawComparison()
+				});
+				objAngles.appendChild(objS);
+			};
+			// Front Image
+			if (objects[objsCompare[i].id].hasFrontImage == true) {
+				var objFront = document.createElement("img");
+				objFront.src = "./compare-size/images/" + objects[objsCompare[i].id].category1 + "/" + objects[objsCompare[i].id].category2 + "/" + objects[objsCompare[i].id].category3 + "/" + objects[objsCompare[i].id].frontImage + ".svg";
+				objFront.id = objsCompare[i].name + "-frontImage";
+				objFront.classList.add("object-image");
+				objFront.width = objects[objsCompare[i].id].width * compareZoom;
+				objFront.style.display = "none";
+				objDiv.appendChild(objFront);
+				// Object F
+				var objF = document.createElement("img");
+				objF.src = "../static-0/files/images/compare-front.png";
+				objF.id = objsCompare[i].name + "-f";
+				objF.classList.add("object-angle");
+				objF.title = "Front";
+				if (objsCompare[i].angle == 1) {
+					objF.style.background = "#303030FF";
+				}
+				objF.addEventListener("click", function(event) {
+					var element = event.target || event.srcElement;
+					if (objects[document.getElementById(element.id.substring(0,element.id.indexOf("-f")) + "-id").textContent].hasSideImage == true) {
+						document.getElementById(element.id.substring(0,element.id.indexOf("-f")) + "-s").style.background = null;
+					};
+					if (objects[document.getElementById(element.id.substring(0,element.id.indexOf("-f")) + "-id").textContent].hasTopImage == true) {
+						document.getElementById(element.id.substring(0,element.id.indexOf("-f")) + "-t").style.background = null;
+					};
+					element.style.background = "#303030FF";
+					objsCompare[element.id.substring(element.id.indexOf("-") + 1,element.id.indexOf("-f")) - 1].angle = 1;
+					drawComparison()
+				});
+				objAngles.appendChild(objF);
+			};
+			// Top Image
+			if (objects[objsCompare[i].id].hasTopImage == true) {
+				var objTop = document.createElement("img");
+				objTop.src = "./compare-size/images/" + objects[objsCompare[i].id].category1 + "/" + objects[objsCompare[i].id].category2 + "/" + objects[objsCompare[i].id].category3 + "/" + objects[objsCompare[i].id].topImage + ".svg";
+				objTop.id = objsCompare[i].name + "-topImage";
+				objTop.classList.add("object-image");
+				objTop.width = objects[objsCompare[i].id].length * compareZoom;
+				objTop.style.display = "none";
+				objDiv.appendChild(objTop);
+				// Object T
+				var objT = document.createElement("img");
+				objT.src = "../static-0/files/images/compare-top.png";
+				objT.id = objsCompare[i].name + "-t";
+				objT.classList.add("object-angle");
+				objT.title = "Top";
+				if (objsCompare[i].angle == 2) {
+					objT.style.background = "#303030FF";
+				}
+				objT.addEventListener("click", function(event) {
+					var element = event.target || event.srcElement;
+					if (objects[document.getElementById(element.id.substring(0,element.id.indexOf("-t")) + "-id").textContent].hasSideImage == true) {
+						document.getElementById(element.id.substring(0,element.id.indexOf("-t")) + "-s").style.background = null;
+					};
+					if (objects[document.getElementById(element.id.substring(0,element.id.indexOf("-t")) + "-id").textContent].hasFrontImage == true) {
+						document.getElementById(element.id.substring(0,element.id.indexOf("-t")) + "-f").style.background = null;
+					};
+					element.style.background = "#303030FF";
+					objsCompare[element.id.substring(element.id.indexOf("-") + 1,element.id.indexOf("-t")) - 1].angle = 2;
+					drawComparison()
+				});
+				objAngles.appendChild(objT);
+			};
+			// Object Position
+			var objPosition = document.createElement("div");
+    		objPosition.id = objsCompare[i].name + "-position";
+			objPosition.classList.add("object-position");
+			// Object X
+			var objXTitle = document.createElement('p');
+			objXTitle.innerHTML = "X: ";
+			var objX = document.createElement("input");
+			objX.type = "number"
+			objX.id = objsCompare[i].name + "-x";
+			objX.classList.add("object-x");
+			objX.title = "X position (px)";
+			objX.value = 0;
+			objX.addEventListener("input", function(event) {
+				var element = event.target || event.srcElement;
+				objsCompare[element.id.substring(element.id.indexOf("-") + 1,element.id.indexOf("-x")) - 1].x = element.value;
+				objsCompare[element.id.substring(element.id.indexOf("-") + 1,element.id.indexOf("-x")) - 1].userModified = true;
+				drawComparison()
+			});
+			objPosition.appendChild(objXTitle);
+			objPosition.appendChild(objX);
+			// Object Y
+			var objYTitle = document.createElement('p');
+			objYTitle.innerHTML = "Y: ";
+			var objY = document.createElement("input");
+			objY.type = "number"
+			objY.id = objsCompare[i].name + "-y";
+			objY.classList.add("object-y");
+			objY.title = "Y position (px)";
+			objY.value = 0;
+			objY.addEventListener("input", function(event) {
+				var element = event.target || event.srcElement;
+				objsCompare[element.id.substring(element.id.indexOf("-") + 1,element.id.indexOf("-y")) - 1].y = element.value;
+				objsCompare[element.id.substring(element.id.indexOf("-") + 1,element.id.indexOf("-y")) - 1].userModified = true;
+				drawComparison()
+			});
+			objPosition.appendChild(objYTitle);
+			objPosition.appendChild(objY);
+			// Object ID
+			var objID = document.createElement("p");
+			objID.innerHTML = objsCompare[i].id.toString();
+			objID.style.display = "none";
+			objID.id = objsCompare[i].name + "-id";
+			objDiv.appendChild(objName);
+			objDiv.appendChild(objID);
+			objDiv.appendChild(objControls);
+			objControls.appendChild(objAngles);
+			objControls.appendChild(objMoveUp);
+			objControls.appendChild(objMoveDown);
+			objControls.appendChild(objInfo);
+			objControls.appendChild(objRemove);
+			objControls.appendChild(objPosition);
+			document.getElementById("compare-objects").appendChild(objDiv);
+		}
+	}
+
     function addObject(objectID, redraw) {
-    	objsCompare.push({name:"object-" + (objsCompare.length + 1).toString(),id:objectID,removed:false,selected:false,angle:objects[objectID].defaultAngle,x:0,y:0,width:objects[objectID].length * compareZoom,height:objects[objectID].height * compareZoom,offsetX:0,offsetY:0,new:true,userModified:false});
-    	// Object Base
-    	var objDiv = document.createElement("div");
-    	objDiv.id = objsCompare[objsCompare.length - 1].name + "-base";
-		objDiv.classList.add("object");
-		// Object Name
-		var objName = document.createElement("h1");
-		objName.innerHTML = objects[objectID].name;
-		objName.id = objsCompare[objsCompare.length - 1].name;
-		objName.title = objects[objectID].name;
-		objName.style.userSelect = "none";
-		objName.addEventListener("click", function(event) {
-			var element = event.target || event.srcElement;
-			selCompareObj = element.id;
-			selCompareObjID = element.id.substring(element.id.indexOf("-") + 1,element.id.length) - 1;
-			if (objsCompare[element.id.substring(element.id.indexOf("-") + 1,element.id.length) - 1].selected == false) {
-				objsCompare[element.id.substring(element.id.indexOf("-") + 1,element.id.length) - 1].selected = true;
-			}
-			else {
-				objsCompare[element.id.substring(element.id.indexOf("-") + 1,element.id.length) - 1].selected = false;
-			}
-			selectObject()
-		});
-		// Object Controls
-		var objControls = document.createElement("div");
-    	objControls.id = objsCompare[objsCompare.length - 1].name + "-controls";
-		objControls.classList.add("object-controls");
-		// Object Angles
-		var objAngles = document.createElement("div");
-    	objAngles.id = objsCompare[objsCompare.length - 1].name + "-angles";
-		objAngles.classList.add("object-angles");
-		// Object Info
-		var objInfo = document.createElement("img");
-		objInfo.src = "../static-0/files/images/object-info.png";
-		objInfo.id = objsCompare[objsCompare.length - 1].name + "-info";
-		objInfo.classList.add("object-info");
-		objInfo.title = "More Info";
-		objInfo.addEventListener("click", function(event) {
-			var element = event.target || event.srcElement;
-			objectInfoPopup(objsCompare[element.id.substring(element.id.indexOf("-") + 1,element.id.indexOf("-info")) - 1].id);
-		});
-		// Object Remove
-		var objRemove = document.createElement("img");
-		objRemove.src = "../static-0/files/images/close-x2.png";
-		objRemove.id = objsCompare[objsCompare.length - 1].name + "-remove";
-		objRemove.classList.add("object-remove");
-		objRemove.title = "Remove";
-		objRemove.addEventListener("click", function(event) {
-			var element = event.target || event.srcElement;
-			document.getElementById(element.id.substring(0,element.id.indexOf("-remove")) + "-base").remove();
-			objsCompare[element.id.substring(element.id.indexOf("-") + 1,element.id.indexOf("-remove")) - 1].selected = false;
-			objsCompare[element.id.substring(element.id.indexOf("-") + 1,element.id.indexOf("-remove")) - 1].removed = true;
-			objsCompare[element.id.substring(element.id.indexOf("-") + 1,element.id.indexOf("-remove")) - 1].width = 0;
-			objsCompare[element.id.substring(element.id.indexOf("-") + 1,element.id.indexOf("-remove")) - 1].height = 0;
-			objsCompare[element.id.substring(element.id.indexOf("-") + 1,element.id.indexOf("-remove")) - 1].x = 0;
-			objsCompare[element.id.substring(element.id.indexOf("-") + 1,element.id.indexOf("-remove")) - 1].y = 0;
-			currentObjects -= 1;
-			if (currentObjects > 0) {
-				noObjects.style.display = "none";
-				objectsShowing = true;
-			}
-			else {
-				noObjects.style.display = "block";
-				objectsShowing = false;
-			}
-			drawComparison()
-		});
-		// Side Image
-		if (objects[objectID].hasSideImage == true) {
-			var objSide = document.createElement("img");
-			objSide.src = "./compare-size/images/" + objects[objectID].category1 + "/" + objects[objectID].category2 + "/" + objects[objectID].category3 + "/" + objects[objectID].sideImage + ".svg";
-			objSide.id = objsCompare[objsCompare.length - 1].name + "-sideImage";
-			objSide.classList.add("object-image");
-			objSide.width = objects[objectID].length * compareZoom;
-			objSide.style.display = "none";
-			objDiv.appendChild(objSide);
-			// Object S
-			var objS = document.createElement("img");
-			objS.src = "../static-0/files/images/compare-side.png";
-			objS.id = objsCompare[objsCompare.length - 1].name + "-s";
-			objS.classList.add("object-angle");
-			objS.title = "Side";
-			if (objsCompare[objsCompare.length - 1].angle == 0) {
-				objS.style.background = "#303030FF";
-			}
-			objS.addEventListener("click", function(event) {
-				var element = event.target || event.srcElement;
-				if (objects[document.getElementById(element.id.substring(0,element.id.indexOf("-s")) + "-id").textContent].hasFrontImage == true) {
-					document.getElementById(element.id.substring(0,element.id.indexOf("-s")) + "-f").style.background = null;
-				};
-				if (objects[document.getElementById(element.id.substring(0,element.id.indexOf("-s")) + "-id").textContent].hasTopImage == true) {
-					document.getElementById(element.id.substring(0,element.id.indexOf("-s")) + "-t").style.background = null;
-				};
-				element.style.background = "#303030FF";
-				objsCompare[element.id.substring(element.id.indexOf("-") + 1,element.id.indexOf("-s")) - 1].angle = 0;
-				drawComparison()
-			});
-			objAngles.appendChild(objS);
-		};
-		// Front Image
-		if (objects[objectID].hasFrontImage == true) {
-			var objFront = document.createElement("img");
-			objFront.src = "./compare-size/images/" + objects[objectID].category1 + "/" + objects[objectID].category2 + "/" + objects[objectID].category3 + "/" + objects[objectID].frontImage + ".svg";
-			objFront.id = objsCompare[objsCompare.length - 1].name + "-frontImage";
-			objFront.classList.add("object-image");
-			objFront.width = objects[objectID].width * compareZoom;
-			objFront.style.display = "none";
-			objDiv.appendChild(objFront);
-			// Object F
-			var objF = document.createElement("img");
-			objF.src = "../static-0/files/images/compare-front.png";
-			objF.id = objsCompare[objsCompare.length - 1].name + "-f";
-			objF.classList.add("object-angle");
-			objF.title = "Front";
-			if (objsCompare[objsCompare.length - 1].angle == 1) {
-				objF.style.background = "#303030FF";
-			}
-			objF.addEventListener("click", function(event) {
-				var element = event.target || event.srcElement;
-				if (objects[document.getElementById(element.id.substring(0,element.id.indexOf("-f")) + "-id").textContent].hasSideImage == true) {
-					document.getElementById(element.id.substring(0,element.id.indexOf("-f")) + "-s").style.background = null;
-				};
-				if (objects[document.getElementById(element.id.substring(0,element.id.indexOf("-f")) + "-id").textContent].hasTopImage == true) {
-					document.getElementById(element.id.substring(0,element.id.indexOf("-f")) + "-t").style.background = null;
-				};
-				element.style.background = "#303030FF";
-				objsCompare[element.id.substring(element.id.indexOf("-") + 1,element.id.indexOf("-f")) - 1].angle = 1;
-				drawComparison()
-			});
-			objAngles.appendChild(objF);
-		};
-		// Top Image
-		if (objects[objectID].hasTopImage == true) {
-			var objTop = document.createElement("img");
-			objTop.src = "./compare-size/images/" + objects[objectID].category1 + "/" + objects[objectID].category2 + "/" + objects[objectID].category3 + "/" + objects[objectID].topImage + ".svg";
-			objTop.id = objsCompare[objsCompare.length - 1].name + "-topImage";
-			objTop.classList.add("object-image");
-			objTop.width = objects[objectID].length * compareZoom;
-			objTop.style.display = "none";
-			objDiv.appendChild(objTop);
-			// Object T
-			var objT = document.createElement("img");
-			objT.src = "../static-0/files/images/compare-top.png";
-			objT.id = objsCompare[objsCompare.length - 1].name + "-t";
-			objT.classList.add("object-angle");
-			objT.title = "Top";
-			if (objsCompare[objsCompare.length - 1].angle == 2) {
-				objT.style.background = "#303030FF";
-			}
-			objT.addEventListener("click", function(event) {
-				var element = event.target || event.srcElement;
-				if (objects[document.getElementById(element.id.substring(0,element.id.indexOf("-t")) + "-id").textContent].hasSideImage == true) {
-					document.getElementById(element.id.substring(0,element.id.indexOf("-t")) + "-s").style.background = null;
-				};
-				if (objects[document.getElementById(element.id.substring(0,element.id.indexOf("-t")) + "-id").textContent].hasFrontImage == true) {
-					document.getElementById(element.id.substring(0,element.id.indexOf("-t")) + "-f").style.background = null;
-				};
-				element.style.background = "#303030FF";
-				objsCompare[element.id.substring(element.id.indexOf("-") + 1,element.id.indexOf("-t")) - 1].angle = 2;
-				drawComparison()
-			});
-			objAngles.appendChild(objT);
-		};
-		// Object Position
-		var objPosition = document.createElement("div");
-    	objPosition.id = objsCompare[objsCompare.length - 1].name + "-position";
-		objPosition.classList.add("object-position");
-		// Object X
-		var objXTitle = document.createElement('p');
-		objXTitle.innerHTML = "X: ";
-		var objX = document.createElement("input");
-		objX.type = "number"
-		objX.id = objsCompare[objsCompare.length - 1].name + "-x";
-		objX.classList.add("object-x");
-		objX.title = "X position (px)";
-		objX.value = 0;
-		objX.addEventListener("input", function(event) {
-			var element = event.target || event.srcElement;
-			objsCompare[element.id.substring(element.id.indexOf("-") + 1,element.id.indexOf("-x")) - 1].x = element.value;
-			objsCompare[element.id.substring(element.id.indexOf("-") + 1,element.id.indexOf("-x")) - 1].userModified = true;
-			drawComparison()
-		});
-		objPosition.appendChild(objXTitle);
-		objPosition.appendChild(objX);
-		// Object Y
-		var objYTitle = document.createElement('p');
-		objYTitle.innerHTML = "Y: ";
-		var objY = document.createElement("input");
-		objY.type = "number"
-		objY.id = objsCompare[objsCompare.length - 1].name + "-y";
-		objY.classList.add("object-y");
-		objY.title = "Y position (px)";
-		objY.value = 0;
-		objY.addEventListener("input", function(event) {
-			var element = event.target || event.srcElement;
-			objsCompare[element.id.substring(element.id.indexOf("-") + 1,element.id.indexOf("-y")) - 1].y = element.value;
-			objsCompare[element.id.substring(element.id.indexOf("-") + 1,element.id.indexOf("-y")) - 1].userModified = true;
-			drawComparison()
-		});
-		objPosition.appendChild(objYTitle);
-		objPosition.appendChild(objY);
-		// Object ID
-		var objID = document.createElement("p");
-		objID.innerHTML = objectID.toString();
-		objID.style.display = "none";
-		objID.id = objsCompare[objsCompare.length - 1].name + "-id";
-		objDiv.appendChild(objName);
-		objDiv.appendChild(objID);
-		objDiv.appendChild(objControls);
-		objControls.appendChild(objAngles);
-		objControls.appendChild(objInfo);
-		objControls.appendChild(objRemove);
-		objControls.appendChild(objPosition);
-		document.getElementById("compare-objects").appendChild(objDiv);
-		currentObjects += 1;
+    	objsCompare.push({name:"object-" + (objsCompare.length + 1).toString(),id:objectID,selected:false,angle:objects[objectID].defaultAngle,x:0,y:0,width:objects[objectID].length * compareZoom,height:objects[objectID].height * compareZoom,offsetX:0,offsetY:0,new:true,userModified:false});
+    	redrawObjsCompareList();
 		popupClose();
-		noObjects.style.display = "none";
-		objectsShowing = true;
 		if (!(redraw == false)) {
 			setTimeout(function() {drawComparison()},100);
 			setTimeout(function() {drawComparison()},500);
 			setTimeout(function() {drawComparison()},1000);
 			setTimeout(function() {drawComparison()},2000);
 		}
+    }
+
+    function moveUp(id) {
+    	objsCompare.splice(id - 1, 0, objsCompare[id]);
+    	objsCompare.splice(id + 1, 1);
+    	for (i=0; i < objsCompare.length; i++) {
+			objsCompare[i].name = "object-" + (i + 1);
+		}
+ 		redrawObjsCompareList();
+ 		drawComparison();
+    	console.log(objsCompare);
+    }
+
+    function moveDown(id) {
+    	objsCompare.splice(id + 2, 0, objsCompare[id]);
+    	objsCompare.splice(id, 1);
+    	for (i=0; i < objsCompare.length; i++) {
+			objsCompare[i].name = "object-" + (i + 1);
+		}
+ 		redrawObjsCompareList();
+ 		drawComparison();
+    	console.log(objsCompare);
     }
 
     function selectObject() {
@@ -2112,12 +2169,10 @@ body {
     	//	deselectAll = true;
     	//};
     	for (var i=0; i < objsCompare.length; i++) {
-    		if (objsCompare[i].removed !== true) {
-    			document.getElementById(objsCompare[i].name + "-base").style.border = "0px solid #88DDFF";
-  				document.getElementById(objsCompare[i].name + "-base").style.boxShadow = "none";
-  				document.getElementById(objsCompare[i].name + "-base").style.margin = "0px 5px 5px 5px";
-  				document.getElementById(objsCompare[i].name).style.padding = "5px";
-  			}
+    		document.getElementById(objsCompare[i].name + "-base").style.border = "0px solid #88DDFF";
+  			document.getElementById(objsCompare[i].name + "-base").style.boxShadow = "none";
+  			document.getElementById(objsCompare[i].name + "-base").style.margin = "0px 5px 5px 5px";
+  			document.getElementById(objsCompare[i].name).style.padding = "5px";
   			if (shiftKey == false) {
   				if (i !== selCompareObjID) {
 					objsCompare[i].selected = false;
@@ -2125,15 +2180,13 @@ body {
   			}
 		}
 		for (var i=0; i < objsCompare.length; i++) {
-    		if (objsCompare[i].removed !== true) {
-    			if (objsCompare[i].selected == true) {
-    				document.getElementById(objsCompare[i].name + "-base").style.border = "2px solid #88DDFF";
-    				document.getElementById(objsCompare[i].name + "-base").style.boxShadow = "0px 0px 5px #55EEFFAA";
-    				document.getElementById(objsCompare[i].name + "-base").style.margin = "0px 3px 3px 3px";
-    				document.getElementById(objsCompare[i].name).style.padding = "3px 5px 5px 5px";
-    				canvasShadow.style.cursor = "move";
-    			}
-  			}
+    		if (objsCompare[i].selected == true) {
+    			document.getElementById(objsCompare[i].name + "-base").style.border = "2px solid #88DDFF";
+    			document.getElementById(objsCompare[i].name + "-base").style.boxShadow = "0px 0px 5px #55EEFFAA";
+    			document.getElementById(objsCompare[i].name + "-base").style.margin = "0px 3px 3px 3px";
+    			document.getElementById(objsCompare[i].name).style.padding = "3px 5px 5px 5px";
+    			canvasShadow.style.cursor = "move";
+    		}
 		}
 		//if (deselectAll == false) {
 		//	document.getElementById(selCompareObj + "-base").style.border = "2px solid #88DDFF";
@@ -2148,24 +2201,20 @@ body {
 
     function selectAll() {
     	for (var i=0; i < objsCompare.length; i++) {
-    		if (objsCompare[i].removed !== true) {
-    			document.getElementById(objsCompare[i].name + "-base").style.border = "0px solid #88DDFF";
-  				document.getElementById(objsCompare[i].name + "-base").style.boxShadow = "none";
-  				document.getElementById(objsCompare[i].name + "-base").style.margin = "0px 5px 5px 5px";
-  				document.getElementById(objsCompare[i].name).style.padding = "5px";
-  				objsCompare[i].selected = true;
-  			}
+    		document.getElementById(objsCompare[i].name + "-base").style.border = "0px solid #88DDFF";
+  			document.getElementById(objsCompare[i].name + "-base").style.boxShadow = "none";
+  			document.getElementById(objsCompare[i].name + "-base").style.margin = "0px 5px 5px 5px";
+  			document.getElementById(objsCompare[i].name).style.padding = "5px";
+  			objsCompare[i].selected = true;
 		}
 		for (var i=0; i < objsCompare.length; i++) {
-    		if (objsCompare[i].removed !== true) {
-    			if (objsCompare[i].selected == true) {
-    				document.getElementById(objsCompare[i].name + "-base").style.border = "2px solid #88DDFF";
-    				document.getElementById(objsCompare[i].name + "-base").style.boxShadow = "0px 0px 5px #55EEFFAA";
-    				document.getElementById(objsCompare[i].name + "-base").style.margin = "0px 3px 3px 3px";
-    				document.getElementById(objsCompare[i].name).style.padding = "3px 5px 5px 5px";
-    				canvasShadow.style.cursor = "move";
-    			}
-  			}
+    		if (objsCompare[i].selected == true) {
+    			document.getElementById(objsCompare[i].name + "-base").style.border = "2px solid #88DDFF";
+    			document.getElementById(objsCompare[i].name + "-base").style.boxShadow = "0px 0px 5px #55EEFFAA";
+    			document.getElementById(objsCompare[i].name + "-base").style.margin = "0px 3px 3px 3px";
+    			document.getElementById(objsCompare[i].name).style.padding = "3px 5px 5px 5px";
+    			canvasShadow.style.cursor = "move";
+    		}
 		}
 		drawComparison();
     }
@@ -2173,12 +2222,10 @@ body {
     function deselectAll() {
     	canvasShadow.style.cursor = "default";
     	for (var i=0; i < objsCompare.length; i++) {
-    		if (objsCompare[i].removed !== true) {
-    			document.getElementById(objsCompare[i].name + "-base").style.border = "0px solid #88DDFF";
-  				document.getElementById(objsCompare[i].name + "-base").style.boxShadow = "none";
-  				document.getElementById(objsCompare[i].name + "-base").style.margin = "0px 5px 5px 5px";
-  				document.getElementById(objsCompare[i].name).style.padding = "5px";
-  			}
+    		document.getElementById(objsCompare[i].name + "-base").style.border = "0px solid #88DDFF";
+  			document.getElementById(objsCompare[i].name + "-base").style.boxShadow = "none";
+  			document.getElementById(objsCompare[i].name + "-base").style.margin = "0px 5px 5px 5px";
+  			document.getElementById(objsCompare[i].name).style.padding = "5px";
   			objsCompare[i].selected = false;
 		}
 		drawComparison();
@@ -2195,15 +2242,13 @@ body {
 	    	}
 	    	var objs = 0;
 	    	for (var i=0; i < objsCompare.length; i++) {
-	    		if (objsCompare[i].removed == false) {
-	    			if (objs == 0) {
-	    				url += "?" + objects[objsCompare[i].id].originalObjectID;
-	    			}
-	    			else {
-	    				url += "&" + objects[objsCompare[i].id].originalObjectID;
-	    			}
-	    			objs += 1;
+	    		if (objs == 0) {
+	    			url += "?" + objects[objsCompare[i].id].originalObjectID;
 	    		}
+	    		else {
+	    			url += "&" + objects[objsCompare[i].id].originalObjectID;
+	    		}
+	    		objs += 1;
 	    	}
 	    	window.history.pushState("draw-comparison", document.title, url);
     	}
@@ -2227,43 +2272,41 @@ body {
     			var modified = 0;
     			var allModified = false;
     			for (var i=0; i < objsCompare.length; i++) {
-    				if (objsCompare[i].removed == false) {
-    					visibleObjs += 1;
-    					if (objsCompare[i].angle == 2) {
-    						if (objects[objsCompare[i].id].length > largestX) {
-								largestX = objects[objsCompare[i].id].length;
-    						}
-    						if (objects[objsCompare[i].id].width > largestY) {
-								largestY = objects[objsCompare[i].id].width;
-    						}
-    						widths += objects[objsCompare[i].id].length;
-    						heights += objects[objsCompare[i].id].width;
+    				visibleObjs += 1;
+    				if (objsCompare[i].angle == 2) {
+    					if (objects[objsCompare[i].id].length > largestX) {
+							largestX = objects[objsCompare[i].id].length;
     					}
-    					else if (objsCompare[i].angle == 1) {
-    						if (objects[objsCompare[i].id].width > largestX) {
-								largestX = objects[objsCompare[i].id].width;
-    						}
-    						if (objects[objsCompare[i].id].height > largestY) {
-								largestY = objects[objsCompare[i].id].height;
-    						}
-    						widths += objects[objsCompare[i].id].width;
-    						heights += objects[objsCompare[i].id].height;
+    					if (objects[objsCompare[i].id].width > largestY) {
+							largestY = objects[objsCompare[i].id].width;
     					}
-    					else {
-    						if (objects[objsCompare[i].id].length > largestX) {
-								largestX = objects[objsCompare[i].id].length;
-    						}
-    						if (objects[objsCompare[i].id].height > largestY) {
-								largestY = objects[objsCompare[i].id].height;
-    						}
-    						widths += objects[objsCompare[i].id].length;
-    						heights += objects[objsCompare[i].id].height;
-    					}
-    					if (objsCompare[i].userModified == true) {
-    						modified += 1;
-    					}
-    					objs += 1;
+    					widths += objects[objsCompare[i].id].length;
+    					heights += objects[objsCompare[i].id].width;
     				}
+    				else if (objsCompare[i].angle == 1) {
+    					if (objects[objsCompare[i].id].width > largestX) {
+							largestX = objects[objsCompare[i].id].width;
+    					}
+    					if (objects[objsCompare[i].id].height > largestY) {
+							largestY = objects[objsCompare[i].id].height;
+    					}
+    					widths += objects[objsCompare[i].id].width;
+    					heights += objects[objsCompare[i].id].height;
+    				}
+    				else {
+    					if (objects[objsCompare[i].id].length > largestX) {
+							largestX = objects[objsCompare[i].id].length;
+    					}
+    					if (objects[objsCompare[i].id].height > largestY) {
+							largestY = objects[objsCompare[i].id].height;
+    					}
+    					widths += objects[objsCompare[i].id].length;
+    					heights += objects[objsCompare[i].id].height;
+    				}
+    				if (objsCompare[i].userModified == true) {
+    					modified += 1;
+    				}
+    				objs += 1;
     			};
     			if (modified == objs) {
     				allModified = true;
@@ -2291,100 +2334,98 @@ body {
     			setZoomRange();
     		}
     		for (var i=0; i < objsCompare.length; i++) {
-    			if (objsCompare[i].removed !== true) {
-    				if (objects[objsCompare[i].id].hasSideImage == true) {
-    					document.getElementById(objsCompare[i].name + "-sideImage").width = objects[objsCompare[i].id].length * compareZoom;
-    				};
-    				if (objects[objsCompare[i].id].hasFrontImage == true) {
-    					document.getElementById(objsCompare[i].name + "-frontImage").width = objects[objsCompare[i].id].width * compareZoom;
-    				};
-    				if (objects[objsCompare[i].id].hasTopImage == true) {
-    					document.getElementById(objsCompare[i].name + "-topImage").width = objects[objsCompare[i].id].length * compareZoom;
-    				};
-    				if (objsCompare[i].angle == 2) {
-    					objsCompare[i].width = objects[objsCompare[i].id].length * compareZoom;
-    					objsCompare[i].height = objects[objsCompare[i].id].width * compareZoom;
-    					if (firstAlign == true) {
-    						align = objects[objsCompare[i].id].topImageAlign;
-    						firstAlign = false;
-    					}
+    			if (objects[objsCompare[i].id].hasSideImage == true) {
+    				document.getElementById(objsCompare[i].name + "-sideImage").width = objects[objsCompare[i].id].length * compareZoom;
+    			};
+    			if (objects[objsCompare[i].id].hasFrontImage == true) {
+    				document.getElementById(objsCompare[i].name + "-frontImage").width = objects[objsCompare[i].id].width * compareZoom;
+    			};
+    			if (objects[objsCompare[i].id].hasTopImage == true) {
+    				document.getElementById(objsCompare[i].name + "-topImage").width = objects[objsCompare[i].id].length * compareZoom;
+    			};
+    			if (objsCompare[i].angle == 2) {
+    				objsCompare[i].width = objects[objsCompare[i].id].length * compareZoom;
+    				objsCompare[i].height = objects[objsCompare[i].id].width * compareZoom;
+    				if (firstAlign == true) {
+    					align = objects[objsCompare[i].id].topImageAlign;
+    					firstAlign = false;
     				}
-    				else if (objsCompare[i].angle == 1) {
-    					objsCompare[i].width = objects[objsCompare[i].id].width * compareZoom;
-    					objsCompare[i].height = objects[objsCompare[i].id].height * compareZoom;
-    					if (firstAlign == true) {
-    						align = objects[objsCompare[i].id].frontImageAlign;
-    						firstAlign = false;
-    					}
-    				}
-    				else {
-    					objsCompare[i].width = objects[objsCompare[i].id].length * compareZoom;
-    					objsCompare[i].height = objects[objsCompare[i].id].height * compareZoom;
-    					if (firstAlign == true) {
-    						align = objects[objsCompare[i].id].sideImageAlign;
-    						firstAlign = false;
-    					}
-    				}
-    				if (objsCompare[i].new == true) {
-    					objsCompare[i].x = parseInt((compareCanvas.offsetWidth / 2) - (objsCompare[i].width / 2));
-    					objsCompare[i].y = parseInt((compareCanvas.offsetHeight / 2) - (objsCompare[i].height / 2));
-						objsCompare[i].new = false;
-    				}
-    				if (allModified == false) {
-    					var farthestX = 0;
-    					for (var i2=0; i2 < i; i2++) {
-    						if (objsCompare[i2].userModified == false && objsCompare[i2].removed == false && (objsCompare[i2].x + objsCompare[i2].width) > farthestX) {
-    							farthestX = objsCompare[i2].x + objsCompare[i2].width;
-    						}
-    					}
-    					var totalWidth = 0;
-    					for (var i2=0; i2 < objsCompare.length; i2++) {
-    						if (objsCompare[i2].userModified == false && objsCompare[i2].removed == false) {
-    							totalWidth += objsCompare[i2].width;
-    						}
-    					}
-    					if (objsCompare[i].userModified == false && objsCompare[i].removed == false) {
-    						if (farthestX > 0) {
-    							objsCompare[i].x = parseInt(farthestX);
-    						}
-    						else if (visibleObjs == 1) {
-    							objsCompare[i].x = parseInt((compareCanvas.offsetWidth / 2) - (objsCompare[i].width / 2));
-    						}
-    						else {
-    							objsCompare[i].x = parseInt((compareCanvas.offsetWidth / 2) - (totalWidth / 2));
-    						}
-    						if (align == "bottom") {
-    							objsCompare[i].y = parseInt(compareCanvas.offsetHeight - objsCompare[i].height + 1);
-    						}
-    						else if (align == "top") {
-    							objsCompare[i].y = 0;
-    						}
-    						else {
-    							objsCompare[i].y = parseInt((compareCanvas.offsetHeight / 2) - (objsCompare[i].height / 2));
-    						}
-    					}
-    				}
-    				if (objsCompare[i].angle == 2) {
-    					c.drawImage(document.getElementById(objsCompare[i].name + "-topImage"), objsCompare[i].x, objsCompare[i].y, objects[objsCompare[i].id].length * compareZoom, objects[objsCompare[i].id].width * compareZoom);
-    				}
-    				else if (objsCompare[i].angle == 1) {
-    					c.drawImage(document.getElementById(objsCompare[i].name + "-frontImage"), objsCompare[i].x, objsCompare[i].y, objects[objsCompare[i].id].width * compareZoom, objects[objsCompare[i].id].height * compareZoom);
-    				}
-    				else {
-    					c.drawImage(document.getElementById(objsCompare[i].name + "-sideImage"), objsCompare[i].x, objsCompare[i].y, objects[objsCompare[i].id].length * compareZoom, objects[objsCompare[i].id].height * compareZoom);
-    					//else {
-    					//	c.fillStyle = "#101010";
-    					//	c.fillRect(0, 0, compareCanvas.offsetWidth, compareCanvas.offsetHeight);
-						//	c.font = "bold 20px monospace";
-						//	c.fillStyle = "#555555";
-						//	c.textBaseline = 'middle';
-						//	c.textAlign = 'center';
-						//	c.fillText("Loading object...", compareCanvas.offsetWidth / 2, compareCanvas.offsetHeight / 2);
-    					//}
-    				}
-    				document.getElementById(objsCompare[i].name + "-x").value = objsCompare[i].x;
-					document.getElementById(objsCompare[i].name + "-y").value = objsCompare[i].y;
     			}
+    			else if (objsCompare[i].angle == 1) {
+    				objsCompare[i].width = objects[objsCompare[i].id].width * compareZoom;
+    				objsCompare[i].height = objects[objsCompare[i].id].height * compareZoom;
+    				if (firstAlign == true) {
+    					align = objects[objsCompare[i].id].frontImageAlign;
+    					firstAlign = false;
+    				}
+    			}
+    			else {
+    				objsCompare[i].width = objects[objsCompare[i].id].length * compareZoom;
+    				objsCompare[i].height = objects[objsCompare[i].id].height * compareZoom;
+    				if (firstAlign == true) {
+    					align = objects[objsCompare[i].id].sideImageAlign;
+    					firstAlign = false;
+    				}
+    			}
+    			if (objsCompare[i].new == true) {
+    				objsCompare[i].x = parseInt((compareCanvas.offsetWidth / 2) - (objsCompare[i].width / 2));
+    				objsCompare[i].y = parseInt((compareCanvas.offsetHeight / 2) - (objsCompare[i].height / 2));
+					objsCompare[i].new = false;
+    			}
+    			if (allModified == false) {
+    				var farthestX = 0;
+    				for (var i2=0; i2 < i; i2++) {
+    					if (objsCompare[i2].userModified == false && (objsCompare[i2].x + objsCompare[i2].width) > farthestX) {
+    						farthestX = objsCompare[i2].x + objsCompare[i2].width;
+    					}
+    				}
+    				var totalWidth = 0;
+    				for (var i2=0; i2 < objsCompare.length; i2++) {
+    					if (objsCompare[i2].userModified == false) {
+    						totalWidth += objsCompare[i2].width;
+    					}
+    				}
+    				if (objsCompare[i].userModified == false) {
+    					if (farthestX > 0) {
+    						objsCompare[i].x = parseInt(farthestX);
+    					}
+    					else if (visibleObjs == 1) {
+    						objsCompare[i].x = parseInt((compareCanvas.offsetWidth / 2) - (objsCompare[i].width / 2));
+    					}
+    					else {
+    						objsCompare[i].x = parseInt((compareCanvas.offsetWidth / 2) - (totalWidth / 2));
+    					}
+    					if (align == "bottom") {
+    						objsCompare[i].y = parseInt(compareCanvas.offsetHeight - objsCompare[i].height + 1);
+    					}
+    					else if (align == "top") {
+    						objsCompare[i].y = 0;
+    					}
+    					else {
+    						objsCompare[i].y = parseInt((compareCanvas.offsetHeight / 2) - (objsCompare[i].height / 2));
+    					}
+    				}
+    			}
+    			if (objsCompare[i].angle == 2) {
+    				c.drawImage(document.getElementById(objsCompare[i].name + "-topImage"), objsCompare[i].x, objsCompare[i].y, objects[objsCompare[i].id].length * compareZoom, objects[objsCompare[i].id].width * compareZoom);
+    			}
+    			else if (objsCompare[i].angle == 1) {
+    				c.drawImage(document.getElementById(objsCompare[i].name + "-frontImage"), objsCompare[i].x, objsCompare[i].y, objects[objsCompare[i].id].width * compareZoom, objects[objsCompare[i].id].height * compareZoom);
+    			}
+    			else {
+    				c.drawImage(document.getElementById(objsCompare[i].name + "-sideImage"), objsCompare[i].x, objsCompare[i].y, objects[objsCompare[i].id].length * compareZoom, objects[objsCompare[i].id].height * compareZoom);
+    				//else {
+    				//	c.fillStyle = "#101010";
+    				//	c.fillRect(0, 0, compareCanvas.offsetWidth, compareCanvas.offsetHeight);
+					//	c.font = "bold 20px monospace";
+					//	c.fillStyle = "#555555";
+					//	c.textBaseline = 'middle';
+					//	c.textAlign = 'center';
+					//	c.fillText("Loading object...", compareCanvas.offsetWidth / 2, compareCanvas.offsetHeight / 2);
+    				//}
+    			}
+    			document.getElementById(objsCompare[i].name + "-x").value = objsCompare[i].x;
+				document.getElementById(objsCompare[i].name + "-y").value = objsCompare[i].y;
 			};
 			for (var i=0; i < objsCompare.length; i++) {
 				if (objsCompare[i].selected == true) {
@@ -2425,13 +2466,11 @@ body {
 			if (!window.location.toString().startsWith("file://")) {
 				var filename = "";
 				for (var obj=0; obj < objsCompare.length; obj++) {
-					if (objsCompare[obj].removed !== true) {
-						if (obj == 0) {
-							filename = objects[objsCompare[obj].id].name;
-						}
-						else {
-							filename += " compared to " + objects[objsCompare[obj].id].name;
-						}
+					if (obj == 0) {
+						filename = objects[objsCompare[obj].id].name;
+					}
+					else {
+						filename += " compared to " + objects[objsCompare[obj].id].name;
 					}
 				}
 				downloadImageBTN.href = compareCanvas.toDataURL("image/png").replace("image/png", "image/octet-stream");
@@ -2524,7 +2563,7 @@ body {
 
     function alignObject(type) {
 		for (var i=0; i < objsCompare.length; i++) {
-			if (objsCompare[i].selected == true && objsCompare[i].removed == false) {
+			if (objsCompare[i].selected == true) {
 				if (type == 'left') {
 					objsCompare[i].x = 0;
 				}
@@ -2844,6 +2883,7 @@ body {
     var searchMouseOver = false;
 
     function search(query, searchSort) {
+    	searchMouseOver = false;
     	if (query) {
     		searchBar.value = query;
     	}
@@ -2894,7 +2934,7 @@ body {
 						element.style.background = "#353535";
 						element.style.textShadow = "0px 0px 10px rgba(255,255,255,0.4)";
 						setSearchSelection('clear');
-						setTimeout(function() {searchMouseOver = true}, 10);
+						setTimeout(function() {searchMouseOver = true}, 1);
 					});
 					objName.addEventListener('mouseleave', function(event) {
 						var element = event.target || event.srcElement;
@@ -2903,7 +2943,7 @@ body {
 						element.style.background = null;
 						element.style.textShadow = null;
 						var i2 = 0;
-						searchMouseOver = false
+						searchMouseOver = false;
 						setTimeout(function() {setSearchSelection('redraw')}, 500);
 					});
 					var objDate = new Date(parseInt(searchObjects[i].lastModified.toString().substring(0, 4)), parseInt(searchObjects[i].lastModified.toString().substring(5, 7)) - 1, parseInt(searchObjects[i].lastModified.toString().substring(8, 10)));
@@ -3027,6 +3067,25 @@ body {
 					objName.addEventListener("click", function(event) {
 						var element = event.target || event.srcElement;
 						addObject(element.id.substring(element.id.indexOf("-") + 1,element.id.lastIndexOf("-")))
+					});
+					objName.addEventListener('mouseenter', function(event) {
+						var element = event.target || event.srcElement;
+						element.style.transition = "0s";
+						element.style.color = "#AAAAAA";
+						element.style.background = "#353535";
+						element.style.textShadow = "0px 0px 10px rgba(255,255,255,0.4)";
+						setSearchSelection('clear');
+						setTimeout(function() {searchMouseOver = true}, 1);
+					});
+					objName.addEventListener('mouseleave', function(event) {
+						var element = event.target || event.srcElement;
+						element.style.transition = "0.3s";
+						element.style.color = null;
+						element.style.background = null;
+						element.style.textShadow = null;
+						var i2 = 0;
+						searchMouseOver = false;
+						setTimeout(function() {setSearchSelection('redraw')}, 500);
 					});
 					var objDate = new Date(parseInt(searchObjects[i].lastModified.toString().substring(0, 4)), parseInt(searchObjects[i].lastModified.toString().substring(5, 7)) - 1, parseInt(searchObjects[i].lastModified.toString().substring(8, 10)));
 					if ((((Date.now() - objDate.getTime()) / 1000 / 60 / 60 / 24) < 7)) {

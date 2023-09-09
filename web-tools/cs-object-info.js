@@ -3192,6 +3192,62 @@ var objects = [
         dateAdded:"2023/09/08", // YYYY/MM/DD
         lastModified:"2023/09/08", // YYYY/MM/DD
     },
+    {
+        name:"Coronavirus",
+        defaultAngle: 1,
+        sideImage:"",
+        hasSideImage:false,
+        sideImageAlign:"bottom",
+        sideImageArtist: "",
+        sideImageDate:"", // YYYY/MM/DD
+        frontImage:"Coronavirus-front",
+        hasFrontImage:true,
+        frontImageAlign:"none",
+        frontImageArtist: "Daniel Roberts (BlenderTimer)",
+        frontImageDate:"2023/09/08", // YYYY/MM/DD
+        topImage:"",
+        hasTopImage:false,
+        topImageAlign:"none",
+        topImageArtist: "",
+        topImageDate:"", // YYYY/MM/DD
+        width:0.00000000008,
+        length:0.00000000008,
+        height:0.00000000008,
+        category1:"miscellaneous",
+        category2:"particles",
+        category3:"viruses",
+        tags:["covid", "19"], // don't include anything in categories or name
+        dateAdded:"2023/09/08", // YYYY/MM/DD
+        lastModified:"2023/09/08", // YYYY/MM/DD
+    },
+    {
+        name:"Lego Car 01",
+        defaultAngle: 0,
+        sideImage:"Lego_car_01-side",
+        hasSideImage:true,
+        sideImageAlign:"bottom",
+        sideImageArtist: "Daniel Roberts (BlenderTimer)",
+        sideImageDate:"2023/09/08", // YYYY/MM/DD
+        frontImage:"Lego_car_01-front",
+        hasFrontImage:true,
+        frontImageAlign:"bottom",
+        frontImageArtist: "Daniel Roberts (BlenderTimer)",
+        frontImageDate:"2023/09/08", // YYYY/MM/DD
+        topImage:"Lego_car_01-top",
+        hasTopImage:true,
+        topImageAlign:"none",
+        topImageArtist: "Daniel Roberts (BlenderTimer)",
+        topImageDate:"2023/09/08", // YYYY/MM/DD
+        width:0.000047,
+        length:0.000109,
+        height:0.000039,
+        category1:"miscellaneous",
+        category2:"toys",
+        category3:"lego",
+        tags:["vehicle"], // don't include anything in categories or name
+        dateAdded:"2023/09/08", // YYYY/MM/DD
+        lastModified:"2023/09/08", // YYYY/MM/DD
+    },
 ];
 
 //	———————— STEPS FOR UPDATING ————————
