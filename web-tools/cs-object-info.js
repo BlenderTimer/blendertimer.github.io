@@ -3223,17 +3223,17 @@ var objects = [
     {
         name:"Lego Car 01",
         defaultAngle: 0,
-        sideImage:"Lego_car_01-side",
+        sideImage:"Lego_Car_01-side",
         hasSideImage:true,
         sideImageAlign:"bottom",
         sideImageArtist: "Daniel Roberts (BlenderTimer)",
         sideImageDate:"2023/09/08", // YYYY/MM/DD
-        frontImage:"Lego_car_01-front",
+        frontImage:"Lego_Car_01-front",
         hasFrontImage:true,
         frontImageAlign:"bottom",
         frontImageArtist: "Daniel Roberts (BlenderTimer)",
         frontImageDate:"2023/09/08", // YYYY/MM/DD
-        topImage:"Lego_car_01-top",
+        topImage:"Lego_Car_01-top",
         hasTopImage:true,
         topImageAlign:"none",
         topImageArtist: "Daniel Roberts (BlenderTimer)",
@@ -3303,6 +3303,90 @@ var objects = [
         tags:["seven summits", "7 summits", "climb", "africa"], // don't include anything in categories or name
         dateAdded:"2023/09/09", // YYYY/MM/DD
         lastModified:"2023/09/09", // YYYY/MM/DD
+    },
+    {
+        name:"Starlink Satellite",
+        defaultAngle: 1,
+        sideImage:"Starlink_Satellite-side",
+        hasSideImage:true,
+        sideImageAlign:"none",
+        sideImageArtist: "Daniel Roberts (BlenderTimer)",
+        sideImageDate:"2023/09/10", // YYYY/MM/DD
+        frontImage:"Starlink_Satellite-front",
+        hasFrontImage:true,
+        frontImageAlign:"none",
+        frontImageArtist: "Daniel Roberts (BlenderTimer)",
+        frontImageDate:"2023/09/10", // YYYY/MM/DD
+        topImage:"Starlink_Satellite-top",
+        hasTopImage:true,
+        topImageAlign:"none",
+        topImageArtist: "Daniel Roberts (BlenderTimer)",
+        topImageDate:"2023/09/10", // YYYY/MM/DD
+        width:0.00286,
+        length:0.00145,
+        height:0.00743,
+        category1:"technology",
+        category2:"modern",
+        category3:"satellites",
+        tags:["spacex"], // don't include anything in categories or name
+        dateAdded:"2023/09/10", // YYYY/MM/DD
+        lastModified:"2023/09/10", // YYYY/MM/DD
+    },
+    {
+        name:"Maple Seed",
+        defaultAngle: 2,
+        sideImage:"",
+        hasSideImage:false,
+        sideImageAlign:"none",
+        sideImageArtist: "",
+        sideImageDate:"", // YYYY/MM/DD
+        frontImage:"",
+        hasFrontImage:false,
+        frontImageAlign:"none",
+        frontImageArtist: "",
+        frontImageDate:"", // YYYY/MM/DD
+        topImage:"Maple_Seed-top",
+        hasTopImage:true,
+        topImageAlign:"none",
+        topImageArtist: "Daniel Roberts (BlenderTimer)",
+        topImageDate:"2023/09/10", // YYYY/MM/DD
+        width:0.00001,
+        length:0.00003,
+        height:0.000005,
+        category1:"nature",
+        category2:"plants",
+        category3:"seeds",
+        tags:["tree"], // don't include anything in categories or name
+        dateAdded:"2023/09/10", // YYYY/MM/DD
+        lastModified:"2023/09/10", // YYYY/MM/DD
+    },
+    {
+        name:"Lego Minifigure",
+        defaultAngle: 1,
+        sideImage:"",
+        hasSideImage:false,
+        sideImageAlign:"bottom",
+        sideImageArtist: "",
+        sideImageDate:"", // YYYY/MM/DD
+        frontImage:"Lego_Minifigure-front",
+        hasFrontImage:true,
+        frontImageAlign:"bottom",
+        frontImageArtist: "Daniel Roberts (BlenderTimer)",
+        frontImageDate:"2023/09/10", // YYYY/MM/DD
+        topImage:"",
+        hasTopImage:false,
+        topImageAlign:"none",
+        topImageArtist: "",
+        topImageDate:"", // YYYY/MM/DD
+        width:0.000025,
+        length:0.0000115,
+        height:0.000041,
+        category1:"miscellaneous",
+        category2:"toys",
+        category3:"lego",
+        tags:["person", "man"], // don't include anything in categories or name
+        dateAdded:"2023/09/10", // YYYY/MM/DD
+        lastModified:"2023/09/10", // YYYY/MM/DD
     },
 ];
 
