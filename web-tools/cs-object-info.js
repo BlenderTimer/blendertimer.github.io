@@ -3248,6 +3248,62 @@ var objects = [
         dateAdded:"2023/09/08", // YYYY/MM/DD
         lastModified:"2023/09/08", // YYYY/MM/DD
     },
+    {
+        name:"Planck Length (measurement)",
+        defaultAngle: 1,
+        sideImage:"",
+        hasSideImage:false,
+        sideImageAlign:"none",
+        sideImageArtist: "",
+        sideImageDate:"", // YYYY/MM/DD
+        frontImage:"Planck_Length-vertical",
+        hasFrontImage:true,
+        frontImageAlign:"none",
+        frontImageArtist: "Daniel Roberts (BlenderTimer)",
+        frontImageDate:"2023/09/09", // YYYY/MM/DD
+        topImage:"Planck_Length-horizontal",
+        hasTopImage:true,
+        topImageAlign:"none",
+        topImageArtist: "Daniel Roberts (BlenderTimer)",
+        topImageDate:"2023/09/09", // YYYY/MM/DD
+        width:0.00000000000000000000000000000000000115,
+        length:0.000000000000000000000000000000000016,
+        height:0.000000000000000000000000000000000016,
+        category1:"miscellaneous",
+        category2:"non-objects",
+        category3:"measurements",
+        tags:["plank"], // don't include anything in categories or name
+        dateAdded:"2023/09/09", // YYYY/MM/DD
+        lastModified:"2023/09/09", // YYYY/MM/DD
+    },
+    {
+        name:"Mount Kilimanjaro (Tanzania)",
+        defaultAngle: 1,
+        sideImage:"",
+        hasSideImage:false,
+        sideImageAlign:"bottom",
+        sideImageArtist: "",
+        sideImageDate:"", // YYYY/MM/DD
+        frontImage:"Mount_Kilimanjaro_Tanzania-front",
+        hasFrontImage:true,
+        frontImageAlign:"bottom",
+        frontImageArtist: "Daniel Roberts (BlenderTimer)",
+        frontImageDate:"2023/09/09", // YYYY/MM/DD
+        topImage:"",
+        hasTopImage:false,
+        topImageAlign:"none",
+        topImageArtist: "",
+        topImageDate:"", // YYYY/MM/DD
+        width:30.872,
+        length:30.872,
+        height:5.895,
+        category1:"nature",
+        category2:"geography",
+        category3:"mountains",
+        tags:["seven summits", "7 summits", "climb", "africa"], // don't include anything in categories or name
+        dateAdded:"2023/09/09", // YYYY/MM/DD
+        lastModified:"2023/09/09", // YYYY/MM/DD
+    },
 ];
 
 //	———————— STEPS FOR UPDATING ————————
