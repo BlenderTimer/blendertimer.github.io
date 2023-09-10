@@ -1270,7 +1270,7 @@ body {
 }
 
 #contributor-list {
-	height: 50vh;
+	height: 60vh;
 	min-height: 300px;
 	width: 100%;
 	border-radius: 5px;
@@ -1279,13 +1279,13 @@ body {
 	transition: 0.3s;
 	padding: 0px;
 	box-sizing: border-box;
-	box-shadow: 0px 0px 20px rgba(0,0,0,0.5) inset;
+	box-shadow: 0px 0px 20px rgba(0,0,0,0.5) inset, 0px 0px 20px rgba(255,255,255,0.05);
 	overflow-x: hidden;
 	overflow-y: auto;
 }
 
 #contributor-list::-webkit-scrollbar {
-	background: #303030;
+	background: #202020;
 	border-radius: 0px 5px 5px 0px;
 	width: 10px;
 }
@@ -1294,7 +1294,7 @@ body {
 	background: #555555;
 	border-radius: 5px;
 	height: 20px;
-	border: 3px solid #303030;
+	border: 3px solid #202020;
 }
 
 #contributor-list::-webkit-scrollbar-thumb:hover {
@@ -1322,7 +1322,7 @@ body {
 	color: #F5F5F5;
 	display: block;
 	box-sizing: border-box;
-	padding: 5px 10px;
+	padding: 5px 80px 5px 10px;
 	margin: 0px;
 	text-align: center;
 	font-size: 12pt;
@@ -1334,20 +1334,77 @@ body {
 	background: #3377EE;
 }
 
+.c-badge {
+	float: right;
+	margin: 0px 30px -50px 0px;
+	filter: drop-shadow(0px 5px 5px #0005);
+	pointer-events: none;
+	position: relative;
+	z-index: 999;
+}
+
+.cont-cont-div {
+	width: 100%;
+	display: block;
+	position: relative;
+	margin: 10px 0px 0px 0px;
+}
+
+.cont-cont-div h3 {
+	font-size: 30px !important;
+	font-family: monospace;
+	text-align: center !important;
+	background: #181818;
+	text-shadow: 0px 0px 10px #FFF3;
+	box-shadow: 0px 0px 20px #000A inset, 0px 0px 10px #FFFFFF0A;
+	width: 200px;
+	display: block;
+	margin: 0px auto !important;
+	border-radius: 5px;
+}
+
+.cont-cont-div h4 {
+	font-size: 15px;
+	font-family: monospace;
+	text-align: center;
+	color: #E0E0E0;
+	border-top: 2px solid #0009;
+	text-shadow: 0px 0px 10px #FFF1;
+	box-shadow: 0px 0px 20px #000A inset, 0px 0px 10px #FFFFFF0A;
+	margin: 0px auto;
+	padding: 3px;
+	background: #252525;
+	width: 140px;
+	border-radius: 0px 0px 5px 5px;
+}
+
 .cont-stats {
 	width: 100%;
 	height: auto;
 	margin: 0px;
-	padding: 3px 0px;
-	display: block;
+	padding: 10px 5px 5px 5px;
+	display: flex;
+	box-sizing: border-box;
+	position: relative;
+	flex-wrap: wrap;
+	justify-content: space-between;
 }
 
 .cont-stats-2 {
-	width: 100%;
+	width: calc(50% - 10px);
 	height: auto;
-	margin: 0px;
-	padding: 0px 0px;
+	margin: 5px;
+	padding: 5px 5px;
+	box-sizing: border-box;
 	display: block;
+	background: #202020;
+	box-shadow: 0px 0px 20px #0009 inset;
+	border-radius: 5px;
+	transition: 0.3s;
+}
+
+.cont-div:hover .cont-stats-2 {
+	background: #303030;
 }
 
 .cont-stats b {
@@ -1500,6 +1557,20 @@ body {
     			}
     		}
     	}
+    	else if (event.key == "z") {
+    		if (event.type == "keydown") {
+    			if (event.ctrlKey == true) {
+    				//undo()
+    			}
+    		}
+    	}
+    	else if (event.key == "y") {
+    		if (event.type == "keydown") {
+    			if (event.ctrlKey == true) {
+    				//redo()
+    			}
+    		}
+    	}
     }
     document.addEventListener("mousemove", getCursorPosition);
     canvasShadow.addEventListener("mousedown", canvasMouseDown);
@@ -1527,6 +1598,8 @@ body {
 			cxbc.stroke();
     		document.getElementById('loading').style.display = "none";
     		webTool.style.transition = "1s"
+    		objsCompareHistory.push([]);
+    		zoomHistory.push({level:"Infinity", auto:true});
     		addObjectGlow.style.transition = "1s";
     		addObjectFlash();
     		setInterval(function() {
@@ -1534,6 +1607,7 @@ body {
     				addObjectFlash();
     			}
     		},3000);
+    		determineLayout();
     	}, 100);
     	drawComparison()
 	}
@@ -1555,6 +1629,12 @@ body {
 			webTool.style.marginLeft = "-40px";
 			svgFormBTN.style.width = "100%";
 			requestFormBTN.style.width = "100%";
+			for (var i=0; i < document.getElementsByClassName('cont-stats-2').length; i++) {
+				document.getElementsByClassName('cont-stats-2')[i].style.width = "100%";
+			}
+			for (var i=0; i < document.querySelectorAll('.cont-div h1').length; i++) {
+				document.querySelectorAll('.cont-div h1')[i].style.padding = "5px 80px 5px 10px";
+			}
         }
     	else if (window.innerWidth < 700) {
             title.style.marginTop = "50px";
@@ -1572,6 +1652,12 @@ body {
 			webTool.style.marginLeft = "-40px";
 			svgFormBTN.style.width = "100%";
 			requestFormBTN.style.width = "100%";
+			for (var i=0; i < document.getElementsByClassName('cont-stats-2').length; i++) {
+				document.getElementsByClassName('cont-stats-2')[i].style.width = "100%";
+			}
+			for (var i=0; i < document.querySelectorAll('.cont-div h1').length; i++) {
+				document.querySelectorAll('.cont-div h1')[i].style.padding = "5px 80px 5px 10px";
+			}
         }
         else if (window.innerWidth < 900) {
             title.style.marginTop = "50px";
@@ -1589,6 +1675,12 @@ body {
 			webTool.style.marginLeft = "0px";
 			svgFormBTN.style.width = "48%";
 			requestFormBTN.style.width = "48%";
+			for (var i=0; i < document.getElementsByClassName('cont-stats-2').length; i++) {
+				document.getElementsByClassName('cont-stats-2')[i].style.width = "100%";
+			}
+			for (var i=0; i < document.querySelectorAll('.cont-div h1').length; i++) {
+				document.querySelectorAll('.cont-div h1')[i].style.padding = "5px 10px 5px 10px";
+			}
         }
         else {
             title.style.marginTop = "10px";
@@ -1606,6 +1698,12 @@ body {
 			webTool.style.marginLeft = "0px";
 			svgFormBTN.style.width = "48%";
 			requestFormBTN.style.width = "48%";
+			for (var i=0; i < document.getElementsByClassName('cont-stats-2').length; i++) {
+				document.getElementsByClassName('cont-stats-2')[i].style.width = "calc(50% - 10px)";
+			}
+			for (var i=0; i < document.querySelectorAll('.cont-div h1').length; i++) {
+				document.querySelectorAll('.cont-div h1')[i].style.padding = "5px 10px 5px 10px";
+			}
         }
         addObjectGlow.style.width = addObjectBTN.offsetWidth + "px";
         addObjectGlow.style.height = "40px";
@@ -1921,7 +2019,7 @@ body {
 				else {
 					objsCompare[element.id.substring(element.id.indexOf("-") + 1,element.id.length) - 1].selected = false;
 				}
-				selectObject()
+				selectObject();
 			});
 			// Object Controls
 			var objControls = document.createElement("div");
@@ -1975,6 +2073,7 @@ body {
 				}
 				redrawObjsCompareList();
 				drawComparison()
+				addHistory();
 			});
 			// Side Image
 			if (objects[objsCompare[i].id].hasSideImage == true) {
@@ -2004,7 +2103,7 @@ body {
 					};
 					element.style.background = "#303030FF";
 					objsCompare[element.id.substring(element.id.indexOf("-") + 1,element.id.indexOf("-s")) - 1].angle = 0;
-					drawComparison()
+					drawComparison();
 				});
 				objAngles.appendChild(objS);
 			};
@@ -2036,7 +2135,7 @@ body {
 					};
 					element.style.background = "#303030FF";
 					objsCompare[element.id.substring(element.id.indexOf("-") + 1,element.id.indexOf("-f")) - 1].angle = 1;
-					drawComparison()
+					drawComparison();
 				});
 				objAngles.appendChild(objF);
 			};
@@ -2068,7 +2167,7 @@ body {
 					};
 					element.style.background = "#303030FF";
 					objsCompare[element.id.substring(element.id.indexOf("-") + 1,element.id.indexOf("-t")) - 1].angle = 2;
-					drawComparison()
+					drawComparison();
 				});
 				objAngles.appendChild(objT);
 			};
@@ -2089,7 +2188,8 @@ body {
 				var element = event.target || event.srcElement;
 				objsCompare[element.id.substring(element.id.indexOf("-") + 1,element.id.indexOf("-x")) - 1].x = element.value;
 				objsCompare[element.id.substring(element.id.indexOf("-") + 1,element.id.indexOf("-x")) - 1].userModified = true;
-				drawComparison()
+				drawComparison();
+				addHistory();
 			});
 			objPosition.appendChild(objXTitle);
 			objPosition.appendChild(objX);
@@ -2106,7 +2206,8 @@ body {
 				var element = event.target || event.srcElement;
 				objsCompare[element.id.substring(element.id.indexOf("-") + 1,element.id.indexOf("-y")) - 1].y = element.value;
 				objsCompare[element.id.substring(element.id.indexOf("-") + 1,element.id.indexOf("-y")) - 1].userModified = true;
-				drawComparison()
+				drawComparison();
+				addHistory();
 			});
 			objPosition.appendChild(objYTitle);
 			objPosition.appendChild(objY);
@@ -2130,6 +2231,7 @@ body {
 
     function addObject(objectID, redraw) {
     	objsCompare.push({name:"object-" + (objsCompare.length + 1).toString(),id:objectID,selected:false,angle:objects[objectID].defaultAngle,x:0,y:0,width:objects[objectID].length * compareZoom,height:objects[objectID].height * compareZoom,offsetX:0,offsetY:0,new:true,userModified:false});
+    	addHistory();
     	redrawObjsCompareList();
 		popupClose();
 		if (!(redraw == false)) {
@@ -2140,6 +2242,110 @@ body {
 		}
     }
 
+    var historyPosition = 0;
+    var objsCompareHistory = [];
+    var zoomHistory = [];
+    var justSetZoom = false;
+    var justSetCompare = false;
+
+    function addHistory() {
+    	justSetCompare = true;
+		justSetZoom = true;
+    }
+
+    function addCompareHistory() {
+    	while (objsCompareHistory.length > (historyPosition + 1)) {
+    		objsCompareHistory.pop();
+    	}
+    	var list = [];
+    	for (var i=0; i < objsCompare.length; i++) {
+    		list.push({});
+    		for (var x in objsCompare[i]) {
+    			list[i][x] = objsCompare[i][x];
+    		}
+    	}
+    	objsCompareHistory.push(list);
+    	historyPosition += 1
+   	}
+
+   	function addZoomHistory() {
+    	while (zoomHistory.length > (historyPosition + 1)) {
+    		zoomHistory.pop();
+    	}
+    	if (compareZoom == "Infinity") {
+    		zoomHistory.push({level:"Infinity", auto:CompareZoomAuto});
+    	}
+    	else {
+    		zoomHistory.push({level:compareZoom, auto:CompareZoomAuto});
+    	}
+   	}
+
+   	function redrawZoom() {
+   		if (compareZoom == "Infinity") {
+    		zoomLevel.value = 1;
+    	}
+    	else {
+    		zoomLevel.value = compareZoom;
+    	}
+   		if (CompareZoomAuto == true) {
+    		zoomLevel.disabled = "disabled";
+    		zoomLevelRange.disabled = "disabled";
+    		document.getElementById('zoom-plus').style.background = "#25252500";
+    		document.getElementById('zoom-minus').style.background = "#25252500";
+    		manualZoom.innerHTML = "Enable Manual Offset";
+    		manualZoom.style.background = null;
+    		manualZoom.style.boxShadow = null;
+    		manualZoom.style.color = null;
+    	}
+    	else {
+    		zoomLevel.disabled = null;
+    		zoomLevelRange.disabled = null;
+    		document.getElementById('zoom-plus').style.background = null;
+    		document.getElementById('zoom-minus').style.background = null;
+    		manualZoom.innerHTML = "Disable Manual Offset";
+    		manualZoom.style.background = "#101010";
+    		manualZoom.style.boxShadow = "0px 0px 10px rgba(0,0,0,0.5) inset";
+    		manualZoom.style.color = "#555555";
+    	}
+    	setZoomRange();
+   	}
+
+    function undo() {
+    	if (objsCompareHistory.length > 0 && historyPosition > 0) {
+    		historyPosition -= 1;
+    		objsCompare = objsCompareHistory[historyPosition];
+    		zoomlevel = zoomHistory[historyPosition].level;
+    		CompareZoomAuto = zoomHistory[historyPosition].auto;
+    	}
+    	else {
+    		historyPosition = 0;
+    		objsCompare = objsCompareHistory[historyPosition];
+    		zoomlevel = zoomHistory[historyPosition].level;
+    		CompareZoomAuto = zoomHistory[historyPosition].auto;
+    	}
+    	redrawObjsCompareList();
+    	redrawZoom();
+    	drawComparison();
+    }
+
+    function redo() {
+    	if (objsCompareHistory.length > 0 && historyPosition < (objsCompareHistory.length - 1)) {
+    		historyPosition += 1;
+    		objsCompare = objsCompareHistory[historyPosition];
+    		zoomlevel = zoomHistory[historyPosition].level;
+    		CompareZoomAuto = zoomHistory[historyPosition].auto;
+    	}
+    	else {
+    		historyPosition = objsCompareHistory.length - 1;
+    		objsCompare = objsCompareHistory[historyPosition];
+    		zoomlevel = zoomHistory[historyPosition].level;
+    		CompareZoomAuto = zoomHistory[historyPosition].auto;
+    	}
+    	redrawObjsCompareList();
+    	redrawZoom();
+    	drawComparison();
+    }
+
     function moveUp(id) {
     	objsCompare.splice(id - 1, 0, objsCompare[id]);
     	objsCompare.splice(id + 1, 1);
@@ -2148,7 +2354,7 @@ body {
 		}
  		redrawObjsCompareList();
  		drawComparison();
-    	console.log(objsCompare);
+ 		addHistory();
     }
 
     function moveDown(id) {
@@ -2159,7 +2365,7 @@ body {
 		}
  		redrawObjsCompareList();
  		drawComparison();
-    	console.log(objsCompare);
+ 		addHistory();
     }
 
     function selectObject() {
@@ -2196,7 +2402,8 @@ body {
     	//	objsCompare[selCompareObjID].selected = true;
     	//	canvasShadow.style.cursor = "move";
 		//};
-		drawComparison()
+		drawComparison();
+		addHistory();
     }
 
     function selectAll() {
@@ -2254,7 +2461,6 @@ body {
     	}
     	var firstAlign = true;
     	var align = "none";
-    	//console.log("draw start");
     	var times = 0;
     	while (times < 2) {
     		compareCanvas.width = compareDisplay.offsetWidth;
@@ -2476,8 +2682,15 @@ body {
 				downloadImageBTN.href = compareCanvas.toDataURL("image/png").replace("image/png", "image/octet-stream");
 				downloadImageBTN.download = filename + ".png";
 			}
-			//console.log("draw end (Zoom: " + compareZoom.toString() + ")");
 			times += 1;
+    	}
+    	if (justSetCompare == true) {
+    		addCompareHistory();
+    		justSetCompare = false;
+    	}
+    	if (justSetZoom == true) {
+    		addZoomHistory();
+    		justSetZoom = false;
     	}
     }
 
@@ -2487,6 +2700,7 @@ body {
 
     var startX = 0;
     var startY = 0;
+    var objectJustMoved = false;
 
     function canvasMouseDown() {
     	cMouse = true;
@@ -2508,6 +2722,10 @@ body {
     	document.body.style.userSelect = "auto";
     	compareTools.style.pointerEvents = "auto";
     	navHome.style.pointerEvents = "auto";
+    	if (objectJustMoved == true) {
+    		addHistory();
+    	}
+    	objectJustMoved == false;
     }
 
     function canvasTap() {
@@ -2558,6 +2776,7 @@ body {
 					drawComparison();
 				}
 			};
+			objectJustMoved = true;
     	}
     }
 
@@ -2588,6 +2807,7 @@ body {
 			}
 		};
 		drawComparison();
+		addHistory();
     }
 
     function toggleManualZoom() {
@@ -2625,7 +2845,7 @@ body {
     	drawComparison();
     }
 
-    function setZoomRange() {
+    function setZoomRange(draw) {
     	if (!zoomLevel.value == 0) {
     		if ((zoomLevel.value / 10) >= 0.000001) {
     			zoomLevelRange.min = zoomLevel.value / 10;
@@ -2656,6 +2876,7 @@ body {
 			setZoomRange();
 			drawComparison()
     	}
+    	addHistory();
 	}
 
 	var searchCont = "";
@@ -2744,6 +2965,11 @@ body {
 		else {
 			contributors.sort((a, b) => (a.lastContributionDate < b.lastContributionDate) ? 1 : (a.lastContributionDate === b.lastContributionDate) ? ((a.contributions < b.contributions) ? 1 : -1) : -1);
 		}
+		var contByConts = contributors.filter(checkObjectCont);
+		contByConts.sort((a, b) => (a.contributions < b.contributions) ? 1 : (a.contributions === b.contributions) ? ((a.name > b.name) ? 1 : -1) : -1);
+		for (var i=0; i < contByConts.length; i++) {
+			contributors[contributors.indexOf(contByConts[i])].rank = i + 1;
+		}
 		for (var i=0; i < contributors.length; i++) {
 			if (document.getElementById("contributor-" + i.toString())) {
 				document.getElementById("contributor-" + i.toString()).remove()
@@ -2757,29 +2983,50 @@ body {
 				addObjectPopup();
 				search("artist:" + contributors[parseInt(element.classList[0].toString().substring(2, element.classList[0].toString().length))].name,"date");
 			});
+			var contBadge = document.createElement("img");
+	  		contBadge.classList.add("c-" + i.toString());
+	  		contBadge.classList.add("c-badge");
+	  		cont.appendChild(contBadge);
 	  		var contName = document.createElement("h1");
 	  		contName.innerHTML = contributors[i].name;
 	  		contName.classList.add("c-" + i.toString());
 	  		cont.appendChild(contName);
+	  		//Contributions
+	  		var contRankDiv = document.createElement("div");
+	  		contRankDiv.classList.add("c-" + i.toString());
+	  		contRankDiv.classList.add("cont-cont-div");
+	  		contRankDiv.style.pointerEvents = "none";
+	  		var contContsT = document.createElement("h4");
+	  		contContsT.classList.add("c-" + i.toString());
+	  		contContsT.innerHTML = "CONTRIBUTIONS";
+	  		contContsT.style.pointerEvents = "none";
+	  		var contConts = document.createElement("h3");
+	  		contConts.classList.add("c-" + i.toString());
+	  		contConts.innerHTML = contributors[i].contributions;
+	  		contConts.style.pointerEvents = "none";
+	  		contRankDiv.appendChild(contConts);
+	  		contRankDiv.appendChild(contContsT);
+	  		cont.appendChild(contRankDiv);
+	  		//Stats
 	  		var contStats = document.createElement("div");
 	  		contStats.classList.add("c-" + i.toString());
 	  		contStats.classList.add("cont-stats");
 	  		contStats.style.pointerEvents = "none";
-	  		//Contributions
+	  		//Rank
 	  		var contStats2 = document.createElement("div");
 	  		contStats2.classList.add("c-" + i.toString());
 	  		contStats2.classList.add("cont-stats-2");
 	  		contStats2.style.pointerEvents = "none";
-	  		var contContsT = document.createElement("b");
-	  		contContsT.classList.add("c-" + i.toString());
-	  		contContsT.innerHTML = "Contributions:";
-	  		contContsT.style.pointerEvents = "none";
-	  		var contConts = document.createElement("p");
-	  		contConts.classList.add("c-" + i.toString());
-	  		contConts.innerHTML = contributors[i].contributions;
-	  		contConts.style.pointerEvents = "none";
-	  		contStats2.appendChild(contContsT);
-	  		contStats2.appendChild(contConts);
+	  		var contRankT = document.createElement("b");
+	  		contRankT.classList.add("c-" + i.toString());
+	  		contRankT.innerHTML = "Rank by contributions:";
+	  		contRankT.style.pointerEvents = "none";
+	  		var contRank = document.createElement("p");
+	  		contRank.classList.add("c-" + i.toString());
+	  		contRank.innerHTML = "#" + contributors[i].rank;
+	  		contRank.style.pointerEvents = "none";
+	  		contStats2.appendChild(contRankT);
+	  		contStats2.appendChild(contRank);
 	  		contStats.appendChild(contStats2);
 	  		//Contributions
 	  		var contStats5 = document.createElement("div");
@@ -2823,42 +3070,52 @@ body {
 	  		if (contributors[i].contributions >= 1000) {
 	  			contLevel.innerHTML = "Legend (achieved at 1000 contributions)";
 	  			contNextLevel.innerHTML = "None (max level reached)";
+	  		contBadge.src = "../static-0/files/images/compare-contributorlevel-10.png";
 	  		}
 	  		else if (contributors[i].contributions >= 750) {
 	  			contLevel.innerHTML = "Incredible (achieved at 750 contributions)";
-	  			contNextLevel.innerHTML = "Legend (" + (1000 - contributors[i].contributions).toString() + " contributions left)";
+	  			contNextLevel.innerHTML = "Legend (1000 contributions, " + (1000 - contributors[i].contributions).toString() + " contributions left)";
+	  		contBadge.src = "../static-0/files/images/compare-contributorlevel-9.png";
 	  		}
 	  		else if (contributors[i].contributions >= 500) {
 	  			contLevel.innerHTML = "Outstanding (achieved at 500 contributions)";
-	  			contNextLevel.innerHTML = "Incredible (" + (750 - contributors[i].contributions).toString() + " contributions left)";
+	  			contNextLevel.innerHTML = "Incredible (750 contributions, " + (750 - contributors[i].contributions).toString() + " contributions left)";
+	  		contBadge.src = "../static-0/files/images/compare-contributorlevel-8.png";
 	  		}
 	  		else if (contributors[i].contributions >= 250) {
 	  			contLevel.innerHTML = "Amazing (achieved at 250 contributions)";
-	  			contNextLevel.innerHTML = "Outstanding (" + (500 - contributors[i].contributions).toString() + " contributions left)";
+	  			contNextLevel.innerHTML = "Outstanding (500 contributions, " + (500 - contributors[i].contributions).toString() + " contributions left)";
+	  		contBadge.src = "../static-0/files/images/compare-contributorlevel-7.png";
 	  		}
 	  		else if (contributors[i].contributions >= 100) {
 	  			contLevel.innerHTML = "Remarkable (achieved at 100 contributions)";
-	  			contNextLevel.innerHTML = "Amazing (" + (250 - contributors[i].contributions).toString() + " contributions left)";
+	  			contNextLevel.innerHTML = "Amazing (250 contributions, " + (250 - contributors[i].contributions).toString() + " contributions left)";
+	  			contBadge.src = "../static-0/files/images/compare-contributorlevel-6.png";
 	  		}
 	  		else if (contributors[i].contributions >= 75) {
 	  			contLevel.innerHTML = "Phenomenal (achieved at 75 contributions)";
-	  			contNextLevel.innerHTML = "Remarkable (" + (100 - contributors[i].contributions).toString() + " contributions left)";
+	  			contNextLevel.innerHTML = "Remarkable (100 contributions, " + (100 - contributors[i].contributions).toString() + " contributions left)";
+	  			contBadge.src = "../static-0/files/images/compare-contributorlevel-5.png";
 	  		}
 	  		else if (contributors[i].contributions >= 50) {
 	  			contLevel.innerHTML = "Super (achieved at 50 contributions)";
-	  			contNextLevel.innerHTML = "Phenomenal (" + (75 - contributors[i].contributions).toString() + " contributions left)";
+	  			contNextLevel.innerHTML = "Phenomenal (75 contributions, " + (75 - contributors[i].contributions).toString() + " contributions left)";
+	  			contBadge.src = "../static-0/files/images/compare-contributorlevel-4.png";
 	  		}
 	  		else if (contributors[i].contributions >= 25) {
 	  			contLevel.innerHTML = "Great (achieved at 25 contributions)";
-	  			contNextLevel.innerHTML = "Super (" + (50 - contributors[i].contributions).toString() + " contributions left)";
+	  			contNextLevel.innerHTML = "Super (50 contributions, " + (50 - contributors[i].contributions).toString() + " contributions left)";
+	  			contBadge.src = "../static-0/files/images/compare-contributorlevel-3.png";
 	  		}
 	  		else if (contributors[i].contributions >= 10) {
 	  			contLevel.innerHTML = "Better (achieved at 10 contributions)";
-	  			contNextLevel.innerHTML = "Great (" + (25 - contributors[i].contributions).toString() + " contributions left)";
+	  			contNextLevel.innerHTML = "Great (25 contributions, " + (25 - contributors[i].contributions).toString() + " contributions left)";
+	  			contBadge.src = "../static-0/files/images/compare-contributorlevel-2.png";
 	  		}
 	  		else {
 	  			contLevel.innerHTML = "Good (achieved at 1 contribution)";
-	  			contNextLevel.innerHTML = "Better (" + (10 - contributors[i].contributions).toString() + " contributions left)";
+	  			contNextLevel.innerHTML = "Better (10 contributions, " + (10 - contributors[i].contributions).toString() + " contributions left)";
+	  			contBadge.src = "../static-0/files/images/compare-contributorlevel-1.png";
 	  		}
 	  		contStats3.appendChild(contLevelT);
 	  		contStats3.appendChild(contLevel);
@@ -2869,6 +3126,7 @@ body {
 	  		cont.appendChild(contStats);
 	  		contList.appendChild(cont);
 		}
+		determineLayout();
 	}
 
     var searchObjects = [];
@@ -3054,7 +3312,6 @@ body {
   						searchObjects.push(objects[i]);
   						searchObjects[searchObjects.length - 1].objectID = i;
   						document.getElementById('no-search-results').style.display = "none";
-  						//console.log(objects[i].name + " | rel: " + objects[i].searchRelevance)
   					}
 				}
 				sortSearchObjects(true);
