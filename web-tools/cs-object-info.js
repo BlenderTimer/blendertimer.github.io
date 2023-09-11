@@ -3388,6 +3388,34 @@ var objects = [
         dateAdded:"2023/09/10", // YYYY/MM/DD
         lastModified:"2023/09/10", // YYYY/MM/DD
     },
+    {
+        name:"V236-15.0MW (Wind Turbine)",
+        defaultAngle: 1,
+        sideImage:"",
+        hasSideImage:false,
+        sideImageAlign:"bottom",
+        sideImageArtist: "",
+        sideImageDate:"", // YYYY/MM/DD
+        frontImage:"V236-15.0MW_Wind_Turbine-front",
+        hasFrontImage:true,
+        frontImageAlign:"bottom",
+        frontImageArtist: "Daniel Roberts (BlenderTimer)",
+        frontImageDate:"2023/09/10", // YYYY/MM/DD
+        topImage:"",
+        hasTopImage:false,
+        topImageAlign:"none",
+        topImageArtist: "",
+        topImageDate:"", // YYYY/MM/DD
+        width:0.236,
+        length:0.020,
+        height:0.360,
+        category1:"technology",
+        category2:"modern",
+        category3:"power-generators",
+        tags:["mill", "largest"], // don't include anything in categories or name
+        dateAdded:"2023/09/10", // YYYY/MM/DD
+        lastModified:"2023/09/10", // YYYY/MM/DD
+    },
 ];
 
 //	———————— STEPS FOR UPDATING ————————
