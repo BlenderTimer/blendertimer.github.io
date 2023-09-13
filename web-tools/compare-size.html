@@ -2928,7 +2928,7 @@ body {
 		var objsCont = objects.filter(checkObjectCont);
 		objsCont.sort((a, b) => (a.originalObjectID < b.originalObjectID) ? 1 : -1);
 		for (var i=0; i < objsCont.length; i++) {
-			loadingText.innerHTML = "Loading contributors " + Math.round(((i / (objectsCont.length - 1) / 4) * 100) + 0).toString() + "%";
+			loadingText.innerHTML = "Loading contributors " + Math.round(((i / (objsCont.length - 1) / 4) * 100) + 0).toString() + "%";
 			if (objsCont[i].sideImageArtist.toString().length > 0) {
 				if (!conts.includes(objsCont[i].sideImageArtist.toString())) {
 					conts.push(objsCont[i].sideImageArtist.toString());
@@ -2952,7 +2952,7 @@ body {
 			}
 		}
 		for (var i=0; i < objsCont.length; i++) {
-			loadingText.innerHTML = "Loading contributors " + Math.round(((i / (objectsCont.length - 1) / 4) * 100) + 25).toString() + "%";
+			loadingText.innerHTML = "Loading contributors " + Math.round(((i / (objsCont.length - 1) / 4) * 100) + 25).toString() + "%";
 			if (conts.indexOf(objsCont[i].sideImageArtist.toString()) > -1) {
 				contributors[conts.indexOf(objsCont[i].sideImageArtist.toString())].contributions += 1;
 				totalContributions += 1;
@@ -3002,11 +3002,11 @@ body {
 		var contByConts = contributors.filter(checkObjectCont);
 		contByConts.sort((a, b) => (a.contributions < b.contributions) ? 1 : (a.contributions === b.contributions) ? ((a.name > b.name) ? 1 : -1) : -1);
 		for (var i=0; i < contByConts.length; i++) {
-			loadingText.innerHTML = "Loading contributors " + Math.round(((i / (objectsCont.length - 1) / 4) * 100) + 50).toString() + "%";
+			loadingText.innerHTML = "Loading contributors " + Math.round(((i / (objsCont.length - 1) / 4) * 100) + 50).toString() + "%";
 			contributors[contributors.indexOf(contByConts[i])].rank = i + 1;
 		}
 		for (var i=0; i < contributors.length; i++) {
-			loadingText.innerHTML = "Loading contributors " + Math.round(((i / (objectsCont.length - 1) / 4) * 100) + 75).toString() + "%";
+			loadingText.innerHTML = "Loading contributors " + Math.round(((i / (objsCont.length - 1) / 4) * 100) + 75).toString() + "%";
 			if (document.getElementById("contributor-" + i.toString())) {
 				document.getElementById("contributor-" + i.toString()).remove()
 			}
