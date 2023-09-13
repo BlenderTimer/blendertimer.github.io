@@ -1869,9 +1869,9 @@ var objects = [
         width:4500,
         length:5500,
         height:4.881372,
-        category1:"space",
-        category2:"planets",
-        category3:"geography",
+        category1:"nature",
+        category2:"geography",
+        category3:"land",
         tags:["south pole"], // don't include anything in categories or name
         dateAdded:"2023/08/09", // YYYY/MM/DD
         lastModified:"2023/08/09", // YYYY/MM/DD
@@ -3415,6 +3415,344 @@ var objects = [
         tags:["mill", "largest"], // don't include anything in categories or name
         dateAdded:"2023/09/10", // YYYY/MM/DD
         lastModified:"2023/09/10", // YYYY/MM/DD
+    },
+    //width mm*59.535985778967287041401433759
+    //height mm*60.702432656534954407294832827
+    {
+        name:"Pacific Ocean",
+        defaultAngle: 2,
+        sideImage:"",
+        hasSideImage:false,
+        sideImageAlign:"none",
+        sideImageArtist: "",
+        sideImageDate:"", // YYYY/MM/DD
+        frontImage:"",
+        hasFrontImage:false,
+        frontImageAlign:"none",
+        frontImageArtist: "",
+        frontImageDate:"", // YYYY/MM/DD
+        topImage:"Pacific_Ocean-top",
+        hasTopImage:true,
+        topImageAlign:"none",
+        topImageArtist: "Daniel Roberts (BlenderTimer)",
+        topImageDate:"2023/09/12", // YYYY/MM/DD
+        width:14110,
+        length:18655,
+        height:10.925,
+        category1:"nature",
+        category2:"geography",
+        category3:"oceans",
+        tags:["largest", "earth", "water"], // don't include anything in categories or name
+        dateAdded:"2023/09/12", // YYYY/MM/DD
+        lastModified:"2023/09/12", // YYYY/MM/DD
+    },
+    {
+        name:"Atlantic Ocean",
+        defaultAngle: 2,
+        sideImage:"",
+        hasSideImage:false,
+        sideImageAlign:"none",
+        sideImageArtist: "",
+        sideImageDate:"", // YYYY/MM/DD
+        frontImage:"",
+        hasFrontImage:false,
+        frontImageAlign:"none",
+        frontImageArtist: "",
+        frontImageDate:"", // YYYY/MM/DD
+        topImage:"Atlantic_Ocean-top",
+        hasTopImage:true,
+        topImageAlign:"none",
+        topImageArtist: "Daniel Roberts (BlenderTimer)",
+        topImageDate:"2023/09/12", // YYYY/MM/DD
+        width:14294,
+        length:12360,
+        height:8.740,
+        category1:"nature",
+        category2:"geography",
+        category3:"oceans",
+        tags:["earth", "water"], // don't include anything in categories or name
+        dateAdded:"2023/09/12", // YYYY/MM/DD
+        lastModified:"2023/09/12", // YYYY/MM/DD
+    },
+    {
+        name:"Indian Ocean",
+        defaultAngle: 2,
+        sideImage:"",
+        hasSideImage:false,
+        sideImageAlign:"none",
+        sideImageArtist: "",
+        sideImageDate:"", // YYYY/MM/DD
+        frontImage:"",
+        hasFrontImage:false,
+        frontImageAlign:"none",
+        frontImageArtist: "",
+        frontImageDate:"", // YYYY/MM/DD
+        topImage:"Indian_Ocean-top",
+        hasTopImage:true,
+        topImageAlign:"none",
+        topImageArtist: "Daniel Roberts (BlenderTimer)",
+        topImageDate:"2023/09/12", // YYYY/MM/DD
+        width:10088,
+        length:12833,
+        height:7.725,
+        category1:"nature",
+        category2:"geography",
+        category3:"oceans",
+        tags:["earth", "water"], // don't include anything in categories or name
+        dateAdded:"2023/09/12", // YYYY/MM/DD
+        lastModified:"2023/09/12", // YYYY/MM/DD
+    },
+    {
+        name:"Pacific Ocean (North)",
+        defaultAngle: 2,
+        sideImage:"",
+        hasSideImage:false,
+        sideImageAlign:"none",
+        sideImageArtist: "",
+        sideImageDate:"", // YYYY/MM/DD
+        frontImage:"",
+        hasFrontImage:false,
+        frontImageAlign:"none",
+        frontImageArtist: "",
+        frontImageDate:"", // YYYY/MM/DD
+        topImage:"Pacific_Ocean_North-top",
+        hasTopImage:true,
+        topImageAlign:"none",
+        topImageArtist: "Daniel Roberts (BlenderTimer)",
+        topImageDate:"2023/09/12", // YYYY/MM/DD
+        width:7384,
+        length:18177,
+        height:10.925,
+        category1:"nature",
+        category2:"geography",
+        category3:"oceans",
+        tags:["earth", "water"], // don't include anything in categories or name
+        dateAdded:"2023/09/12", // YYYY/MM/DD
+        lastModified:"2023/09/12", // YYYY/MM/DD
+    },
+    {
+        name:"Pacific Ocean (South)",
+        defaultAngle: 2,
+        sideImage:"",
+        hasSideImage:false,
+        sideImageAlign:"none",
+        sideImageArtist: "",
+        sideImageDate:"", // YYYY/MM/DD
+        frontImage:"",
+        hasFrontImage:false,
+        frontImageAlign:"none",
+        frontImageArtist: "",
+        frontImageDate:"", // YYYY/MM/DD
+        topImage:"Pacific_Ocean_South-top",
+        hasTopImage:true,
+        topImageAlign:"none",
+        topImageArtist: "Daniel Roberts (BlenderTimer)",
+        topImageDate:"2023/09/12", // YYYY/MM/DD
+        width:6948,
+        length:17426,
+        height:10.882,
+        category1:"nature",
+        category2:"geography",
+        category3:"oceans",
+        tags:["earth", "water"], // don't include anything in categories or name
+        dateAdded:"2023/09/12", // YYYY/MM/DD
+        lastModified:"2023/09/12", // YYYY/MM/DD
+    },
+    {
+        name:"Atlantic Ocean (North)",
+        defaultAngle: 2,
+        sideImage:"",
+        hasSideImage:false,
+        sideImageAlign:"none",
+        sideImageArtist: "",
+        sideImageDate:"", // YYYY/MM/DD
+        frontImage:"",
+        hasFrontImage:false,
+        frontImageAlign:"none",
+        frontImageArtist: "",
+        frontImageDate:"", // YYYY/MM/DD
+        topImage:"Atlantic_Ocean_North-top",
+        hasTopImage:true,
+        topImageAlign:"none",
+        topImageArtist: "Daniel Roberts (BlenderTimer)",
+        topImageDate:"2023/09/12", // YYYY/MM/DD
+        width:7669,
+        length:11755,
+        height:8.740,
+        category1:"nature",
+        category2:"geography",
+        category3:"oceans",
+        tags:["earth", "water"], // don't include anything in categories or name
+        dateAdded:"2023/09/12", // YYYY/MM/DD
+        lastModified:"2023/09/12", // YYYY/MM/DD
+    },
+    {
+        name:"Atlantic Ocean (South)",
+        defaultAngle: 2,
+        sideImage:"",
+        hasSideImage:false,
+        sideImageAlign:"none",
+        sideImageArtist: "",
+        sideImageDate:"", // YYYY/MM/DD
+        frontImage:"",
+        hasFrontImage:false,
+        frontImageAlign:"none",
+        frontImageArtist: "",
+        frontImageDate:"", // YYYY/MM/DD
+        topImage:"Atlantic_Ocean_South-top",
+        hasTopImage:true,
+        topImageAlign:"none",
+        topImageArtist: "Daniel Roberts (BlenderTimer)",
+        topImageDate:"2023/09/12", // YYYY/MM/DD
+        width:6714,
+        length:8558,
+        height:8.428,
+        category1:"nature",
+        category2:"geography",
+        category3:"oceans",
+        tags:["earth", "water"], // don't include anything in categories or name
+        dateAdded:"2023/09/12", // YYYY/MM/DD
+        lastModified:"2023/09/12", // YYYY/MM/DD
+    },
+    {
+        name:"Southern Ocean",
+        defaultAngle: 2,
+        sideImage:"",
+        hasSideImage:false,
+        sideImageAlign:"none",
+        sideImageArtist: "",
+        sideImageDate:"", // YYYY/MM/DD
+        frontImage:"",
+        hasFrontImage:false,
+        frontImageAlign:"none",
+        frontImageArtist: "",
+        frontImageDate:"", // YYYY/MM/DD
+        topImage:"Southern_Ocean-top",
+        hasTopImage:true,
+        topImageAlign:"none",
+        topImageArtist: "Daniel Roberts (BlenderTimer)",
+        topImageDate:"2023/09/12", // YYYY/MM/DD
+        width:7522,
+        length:7522,
+        height:8.125,
+        category1:"nature",
+        category2:"geography",
+        category3:"oceans",
+        tags:["earth", "water", "antarctica"], // don't include anything in categories or name
+        dateAdded:"2023/09/12", // YYYY/MM/DD
+        lastModified:"2023/09/12", // YYYY/MM/DD
+    },
+    {
+        name:"Arctic Ocean",
+        defaultAngle: 2,
+        sideImage:"",
+        hasSideImage:false,
+        sideImageAlign:"none",
+        sideImageArtist: "",
+        sideImageDate:"", // YYYY/MM/DD
+        frontImage:"",
+        hasFrontImage:false,
+        frontImageAlign:"none",
+        frontImageArtist: "",
+        frontImageDate:"", // YYYY/MM/DD
+        topImage:"Arctic_Ocean-top",
+        hasTopImage:true,
+        topImageAlign:"none",
+        topImageArtist: "Daniel Roberts (BlenderTimer)",
+        topImageDate:"2023/09/12", // YYYY/MM/DD
+        width:7728,
+        length:8708,
+        height:5.669,
+        category1:"nature",
+        category2:"geography",
+        category3:"oceans",
+        tags:["earth", "water", "north"], // don't include anything in categories or name
+        dateAdded:"2023/09/12", // YYYY/MM/DD
+        lastModified:"2023/09/12", // YYYY/MM/DD
+    },
+    {
+        name:"South China Sea",
+        defaultAngle: 2,
+        sideImage:"",
+        hasSideImage:false,
+        sideImageAlign:"none",
+        sideImageArtist: "",
+        sideImageDate:"", // YYYY/MM/DD
+        frontImage:"",
+        hasFrontImage:false,
+        frontImageAlign:"none",
+        frontImageArtist: "",
+        frontImageDate:"", // YYYY/MM/DD
+        topImage:"South_China_Sea-top",
+        hasTopImage:true,
+        topImageAlign:"none",
+        topImageArtist: "Daniel Roberts (BlenderTimer)",
+        topImageDate:"2023/09/12", // YYYY/MM/DD
+        width:5099,
+        length:6121,
+        height:5.016,
+        category1:"nature",
+        category2:"geography",
+        category3:"oceans",
+        tags:["earth", "water"], // don't include anything in categories or name
+        dateAdded:"2023/09/12", // YYYY/MM/DD
+        lastModified:"2023/09/12", // YYYY/MM/DD
+    },
+    {
+        name:"Mediterranean Sea",
+        defaultAngle: 2,
+        sideImage:"",
+        hasSideImage:false,
+        sideImageAlign:"none",
+        sideImageArtist: "",
+        sideImageDate:"", // YYYY/MM/DD
+        frontImage:"",
+        hasFrontImage:false,
+        frontImageAlign:"none",
+        frontImageArtist: "",
+        frontImageDate:"", // YYYY/MM/DD
+        topImage:"Mediterranean_Sea-top",
+        hasTopImage:true,
+        topImageAlign:"none",
+        topImageArtist: "Daniel Roberts (BlenderTimer)",
+        topImageDate:"2023/09/12", // YYYY/MM/DD
+        width:2708,
+        length:5410,
+        height:5.267,
+        category1:"nature",
+        category2:"geography",
+        category3:"oceans",
+        tags:["earth", "water"], // don't include anything in categories or name
+        dateAdded:"2023/09/12", // YYYY/MM/DD
+        lastModified:"2023/09/12", // YYYY/MM/DD
+    },
+    {
+        name:"Baltic Sea",
+        defaultAngle: 2,
+        sideImage:"",
+        hasSideImage:false,
+        sideImageAlign:"none",
+        sideImageArtist: "",
+        sideImageDate:"", // YYYY/MM/DD
+        frontImage:"",
+        hasFrontImage:false,
+        frontImageAlign:"none",
+        frontImageArtist: "",
+        frontImageDate:"", // YYYY/MM/DD
+        topImage:"Baltic_Sea-top",
+        hasTopImage:true,
+        topImageAlign:"none",
+        topImageArtist: "Daniel Roberts (BlenderTimer)",
+        topImageDate:"2023/09/12", // YYYY/MM/DD
+        width:1862,
+        length:1594,
+        height:459,
+        category1:"nature",
+        category2:"geography",
+        category3:"oceans",
+        tags:["earth", "water"], // don't include anything in categories or name
+        dateAdded:"2023/09/12", // YYYY/MM/DD
+        lastModified:"2023/09/12", // YYYY/MM/DD
     },
 ];
 
