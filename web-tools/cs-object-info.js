@@ -3416,8 +3416,6 @@ var objects = [
         dateAdded:"2023/09/10", // YYYY/MM/DD
         lastModified:"2023/09/10", // YYYY/MM/DD
     },
-    //width mm*59.535985778967287041401433759
-    //height mm*60.702432656534954407294832827
     {
         name:"Pacific Ocean",
         defaultAngle: 2,
@@ -3753,6 +3751,34 @@ var objects = [
         tags:["earth", "water"], // don't include anything in categories or name
         dateAdded:"2023/09/12", // YYYY/MM/DD
         lastModified:"2023/09/12", // YYYY/MM/DD
+    },
+    {
+        name:"Mil Mi-26",
+        defaultAngle: 0,
+        sideImage:"Mil_Mi_26-side",
+        hasSideImage:true,
+        sideImageAlign:"bottom",
+        sideImageArtist: "felax",
+        sideImageDate:"2023/09/15", // YYYY/MM/DD
+        frontImage:"Mil_Mi_26-front",
+        hasFrontImage:true,
+        frontImageAlign:"bottom",
+        frontImageArtist: "felax",
+        frontImageDate:"2023/09/15", // YYYY/MM/DD
+        topImage:"Mil_Mi_26-top",
+        hasTopImage:true,
+        topImageAlign:"none",
+        topImageArtist: "felax",
+        topImageDate:"2023/09/15", // YYYY/MM/DD
+        width:0.032,
+        length:0.040025,
+        height:0.01237913,
+        category1:"transportation",
+        category2:"aircraft",
+        category3:"helicopters",
+        tags:["largest"], // don't include anything in categories or name
+        dateAdded:"2023/09/15", // YYYY/MM/DD
+        lastModified:"2023/09/15", // YYYY/MM/DD
     },
 ];
 
