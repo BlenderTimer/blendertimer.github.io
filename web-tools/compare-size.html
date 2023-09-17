@@ -41,6 +41,7 @@
 					<p id="no-search-results">No results.</p>
 					<p id="wait-search-results">Searching...</p>
 				</div>
+				<div style="display: block; position: absolute; opacity: 0.9; color: #A5A5A5"><input type="checkbox" oninput="addObjectPopupResetSetting()" id="add-object-reset-check" checked><label>Reset window when closed</label></div>
 			</div>
 			<div id="objectinfo-text-div" style="display: none">
 				<div id="object-info-div">
@@ -328,7 +329,7 @@
 				</div>
 			</div>
 		</div>
-		<p id="version">Tool version: 0.2.0</p>
+		<p id="version">Tool version: 0.2.1</p>
 	</body>
 </html>
 <style>
@@ -1891,6 +1892,12 @@ body {
     	searchSyntaxText.style.display = "none";
 	}
 
+	var addObjectReset = true;
+
+	function addObjectPopupResetSetting() {
+		addObjectReset = document.getElementById('add-object-reset-check').checked;
+	}
+
     function addObjectPopup(query, ssort, scroll) {
     	popupBack = "";
     	popupTitle.innerHTML = "Add Object";
@@ -1900,7 +1907,9 @@ body {
 			sort.value = ssort;
 		}
 		else {
-			sort.value = "name";
+			if (addObjectReset == true) {
+    			sort.value = "name";
+    		}
 		}
 		setTimeout(function() {addObjectPopupDiv.style.opacity = "1"; popupBackground.style.opacity = "1"}, 1);
 		addObjectPopupDiv.style.display = "block";
@@ -1910,14 +1919,18 @@ body {
 			searchBar.value = query;
 		}
 		else {
-			searchBar.value = null;
+			if (addObjectReset == true) {
+				searchBar.value = null;
+			}
 		}
 		search();
 		if (scroll) {
 			document.getElementById('search-objects-search').scrollTop = scroll;
 		}
 		else {
-			document.getElementById('search-objects-search').scrollTop = 0;
+			if (addObjectReset == true) {
+				document.getElementById('search-objects-search').scrollTop = 0;
+			}
 		}
 		searchBar.focus();
 	}
