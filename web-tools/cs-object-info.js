@@ -3808,6 +3808,34 @@ var objects = [
         dateAdded:"2023/09/16", // YYYY/MM/DD
         lastModified:"2023/09/16", // YYYY/MM/DD
     },
+    {
+        name:"Aero Spacelines Super Guppy",
+        defaultAngle: 0,
+        sideImage:"Aero_Spacelines_Super_Guppy-side",
+        hasSideImage:true,
+        sideImageAlign:"bottom",
+        sideImageArtist: "Daniel Roberts (BlenderTimer)",
+        sideImageDate:"2023/09/17", // YYYY/MM/DD
+        frontImage:"Aero_Spacelines_Super_Guppy-front",
+        hasFrontImage:true,
+        frontImageAlign:"bottom",
+        frontImageArtist: "Daniel Roberts (BlenderTimer)",
+        frontImageDate:"2023/09/17", // YYYY/MM/DD
+        topImage:"Aero_Spacelines_Super_Guppy-top",
+        hasTopImage:true,
+        topImageAlign:"none",
+        topImageArtist: "Daniel Roberts (BlenderTimer)",
+        topImageDate:"2023/09/17", // YYYY/MM/DD
+        width:0.04763,
+        length:0.04384,
+        height:0.01478,
+        category1:"transportation",
+        category2:"aircraft",
+        category3:"airplanes",
+        tags:["boeing"], // don't include anything in categories or name
+        dateAdded:"2023/09/17", // YYYY/MM/DD
+        lastModified:"2023/09/17", // YYYY/MM/DD
+    },
 ];
 
 //	———————— STEPS FOR UPDATING ————————
