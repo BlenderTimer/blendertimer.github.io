@@ -3780,6 +3780,34 @@ var objects = [
         dateAdded:"2023/09/15", // YYYY/MM/DD
         lastModified:"2023/09/15", // YYYY/MM/DD
     },
+    {
+        name:"Bell 206L4",
+        defaultAngle: 0,
+        sideImage:"Bell_206L4-side",
+        hasSideImage:true,
+        sideImageAlign:"bottom",
+        sideImageArtist: "Daniel Roberts (BlenderTimer)",
+        sideImageDate:"2023/09/16", // YYYY/MM/DD
+        frontImage:"Bell_206L4-front",
+        hasFrontImage:true,
+        frontImageAlign:"bottom",
+        frontImageArtist: "Daniel Roberts (BlenderTimer)",
+        frontImageDate:"2023/09/16", // YYYY/MM/DD
+        topImage:"Bell_206L4-top",
+        hasTopImage:true,
+        topImageAlign:"none",
+        topImageArtist: "Daniel Roberts (BlenderTimer)",
+        topImageDate:"2023/09/16", // YYYY/MM/DD
+        width:0.00238,
+        length:0.01292,
+        height:0.00332,
+        category1:"transportation",
+        category2:"aircraft",
+        category3:"helicopters",
+        tags:[""], // don't include anything in categories or name
+        dateAdded:"2023/09/16", // YYYY/MM/DD
+        lastModified:"2023/09/16", // YYYY/MM/DD
+    },
 ];
 
 //	———————— STEPS FOR UPDATING ————————
