@@ -3035,21 +3035,21 @@ body {
 				if (!conts.includes(objsCont[i].sideImageArtist.toString())) {
 					conts.push(objsCont[i].sideImageArtist.toString());
 					contDate = new Date(parseInt(objsCont[i].sideImageDate.toString().substring(0, 4)), parseInt(objsCont[i].sideImageDate.toString().substring(5, 7)) - 1, parseInt(objsCont[i].sideImageDate.toString().substring(8, 10)));
-					contributors.push({name:objsCont[i].sideImageArtist.toString(),contributions:0,lastContribution:objsCont[i].sideImage,lastContributionDate:contDate.getTime()});
+					contributors.push({name:objsCont[i].sideImageArtist.toString(),contributions:0,lastContribution:objsCont[i].sideImage,lastContributionDate:contDate.getTime(),lastContributionID:objsCont[i].originalObjectID});
 				}
 			}
 			if (objsCont[i].frontImageArtist.toString().length > 0) {
 				if (!conts.includes(objsCont[i].frontImageArtist.toString())) {
 					conts.push(objsCont[i].frontImageArtist.toString());
 					contDate = new Date(parseInt(objsCont[i].frontImageDate.toString().substring(0, 4)), parseInt(objsCont[i].frontImageDate.toString().substring(5, 7)) - 1, parseInt(objsCont[i].frontImageDate.toString().substring(8, 10)));
-					contributors.push({name:objsCont[i].frontImageArtist.toString(),contributions:0,lastContribution:objsCont[i].frontImage,lastContributionDate:contDate.getTime()});
+					contributors.push({name:objsCont[i].frontImageArtist.toString(),contributions:0,lastContribution:objsCont[i].frontImage,lastContributionDate:contDate.getTime(),lastContributionID:objsCont[i].originalObjectID});
 				}
 			}
 			if (objsCont[i].topImageArtist.toString().length > 0) {
 				if (!conts.includes(objsCont[i].topImageArtist.toString())) {
 					conts.push(objsCont[i].topImageArtist.toString());
 					contDate = new Date(parseInt(objsCont[i].topImageDate.toString().substring(0, 4)), parseInt(objsCont[i].topImageDate.toString().substring(5, 7)) - 1, parseInt(objsCont[i].topImageDate.toString().substring(8, 10)));
-					contributors.push({name:objsCont[i].topImageArtist.toString(),contributions:0,lastContribution:objsCont[i].topImage,lastContributionDate:contDate.getTime()});
+					contributors.push({name:objsCont[i].topImageArtist.toString(),contributions:0,lastContribution:objsCont[i].topImage,lastContributionDate:contDate.getTime(),lastContributionID:objsCont[i].originalObjectID});
 				}
 			}
 		}
@@ -3073,6 +3073,7 @@ body {
 					if (contDate.getTime() > contributors[conts.indexOf(objsCont[i].sideImageArtist.toString())].lastContributionDate) {
 						contributors[conts.indexOf(objsCont[i].sideImageArtist.toString())].lastContributionDate = contDate;
 						contributors[conts.indexOf(objsCont[i].sideImageArtist.toString())].lastContribution = objsCont[i].sideImage;
+						contributors[conts.indexOf(objsCont[i].topImageArtist.toString())].lastContributionID = objsCont[i].originalObjectID;
 					}
 				}
 				if (conts.indexOf(objsCont[i].frontImageArtist.toString()) > -1) {
@@ -3080,6 +3081,7 @@ body {
 					if (contDate.getTime() > contributors[conts.indexOf(objsCont[i].frontImageArtist.toString())].lastContributionDate) {
 						contributors[conts.indexOf(objsCont[i].frontImageArtist.toString())].lastContributionDate = contDate;
 						contributors[conts.indexOf(objsCont[i].frontImageArtist.toString())].lastContribution = objsCont[i].frontImage;
+						contributors[conts.indexOf(objsCont[i].topImageArtist.toString())].lastContributionID = objsCont[i].originalObjectID;
 					}
 				}
 				if (conts.indexOf(objsCont[i].topImageArtist.toString()) > -1) {
@@ -3087,6 +3089,7 @@ body {
 					if (contDate.getTime() > contributors[conts.indexOf(objsCont[i].topImageArtist.toString())].lastContributionDate) {
 						contributors[conts.indexOf(objsCont[i].topImageArtist.toString())].lastContributionDate = contDate;
 						contributors[conts.indexOf(objsCont[i].topImageArtist.toString())].lastContribution = objsCont[i].topImage;
+						contributors[conts.indexOf(objsCont[i].topImageArtist.toString())].lastContributionID = objsCont[i].originalObjectID;
 					}
 				}
 			}
@@ -3099,7 +3102,7 @@ body {
 			contributors.sort((a, b) => (a.name > b.name) ? 1 : (a.name === b.name) ? ((a.contributions < b.contributions) ? 1 : -1) : -1);
 		}
 		else {
-			contributors.sort((a, b) => (a.lastContributionDate < b.lastContributionDate) ? 1 : (a.lastContributionDate === b.lastContributionDate) ? ((a.contributions < b.contributions) ? 1 : -1) : -1);
+			contributors.sort((a, b) => (a.lastContributionDate < b.lastContributionDate) ? 1 : (a.lastContributionDate === b.lastContributionDate) ? ((a.lastContributionID < b.lastContributionID) ? 1 : -1) : -1);
 		}
 		var contByConts = contributors.filter(checkObjectCont);
 		contByConts.sort((a, b) => (a.contributions < b.contributions) ? 1 : (a.contributions === b.contributions) ? ((a.name > b.name) ? 1 : -1) : -1);
