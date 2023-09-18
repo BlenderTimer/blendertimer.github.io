@@ -3898,17 +3898,17 @@ var objects = [
         sideImage:"Scaled_Composites_Model_351_Stratolaunch-side",
         hasSideImage:true,
         sideImageAlign:"bottom",
-        sideImageArtist: "Daniel Roberts (BlenderTimer)",
+        sideImageArtist: "felax",
         sideImageDate:"2023/09/17", // YYYY/MM/DD
         frontImage:"Scaled_Composites_Model_351_Stratolaunch-front",
         hasFrontImage:true,
         frontImageAlign:"bottom",
-        frontImageArtist: "Daniel Roberts (BlenderTimer)",
+        frontImageArtist: "felax",
         frontImageDate:"2023/09/17", // YYYY/MM/DD
         topImage:"Scaled_Composites_Model_351_Stratolaunch-top",
         hasTopImage:true,
         topImageAlign:"none",
-        topImageArtist: "Daniel Roberts (BlenderTimer)",
+        topImageArtist: "felax",
         topImageDate:"2023/09/17", // YYYY/MM/DD
         width:0.117,
         length:0.073,
