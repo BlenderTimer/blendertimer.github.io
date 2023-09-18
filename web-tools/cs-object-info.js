@@ -2992,7 +2992,7 @@ var objects = [
         category1:"nature",
         category2:"geography",
         category3:"canyons",
-        tags:["largest"], // don't include anything in categories or name
+        tags:["largest", "deepest", "trench", "trough"], // don't include anything in categories or name
         dateAdded:"2023/08/30", // YYYY/MM/DD
         lastModified:"2023/08/30", // YYYY/MM/DD
     },
@@ -3833,6 +3833,62 @@ var objects = [
         category2:"aircraft",
         category3:"airplanes",
         tags:["boeing"], // don't include anything in categories or name
+        dateAdded:"2023/09/17", // YYYY/MM/DD
+        lastModified:"2023/09/17", // YYYY/MM/DD
+    },
+    {
+        name:"California Redwood",
+        defaultAngle: 1,
+        sideImage:"",
+        hasSideImage:false,
+        sideImageAlign:"bottom",
+        sideImageArtist: "",
+        sideImageDate:"", // YYYY/MM/DD
+        frontImage:"California_Redwood-front",
+        hasFrontImage:true,
+        frontImageAlign:"bottom",
+        frontImageArtist: "Daniel Roberts (BlenderTimer)",
+        frontImageDate:"2023/09/17", // YYYY/MM/DD
+        topImage:"",
+        hasTopImage:false,
+        topImageAlign:"none",
+        topImageArtist: "",
+        topImageDate:"", // YYYY/MM/DD
+        width:0.028280252,
+        length:0.028280252,
+        height:0.100584,
+        category1:"nature",
+        category2:"plants",
+        category3:"trees",
+        tags:["giant"], // don't include anything in categories or name
+        dateAdded:"2023/09/17", // YYYY/MM/DD
+        lastModified:"2023/09/17", // YYYY/MM/DD
+    },
+    {
+        name:"Mariana Trench",
+        defaultAngle: 1,
+        sideImage:"",
+        hasSideImage:false,
+        sideImageAlign:"bottom",
+        sideImageArtist: "",
+        sideImageDate:"", // YYYY/MM/DD
+        frontImage:"Mariana_Trench-front",
+        hasFrontImage:true,
+        frontImageAlign:"none",
+        frontImageArtist: "Daniel Roberts (BlenderTimer)",
+        frontImageDate:"2023/09/17", // YYYY/MM/DD
+        topImage:"",
+        hasTopImage:false,
+        topImageAlign:"none",
+        topImageArtist: "",
+        topImageDate:"", // YYYY/MM/DD
+        width:2500,
+        length:70,
+        height:11.034,
+        category1:"nature",
+        category2:"geography",
+        category3:"canyons",
+        tags:["largest", "deepest", "trough"], // don't include anything in categories or name
         dateAdded:"2023/09/17", // YYYY/MM/DD
         lastModified:"2023/09/17", // YYYY/MM/DD
     },
