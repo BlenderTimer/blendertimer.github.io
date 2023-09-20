@@ -299,6 +299,7 @@
 					<p>[Object compared to] vs Saturn V, Apollo, Moon, {image artists: Daniel Roberts (BlenderTimer)}</p>
 					<p>[Object compared to] vs Scaled Composites Model 351 Stratolaunch, Carrier, {image artists: felax, felax, felax}</p>
 					<p>[Object compared to] vs Segue 2 (Smallest Galaxy), Spheroidal, {image artists: Daniel Roberts (BlenderTimer)}</p>
+					<p>[Object compared to] vs Sikorsky S-97 Raider, Prototype, {image artists: felax, felax}</p>
 					<p>[Object compared to] vs Sirius A, A1, Ball, Heat, Hot, Sphere, {image artists: Daniel Roberts (BlenderTimer), Daniel Roberts (BlenderTimer), Daniel Roberts (BlenderTimer)}</p>
 					<p>[Object compared to] vs South China Sea, Earth, Water, {image artists: Daniel Roberts (BlenderTimer)}</p>
 					<p>[Object compared to] vs Southern Ocean, Antarctica, Earth, Water, {image artists: Daniel Roberts (BlenderTimer)}</p>
@@ -332,7 +333,7 @@
 				</div>
 			</div>
 		</div>
-		<p id="version">Tool version: 0.2.3</p>
+		<p id="version">Tool version: 0.2.4</p>
 	</body>
 </html>
 <style>
@@ -3437,12 +3438,9 @@ body {
   					}
   					else if (searchBar.value.toString().startsWith("width:")) {
   						if (objects[i].width.toString().toLowerCase() == searchBar.value.toString().toLowerCase().substring(6, searchBar.value.toString().length)) {
-  							objects[i].searchRelevance = 1000000;
-  						}
-  						else if (objects[i].width.toString().toLowerCase().startsWith(searchBar.value.toString().toLowerCase().substring(6, searchBar.value.toString().length))) {
   							objects[i].searchRelevance = 100000;
   						}
-  						else if (objects[i].width.toString().toLowerCase().indexOf(searchBar.value.toString().toLowerCase().substring(6, searchBar.value.toString().length)) > -1) {
+  						else if (objects[i].width.toString().toLowerCase().startsWith(searchBar.value.toString().toLowerCase().substring(6, searchBar.value.toString().length))) {
   							objects[i].searchRelevance = 10000;
   						}
   						else {
@@ -3451,12 +3449,9 @@ body {
   					}
   					else if (searchBar.value.toString().startsWith("length:")) {
   						if (objects[i].length.toString().toLowerCase() == searchBar.value.toString().toLowerCase().substring(7, searchBar.value.toString().length)) {
-  							objects[i].searchRelevance = 1000000;
-  						}
-  						else if (objects[i].length.toString().toLowerCase().startsWith(searchBar.value.toString().toLowerCase().substring(7, searchBar.value.toString().length))) {
   							objects[i].searchRelevance = 100000;
   						}
-  						else if (objects[i].length.toString().toLowerCase().indexOf(searchBar.value.toString().toLowerCase().substring(7, searchBar.value.toString().length)) > -1) {
+  						else if (objects[i].length.toString().toLowerCase().startsWith(searchBar.value.toString().toLowerCase().substring(7, searchBar.value.toString().length))) {
   							objects[i].searchRelevance = 10000;
   						}
   						else {
@@ -3465,12 +3460,9 @@ body {
   					}
   					else if (searchBar.value.toString().startsWith("height:")) {
   						if (objects[i].height.toString().toLowerCase() == searchBar.value.toString().toLowerCase().substring(7, searchBar.value.toString().length)) {
-  							objects[i].searchRelevance = 1000000;
-  						}
-  						else if (objects[i].height.toString().toLowerCase().startsWith(searchBar.value.toString().toLowerCase().substring(7, searchBar.value.toString().length))) {
   							objects[i].searchRelevance = 100000;
   						}
-  						else if (objects[i].height.toString().toLowerCase().indexOf(searchBar.value.toString().toLowerCase().substring(7, searchBar.value.toString().length)) > -1) {
+  						else if (objects[i].height.toString().toLowerCase().startsWith(searchBar.value.toString().toLowerCase().substring(7, searchBar.value.toString().length))) {
   							objects[i].searchRelevance = 10000;
   						}
   						else {

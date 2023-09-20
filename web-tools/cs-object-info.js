@@ -3920,6 +3920,34 @@ var objects = [
         dateAdded:"2023/09/17", // YYYY/MM/DD
         lastModified:"2023/09/17", // YYYY/MM/DD
     },
+    {
+        name:"Sikorsky S-97 Raider",
+        defaultAngle: 1,
+        sideImage:"",
+        hasSideImage:false,
+        sideImageAlign:"bottom",
+        sideImageArtist: "",
+        sideImageDate:"", // YYYY/MM/DD
+        frontImage:"Sikorsky_S_97_Raider-front",
+        hasFrontImage:true,
+        frontImageAlign:"bottom",
+        frontImageArtist: "felax",
+        frontImageDate:"2023/09/19", // YYYY/MM/DD
+        topImage:"",
+        hasTopImage:false,
+        topImageAlign:"none",
+        topImageArtist: "felax",
+        topImageDate:"", // YYYY/MM/DD
+        width:0.0103632,
+        length:0.0109728,
+        height:0.003606494,
+        category1:"transportation",
+        category2:"aircraft",
+        category3:"helicopters",
+        tags:["prototype"], // don't include anything in categories or name
+        dateAdded:"2023/09/19", // YYYY/MM/DD
+        lastModified:"2023/09/19", // YYYY/MM/DD
+    },
 ];
 
 //	———————— STEPS FOR UPDATING ————————
