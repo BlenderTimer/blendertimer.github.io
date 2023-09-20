@@ -3936,7 +3936,7 @@ var objects = [
         topImage:"",
         hasTopImage:false,
         topImageAlign:"none",
-        topImageArtist: "felax",
+        topImageArtist: "",
         topImageDate:"", // YYYY/MM/DD
         width:0.0103632,
         length:0.0109728,
