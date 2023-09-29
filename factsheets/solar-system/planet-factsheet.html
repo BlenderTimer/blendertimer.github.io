@@ -1856,7 +1856,7 @@ body {
 			document.getElementById('thousands-checkbox').appendChild(check);
 		}
 		else if (getCookie("Thousands") == "false") {
-			thousands == "false"
+			thousands = "false"
 		}
 		else {
 			var check = document.createElement('img');
@@ -1876,8 +1876,7 @@ body {
 			document.getElementById('abbreviate-checkbox').appendChild(check);
 		}
 		else if (getCookie("Abbreviate") == "false") {
-			abbreviate == "false"
-			console.log(abbreviate)
+			abbreviate = "false"
 		}
 		else {
 			var check = document.createElement('img');
