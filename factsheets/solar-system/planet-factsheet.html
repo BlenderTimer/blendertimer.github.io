@@ -1437,7 +1437,6 @@ body {
 
 	function baseLoad() {
 		checkSettings();
-		console.log(getCookie("Abbreviate"))
 		loadFacts();
 		document.getElementById('object-count').innerHTML = objectTable.children[0].children[0].children.length - 1
 		document.getElementById('data-count').innerHTML = unitTable.children[0].children.length
@@ -1875,9 +1874,11 @@ body {
 			check.style.height = "30px";
 			check.style.pointerEvents = "none";
 			document.getElementById('abbreviate-checkbox').appendChild(check);
+			console.log("abbreviate = true")
 		}
 		else if (getCookie("Abbreviate") == "false") {
 			abbreviate == "false"
+			console.log("abbreviate = false")
 		}
 		else {
 			var check = document.createElement('img');
@@ -1887,6 +1888,7 @@ body {
 			check.style.pointerEvents = "none";
 			document.getElementById('abbreviate-checkbox').appendChild(check);
 			setSetting("Abbreviate");
+			console.log("abbreviate = true")
 		}
 	}
 
