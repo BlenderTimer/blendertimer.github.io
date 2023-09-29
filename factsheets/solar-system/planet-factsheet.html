@@ -1865,7 +1865,7 @@ body {
 			check.style.height = "30px";
 			check.style.pointerEvents = "none";
 			document.getElementById('thousands-checkbox').appendChild(check);
-			setSetting("Thousands");
+			setCookie("Thousands", "true", 1825);
 		}
 		if (getCookie("Abbreviate") == "true") {
 			var check = document.createElement('img');
@@ -1874,11 +1874,9 @@ body {
 			check.style.height = "30px";
 			check.style.pointerEvents = "none";
 			document.getElementById('abbreviate-checkbox').appendChild(check);
-			console.log("abbreviate = true")
 		}
 		else if (getCookie("Abbreviate") == "false") {
 			abbreviate == "false"
-			console.log("abbreviate = false")
 		}
 		else {
 			var check = document.createElement('img');
@@ -1887,8 +1885,7 @@ body {
 			check.style.height = "30px";
 			check.style.pointerEvents = "none";
 			document.getElementById('abbreviate-checkbox').appendChild(check);
-			setSetting("Abbreviate");
-			console.log("abbreviate = true")
+			setCookie("Abbreviate", "true", 1825);
 		}
 	}
 
@@ -1907,7 +1904,7 @@ body {
 		else if (setting == "Abbreviate") {
 			if (element.firstChild) {
 				setCookie(setting, "true", 1825);
-				//abbreviate = "true";
+				abbreviate = "true";
 			}
 			else {
 				setCookie(setting, "false", 1825);
