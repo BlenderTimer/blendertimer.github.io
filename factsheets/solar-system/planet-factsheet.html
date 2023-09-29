@@ -1436,7 +1436,6 @@ body {
     }
 
 	function baseLoad() {
-		setInterval(function() {console.log(abbreviate)}, 1)
 		checkSettings();
 		loadFacts();
 		document.getElementById('object-count').innerHTML = objectTable.children[0].children[0].children.length - 1
@@ -1878,6 +1877,7 @@ body {
 		}
 		else if (getCookie("Abbreviate") == "false") {
 			abbreviate == "false"
+			console.log(abbreviate)
 		}
 		else {
 			var check = document.createElement('img');
