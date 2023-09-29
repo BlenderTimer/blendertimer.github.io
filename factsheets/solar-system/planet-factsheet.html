@@ -1367,6 +1367,7 @@ body {
 	var system = "metric";
 	var thousands = "true";
 	var abbreviate = "true";
+	console.log("Abbreviate set to [true] by default")
 	var hLiner = document.getElementById('h-liner');
 	var vLiner = document.getElementById('v-liner');
 
@@ -1905,6 +1906,7 @@ body {
 			if (element.firstChild) {
 				setCookie(setting, "true", 1825);
 				abbreviate = "true";
+				console.log("Abbreviate set to [true] by setSetting()")
 			}
 			else {
 				setCookie(setting, "false", 1825);
