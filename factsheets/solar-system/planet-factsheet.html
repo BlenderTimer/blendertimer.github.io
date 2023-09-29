@@ -1365,8 +1365,8 @@ body {
 	var facts = [];
 	var factList = document.getElementById('fact-list');
 	var system = "metric";
-	var thousands = true;
-	var abbreviate = true;
+	var thousands = "true";
+	var abbreviate = "true";
 	var hLiner = document.getElementById('h-liner');
 	var vLiner = document.getElementById('v-liner');
 
@@ -1542,7 +1542,7 @@ body {
 			td.classList.add(facts[i].object.toLowerCase().replace(/\s/g, "-"));
 			if (hasNumber(value)) {
 				var setSpace = false;
-				if (abbreviate == true) {
+				if (abbreviate == "true") {
 					for (var i2=0; i2 < unitList.length; i2++) {
 						if (valueUnit.toLowerCase() == unitList[i2].unit) {
 							if (unitList[i2].space == true) {
@@ -1558,7 +1558,7 @@ body {
 				if (setSpace == false) {
 					valueUnit = " " + valueUnit;
 				}
-				if (thousands == true) {
+				if (thousands == "true") {
 					td.innerHTML = addCommas(valueNum) + valueUnit;
 				}
 				else {
@@ -1847,7 +1847,7 @@ body {
 			system = window.location.toString().substring(window.location.toString().indexOf("?") + 1, window.location.toString().length);
 			units.textContent = "Units: " + toProperCase(window.location.toString().substring(window.location.toString().indexOf("?") + 1, window.location.toString().length));
 		}
-		if (getCookie("Thousands") == true) {
+		if (getCookie("Thousands") == "true") {
 			var check = document.createElement('img');
 			check.src = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAACXBIWXMAAA7DAAAOwwHHb6hkAAAAGXRFWHRTb2Z0d2FyZQB3d3cuaW5rc2NhcGUub3Jnm+48GgAAAV9JREFUSInt1TtKA0EYwPH/bIYQJbXiFQTZE1jEBAuLgJFMEVBP4A1sFjxHbEIIQzaVWIqQE6hhQbCxkmiqEBTiPmw2IMHNY10I6H7VzPDN/JiPeYggCFhFGCtRUziFUzjJkEkvaFmW4TjOoRDiqdVq3UXliSRfLqVUBrgEjoH3bDa71Wg0hj/lJlbqKRRgOB6PP6PyZ5a6Wq2eATue5513Op3XJdA3YF9r/RE1J7LUlUplQ0rZD7uOlHKv2Wz2p/OUUhkhRD0IgpMJ6vt+qd1u38/aVGSpTdMcALdhd9t13ZtarbaZBApzDle5XF7P5XJXQCEcevQ8r2Db9otlWUav16sLIU4nKFDUWj/MQ+fCM/CSYRgX39FFd7owDKCUygPXwG44NALyYXvg+35xGXRhOAKPjcIS91hrPQIOgO5vUYjxciml1oQQR67rdm3bfo6DxoKTiv/3LaZwCv89+Au22KlYnhW5bQAAAABJRU5ErkJggg==";
 			check.style.width = "30px";
@@ -1855,8 +1855,8 @@ body {
 			check.style.pointerEvents = "none";
 			document.getElementById('thousands-checkbox').appendChild(check);
 		}
-		else if (getCookie("Thousands") == false) {
-			thousands == false
+		else if (getCookie("Thousands") == "false") {
+			thousands == "false"
 		}
 		else {
 			var check = document.createElement('img');
@@ -1875,8 +1875,8 @@ body {
 			check.style.pointerEvents = "none";
 			document.getElementById('abbreviate-checkbox').appendChild(check);
 		}
-		else if (getCookie("Abbreviate") == false) {
-			abbreviate == false
+		else if (getCookie("Abbreviate") == "false") {
+			abbreviate == "false"
 		}
 		else {
 			var check = document.createElement('img');
@@ -1893,22 +1893,22 @@ body {
 		var element = event.target || event.srcElement;
 		if (setting == "Thousands") {
 			if (element.firstChild) {
-				setCookie(setting, true, 1825);
-				thousands = true;
+				setCookie(setting, "true", 1825);
+				thousands = "true";
 			}
 			else {
-				setCookie(setting, false, 1825);
-				thousands = false;
+				setCookie(setting, "false", 1825);
+				thousands = "false";
 			}
 		}
 		else if (setting == "Abbreviate") {
 			if (element.firstChild) {
-				setCookie(setting, true, 1825);
-				abbreviate = true;
+				setCookie(setting, "true", 1825);
+				abbreviate = "true";
 			}
 			else {
-				setCookie(setting, false, 1825);
-				abbreviate = false;
+				setCookie(setting, "false", 1825);
+				abbreviate = "false";
 			}
 		}
 		else if (setting == "System") {
