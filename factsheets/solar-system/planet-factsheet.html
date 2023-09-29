@@ -345,7 +345,7 @@
 					<div class="spr"></div>
 					<a>Mercury <split/>Equatorial Circumference: 15334.11374 kilometers (9528.17654 miles)<br>[Calculated from the <b onclick="source('Mercury Equatorial Diameter')">Equatorial Diameter</b>]<br>Last updated: 2023/9/27</a>
 					<a>Venus <split/>Equatorial Circumference: 38024.58084 kilometers (23627.37913 miles)<br>[Calculated from the <b onclick="source('Venus Equatorial Diameter')">Equatorial Diameter</b>]<br>Last updated: 2023/9/27</a>
-					<a>Earth <split/>Equatorial Circumference: 40075.01669 kilometers (24901.46090) miles)<br>[Calculated from the <b onclick="source('Earth Equatorial Diameter')">Equatorial Diameter</b>]<br>Last updated: 2023/9/27</a>
+					<a>Earth <split/>Equatorial Circumference: 40075.01669 kilometers (24901.46090 miles)<br>[Calculated from the <b onclick="source('Earth Equatorial Diameter')">Equatorial Diameter</b>]<br>Last updated: 2023/9/27</a>
 					<a>Mars <split/>Equatorial Circumference: 21338.95394 kilometers (13259.41125 miles)<br>[Calculated from the <b onclick="source('Mars Equatorial Diameter')">Equatorial Diameter</b>]<br>Last updated: 2023/9/27</a>
 					<a>Jupiter <split/>Equatorial Circumference: 449197.48398 kilometers (279118.37617 miles)<br>[Calculated from the <b onclick="source('Jupiter Equatorial Diameter')">Equatorial Diameter</b>]<br>Last updated: 2023/9/27</a>
 					<a>Saturn <split/>Equatorial Circumference: 378675.01209 kilometers (235297.74373 miles)<br>[Calculated from the <b onclick="source('Saturn Equatorial Diameter')">Equatorial Diameter</b>]<br>Last updated: 2023/9/27</a>
@@ -1441,7 +1441,7 @@ body {
 		document.getElementById('object-count').innerHTML = objectTable.children[0].children[0].children.length - 1
 		document.getElementById('data-count').innerHTML = unitTable.children[0].children.length
 		document.getElementById('cell-count').innerHTML = unitTable.children[0].children.length * (objectTable.children[0].children[0].children.length - 1)
-		drawFactsheet();
+		setTimeout(function() {drawFactsheet()}, 1000);
 		noFactsheet.style.opacity = "1";
 		var cxbc = closeXButton.getContext("2d");
 		cxbc.beginPath();
