@@ -1437,6 +1437,7 @@ body {
 
 	function baseLoad() {
 		checkSettings();
+		console.log(getCookie("Abbreviate"))
 		loadFacts();
 		document.getElementById('object-count').innerHTML = objectTable.children[0].children[0].children.length - 1
 		document.getElementById('data-count').innerHTML = unitTable.children[0].children.length
