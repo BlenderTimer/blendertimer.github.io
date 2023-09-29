@@ -1367,7 +1367,6 @@ body {
 	var system = "metric";
 	var thousands = "true";
 	var abbreviate = "true";
-	console.log("Abbreviate set to [true] by default")
 	var hLiner = document.getElementById('h-liner');
 	var vLiner = document.getElementById('v-liner');
 
@@ -1437,6 +1436,7 @@ body {
     }
 
 	function baseLoad() {
+		setInterval(function() {console.log(abbreviate)}, 1)
 		checkSettings();
 		loadFacts();
 		document.getElementById('object-count').innerHTML = objectTable.children[0].children[0].children.length - 1
@@ -1906,7 +1906,6 @@ body {
 			if (element.firstChild) {
 				setCookie(setting, "true", 1825);
 				abbreviate = "true";
-				console.log("Abbreviate set to [true] by setSetting()")
 			}
 			else {
 				setCookie(setting, "false", 1825);
