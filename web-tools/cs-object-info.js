@@ -3266,7 +3266,7 @@ var objects = [
         topImageAlign:"none",
         topImageArtist: "Daniel Roberts (BlenderTimer)",
         topImageDate:"2023/09/09", // YYYY/MM/DD
-        width:0.00000000000000000000000000000000000115,
+        width:0.00000000000000000000000000000000000115, // length * 0.071875
         length:0.000000000000000000000000000000000016,
         height:0.000000000000000000000000000000000016,
         category1:"miscellaneous",
@@ -3947,6 +3947,90 @@ var objects = [
         tags:["prototype"], // don't include anything in categories or name
         dateAdded:"2023/09/19", // YYYY/MM/DD
         lastModified:"2023/09/19", // YYYY/MM/DD
+    },
+    {
+        name:"Reach of Hubble (measurement)",
+        defaultAngle: 1,
+        sideImage:"",
+        hasSideImage:false,
+        sideImageAlign:"none",
+        sideImageArtist: "",
+        sideImageDate:"", // YYYY/MM/DD
+        frontImage:"Reach_of_Hubble-vertical",
+        hasFrontImage:true,
+        frontImageAlign:"none",
+        frontImageArtist: "Daniel Roberts (BlenderTimer)",
+        frontImageDate:"2023/09/30", // YYYY/MM/DD
+        topImage:"Reach_of_Hubble-horizontal",
+        hasTopImage:true,
+        topImageAlign:"none",
+        topImageArtist: "Daniel Roberts (BlenderTimer)",
+        topImageDate:"2023/09/30", // YYYY/MM/DD
+        width:9111866036404383000000, // length * 0.071875
+        length:126773788332582720000000,
+        height:126773788332582720000000,
+        category1:"miscellaneous",
+        category2:"non-objects",
+        category3:"measurements",
+        tags:["telescope"], // don't include anything in categories or name
+        dateAdded:"2023/09/30", // YYYY/MM/DD
+        lastModified:"2023/09/30", // YYYY/MM/DD
+    },
+    {
+        name:"Reach of JWST (measurement)",
+        defaultAngle: 1,
+        sideImage:"",
+        hasSideImage:false,
+        sideImageAlign:"none",
+        sideImageArtist: "",
+        sideImageDate:"", // YYYY/MM/DD
+        frontImage:"Reach_of_JWST-vertical",
+        hasFrontImage:true,
+        frontImageAlign:"none",
+        frontImageArtist: "Daniel Roberts (BlenderTimer)",
+        frontImageDate:"2023/09/30", // YYYY/MM/DD
+        topImage:"Reach_of_JWST-horizontal",
+        hasTopImage:true,
+        topImageAlign:"none",
+        topImageArtist: "Daniel Roberts (BlenderTimer)",
+        topImageDate:"2023/09/30", // YYYY/MM/DD
+        width:9247864036947732000000, // length * 0.071875
+        length:128665934427098880000000,
+        height:128665934427098880000000,
+        category1:"miscellaneous",
+        category2:"non-objects",
+        category3:"measurements",
+        tags:["james", "webb", "space", "telescope"], // don't include anything in categories or name
+        dateAdded:"2023/09/30", // YYYY/MM/DD
+        lastModified:"2023/09/30", // YYYY/MM/DD
+    },
+    {
+        name:"Airfish 8",
+        defaultAngle: 0,
+        sideImage:"Airfish_8-side",
+        hasSideImage:true,
+        sideImageAlign:"bottom",
+        sideImageArtist: "Daniel Roberts (BlenderTimer)",
+        sideImageDate:"2023/09/30", // YYYY/MM/DD
+        frontImage:"Airfish_8-front",
+        hasFrontImage:true,
+        frontImageAlign:"bottom",
+        frontImageArtist: "Daniel Roberts (BlenderTimer)",
+        frontImageDate:"2023/09/30", // YYYY/MM/DD
+        topImage:"Airfish_8-top",
+        hasTopImage:true,
+        topImageAlign:"none",
+        topImageArtist: "Daniel Roberts (BlenderTimer)",
+        topImageDate:"2023/09/30", // YYYY/MM/DD
+        width:0.015,
+        length:0.0112,
+        height:0.0035,
+        category1:"transportation",
+        category2:"aircraft",
+        category3:"airplanes",
+        tags:["wig", "wigetworks", "af8", "ground", "effect"], // don't include anything in categories or name
+        dateAdded:"2023/09/30", // YYYY/MM/DD
+        lastModified:"2023/09/30", // YYYY/MM/DD
     },
 ];
 

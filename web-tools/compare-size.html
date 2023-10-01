@@ -108,17 +108,21 @@
 					<p>Searches for objects in the specified category (or a similar category). (searches all 3 category levels)</p><br>
 					<b>Example:</b><c>category:planets</c><br>
 					<p> </p><br>
-					<b>Syntax:</b><c>width:query</c><br>
-					<p>Searches for objects with the specified width (or a similar width). (searches in kilometers)</p><br>
+					<b>Syntax:</b><c>width:queryunit</c><br>
+					<p>Searches for objects with the specified width (or a similar width).<br>Note: Searches in kilometers unless queried otherwise.<br>Valid units: (ly, au, sr, km, m, cm, mm, micron, nm, mi, ft, in)</p><br>
 					<b>Example:</b><c>width:0.01</c><br>
 					<p> </p><br>
-					<b>Syntax:</b><c>length:query</c><br>
-					<p>Searches for objects with the specified length (or a similar length). (searches in kilometers)</p><br>
-					<b>Example:</b><c>length:0.02</c><br>
+					<b>Syntax:</b><c>length:queryunit</c><br>
+					<p>Searches for objects with the specified length (or a similar length).<br>Note: Searches in kilometers unless queried otherwise.<br>Valid units: (ly, au, sr, km, m, cm, mm, micron, nm, mi, ft, in)</p><br>
+					<b>Example:</b><c>length:12m</c><br>
 					<p> </p><br>
-					<b>Syntax:</b><c>height:query</c><br>
-					<p>Searches for objects with the specified height (or a similar height). (searches in kilometers)</p><br>
-					<b>Example:</b><c>height:0.03</c><br>
+					<b>Syntax:</b><c>height:queryunit</c><br>
+					<p>Searches for objects with the specified height (or a similar height).<br>Note: Searches in kilometers unless queried otherwise.<br>Valid units: (ly, au, sr, km, m, cm, mm, micron, nm, mi, ft, in)</p><br>
+					<b>Example:</b><c>height:9micron</c><br>
+					<p> </p><br>
+					<b>Syntax:</b><c>size:queryunit</c><br>
+					<p>Searches for objects with the specified width, length, or height (or a similar width, length, or height).<br>Note: Searches in kilometers unless queried otherwise.<br>Valid units: (ly, au, sr, km, m, cm, mm, micron, nm, mi, ft, in)</p><br>
+					<b>Example:</b><c>height:0.5mi</c><br>
 					<p> </p><br>
 					<b>Syntax:</b><c>date:query</c><br>
 					<p>Searches for objects with the specified last-updated date (or a similar date). (format: yyyy/mm/dd)</p><br>
@@ -193,6 +197,7 @@
 					<p>[Object compared to] vs Aero Spacelines Super Guppy, Boeing, {image artists: Daniel Roberts (BlenderTimer), Daniel Roberts (BlenderTimer), Daniel Roberts (BlenderTimer)}</p>
 					<p>[Object compared to] vs Airbus A330-300, Airliner, {image artists: Daniel Roberts (BlenderTimer), Daniel Roberts (BlenderTimer), Daniel Roberts (BlenderTimer)}</p>
 					<p>[Object compared to] vs Airbus A380-800, Airliner, {image artists: Daniel Roberts (BlenderTimer), Daniel Roberts (BlenderTimer), Daniel Roberts (BlenderTimer)}</p>
+					<p>[Object compared to] vs Airfish 8, Af8, Effect, Ground, Wig, Wigetworks, {image artists: Daniel Roberts (BlenderTimer), Daniel Roberts (BlenderTimer), Daniel Roberts (BlenderTimer)}</p>
 					<p>[Object compared to] vs Alcyoneus, Stars, {image artists: Daniel Roberts (BlenderTimer)}</p>
 					<p>[Object compared to] vs Aldebaran, Ball, Heat, Hot, K5+, K5+ iii, Orange, Red, Red-orange, Sphere, {image artists: Daniel Roberts (BlenderTimer), Daniel Roberts (BlenderTimer), Daniel Roberts (BlenderTimer)}</p>
 					<p>[Object compared to] vs Alpha Centauri A, Ball, G-type, G2, G2-v, Gtype, Heat, Hot, Rigil kentaurus, Sphere, {image artists: Daniel Roberts (BlenderTimer), Daniel Roberts (BlenderTimer), Daniel Roberts (BlenderTimer)}</p>
@@ -291,6 +296,8 @@
 					<p>[Object compared to] vs Pollux, Ball, Heat, Hot, K0, K0iii, Orange, Sphere, Yellow, Yellow-orange, {image artists: Daniel Roberts (BlenderTimer), Daniel Roberts (BlenderTimer), Daniel Roberts (BlenderTimer)}</p>
 					<p>[Object compared to] vs Ponderosa Pine, Pinus ponderosa, {image artists: Daniel Roberts (BlenderTimer)}</p>
 					<p>[Object compared to] vs Proxima Centauri, Ball, Dwarf, Heat, Hot, M5, M5.5, Red, Sphere, {image artists: Daniel Roberts (BlenderTimer), Daniel Roberts (BlenderTimer), Daniel Roberts (BlenderTimer)}</p>
+					<p>[Object compared to] vs Reach of Hubble (measurement), Telescope, {image artists: Daniel Roberts (BlenderTimer), Daniel Roberts (BlenderTimer)}</p>
+					<p>[Object compared to] vs Reach of JWST (measurement), James, Space, Telescope, Webb, {image artists: Daniel Roberts (BlenderTimer), Daniel Roberts (BlenderTimer)}</p>
 					<p>[Object compared to] vs Red Blood Cell, Anatomy, {image artists: Daniel Roberts (BlenderTimer), Daniel Roberts (BlenderTimer), Daniel Roberts (BlenderTimer)}</p>
 					<p>[Object compared to] vs Rigel, B8, B8-ia, Ball, Blue, Heat, Hot, Sphere, {image artists: Daniel Roberts (BlenderTimer), Daniel Roberts (BlenderTimer), Daniel Roberts (BlenderTimer)}</p>
 					<p>[Object compared to] vs Sand (Grain), Sediment, {image artists: Daniel Roberts (BlenderTimer)}</p>
@@ -333,7 +340,7 @@
 				</div>
 			</div>
 		</div>
-		<p id="version">Tool version: 0.2.4</p>
+		<p id="version">Tool version: 0.2.6</p>
 	</body>
 </html>
 <style>
@@ -3210,52 +3217,52 @@ body {
 	  		contNextLevel.classList.add("c-" + i.toString());
 	  		contNextLevel.style.pointerEvents = "none";
 	  		if (contributors[i].contributions >= 1000) {
-	  			contLevel.innerHTML = "Legend (achieved at 1000 contributions)";
+	  			contLevel.innerHTML = "Legend (level 10 achieved at 1000 contributions)";
 	  			contNextLevel.innerHTML = "None (max level reached)";
 	  		contBadge.src = "../static-0/files/images/compare-contributorlevel-10.png";
 	  		}
 	  		else if (contributors[i].contributions >= 750) {
-	  			contLevel.innerHTML = "Incredible (achieved at 750 contributions)";
+	  			contLevel.innerHTML = "Incredible (level 9 achieved at 750 contributions)";
 	  			contNextLevel.innerHTML = "Legend (1000 contributions, " + (1000 - contributors[i].contributions).toString() + " contributions left)";
 	  		contBadge.src = "../static-0/files/images/compare-contributorlevel-9.png";
 	  		}
 	  		else if (contributors[i].contributions >= 500) {
-	  			contLevel.innerHTML = "Outstanding (achieved at 500 contributions)";
+	  			contLevel.innerHTML = "Outstanding (level 8 achieved at 500 contributions)";
 	  			contNextLevel.innerHTML = "Incredible (750 contributions, " + (750 - contributors[i].contributions).toString() + " contributions left)";
 	  		contBadge.src = "../static-0/files/images/compare-contributorlevel-8.png";
 	  		}
 	  		else if (contributors[i].contributions >= 250) {
-	  			contLevel.innerHTML = "Amazing (achieved at 250 contributions)";
+	  			contLevel.innerHTML = "Amazing (level 7 achieved at 250 contributions)";
 	  			contNextLevel.innerHTML = "Outstanding (500 contributions, " + (500 - contributors[i].contributions).toString() + " contributions left)";
 	  		contBadge.src = "../static-0/files/images/compare-contributorlevel-7.png";
 	  		}
 	  		else if (contributors[i].contributions >= 100) {
-	  			contLevel.innerHTML = "Remarkable (achieved at 100 contributions)";
+	  			contLevel.innerHTML = "Remarkable (level 6 achieved at 100 contributions)";
 	  			contNextLevel.innerHTML = "Amazing (250 contributions, " + (250 - contributors[i].contributions).toString() + " contributions left)";
 	  			contBadge.src = "../static-0/files/images/compare-contributorlevel-6.png";
 	  		}
 	  		else if (contributors[i].contributions >= 75) {
-	  			contLevel.innerHTML = "Phenomenal (achieved at 75 contributions)";
+	  			contLevel.innerHTML = "Phenomenal (level 5 achieved at 75 contributions)";
 	  			contNextLevel.innerHTML = "Remarkable (100 contributions, " + (100 - contributors[i].contributions).toString() + " contributions left)";
 	  			contBadge.src = "../static-0/files/images/compare-contributorlevel-5.png";
 	  		}
 	  		else if (contributors[i].contributions >= 50) {
-	  			contLevel.innerHTML = "Super (achieved at 50 contributions)";
+	  			contLevel.innerHTML = "Super (level 4 achieved at 50 contributions)";
 	  			contNextLevel.innerHTML = "Phenomenal (75 contributions, " + (75 - contributors[i].contributions).toString() + " contributions left)";
 	  			contBadge.src = "../static-0/files/images/compare-contributorlevel-4.png";
 	  		}
 	  		else if (contributors[i].contributions >= 25) {
-	  			contLevel.innerHTML = "Great (achieved at 25 contributions)";
+	  			contLevel.innerHTML = "Great (level 3 achieved at 25 contributions)";
 	  			contNextLevel.innerHTML = "Super (50 contributions, " + (50 - contributors[i].contributions).toString() + " contributions left)";
 	  			contBadge.src = "../static-0/files/images/compare-contributorlevel-3.png";
 	  		}
 	  		else if (contributors[i].contributions >= 10) {
-	  			contLevel.innerHTML = "Better (achieved at 10 contributions)";
+	  			contLevel.innerHTML = "Better (level 2 achieved at 10 contributions)";
 	  			contNextLevel.innerHTML = "Great (25 contributions, " + (25 - contributors[i].contributions).toString() + " contributions left)";
 	  			contBadge.src = "../static-0/files/images/compare-contributorlevel-2.png";
 	  		}
 	  		else {
-	  			contLevel.innerHTML = "Good (achieved at 1 contribution)";
+	  			contLevel.innerHTML = "Good (level 1 achieved at 1 contribution)";
 	  			contNextLevel.innerHTML = "Better (10 contributions, " + (10 - contributors[i].contributions).toString() + " contributions left)";
 	  			contBadge.src = "../static-0/files/images/compare-contributorlevel-1.png";
 	  		}
@@ -3269,6 +3276,67 @@ body {
 	  		contList.appendChild(cont);
 		}
 		determineLayout();
+	}
+
+	Number.prototype.toFullNumber = function() {
+		var data = String(this).split(/[eE]/);
+		if (data.length == 1) return data[0];
+
+		var z = '',
+		sign = this < 0 ? '-' : '',
+		str = data[0].replace('.', ''),
+		mag = Number(data[1]) + 1;
+
+		if (mag < 0) {
+			z = sign + '0.';
+			while (mag++) z += '0';
+			return z + str.replace(/^\-/, '');
+		}
+		mag -= str.length;
+		while (mag--) z += '0';
+		return str + z;
+	}
+
+	String.prototype.toUnit = function() {
+		if (this.toString().toLowerCase().endsWith("km")) {
+			return (parseFloat(this.toString().toLowerCase().substring(0, this.toString().toLowerCase().indexOf("km"))) * 1).toString();
+		}
+		else if (this.toString().toLowerCase().endsWith("cm")) {
+			return (parseFloat(this.toString().toLowerCase().substring(0, this.toString().toLowerCase().indexOf("cm"))) / 100000).toString();
+		}
+		else if (this.toString().toLowerCase().endsWith("mm")) {
+			return (parseFloat(this.toString().toLowerCase().substring(0, this.toString().toLowerCase().indexOf("mm"))) / 1000000).toString();
+		}
+		else if (this.toString().toLowerCase().endsWith("micron")) {
+			return (parseFloat(this.toString().toLowerCase().substring(0, this.toString().toLowerCase().indexOf("micron"))) / 1000000000).toString();
+		}
+		else if (this.toString().toLowerCase().endsWith("nm")) {
+			return (parseFloat(this.toString().toLowerCase().substring(0, this.toString().toLowerCase().indexOf("nm"))) / 1000000000).toString();
+		}
+		else if (this.toString().toLowerCase().endsWith("m")) {
+			return (parseFloat(this.toString().toLowerCase().substring(0, this.toString().toLowerCase().indexOf("m"))) / 1000).toString();
+		}
+		else if (this.toString().toLowerCase().endsWith("mi")) {
+			return (parseFloat(this.toString().toLowerCase().substring(0, this.toString().toLowerCase().indexOf("mi"))) * 1.609344).toString();
+		}
+		else if (this.toString().toLowerCase().endsWith("ft")) {
+			return (parseFloat(this.toString().toLowerCase().substring(0, this.toString().toLowerCase().indexOf("ft"))) * 0.0003048).toString();
+		}
+		else if (this.toString().toLowerCase().endsWith("in")) {
+			return (parseFloat(this.toString().toLowerCase().substring(0, this.toString().toLowerCase().indexOf("in"))) * 0.0000254).toString();
+		}
+		else if (this.toString().toLowerCase().endsWith("ly")) {
+			return (parseFloat(this.toString().toLowerCase().substring(0, this.toString().toLowerCase().indexOf("ly"))) * 9460730472580.8).toString();
+		}
+		else if (this.toString().toLowerCase().endsWith("au")) {
+			return (parseFloat(this.toString().toLowerCase().substring(0, this.toString().toLowerCase().indexOf("au"))) * 149597870.7).toString();
+		}
+		else if (this.toString().toLowerCase().endsWith("sr")) {
+			return (parseFloat(this.toString().toLowerCase().substring(0, this.toString().toLowerCase().indexOf("sr"))) * 695658).toString();
+		}
+		else {
+			return this.toString();
+		}
 	}
 
     var searchObjects = [];
@@ -3437,10 +3505,10 @@ body {
   						}
   					}
   					else if (searchBar.value.toString().startsWith("width:")) {
-  						if (objects[i].width.toString().toLowerCase() == searchBar.value.toString().toLowerCase().substring(6, searchBar.value.toString().length)) {
+  						if (objects[i].width.toFullNumber().toLowerCase() == searchBar.value.toString().toLowerCase().substring(6, searchBar.value.toString().length).toUnit()) {
   							objects[i].searchRelevance = 100000;
   						}
-  						else if (objects[i].width.toString().toLowerCase().startsWith(searchBar.value.toString().toLowerCase().substring(6, searchBar.value.toString().length))) {
+  						else if (objects[i].width.toFullNumber().toLowerCase().startsWith(searchBar.value.toString().toLowerCase().substring(6, searchBar.value.toString().length).toUnit())) {
   							objects[i].searchRelevance = 10000;
   						}
   						else {
@@ -3448,10 +3516,10 @@ body {
   						}
   					}
   					else if (searchBar.value.toString().startsWith("length:")) {
-  						if (objects[i].length.toString().toLowerCase() == searchBar.value.toString().toLowerCase().substring(7, searchBar.value.toString().length)) {
+  						if (objects[i].length.toFullNumber().toLowerCase() == searchBar.value.toString().toLowerCase().substring(7, searchBar.value.toString().length).toUnit()) {
   							objects[i].searchRelevance = 100000;
   						}
-  						else if (objects[i].length.toString().toLowerCase().startsWith(searchBar.value.toString().toLowerCase().substring(7, searchBar.value.toString().length))) {
+  						else if (objects[i].length.toFullNumber().toLowerCase().startsWith(searchBar.value.toString().toLowerCase().substring(7, searchBar.value.toString().length).toUnit())) {
   							objects[i].searchRelevance = 10000;
   						}
   						else {
@@ -3459,10 +3527,21 @@ body {
   						}
   					}
   					else if (searchBar.value.toString().startsWith("height:")) {
-  						if (objects[i].height.toString().toLowerCase() == searchBar.value.toString().toLowerCase().substring(7, searchBar.value.toString().length)) {
+  						if (objects[i].height.toFullNumber().toLowerCase() == searchBar.value.toString().toLowerCase().substring(7, searchBar.value.toString().length).toUnit()) {
   							objects[i].searchRelevance = 100000;
   						}
-  						else if (objects[i].height.toString().toLowerCase().startsWith(searchBar.value.toString().toLowerCase().substring(7, searchBar.value.toString().length))) {
+  						else if (objects[i].height.toFullNumber().toLowerCase().startsWith(searchBar.value.toString().toLowerCase().substring(7, searchBar.value.toString().length).toUnit())) {
+  							objects[i].searchRelevance = 10000;
+  						}
+  						else {
+  							objects[i].searchRelevance = 0;
+  						}
+  					}
+  					else if (searchBar.value.toString().startsWith("size:")) {
+  						if (objects[i].width.toFullNumber().toLowerCase() == searchBar.value.toString().toLowerCase().substring(5, searchBar.value.toString().length).toUnit() || objects[i].length.toFullNumber().toLowerCase() == searchBar.value.toString().toLowerCase().substring(5, searchBar.value.toString().length).toUnit() || objects[i].height.toFullNumber().toLowerCase() == searchBar.value.toString().toLowerCase().substring(5, searchBar.value.toString().length).toUnit()) {
+  							objects[i].searchRelevance = 100000;
+  						}
+  						else if (objects[i].width.toFullNumber().toLowerCase().startsWith(searchBar.value.toString().toLowerCase().substring(5, searchBar.value.toString().length).toUnit()) || objects[i].length.toFullNumber().toLowerCase().startsWith(searchBar.value.toString().toLowerCase().substring(5, searchBar.value.toString().length).toUnit()) || objects[i].height.toFullNumber().toLowerCase().startsWith(searchBar.value.toString().toLowerCase().substring(5, searchBar.value.toString().length).toUnit())) {
   							objects[i].searchRelevance = 10000;
   						}
   						else {
