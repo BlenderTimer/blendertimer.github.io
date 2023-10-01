@@ -1890,7 +1890,10 @@ body {
 	}
 
 	function setSetting(setting) {
-		var element = event.target || event.srcElement;
+		var element
+		if (event) {
+			element =  = event.target || event.srcElement;
+		}
 		if (setting == "Thousands") {
 			if (element.firstChild) {
 				setCookie(setting, "true", 1825);
