@@ -4032,6 +4032,62 @@ var objects = [
         dateAdded:"2023/09/30", // YYYY/MM/DD
         lastModified:"2023/09/30", // YYYY/MM/DD
     },
+    {
+        name:"Atlantic Salmon",
+        defaultAngle: 0,
+        sideImage:"Atlantic_Salmon-side",
+        hasSideImage:true,
+        sideImageAlign:"none",
+        sideImageArtist: "Daniel Roberts (BlenderTimer)",
+        sideImageDate:"2023/10/01", // YYYY/MM/DD
+        frontImage:"",
+        hasFrontImage:false,
+        frontImageAlign:"bottom",
+        frontImageArtist: "",
+        frontImageDate:"", // YYYY/MM/DD
+        topImage:"",
+        hasTopImage:false,
+        topImageAlign:"none",
+        topImageArtist: "",
+        topImageDate:"", // YYYY/MM/DD
+        width:0.0002,
+        length:0.0008,
+        height:0.00025,
+        category1:"nature",
+        category2:"animals",
+        category3:"fish",
+        tags:["salmo salar"], // don't include anything in categories or name
+        dateAdded:"2023/10/01", // YYYY/MM/DD
+        lastModified:"2023/10/01", // YYYY/MM/DD
+    },
+    {
+        name:"Goldfish",
+        defaultAngle: 0,
+        sideImage:"Goldfish-side",
+        hasSideImage:true,
+        sideImageAlign:"none",
+        sideImageArtist: "Daniel Roberts (BlenderTimer)",
+        sideImageDate:"2023/10/01", // YYYY/MM/DD
+        frontImage:"",
+        hasFrontImage:false,
+        frontImageAlign:"bottom",
+        frontImageArtist: "",
+        frontImageDate:"", // YYYY/MM/DD
+        topImage:"",
+        hasTopImage:false,
+        topImageAlign:"none",
+        topImageArtist: "",
+        topImageDate:"", // YYYY/MM/DD
+        width:0.00004,
+        length:0.00015,
+        height:0.000067,
+        category1:"nature",
+        category2:"animals",
+        category3:"fish",
+        tags:["carassius auratus"], // don't include anything in categories or name
+        dateAdded:"2023/10/01", // YYYY/MM/DD
+        lastModified:"2023/10/01", // YYYY/MM/DD
+    },
 ];
 
 //	———————— STEPS FOR UPDATING ————————
