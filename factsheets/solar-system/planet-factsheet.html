@@ -31,6 +31,7 @@
 		<h4 id="info">Click it, copy it!</h4>
 		<h2 id="no-factsheet" style="opacity: 0; display: none">Factsheet Unavailable</h2>
 		<div id="factsheet" style="display: block">
+			<div id="fs-search"><label>Search:</label><input type="text" id="fs-searchbar" oninput="search()"><p id="fs-noresults" style="display: none">No results.</p></div>
 			<div style="width: 100%; height: 80vh; border-radius: 20px; overflow: hidden">
 				<table id="system-table">
 					<tr><th style="background: #151515; border-color: #888888; cursor: pointer" onclick="switchUnits()" id="units">Units: Metric</th></tr>
@@ -904,6 +905,41 @@ body {
 	display: block;
 	overflow: hidden;
 	border: 4px solid #252525;
+}
+
+#fs-search {
+	display: flex;
+	margin: 5px 5px 3px 10px;
+}
+
+#fs-search label {
+	margin: 2px 5px 0px 0px;
+	width: auto;
+	font-family: monospace;
+	font-size: 12pt;
+}
+
+#fs-searchbar {
+	display: block;
+	width: 100%;
+	font-family: monospace;
+	font-size: 12pt;
+	color: #A5A5A5;
+	background: #181818;
+	border: none;
+	outline: none;
+	padding: 3px 5px;
+	border-radius: 5px;
+	box-shadow: 0px 0px 20px #0005 inset;
+	transition: 0.3s;
+}
+
+#fs-search p {
+	margin: 2px 5px 0px 5px;
+	width: auto;
+	font-family: monospace;
+	font-size: 12pt;
+	white-space: nowrap;
 }
 
 #system-table {
@@ -2278,5 +2314,108 @@ body {
 				break
 			}
 		}
+	}
+
+	function search() {
+		var fsSearch = document.getElementById('fs-search');
+		var fsSearchbar = document.getElementById('fs-searchbar');
+		var fsNoResults = document.getElementById('fs-noresults');
+		var result = false;
+		var bestFind = 0;
+		setTimeout(function() {
+			if (fsSearchbar.value.length > 0) {
+				var keywords = fsSearchbar.value.split(" ");
+				for (var i=0; i < objectTable.children[0].children[0].children.length; i++) {
+					var resultRelevance = 0;
+					var latterPriority = false;
+					if (keywords.indexOf("of") > -1 || keywords.indexOf("Of") > -1 || keywords.indexOf("OF") > -1 || keywords.indexOf("oF") > -1) {
+						latterPriority = true;
+					}
+					for (var i2=0; i2 < keywords.length; i2++) {
+						if (objectTable.children[0].children[0].children[i].textContent.toLowerCase() == keywords[i2].toLowerCase()) {
+							if (latterPriority == true) {
+								resultRelevance += 1000;
+							}
+							else {
+								resultRelevance += (1000 / i2);
+							}
+							result = true;
+						}
+						else if (objectTable.children[0].children[0].children[i].textContent.toLowerCase().startsWith(keywords[i2].toLowerCase())) {
+							if (latterPriority == true) {
+								resultRelevance += 100;
+							}
+							else {
+								resultRelevance += (100 / i2);
+							}
+							result = true;
+						}
+						else if (objectTable.children[0].children[0].children[i].textContent.toLowerCase().indexOf(keywords[i2].toLowerCase()) > -1) {
+							if (latterPriority == true) {
+								resultRelevance += 10;
+							}
+							else {
+								resultRelevance += (10 / i2);
+							}
+							result = true;
+						}
+					}
+					if (resultRelevance > bestFind) {
+						bestFind = resultRelevance;
+						primaryTable.scrollLeft = objectTable.children[0].children[0].children[i].offsetLeft - unitTable.offsetWidth;
+					}
+				}
+				bestFind = 0;
+				for (var i=0; i < unitTable.children[0].children.length; i++) {
+					var resultRelevance = 0;
+					var latterPriority = false;
+					if (keywords.indexOf("of") > -1 || keywords.indexOf("Of") > -1 || keywords.indexOf("OF") > -1 || keywords.indexOf("oF") > -1) {
+						latterPriority = true;
+					}
+					for (var i2=0; i2 < keywords.length; i2++) {
+						if (unitTable.children[0].children[i].children[0].textContent.toLowerCase() == keywords[i2].toLowerCase()) {
+							if (latterPriority == true) {
+								resultRelevance += (1000 / i2);
+							}
+							else {
+								resultRelevance += 1000;
+							}
+							result = true;
+						}
+						else if (unitTable.children[0].children[i].children[0].textContent.toLowerCase().startsWith(keywords[i2].toLowerCase())) {
+							if (latterPriority == true) {
+								resultRelevance += (100 / i2);
+							}
+							else {
+								resultRelevance += 100;
+							}
+							result = true;
+						}
+						else if (unitTable.children[0].children[i].children[0].textContent.toLowerCase().indexOf(keywords[i2].toLowerCase()) > -1) {
+							if (latterPriority == true) {
+								resultRelevance += (10 / i2);
+							}
+							else {
+								resultRelevance += 10;
+							}
+							result = true;
+						}
+					}
+					if (resultRelevance > bestFind) {
+						bestFind = resultRelevance;
+						primaryTable.scrollTop = unitTable.children[0].children[i].children[0].offsetTop - 8;
+					}
+				}
+				if (result == false) {
+					fsNoResults.style.display = "inline";
+				}
+				else {
+					fsNoResults.style.display = "none";
+				}
+			}
+			else {
+				fsNoResults.style.display = "none";
+			}
+		}, 1);
 	}
 </script>
