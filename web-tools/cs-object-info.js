@@ -3250,18 +3250,18 @@ var objects = [
     },
     {
         name:"Planck Length (measurement)",
-        defaultAngle: 1,
+        defaultAngle: 2,
         sideImage:"",
         hasSideImage:false,
         sideImageAlign:"none",
         sideImageArtist: "",
         sideImageDate:"", // YYYY/MM/DD
-        frontImage:"Planck_Length-vertical",
+        frontImage:"Measurement-vertical",
         hasFrontImage:true,
         frontImageAlign:"none",
         frontImageArtist: "Daniel Roberts (BlenderTimer)",
         frontImageDate:"2023/09/09", // YYYY/MM/DD
-        topImage:"Planck_Length-horizontal",
+        topImage:"Measurement-horizontal",
         hasTopImage:true,
         topImageAlign:"none",
         topImageArtist: "Daniel Roberts (BlenderTimer)",
@@ -3950,22 +3950,22 @@ var objects = [
     },
     {
         name:"Reach of Hubble (measurement)",
-        defaultAngle: 1,
+        defaultAngle: 2,
         sideImage:"",
         hasSideImage:false,
         sideImageAlign:"none",
         sideImageArtist: "",
         sideImageDate:"", // YYYY/MM/DD
-        frontImage:"Reach_of_Hubble-vertical",
+        frontImage:"Measurement-vertical",
         hasFrontImage:true,
         frontImageAlign:"none",
         frontImageArtist: "Daniel Roberts (BlenderTimer)",
-        frontImageDate:"2023/09/30", // YYYY/MM/DD
-        topImage:"Reach_of_Hubble-horizontal",
+        frontImageDate:"2023/09/09", // YYYY/MM/DD
+        topImage:"Measurement-horizontal",
         hasTopImage:true,
         topImageAlign:"none",
         topImageArtist: "Daniel Roberts (BlenderTimer)",
-        topImageDate:"2023/09/30", // YYYY/MM/DD
+        topImageDate:"2023/09/09", // YYYY/MM/DD
         width:9111866036404383000000, // length * 0.071875
         length:126773788332582720000000,
         height:126773788332582720000000,
@@ -3978,22 +3978,22 @@ var objects = [
     },
     {
         name:"Reach of JWST (measurement)",
-        defaultAngle: 1,
+        defaultAngle: 2,
         sideImage:"",
         hasSideImage:false,
         sideImageAlign:"none",
         sideImageArtist: "",
         sideImageDate:"", // YYYY/MM/DD
-        frontImage:"Reach_of_JWST-vertical",
+        frontImage:"Measurement-vertical",
         hasFrontImage:true,
         frontImageAlign:"none",
         frontImageArtist: "Daniel Roberts (BlenderTimer)",
-        frontImageDate:"2023/09/30", // YYYY/MM/DD
-        topImage:"Reach_of_JWST-horizontal",
+        frontImageDate:"2023/09/09", // YYYY/MM/DD
+        topImage:"Measurement-horizontal",
         hasTopImage:true,
         topImageAlign:"none",
         topImageArtist: "Daniel Roberts (BlenderTimer)",
-        topImageDate:"2023/09/30", // YYYY/MM/DD
+        topImageDate:"2023/09/09", // YYYY/MM/DD
         width:9247864036947732000000, // length * 0.071875
         length:128665934427098880000000,
         height:128665934427098880000000,
@@ -4087,6 +4087,426 @@ var objects = [
         tags:["carassius auratus"], // don't include anything in categories or name
         dateAdded:"2023/10/01", // YYYY/MM/DD
         lastModified:"2023/10/01", // YYYY/MM/DD
+    },
+    {
+        name:"Oumuamua",
+        defaultAngle: 0,
+        sideImage:"Oumuamua-side",
+        hasSideImage:true,
+        sideImageAlign:"none",
+        sideImageArtist: "Daniel Roberts (BlenderTimer)",
+        sideImageDate:"2023/10/02", // YYYY/MM/DD
+        frontImage:"",
+        hasFrontImage:false,
+        frontImageAlign:"bottom",
+        frontImageArtist: "",
+        frontImageDate:"", // YYYY/MM/DD
+        topImage:"",
+        hasTopImage:false,
+        topImageAlign:"none",
+        topImageArtist: "",
+        topImageDate:"", // YYYY/MM/DD
+        width:0.111,
+        length:0.115,
+        height:0.019,
+        category1:"space",
+        category2:"objects",
+        category3:"asteroids",
+        tags:["interstellar"], // don't include anything in categories or name
+        dateAdded:"2023/10/02", // YYYY/MM/DD
+        lastModified:"2023/10/02", // YYYY/MM/DD
+    },
+    {
+        name:"Meter (measurement)",
+        defaultAngle: 2,
+        sideImage:"",
+        hasSideImage:false,
+        sideImageAlign:"none",
+        sideImageArtist: "",
+        sideImageDate:"", // YYYY/MM/DD
+        frontImage:"Measurement-vertical",
+        hasFrontImage:true,
+        frontImageAlign:"none",
+        frontImageArtist: "Daniel Roberts (BlenderTimer)",
+        frontImageDate:"2023/09/09", // YYYY/MM/DD
+        topImage:"Measurement-horizontal",
+        hasTopImage:true,
+        topImageAlign:"none",
+        topImageArtist: "Daniel Roberts (BlenderTimer)",
+        topImageDate:"2023/09/09", // YYYY/MM/DD
+        width:0.000071875, // length * 0.071875
+        length:0.001,
+        height:0.001,
+        category1:"miscellaneous",
+        category2:"non-objects",
+        category3:"measurements",
+        tags:["metric"], // don't include anything in categories or name
+        dateAdded:"2023/10/02", // YYYY/MM/DD
+        lastModified:"2023/10/02", // YYYY/MM/DD
+    },
+    {
+        name:"Kilometer (measurement)",
+        defaultAngle: 2,
+        sideImage:"",
+        hasSideImage:false,
+        sideImageAlign:"none",
+        sideImageArtist: "",
+        sideImageDate:"", // YYYY/MM/DD
+        frontImage:"Measurement-vertical",
+        hasFrontImage:true,
+        frontImageAlign:"none",
+        frontImageArtist: "Daniel Roberts (BlenderTimer)",
+        frontImageDate:"2023/09/09", // YYYY/MM/DD
+        topImage:"Measurement-horizontal",
+        hasTopImage:true,
+        topImageAlign:"none",
+        topImageArtist: "Daniel Roberts (BlenderTimer)",
+        topImageDate:"2023/09/09", // YYYY/MM/DD
+        width:0.071875, // length * 0.071875
+        length:1,
+        height:1,
+        category1:"miscellaneous",
+        category2:"non-objects",
+        category3:"measurements",
+        tags:["metric"], // don't include anything in categories or name
+        dateAdded:"2023/10/02", // YYYY/MM/DD
+        lastModified:"2023/10/02", // YYYY/MM/DD
+    },
+    {
+        name:"Centimeter (measurement)",
+        defaultAngle: 2,
+        sideImage:"",
+        hasSideImage:false,
+        sideImageAlign:"none",
+        sideImageArtist: "",
+        sideImageDate:"", // YYYY/MM/DD
+        frontImage:"Measurement-vertical",
+        hasFrontImage:true,
+        frontImageAlign:"none",
+        frontImageArtist: "Daniel Roberts (BlenderTimer)",
+        frontImageDate:"2023/09/09", // YYYY/MM/DD
+        topImage:"Measurement-horizontal",
+        hasTopImage:true,
+        topImageAlign:"none",
+        topImageArtist: "Daniel Roberts (BlenderTimer)",
+        topImageDate:"2023/09/09", // YYYY/MM/DD
+        width:0.00000071875, // length * 0.071875
+        length:0.00001,
+        height:0.00001,
+        category1:"miscellaneous",
+        category2:"non-objects",
+        category3:"measurements",
+        tags:["metric"], // don't include anything in categories or name
+        dateAdded:"2023/10/02", // YYYY/MM/DD
+        lastModified:"2023/10/02", // YYYY/MM/DD
+    },
+    {
+        name:"Millimeter (measurement)",
+        defaultAngle: 2,
+        sideImage:"",
+        hasSideImage:false,
+        sideImageAlign:"none",
+        sideImageArtist: "",
+        sideImageDate:"", // YYYY/MM/DD
+        frontImage:"Measurement-vertical",
+        hasFrontImage:true,
+        frontImageAlign:"none",
+        frontImageArtist: "Daniel Roberts (BlenderTimer)",
+        frontImageDate:"2023/09/09", // YYYY/MM/DD
+        topImage:"Measurement-horizontal",
+        hasTopImage:true,
+        topImageAlign:"none",
+        topImageArtist: "Daniel Roberts (BlenderTimer)",
+        topImageDate:"2023/09/09", // YYYY/MM/DD
+        width:0.000000071875, // length * 0.071875
+        length:0.000001,
+        height:0.000001,
+        category1:"miscellaneous",
+        category2:"non-objects",
+        category3:"measurements",
+        tags:["metric"], // don't include anything in categories or name
+        dateAdded:"2023/10/02", // YYYY/MM/DD
+        lastModified:"2023/10/02", // YYYY/MM/DD
+    },
+    {
+        name:"Micrometer (measurement)",
+        defaultAngle: 2,
+        sideImage:"",
+        hasSideImage:false,
+        sideImageAlign:"none",
+        sideImageArtist: "",
+        sideImageDate:"", // YYYY/MM/DD
+        frontImage:"Measurement-vertical",
+        hasFrontImage:true,
+        frontImageAlign:"none",
+        frontImageArtist: "Daniel Roberts (BlenderTimer)",
+        frontImageDate:"2023/09/09", // YYYY/MM/DD
+        topImage:"Measurement-horizontal",
+        hasTopImage:true,
+        topImageAlign:"none",
+        topImageArtist: "Daniel Roberts (BlenderTimer)",
+        topImageDate:"2023/09/09", // YYYY/MM/DD
+        width:0.000000000071875, // length * 0.071875
+        length:0.000000001,
+        height:0.000000001,
+        category1:"miscellaneous",
+        category2:"non-objects",
+        category3:"measurements",
+        tags:["metric", "micron"], // don't include anything in categories or name
+        dateAdded:"2023/10/02", // YYYY/MM/DD
+        lastModified:"2023/10/02", // YYYY/MM/DD
+    },
+    {
+        name:"Nanometer (measurement)",
+        defaultAngle: 2,
+        sideImage:"",
+        hasSideImage:false,
+        sideImageAlign:"none",
+        sideImageArtist: "",
+        sideImageDate:"", // YYYY/MM/DD
+        frontImage:"Measurement-vertical",
+        hasFrontImage:true,
+        frontImageAlign:"none",
+        frontImageArtist: "Daniel Roberts (BlenderTimer)",
+        frontImageDate:"2023/09/09", // YYYY/MM/DD
+        topImage:"Measurement-horizontal",
+        hasTopImage:true,
+        topImageAlign:"none",
+        topImageArtist: "Daniel Roberts (BlenderTimer)",
+        topImageDate:"2023/09/09", // YYYY/MM/DD
+        width:0.000000000000071875, // length * 0.071875
+        length:0.000000000001,
+        height:0.000000000001,
+        category1:"miscellaneous",
+        category2:"non-objects",
+        category3:"measurements",
+        tags:["metric"], // don't include anything in categories or name
+        dateAdded:"2023/10/02", // YYYY/MM/DD
+        lastModified:"2023/10/02", // YYYY/MM/DD
+    },
+    {
+        name:"Picometer (measurement)",
+        defaultAngle: 2,
+        sideImage:"",
+        hasSideImage:false,
+        sideImageAlign:"none",
+        sideImageArtist: "",
+        sideImageDate:"", // YYYY/MM/DD
+        frontImage:"Measurement-vertical",
+        hasFrontImage:true,
+        frontImageAlign:"none",
+        frontImageArtist: "Daniel Roberts (BlenderTimer)",
+        frontImageDate:"2023/09/09", // YYYY/MM/DD
+        topImage:"Measurement-horizontal",
+        hasTopImage:true,
+        topImageAlign:"none",
+        topImageArtist: "Daniel Roberts (BlenderTimer)",
+        topImageDate:"2023/09/09", // YYYY/MM/DD
+        width:0.000000000000000071875, // length * 0.071875
+        length:0.000000000000001,
+        height:0.000000000000001,
+        category1:"miscellaneous",
+        category2:"non-objects",
+        category3:"measurements",
+        tags:["metric"], // don't include anything in categories or name
+        dateAdded:"2023/10/02", // YYYY/MM/DD
+        lastModified:"2023/10/02", // YYYY/MM/DD
+    },
+    {
+        name:"Light-year (measurement)",
+        defaultAngle: 2,
+        sideImage:"",
+        hasSideImage:false,
+        sideImageAlign:"none",
+        sideImageArtist: "",
+        sideImageDate:"", // YYYY/MM/DD
+        frontImage:"Measurement-vertical",
+        hasFrontImage:true,
+        frontImageAlign:"none",
+        frontImageArtist: "Daniel Roberts (BlenderTimer)",
+        frontImageDate:"2023/09/09", // YYYY/MM/DD
+        topImage:"Measurement-horizontal",
+        hasTopImage:true,
+        topImageAlign:"none",
+        topImageArtist: "Daniel Roberts (BlenderTimer)",
+        topImageDate:"2023/09/09", // YYYY/MM/DD
+        width:679990002716.745, // length * 0.071875
+        length:9460730472580.8,
+        height:9460730472580.8,
+        category1:"miscellaneous",
+        category2:"non-objects",
+        category3:"measurements",
+        tags:["space"], // don't include anything in categories or name
+        dateAdded:"2023/10/02", // YYYY/MM/DD
+        lastModified:"2023/10/02", // YYYY/MM/DD
+    },
+    {
+        name:"Astronomical Unit (measurement)",
+        defaultAngle: 2,
+        sideImage:"",
+        hasSideImage:false,
+        sideImageAlign:"none",
+        sideImageArtist: "",
+        sideImageDate:"", // YYYY/MM/DD
+        frontImage:"Measurement-vertical",
+        hasFrontImage:true,
+        frontImageAlign:"none",
+        frontImageArtist: "Daniel Roberts (BlenderTimer)",
+        frontImageDate:"2023/09/09", // YYYY/MM/DD
+        topImage:"Measurement-horizontal",
+        hasTopImage:true,
+        topImageAlign:"none",
+        topImageArtist: "Daniel Roberts (BlenderTimer)",
+        topImageDate:"2023/09/09", // YYYY/MM/DD
+        width:10752346.9565625, // length * 0.071875
+        length:149597870.7,
+        height:149597870.7,
+        category1:"miscellaneous",
+        category2:"non-objects",
+        category3:"measurements",
+        tags:["space"], // don't include anything in categories or name
+        dateAdded:"2023/10/02", // YYYY/MM/DD
+        lastModified:"2023/10/02", // YYYY/MM/DD
+    },
+    {
+        name:"Solar Radii (measurement)",
+        defaultAngle: 2,
+        sideImage:"",
+        hasSideImage:false,
+        sideImageAlign:"none",
+        sideImageArtist: "",
+        sideImageDate:"", // YYYY/MM/DD
+        frontImage:"Measurement-vertical",
+        hasFrontImage:true,
+        frontImageAlign:"none",
+        frontImageArtist: "Daniel Roberts (BlenderTimer)",
+        frontImageDate:"2023/09/09", // YYYY/MM/DD
+        topImage:"Measurement-horizontal",
+        hasTopImage:true,
+        topImageAlign:"none",
+        topImageArtist: "Daniel Roberts (BlenderTimer)",
+        topImageDate:"2023/09/09", // YYYY/MM/DD
+        width:50000.41875, // length * 0.071875
+        length:695658,
+        height:695658,
+        category1:"miscellaneous",
+        category2:"non-objects",
+        category3:"measurements",
+        tags:["space"], // don't include anything in categories or name
+        dateAdded:"2023/10/02", // YYYY/MM/DD
+        lastModified:"2023/10/02", // YYYY/MM/DD
+    },
+    {
+        name:"Mile (measurement)",
+        defaultAngle: 2,
+        sideImage:"",
+        hasSideImage:false,
+        sideImageAlign:"none",
+        sideImageArtist: "",
+        sideImageDate:"", // YYYY/MM/DD
+        frontImage:"Measurement-vertical",
+        hasFrontImage:true,
+        frontImageAlign:"none",
+        frontImageArtist: "Daniel Roberts (BlenderTimer)",
+        frontImageDate:"2023/09/09", // YYYY/MM/DD
+        topImage:"Measurement-horizontal",
+        hasTopImage:true,
+        topImageAlign:"none",
+        topImageArtist: "Daniel Roberts (BlenderTimer)",
+        topImageDate:"2023/09/09", // YYYY/MM/DD
+        width:0.1156716, // length * 0.071875
+        length:1.609344,
+        height:1.609344,
+        category1:"miscellaneous",
+        category2:"non-objects",
+        category3:"measurements",
+        tags:["imperial"], // don't include anything in categories or name
+        dateAdded:"2023/10/02", // YYYY/MM/DD
+        lastModified:"2023/10/02", // YYYY/MM/DD
+    },
+    {
+        name:"Foot (measurement)",
+        defaultAngle: 2,
+        sideImage:"",
+        hasSideImage:false,
+        sideImageAlign:"none",
+        sideImageArtist: "",
+        sideImageDate:"", // YYYY/MM/DD
+        frontImage:"Measurement-vertical",
+        hasFrontImage:true,
+        frontImageAlign:"none",
+        frontImageArtist: "Daniel Roberts (BlenderTimer)",
+        frontImageDate:"2023/09/09", // YYYY/MM/DD
+        topImage:"Measurement-horizontal",
+        hasTopImage:true,
+        topImageAlign:"none",
+        topImageArtist: "Daniel Roberts (BlenderTimer)",
+        topImageDate:"2023/09/09", // YYYY/MM/DD
+        width:0.0000219075, // length * 0.071875
+        length:0.0003048,
+        height:0.0003048,
+        category1:"miscellaneous",
+        category2:"non-objects",
+        category3:"measurements",
+        tags:["imperial"], // don't include anything in categories or name
+        dateAdded:"2023/10/02", // YYYY/MM/DD
+        lastModified:"2023/10/02", // YYYY/MM/DD
+    },
+    {
+        name:"Inch (measurement)",
+        defaultAngle: 2,
+        sideImage:"",
+        hasSideImage:false,
+        sideImageAlign:"none",
+        sideImageArtist: "",
+        sideImageDate:"", // YYYY/MM/DD
+        frontImage:"Measurement-vertical",
+        hasFrontImage:true,
+        frontImageAlign:"none",
+        frontImageArtist: "Daniel Roberts (BlenderTimer)",
+        frontImageDate:"2023/09/09", // YYYY/MM/DD
+        topImage:"Measurement-horizontal",
+        hasTopImage:true,
+        topImageAlign:"none",
+        topImageArtist: "Daniel Roberts (BlenderTimer)",
+        topImageDate:"2023/09/09", // YYYY/MM/DD
+        width:0.000001825625, // length * 0.071875
+        length:0.0000254,
+        height:0.0000254,
+        category1:"miscellaneous",
+        category2:"non-objects",
+        category3:"measurements",
+        tags:["imperial"], // don't include anything in categories or name
+        dateAdded:"2023/10/02", // YYYY/MM/DD
+        lastModified:"2023/10/02", // YYYY/MM/DD
+    },
+    {
+        name:"Thou (measurement)",
+        defaultAngle: 2,
+        sideImage:"",
+        hasSideImage:false,
+        sideImageAlign:"none",
+        sideImageArtist: "",
+        sideImageDate:"", // YYYY/MM/DD
+        frontImage:"Measurement-vertical",
+        hasFrontImage:true,
+        frontImageAlign:"none",
+        frontImageArtist: "Daniel Roberts (BlenderTimer)",
+        frontImageDate:"2023/09/09", // YYYY/MM/DD
+        topImage:"Measurement-horizontal",
+        hasTopImage:true,
+        topImageAlign:"none",
+        topImageArtist: "Daniel Roberts (BlenderTimer)",
+        topImageDate:"2023/09/09", // YYYY/MM/DD
+        width:0.000000001825625, // length * 0.071875
+        length:0.0000000254,
+        height:0.0000000254,
+        category1:"miscellaneous",
+        category2:"non-objects",
+        category3:"measurements",
+        tags:["imperial", "mil", "thousandth"], // don't include anything in categories or name
+        dateAdded:"2023/10/02", // YYYY/MM/DD
+        lastModified:"2023/10/02", // YYYY/MM/DD
     },
 ];
 
