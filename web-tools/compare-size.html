@@ -357,7 +357,7 @@
 				</div>
 			</div>
 		</div>
-		<p id="version">Tool version: 0.2.8</p>
+		<p id="version">Tool version: 0.2.9</p>
 	</body>
 </html>
 <style>
@@ -3098,7 +3098,7 @@ body {
 					if (contDate.getTime() > contributors[conts.indexOf(objsCont[i].sideImageArtist.toString())].lastContributionDate) {
 						contributors[conts.indexOf(objsCont[i].sideImageArtist.toString())].lastContributionDate = contDate;
 						contributors[conts.indexOf(objsCont[i].sideImageArtist.toString())].lastContribution = objsCont[i].sideImage;
-						contributors[conts.indexOf(objsCont[i].topImageArtist.toString())].lastContributionID = objsCont[i].originalObjectID;
+						contributors[conts.indexOf(objsCont[i].sideImageArtist.toString())].lastContributionID = objsCont[i].originalObjectID;
 					}
 				}
 				if (conts.indexOf(objsCont[i].frontImageArtist.toString()) > -1) {
@@ -3106,7 +3106,7 @@ body {
 					if (contDate.getTime() > contributors[conts.indexOf(objsCont[i].frontImageArtist.toString())].lastContributionDate) {
 						contributors[conts.indexOf(objsCont[i].frontImageArtist.toString())].lastContributionDate = contDate;
 						contributors[conts.indexOf(objsCont[i].frontImageArtist.toString())].lastContribution = objsCont[i].frontImage;
-						contributors[conts.indexOf(objsCont[i].topImageArtist.toString())].lastContributionID = objsCont[i].originalObjectID;
+						contributors[conts.indexOf(objsCont[i].frontImageArtist.toString())].lastContributionID = objsCont[i].originalObjectID;
 					}
 				}
 				if (conts.indexOf(objsCont[i].topImageArtist.toString()) > -1) {
