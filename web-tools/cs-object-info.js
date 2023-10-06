@@ -4508,6 +4508,34 @@ var objects = [
         dateAdded:"2023/10/02", // YYYY/MM/DD
         lastModified:"2023/10/02", // YYYY/MM/DD
     },
+    {
+        name:"Three Gorges Dam",
+        defaultAngle: 2,
+        sideImage:"",
+        hasSideImage:false,
+        sideImageAlign:"none",
+        sideImageArtist: "",
+        sideImageDate:"", // YYYY/MM/DD
+        frontImage:"",
+        hasFrontImage:false,
+        frontImageAlign:"none",
+        frontImageArtist: "",
+        frontImageDate:"", // YYYY/MM/DD
+        topImage:"Three_Gorges_Dam-top",
+        hasTopImage:true,
+        topImageAlign:"none",
+        topImageArtist: "Daniel Roberts (BlenderTimer)",
+        topImageDate:"2023/10/05", // YYYY/MM/DD
+        width:0.8246, // length * 0.071875
+        length:2.335,
+        height:0.181,
+        category1:"structures",
+        category2:"barriers",
+        category3:"dams",
+        tags:["china", "yangtze river"], // don't include anything in categories or name
+        dateAdded:"2023/10/05", // YYYY/MM/DD
+        lastModified:"2023/10/05", // YYYY/MM/DD
+    },
 ];
 
 //	———————— STEPS FOR UPDATING ————————
