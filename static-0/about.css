@@ -110,6 +110,7 @@
 	height: auto;
 	padding: 6px;
 	border-radius: 5px;
+	box-sizing: border-box;
 	background: #101010;
 	border: none;
 	outline: none;
@@ -128,6 +129,7 @@
 	height: auto;
 	padding: 6px;
 	border-radius: 5px;
+	box-sizing: border-box;
 	background: #101010;
 	border: none;
 	outline: none;
@@ -150,6 +152,7 @@
 	padding: 6px;
 	border-radius: 5px;
 	background: #101010;
+	box-sizing: border-box;
 	border: none;
 	outline: none;
 	display: block;
