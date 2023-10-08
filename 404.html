@@ -19,18 +19,23 @@
 	    <style>
             * {
                 margin: 0;
-                 padding: 0;
-             }
+                padding: 0;
+            }
+
             body, html {
-                max-height: 100%;
+                height: 100%;
+                margin: 0px;
                 box-sizing: border-box;
+                box-shadow: 0px 0px 50px rgba(0,0,0,0.8) inset;
             }
                 
             body {
                 background: #1E1E1E;
                 color: #F5F5F5;
                 transition: 0.3s cubic-bezier(0.57, 3.28, 0.27,-2.09);
+                box-shadow: none;
             }
+
             #primary-404 {
                 font-family: monospace;
                 font-size: 15vh;
@@ -38,9 +43,10 @@
                 margin-top: 30vh;
                 display: block;
                 text-shadow: 0px 10px 20px rgba(0,0,0,0.7);
-                transition: 0.2s cubic-bezier(0.83, 3.07, 0.52, 0.37);
+                transition: 0s;
                 cursor: default;
             }
+
             #back-button {
                 width: auto;
                 display: block;
@@ -83,217 +89,191 @@
             }
         </style>
     </head>
-	<body onload="baseLoad()" id="body-id" style="background: #880000">
+	<body onload="baseLoad()" style="background: #880000">
         <div id="revolve-button" style="display:none"><script src="https://rf.revolvermaps.com/0/0/3.js?i=5cgjr9bkw1v&b=0&s=40&m=2&cl=555555&co=000000&cd=ffffff&v0=25&v1=100&r=1" async="async"></script></div>
-		<h1 id="primary-404" style="margin-top: -8vw">404</h1>
-        <div id="text-404"><p id="t-404-l1"></p><p id="t-404-l2" style="display: none"></p><p id="t-404-l3" style="display: none"></p></div>
-        <button onclick="history.back()" id="back-button" type="button" style="display: none"></button>
+		<div id="loader" style="display: none; width: 100%; height: 100%; top: 0px; left: 0px; position: fixed; z-index: -99999; background: #1E1E1E; box-shadow: 0px 0px 50px rgba(0,0,0,0.8) inset">
+            <img alt="Loading" src="./static-0/files/images/loading-general.gif" style="width: 100px; height: 100px; position: fixed; left: calc(50% - 50px); top: calc(50% - 50px); filter: drop-shadow(0px 0px 15px #000000)">
+        </div>
+        <h1 id="primary-404" style="opacity: 0; margin-top: -8vw">404</h1>
+        <div id="text-404">
+            <p id="t-404-l1"></p>
+            <p id="t-404-l2" style="display: none"></p>
+            <p id="t-404-l3" style="display: none"></p>
+        </div>
+        <button onclick="history.back()" id="back-button" type="button" style="display: none" onmouseenter="button('enter')" onmouseleave="button('leave')"></button>
+        <script src="./static-0/videos.js"></script>
         <script type="text/javascript">
             var p404 = document.getElementById('primary-404');
             var t404L1 = document.getElementById('t-404-l1');
             var t404L2 = document.getElementById('t-404-l2');
             var t404L3 = document.getElementById('t-404-l3');
             var back404 = document.getElementById('back-button');
-            var bodyId = document.getElementById('body-id');
+            var loader = document.getElementById('loader');
             var rndm = Math.floor(Math.random() * 20)
-            function writeL2() {
-                t404L2.style.display = "block";
+            var backButtonText = "";
+
+            function write404(text1, backText, text2, text2Time, text3, text3Time) {
+                t404L1.innerHTML = text1;
+                if (text2) {
+                    t404L2.innerHTML = text2;
+                    setTimeout(function(){t404L2.style.display = "block"}, text2Time);
                 }
-            function writeL3() {
-                t404L3.style.display = "block";
+                if (text3) {
+                    t404L3.innerHTML = text3;
+                    setTimeout(function(){t404L3.style.display = "block"}, text3Time);
                 }
-            function baseLoad() {
-                p404.style.marginTop = "30vh";
-                bodyId.style.background = "#1E1E1E";
-                if (rndm == 0) {
-                    t404L1.innerHTML = "Welp...some days are just like that.";
-                    t404L2.style.display = "none";
-                    t404L2.innerHTML = "";
-                    t404L3.style.display = "none";
-                    t404L3.innerHTML = "";
-                    back404.textContent = "I'm going home";
-                }
-                else if (rndm == 1) {
-                    t404L1.innerHTML = "You literally just broke the entire website.";
-                    t404L2.style.display = "none";
-                    t404L2.innerHTML = "Just kidding. ;)";
-                    t404L3.style.display = "none";
-                    t404L3.innerHTML = "";
-                    back404.textContent = "Get me out of here";
-                    setTimeout(function(){writeL2()}, 2500);
-                }
-                else if (rndm == 2) {
-                    t404L1.innerHTML = "What are you doing?";
-                    t404L2.style.display = "none";
-                    t404L2.innerHTML = "There's no gold here.";
-                    t404L3.style.display = "none";
-                    t404L3.innerHTML = "Are you lost?";
-                    back404.textContent = "I don't really know.";
-                    setTimeout(function(){writeL2()}, 1500);
-                    setTimeout(function(){writeL3()}, 3000);
-                }
-                else if (rndm == 3) {
-                    t404L1.innerHTML = "That's a 404.";
-                    t404L2.style.display = "none";
-                    t404L2.innerHTML = "Just in case you couldn't tell.";
-                    t404L3.style.display = "none";
-                    t404L3.innerHTML = "";
-                    back404.textContent = "I can read";
-                    setTimeout(function(){writeL2()}, 2500);
-                }
-                else if (rndm == 4) {
-                    t404L1.innerHTML = "Wrong way.";
-                    t404L2.style.display = "none";
-                    t404L2.innerHTML = "At least it's not a one way street!";
-                    t404L3.style.display = "none";
-                    t404L3.innerHTML = "";
-                    back404.textContent = "Turn around";
-                    setTimeout(function(){writeL2()}, 2000);
-                }
-                else if (rndm == 5) {
-                    t404L1.innerHTML = "Well...this is a dead end.";
-                    t404L2.style.display = "none";
-                    t404L2.innerHTML = "I guess you'll have to try a different way.";
-                    t404L3.style.display = "none";
-                    t404L3.innerHTML = "";
-                    back404.textContent = "Ok";
-                    setTimeout(function(){writeL2()}, 2000);
-                }
-                else if (rndm == 6) {
-                    t404L1.innerHTML = "So...";
-                    t404L2.style.display = "none";
-                    t404L2.innerHTML = "Where exactly were you going?";
-                    t404L3.style.display = "none";
-                    t404L3.innerHTML = "";
-                    back404.textContent = "I don't know.";
-                    setTimeout(function(){writeL2()}, 1500);
-                }
-                else if (rndm == 7) {
-                    t404L1.innerHTML = "Excuse me? You can't come here.";
-                    t404L2.style.display = "none";
-                    t404L2.innerHTML = "Mainly 'cause it doesn't exist.";
-                    t404L3.style.display = "none";
-                    t404L3.innerHTML = "LOL";
-                    back404.textContent = "Ok, whatever";
-                    setTimeout(function(){writeL2()}, 1500);
-                    setTimeout(function(){writeL3()}, 3000);
-                }
-                else if (rndm == 8) {
-                    t404L1.innerHTML = "That is what I like to call...";
-                    t404L2.style.display = "none";
-                    t404L2.innerHTML = "absolutely nothing.";
-                    t404L3.style.display = "none";
-                    t404L3.innerHTML = "hehe";
-                    back404.textContent = "Stop";
-                    setTimeout(function(){writeL2()}, 2000);
-                    setTimeout(function(){writeL3()}, 3000);
-                }
-                else if (rndm == 9) {
-                    t404L1.innerHTML = "Congratulations! You've found a 404!";
-                    t404L2.style.display = "none";
-                    t404L2.innerHTML = "These things are valuable you know.";
-                    t404L3.style.display = "none";
-                    t404L3.innerHTML = "Right?";
-                    back404.textContent = "No";
-                    setTimeout(function(){writeL2()}, 1500);
-                    setTimeout(function(){writeL3()}, 4000);
-                }
-                else if (rndm == 10) {
-                    t404L1.innerHTML = "Some days...";
-                    t404L2.style.display = "none";
-                    t404L2.innerHTML = "you just fail.";
-                    t404L3.style.display = "none";
-                    t404L3.innerHTML = "";
-                    back404.textContent = "Yeah";
-                    setTimeout(function(){writeL2()}, 1500);
-                }
-                else if (rndm == 11) {
-                    t404L1.innerHTML = "You're trapped now!";
-                    t404L2.style.display = "none";
-                    t404L2.innerHTML = "Downloading virus...";
-                    t404L3.style.display = "none";
-                    t404L3.innerHTML = "Just kidding. ;)";
-                    back404.textContent = "Allow download";
-                    setTimeout(function(){writeL2()}, 1000);
-                    setTimeout(function(){writeL3()}, 4000);
-                }
-                else if (rndm == 12) {
-                    t404L1.innerHTML = "Bonk!";
-                    t404L2.style.display = "none";
-                    t404L2.innerHTML = "";
-                    t404L3.style.display = "none";
-                    t404L3.innerHTML = "";
-                    back404.textContent = "Ouch";
-                }
-                else if (rndm == 13) {
-                    t404L1.innerHTML = "Sorry but...";
-                    t404L2.style.display = "none";
-                    t404L2.innerHTML = "it's your fault.";
-                    t404L3.style.display = "none";
-                    t404L3.innerHTML = "Wait, unless I...";
-                    back404.textContent = "Not my fault";
-                    setTimeout(function(){writeL2()}, 1500);
-                    setTimeout(function(){writeL3()}, 3000);
-                }
-                else if (rndm == 14) {
-                    t404L1.innerHTML = "Either you made a mistake.";
-                    t404L2.style.display = "none";
-                    t404L2.innerHTML = "Or I did.";
-                    t404L3.style.display = "none";
-                    t404L3.innerHTML = "It's definitely the first.";
-                    back404.textContent = "No";
-                    setTimeout(function(){writeL2()}, 1500);
-                    setTimeout(function(){writeL3()}, 4000);
-                }
-                else if (rndm == 15) {
-                    t404L1.innerHTML = "Look I tried...";
-                    t404L2.style.display = "none";
-                    t404L2.innerHTML = "to give you a 404.";
-                    t404L3.style.display = "none";
-                    t404L3.innerHTML = "Wait, no, I mean...";
-                    back404.textContent = "Yes";
-                    setTimeout(function(){writeL2()}, 1500);
-                    setTimeout(function(){writeL3()}, 2000);
-                }
-                else if (rndm == 16) {
-                    t404L1.innerHTML = "I leave for two seconds...";
-                    t404L2.style.display = "none";
-                    t404L2.innerHTML = "...and you immediately break everything.";
-                    t404L3.style.display = "none";
-                    t404L3.innerHTML = "";
-                    back404.textContent = "Hehe";
-                    setTimeout(function(){writeL2()}, 1500);
-                }
-                else if (rndm == 17) {
-                    t404L1.innerHTML = "You've arrived!";
-                    t404L2.style.display = "none";
-                    t404L2.innerHTML = "...at the wrong spot.";
-                    t404L3.style.display = "none";
-                    t404L3.innerHTML = "";
-                    back404.textContent = "Oops";
-                    setTimeout(function(){writeL2()}, 1500);
-                }
-                else if (rndm == 18) {
-                    t404L1.innerHTML = "Let's just say...";
-                    t404L2.style.display = "none";
-                    t404L2.innerHTML = "...it's your fault.";
-                    t404L3.style.display = "none";
-                    t404L3.innerHTML = "'Cause I refuse to take credit.";
-                    back404.textContent = "Not my fault";
-                    setTimeout(function(){writeL2()}, 1500);
-                    setTimeout(function(){writeL3()}, 3000);
-                }
-                else if (rndm == 19) {
-                    t404L1.innerHTML = "Wasn't my fault!";
-                    t404L2.style.display = "none";
-                    t404L2.innerHTML = "I refuse to take credit!";
-                    t404L3.style.display = "none";
-                    t404L3.innerHTML = "Only debit.";
-                    back404.textContent = "Ummmm";
-                    setTimeout(function(){writeL2()}, 1500);
-                    setTimeout(function(){writeL3()}, 3000);
-                }
+                back404.textContent = backText;
+                backButtonText = backText;
                 back404.style.display = "block";
+            }
+
+            function checkURL(url) {
+                if (url.indexOf("/video-sources/") > -1) {
+                    var newURL = url.substring(0, url.indexOf("/video-sources/") + 15);
+                    var endURL = url.substring(url.indexOf("/video-sources/") + 15, url.length);
+                    for (var i=0; i < videos.length; i++) {
+                        if (endURL.toLowerCase().startsWith(videos[i].title.toLowerCase().replaceAll(" ", "-"))) {
+                            newURL = newURL + videos[i].url;
+                            break;
+                        }
+                        else if (endURL.startsWith(videos[i].tui.toString())) {
+                            newURL = newURL + videos[i].url;
+                            break;
+                        }
+                    }
+                    window.location = newURL;
+                    loader.style.display = "block";
+                    return 1;
+                }
+                else {
+                    return 404;
+                }
+            }
+
+            function baseLoad() {
+                if (checkURL(window.location.toString()) == 404) {
+                    p404.style.opacity = "1";
+                    p404.style.marginTop = "30vh";
+                    p404.style.transition = "0.2s cubic-bezier(0.83, 3.07, 0.52, 0.37)";
+                    document.body.style.background = "#1E1E1E";
+                    if (rndm == 0) {
+                        write404("Welp...some days are just like that.", // Text 1
+                        "I'm going home"); // Back Text
+                    }
+                    else if (rndm == 1) {
+                        write404("You literally just broke the entire website.", // Text 1
+                        "Get me out of here", // Back Text
+                        "Just kidding. ;)", 2500); // Text 2
+                    }
+                    else if (rndm == 2) {
+                        write404("What are you doing?", // Text 1
+                        "I don't really know.", // Back Text
+                        "There's no gold here.", 1500, // Text 2
+                        "Are you lost?", 3000); // Text 3
+                    }
+                    else if (rndm == 3) {
+                        write404("That's a 404.", // Text 1
+                        "I can read", // Back Text
+                        "Just in case you couldn't tell.", 2500); // Text 2
+                    }
+                    else if (rndm == 4) {
+                        write404("Wrong way.", // Text 1
+                        "Turn around", // Back Text
+                        "At least it's not a one way street!", 2000); // Text 2
+                    }
+                    else if (rndm == 5) {
+                        write404("Well...this is a dead end.", // Text 1
+                        "Ok", // Back Text
+                        "I guess you'll have to try a different way.", 2000); // Text 2
+                    }
+                    else if (rndm == 6) {
+                        write404("So...", // Text 1
+                        "I don't know.", // Back Text
+                        "Where exactly were you going?", 1500); // Text 2
+                    }
+                    else if (rndm == 7) {
+                        write404("Excuse me? You can't come here.", // Text 1
+                        "Ok, whatever", // Back Text
+                        "Mainly 'cause it doesn't exist.", 1500, // Text 2
+                        "LOL", 3000); // Text 3
+                    }
+                    else if (rndm == 8) {
+                        write404("That is what I like to call...", // Text 1
+                        "Stop", // Back Text
+                        "absolutely nothing.", 2000, // Text 2
+                        "hehe", 3000); // Text 3
+                    }
+                    else if (rndm == 9) {
+                        write404("Congratulations! You've found a 404!", // Text 1
+                        "No", // Back Text
+                        "hese things are valuable you know.", 1500, // Text 2
+                        "Right?", 4000); // Text 3
+                    }
+                    else if (rndm == 10) {
+                        write404("Some days...", // Text 1
+                        "Yeah", // Back Text
+                        "you just fail.", 1500); // Text 2
+                    }
+                    else if (rndm == 11) {
+                        write404("You're trapped now!", // Text 1
+                        "Allow download", // Back Text
+                        "Downloading virus...", 1000, // Text 2
+                        "Just kidding. ;)", 4000); // Text 3
+                    }
+                    else if (rndm == 12) {
+                        write404("Bonk!", // Text 1
+                        "Ouch"); // Back Text
+                    }
+                    else if (rndm == 13) {
+                        write404("Sorry but...", // Text 1
+                        "Not my fault", // Back Text
+                        "it's your fault.", 1500, // Text 2
+                        "Wait, unless I...", 3000); // Text 3
+                    }
+                    else if (rndm == 14) {
+                        write404("Either you made a mistake.", // Text 1
+                        "No", // Back Text
+                        "Or I did.", 1500, // Text 2
+                        "It's definitely the first.", 4000); // Text 3
+                    }
+                    else if (rndm == 15) {
+                        write404("Look I tried...", // Text 1
+                        "Yes", // Back Text
+                        "to give you a 404.", 1500, // Text 2
+                        "Wait, no, I mean...", 2000); // Text 3
+                    }
+                    else if (rndm == 16) {
+                        write404("I leave for two seconds...", // Text 1
+                        "Hehe", // Back Text
+                        "...and you immediately break everything.", 1500); // Text 2
+                    }
+                    else if (rndm == 17) {
+                        write404("You've arrived!", // Text 1
+                        "Oops", // Back Text
+                        "...at the wrong spot.", 1500); // Text 2
+                    }
+                    else if (rndm == 18) {
+                        write404("Let's just say...", // Text 1
+                        "Not my fault", // Back Text
+                        "...it's your fault.", 1500, // Text 2
+                        "'Cause I refuse to take credit.", 3000); // Text 3
+                    }
+                    else if (rndm == 19) {
+                        write404("Wasn't my fault!", // Text 1
+                        "Ummmm", // Back Text
+                        "I refuse to take credit!", 1500, // Text 2
+                        "Only debit.", 3000); // Text 3
+                    }
+                }
+            }
+
+            function button(action) {
+                if (action == "enter") {
+                    back404.textContent = "Back";
+                }
+                else {
+                    back404.textContent = backButtonText;
+                }
             }
         </script>
     </body>
