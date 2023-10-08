@@ -165,7 +165,6 @@ body {
 #thumbnail {
 	border-radius: 5px;
 	display: block;
-	float: center;
 	margin: 0px auto 0px auto;
 	width: 100%;
 	max-width: 300px;
@@ -208,6 +207,27 @@ body {
 #view-thumb img {
 	width: 25px;
 	height: 25px;
+}
+
+#video-download {
+	width: 80%;
+	height: auto;
+	display: block;
+	background: #404040;
+	box-shadow: 0px 0px 20px #0005;
+	color: #F5F5F5;
+	text-decoration: none;
+	cursor: pointer;
+	margin: 30px 10% 0px 10%;
+	box-sizing: border-box;
+	padding: 10px;
+	border-radius: 20px;
+	text-align: center;
+	transition: 0.3s;
+}
+
+#video-download:hover {
+	background: #555555;
 }
 
 #sources {

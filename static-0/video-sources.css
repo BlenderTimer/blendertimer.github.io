@@ -95,11 +95,12 @@
 	width: calc(100% - 20px);
 	text-align: left;
 	padding: 5px 10px 5px 10px;
-	height: 20px;
+	height: 30px;
 	margin: 0px;
 	outline: none;
 	border: none;
 	background: #181818;
+	box-sizing: border-box;
 	border-radius: 5px;
 	color: #AAAAAA;
 	font-weight: bold;

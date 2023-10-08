@@ -198,7 +198,6 @@
 	overflow-y: auto;
 	overflow-x: hidden;
 	transition: 0.3s;
-	float: center;
 	position: relative;
 }
 
@@ -394,7 +393,6 @@
 .logo-timeline-logo img {
 	margin: 0px auto;
 	display: block;
-	float: center;
 	width: calc(100% - 20px);
 }
 

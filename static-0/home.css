@@ -72,24 +72,25 @@
     display: block;
     text-align: center;
     font-family: monospace;
-    color: #F5F5F5;
+    color: #F5F5F5 !important;
     font-size: 12pt;
-    padding: 5px 20px;
+    padding: 5px 20px !important;
     cursor: pointer;
     background: #3E3E3E;
     border: 2px solid #2E2E2E;
     border-radius: 100px;
-    margin: 20px auto 0px auto;
-    transition: 0.3s cubic-bezier(0.83, 3.07, 0.52, 0.37);
+    margin: 20px auto 0px auto !important;
+    transition: 0.3s cubic-bezier(0.83, 3.07, 0.52, 0.37) !important;
     outline: none;
     text-shadow: 0px 0px 8px rgba(0,0,0,0.5);
     box-shadow: 0px 0px 15px rgba(0,0,0,0.5);
 }
 
 .misc-content-button:hover {
-    padding: 5px 40px;
+    padding: 5px 40px !important;
     background: #1E1E1E;
     border: 2px solid #3E3E3E;
+    text-shadow: 0px 0px 10px rgba(255,255,255,0.5) !important;
 }
 
 #channel-milestones {
