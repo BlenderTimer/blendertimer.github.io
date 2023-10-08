@@ -132,7 +132,7 @@
                     var newURL = url.substring(0, url.indexOf("/video-sources/") + 15);
                     var endURL = url.substring(url.indexOf("/video-sources/") + 15, url.length);
                     for (var i=0; i < videos.length; i++) {
-                        if (endURL.toLowerCase().startsWith(videos[i].title.toLowerCase().replaceAll(" ", "-"))) {
+                        if (endURL.toLowerCase().startsWith(videos[i].name.toLowerCase().replaceAll(" ", "-"))) {
                             newURL = newURL + videos[i].url;
                             break;
                         }
