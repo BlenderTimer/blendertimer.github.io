@@ -4536,6 +4536,34 @@ var objects = [
         dateAdded:"2023/10/05", // YYYY/MM/DD
         lastModified:"2023/10/05", // YYYY/MM/DD
     },
+    {
+        name:"Viaduc de Millau",
+        defaultAngle: 0,
+        sideImage:"Viaduc_de_Millau-side",
+        hasSideImage:true,
+        sideImageAlign:"bottom",
+        sideImageArtist: "Daniel Roberts (BlenderTimer)",
+        sideImageDate:"2023/10/08", // YYYY/MM/DD
+        frontImage:"",
+        hasFrontImage:false,
+        frontImageAlign:"none",
+        frontImageArtist: "",
+        frontImageDate:"", // YYYY/MM/DD
+        topImage:"",
+        hasTopImage:false,
+        topImageAlign:"none",
+        topImageArtist: "",
+        topImageDate:"", // YYYY/MM/DD
+        width:0.032, // length * 0.071875
+        length:2.460,
+        height:0.270,
+        category1:"structures",
+        category2:"bridges",
+        category3:"cable-stayed",
+        tags:["france", "gorge valley", "tarn", "aveyron"], // don't include anything in categories or name
+        dateAdded:"2023/10/08", // YYYY/MM/DD
+        lastModified:"2023/10/08", // YYYY/MM/DD
+    },
 ];
 
 //	———————— STEPS FOR UPDATING ————————
