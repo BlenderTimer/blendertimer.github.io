@@ -1257,7 +1257,7 @@
 			</style>
 	</head>
 	<body onload="baseLoad(), determineLayout(), loadObjects(), loadContributors()" onresize="resizeB(), determineLayout()" style="background: #1E1E1E">
-		<div id="revolve-button" style="display: block; position: absolute; right: 40px"><script src="https://rf.revolvermaps.com/0/0/3.js?i=5cgjr9bkw1v&b=0&s=40&m=2&cl=555555&co=000000&cd=ffffff&v0=25&v1=100&r=1" async="async"></script></div>
+		<div id="revolve-button" title="Current visitors on this site." style="display: block; position: absolute; right: 40px"><script src="https://rf.revolvermaps.com/0/0/3.js?i=5cgjr9bkw1v&b=0&s=40&m=2&cl=555555&co=000000&cd=ffffff&v0=25&v1=100&r=1" async="async"></script></div>
 		<div id="loading" style="font-family: monospace; display: block; position: fixed; width: 100%; height: 100%; top: 0px; left: 0px; background: #1E1E1E; z-index: 999999; text-align: center; font-size: 12px; white-space: nowrap; padding: calc(50vh - 12px) 0px 0px 0px; text-shadow: 0px 0px 20px rgba(0,0,0,0.8); color: #AAAAAA; box-shadow: 0px 0px 50px rgba(0,0,0,0.8) inset"><h1 id="loading-text">Loading web tool...</h1></div>
 		<div id="popup-background" onmouseenter="popupCloseBegin(true)" onmouseleave="popupCloseBegin(false)" onclick="popupClose()" style="display: none; opacity: 0"></div>
 		<div id="addobject-popup-div" style="display: none; opacity: 0">
@@ -3164,6 +3164,7 @@
 					var contBadge = document.createElement("img");
 			  		contBadge.classList.add("c-" + i.toString());
 			  		contBadge.classList.add("c-badge");
+			  		contBadge.alt = "Level Badge";
 			  		cont.appendChild(contBadge);
 			  		var contName = document.createElement("h1");
 			  		contName.innerHTML = contributors[i].name;
@@ -3253,17 +3254,17 @@
 			  		else if (contributors[i].contributions >= 750) {
 			  			contLevel.innerHTML = "Incredible (level 9 achieved at 750 contributions)";
 			  			contNextLevel.innerHTML = "Legend (1000 contributions, " + (1000 - contributors[i].contributions).toString() + " contributions left)";
-			  		contBadge.src = "../static-0/files/images/compare-contributorlevel-9.png";
+			  			contBadge.src = "../static-0/files/images/compare-contributorlevel-9.png";
 			  		}
 			  		else if (contributors[i].contributions >= 500) {
 			  			contLevel.innerHTML = "Outstanding (level 8 achieved at 500 contributions)";
 			  			contNextLevel.innerHTML = "Incredible (750 contributions, " + (750 - contributors[i].contributions).toString() + " contributions left)";
-			  		contBadge.src = "../static-0/files/images/compare-contributorlevel-8.png";
+			  			contBadge.src = "../static-0/files/images/compare-contributorlevel-8.png";
 			  		}
 			  		else if (contributors[i].contributions >= 250) {
 			  			contLevel.innerHTML = "Amazing (level 7 achieved at 250 contributions)";
 			  			contNextLevel.innerHTML = "Outstanding (500 contributions, " + (500 - contributors[i].contributions).toString() + " contributions left)";
-			  		contBadge.src = "../static-0/files/images/compare-contributorlevel-7.png";
+			  			contBadge.src = "../static-0/files/images/compare-contributorlevel-7.png";
 			  		}
 			  		else if (contributors[i].contributions >= 100) {
 			  			contLevel.innerHTML = "Remarkable (level 6 achieved at 100 contributions)";
