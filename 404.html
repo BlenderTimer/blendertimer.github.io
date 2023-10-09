@@ -34,6 +34,8 @@
                 color: #F5F5F5;
                 transition: 0.3s cubic-bezier(0.57, 3.28, 0.27,-2.09);
                 box-shadow: none;
+                position: absolute;
+                width: 100%;
             }
 
             #primary-404 {
@@ -127,21 +129,56 @@
                 back404.style.display = "block";
             }
 
+            String.prototype.isNumber = function() {
+                if (this == "0" || this == "1" || this == "2" || this == "3" || this == "4" || this == "5" || this == "6" || this == "7" || this == "8" || this == "9") {
+                    return true
+                }
+                else {
+                    return false
+                }
+            }
+
             function checkURL(url) {
                 if (url.indexOf("/video-sources/") > -1) {
                     var newURL = url.substring(0, url.indexOf("/video-sources/") + 15);
                     var endURL = url.substring(url.indexOf("/video-sources/") + 15, url.length);
+                    var tui = 0;
+                    var completeTUI = false;
+                    var correctedURL = false;
                     for (var i=0; i < videos.length; i++) {
-                        if (endURL.toLowerCase().startsWith(videos[i].name.toLowerCase().replaceAll(" ", "-"))) {
+                        for (var i2=0; i2 < endURL.length; i2++) {
+                            if (endURL.substr(i2, 1).isNumber() == false) {
+                                tui = parseInt(endURL.substring(0, i2 ));
+                                break;
+                            }
+                            else if (i2 == (endURL.length - 1)) {
+                                tui = parseInt(endURL.substring(0, i2 + 1));
+                                completeTUI = true;
+                                break;
+                            }
+                        }
+                        if (endURL.toLowerCase().startsWith(videos[i].name.toLowerCase().replaceAll(" ", "-")) && completeTUI == false) {
                             newURL = newURL + videos[i].url;
+                            correctedURL = true;
                             break;
                         }
-                        else if (endURL.startsWith(videos[i].tui.toString())) {
+                        else if (endURL.toLowerCase().indexOf(videos[i].name.toLowerCase().replaceAll(" ", "-")) > -1 && completeTUI == false) {
                             newURL = newURL + videos[i].url;
+                            correctedURL = true;
+                            break;
+                        }
+                        else if (tui == videos[i].tui) {
+                            newURL = newURL + videos[i].url;
+                            correctedURL = true;
                             break;
                         }
                     }
-                    window.location = newURL;
+                    if (correctedURL == true) {
+                        window.location = newURL;
+                    }
+                    else {
+                        window.location = url.substring(0, url.indexOf("/video-sources/") + 14);;
+                    }
                     loader.style.display = "block";
                     return 1;
                 }
