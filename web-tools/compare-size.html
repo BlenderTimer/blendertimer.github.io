@@ -1014,6 +1014,10 @@
 				background: #3A3A3A;
 			}
 
+			#description {
+				color: #E5E5E5;
+			}
+
 			#contributors {
 				width: 100%;
 				height: auto;
@@ -1036,8 +1040,20 @@
 				cursor: default;
 			}
 
+			#cont-sort-div {
+				display: flex;
+				width: 100%;
+				justify-content: center;
+				flex-wrap: nowrap;
+			}
+
+			#cont-sort-div label {
+				display: inline-block;
+				margin: 2px 10px 0px 0px;
+			}
+
 			#cont-sort {
-				display: block;
+				display: inline-block;
 				position: relative;
 				color: #F5F5F5;
 				margin: 0px 0px 10px 0px;
@@ -1051,6 +1067,7 @@
 				font-size: 12pt;
 				padding: 3px;
 				border-radius: 3px;
+				cursor: pointer;
 			}
 
 			#contributor-list {
@@ -1125,6 +1142,8 @@
 				pointer-events: none;
 				position: relative;
 				z-index: 999;
+				width: 50px;
+				height: 50px;
 			}
 
 			.cont-cont-div {
@@ -1423,12 +1442,17 @@
 				<div id="contributors">
 					<h3 id="cont-title">Image Contributors</h3>
 					<p id="cont-subtitle">HUGE thanks to the contributors who make this free web tool possible!</p>
-					<select name="cont-sort" id="cont-sort" onChange="loadContributors()">
+					<div id="cont-sort-div"><label for="cont-sort">Sort:</label><select name="cont-sort" id="cont-sort" onChange="loadContributors()">
 						<option value="latest">Latest</option>
 						<option value="contributions">Contributions</option>
 						<option value="name">Name</option>
-					</select>
+					</select></div>
 					<div id="contributor-list"></div>
+				</div>
+				<div class="spr"></div>
+				<div id="description">
+					<p>The ultimate online web tool for comparing hundreds of objects! Whether you're curious about the dimensions or relative sizes of objects, this web tool makes getting data and comparing objects a breeze! With objects ranging from the minuscule atom to the grandeur of the Observable Universe, the sky-piercing Burj Khalifa to the vast expanse of the Pacific Ocean, this compare tool is the ONLY one of its kind!</p>
+					<p>With a vast database featuring hundreds of objects, you can easily explore side-by-side comparisons between an Cessna Skyhawk and a Boeing 747, or even delve into the intricacies of a human and a ladybug! This versatile tool provides visual comparisons that will leave you stunned! (maybe)</p>
 				</div>
 				<div class="spr"></div>
 				<h3 style="text-align: center; width: 100%">Object Tags</h3>
@@ -1599,7 +1623,7 @@
 				</div>
 			</div>
 		</div>
-		<p id="version">Tool version: 0.3.0</p>
+		<p id="version">Tool version: 0.3.1</p>
 		<script type="text/javascript">
 			var title = document.getElementById('title');
 			var navHome = document.getElementById('nav-home');
@@ -1769,6 +1793,7 @@
 					webTool.style.marginLeft = "-40px";
 					svgFormBTN.style.width = "100%";
 					requestFormBTN.style.width = "100%";
+					document.getElementById('cont-sort-div').style.justifyContent = "center";
 					document.getElementById('copy-image-btn').style.width = "100%";
 					document.getElementById('copy-image-btn').style.margin = "10px 0px 0px auto";
 					document.getElementById('download-image-btn').style.width = "calc(100% - 45px)";
@@ -1796,6 +1821,7 @@
 					webTool.style.marginLeft = "-40px";
 					svgFormBTN.style.width = "100%";
 					requestFormBTN.style.width = "100%";
+					document.getElementById('cont-sort-div').style.justifyContent = "left";
 					document.getElementById('copy-image-btn').style.width = null;
 					document.getElementById('copy-image-btn').style.margin = null;
 					document.getElementById('download-image-btn').style.width = null;
@@ -1823,6 +1849,7 @@
 					webTool.style.marginLeft = "0px";
 					svgFormBTN.style.width = "48%";
 					requestFormBTN.style.width = "48%";
+					document.getElementById('cont-sort-div').style.justifyContent = "left";
 					document.getElementById('copy-image-btn').style.width = null;
 					document.getElementById('copy-image-btn').style.margin = null;
 					document.getElementById('download-image-btn').style.width = null;
@@ -1850,6 +1877,7 @@
 					webTool.style.marginLeft = "0px";
 					svgFormBTN.style.width = "48%";
 					requestFormBTN.style.width = "48%";
+					document.getElementById('cont-sort-div').style.justifyContent = "left";
 					document.getElementById('copy-image-btn').style.width = null;
 					document.getElementById('copy-image-btn').style.margin = null;
 					document.getElementById('download-image-btn').style.width = null;
