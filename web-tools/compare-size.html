@@ -1320,17 +1320,14 @@
 					<div class="spr"></div>
 					<div class="oi"><b>Default Angle: </b><p id="oi-defaultangle">N/A</p></div>
 					<div class="oi"><b id="oi-sideimaget">Side Image: </b><a id="oi-sideimage" href="" target="_blank">N/A</a></div>
-					<div class="oi"><b id="oi-hassideimaget">Has Side Image: </b><p id="oi-hassideimage">N/A</p></div>
 					<div class="oi"><b id="oi-sideimagealignt">Side Image Align: </b><p id="oi-sideimagealign">N/A</p></div>
 					<div class="oi"><b id="oi-sideimageartistt">Side Image Artist: </b><p id="oi-sideimageartist">N/A</p></div>
 					<div class="oi"><b id="oi-sideimagedatet">Side Image Date: </b><p id="oi-sideimagedate">N/A</p></div>
 					<div class="oi"><b id="oi-frontimaget">Front Image: </b><a id="oi-frontimage" href="" target="_blank">N/A</a></div>
-					<div class="oi"><b id="oi-hasfrontimaget">Has Front Image: </b><p id="oi-hasfrontimage">N/A</p></div>
 					<div class="oi"><b id="oi-frontimagealignt">Front Image Align: </b><p id="oi-frontimagealign">N/A</p></div>
 					<div class="oi"><b id="oi-frontimageartistt">Front Image Artist: </b><p id="oi-frontimageartist">N/A</p></div>
 					<div class="oi"><b id="oi-frontimagedatet">Front Image Date: </b><p id="oi-frontimagedate">N/A</p></div>
 					<div class="oi"><b id="oi-topimaget">Top Image: </b><a id="oi-topimage" href="" target="_blank">N/A</a></div>
-					<div class="oi"><b id="oi-hastopimaget">Has Top Image: </b><p id="oi-hastopimage">N/A</p></div>
 					<div class="oi"><b id="oi-topimagealignt">Top Image Align: </b><p id="oi-topimagealign">N/A</p></div>
 					<div class="oi"><b id="oi-topimageartistt">Top Image Artist: </b><p id="oi-topimageartist">N/A</p></div>
 					<div class="oi"><b id="oi-topimagedatet">Top Image Date: </b><p id="oi-topimagedate">N/A</p></div>
@@ -1353,11 +1350,15 @@
 				<div id="search-syntax-div">
 					<b>Syntax:</b><c>query</c><br>
 					<p>Searches for objects with a name or tags that match or are similar to the specified name.</p><br>
-					<b>Example:</b><c>Human</c><br>
+					<b>Example:</b><c>human</c><br>
 					<p> </p><br>
-					<b>Syntax:</b><c>artst:query</c><br>
+					<b>Syntax:</b><c>query -exclude</c><br>
+					<p>Searches for objects with a name or tags that match or are similar to the specified name and excludes tags with a - preceding it.</p><br>
+					<b>Example:</b><c>planet -dwarf -moon</c><br>
+					<p> </p><br>
+					<b>Syntax:</b><c>artist:query</c><br>
 					<p>Searches for objects with images created by the specified artist (or a similar artist).</p><br>
-					<b>Example:</b><c>artst:Daniel Roberts</c><br>
+					<b>Example:</b><c>artist:Daniel Roberts</c><br>
 					<p> </p><br>
 					<b>Syntax:</b><c>id:query</c><br>
 					<p>Returns the object with the specified object ID.</p><br>
@@ -1451,7 +1452,7 @@
 				</div>
 				<div class="spr"></div>
 				<div id="description">
-					<p>The ultimate online web tool for comparing hundreds of objects! Whether you're curious about the dimensions or relative sizes of objects, this web tool makes getting data and comparing objects a breeze! With objects ranging from the minuscule atom to the grandeur of the Observable Universe, the sky-piercing Burj Khalifa to the vast expanse of the Pacific Ocean, this compare tool is the ONLY one of its kind!</p>
+					<p>The ultimate, free, online web tool for comparing hundreds of objects! Whether you're curious about the dimensions or relative sizes of objects, this web tool makes getting data and comparing objects a breeze! With objects ranging from the minuscule atom to the grandeur of the Observable Universe, the sky-piercing Burj Khalifa to the vast expanse of the Pacific Ocean, this free compare tool is the ONLY one of its kind!</p>
 					<p>With a vast database featuring hundreds of objects, you can easily explore side-by-side comparisons between an Cessna Skyhawk and a Boeing 747, or even delve into the intricacies of a human and a ladybug! This versatile tool provides visual comparisons that will leave you stunned! (maybe)</p>
 				</div>
 				<div class="spr"></div>
@@ -1623,7 +1624,7 @@
 				</div>
 			</div>
 		</div>
-		<p id="version">Tool version: 0.3.1</p>
+		<p id="version">Tool version: 0.3.2</p>
 		<script type="text/javascript">
 			var title = document.getElementById('title');
 			var navHome = document.getElementById('nav-home');
@@ -2028,11 +2029,10 @@
 		    	document.getElementById('oi-defaultangle').innerHTML = objects[objectID].defaultAngle + " (" + angleToText(objects[objectID].defaultAngle) + ")";
 		    	document.getElementById('oi-sideimage').innerHTML = objects[objectID].sideImage;
 		    	document.getElementById('oi-sideimage').href = "./compare-size/images/" + objects[objectID].category1 + "/" + objects[objectID].category2 + "/" + objects[objectID].category3 + "/" + objects[objectID].sideImage + ".svg";
-		    	document.getElementById('oi-hassideimage').innerHTML = toYesNo(objects[objectID].hasSideImage.toString());
 		    	document.getElementById('oi-sideimagealign').innerHTML = toProperCase(objects[objectID].sideImageAlign);
 		    	document.getElementById('oi-sideimageartist').innerHTML = objects[objectID].sideImageArtist;
 		    	document.getElementById('oi-sideimagedate').innerHTML = objects[objectID].sideImageDate;
-		    	if (objects[objectID].hasSideImage == true) {
+		    	if (objects[objectID].sideImage.length > 0) {
 		    		document.getElementById('oi-sideimage').parentElement.style.display = "block";
 		    		document.getElementById('oi-sideimagealign').parentElement.style.display = "block";
 		    		document.getElementById('oi-sideimageartist').parentElement.style.display = "block";
@@ -2047,10 +2047,9 @@
 		    	document.getElementById('oi-frontimage').innerHTML = objects[objectID].frontImage;
 		    	document.getElementById('oi-frontimage').href = "./compare-size/images/" + objects[objectID].category1 + "/" + objects[objectID].category2 + "/" + objects[objectID].category3 + "/" + objects[objectID].frontImage + ".svg";
 		    	document.getElementById('oi-frontimagealign').innerHTML = toProperCase(objects[objectID].frontImageAlign);
-		    	document.getElementById('oi-hasfrontimage').innerHTML = toYesNo(objects[objectID].hasFrontImage.toString());
 		    	document.getElementById('oi-frontimageartist').innerHTML = objects[objectID].frontImageArtist;
 		    	document.getElementById('oi-frontimagedate').innerHTML = objects[objectID].frontImageDate;
-		    	if (objects[objectID].hasFrontImage == true) {
+		    	if (objects[objectID].frontImage.length > 0) {
 		    		document.getElementById('oi-frontimage').parentElement.style.display = "block";
 		    		document.getElementById('oi-frontimagealign').parentElement.style.display = "block";
 		    		document.getElementById('oi-frontimageartist').parentElement.style.display = "block";
@@ -2064,11 +2063,10 @@
 		    	}
 		    	document.getElementById('oi-topimage').innerHTML = objects[objectID].topImage;
 		    	document.getElementById('oi-topimage').href = "./compare-size/images/" + objects[objectID].category1 + "/" + objects[objectID].category2 + "/" + objects[objectID].category3 + "/" + objects[objectID].topImage + ".svg";
-		    	document.getElementById('oi-hastopimage').innerHTML = toYesNo(objects[objectID].hasTopImage.toString());
 		    	document.getElementById('oi-topimagealign').innerHTML = toProperCase(objects[objectID].topImageAlign);
 		    	document.getElementById('oi-topimageartist').innerHTML = objects[objectID].topImageArtist;
 		    	document.getElementById('oi-topimagedate').innerHTML = objects[objectID].topImageDate;
-		    	if (objects[objectID].hasTopImage == true) {
+		    	if (objects[objectID].topImage.length > 0) {
 		    		document.getElementById('oi-topimage').parentElement.style.display = "block";
 		    		document.getElementById('oi-topimagealign').parentElement.style.display = "block";
 		    		document.getElementById('oi-topimageartist').parentElement.style.display = "block";
@@ -2274,7 +2272,7 @@
 						addHistory();
 					});
 					// Side Image
-					if (objects[objsCompare[i].id].hasSideImage == true) {
+					if (objects[objsCompare[i].id].sideImage.length > 0) {
 						var objSide = document.createElement("img");
 						objSide.src = "./compare-size/images/" + objects[objsCompare[i].id].category1 + "/" + objects[objsCompare[i].id].category2 + "/" + objects[objsCompare[i].id].category3 + "/" + objects[objsCompare[i].id].sideImage + ".svg";
 						objSide.id = objsCompare[i].name + "-sideImage";
@@ -2293,10 +2291,10 @@
 						}
 						objS.addEventListener("click", function(event) {
 							var element = event.target || event.srcElement;
-							if (objects[document.getElementById(element.id.substring(0,element.id.indexOf("-s")) + "-id").textContent].hasFrontImage == true) {
+							if (objects[document.getElementById(element.id.substring(0,element.id.indexOf("-s")) + "-id").textContent].frontImage.length > 0) {
 								document.getElementById(element.id.substring(0,element.id.indexOf("-s")) + "-f").style.background = null;
 							};
-							if (objects[document.getElementById(element.id.substring(0,element.id.indexOf("-s")) + "-id").textContent].hasTopImage == true) {
+							if (objects[document.getElementById(element.id.substring(0,element.id.indexOf("-s")) + "-id").textContent].topImage.length > 0) {
 								document.getElementById(element.id.substring(0,element.id.indexOf("-s")) + "-t").style.background = null;
 							};
 							element.style.background = "#303030FF";
@@ -2306,7 +2304,7 @@
 						objAngles.appendChild(objS);
 					};
 					// Front Image
-					if (objects[objsCompare[i].id].hasFrontImage == true) {
+					if (objects[objsCompare[i].id].frontImage.length > 0) {
 						var objFront = document.createElement("img");
 						objFront.src = "./compare-size/images/" + objects[objsCompare[i].id].category1 + "/" + objects[objsCompare[i].id].category2 + "/" + objects[objsCompare[i].id].category3 + "/" + objects[objsCompare[i].id].frontImage + ".svg";
 						objFront.id = objsCompare[i].name + "-frontImage";
@@ -2325,10 +2323,10 @@
 						}
 						objF.addEventListener("click", function(event) {
 							var element = event.target || event.srcElement;
-							if (objects[document.getElementById(element.id.substring(0,element.id.indexOf("-f")) + "-id").textContent].hasSideImage == true) {
+							if (objects[document.getElementById(element.id.substring(0,element.id.indexOf("-f")) + "-id").textContent].sideImage.length > 0) {
 								document.getElementById(element.id.substring(0,element.id.indexOf("-f")) + "-s").style.background = null;
 							};
-							if (objects[document.getElementById(element.id.substring(0,element.id.indexOf("-f")) + "-id").textContent].hasTopImage == true) {
+							if (objects[document.getElementById(element.id.substring(0,element.id.indexOf("-f")) + "-id").textContent].topImage.length > 0) {
 								document.getElementById(element.id.substring(0,element.id.indexOf("-f")) + "-t").style.background = null;
 							};
 							element.style.background = "#303030FF";
@@ -2338,7 +2336,7 @@
 						objAngles.appendChild(objF);
 					};
 					// Top Image
-					if (objects[objsCompare[i].id].hasTopImage == true) {
+					if (objects[objsCompare[i].id].topImage.length > 0) {
 						var objTop = document.createElement("img");
 						objTop.src = "./compare-size/images/" + objects[objsCompare[i].id].category1 + "/" + objects[objsCompare[i].id].category2 + "/" + objects[objsCompare[i].id].category3 + "/" + objects[objsCompare[i].id].topImage + ".svg";
 						objTop.id = objsCompare[i].name + "-topImage";
@@ -2357,10 +2355,10 @@
 						}
 						objT.addEventListener("click", function(event) {
 							var element = event.target || event.srcElement;
-							if (objects[document.getElementById(element.id.substring(0,element.id.indexOf("-t")) + "-id").textContent].hasSideImage == true) {
+							if (objects[document.getElementById(element.id.substring(0,element.id.indexOf("-t")) + "-id").textContent].sideImage.length > 0) {
 								document.getElementById(element.id.substring(0,element.id.indexOf("-t")) + "-s").style.background = null;
 							};
-							if (objects[document.getElementById(element.id.substring(0,element.id.indexOf("-t")) + "-id").textContent].hasFrontImage == true) {
+							if (objects[document.getElementById(element.id.substring(0,element.id.indexOf("-t")) + "-id").textContent].frontImage.length > 0) {
 								document.getElementById(element.id.substring(0,element.id.indexOf("-t")) + "-f").style.background = null;
 							};
 							element.style.background = "#303030FF";
@@ -2738,13 +2736,13 @@
 		    			setZoomRange();
 		    		}
 		    		for (var i=0; i < objsCompare.length; i++) {
-		    			if (objects[objsCompare[i].id].hasSideImage == true) {
+		    			if (objects[objsCompare[i].id].sideImage.length > 0) {
 		    				document.getElementById(objsCompare[i].name + "-sideImage").width = objects[objsCompare[i].id].length * compareZoom;
 		    			};
-		    			if (objects[objsCompare[i].id].hasFrontImage == true) {
+		    			if (objects[objsCompare[i].id].frontImage.length > 0) {
 		    				document.getElementById(objsCompare[i].name + "-frontImage").width = objects[objsCompare[i].id].width * compareZoom;
 		    			};
-		    			if (objects[objsCompare[i].id].hasTopImage == true) {
+		    			if (objects[objsCompare[i].id].topImage.length > 0) {
 		    				document.getElementById(objsCompare[i].name + "-topImage").width = objects[objsCompare[i].id].length * compareZoom;
 		    			};
 		    			if (objsCompare[i].angle == 2) {
@@ -3488,7 +3486,7 @@
 							objectsCount.innerHTML = searchObjects.length + " OBJECTS";
 						}
 			    	}
-			    	else {
+			    	else { // -------------------------------------------------------------- Search
 			    		if (newSearch == true) {
 			    			sort.value = "relevance";
 			    		}
@@ -3510,41 +3508,79 @@
 		  						}
 		  						for (var i3=0; i3 < searchArray.length; i3++) {
 		  							searchIncrease = false;
-		  							if (objects[i].name.toLowerCase().startsWith(searchArray[i3].toLowerCase()) == true) {
-		  								objects[i].searchRelevance += 100;
-		  								searchIncrease = true;
-		  							}
-		  							else if (objects[i].name.toLowerCase().indexOf(searchArray[i3].toLowerCase()) > -1) {
-		  								objects[i].searchRelevance += 50;
-		  								searchIncrease = true;
-		  							}
-		  							if (objects[i].category3.toLowerCase().indexOf(searchArray[i3].toLowerCase()) > -1) {
-		  								objects[i].searchRelevance += 10;
-		  								searchIncrease = true;
-		  							}
-		  							if (objects[i].category2.toLowerCase().indexOf(searchArray[i3].toLowerCase()) > -1) {
-		  								objects[i].searchRelevance += 10;
-		  								searchIncrease = true;
-		  							}
-		  							if (objects[i].category1.toLowerCase().indexOf(searchArray[i3].toLowerCase()) > -1) {
-		  								objects[i].searchRelevance += 10;
-		  								searchIncrease = true;
-		  							}
-		  							for (var i2=0; i2 < objects[i].tags.length; i2++) {
-										if (objects[i].tags[i2].toLowerCase() == searchArray[i3].toLowerCase()) {
-		  									objects[i].searchRelevance += 10;
-		  									searchIncrease = true;
-		  								}
-		  								else if (objects[i].tags[i2].toLowerCase().startsWith(searchArray[i3].toLowerCase()) == true) {
-		  									objects[i].searchRelevance += 5;
-		  									searchIncrease = true;
-		  								}
-		  								else if (objects[i].tags[i2].toLowerCase().indexOf(searchArray[i3].toLowerCase()) > -1) {
-		  									objects[i].searchRelevance += 1;
-		  									searchIncrease = true;
-		  								}
+		  							if (!(searchArray[i3].toLowerCase().startsWith("-"))) {
+		  								if (objects[i].name.toLowerCase().startsWith(searchArray[i3].toLowerCase()) == true) {
+			  								objects[i].searchRelevance += 100;
+			  								searchIncrease = true;
+			  							}
+			  							else if (objects[i].name.toLowerCase().indexOf(searchArray[i3].toLowerCase()) > -1) {
+			  								objects[i].searchRelevance += 50;
+			  								searchIncrease = true;
+			  							}
+			  							if (objects[i].category3.toLowerCase().indexOf(searchArray[i3].toLowerCase()) > -1) {
+			  								objects[i].searchRelevance += 10;
+			  								searchIncrease = true;
+			  							}
+			  							if (objects[i].category2.toLowerCase().indexOf(searchArray[i3].toLowerCase()) > -1) {
+			  								objects[i].searchRelevance += 10;
+			  								searchIncrease = true;
+			  							}
+			  							if (objects[i].category1.toLowerCase().indexOf(searchArray[i3].toLowerCase()) > -1) {
+			  								objects[i].searchRelevance += 10;
+			  								searchIncrease = true;
+			  							}
+			  							for (var i2=0; i2 < objects[i].tags.length; i2++) {
+											if (objects[i].tags[i2].toLowerCase() == searchArray[i3].toLowerCase()) {
+			  									objects[i].searchRelevance += 10;
+			  									searchIncrease = true;
+			  								}
+			  								else if (objects[i].tags[i2].toLowerCase().startsWith(searchArray[i3].toLowerCase()) == true) {
+			  									objects[i].searchRelevance += 5;
+			  									searchIncrease = true;
+			  								}
+			  								else if (objects[i].tags[i2].toLowerCase().indexOf(searchArray[i3].toLowerCase()) > -1) {
+			  									objects[i].searchRelevance += 1;
+			  									searchIncrease = true;
+			  								}
+										}
 									}
-									if (searchIncrease == true) {
+									if (searchArray[i3].toLowerCase().startsWith("-")) {
+		  								if (objects[i].name.toLowerCase().startsWith(searchArray[i3].toLowerCase().substring(1, searchArray[i3].length)) == true) {
+			  								objects[i].searchRelevance = 0;
+			  								searchIncrease = false;
+			  							}
+			  							else if (objects[i].name.toLowerCase().indexOf(searchArray[i3].toLowerCase().substring(1, searchArray[i3].length)) > -1) {
+			  								objects[i].searchRelevance = 0;
+			  								searchIncrease = false;
+			  							}
+			  							if (objects[i].category3.toLowerCase().indexOf(searchArray[i3].toLowerCase().substring(1, searchArray[i3].length)) > -1) {
+			  								objects[i].searchRelevance = 0;
+			  								searchIncrease = false;
+			  							}
+			  							if (objects[i].category2.toLowerCase().indexOf(searchArray[i3].toLowerCase().substring(1, searchArray[i3].length)) > -1) {
+			  								objects[i].searchRelevance = 0;
+			  								searchIncrease = false;
+			  							}
+			  							if (objects[i].category1.toLowerCase().indexOf(searchArray[i3].toLowerCase().substring(1, searchArray[i3].length)) > -1) {
+			  								objects[i].searchRelevance = 0;
+			  								searchIncrease = false;
+			  							}
+			  							for (var i2=0; i2 < objects[i].tags.length; i2++) {
+											if (objects[i].tags[i2].toLowerCase() == searchArray[i3].toLowerCase().substring(1, searchArray[i3].length)) {
+			  									objects[i].searchRelevance = 0;
+			  									searchIncrease = false;
+			  								}
+			  								else if (objects[i].tags[i2].toLowerCase().startsWith(searchArray[i3].toLowerCase().substring(1, searchArray[i3].length)) == true) {
+			  									objects[i].searchRelevance = 0;
+			  									searchIncrease = false;
+			  								}
+			  								else if (objects[i].tags[i2].toLowerCase().indexOf(searchArray[i3].toLowerCase().substring(1, searchArray[i3].length)) > -1) {
+			  									objects[i].searchRelevance = 0;
+			  									searchIncrease = false;
+			  								}
+										}
+		  							}
+									if (searchIncrease == true || searchArray[i3].startsWith("-")) {
 										searchArrayMatches += 1;
 									}
 		  						}
