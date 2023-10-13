@@ -3156,7 +3156,7 @@ var objects = [
         lastModified:"2023/09/12", // YYYY/MM/DD
     },
     {
-        name:"Pacific Ocean (North)",
+        name:"Pacific Ocean (north)",
         defaultAngle: 2,
         sideImage:"",
         sideImageAlign:"none",
@@ -3181,7 +3181,7 @@ var objects = [
         lastModified:"2023/09/12", // YYYY/MM/DD
     },
     {
-        name:"Pacific Ocean (South)",
+        name:"Pacific Ocean (south)",
         defaultAngle: 2,
         sideImage:"",
         sideImageAlign:"none",
@@ -3206,7 +3206,7 @@ var objects = [
         lastModified:"2023/09/12", // YYYY/MM/DD
     },
     {
-        name:"Atlantic Ocean (North)",
+        name:"Atlantic Ocean (north)",
         defaultAngle: 2,
         sideImage:"",
         sideImageAlign:"none",
@@ -3231,7 +3231,7 @@ var objects = [
         lastModified:"2023/09/12", // YYYY/MM/DD
     },
     {
-        name:"Atlantic Ocean (South)",
+        name:"Atlantic Ocean (south)",
         defaultAngle: 2,
         sideImage:"",
         sideImageAlign:"none",
@@ -4106,7 +4106,7 @@ var objects = [
         lastModified:"2023/10/08", // YYYY/MM/DD
     },
     {
-        name:"Rock (Generic)",
+        name:"Rock (generic)",
         defaultAngle: 0,
         sideImage:"Rock_Generic-side",
         sideImageAlign:"bottom",
@@ -4129,6 +4129,31 @@ var objects = [
         tags:["stone"], // don't include anything in categories or name
         dateAdded:"2023/10/10", // YYYY/MM/DD
         lastModified:"2023/10/10", // YYYY/MM/DD
+    },
+    {
+        name:"Lenovo ThinkPad T14s Gen 2 14\" (open)",
+        defaultAngle: 0,
+        sideImage:"Lenovo_ThinkPad_T14s_Gen_2_14_open-side",
+        sideImageAlign:"bottom",
+        sideImageArtist: "Daniel Roberts (BlenderTimer)",
+        sideImageDate:"2023/10/12", // YYYY/MM/DD
+        frontImage:"",
+        frontImageAlign:"none",
+        frontImageArtist: "",
+        frontImageDate:"", // YYYY/MM/DD
+        topImage:"Lenovo_ThinkPad_T14s_Gen_2_14_open-top",
+        topImageAlign:"none",
+        topImageArtist: "Daniel Roberts (BlenderTimer)",
+        topImageDate:"2023/10/12", // YYYY/MM/DD
+        width:0.0003275,
+        length:0.0002254,
+        height:0.0002256,
+        category1:"technology",
+        category2:"modern",
+        category3:"laptops",
+        tags:["intel", "amd"], // don't include anything in categories or name
+        dateAdded:"2023/10/12", // YYYY/MM/DD
+        lastModified:"2023/10/12", // YYYY/MM/DD
     },
 ];
 
