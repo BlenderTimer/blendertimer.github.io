@@ -4138,7 +4138,7 @@ var objects = [
         sideImageArtist: "Daniel Roberts (BlenderTimer)",
         sideImageDate:"2023/10/12", // YYYY/MM/DD
         frontImage:"",
-        frontImageAlign:"none",
+        frontImageAlign:"bottom",
         frontImageArtist: "",
         frontImageDate:"", // YYYY/MM/DD
         topImage:"Lenovo_ThinkPad_T14s_Gen_2_14_open-top",
@@ -4154,6 +4154,31 @@ var objects = [
         tags:["intel", "amd"], // don't include anything in categories or name
         dateAdded:"2023/10/12", // YYYY/MM/DD
         lastModified:"2023/10/12", // YYYY/MM/DD
+    },
+    {
+        name:"Chicken Egg",
+        defaultAngle: 1,
+        sideImage:"",
+        sideImageAlign:"none",
+        sideImageArtist: "",
+        sideImageDate:"", // YYYY/MM/DD
+        frontImage:"Chicken_Egg-front",
+        frontImageAlign:"none",
+        frontImageArtist: "Daniel Roberts (BlenderTimer)",
+        frontImageDate:"2023/10/14", // YYYY/MM/DD
+        topImage:"",
+        topImageAlign:"none",
+        topImageArtist: "",
+        topImageDate:"", // YYYY/MM/DD
+        width:0.000043,
+        length:0.000043,
+        height:0.000062,
+        category1:"nature",
+        category2:"animals",
+        category3:"birds",
+        tags:["shell"], // don't include anything in categories or name
+        dateAdded:"2023/10/14", // YYYY/MM/DD
+        lastModified:"2023/10/14", // YYYY/MM/DD
     },
 ];
 
