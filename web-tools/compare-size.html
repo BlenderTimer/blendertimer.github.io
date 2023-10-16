@@ -1638,7 +1638,7 @@
 				</div>
 			</div>
 		</div>
-		<p id="version">Tool version: 0.3.4</p>
+		<p id="version">Tool version: 0.3.5</p>
 		<script type="text/javascript">
 			var title = document.getElementById('title');
 			var navHome = document.getElementById('nav-home');
@@ -3475,6 +3475,7 @@
 							objName.innerHTML = searchObjects[i].name;
 							objName.title = searchObjects[i].name;
 							objName.id = i.toString() + "-" + searchObjects[i].objectID + "-searchobject";
+							objName.className = "search-object";
 							searchObjects[i].elementID = objName.id;
 							objName.addEventListener("click", function(event) {
 								var element = event.target || event.srcElement;
@@ -3739,6 +3740,7 @@
 							objName.innerHTML = searchObjects[i].name;
 							objName.title = searchObjects[i].name;
 							objName.id = i.toString() + "-" + searchObjects[i].objectID + "-searchobject";
+							objName.className = "search-object";
 							searchObjects[i].elementID = objName.id;
 							objName.addEventListener("click", function(event) {
 								var element = event.target || event.srcElement;
