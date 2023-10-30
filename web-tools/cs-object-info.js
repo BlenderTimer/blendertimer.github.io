@@ -4180,6 +4180,31 @@ var objects = [
         dateAdded:"2023/10/14", // YYYY/MM/DD
         lastModified:"2023/10/14", // YYYY/MM/DD
     },
+    {
+        name:"Apple",
+        defaultAngle: 1,
+        sideImage:"",
+        sideImageAlign:"none",
+        sideImageArtist: "",
+        sideImageDate:"", // YYYY/MM/DD
+        frontImage:"Apple-front",
+        frontImageAlign:"bottom",
+        frontImageArtist: "felax",
+        frontImageDate:"2023/10/29", // YYYY/MM/DD
+        topImage:"",
+        topImageAlign:"none",
+        topImageArtist: "",
+        topImageDate:"", // YYYY/MM/DD
+        width:0.000075,
+        length:0.000075,
+        height:0.000085,
+        category1:"miscellaneous",
+        category2:"food",
+        category3:"fruit",
+        tags:["pome"], // don't include anything in categories or name
+        dateAdded:"2023/10/29", // YYYY/MM/DD
+        lastModified:"2023/10/29", // YYYY/MM/DD
+    },
 ];
 
 //	———————— STEPS FOR UPDATING ————————
