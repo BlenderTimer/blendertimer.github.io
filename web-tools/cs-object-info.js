@@ -8,12 +8,10 @@ var objects = [
         sideImageArtist: "Daniel Roberts (BlenderTimer)",
         sideImageDate:"2023/07/29", // YYYY/MM/DD
 		frontImage:"Earth-front",
-		hasFrontImage:true,
         frontImageAlign:"none",
         frontImageArtist: "Daniel Roberts (BlenderTimer)",
         frontImageDate:"2023/07/29", // YYYY/MM/DD
 		topImage:"Earth-top",
-		hasTopImage:true,
         topImageAlign:"none",
         topImageArtist: "Daniel Roberts (BlenderTimer)",
         topImageDate:"2023/07/29", // YYYY/MM/DD
@@ -35,12 +33,10 @@ var objects = [
         sideImageArtist: "Daniel Roberts (BlenderTimer)",
         sideImageDate:"2023/07/28", // YYYY/MM/DD
 		frontImage:"Toyota_Tacoma_2022-front",
-		hasFrontImage:true,
         frontImageAlign:"bottom",
         frontImageArtist: "Daniel Roberts (BlenderTimer)",
         frontImageDate:"2023/07/28", // YYYY/MM/DD
 		topImage:"Toyota_Tacoma_2022-top",
-		hasTopImage:true,
         topImageAlign:"none",
         topImageArtist: "Daniel Roberts (BlenderTimer)",
         topImageDate:"2023/07/28", // YYYY/MM/DD
@@ -62,12 +58,10 @@ var objects = [
         sideImageArtist: "Daniel Roberts (BlenderTimer)",
         sideImageDate:"2023/07/29", // YYYY/MM/DD
 		frontImage:"Red_Blood_Cell-front",
-		hasFrontImage:true,
         frontImageAlign:"none",
         frontImageArtist: "Daniel Roberts (BlenderTimer)",
         frontImageDate:"2023/07/29", // YYYY/MM/DD
 		topImage:"Red_Blood_Cell-top",
-		hasTopImage:true,
         topImageAlign:"none",
         topImageArtist: "Daniel Roberts (BlenderTimer)",
         topImageDate:"2023/07/29", // YYYY/MM/DD
@@ -89,12 +83,10 @@ var objects = [
         sideImageArtist: "Daniel Roberts (BlenderTimer)",
         sideImageDate:"2023/07/28", // YYYY/MM/DD
 		frontImage:"Human_Male-front",
-		hasFrontImage:true,
         frontImageAlign:"bottom",
         frontImageArtist: "Daniel Roberts (BlenderTimer)",
         frontImageDate:"2023/07/28", // YYYY/MM/DD
 		topImage:"Human_Male-top",
-		hasTopImage:true,
         topImageAlign:"none",
         topImageArtist: "Daniel Roberts (BlenderTimer)",
         topImageDate:"2023/07/28", // YYYY/MM/DD
@@ -116,12 +108,10 @@ var objects = [
         sideImageArtist: "Daniel Roberts (BlenderTimer)",
         sideImageDate:"2023/08/01", // YYYY/MM/DD
 		frontImage:"Atom_Generic-front",
-		hasFrontImage:true,
         frontImageAlign:"none",
         frontImageArtist: "Daniel Roberts (BlenderTimer)",
         frontImageDate:"2023/08/01", // YYYY/MM/DD
 		topImage:"Atom_Generic-top",
-		hasTopImage:true,
         topImageAlign:"none",
         topImageArtist: "Daniel Roberts (BlenderTimer)",
         topImageDate:"2023/08/01", // YYYY/MM/DD
@@ -143,12 +133,10 @@ var objects = [
         sideImageArtist: "Daniel Roberts (BlenderTimer)",
         sideImageDate:"2023/08/01", // YYYY/MM/DD
 		frontImage:"Mercury-front",
-		hasFrontImage:true,
         frontImageAlign:"none",
         frontImageArtist: "Daniel Roberts (BlenderTimer)",
         frontImageDate:"2023/08/01", // YYYY/MM/DD
 		topImage:"Mercury-top",
-		hasTopImage:true,
         topImageAlign:"none",
         topImageArtist: "Daniel Roberts (BlenderTimer)",
         topImageDate:"2023/08/01", // YYYY/MM/DD
@@ -170,12 +158,10 @@ var objects = [
         sideImageArtist: "Daniel Roberts (BlenderTimer)",
         sideImageDate:"2023/08/01", // YYYY/MM/DD
 		frontImage:"Venus-front",
-		hasFrontImage:true,
         frontImageAlign:"none",
         frontImageArtist: "Daniel Roberts (BlenderTimer)",
         frontImageDate:"2023/08/01", // YYYY/MM/DD
 		topImage:"Venus-top",
-		hasTopImage:true,
         topImageAlign:"none",
         topImageArtist: "Daniel Roberts (BlenderTimer)",
         topImageDate:"2023/08/01", // YYYY/MM/DD
@@ -197,12 +183,10 @@ var objects = [
         sideImageArtist: "Daniel Roberts (BlenderTimer)",
         sideImageDate:"2023/08/01", // YYYY/MM/DD
 		frontImage:"Mars-front",
-		hasFrontImage:true,
         frontImageAlign:"none",
         frontImageArtist: "Daniel Roberts (BlenderTimer)",
         frontImageDate:"2023/08/01", // YYYY/MM/DD
 		topImage:"Mars-top",
-		hasTopImage:true,
         topImageAlign:"none",
         topImageArtist: "Daniel Roberts (BlenderTimer)",
         topImageDate:"2023/08/01", // YYYY/MM/DD
@@ -224,12 +208,10 @@ var objects = [
         sideImageArtist: "Daniel Roberts (BlenderTimer)",
         sideImageDate:"2023/08/01", // YYYY/MM/DD
 		frontImage:"Jupiter-front",
-		hasFrontImage:true,
         frontImageAlign:"none",
         frontImageArtist: "Daniel Roberts (BlenderTimer)",
         frontImageDate:"2023/08/01", // YYYY/MM/DD
 		topImage:"Jupiter-top",
-		hasTopImage:true,
         topImageAlign:"none",
         topImageArtist: "Daniel Roberts (BlenderTimer)",
         topImageDate:"2023/08/01", // YYYY/MM/DD
@@ -251,12 +233,10 @@ var objects = [
         sideImageArtist: "Daniel Roberts (BlenderTimer)",
         sideImageDate:"2023/08/01", // YYYY/MM/DD
 		frontImage:"Saturn_without_rings-front",
-		hasFrontImage:true,
         frontImageAlign:"none",
         frontImageArtist: "Daniel Roberts (BlenderTimer)",
         frontImageDate:"2023/08/01", // YYYY/MM/DD
 		topImage:"Saturn_without_rings-top",
-		hasTopImage:true,
         topImageAlign:"none",
         topImageArtist: "Daniel Roberts (BlenderTimer)",
         topImageDate:"2023/08/01", // YYYY/MM/DD
@@ -278,12 +258,10 @@ var objects = [
         sideImageArtist: "Daniel Roberts (BlenderTimer)",
         sideImageDate:"2023/08/01", // YYYY/MM/DD
 		frontImage:"Uranus-front",
-		hasFrontImage:true,
         frontImageAlign:"none",
         frontImageArtist: "Daniel Roberts (BlenderTimer)",
         frontImageDate:"2023/08/01", // YYYY/MM/DD
 		topImage:"Uranus-top",
-		hasTopImage:true,
         topImageAlign:"none",
         topImageArtist: "Daniel Roberts (BlenderTimer)",
         topImageDate:"2023/08/01", // YYYY/MM/DD
@@ -305,12 +283,10 @@ var objects = [
         sideImageArtist: "Daniel Roberts (BlenderTimer)",
         sideImageDate:"2023/08/01", // YYYY/MM/DD
 		frontImage:"Neptune-front",
-		hasFrontImage:true,
         frontImageAlign:"none",
         frontImageArtist: "Daniel Roberts (BlenderTimer)",
         frontImageDate:"2023/08/01", // YYYY/MM/DD
 		topImage:"Neptune-top",
-		hasTopImage:true,
         topImageAlign:"none",
         topImageArtist: "Daniel Roberts (BlenderTimer)",
         topImageDate:"2023/08/01", // YYYY/MM/DD
@@ -332,12 +308,10 @@ var objects = [
         sideImageArtist: "Daniel Roberts (BlenderTimer)",
         sideImageDate:"2023/08/01", // YYYY/MM/DD
 		frontImage:"The_Sun-front",
-		hasFrontImage:true,
         frontImageAlign:"none",
         frontImageArtist: "Daniel Roberts (BlenderTimer)",
         frontImageDate:"2023/08/01", // YYYY/MM/DD
 		topImage:"The_Sun-top",
-		hasTopImage:true,
         topImageAlign:"none",
         topImageArtist: "Daniel Roberts (BlenderTimer)",
         topImageDate:"2023/08/01", // YYYY/MM/DD
@@ -359,12 +333,10 @@ var objects = [
         sideImageArtist: "Daniel Roberts (BlenderTimer)",
         sideImageDate:"2023/08/02", // YYYY/MM/DD
 		frontImage:"Sirius_A-front",
-		hasFrontImage:true,
         frontImageAlign:"none",
         frontImageArtist: "Daniel Roberts (BlenderTimer)",
         frontImageDate:"2023/08/02", // YYYY/MM/DD
 		topImage:"Sirius_A-top",
-		hasTopImage:true,
         topImageAlign:"none",
         topImageArtist: "Daniel Roberts (BlenderTimer)",
         topImageDate:"2023/08/02", // YYYY/MM/DD
@@ -611,12 +583,10 @@ var objects = [
         sideImageArtist: "Daniel Roberts (BlenderTimer)",
         sideImageDate:"2023/08/05", // YYYY/MM/DD
 		frontImage:"Human_Female-front",
-		hasFrontImage:true,
         frontImageAlign:"bottom",
         frontImageArtist: "Daniel Roberts (BlenderTimer)",
         frontImageDate:"2023/08/05", // YYYY/MM/DD
 		topImage:"Human_Female-top",
-		hasTopImage:true,
         topImageAlign:"none",
         topImageArtist: "Daniel Roberts (BlenderTimer)",
         topImageDate:"2023/08/05", // YYYY/MM/DD
@@ -4205,6 +4175,106 @@ var objects = [
         dateAdded:"2023/10/29", // YYYY/MM/DD
         lastModified:"2023/10/29", // YYYY/MM/DD
     },
+    {
+		name:"Human (Baby Male)",
+        defaultAngle: 1,
+		sideImage:"",
+        sideImageAlign:"none",
+        sideImageArtist: "",
+        sideImageDate:"", // YYYY/MM/DD
+		frontImage:"Human_Baby_Male-front",
+        frontImageAlign:"none",
+        frontImageArtist: "Daniel Roberts (BlenderTimer)",
+        frontImageDate:"2023/11/12", // YYYY/MM/DD
+		topImage:"",
+        topImageAlign:"none",
+        topImageArtist: "",
+        topImageDate:"", // YYYY/MM/DD
+		width:0.000247655,
+		length:0.00021,
+		height:0.00048,
+		category1:"nature",
+		category2:"animals",
+		category3:"humans",
+		tags:["person", "people", "child", "young", "kid", "boy", "homo sapiens"], // don't include anything in categories or name
+		dateAdded:"2023/11/12", // YYYY/MM/DD
+		lastModified:"2023/11/12", // YYYY/MM/DD
+	},
+	{
+		name:"Human (Baby Female)",
+        defaultAngle: 1,
+		sideImage:"",
+        sideImageAlign:"none",
+        sideImageArtist: "",
+        sideImageDate:"", // YYYY/MM/DD
+		frontImage:"Human_Baby_Female-front",
+        frontImageAlign:"none",
+        frontImageArtist: "Daniel Roberts (BlenderTimer)",
+        frontImageDate:"2023/11/12", // YYYY/MM/DD
+		topImage:"",
+        topImageAlign:"none",
+        topImageArtist: "",
+        topImageDate:"", // YYYY/MM/DD
+		width:0.000259234,
+		length:0.00022,
+		height:0.000465,
+		category1:"nature",
+		category2:"animals",
+		category3:"humans",
+		tags:["person", "people", "child", "young", "kid", "girl", "homo sapiens"], // don't include anything in categories or name
+		dateAdded:"2023/11/12", // YYYY/MM/DD
+		lastModified:"2023/11/12", // YYYY/MM/DD
+	},
+	{
+		name:"Falcon 9",
+        defaultAngle: 1,
+		sideImage:"",
+        sideImageAlign:"bottom",
+        sideImageArtist: "",
+        sideImageDate:"", // YYYY/MM/DD
+		frontImage:"Falcon_9-front",
+        frontImageAlign:"bottom",
+        frontImageArtist: "Daniel Roberts (BlenderTimer)",
+        frontImageDate:"2023/11/12", // YYYY/MM/DD
+		topImage:"",
+        topImageAlign:"none",
+        topImageArtist: "",
+        topImageDate:"", // YYYY/MM/DD
+		width:0.005226443,
+		length:0.005226443,
+		height:0.070,
+		category1:"transportation",
+		category2:"spacecraft",
+		category3:"rockets",
+		tags:["nine", "spacex", "space x"], // don't include anything in categories or name
+		dateAdded:"2023/11/12", // YYYY/MM/DD
+		lastModified:"2023/11/12", // YYYY/MM/DD
+	},
+	{
+		name:"Falcon 9 (unfolded)",
+        defaultAngle: 1,
+		sideImage:"",
+        sideImageAlign:"bottom",
+        sideImageArtist: "",
+        sideImageDate:"", // YYYY/MM/DD
+		frontImage:"Falcon_9_unfolded-front",
+        frontImageAlign:"bottom",
+        frontImageArtist: "Daniel Roberts (BlenderTimer)",
+        frontImageDate:"2023/11/12", // YYYY/MM/DD
+		topImage:"",
+        topImageAlign:"none",
+        topImageArtist: "",
+        topImageDate:"", // YYYY/MM/DD
+		width:0.017733977,
+		length:0.017733977,
+		height:0.0725538645,
+		category1:"transportation",
+		category2:"spacecraft",
+		category3:"rockets",
+		tags:["nine", "spacex", "space x"], // don't include anything in categories or name
+		dateAdded:"2023/11/12", // YYYY/MM/DD
+		lastModified:"2023/11/12", // YYYY/MM/DD
+	},
 ];
 
 //	———————— STEPS FOR UPDATING ————————
