@@ -4275,6 +4275,31 @@ var objects = [
 		dateAdded:"2023/11/12", // YYYY/MM/DD
 		lastModified:"2023/11/12", // YYYY/MM/DD
 	},
+	{
+		name:"X-15",
+        defaultAngle: 0,
+		sideImage:"X_15-side",
+        sideImageAlign:"none",
+        sideImageArtist: "Daniel Roberts (BlenderTimer)",
+        sideImageDate:"2023/12/09", // YYYY/MM/DD
+		frontImage:"",
+        frontImageAlign:"none",
+        frontImageArtist: "",
+        frontImageDate:"", // YYYY/MM/DD
+		topImage:"",
+        topImageAlign:"none",
+        topImageArtist: "",
+        topImageDate:"", // YYYY/MM/DD
+		width:0.00671,
+		length:0.01524,
+		height:0.00396,
+		category1:"transportation",
+		category2:"aircraft",
+		category3:"airplanes",
+		tags:["supersonic", "fastest", "manned", "nasa", "test", "x15"], // don't include anything in categories or name
+		dateAdded:"2023/12/09", // YYYY/MM/DD
+		lastModified:"2023/12/09", // YYYY/MM/DD
+	},
 ];
 
 //	———————— STEPS FOR UPDATING ————————
