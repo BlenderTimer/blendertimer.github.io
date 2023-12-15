@@ -19,7 +19,7 @@
 	</head>
 	<body onload="baseLoad(), determineLayout()" onresize="determineLayout()">
 		<a href="https://www.blendertimer.com/video-sources"><img alt="Back to Video Sources" src="../static-0/files/images/back-videoSources.png" id="nav-home"></a>
-		<div id="revolve-button" title="Current visitors on this site." style="display: none"><script src="https://rf.revolvermaps.com/0/0/3.js?i=5cgjr9bkw1v&b=0&s=40&m=2&cl=555555&co=000000&cd=ffffff&v0=25&v1=100&r=1" async="async"></script></div>
+		<div id="revolve-button" title="Current visitors on this site."><script src="https://rf.revolvermaps.com/0/0/3.js?i=5cgjr9bkw1v&b=0&s=40&m=2&cl=555555&co=000000&cd=ffffff&v0=25&v1=100&r=1" async="async"></script></div>
 		<h1 id="title" style="margin-top: 0px; opacity: 0">The Great Molasses Flood</h1>
 		<h2 id="no-sources" style="opacity: 0; display: none">No sources have been registered.</h2>
 		<div id="base" style="display: block">
@@ -53,6 +53,7 @@
 					<img src="../static-0/files/images/videoThumb-11-The_Great_Molasses_Flood-180.png" onclick="redirect('../static-0/files/images/videoThumb-11-The_Great_Molasses_Flood-1080.png')" id="thumbnail" data-toggle="tooltip" title="View full resolution thumbnail.">
 					<a href="../static-0/files/images/videoThumb-11-The_Great_Molasses_Flood-1080.png" id="view-thumb" data-toggle="tooltip" title="View full resolution thumbnail."><img alt="View Full Res Thumbnail" src="../static-0/files/images/view-video-thumb.png"></a>
 					<!--<a href="../static-0/files/videos/youtube/11-The_Great_Molasses_Flood.mp4" download="The Great Molasses Flood.mp4" id="video-download">Download Video</a>-->
+					<button id="thumb-history" onclick="scrollToThumbnailHistory()">View Thumbnail History</button>
 				</div>
 			</div>
 			<div id="sources">
@@ -233,6 +234,23 @@
 					<p>the area still smelled like molasses on hot summer days.</p>
 					<p>This disaster is certainly one of the most</p>
 					<p>absurd tragedies, that has ever occurred!</p>
+				</div>
+			</div>
+			<div id="corrections">
+				<h3>Corrections:</h3>
+				<b class="no-corrections">No corrections</b>
+			</div>
+			<div id="thumbnail-history">
+				<h3>Thumbnail History:</h3>
+				<div id="t-h">
+					<a href="../static-0/files/images/videoThumb-11-The_Great_Molasses_Flood-1080-1.png" class="th-block">
+						<img src="../static-0/files/images/videoThumb-11-The_Great_Molasses_Flood-180-1.png">
+						<b>May 20, 2023</b>
+					</a>
+					<a href="../static-0/files/images/videoThumb-11-The_Great_Molasses_Flood-1080.png" class="th-block">
+						<img src="../static-0/files/images/videoThumb-11-The_Great_Molasses_Flood-180.png">
+						<b>June 13, 2023</b>
+					</a>
 				</div>
 			</div>
 		</div>
