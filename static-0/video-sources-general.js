@@ -7,10 +7,14 @@ var rightInfo = document.getElementById('right-info');
 var thumbnail = document.getElementById('thumbnail');
 var infoP = info.getElementsByTagName('p');
 var viewThumb = document.getElementById('view-thumb');
+var corrections = document.getElementById('corrections');
+var thumbnailHistory = document.getElementById('thumbnail-history');
+
 function baseLoad() {
 	noSources.style.opacity = "1";
 	setTimeout(function() {title.style.opacity = "1"; title.style.transition = "ease 0.5s"},1);
 }
+
 function determineLayout() {
 	if (window.innerWidth < 500) {
 		title.style.marginTop = "50px";
@@ -36,7 +40,6 @@ function determineLayout() {
 		leftInfo.style.width = "100%";
 		rightInfo.style.width = "100%";
 		rightInfo.style.margin = "20px 0px 0px 0px";
-		viewThumb.style.right = thumbnail.offsetLeft - rightInfo.offsetLeft - 10 + "px";
 	}
 	else {
 		title.style.marginTop = "0px";
@@ -55,4 +58,12 @@ function determineLayout() {
 
 function redirect(url) {
 	window.location = url;
+}
+
+function scrollToCorrections() {
+	window.scrollTo(0, corrections.offsetTop - (window.innerHeight / 2) + (corrections.offsetHeight / 2));
+}
+
+function scrollToThumbnailHistory() {
+	window.scrollTo(0, thumbnailHistory.offsetTop - (window.innerHeight / 2) + (thumbnailHistory.offsetHeight / 2));
 }
