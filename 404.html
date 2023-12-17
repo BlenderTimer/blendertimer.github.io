@@ -145,6 +145,10 @@
                     var tui = 0;
                     var completeTUI = false;
                     var correctedURL = false;
+                    var ids = "";
+                    if (endURL.indexOf("#") > -1) {
+                        ids = endURL.substring(endURL.indexOf("#"), endURL.length);
+                    }
                     for (var i=0; i < videos.length; i++) {
                         for (var i2=0; i2 < endURL.length; i2++) {
                             if (endURL.substr(i2, 1).isNumber() == false) {
@@ -174,10 +178,10 @@
                         }
                     }
                     if (correctedURL == true) {
-                        window.location = newURL;
+                        window.location = newURL + ids;
                     }
                     else {
-                        window.location = url.substring(0, url.indexOf("/video-sources/") + 14);;
+                        window.location = url.substring(0, url.indexOf("/video-sources/") + 14) + ids;
                     }
                     loader.style.display = "block";
                     return 1;
