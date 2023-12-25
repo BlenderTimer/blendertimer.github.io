@@ -21,7 +21,7 @@ var objects = [
 		category1:"space",
 		category2:"planets",
 		category3:"terrestrial",
-		tags:["ball", "sphere", "africa", "america", "antarctica", "arctic", "continent", "asia", "usa", "us", "australia", "ocean", "sea", "solar system"], // don't include anything in categories or name
+		tags:["ball", "sphere", "africa", "america", "antarctica", "arctic", "continent", "asia", "usa", "us", "australia", "ocean", "sea", "solar system", "planet"], // don't include anything in categories or name
 		dateAdded:"2023/07/29", // YYYY/MM/DD
 		lastModified:"2023/08/14", // YYYY/MM/DD
 	},
@@ -146,7 +146,7 @@ var objects = [
 		category1:"space",
 		category2:"planets",
 		category3:"terrestrial",
-		tags:["ball", "sphere", "solar system"], // don't include anything in categories or name
+		tags:["ball", "sphere", "solar system", "planet"], // don't include anything in categories or name
 		dateAdded:"2023/08/01", // YYYY/MM/DD
 		lastModified:"2023/08/14", // YYYY/MM/DD
 	},
@@ -171,7 +171,7 @@ var objects = [
 		category1:"space",
 		category2:"planets",
 		category3:"terrestrial",
-		tags:["ball", "sphere", "solar system"], // don't include anything in categories or name
+		tags:["ball", "sphere", "solar system", "planet"], // don't include anything in categories or name
 		dateAdded:"2023/08/01", // YYYY/MM/DD
 		lastModified:"2023/08/14", // YYYY/MM/DD
 	},
@@ -196,7 +196,7 @@ var objects = [
 		category1:"space",
 		category2:"planets",
 		category3:"terrestrial",
-		tags:["ball", "sphere", "solar system"], // don't include anything in categories or name
+		tags:["ball", "sphere", "solar system", "planet"], // don't include anything in categories or name
 		dateAdded:"2023/08/01", // YYYY/MM/DD
 		lastModified:"2023/08/14", // YYYY/MM/DD
 	},
@@ -221,7 +221,7 @@ var objects = [
 		category1:"space",
 		category2:"planets",
 		category3:"gaseous",
-		tags:["ball", "sphere", "solar system"], // don't include anything in categories or name
+		tags:["ball", "sphere", "solar system", "planet"], // don't include anything in categories or name
 		dateAdded:"2023/08/01", // YYYY/MM/DD
 		lastModified:"2023/08/14", // YYYY/MM/DD
 	},
@@ -246,7 +246,7 @@ var objects = [
 		category1:"space",
 		category2:"planets",
 		category3:"gaseous",
-		tags:["ball", "sphere", "solar system"], // don't include anything in categories or name
+		tags:["ball", "sphere", "solar system", "planet"], // don't include anything in categories or name
 		dateAdded:"2023/08/01", // YYYY/MM/DD
 		lastModified:"2023/08/14", // YYYY/MM/DD
 	},
@@ -271,7 +271,7 @@ var objects = [
 		category1:"space",
 		category2:"planets",
 		category3:"gaseous",
-		tags:["ball", "sphere", "solar system"], // don't include anything in categories or name
+		tags:["ball", "sphere", "solar system", "planet"], // don't include anything in categories or name
 		dateAdded:"2023/08/01", // YYYY/MM/DD
 		lastModified:"2023/08/14", // YYYY/MM/DD
 	},
@@ -296,7 +296,7 @@ var objects = [
 		category1:"space",
 		category2:"planets",
 		category3:"gaseous",
-		tags:["ball", "sphere", "solar system"], // don't include anything in categories or name
+		tags:["ball", "sphere", "solar system", "planet"], // don't include anything in categories or name
 		dateAdded:"2023/08/01", // YYYY/MM/DD
 		lastModified:"2023/08/14", // YYYY/MM/DD
 	},
@@ -1621,7 +1621,7 @@ var objects = [
         category1:"space",
         category2:"planets",
         category3:"gaseous",
-        tags:["ice", "rock"], // don't include anything in categories or name
+        tags:["ice", "ball", "sphere", "solar system", "planet"], // don't include anything in categories or name
         dateAdded:"2023/08/09", // YYYY/MM/DD
         lastModified:"2023/08/09", // YYYY/MM/DD
     },
@@ -1646,7 +1646,7 @@ var objects = [
         category1:"space",
         category2:"planets",
         category3:"gaseous",
-        tags:["rock", "dust"], // don't include anything in categories or name
+        tags:["ball", "sphere", "solar system", "planet"], // don't include anything in categories or name
         dateAdded:"2023/08/09", // YYYY/MM/DD
         lastModified:"2023/08/09", // YYYY/MM/DD
     },
