@@ -140,8 +140,8 @@
 
             function checkURL(url) {
                 var ids = "";
-                if (endURL.indexOf("#") > -1) {
-                    ids = endURL.substring(endURL.indexOf("#"), endURL.length);
+                if (url.indexOf("#") > -1) {
+                    ids = url.substring(url.indexOf("#"), url.length);
                 }
                 if (url.indexOf("/video-sources/") > -1) {
                     var newURL = url.substring(0, url.indexOf("/video-sources/") + 15);
