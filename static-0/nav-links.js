@@ -59,7 +59,7 @@ var navLinks = [
 	{
 		title:"About",
 		url:"./about",
-		width:110,
+		width:120,
 		date:new Date(2024, 0, 7), //year, month(from 0), day
 		dropdownURLs:[
 			{
