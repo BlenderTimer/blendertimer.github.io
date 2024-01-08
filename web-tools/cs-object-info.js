@@ -4315,8 +4315,8 @@ var objects = [
         topImageAlign:"none",
         topImageArtist: "",
         topImageDate:"", // YYYY/MM/DD
-		width:0.000000000000182,
-		length:0.000000000000182,
+		width:0.000000000000161,
+		length:0.000000000000161,
 		height:0.000000000000182,
 		category1:"miscellaneous",
 		category2:"particles",
