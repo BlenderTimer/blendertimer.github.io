@@ -122,7 +122,7 @@ var objects = [
 		category2:"particles",
 		category3:"atoms",
 		tags:["thing", "chemical", "nucleus", "proton", "neutron", "element"], // don't include anything in categories or name
-		dateAdded:"2032/08/01", // YYYY/MM/DD
+		dateAdded:"2023/08/01", // YYYY/MM/DD
 		lastModified:"2023/08/01", // YYYY/MM/DD
 	},
 	{
@@ -4300,6 +4300,31 @@ var objects = [
 		dateAdded:"2023/12/09", // YYYY/MM/DD
 		lastModified:"2023/12/09", // YYYY/MM/DD
 	},
+	{
+		name:"Lithium Atom",
+        defaultAngle: 1,
+		sideImage:"",
+        sideImageAlign:"none",
+        sideImageArtist: "",
+        sideImageDate:"", // YYYY/MM/DD
+		frontImage:"Lithium_Atom-front",
+        frontImageAlign:"none",
+        frontImageArtist: "malachi singh",
+        frontImageDate:"2024/01/07", // YYYY/MM/DD
+		topImage:"",
+        topImageAlign:"none",
+        topImageArtist: "",
+        topImageDate:"", // YYYY/MM/DD
+		width:0.000000000000182,
+		length:0.000000000000182,
+		height:0.000000000000182,
+		category1:"miscellaneous",
+		category2:"particles",
+		category3:"atoms",
+		tags:["metal", "nucleus", "proton", "neutron", "element"], // don't include anything in categories or name
+		dateAdded:"2024/01/07", // YYYY/MM/DD
+		lastModified:"2024/01/07", // YYYY/MM/DD
+	},
 ];
 
 //	———————— STEPS FOR UPDATING ————————
@@ -4307,3 +4332,4 @@ var objects = [
 //	2. Regenerate SEO tags.
 //  3. Upload image(s) to Github (/web-tools/compare-size/images/...).
 //  4. Upload compare-size.html and cs-object-info.js to Github (/web-tools/).
+//	5. Update Looker Studio stats
