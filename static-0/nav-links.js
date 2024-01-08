@@ -60,7 +60,7 @@ var navLinks = [
 		title:"About",
 		url:"./about",
 		width:110,
-		date:new Date(2023, 3, 1), //year, month(from 0), day
+		date:new Date(2024, 0, 7), //year, month(from 0), day
 		dropdownURLs:[
 			{
 				title:"FAQs",
@@ -71,6 +71,11 @@ var navLinks = [
 				title:"Contact",
 				url:"./about#contact",
 				date:new Date(2022, 11, 4), //year, month(from 0), day
+			},
+			{
+				title:"Privacy Policy",
+				url:"./terms/privacy-policy",
+				date:new Date(2024, 0, 7), //year, month(from 0), day
 			},
 		],
 	},
