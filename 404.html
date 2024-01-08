@@ -139,16 +139,16 @@
             }
 
             function checkURL(url) {
+                var ids = "";
+                if (endURL.indexOf("#") > -1) {
+                    ids = endURL.substring(endURL.indexOf("#"), endURL.length);
+                }
                 if (url.indexOf("/video-sources/") > -1) {
                     var newURL = url.substring(0, url.indexOf("/video-sources/") + 15);
                     var endURL = url.substring(url.indexOf("/video-sources/") + 15, url.length);
                     var tui = 0;
                     var completeTUI = false;
                     var correctedURL = false;
-                    var ids = "";
-                    if (endURL.indexOf("#") > -1) {
-                        ids = endURL.substring(endURL.indexOf("#"), endURL.length);
-                    }
                     for (var i=0; i < videos.length; i++) {
                         for (var i2=0; i2 < endURL.length; i2++) {
                             if (endURL.substr(i2, 1).isNumber() == false) {
@@ -183,6 +183,53 @@
                     else {
                         window.location = url.substring(0, url.indexOf("/video-sources/") + 14) + ids;
                     }
+                    loader.style.display = "block";
+                    return 1;
+                }
+                else if (url.indexOf("/factsheets/") > -1) {
+                    var newURL = url.substring(0, url.lastIndexOf("/factsheets/") + 12);
+                    var endURL = url.substring(url.lastIndexOf("/factsheets/") + 12, url.length);
+                    if (endURL.toLowerCase() == "planet-factsheet") {
+                        newURL = newURL + "/solar-system/planet-factsheet";
+                    }
+                    else if (endURL.toLowerCase() == "dwarf-planet-factsheet") {
+                        newURL = newURL + "/solar-system/dwarf-planet-factsheet";
+                    }
+                    window.location = newURL + ids;
+                    loader.style.display = "block";
+                    return 1;
+                }
+                else if (url.indexOf("/") > -1) {
+                    var newURL = url.substring(0, url.lastIndexOf("/") + 1);
+                    var endURL = url.substring(url.lastIndexOf("/") + 1, url.length);
+                    if (endURL.toLowerCase() == "privacy-policy") {
+                        newURL = newURL + "/terms/privacy-policy";
+                    }
+                    else if (endURL.toLowerCase() == "compare-size") {
+                        newURL = newURL + "/web-tools/compare-size";
+                    }
+                    else if (endURL.toLowerCase() == "base-converter") {
+                        newURL = newURL + "/web-tools/base-converter";
+                    }
+                    else if (endURL.toLowerCase() == "morse-code-translator") {
+                        newURL = newURL + "/web-tools/morse-code-translator";
+                    }
+                    else if (endURL.toLowerCase() == "speed-of-sound-calculator") {
+                        newURL = newURL + "/web-tools/speed-of-sound-calculator";
+                    }
+                    else if (endURL.toLowerCase() == "bt-sc") {
+                        newURL = newURL + "/licenses/bt-sc";
+                    }
+                    else if (endURL.toLowerCase() == "bt-lu") {
+                        newURL = newURL + "/licenses/bt-lu";
+                    }
+                    else if (endURL.toLowerCase() == "planet-factsheet") {
+                        newURL = newURL + "/factsheets/solar-system/planet-factsheet";
+                    }
+                    else if (endURL.toLowerCase() == "dwarf-planet-factsheet") {
+                        newURL = newURL + "/factsheets/solar-system/dwarf-planet-factsheet";
+                    }
+                    window.location = newURL + ids;
                     loader.style.display = "block";
                     return 1;
                 }
