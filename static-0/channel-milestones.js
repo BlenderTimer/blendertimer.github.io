@@ -316,6 +316,7 @@ function drawDate(d, x) {
 }
 
 function checkMilestones(d, x) {
+	document.getElementById('milestones').innerHTML = "There have been " + milestones.length + " milestones since April 21, 2021!"
 	for (var i=0; i < milestones.length; i++) {
 		if (d.getFullYear() == milestones[i].date.year && (d.getMonth() + 1) == milestones[i].date.month && d.getDate() == milestones[i].date.day) {
 			drawMilestone(milestones[i], x);
@@ -358,7 +359,6 @@ function drawMilestone(ms, x) {
 		tl2d.lineCap = "round";
 		tl2d.stroke();
 	}
-	console.log(ms.titleOffset)
 	if (ms.titleOffset == "after") {
 		tl2d.font = "bold 15pt monospace";
 		tl2d.fillStyle = "#E0E0E0";
