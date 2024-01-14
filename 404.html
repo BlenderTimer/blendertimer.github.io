@@ -229,6 +229,9 @@
                     else if (endURL.toLowerCase() == "dwarf-planet-factsheet") {
                         newURL = newURL + "factsheets/solar-system/dwarf-planet-factsheet";
                     }
+                    else {
+                        return 404;
+                    }
                     window.location = newURL + ids;
                     loader.style.display = "block";
                     return 1;
