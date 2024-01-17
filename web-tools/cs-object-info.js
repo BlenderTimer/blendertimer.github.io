@@ -4325,6 +4325,56 @@ var objects = [
 		dateAdded:"2024/01/07", // YYYY/MM/DD
 		lastModified:"2024/01/07", // YYYY/MM/DD
 	},
+	{
+		name:"AAA Battery",
+        defaultAngle: 1,
+		sideImage:"",
+        sideImageAlign:"none",
+        sideImageArtist: "",
+        sideImageDate:"", // YYYY/MM/DD
+		frontImage:"AAA_Battery-front",
+        frontImageAlign:"bottom",
+        frontImageArtist: "Daniel Roberts (BlenderTimer)",
+        frontImageDate:"2024/01/16", // YYYY/MM/DD
+		topImage:"",
+        topImageAlign:"none",
+        topImageArtist: "",
+        topImageDate:"", // YYYY/MM/DD
+		width:0.0000105,
+		length:0.0000105,
+		height:0.0000445,
+		category1:"technology",
+		category2:"modern",
+		category3:"power-storage",
+		tags:["battery", "batteries"], // don't include anything in categories or name
+		dateAdded:"2024/01/16", // YYYY/MM/DD
+		lastModified:"2024/01/16", // YYYY/MM/DD
+	},
+	{
+		name:"AA Battery",
+        defaultAngle: 1,
+		sideImage:"",
+        sideImageAlign:"none",
+        sideImageArtist: "",
+        sideImageDate:"", // YYYY/MM/DD
+		frontImage:"AA_Battery-front",
+        frontImageAlign:"bottom",
+        frontImageArtist: "Daniel Roberts (BlenderTimer)",
+        frontImageDate:"2024/01/16", // YYYY/MM/DD
+		topImage:"",
+        topImageAlign:"none",
+        topImageArtist: "",
+        topImageDate:"", // YYYY/MM/DD
+		width:0.000014,
+		length:0.000014,
+		height:0.00005,
+		category1:"technology",
+		category2:"modern",
+		category3:"power-storage",
+		tags:["battery", "batteries"], // don't include anything in categories or name
+		dateAdded:"2024/01/16", // YYYY/MM/DD
+		lastModified:"2024/01/16", // YYYY/MM/DD
+	},
 ];
 
 //	———————— STEPS FOR UPDATING ————————
