@@ -4296,7 +4296,7 @@ var objects = [
 		category1:"transportation",
 		category2:"aircraft",
 		category3:"airplanes",
-		tags:["supersonic", "fastest", "manned", "nasa", "test", "x15"], // don't include anything in categories or name
+		tags:["supersonic", "fastest", "manned", "nasa", "test", "x15", "supersonic", "hypersonic"], // don't include anything in categories or name
 		dateAdded:"2023/12/09", // YYYY/MM/DD
 		lastModified:"2023/12/09", // YYYY/MM/DD
 	},
@@ -4374,6 +4374,31 @@ var objects = [
 		tags:["battery", "batteries"], // don't include anything in categories or name
 		dateAdded:"2024/01/16", // YYYY/MM/DD
 		lastModified:"2024/01/16", // YYYY/MM/DD
+	},
+	{
+		name:"SR-71 Blackbird",
+        defaultAngle: 0,
+		sideImage:"SR_71_Blackbird-side",
+        sideImageAlign:"none",
+        sideImageArtist: "Daniel Roberts (BlenderTimer)",
+        sideImageDate:"2024/01/17", // YYYY/MM/DD
+		frontImage:"",
+        frontImageAlign:"none",
+        frontImageArtist: "",
+        frontImageDate:"", // YYYY/MM/DD
+		topImage:"",
+        topImageAlign:"none",
+        topImageArtist: "",
+        topImageDate:"", // YYYY/MM/DD
+		width:0.01694,
+		length:0.03274,
+		height:0.00564,
+		category1:"transportation",
+		category2:"aircraft",
+		category3:"airplanes",
+		tags:["lockheed", "strategic reconnaissance", "fastest", "manned", "nasa", "test", "sr71", "supersonic"], // don't include anything in categories or name
+		dateAdded:"2024/01/17", // YYYY/MM/DD
+		lastModified:"2024/01/17", // YYYY/MM/DD
 	},
 ];
 
