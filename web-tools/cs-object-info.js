@@ -4400,6 +4400,106 @@ var objects = [
 		dateAdded:"2024/01/17", // YYYY/MM/DD
 		lastModified:"2024/01/17", // YYYY/MM/DD
 	},
+	{
+		name:"African Elephant",
+        defaultAngle: 0,
+		sideImage:"African_Elephant-side",
+        sideImageAlign:"bottom",
+        sideImageArtist: "Daniel Roberts (BlenderTimer)",
+        sideImageDate:"2024/01/17", // YYYY/MM/DD
+		frontImage:"",
+        frontImageAlign:"none",
+        frontImageArtist: "",
+        frontImageDate:"", // YYYY/MM/DD
+		topImage:"",
+        topImageAlign:"none",
+        topImageArtist: "",
+        topImageDate:"", // YYYY/MM/DD
+		width:0.0017,
+		length:0.0045,
+		height:0.00265,
+		category1:"nature",
+		category2:"animals",
+		category3:"mammals",
+		tags:["tusks", "trunk", "loxodonta"], // don't include anything in categories or name
+		dateAdded:"2024/01/17", // YYYY/MM/DD
+		lastModified:"2024/01/17", // YYYY/MM/DD
+	},
+	{
+		name:"Woolly Mammoth",
+        defaultAngle: 0,
+		sideImage:"Woolly_Mammoth-side",
+        sideImageAlign:"bottom",
+        sideImageArtist: "Daniel Roberts (BlenderTimer)",
+        sideImageDate:"2024/01/17", // YYYY/MM/DD
+		frontImage:"",
+        frontImageAlign:"none",
+        frontImageArtist: "",
+        frontImageDate:"", // YYYY/MM/DD
+		topImage:"",
+        topImageAlign:"none",
+        topImageArtist: "",
+        topImageDate:"", // YYYY/MM/DD
+		width:0.0016,
+		length:0.00589,
+		height:0.00345,
+		category1:"nature",
+		category2:"animals",
+		category3:"mammals",
+		tags:["tusks", "trunk", "mammuthus primigenius"], // don't include anything in categories or name
+		dateAdded:"2024/01/17", // YYYY/MM/DD
+		lastModified:"2024/01/17", // YYYY/MM/DD
+	},
+	{
+		name:"Bee Hummingbird",
+        defaultAngle: 0,
+		sideImage:"Bee_Hummingbird-side",
+        sideImageAlign:"none",
+        sideImageArtist: "Daniel Roberts (BlenderTimer)",
+        sideImageDate:"2024/01/17", // YYYY/MM/DD
+		frontImage:"",
+        frontImageAlign:"none",
+        frontImageArtist: "",
+        frontImageDate:"", // YYYY/MM/DD
+		topImage:"",
+        topImageAlign:"none",
+        topImageArtist: "",
+        topImageDate:"", // YYYY/MM/DD
+		width:0.000008,
+		length:0.000057,
+		height:0.000055,
+		category1:"nature",
+		category2:"animals",
+		category3:"birds",
+		tags:["mellisuga helenae"], // don't include anything in categories or name
+		dateAdded:"2024/01/17", // YYYY/MM/DD
+		lastModified:"2024/01/17", // YYYY/MM/DD
+	},
+	{
+		name:"Wandering Albatross",
+        defaultAngle: 2,
+		sideImage:"",
+        sideImageAlign:"none",
+        sideImageArtist: "",
+        sideImageDate:"", // YYYY/MM/DD
+		frontImage:"",
+        frontImageAlign:"none",
+        frontImageArtist: "",
+        frontImageDate:"", // YYYY/MM/DD
+		topImage:"Wandering_Albatross-top",
+        topImageAlign:"none",
+        topImageArtist: "Daniel Roberts (BlenderTimer)",
+        topImageDate:"2024/01/17", // YYYY/MM/DD
+		width:0.0035,
+		length:0.0009,
+		height:0.00005,
+		category1:"nature",
+		category2:"animals",
+		category3:"birds",
+		tags:["diomedea exulans"], // don't include anything in categories or name
+		dateAdded:"2024/01/17", // YYYY/MM/DD
+		lastModified:"2024/01/17", // YYYY/MM/DD
+	},
 ];
 
 //	———————— STEPS FOR UPDATING ————————
