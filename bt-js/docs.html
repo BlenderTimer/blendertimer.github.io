@@ -305,6 +305,10 @@
 			}
 
 			#documentation ul, ol {
+				color: #777;
+			}
+
+			#documentation ul p, ol p {
 				color: #CCC;
 			}
 
@@ -382,6 +386,10 @@
 				box-shadow: 0px 0px 10px #0005 inset;
 				padding: 2px 5px 3px 5px;
 				font-size: 12pt;
+			}
+
+			.ac {
+				cursor: pointer;
 			}
 
 			.c0 { /* Comments */
@@ -549,6 +557,7 @@
 		<h1 id="title" style="margin-top: 0px">BT-JS Documentation</h1>
 		<div id="menu">
 			<a href="#getting-started" onclick="scrollToID('getting-started')" id="m-gest">Getting Started</a>
+			<a href="#btjs-trigger" onclick="scrollToID('btjs-trigger')" id="m-bttr">BT-JS Trigger</a>
 			<div><b>Functions:</b><div class="mspr"></div></div>
 			<a href="#all-functions" onclick="scrollToID('all-functions')" id="m-alfu">All Functions</a>
 			<a href="#array-functions" onclick="scrollToID('array-functions')" id="m-arfu">Array/List Functions</a>
@@ -566,13 +575,54 @@
 			<h1 id="getting-started">Getting Started</h1>
 			<p>BT-JS is designed to be as easy, simple, and quick to use. However, initially getting set up is often the most difficult part of any project. So here are some simple, step-by-step instructions to get BT-JS set up and ready for use.</p>
 			<ol>
-				<li>Download the latest version of BT-JS (<a href="../bt-js" target="_blank">available here</a>).</li>
-				<li>Place the "bt-js.js" file somewhere in your website's code. You can place the script wherever you want, however, for ease of use, it's best to put it no more than one directory away from the root (e.g. mywebsite/scripts/bt-js.js).</li>
-				<li>Reference the "bt-js.js" file in the code for any pages which you plan to use BT-JS for. It's best to reference BT-JS before any scripts which reference BT-JS otherwise you may notice some glitches or errors caused by scripts referencing data which hasn't been collected yet. Here is an example of a <a href="../programming-elements/html/basic-webpage-template">basic webpage template</a> which references scripts.</li>
+				<li><p>Download the latest version of BT-JS (</p><a href="../bt-js" target="_blank">available here</a><p>).</p></li>
+				<li><p>Place the "bt-js.js" file somewhere in your website's code. You can place the script wherever you want, however, for ease of use, it's best to put it no more than one directory away from the root (e.g. mywebsite/scripts/bt-js.js).</p></li>
+				<li><p>Reference the "bt-js.js" file in the code for any pages which you plan to use BT-JS for. It's best to reference BT-JS before any scripts which reference BT-JS otherwise you may notice some glitches or errors caused by scripts referencing data which hasn't been collected yet. Here is an example of a </p><a href="../programming-elements/html/basic-webpage-template">basic webpage template</a><p> which references scripts.</p></li>
 			</ol>
 			<p>And that's it! You're all set and ready to start using BT-JS in your scripts!</p>
 			<br>
 			<p>BT-JS functions and variables can be referenced from any javascript which is in (or is referenced in) the same HTML file which references BT-JS.</p>
+			<br>
+			<br><h1 id="btjs-trigger">BT-JS Trigger</h1>
+			<p>Properly syncing triggers in BT-JS with triggers in your script can be crucial to a clean website experience. Incorrectly ordered event triggers can lead to odd behavior and/or errors. To help prevent this, BT-JS sends a trigger for events which are used in the background.</p>
+			<br>
+			<br>
+			<p> For example, when the mouse moves, BT-JS collects information about the cursor (such as it's position, speed, etc.). If this information is requested (such as via the function </p><div class="c ac" onclick="scrollToID('functions-cursorinfo')"><p class="c5">cursorInfo</p></div><p>) before BT-JS has collected the information, you may notice some slight glitching and lack of alignment with the true position of the cursor. The BT-JS trigger eliminates this issue.</p>
+			<br>
+			<br>
+			<p>The BT-JS trigger is not a function which you call but instead a function which BT-JS calls every time it triggers. To prevent unnecessary updating and script running, you can chose which BT-JS trigger to listen to.</p>
+			<br>
+			<b>Including the BT-JS trigger function in your script is optional. It is not required.</b>
+			<br>
+			<br>
+			<p>To use the BT-JS trigger:</p>
+			<ol>
+				<li><p>Create a function named </p><div class="c"><p class="c5">btjs</p></div><p>.</p></li>
+				<li><p>Include a parameter for the function. You can name the parameter anything you want, however, it's best to use something such as </p><div class="c"><i class="c7">t</i></div><p> or </p><div class="c"><i class="c7">trigger</i></div><p> (for clarity).</p></li>
+				<li><p>If desired, use an </p><div class="c"><p class="c6">if</p></div><p> statement to only run your code for the specific triggers(s) you want.</p></li>
+			</ol>
+			<p>Here is an example of how to use the BT-JS function:</p>
+			<br>
+			<a href="../programming-elements/btjs/btjs-trigger">BT-JS Trigger Example</a>
+			<div class="function-base">
+				<b class="bc">btjs</b>
+				<br>
+				<h2>Syntax:</h2><div class="c"><i class="c6">function </i><p class="c5">btjs</p><p class="c2">(</p><i class="c7">trigger</i><p class="c2">) {}</p></div>
+				<br>
+				<h2>Parameters:</h2>
+				<div class="parameter-base">
+					<div class="c"><i class="c7">trigger</i></div><p> as </p><div class="c"><p class="c6">string</p></div><p> (required, case sensitive)</p>
+					<br>
+					<p class="parameter-description">The trigger type.</p>
+					<br>
+					<h2>Valid Values:</h2>
+					<div class="value-base">
+						<div class="vc"><p class="c4">'cursor'</p></div>
+						<br>
+						<p>The trigger sent when BT-JS has just collected cursor information (equivalent to </p><div class="c"><p class="c4">'mousemove'</p></div><p>).</p>
+					</div>
+				</div>
+			</div>
 			<br>
 			<br>
 			<h1 id="all-functions">List of All Functions</h1>
@@ -582,7 +632,7 @@
 				<tr onclick="scrollToID('functions-limit', true)"><td><p>limit</p></td><td>Returns the same number but no greater or less than the specified upper and lower limits.</td></tr>
 				<tr onclick="scrollToID('functions-limitdown', true)"><td><p>limitDown</p></td><td>Returns the same number but no less than the specified limit.</td></tr>
 				<tr onclick="scrollToID('functions-limitup', true)"><td><p>limitUp</p></td><td>Returns the same number but no greater than the specified limit.</td></tr>
-				<tr onclick="scrollToID('functions-randomnumber', true)"><td><p>randomNumber</p></td><td>Returns a random number from a start and end limit and with a specified number of decimal places.</td></tr>
+				<tr onclick="scrollToID('functions-randomnumber', true)"><td><p>randomNumber</p></td><td>Returns a random number from a low and high limit and with a specified number of decimal places.</td></tr>
 				<tr onclick="scrollToID('functions-removeafter', true)"><td><p>removeAfter</p></td><td>Returns the string with everything after the specified character removed.</td></tr>
 				<tr onclick="scrollToID('functions-removebefore', true)"><td><p>removeBefore</p></td><td>Returns the string with everything before the specified character removed.</td></tr>
 				<tr onclick="scrollToID('functions-round', true)"><td><p>round</p></td><td>Rounds a number to a certain number of decimal places.</td></tr>
@@ -748,7 +798,7 @@
 						<br>
 						<p>Returns the last time the cursor information was updated.</p>
 						<br>
-						<h2>Returns:</h2><div class="vc"><p class="c6">number</p></div>
+						<h2>Returns:</h2><div class="vc"><p class="c6">number</p><p class="c2"> (</p><i class="c6">date</i><p class="c2">)</p></div>
 					</div>
 				</div>
 				<div class="parameter-base">
@@ -1037,7 +1087,7 @@
 				<b class="bcv">cursor</b>
 				<img onclick="copyLink(event)" src="../static-0/files/images/copy-link.png" class="copy-link">
 				<br>
-				<p>Contains information about the cursor (also available via </p><div class="c"><p class="c5">cursorInfo</p><p class="c2">()</p></div><p>).</p>
+				<p>Contains information about the cursor (also available via </p><div class="c ac" onclick="scrollToID('functions-cursorinfo', true)"><p class="c5">cursorInfo</p></div><p>).</p>
 				<br>
 				<h2>Type:</h2><div class="c"><p class="c6">object</p></div>
 				<br>
@@ -1159,6 +1209,7 @@
 			var testerOpen = true;
 			var docHeadings = [];
 			var pauseAutoURL = true;
+			var pauseScroll = false;
 
 			function determineLayout() {
 				if (window.innerWidth < 870) {
@@ -1224,8 +1275,10 @@
 
 			function scrollToID(id, updateURL) {
 				pauseAutoURL = true;
-				setTimeout(function() {pauseAutoURL = false}, 1500);
-				window.scrollTo(0, document.getElementById(id).offsetTop);
+				setTimeout(function() {pauseAutoURL = false; findViewPosition()}, 1500);
+				if (pauseScroll == false) {
+					window.scrollTo(0, document.getElementById(id).offsetTop);
+				}
 				var menuID;
 				try {
 					menuID = "m-" + id.substr(0, 2) + id.substr(id.indexOf("-") + 1, 2);
@@ -1298,7 +1351,6 @@
 					}
 					if (window.scrollY < 10 || scrollHeading == null) {
 						window.history.pushState("scroll-top", document.title, window.location.toString().removeAfter("#"));
-						console.log("d")
 					}
 					else {
 						try {
@@ -1316,7 +1368,7 @@
 							}
 							document.getElementById(menuID).style.background = "#FFF2";
 							if (!(window.location.href == window.location.toString().removeAfter("#") + "#" + scrollHeading.id)) {
-								window.location.href = window.location.toString().removeAfter("#") + "#" + scrollHeading.id;
+								window.history.pushState("scroll", document.title, window.location.toString().removeAfter("#") + "#" + scrollHeading.id);
 							}
 						}
 					}
