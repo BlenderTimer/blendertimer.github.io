@@ -11,12 +11,12 @@
             gtag('config', 'G-SYR26MG6YV');
         </script>
         <meta charset="UTF-8">
-		<title>Web Tools - BlenderTimer</title>
-		<meta name="description" content="Various online or downloadable tools.">
+		<title>Programming Elements - BlenderTimer</title>
+		<meta name="description" content="Various programming elements and examples.">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="icon" href="./favicon.png" type="image/x-icon">
 		<link rel="stylesheet" type="text/css" href="./static-0/general.css">
-		<link rel="stylesheet" type="text/css" href="./static-0/web-tools.css">
+		<link rel="stylesheet" type="text/css" href="./static-0/programming-elements.css">
 	</head>
 	<body onload="baseLoad(), determineLayout()" onresize="determineDisplayMenu(), determineLayout()">
 		<div id="warning-banner" onclick="hideWarningBanner()" style="margin: 0px 0px -100px 0px; opacity: 0; display: none"><div id="warning-banner-main"><img alt="Close" id="wb-close" src="./static-0/files/images/close-x.png"><p>UNDER CONSTRUCTION</p></div></div>
@@ -37,28 +37,39 @@
 			<img alt="Loading" src="./static-0/files/images/loading-general.gif" style="width: 100px; height: 100px; position: fixed; left: calc(50% - 50px); top: calc(50% - 25px); filter: drop-shadow(0px 0px 15px #000000)">
 		</div>
 		<div id="content-main" style="opacity: 0; transition: 1s ease">
-			<h3>Web Tools</h3>
+			<h3>Programming Elements</h3>
 			<div id="primary-block">
-				<a class="web-tool-block" href="./web-tools/base-converter"><div class="web-tool-block2">
-					<h4>Base Converter</h4>
-					<div class="web-tool-description"><p>Convert base 10 (decimal) to base 2 or base 16 and more!</p></div>
-				</div></a>
-				<a class="web-tool-block" href="./web-tools/compare-size"><div class="web-tool-block2">
-					<h4>Compare (Size and Shape)</h4>
-					<div class="web-tool-description"><p>Compare the sizes of hundreds of objects!</p></div>
-				</div></a>
-				<a class="web-tool-block" href="./web-tools/morse-code-translator"><div class="web-tool-block2">
-					<h4>Morse Code Translator</h4>
-					<div class="web-tool-description"><p>Translate from English to Morse Code, or from Morse Code to English!</p></div>
-				</div></a>
-				<a class="web-tool-block" href="./web-tools/speed-of-sound-converter"><div class="web-tool-block2">
-					<h4>Speed of Sound Calculator</h4>
-					<div class="web-tool-description"><p>Calculate the speed of sound in air or an object's Mach number!</p></div>
-				</div></a>
+				<a class="language-block" href="./programming-elements/html">
+					<h4>HTML</h4>
+					<p>Hyper Text Markup Language</p>
+				</a>
+				<a class="disabled-language-block"> <!-- href="./programming-elements/css" -->
+					<p class="disabled-language-text">COMING SOON</p>
+					<h4 style="display:none !important">CSS</h4>
+					<p style="display:none !important">Cascading Style Sheet</p>
+				</a>
+				<a class="language-block" href="./programming-elements/js">
+					<h4>JS</h4>
+					<p>Javascript</p>
+				</a>
+				<a class="language-block" href="./programming-elements/btjs">
+					<h4>BT-JS</h4>
+					<p>BlenderTimer Javascript</p>
+				</a>
+				<a class="disabled-language-block"> <!-- href="./programming-elements/py" -->
+					<p class="disabled-language-text">COMING SOON</p>
+					<h4 style="display:none !important">PY</h4>
+					<p style="display:none !important">Python</p>
+				</a>
+				<a class="disabled-language-block"> <!-- href="./programming-elements/vb-net" -->
+					<p class="disabled-language-text">COMING SOON</p>
+					<h4 style="display:none !important">VB.NET</h4>
+					<p style="display:none !important">Visual Basic .NET</p>
+				</a>
 			</div>
 		</div>
 		<script src="./static-0/nav-links.js"></script>
 		<script src="./static-0/general.js"></script>
-		<script src="./static-0/web-tools.js"></script>
+		<script src="./static-0/programming-elements.js"></script>
 	</body>
 </html>
