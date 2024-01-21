@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en-US">
+	<head>
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-  SYR26MG6YV"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            
+            gtag('config', 'G-SYR26MG6YV');
+        </script>
+        <meta charset="UTF-8">
+		<title>BT-JS - BlenderTimer</title>
+		<meta name="description" content="This is a overview of the BlenderTimer YouTube channel!">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="icon" href="./favicon.png" type="image/x-icon">
+		<link rel="stylesheet" type="text/css" href="./static-0/general.css">
+		<link rel="stylesheet" type="text/css" href="./static-0/bt-js.css">
+	</head>
+	<body onload="baseLoad()" onresize="determineDisplayMenu()">
+		<div id="warning-banner" onclick="hideWarningBanner()" style="margin: 0px 0px -100px 0px; opacity: 0; display: none"><div id="warning-banner-main"><img alt="Close" id="wb-close" src="./static-0/files/images/close-x.png"><p>UNDER CONSTRUCTION</p></div></div>
+		<div id="background-plate"></div>
+		<div id="banner-menu">
+			<nav>
+				<!--====================  LARGE MENU  ====================-->
+				<ul id="large-menu">
+					<li id="nav-home"><a href="./"><img alt="BlenderTimer" src="./static-0/files/images/nav-logohome.png"></a></li>
+				</ul>
+				<div id="revolve-button" title="Current visitors on this site."><script src="https://rf.revolvermaps.com/0/0/3.js?i=5cgjr9bkw1v&b=0&s=40&m=2&cl=555555&co=000000&cd=ffffff&v0=25&v1=100&r=1" async="async"></script></div>
+				<!--====================  SMALL MENU  ====================-->
+				<div id="small-menu" style="display: none" onclick="smallMenuToggle()"><img alt="Menu" src="./static-0/files/images/menu-bars.png"></div>
+				<div id="small-menu-main"></div>
+			</nav>
+		</div>
+		<div id="loader" style="width: 100%; height: calc(100% - 50px); top: 50px; left: 0px; position: fixed; z-index: -99999">
+			<img alt="Loading" src="./static-0/files/images/loading-general.gif" style="width: 100px; height: 100px; position: fixed; left: calc(50% - 50px); top: calc(50% - 25px); filter: drop-shadow(0px 0px 15px #000000)">
+		</div>
+		<div id="content-main" style="opacity: 0; transition: 1s ease">
+			<div id="primary-block">
+				<h3>BT-JS</h3>
+				<p>BT-JS (BlenderTimer Javascript) is a free javascript library which includes many pre-built functions to make certain web programming areas easier, quicker, and just more time efficient! With BT-JS you can quickly get a random item from a list, get the cursor position relative to an element, convert text to proper case, convert a boolean to "yes" or "no", and much more!</p>
+				<div id="primary-links">
+					<a id="btjs-download" href="./bt-js/bt-js.js" download>Download BT-JS</a>
+					<a id="btjs-docs" href="./bt-js/docs">View Documentation</a>
+				</div>
+				<div id="secondary-links"><a id="download-old" href="./bt-js/archive" download>Previous Versions</a></div>
+			</div>
+			<div>
+				<h3 id="change-log">Changelog</h3>
+				<table id="change-table">
+					<tr>
+						<th style="width: 25%">Change</th>
+						<th style="width: 25%">Area</th>
+						<th style="width: 50%">Notes</th>
+					</tr>
+					<tr onclick="link('./bt-js/docs.html#functions-topropercase')">
+						<td><b>Changed String Function</b></td>
+						<td><p>toProperCase</p></td>
+						<td>Fixed the faulty sentence reading algorithm.</td>
+					</tr>
+					<tr onclick="link('./bt-js/docs.html#variables-btjsauthor')">
+						<td><b>New Passive Variable</b></td>
+						<td><p>btjsAuthor</p></td>
+						<td>The author of  the BT-JS file referenced.</td>
+					</tr>
+					<tr onclick="link('./bt-js/docs.html#variables-btjsversion')">
+						<td><b>New Passive Variable</b></td>
+						<td><p>btjsVersion</p></td>
+						<td>The version of the BT-JS file referenced.</td>
+					</tr>
+					<tr onclick="link('./bt-js/docs.html#variables-btjslastupdated')">
+						<td><b>New Passive Variable</b></td>
+						<td><p>btjsLastUpdated</p></td>
+						<td>The date the BT-JS file referenced (i.e. the version used) was last updated.</td>
+					</tr>
+					<tr onclick="link('./bt-js/docs.html#functions-limit')">
+						<td><b>New Number Function</b></td>
+						<td><p>limit</p></td>
+						<td>Returns the same number but no greater or less than the specified upper and lower limits.</td>
+					</tr>
+					<tr onclick="link('./bt-js/docs.html#functions-limitdown')">
+						<td><b>New Number Function</b></td>
+						<td><p>limitDown</p></td>
+						<td>Returns the same number but no less than the specified limit.</td>
+					</tr>
+					<tr onclick="link('./bt-js/docs.html#functions-limitup')">
+						<td><b>New Number Function</b></td>
+						<td><p>limitUp</p></td>
+						<td>Returns the same number but no greater than the specified limit.</td>
+					</tr>
+					<tr onclick="link('./bt-js/docs.html#functions-cursorinfo')">
+						<td><b>Changed Misc Function</b></td>
+						<td><p>cursorInfo</p></td>
+						<td>Set the default element (if one is not provided) to the cursor the element is over.</td>
+					</tr>
+					<tr onclick="link('./bt-js/docs.html#functions-cursorinfo')">
+						<td><b>Changed Misc Function</b></td>
+						<td><p>cursorInfo</p></td>
+						<td>Added the ability to get the last time the cursor information was updated.</td>
+					</tr>
+					<tr onclick="link('./bt-js/docs.html#functions-removebefore')">
+						<td><b>New String Function</b></td>
+						<td><p>removeBefore</p></td>
+						<td>Returns the string with everything before the specified character removed.</td>
+					</tr>
+					<tr onclick="link('./bt-js/docs.html#functions-removeafter')">
+						<td><b>New String Function</b></td>
+						<td><p>removeAfter</p></td>
+						<td>Returns the string with everything after the specified character removed.</td>
+					</tr>
+				</table>
+			</div>
+		</div>
+		<script src="./static-0/nav-links.js"></script>
+		<script src="./static-0/general.js"></script>
+		<script src="./bt-js/bt-js.js"></script>
+		<script src="./static-0/bt-js.js"></script>
+	</body>
+</html>
