@@ -391,6 +391,14 @@ const saveCodeFile = () => {
 		ct = "css";
 		cft = "css";
 	}
+	else if (codeType() == "js") {
+		ct = "javascript";
+		cft = "js";
+	}
+	else if (codeType() == "btjs") {
+		ct = "javascript";
+		cft = "js";
+	}
 	saveCode.href = URL.createObjectURL(file);
 	saveCode.download = title.textContent + "." + cft;
 	saveCode.click();
