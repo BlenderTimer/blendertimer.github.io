@@ -1,0 +1,81 @@
+#primary-block {
+	display: flex;
+	flex: 1;
+	flex-wrap: wrap;
+}
+
+.language-block {
+	width: calc(25% - 20px);
+	margin: 10px !important;
+	border-radius: 10px;
+	background: #252525;
+	box-shadow: 0px 0px 20px rgba(0,0,0,0.3);
+	padding: 20px;
+	box-sizing: border-box;
+	display: block;
+	float: left;
+	cursor: pointer;
+	height: auto;
+	transition: 0.2s;
+	border: 2px solid #555555;
+}
+
+.language-block:hover {
+	transform: scaleX(1.05) scaleY(1.05);
+	box-shadow: 0px 0px 15px rgba(0,0,0,0.5), 0px 0px 25px rgba(0,0,0,0.3) inset;
+	background: #353535;
+	text-shadow: none !important;
+	border: 2px solid #808080;
+}
+
+.language-block h4 {
+	color: #DDDDDD !important;
+	cursor: pointer !important;
+	font-size: 15pt !important;
+}
+
+.language-block p {
+	display: block !important;
+	color: #707070 !important;
+	cursor: pointer !important;
+	font-size: 10pt !important;
+	text-align: center;
+	width: 100%;
+}
+
+.disabled-language-block {
+	width: calc(25% - 20px);
+	margin: 10px !important;
+	border-radius: 10px;
+	background: #252525;
+	box-shadow: 0px 0px 20px rgba(0,0,0,0.3);
+	padding: 20px;
+	box-sizing: border-box;
+	display: flex !important;
+	float: left;
+	cursor: wait !important;
+	height: auto;
+	transition: 0.2s;
+	border: 2px solid #555555;
+	align-items: center;
+}
+
+.disabled-language-block:hover {
+	text-shadow: none !important;
+	border: 2px solid #555555;
+}
+
+.disabled-language-block h4 {
+	color: #DDDDDD !important;
+	cursor: wait !important;
+	font-size: 15pt !important;
+}
+
+.disabled-language-block p {
+	display: block !important;
+	color: #444 !important;
+	cursor: wait !important;
+	font-size: 12pt !important;
+	text-align: center;
+	width: 100%;
+}
