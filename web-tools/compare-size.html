@@ -1652,7 +1652,9 @@
 				</div>
 			</div>
 		</div>
-	<p id="version">Tool version: 0.4.2 (2024-01-17)</p>
+		<p id="version">Tool version: 0.4.3 (2024-01-23)</p>
+		<script src="./cs-object-info.js"></script>
+		<script src="../static-0/lodash.js"></script>
 		<script type="text/javascript">
 			var title = document.getElementById('title');
 			var navHome = document.getElementById('nav-home');
@@ -1696,9 +1698,12 @@
 		    var urlComplete = false;
 		    var searchSelected = 2;
 		    var popupBack = "";
+		    var toolHistory = [];
+		    var toolHistoryPosition = 0;
 
 		    var ctrlKey = false;
 		    var shiftKey = false;
+		    var altKey = false;
 
 		    var cursor = new Object();
 			cursor.x = 0;
@@ -1729,10 +1734,27 @@
 		    			shiftKey = false;
 		    		}
 		    	}
+		    	else if (event.key == "Alt") {
+		    		if (event.type == "keydown") {
+		    			altKey = true;
+		    		}
+		    		else {
+		    			altKey = false;
+		    		}
+		    	}
 		    	else if (event.key == "a") {
 		    		if (event.type == "keydown") {
 		    			if (event.ctrlKey == true) {
-		    				selectAll()
+			    			event.preventDefault();
+			    			selectAll()
+		    			}
+		    		}
+		    	}
+		    	else if (event.key == "A") {
+		    		if (event.type == "keydown") {
+		    			if (event.ctrlKey == true) {
+			    			event.preventDefault();
+			    			deselectAll()
 		    			}
 		    		}
 		    	}
@@ -1753,14 +1775,14 @@
 		    	else if (event.key == "z") {
 		    		if (event.type == "keydown") {
 		    			if (event.ctrlKey == true) {
-		    				//undo()
+		    				undo()
 		    			}
 		    		}
 		    	}
 		    	else if (event.key == "y") {
 		    		if (event.type == "keydown") {
 		    			if (event.ctrlKey == true) {
-		    				//redo()
+		    				redo()
 		    			}
 		    		}
 		    	}
@@ -1806,8 +1828,6 @@
 					cxbc.stroke();
 		    		document.getElementById('loading').style.display = "none";
 		    		webTool.style.transition = "1s"
-		    		objsCompareHistory.push([]);
-		    		zoomHistory.push({level:"Infinity", auto:true});
 		    		addObjectGlow.style.transition = "1s";
 		    		addObjectFlash();
 		    		setInterval(function() {
@@ -1944,7 +1964,7 @@
 		    function loadObjectsFromURL() {
 		    	var url = "";
 		    	if (window.location.toString().indexOf("?") > -1) {
-		    		url = window.location.toString().replaceAll("?", "&");
+		    		url = window.location.toString().replace(/\?/g, "&");
 		    		url = url.substring(url.indexOf("&") + 1, url.length);
 		    		for (var i=0; i < url.split("&").length; i++) {
 		    			for (var i2=0; i2 < objects.length; i2++) {
@@ -1953,8 +1973,16 @@
 		    				}
 		    			}
 		    		}
+		    		toolHistory = [{objects:objsCompare.filter(validID)}];
+		    	}
+		    	else {
+		    		toolHistory = [{objects:[]}];
 		    	}
 		    	urlComplete = true
+		    }
+
+		    function validID(obj) {
+		    	return obj.id > -1;
 		    }
 
 		    function addObjectFlash() {
@@ -2237,7 +2265,11 @@
 		  			no.innerHTML = "No objects.";
 		  			compareObjects.appendChild(no);
 				}
+				var selected = 0;
 				for (var i=0; i < objsCompare.length; i++) {
+					if (objsCompare[i].selected == true) {
+						selected += 1;
+					}
 					// Object Base
 		    		var objDiv = document.createElement("div");
 		    		objDiv.id = objsCompare[i].name + "-base";
@@ -2312,7 +2344,6 @@
 						}
 						redrawObjsCompareList();
 						drawComparison()
-						addHistory();
 					});
 					// Side Image
 					if (objects[objsCompare[i].id].sideImage.length > 0) {
@@ -2428,7 +2459,6 @@
 						objsCompare[element.id.substring(element.id.indexOf("-") + 1,element.id.indexOf("-x")) - 1].x = element.value;
 						objsCompare[element.id.substring(element.id.indexOf("-") + 1,element.id.indexOf("-x")) - 1].userModified = true;
 						drawComparison();
-						addHistory();
 					});
 					objPosition.appendChild(objXTitle);
 					objPosition.appendChild(objX);
@@ -2446,7 +2476,6 @@
 						objsCompare[element.id.substring(element.id.indexOf("-") + 1,element.id.indexOf("-y")) - 1].y = element.value;
 						objsCompare[element.id.substring(element.id.indexOf("-") + 1,element.id.indexOf("-y")) - 1].userModified = true;
 						drawComparison();
-						addHistory();
 					});
 					objPosition.appendChild(objYTitle);
 					objPosition.appendChild(objY);
@@ -2466,11 +2495,14 @@
 					objControls.appendChild(objPosition);
 					document.getElementById("compare-objects").appendChild(objDiv);
 				}
+				selectObject();
+				if (selected == 0) {
+					canvasShadow.style.cursor = "default";
+				}
 			}
 
 		    function addObject(objectID, redraw) {
 		    	objsCompare.push({name:"object-" + (objsCompare.length + 1).toString(),id:objectID,selected:false,angle:objects[objectID].defaultAngle,x:0,y:0,width:objects[objectID].length * compareZoom,height:objects[objectID].height * compareZoom,offsetX:0,offsetY:0,new:true,userModified:false});
-		    	addHistory();
 		    	redrawObjsCompareList();
 				popupClose();
 				if (!(redraw == false)) {
@@ -2481,43 +2513,89 @@
 				}
 		    }
 
-		    var historyPosition = 0;
-		    var objsCompareHistory = [];
-		    var zoomHistory = [];
 		    var justSetZoom = false;
 		    var justSetCompare = false;
 
 		    function addHistory() {
-		    	justSetCompare = true;
-				justSetZoom = true;
+		    	setTimeout(function() {
+		    		var newObjs = JSON.parse(JSON.stringify(objsCompare));
+		    		if (toolHistoryPosition == (toolHistory.length - 1)) {
+		    			if (CompareZoomAuto == false) {
+		    				if (toolHistory[toolHistoryPosition].historyEquals({objects:newObjs, zoom:compareZoom}) == false) {
+		    					toolHistory.push({objects:newObjs,zoom:compareZoom});
+		    					toolHistoryPosition += 1;
+		    				}
+			    		}
+			    		else {
+			    			if (toolHistory[toolHistoryPosition].historyEquals({objects:newObjs}) == false) {
+		    					toolHistory.push({objects:newObjs});
+		    					toolHistoryPosition += 1;
+		    				}
+			    		}
+		    		}
+		    		else {
+		    			var safetyTimeout = 0;
+		    			while ((toolHistory.length - 1) > toolHistoryPosition && safetyTimeout < 10000) {
+		    				toolHistory.pop();
+		    				safetyTimeout += 1;
+		    			}
+		    			if (CompareZoomAuto == false) {
+		    				if (toolHistory[toolHistoryPosition].historyEquals({objects:newObjs, zoom:compareZoom}) == false) {
+		    					toolHistory.push({objects:newObjs,zoom:compareZoom});
+		    					toolHistoryPosition += 1;
+		    				}
+			    		}
+			    		else {
+			    			if (toolHistory[toolHistoryPosition].historyEquals({objects:newObjs}) == false) {
+		    					toolHistory.push({objects:newObjs});
+		    					toolHistoryPosition += 1;
+		    				}
+			    		}
+		    		}
+				}, 1);
 		    }
 
-		    function addCompareHistory() {
-		    	while (objsCompareHistory.length > (historyPosition + 1)) {
-		    		objsCompareHistory.pop();
+		    function undo() {
+		    	if (toolHistoryPosition > 0) {
+		    		toolHistoryPosition -= 1;
+		    		objsCompare = toolHistory[toolHistoryPosition].objects.filter(validID);
+			    	if (toolHistory[toolHistoryPosition].zoom) {
+			    		CompareZoomAuto = false;
+			    		compareZoom = toolHistory[toolHistoryPosition].zoom;
+			    	}
+			    	redrawObjsCompareList();
+			    	drawComparison();
 		    	}
-		    	var list = [];
-		    	for (var i=0; i < objsCompare.length; i++) {
-		    		list.push({});
-		    		for (var x in objsCompare[i]) {
-		    			list[i][x] = objsCompare[i][x];
+		    }
+
+		    function redo() {
+		    	if (toolHistoryPosition < (toolHistory.length - 1)) {
+		    		toolHistoryPosition += 1;
+		    		objsCompare = toolHistory[toolHistoryPosition].objects.filter(validID);
+			    	if (toolHistory[toolHistoryPosition].zoom) {
+			    		CompareZoomAuto = false;
+			    		compareZoom = toolHistory[toolHistoryPosition].zoom;
+			    	}
+			    	redrawObjsCompareList();
+			    	drawComparison();
+		    	}
+		    }
+
+		    Object.prototype.historyEquals = function(o2) {
+		    	var equals = true;
+		    	var o1 = this;
+		    	if (!(o1.zoom == o2.zoom)) {
+		    		equals = false;
+		    	}
+		    	if (equals == true) {
+		    		var objs1 = JSON.stringify(o1.objects);
+		    		var objs2 = JSON.stringify(o2.objects);
+		    		if (!(objs1 == objs2)) {
+		    			equals = false;
 		    		}
 		    	}
-		    	objsCompareHistory.push(list);
-		    	historyPosition += 1
-		   	}
-
-		   	function addZoomHistory() {
-		    	while (zoomHistory.length > (historyPosition + 1)) {
-		    		zoomHistory.pop();
-		    	}
-		    	if (compareZoom == "Infinity") {
-		    		zoomHistory.push({level:"Infinity", auto:CompareZoomAuto});
-		    	}
-		    	else {
-		    		zoomHistory.push({level:compareZoom, auto:CompareZoomAuto});
-		    	}
-		   	}
+		    	return equals;
+		    }
 
 		   	function redrawZoom() {
 		   		if (compareZoom == "Infinity") {
@@ -2549,42 +2627,6 @@
 		    	setZoomRange();
 		   	}
 
-		    function undo() {
-		    	if (objsCompareHistory.length > 0 && historyPosition > 0) {
-		    		historyPosition -= 1;
-		    		objsCompare = objsCompareHistory[historyPosition];
-		    		zoomlevel = zoomHistory[historyPosition].level;
-		    		CompareZoomAuto = zoomHistory[historyPosition].auto;
-		    	}
-		    	else {
-		    		historyPosition = 0;
-		    		objsCompare = objsCompareHistory[historyPosition];
-		    		zoomlevel = zoomHistory[historyPosition].level;
-		    		CompareZoomAuto = zoomHistory[historyPosition].auto;
-		    	}
-		    	redrawObjsCompareList();
-		    	redrawZoom();
-		    	drawComparison();
-		    }
-
-		    function redo() {
-		    	if (objsCompareHistory.length > 0 && historyPosition < (objsCompareHistory.length - 1)) {
-		    		historyPosition += 1;
-		    		objsCompare = objsCompareHistory[historyPosition];
-		    		zoomlevel = zoomHistory[historyPosition].level;
-		    		CompareZoomAuto = zoomHistory[historyPosition].auto;
-		    	}
-		    	else {
-		    		historyPosition = objsCompareHistory.length - 1;
-		    		objsCompare = objsCompareHistory[historyPosition];
-		    		zoomlevel = zoomHistory[historyPosition].level;
-		    		CompareZoomAuto = zoomHistory[historyPosition].auto;
-		    	}
-		    	redrawObjsCompareList();
-		    	redrawZoom();
-		    	drawComparison();
-		    }
-
 		    function moveUp(id) {
 		    	objsCompare.splice(id - 1, 0, objsCompare[id]);
 		    	objsCompare.splice(id + 1, 1);
@@ -2593,7 +2635,6 @@
 				}
 		 		redrawObjsCompareList();
 		 		drawComparison();
-		 		addHistory();
 		    }
 
 		    function moveDown(id) {
@@ -2604,15 +2645,10 @@
 				}
 		 		redrawObjsCompareList();
 		 		drawComparison();
-		 		addHistory();
 		    }
 
 		    function selectObject() {
 		    	canvasShadow.style.cursor = "default";
-		    	//var deselectAll = false;
-		    	//if (objsCompare[selCompareObjID].selected == true) {
-		    	//	deselectAll = true;
-		    	//};
 		    	for (var i=0; i < objsCompare.length; i++) {
 		    		document.getElementById(objsCompare[i].name + "-base").style.border = "0px solid #88DDFF";
 		  			document.getElementById(objsCompare[i].name + "-base").style.boxShadow = "none";
@@ -2633,16 +2669,7 @@
 		    			canvasShadow.style.cursor = "move";
 		    		}
 				}
-				//if (deselectAll == false) {
-				//	document.getElementById(selCompareObj + "-base").style.border = "2px solid #88DDFF";
-		    	//	document.getElementById(selCompareObj + "-base").style.boxShadow = "0px 0px 5px #55EEFFAA";
-		    	//	document.getElementById(selCompareObj + "-base").style.margin = "0px 3px 3px 3px";
-		    	//	document.getElementById(selCompareObj).style.padding = "3px 5px 5px 5px";
-		    	//	objsCompare[selCompareObjID].selected = true;
-		    	//	canvasShadow.style.cursor = "move";
-				//};
 				drawComparison();
-				addHistory();
 		    }
 
 		    function selectAll() {
@@ -2696,7 +2723,9 @@
 			    		}
 			    		objs += 1;
 			    	}
-			    	window.history.pushState("draw-comparison", document.title, url);
+			    	if (!(window.location.href.toString() == url)) {
+			    		window.history.pushState("draw-comparison", document.title, url);
+			    	}
 		    	}
 		    	var firstAlign = true;
 		    	var align = "none";
@@ -2924,11 +2953,9 @@
 					times += 1;
 		    	}
 		    	if (justSetCompare == true) {
-		    		addCompareHistory();
 		    		justSetCompare = false;
 		    	}
 		    	if (justSetZoom == true) {
-		    		addZoomHistory();
 		    		justSetZoom = false;
 		    	}
 		    }
@@ -2961,10 +2988,7 @@
 		    	document.body.style.userSelect = "auto";
 		    	compareTools.style.pointerEvents = "auto";
 		    	navHome.style.pointerEvents = "auto";
-		    	if (objectJustMoved == true) {
-		    		addHistory();
-		    	}
-		    	objectJustMoved == false;
+		    	addHistory();
 		    }
 
 		    function canvasTap() {
@@ -3046,7 +3070,6 @@
 					}
 				};
 				drawComparison();
-				addHistory();
 		    }
 
 		    function toggleManualZoom() {
@@ -3115,7 +3138,6 @@
 					setZoomRange();
 					drawComparison()
 		    	}
-		    	addHistory();
 			}
 
 			var searchCont = "";
@@ -3894,6 +3916,5 @@
 				loadObjectsFromURL();
 			}
 		</script>
-		<script src="./cs-object-info.js"></script>
 	</body>
 </html>
