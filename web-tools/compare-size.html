@@ -801,6 +801,30 @@
 				box-sizing: border-box;
 			}
 
+			.history-btns {
+				display: block;
+				height: 28px;
+				background: #25252500;
+				cursor: pointer;
+				transition: 0.3s;
+			}
+
+			.history-btns:hover {
+				background: #353535FF;
+			}
+
+			#history-undo {
+				border-radius: 20px 0px 0px 20px;
+				padding: 5px 0px 3px 20px;
+				margin: 5px 0px;
+			}
+
+			#history-redo {
+				border-radius: 0px 20px 20px 0px;
+				padding: 5px 20px 3px 0px;
+				margin: 5px 0px;
+			}
+
 			#manual-zoom {
 				display: block;
 				outline: none;
@@ -1418,6 +1442,11 @@
 					<div id="compare-objects">
 						<p id="no-objects">No objects.</p>
 					</div>
+					<p style="margin: 10px 0px -5px 5px; height: auto; color: #555555; cursor: default">Undo/Redo:</p>
+					<div style="display: flex; width: 100%; height: 30px; justify-content: center;">
+						<img id="history-undo" class="history-btns" title="Undo" src="../static-0/files/images/undo.svg" onclick="undo()" onmousedown="historyButtonDown('undo')">
+						<img id="history-redo" class="history-btns" title="Redo" src="../static-0/files/images/redo.svg" onclick="redo()" onmousedown="historyButtonDown('redo')">
+					</div>
 					<p style="margin: 10px 0px -5px 5px; height: auto; color: #555555; cursor: default">Size offset:</p>
 					<button id="manual-zoom" onclick="toggleManualZoom()">Enable Manual Offset</button>
 					<img id="zoom-minus" title="Manual Zoom Level" class="zoom-btns" src="../static-0/files/images/zoom-minus.png" onclick="zoom('-')">
@@ -1652,7 +1681,7 @@
 				</div>
 			</div>
 		</div>
-		<p id="version">Tool version: 0.4.3 (2024-01-23)</p>
+		<p id="version">Tool version: 0.4.4 (2024-01-24)</p>
 		<script src="./cs-object-info.js"></script>
 		<script src="../static-0/lodash.js"></script>
 		<script type="text/javascript">
@@ -2515,6 +2544,8 @@
 
 		    var justSetZoom = false;
 		    var justSetCompare = false;
+		    var undoDown = false;
+		    var redoDown = false;
 
 		    function addHistory() {
 		    	setTimeout(function() {
@@ -2578,6 +2609,15 @@
 			    	}
 			    	redrawObjsCompareList();
 			    	drawComparison();
+		    	}
+		    }
+
+		    function historyButtonDown(b) {
+		    	if (b == 'undo') {
+		    		undoDown = true;
+		    	}
+		    	if (b == 'redo') {
+		    		redoDown = true;
 		    	}
 		    }
 
@@ -2988,7 +3028,11 @@
 		    	document.body.style.userSelect = "auto";
 		    	compareTools.style.pointerEvents = "auto";
 		    	navHome.style.pointerEvents = "auto";
-		    	addHistory();
+		    	if (undoDown == false && redoDown == false) {
+		    		addHistory();
+		    	}
+		    	undoDown == false;
+		    	redoDown == false;
 		    }
 
 		    function canvasTap() {
