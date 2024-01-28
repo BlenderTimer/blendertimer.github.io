@@ -232,6 +232,25 @@ body a:hover {
 	transition: 0s;
 }
 
+.icode-number {
+	width: 100%;
+	background: #181818;
+	box-shadow: 0px 0px 10px #0005 inset;
+	border-radius: 5px;
+	margin: 3px 0px;
+	border: none;
+	outline: none;
+	color: #F5F5F5;
+	box-sizing: border-box;
+	padding: 5px 8px;
+	transition: 0.2s;
+	font-family: monospace;
+}
+
+.icode-number:focus {
+	background: #151515;
+}
+
 #interactive-code-menu-tooltip {
 	display: block;
 	position: absolute;
@@ -423,7 +442,7 @@ body a:hover {
 	color: #9A9 !important;
 }
 
-.t3 { /* Tags and Functions */
+.t3 { /* Tags and Functions, CSS px etc. */
 	color: #EA5550 !important;
 }
 
@@ -431,20 +450,36 @@ body a:hover {
 	color: #DAD065 !important;
 }
 
-.t5 { /* HTML Attributes */
+.t5 { /* HTML Attributes, CSS #IDs */
 	color: #70D050 !important;
 }
 
-.t6 { /* JS Booleans, var, types, etc. */
+.t6 { /* JS Booleans//types/etc., VB.NET Strings */
 	color: #EA8060 !important;
 }
 
-.t7 { /* JS Function Parameters */
+.t7 { /* JS Function Parameters, CSS events/actions */
 	color: #FA5 !important;
 }
 
-.t8 { /* JS Numbers */
+.t8 { /* Numbers, #HEX colors */
 	color: #5AF !important;
+}
+
+.t9 { /* CSS Parameters, VB.NET Predefined functions/variables */
+	color: #7DE !important;
+}
+
+.t10 { /* VB.NET Objects and Math Operators */
+	color: #888 !important;
+}
+
+.t11 { /* VB.NET Operators */
+	color: #24F !important;
+}
+
+.t12 { /* PY Operators */
+	color: #F57 !important;
 }
 
 .icode {

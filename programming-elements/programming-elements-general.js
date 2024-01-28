@@ -319,6 +319,19 @@ function icode(code, event) {
 				button.addEventListener("click", (event) => {performICode(event)});
 				icodeMenu.appendChild(button);
 			}
+			else if (item.startsWith("#")) {
+				var number = document.createElement('input');
+				number.type = 'number';
+				number.className = 'icode-number';
+				number.value = element.textContent;
+				if (item.indexOf(";") > -1) {
+					number.min = item.substring(item.indexOf("#") + 1, item.indexOf(";"));
+					number.max = item.substring(item.indexOf(";") + 1, item.length);
+				}
+				number.addEventListener("keydown", (event) => {performICode(event, 'number')});
+				number.addEventListener("input", (event) => {performICode(event, 'number')});
+				icodeMenu.appendChild(number);
+			}
 		}
 		lastICode = element;
 		icodeMenu.style.display = "block";
@@ -352,11 +365,25 @@ function closeICodeTooltip() {
 	icodeMenuTooltip.style.display = "none";
 }
 
-function performICode(event,) {
+function performICode(event,type) {
 	var element = event.target || event.srcElement;
-	lastICode.textContent = element.textContent;
-	userCode[lastICode.id.substring(3, lastICode.id.length)] = lastICode.textContent;
-	closeICodeMenu();
+	var key = event.code;
+	if (type == 'number') {
+		setTimeout(function() {
+			lastICode.textContent = element.value;
+			userCode[lastICode.id.substring(3, lastICode.id.length)] = parseFloat(lastICode.textContent);
+			try {icodeTrigger(lastICode.id.substring(3, lastICode.id.length))} catch {};
+			if (key == "Enter") {
+				closeICodeMenu();
+			}
+		}, 1);
+	}
+	else {
+		lastICode.textContent = element.textContent;
+		userCode[lastICode.id.substring(3, lastICode.id.length)] = lastICode.textContent;
+		try {icodeTrigger(lastICode.id.substring(3, lastICode.id.length))} catch {};
+		closeICodeMenu();
+	}
 }
 
 function showNote(note) {
@@ -385,22 +412,34 @@ const saveCodeFile = () => {
 	var cft = "";
 	if (codeType() == "html") {
 		ct = "html";
-		cft = "html";
+		cft = ".html";
 	}
 	else if (codeType() == "css") {
 		ct = "css";
-		cft = "css";
+		cft = ".css";
 	}
 	else if (codeType() == "js") {
 		ct = "javascript";
-		cft = "js";
+		cft = ".js";
 	}
 	else if (codeType() == "btjs") {
 		ct = "javascript";
-		cft = "js";
+		cft = ".js";
+	}
+	else if (codeType() == "py") {
+		ct = "plain";
+		cft = ".py";
+	}
+	else if (codeType() == "vb-net") {
+		ct = "plain";
+		cft = ".txt";
+	}
+	else {
+		ct = "plain";
+		cft = ".txt";
 	}
 	saveCode.href = URL.createObjectURL(file);
-	saveCode.download = title.textContent + "." + cft;
+	saveCode.download = title.textContent + cft;
 	saveCode.click();
 	URL.revokeObjectURL(saveCode.href);
 };
