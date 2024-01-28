@@ -51,10 +51,12 @@ function determineDisplayMenu() {
 		if (window.innerWidth < 700) {
 			contentMain.style.margin = "50px 0px 0px 0px";
 			contentMain.style.borderRadius = "0px";
+			contentMain.style.minHeight = "calc(100vh - 100px)";
 		}
 		else {
 			contentMain.style.margin = "50px 5vw 50px 5vw";
 			contentMain.style.borderRadius = "10px";
+			contentMain.style.minHeight = "calc(100vh - 150px)";
 		};
 		revolveButton.style.marginRight = "50px";
 	}
@@ -75,7 +77,6 @@ function determineDisplayMenu() {
 
 function baseLoad() {
 	loadMenu();
-	determineDisplayMenu();
 	contentMain.style.marginLeft = "5%";
 	contentMain.style.opacity = "1";
 	warningBanner.style.margin = "0px 0px 0px 0px";
@@ -86,6 +87,7 @@ function baseLoad() {
 		ulul[i].style.height = "0px";
 	}
 	determineHTMLLinks();
+	determineDisplayMenu();
 }
 
 function loadMenu() {
