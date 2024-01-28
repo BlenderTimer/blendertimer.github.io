@@ -77,6 +77,7 @@ function determineDisplayMenu() {
 
 function baseLoad() {
 	loadMenu();
+	determineDisplayMenu();
 	contentMain.style.marginLeft = "5%";
 	contentMain.style.opacity = "1";
 	warningBanner.style.margin = "0px 0px 0px 0px";
