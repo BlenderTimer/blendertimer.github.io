@@ -1,8 +1,8 @@
 // --------------- SCRIPT INFORMATION ---------------
 //
 const btjsAuthor = "Daniel Roberts (BlenderTimer)" //	Author
-const btjsVersion = "0.0.2" //							Version
-const btjsLastUpdated = "January 20, 2024" //			Last Updated
+const btjsVersion = "0.0.3" //							Version
+const btjsLastUpdated = "February 6, 2024" //			Last Updated
 //
 // --------------------------------------------------
 
@@ -53,6 +53,27 @@ function gcp7316(event) {
 	//Element the cursor is over
 	cursor.elementOver = event.target || event.srcElement;
 	try {btjs('cursor')} catch {};
+}
+
+// ---------- ARRAY FUNCTIONS ----------
+Array.prototype.selectRandom = function() {
+	return this[parseInt(Math.random() * this.length)];
+}
+
+Array.prototype.sumValues = function() {
+	var sum = 0;
+	for (var i=0; i < this.length; i++) {sum += this[i]};
+	return sum;
+}
+
+// ---------- BOOLEAN FUNCTIONS ----------
+Boolean.prototype.toYesNo = function() {
+	if (this == true) {
+		return "Yes";
+	}
+	else if (this == false) {
+		return "No";
+	}
 }
 
 // ---------- MISC FUNCTIONS ----------
@@ -221,6 +242,65 @@ Number.prototype.limitUp = function(l) {
 	}
 	if (n > l) {n = l};
 	return n;
+}
+
+// ---------- Object FUNCTIONS ----------
+Object.prototype.clearCanvas = function() {
+	if (this.canvas) {
+		this.clearRect(0, 0, this.canvas.width, this.canvas.height);
+		this.beginPath();
+	}
+	else {
+		console.error("Failed to draw rectangle!\nError: Invalid canvas context");
+	}
+}
+
+Object.prototype.drawRect = function(x, y, width, height, borderRadius) {
+	if (this.canvas) {
+		if (!(borderRadius) || borderRadius == 0) {
+			this.rect(x, y, width, height);
+		}
+		else {
+			if (borderRadius > (width / 2)) {
+				borderRadius = width / 2;
+			}
+			if (borderRadius > (height / 2)) {
+				borderRadius = height / 2;
+			}
+			this.beginPath();
+			this.arc(x+borderRadius, y+borderRadius, borderRadius, 1*Math.PI, 1.5*Math.PI); // top left
+			this.arc(x+width-borderRadius, y+borderRadius, borderRadius, -0.5*Math.PI, 0); // top right
+			this.arc(x+width-borderRadius, y+height-borderRadius, borderRadius, 0, 0.5*Math.PI); // bottom right
+			this.arc(x+borderRadius, y+height-borderRadius, borderRadius, 0.5*Math.PI, 1*Math.PI); // bottom left
+			this.closePath();
+		}
+	}
+	else {
+		console.error("Failed to draw rectangle!\nError: Invalid canvas context");
+	}
+}
+
+function pointOnCircle(radius, angle, x, y) {
+	if (!(x)) {x = 0};
+	if (!(y)) {y = 0};
+	var width = radius * 2;
+	var height = radius * 2;
+	if (typeof radius == 'string') {
+		width = parseFloat(radius.substring(0, radius.indexOf("x")));
+		height = parseFloat(radius.substring(radius.indexOf("x")+1, radius.length));
+	}
+	var point = {
+		x:x+((width/2)*Math.cos(angle*(Math.PI/180))),
+		y:y+((height/2)*Math.sin(angle*(Math.PI/180)))
+	};
+	return point;
+}
+
+Object.prototype.sizeCanvas = function(widthBias, heightBias) {
+	if (!(widthBias)) {widthBias = 0};
+	if (!(heightBias)) {heightBias = 0};
+	this.width = this.clientWidth + widthBias;
+	this.height = this.clientHeight + heightBias;
 }
 
 // ---------- STRING FUNCTIONS ----------
@@ -396,19 +476,4 @@ String.prototype.removeBefore = function(breakChar, offset, last, returnEmptyIfN
 			return this.toString()
 		}
 	}
-}
-
-// ---------- BOOLEAN FUNCTIONS ----------
-Boolean.prototype.toYesNo = function() {
-	if (this == true) {
-		return "Yes";
-	}
-	else if (this == false) {
-		return "No";
-	}
-}
-
-// ---------- ARRAY FUNCTIONS ----------
-Array.prototype.selectRandom = function() {
-	return this[parseInt(Math.random() * this.length)];
 }
