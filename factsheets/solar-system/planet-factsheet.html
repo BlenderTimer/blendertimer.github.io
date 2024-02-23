@@ -2036,6 +2036,12 @@
 				unitTable.style.cursor = "grab";
 				primaryTable.style.cursor = "grab";
 				setTimeout(function() {panned = false}, 10);
+				cursor.panTX = 0;
+				cursor.panTY = 0;
+				cursor.tX = 0;
+				cursor.tY = 0;
+				cursor.panXOffset = 0;
+				cursor.panYOffset = 0;
 				var int = setInterval(function() {
 					scrollSpeed.x = scrollSpeed.x * 0.9;
 					primaryTable.scrollLeft += parseInt(scrollSpeed.x);
