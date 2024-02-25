@@ -2620,21 +2620,21 @@
 		    	}
 		    }
 
-		    // Object.prototype.historyEquals = function(o2) {
-		    // 	var equals = true;
-		    // 	var o1 = this;
-		    // 	if (!(o1.zoom == o2.zoom)) {
-		    // 		equals = false;
-		    // 	}
-		    // 	if (equals == true) {
-		    // 		var objs1 = JSON.stringify(o1.objects);
-		    // 		var objs2 = JSON.stringify(o2.objects);
-		    // 		if (!(objs1 == objs2)) {
-		    // 			equals = false;
-		    // 		}
-		    // 	}
-		    // 	return equals;
-		    // }
+		    Object.prototype.historyEquals = function(obj2) {
+		    	var isSame = true;
+		    	var obj1 = this;
+		    	if (!(obj1.zoom == obj2.zoom)) {
+		    		isSame = false;
+		    	}
+		    	if (isSame == true) {
+		    		var objs1 = JSON.stringify(obj1.objects);
+		    		var objs2 = JSON.stringify(obj2.objects);
+		    		if (!(objs1 == objs2)) {
+		    			isSame = false;
+		    		}
+		    	}
+		    	return isSame;
+		    }
 
 		   	function redrawZoom() {
 		   		if (compareZoom == "Infinity") {
