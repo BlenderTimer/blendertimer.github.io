@@ -801,30 +801,6 @@
 				box-sizing: border-box;
 			}
 
-			.history-btns {
-				display: block;
-				height: 28px;
-				background: #25252500;
-				cursor: pointer;
-				transition: 0.3s;
-			}
-
-			.history-btns:hover {
-				background: #353535FF;
-			}
-
-			#history-undo {
-				border-radius: 20px 0px 0px 20px;
-				padding: 5px 0px 3px 20px;
-				margin: 5px 0px;
-			}
-
-			#history-redo {
-				border-radius: 0px 20px 20px 0px;
-				padding: 5px 20px 3px 0px;
-				margin: 5px 0px;
-			}
-
 			#manual-zoom {
 				display: block;
 				outline: none;
@@ -1442,11 +1418,6 @@
 					<div id="compare-objects">
 						<p id="no-objects">No objects.</p>
 					</div>
-					<p style="margin: 10px 0px -5px 5px; height: auto; color: #555555; cursor: default">Undo/Redo:</p>
-					<div style="display: flex; width: 100%; height: 30px; justify-content: center;">
-						<img id="history-undo" class="history-btns" title="Undo" src="../static-0/files/images/undo.svg" onclick="undo()" onmousedown="historyButtonDown('undo')">
-						<img id="history-redo" class="history-btns" title="Redo" src="../static-0/files/images/redo.svg" onclick="redo()" onmousedown="historyButtonDown('redo')">
-					</div>
 					<p style="margin: 10px 0px -5px 5px; height: auto; color: #555555; cursor: default">Size offset:</p>
 					<button id="manual-zoom" onclick="toggleManualZoom()">Enable Manual Offset</button>
 					<img id="zoom-minus" title="Manual Zoom Level" class="zoom-btns" src="../static-0/files/images/zoom-minus.png" onclick="zoom('-')">
@@ -1498,11 +1469,8 @@
 				<div class="spr"></div>
 				<h3 style="text-align: center; width: 100%">Object Tags</h3>
 				<div id="object-tags">
-					<p>{[Object compared to] vs AA Battery, Batteries, Battery, -(images created by these artists: Daniel Roberts (BlenderTimer))}</p>
-					<p>{[Object compared to] vs AAA Battery, Batteries, Battery, -(images created by these artists: Daniel Roberts (BlenderTimer))}</p>
 					<p>{[Object compared to] vs Adenovirus, Disease, -(images created by these artists: Daniel Roberts (BlenderTimer))}</p>
 					<p>{[Object compared to] vs Aero Spacelines Super Guppy, Boeing, -(images created by these artists: Daniel Roberts (BlenderTimer), Daniel Roberts (BlenderTimer), Daniel Roberts (BlenderTimer))}</p>
-					<p>{[Object compared to] vs African Elephant, Loxodonta, Trunk, Tusks, -(images created by these artists: Daniel Roberts (BlenderTimer))}</p>
 					<p>{[Object compared to] vs Airbus A330-300, Airliner, -(images created by these artists: Daniel Roberts (BlenderTimer), Daniel Roberts (BlenderTimer), Daniel Roberts (BlenderTimer))}</p>
 					<p>{[Object compared to] vs Airbus A380-800, Airliner, -(images created by these artists: Daniel Roberts (BlenderTimer), Daniel Roberts (BlenderTimer), Daniel Roberts (BlenderTimer))}</p>
 					<p>{[Object compared to] vs Airfish 8, Af8, Effect, Ground, Wig, Wigetworks, -(images created by these artists: Daniel Roberts (BlenderTimer), Daniel Roberts (BlenderTimer), Daniel Roberts (BlenderTimer))}</p>
@@ -1526,7 +1494,6 @@
 					<p>{[Object compared to] vs Bagger 293, Dig, Digger, Equipment, Mining, Terrestrial, -(images created by these artists: felax)}</p>
 					<p>{[Object compared to] vs Baltic Sea, Earth, Water, -(images created by these artists: Daniel Roberts (BlenderTimer))}</p>
 					<p>{[Object compared to] vs Banana, Berry, -(images created by these artists: Daniel Roberts (BlenderTimer))}</p>
-					<p>{[Object compared to] vs Bee Hummingbird, Mellisuga helenae, -(images created by these artists: Daniel Roberts (BlenderTimer))}</p>
 					<p>{[Object compared to] vs BelAZ 75710, Dump, Equipment, Mining, Terrestrial, Truck, -(images created by these artists: Daniel Roberts (BlenderTimer))}</p>
 					<p>{[Object compared to] vs Bell 206L4, , -(images created by these artists: Daniel Roberts (BlenderTimer), Daniel Roberts (BlenderTimer), Daniel Roberts (BlenderTimer))}</p>
 					<p>{[Object compared to] vs Bernardinelli-Bernstein (Largest Comet), Ice, Rock, -(images created by these artists: Daniel Roberts (BlenderTimer))}</p>
@@ -1633,7 +1600,6 @@
 					<p>{[Object compared to] vs Red Blood Cell, Anatomy, -(images created by these artists: Daniel Roberts (BlenderTimer), Daniel Roberts (BlenderTimer), Daniel Roberts (BlenderTimer))}</p>
 					<p>{[Object compared to] vs Rigel, B8, B8-ia, Ball, Blue, Heat, Hot, Sphere, -(images created by these artists: Daniel Roberts (BlenderTimer), Daniel Roberts (BlenderTimer), Daniel Roberts (BlenderTimer))}</p>
 					<p>{[Object compared to] vs Rock (generic), Stone, -(images created by these artists: Daniel Roberts (BlenderTimer))}</p>
-					<p>{[Object compared to] vs SR-71 Blackbird, Fastest, Lockheed, Manned, Nasa, Sr71, Strategic reconnaissance, Supersonic, Test, -(images created by these artists: Daniel Roberts (BlenderTimer))}</p>
 					<p>{[Object compared to] vs Sand (Grain), Sediment, -(images created by these artists: Daniel Roberts (BlenderTimer))}</p>
 					<p>{[Object compared to] vs Saturn (with rings), Ball, Ice, Planet, Solar system, Sphere, -(images created by these artists: Daniel Roberts (BlenderTimer))}</p>
 					<p>{[Object compared to] vs Saturn (without rings), Ball, Planet, Solar system, Sphere, -(images created by these artists: Daniel Roberts (BlenderTimer), Daniel Roberts (BlenderTimer), Daniel Roberts (BlenderTimer))}</p>
@@ -1673,17 +1639,13 @@
 					<p>{[Object compared to] vs Valles Marineris (Mars), Deepest, Largest, Trench, Trough, -(images created by these artists: Daniel Roberts (BlenderTimer), Daniel Roberts (BlenderTimer))}</p>
 					<p>{[Object compared to] vs Venus, Ball, Planet, Solar system, Sphere, -(images created by these artists: Daniel Roberts (BlenderTimer), Daniel Roberts (BlenderTimer), Daniel Roberts (BlenderTimer))}</p>
 					<p>{[Object compared to] vs Viaduc de Millau, Aveyron, France, Gorge valley, Tarn, -(images created by these artists: Daniel Roberts (BlenderTimer))}</p>
-					<p>{[Object compared to] vs Wandering Albatross, Diomedea exulans, -(images created by these artists: Daniel Roberts (BlenderTimer))}</p>
 					<p>{[Object compared to] vs Water Drop, H20, Liquid, -(images created by these artists: Daniel Roberts (BlenderTimer))}</p>
 					<p>{[Object compared to] vs Water Molecule, Atom, H20, Hydrogen, Neutron, Nucleus, Oxygen, Proton, -(images created by these artists: Daniel Roberts (BlenderTimer))}</p>
-					<p>{[Object compared to] vs Woolly Mammoth, Mammuthus primigenius, Trunk, Tusks, -(images created by these artists: Daniel Roberts (BlenderTimer))}</p>
-					<p>{[Object compared to] vs X-15, Fastest, Hypersonic, Manned, Nasa, Supersonic, Supersonic, Test, X15, -(images created by these artists: Daniel Roberts (BlenderTimer))}</p>
+					<p>{[Object compared to] vs X-15, Fastest, Manned, Nasa, Supersonic, Test, X15, -(images created by these artists: Daniel Roberts (BlenderTimer))}</p>
 				</div>
 			</div>
 		</div>
-		<p id="version">Tool version: 0.4.4 (2024-01-24)</p>
-		<script src="./cs-object-info.js"></script>
-		<script src="../static-0/lodash.js"></script>
+		<p id="version">Tool version: 0.4.0 (2024-01-07)</p>
 		<script type="text/javascript">
 			var title = document.getElementById('title');
 			var navHome = document.getElementById('nav-home');
@@ -1727,12 +1689,9 @@
 		    var urlComplete = false;
 		    var searchSelected = 2;
 		    var popupBack = "";
-		    var toolHistory = [];
-		    var toolHistoryPosition = 0;
 
 		    var ctrlKey = false;
 		    var shiftKey = false;
-		    var altKey = false;
 
 		    var cursor = new Object();
 			cursor.x = 0;
@@ -1763,27 +1722,10 @@
 		    			shiftKey = false;
 		    		}
 		    	}
-		    	else if (event.key == "Alt") {
-		    		if (event.type == "keydown") {
-		    			altKey = true;
-		    		}
-		    		else {
-		    			altKey = false;
-		    		}
-		    	}
 		    	else if (event.key == "a") {
 		    		if (event.type == "keydown") {
 		    			if (event.ctrlKey == true) {
-			    			event.preventDefault();
-			    			selectAll()
-		    			}
-		    		}
-		    	}
-		    	else if (event.key == "A") {
-		    		if (event.type == "keydown") {
-		    			if (event.ctrlKey == true) {
-			    			event.preventDefault();
-			    			deselectAll()
+		    				selectAll()
 		    			}
 		    		}
 		    	}
@@ -1804,14 +1746,14 @@
 		    	else if (event.key == "z") {
 		    		if (event.type == "keydown") {
 		    			if (event.ctrlKey == true) {
-		    				undo()
+		    				//undo()
 		    			}
 		    		}
 		    	}
 		    	else if (event.key == "y") {
 		    		if (event.type == "keydown") {
 		    			if (event.ctrlKey == true) {
-		    				redo()
+		    				//redo()
 		    			}
 		    		}
 		    	}
@@ -1857,6 +1799,8 @@
 					cxbc.stroke();
 		    		document.getElementById('loading').style.display = "none";
 		    		webTool.style.transition = "1s"
+		    		objsCompareHistory.push([]);
+		    		zoomHistory.push({level:"Infinity", auto:true});
 		    		addObjectGlow.style.transition = "1s";
 		    		addObjectFlash();
 		    		setInterval(function() {
@@ -1993,7 +1937,7 @@
 		    function loadObjectsFromURL() {
 		    	var url = "";
 		    	if (window.location.toString().indexOf("?") > -1) {
-		    		url = window.location.toString().replace(/\?/g, "&");
+		    		url = window.location.toString().replaceAll("?", "&");
 		    		url = url.substring(url.indexOf("&") + 1, url.length);
 		    		for (var i=0; i < url.split("&").length; i++) {
 		    			for (var i2=0; i2 < objects.length; i2++) {
@@ -2002,16 +1946,8 @@
 		    				}
 		    			}
 		    		}
-		    		toolHistory = [{objects:objsCompare.filter(validID)}];
-		    	}
-		    	else {
-		    		toolHistory = [{objects:[]}];
 		    	}
 		    	urlComplete = true
-		    }
-
-		    function validID(obj) {
-		    	return obj.id > -1;
 		    }
 
 		    function addObjectFlash() {
@@ -2294,11 +2230,7 @@
 		  			no.innerHTML = "No objects.";
 		  			compareObjects.appendChild(no);
 				}
-				var selected = 0;
 				for (var i=0; i < objsCompare.length; i++) {
-					if (objsCompare[i].selected == true) {
-						selected += 1;
-					}
 					// Object Base
 		    		var objDiv = document.createElement("div");
 		    		objDiv.id = objsCompare[i].name + "-base";
@@ -2373,6 +2305,7 @@
 						}
 						redrawObjsCompareList();
 						drawComparison()
+						addHistory();
 					});
 					// Side Image
 					if (objects[objsCompare[i].id].sideImage.length > 0) {
@@ -2488,6 +2421,7 @@
 						objsCompare[element.id.substring(element.id.indexOf("-") + 1,element.id.indexOf("-x")) - 1].x = element.value;
 						objsCompare[element.id.substring(element.id.indexOf("-") + 1,element.id.indexOf("-x")) - 1].userModified = true;
 						drawComparison();
+						addHistory();
 					});
 					objPosition.appendChild(objXTitle);
 					objPosition.appendChild(objX);
@@ -2505,6 +2439,7 @@
 						objsCompare[element.id.substring(element.id.indexOf("-") + 1,element.id.indexOf("-y")) - 1].y = element.value;
 						objsCompare[element.id.substring(element.id.indexOf("-") + 1,element.id.indexOf("-y")) - 1].userModified = true;
 						drawComparison();
+						addHistory();
 					});
 					objPosition.appendChild(objYTitle);
 					objPosition.appendChild(objY);
@@ -2524,14 +2459,11 @@
 					objControls.appendChild(objPosition);
 					document.getElementById("compare-objects").appendChild(objDiv);
 				}
-				selectObject();
-				if (selected == 0) {
-					canvasShadow.style.cursor = "default";
-				}
 			}
 
 		    function addObject(objectID, redraw) {
 		    	objsCompare.push({name:"object-" + (objsCompare.length + 1).toString(),id:objectID,selected:false,angle:objects[objectID].defaultAngle,x:0,y:0,width:objects[objectID].length * compareZoom,height:objects[objectID].height * compareZoom,offsetX:0,offsetY:0,new:true,userModified:false});
+		    	addHistory();
 		    	redrawObjsCompareList();
 				popupClose();
 				if (!(redraw == false)) {
@@ -2542,100 +2474,43 @@
 				}
 		    }
 
+		    var historyPosition = 0;
+		    var objsCompareHistory = [];
+		    var zoomHistory = [];
 		    var justSetZoom = false;
 		    var justSetCompare = false;
-		    var undoDown = false;
-		    var redoDown = false;
 
 		    function addHistory() {
-		    	setTimeout(function() {
-		    		var newObjs = JSON.parse(JSON.stringify(objsCompare));
-		    		if (toolHistoryPosition == (toolHistory.length - 1)) {
-		    			if (CompareZoomAuto == false) {
-		    				if (toolHistory[toolHistoryPosition].historyEquals({objects:newObjs, zoom:compareZoom}) == false) {
-		    					toolHistory.push({objects:newObjs,zoom:compareZoom});
-		    					toolHistoryPosition += 1;
-		    				}
-			    		}
-			    		else {
-			    			if (toolHistory[toolHistoryPosition].historyEquals({objects:newObjs}) == false) {
-		    					toolHistory.push({objects:newObjs});
-		    					toolHistoryPosition += 1;
-		    				}
-			    		}
-		    		}
-		    		else {
-		    			var safetyTimeout = 0;
-		    			while ((toolHistory.length - 1) > toolHistoryPosition && safetyTimeout < 10000) {
-		    				toolHistory.pop();
-		    				safetyTimeout += 1;
-		    			}
-		    			if (CompareZoomAuto == false) {
-		    				if (toolHistory[toolHistoryPosition].historyEquals({objects:newObjs, zoom:compareZoom}) == false) {
-		    					toolHistory.push({objects:newObjs,zoom:compareZoom});
-		    					toolHistoryPosition += 1;
-		    				}
-			    		}
-			    		else {
-			    			if (toolHistory[toolHistoryPosition].historyEquals({objects:newObjs}) == false) {
-		    					toolHistory.push({objects:newObjs});
-		    					toolHistoryPosition += 1;
-		    				}
-			    		}
-		    		}
-				}, 1);
+		    	justSetCompare = true;
+				justSetZoom = true;
 		    }
 
-		    function undo() {
-		    	if (toolHistoryPosition > 0) {
-		    		toolHistoryPosition -= 1;
-		    		objsCompare = toolHistory[toolHistoryPosition].objects.filter(validID);
-			    	if (toolHistory[toolHistoryPosition].zoom) {
-			    		CompareZoomAuto = false;
-			    		compareZoom = toolHistory[toolHistoryPosition].zoom;
-			    	}
-			    	redrawObjsCompareList();
-			    	drawComparison();
+		    function addCompareHistory() {
+		    	while (objsCompareHistory.length > (historyPosition + 1)) {
+		    		objsCompareHistory.pop();
 		    	}
-		    }
-
-		    function redo() {
-		    	if (toolHistoryPosition < (toolHistory.length - 1)) {
-		    		toolHistoryPosition += 1;
-		    		objsCompare = toolHistory[toolHistoryPosition].objects.filter(validID);
-			    	if (toolHistory[toolHistoryPosition].zoom) {
-			    		CompareZoomAuto = false;
-			    		compareZoom = toolHistory[toolHistoryPosition].zoom;
-			    	}
-			    	redrawObjsCompareList();
-			    	drawComparison();
-		    	}
-		    }
-
-		    function historyButtonDown(b) {
-		    	if (b == 'undo') {
-		    		undoDown = true;
-		    	}
-		    	if (b == 'redo') {
-		    		redoDown = true;
-		    	}
-		    }
-
-		    Object.prototype.historyEquals = function(o2) {
-		    	var equals = true;
-		    	var o1 = this;
-		    	if (!(o1.zoom == o2.zoom)) {
-		    		equals = false;
-		    	}
-		    	if (equals == true) {
-		    		var objs1 = JSON.stringify(o1.objects);
-		    		var objs2 = JSON.stringify(o2.objects);
-		    		if (!(objs1 == objs2)) {
-		    			equals = false;
+		    	var list = [];
+		    	for (var i=0; i < objsCompare.length; i++) {
+		    		list.push({});
+		    		for (var x in objsCompare[i]) {
+		    			list[i][x] = objsCompare[i][x];
 		    		}
 		    	}
-		    	return equals;
-		    }
+		    	objsCompareHistory.push(list);
+		    	historyPosition += 1
+		   	}
+
+		   	function addZoomHistory() {
+		    	while (zoomHistory.length > (historyPosition + 1)) {
+		    		zoomHistory.pop();
+		    	}
+		    	if (compareZoom == "Infinity") {
+		    		zoomHistory.push({level:"Infinity", auto:CompareZoomAuto});
+		    	}
+		    	else {
+		    		zoomHistory.push({level:compareZoom, auto:CompareZoomAuto});
+		    	}
+		   	}
 
 		   	function redrawZoom() {
 		   		if (compareZoom == "Infinity") {
@@ -2667,6 +2542,42 @@
 		    	setZoomRange();
 		   	}
 
+		    function undo() {
+		    	if (objsCompareHistory.length > 0 && historyPosition > 0) {
+		    		historyPosition -= 1;
+		    		objsCompare = objsCompareHistory[historyPosition];
+		    		zoomlevel = zoomHistory[historyPosition].level;
+		    		CompareZoomAuto = zoomHistory[historyPosition].auto;
+		    	}
+		    	else {
+		    		historyPosition = 0;
+		    		objsCompare = objsCompareHistory[historyPosition];
+		    		zoomlevel = zoomHistory[historyPosition].level;
+		    		CompareZoomAuto = zoomHistory[historyPosition].auto;
+		    	}
+		    	redrawObjsCompareList();
+		    	redrawZoom();
+		    	drawComparison();
+		    }
+
+		    function redo() {
+		    	if (objsCompareHistory.length > 0 && historyPosition < (objsCompareHistory.length - 1)) {
+		    		historyPosition += 1;
+		    		objsCompare = objsCompareHistory[historyPosition];
+		    		zoomlevel = zoomHistory[historyPosition].level;
+		    		CompareZoomAuto = zoomHistory[historyPosition].auto;
+		    	}
+		    	else {
+		    		historyPosition = objsCompareHistory.length - 1;
+		    		objsCompare = objsCompareHistory[historyPosition];
+		    		zoomlevel = zoomHistory[historyPosition].level;
+		    		CompareZoomAuto = zoomHistory[historyPosition].auto;
+		    	}
+		    	redrawObjsCompareList();
+		    	redrawZoom();
+		    	drawComparison();
+		    }
+
 		    function moveUp(id) {
 		    	objsCompare.splice(id - 1, 0, objsCompare[id]);
 		    	objsCompare.splice(id + 1, 1);
@@ -2675,6 +2586,7 @@
 				}
 		 		redrawObjsCompareList();
 		 		drawComparison();
+		 		addHistory();
 		    }
 
 		    function moveDown(id) {
@@ -2685,10 +2597,15 @@
 				}
 		 		redrawObjsCompareList();
 		 		drawComparison();
+		 		addHistory();
 		    }
 
 		    function selectObject() {
 		    	canvasShadow.style.cursor = "default";
+		    	//var deselectAll = false;
+		    	//if (objsCompare[selCompareObjID].selected == true) {
+		    	//	deselectAll = true;
+		    	//};
 		    	for (var i=0; i < objsCompare.length; i++) {
 		    		document.getElementById(objsCompare[i].name + "-base").style.border = "0px solid #88DDFF";
 		  			document.getElementById(objsCompare[i].name + "-base").style.boxShadow = "none";
@@ -2709,7 +2626,16 @@
 		    			canvasShadow.style.cursor = "move";
 		    		}
 				}
+				//if (deselectAll == false) {
+				//	document.getElementById(selCompareObj + "-base").style.border = "2px solid #88DDFF";
+		    	//	document.getElementById(selCompareObj + "-base").style.boxShadow = "0px 0px 5px #55EEFFAA";
+		    	//	document.getElementById(selCompareObj + "-base").style.margin = "0px 3px 3px 3px";
+		    	//	document.getElementById(selCompareObj).style.padding = "3px 5px 5px 5px";
+		    	//	objsCompare[selCompareObjID].selected = true;
+		    	//	canvasShadow.style.cursor = "move";
+				//};
 				drawComparison();
+				addHistory();
 		    }
 
 		    function selectAll() {
@@ -2763,9 +2689,7 @@
 			    		}
 			    		objs += 1;
 			    	}
-			    	if (!(window.location.href.toString() == url)) {
-			    		window.history.pushState("draw-comparison", document.title, url);
-			    	}
+			    	window.history.pushState("draw-comparison", document.title, url);
 		    	}
 		    	var firstAlign = true;
 		    	var align = "none";
@@ -2993,9 +2917,11 @@
 					times += 1;
 		    	}
 		    	if (justSetCompare == true) {
+		    		addCompareHistory();
 		    		justSetCompare = false;
 		    	}
 		    	if (justSetZoom == true) {
+		    		addZoomHistory();
 		    		justSetZoom = false;
 		    	}
 		    }
@@ -3028,11 +2954,10 @@
 		    	document.body.style.userSelect = "auto";
 		    	compareTools.style.pointerEvents = "auto";
 		    	navHome.style.pointerEvents = "auto";
-		    	if (undoDown == false && redoDown == false) {
+		    	if (objectJustMoved == true) {
 		    		addHistory();
 		    	}
-		    	undoDown == false;
-		    	redoDown == false;
+		    	objectJustMoved == false;
 		    }
 
 		    function canvasTap() {
@@ -3114,6 +3039,7 @@
 					}
 				};
 				drawComparison();
+				addHistory();
 		    }
 
 		    function toggleManualZoom() {
@@ -3182,6 +3108,7 @@
 					setZoomRange();
 					drawComparison()
 		    	}
+		    	addHistory();
 			}
 
 			var searchCont = "";
@@ -3960,5 +3887,6 @@
 				loadObjectsFromURL();
 			}
 		</script>
+		<script src="./cs-object-info.js"></script>
 	</body>
 </html>
