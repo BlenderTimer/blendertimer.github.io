@@ -2551,13 +2551,13 @@
 		    		var newObjs = JSON.parse(JSON.stringify(objsCompare));
 		    		if (toolHistoryPosition == (toolHistory.length - 1)) {
 		    			if (CompareZoomAuto == false) {
-		    				if (toolHistory[toolHistoryPosition].historyEquals({objects:newObjs, zoom:compareZoom}) == false) {
+		    				if (historyEquals(toolHistory[toolHistoryPosition], {objects:newObjs, zoom:compareZoom}) == false) {
 		    					toolHistory.push({objects:newObjs,zoom:compareZoom});
 		    					toolHistoryPosition += 1;
 		    				}
 			    		}
 			    		else {
-			    			if (toolHistory[toolHistoryPosition].historyEquals({objects:newObjs}) == false) {
+			    			if (historyEquals(toolHistory[toolHistoryPosition], {objects:newObjs}) == false) {
 		    					toolHistory.push({objects:newObjs});
 		    					toolHistoryPosition += 1;
 		    				}
@@ -2570,13 +2570,13 @@
 		    				safetyTimeout += 1;
 		    			}
 		    			if (CompareZoomAuto == false) {
-		    				if (toolHistory[toolHistoryPosition].historyEquals({objects:newObjs, zoom:compareZoom}) == false) {
+		    				if (historyEquals(toolHistory[toolHistoryPosition], {objects:newObjs, zoom:compareZoom}) == false) {
 		    					toolHistory.push({objects:newObjs,zoom:compareZoom});
 		    					toolHistoryPosition += 1;
 		    				}
 			    		}
 			    		else {
-			    			if (toolHistory[toolHistoryPosition].historyEquals({objects:newObjs}) == false) {
+			    			if (historyEquals(toolHistory[toolHistoryPosition], {objects:newObjs}) == false) {
 		    					toolHistory.push({objects:newObjs});
 		    					toolHistoryPosition += 1;
 		    				}
@@ -2620,20 +2620,19 @@
 		    	}
 		    }
 
-		    Object.prototype.historyEquals = function(obj2) {
-		    	var isSame = true;
-		    	var obj1 = this;
-		    	if (!(obj1.zoom == obj2.zoom)) {
-		    		isSame = false;
+		    function historyEquals(o1, o2) {
+		    	var equals = true;
+		    	if (!(o1.zoom == o2.zoom)) {
+		    		equals = false;
 		    	}
-		    	if (isSame == true) {
-		    		var objs1 = JSON.stringify(obj1.objects);
-		    		var objs2 = JSON.stringify(obj2.objects);
+		    	if (equals == true) {
+		    		var objs1 = JSON.stringify(o1.objects);
+		    		var objs2 = JSON.stringify(o2.objects);
 		    		if (!(objs1 == objs2)) {
-		    			isSame = false;
+		    			equals = false;
 		    		}
 		    	}
-		    	return isSame;
+		    	return equals;
 		    }
 
 		   	function redrawZoom() {
