@@ -4476,30 +4476,55 @@ var objects = [
 		lastModified:"2024/01/17", // YYYY/MM/DD
 	},
 	{
-		name:"Wandering Albatross",
+        name:"Wandering Albatross",
         defaultAngle: 2,
-		sideImage:"",
+        sideImage:"",
         sideImageAlign:"none",
         sideImageArtist: "",
         sideImageDate:"", // YYYY/MM/DD
-		frontImage:"",
+        frontImage:"",
         frontImageAlign:"none",
         frontImageArtist: "",
         frontImageDate:"", // YYYY/MM/DD
-		topImage:"Wandering_Albatross-top",
+        topImage:"Wandering_Albatross-top",
         topImageAlign:"none",
         topImageArtist: "Daniel Roberts (BlenderTimer)",
         topImageDate:"2024/01/17", // YYYY/MM/DD
-		width:0.0035,
-		length:0.0009,
-		height:0.00005,
-		category1:"nature",
-		category2:"animals",
-		category3:"birds",
-		tags:["diomedea exulans"], // don't include anything in categories or name
-		dateAdded:"2024/01/17", // YYYY/MM/DD
-		lastModified:"2024/01/17", // YYYY/MM/DD
-	},
+        width:0.0035,
+        length:0.0009,
+        height:0.00005,
+        category1:"nature",
+        category2:"animals",
+        category3:"birds",
+        tags:["diomedea exulans"], // don't include anything in categories or name
+        dateAdded:"2024/01/17", // YYYY/MM/DD
+        lastModified:"2024/01/17", // YYYY/MM/DD
+    },
+    {
+        name:"Noah's Ark",
+        defaultAngle: 0,
+        sideImage:"Noah's_Ark-side",
+        sideImageAlign:"bottom",
+        sideImageArtist: "Daniel Roberts (BlenderTimer)",
+        sideImageDate:"2024/03/07", // YYYY/MM/DD
+        frontImage:"Noah's_Ark-front",
+        frontImageAlign:"bottom",
+        frontImageArtist: "Daniel Roberts (BlenderTimer)",
+        frontImageDate:"2024/03/07", // YYYY/MM/DD
+        topImage:"",
+        topImageAlign:"none",
+        topImageArtist: "",
+        topImageDate:"", // YYYY/MM/DD
+        width:0.02286,
+        length:0.13716,
+        height:0.0141855444,
+        category1:"miscellaneous",
+        category2:"bible",
+        category3:"objects",
+        tags:["genesis", "boat", "ship", "flood"], // don't include anything in categories or name
+        dateAdded:"2024/03/07", // YYYY/MM/DD
+        lastModified:"2024/03/07", // YYYY/MM/DD
+    },
 ];
 
 //	———————— STEPS FOR UPDATING ————————

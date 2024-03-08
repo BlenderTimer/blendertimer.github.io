@@ -267,6 +267,14 @@
 				pointer-events: none;
 			}
 
+			.user-object-badge {
+				float: right;
+				height: 13pt;
+				margin-top: 1pt;
+				padding-left: 2px;
+				pointer-events: none;
+			}
+
 			#objectinfo-text-div {
 			    overflow-y: auto;
 			    overflow-x: hidden;
@@ -912,7 +920,7 @@
 				background: #101010;
 				display: block;
 				border-radius: 5px;
-				height: 95vh;
+				height: 70vh;
 				box-shadow: 0px 0px 20px rgba(255,255,255,0.05);
 				padding: 0px;
 				overflow: hidden;
@@ -1612,6 +1620,7 @@
 					<p>{[Object compared to] vs Mycoplasma Gallisepticum (Smallest Cell), Bacterium, -(images created by these artists: Daniel Roberts (BlenderTimer))}</p>
 					<p>{[Object compared to] vs Nanometer (measurement), Metric, -(images created by these artists: Daniel Roberts (BlenderTimer), Daniel Roberts (BlenderTimer))}</p>
 					<p>{[Object compared to] vs Neptune, Ball, Planet, Solar system, Sphere, -(images created by these artists: Daniel Roberts (BlenderTimer), Daniel Roberts (BlenderTimer), Daniel Roberts (BlenderTimer))}</p>
+					<p>{[Object compared to] vs Noah's Ark, Boat, Flood, Genesis, Ship, -(images created by these artists: Daniel Roberts (BlenderTimer), Daniel Roberts (BlenderTimer))}</p>
 					<p>{[Object compared to] vs Oak, Quercus, -(images created by these artists: Daniel Roberts (BlenderTimer))}</p>
 					<p>{[Object compared to] vs Observable Universe, Space, Stars, -(images created by these artists: Daniel Roberts (BlenderTimer))}</p>
 					<p>{[Object compared to] vs Olympus Mons (Mars), Hill, Summit, Volcano, -(images created by these artists: felax)}</p>
@@ -1681,7 +1690,7 @@
 				</div>
 			</div>
 		</div>
-		<p id="version">Tool version: 0.4.4 (2024-01-24)</p>
+		<p id="version">Tool version: 0.4.5 (2024-03-07)</p>
 		<script src="./cs-object-info.js"></script>
 		<script type="text/javascript">
 			var title = document.getElementById('title');
@@ -3264,7 +3273,7 @@
 						}
 					}
 				}
-				document.getElementById('cont-subtitle').innerHTML = "HUGE thanks to the " + conts.length.toLocaleString(navigator.language) + " contributors who have contributed " + totalContributions.toLocaleString(navigator.language) + " images to make this free web tool possible!";
+				document.getElementById('cont-subtitle').innerHTML = "HUGE thanks to the " + conts.length.toLocaleString(navigator.language) + " contributors who have collectively contributed " + totalContributions.toLocaleString(navigator.language) + " images to make this free web tool possible!";
 				if (sortBy == "contributions") {
 					contributors.sort((a, b) => (a.contributions < b.contributions) ? 1 : (a.contributions === b.contributions) ? ((a.name > b.name) ? 1 : -1) : -1);
 				}
@@ -3578,6 +3587,22 @@
 								searchMouseOver = false;
 								setTimeout(function() {setSearchSelection('redraw')}, 500);
 							});
+							var contributorAuthor = false;
+							if (!(searchObjects[i].sideImageArtist == "") && !(searchObjects[i].sideImageArtist == "Daniel Roberts (BlenderTimer)")) {
+								contributorAuthor = true;
+							}
+							if (!(searchObjects[i].frontImageArtist == "") && !(searchObjects[i].frontImageArtist == "Daniel Roberts (BlenderTimer)")) {
+								contributorAuthor = true;
+							}
+							if (!(searchObjects[i].topImageArtist == "") && !(searchObjects[i].topImageArtist == "Daniel Roberts (BlenderTimer)")) {
+								contributorAuthor = true;
+							}
+							if (contributorAuthor == true) {
+								var objUser = document.createElement("img");
+								objUser.src = "../static-0/files/images/icons/user.svg";
+								objUser.classList.add("user-object-badge");
+								objName.appendChild(objUser);
+							}
 							var objDate = new Date(parseInt(searchObjects[i].lastModified.toString().substring(0, 4)), parseInt(searchObjects[i].lastModified.toString().substring(5, 7)) - 1, parseInt(searchObjects[i].lastModified.toString().substring(8, 10)));
 							if ((((Date.now() - objDate.getTime()) / 1000 / 60 / 60 / 24) < 7)) {
 								var objNew = document.createElement("b");
