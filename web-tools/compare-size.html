@@ -312,15 +312,15 @@
 				font-size: 12pt;
 				font-weight: bold;
 				color: #F5F5F5;
-				display: block;
+				display: inline;
 			}
 
 			#objectinfo-text-div p {
 				font-size: 12pt;
 				font-weight: normal;
 				color: #A5A5A5;
-				display: block;
-				margin: 5px 0px 0px 10px;
+				display: inline;
+				margin: 5px 0px 0px 0px;
 			}
 
 			#objectinfo-text-div a {
@@ -328,13 +328,43 @@
 				font-weight: normal;
 				text-decoration: none;
 				color: #A5A5A5;
-				display: block;
-				margin: 5px 0px 0px 10px;
+				display: inline;
+				margin: 5px 0px 0px 0px;
 				transition: 0.3s;
 			}
 
 			#objectinfo-text-div a:hover {
 				color: #F5F5F5;
+			}
+
+			.objectinfo-artist {
+				font-size: 12pt;
+				font-weight: normal;
+				text-decoration: none;
+				color: #A5A5A5;
+				display: inline;
+				margin: 5px 0px 0px 0px;
+				transition: 0.3s;
+				cursor: pointer;
+			}
+
+			.objectinfo-artist:hover {
+				color: #F5F5F5 !important;
+			}
+
+			.objectinfo-tag {
+				background: #555;
+				border-radius: 3px;
+				padding: 1px 5px 3px 5px;
+				color: #CCC !important;
+				margin: 0px 2px !important;
+				cursor: pointer;
+				transition: 0.2s;
+			}
+
+			.objectinfo-tag:hover {
+				background: #666;
+				box-shadow: 0px 0px 5px #0005;
 			}
 
 			#imageinfo-text-div p {
@@ -1245,6 +1275,19 @@
 				justify-content: space-between;
 			}
 
+			.cont-stats-0 {
+				width: 100%;
+				height: auto;
+				margin: 5px;
+				padding: 5px 10px;
+				box-sizing: border-box;
+				display: block;
+				background: #181818;
+				box-shadow: 0px 0px 20px #0009 inset;
+				border-radius: 5px;
+				transition: 0.3s;
+			}
+
 			.cont-stats-2 {
 				width: calc(50% - 10px);
 				height: auto;
@@ -1284,6 +1327,71 @@
 				cursor: pointer !important;
 			}
 
+			.cont-level-div {
+				display: flex;
+				width: 100%;
+				align-items: center;
+				flex-flow: column;
+			}
+
+			.cont-level-div img {
+				display: block;
+				height: 50px;
+				width: 50px;
+			}
+
+			.cont-level-div b {
+				font-size: 13pt;
+			}
+
+			.cont-level-div p {
+				color: #AAA;
+				display: inline;
+			}
+
+			.cont-level-div i {
+				color: #888;
+			}
+
+			#cont-nextlevel {
+				display: block;
+				width: 100%;
+				max-width: 300px;
+				height: 10px;
+				border-radius: 5px;
+				background: #101010;
+				padding: 0px;
+				overflow: hidden;
+				margin: 5px 0px;
+			}
+
+			#cont-nextlevel-progress {
+				height: 100%;
+				margin: 0px;
+				border-radius: 0px 5px 5px 0px;
+				background: #3377EE;
+			}
+
+			#cont-viewobjects {
+				width: 90%;
+				font-size: 13pt;
+				outline: none;
+				border: none;
+				background: #3A3A3A;
+				color: #F5F5F5;
+				border-radius: 30px;
+				padding: 5px 10px;
+				box-shadow: 0px 0px 10px #0005;
+				margin: 10px 5%;
+				cursor: pointer;
+				transition: 0.2s;
+			}
+
+			#cont-viewobjects:hover {
+				background: #444;
+				box-shadow: 0px 0px 10px #0008;
+			}
+
 			#object-tags {
 				max-height: 200px;
 				overflow: auto;
@@ -1320,7 +1428,7 @@
 		height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 		<!-- End Google Tag Manager (noscript) -->
 		<div id="revolve-button" title="Current visitors on this site." style="display: block; position: absolute; right: 40px"><script src="https://rf.revolvermaps.com/0/0/3.js?i=5cgjr9bkw1v&b=0&s=40&m=2&cl=555555&co=000000&cd=ffffff&v0=25&v1=100&r=1" async="async"></script></div>
-		<div id="loading" style="font-family: monospace; display: block; position: fixed; width: 100%; height: 100%; top: 0px; left: 0px; background: #1E1E1E; z-index: 999999; text-align: center; font-size: 12px; white-space: nowrap; padding: calc(50vh - 12px) 0px 0px 0px; text-shadow: 0px 0px 20px rgba(0,0,0,0.8); color: #AAAAAA; box-shadow: 0px 0px 50px rgba(0,0,0,0.8) inset"><h1 id="loading-text">Loading web tool...</h1></div>
+		<div id="loading" style="font-family: monospace; display: block; position: fixed; width: 100%; height: 100%; top: 0px; left: 0px; background: #1E1E1E; z-index: 999999; text-align: center; font-size: 12px; white-space: nowrap; padding: calc(50vh - 12px) 0px 0px 0px; text-shadow: 0px 0px 20px rgba(0,0,0,0.8); color: #AAAAAA; box-shadow: 0px 0px 50px rgba(0,0,0,0.8) inset"><h1 id="loading-text">Initializing...</h1></div>
 		<div id="popup-background" onmouseenter="popupCloseBegin(true)" onmouseleave="popupCloseBegin(false)" onclick="popupClose()" style="display: none; opacity: 0"></div>
 		<div id="addobject-popup-div" style="display: none; opacity: 0">
 			<canvas id="close-x-button" width=30 height=30 onmouseenter="popupCloseBegin(true)" onmouseleave="popupCloseBegin(false)" onclick="popupClose()"></canvas>
@@ -1347,32 +1455,28 @@
 			</div>
 			<div id="objectinfo-text-div" style="display: none">
 				<div id="object-info-div">
-					<div class="oi"><b>Name: </b><p id="oi-name">N/A</p></div>
-					<div class="oi"><b>Tags: </b><p id="oi-tags">N/A</p></div>
-					<div class="oi"><b>Category: </b><p id="oi-category">N/A</p></div>
-					<div class="oi"><b>Date Added (YYYY/MM/DD): </b><p id="oi-dateadded">N/A</p></div>
-					<div class="oi"><b>Last Modified (YYYY/MM/DD): </b><p id="oi-lastmodified">N/A</p></div>
 					<div class="oi"><b>Object ID: </b><p id="oi-objectid">N/A</p></div>
+					<div class="oi" id="oi-tags"><b>Tags: </b></div>
+					<div class="oi"><b>Category: </b><p id="oi-category1" class="objectinfo-tag">N/A</p><p>/</p><p id="oi-category2" class="objectinfo-tag">N/A</p><p>/</p><p id="oi-category3" class="objectinfo-tag">N/A</p></div>
+					<div class="oi"><b>Date Added: </b><p id="oi-dateadded">N/A</p></div>
+					<div class="oi"><b>Last Modified: </b><p id="oi-lastmodified">N/A</p></div>
 					<div class="spr"></div>
 					<div class="oi"><b>Width: </b><p id="oi-width">N/A</p></div>
 					<div class="oi"><b>Length: </b><p id="oi-length">N/A</p></div>
 					<div class="oi"><b>Height: </b><p id="oi-height">N/A</p></div>
-					<div class="oi"><b>Width (Imperial): </b><p id="oi-widthI">N/A</p></div>
-					<div class="oi"><b>Length (Imperial): </b><p id="oi-lengthI">N/A</p></div>
-					<div class="oi"><b>Height (Imperial): </b><p id="oi-heightI">N/A</p></div>
 					<div class="spr"></div>
 					<div class="oi"><b>Default Angle: </b><p id="oi-defaultangle">N/A</p></div>
 					<div class="oi"><b id="oi-sideimaget">Side Image: </b><a id="oi-sideimage" href="" target="_blank">N/A</a></div>
 					<div class="oi"><b id="oi-sideimagealignt">Side Image Align: </b><p id="oi-sideimagealign">N/A</p></div>
-					<div class="oi"><b id="oi-sideimageartistt">Side Image Artist: </b><p id="oi-sideimageartist">N/A</p></div>
+					<div class="oi"><b id="oi-sideimageartistt">Side Image Artist: </b><p id="oi-sideimageartist" class="objectinfo-artist">N/A</p></div>
 					<div class="oi"><b id="oi-sideimagedatet">Side Image Date: </b><p id="oi-sideimagedate">N/A</p></div>
 					<div class="oi"><b id="oi-frontimaget">Front Image: </b><a id="oi-frontimage" href="" target="_blank">N/A</a></div>
 					<div class="oi"><b id="oi-frontimagealignt">Front Image Align: </b><p id="oi-frontimagealign">N/A</p></div>
-					<div class="oi"><b id="oi-frontimageartistt">Front Image Artist: </b><p id="oi-frontimageartist">N/A</p></div>
+					<div class="oi"><b id="oi-frontimageartistt">Front Image Artist: </b><p id="oi-frontimageartist" class="objectinfo-artist">N/A</p></div>
 					<div class="oi"><b id="oi-frontimagedatet">Front Image Date: </b><p id="oi-frontimagedate">N/A</p></div>
 					<div class="oi"><b id="oi-topimaget">Top Image: </b><a id="oi-topimage" href="" target="_blank">N/A</a></div>
 					<div class="oi"><b id="oi-topimagealignt">Top Image Align: </b><p id="oi-topimagealign">N/A</p></div>
-					<div class="oi"><b id="oi-topimageartistt">Top Image Artist: </b><p id="oi-topimageartist">N/A</p></div>
+					<div class="oi"><b id="oi-topimageartistt">Top Image Artist: </b><p id="oi-topimageartist" class="objectinfo-artist">N/A</p></div>
 					<div class="oi"><b id="oi-topimagedatet">Top Image Date: </b><p id="oi-topimagedate">N/A</p></div>
 				</div>
 			</div>
@@ -1434,6 +1538,33 @@
 					<b>Syntax:</b><c>originaldate:query</c><br>
 					<p>Searches for objects with the specified original date (or a similar date). (format: yyyy/mm/dd)</p><br>
 					<b>Example:</b><c>height:2023/01/23</c><br>
+				</div>
+			</div>
+			<div id="contributorinfo-text-div" style="display: none">
+				<div id="contributor-info-div">
+					<div class="c-0 cont-cont-div" style="margin-top: -12px">
+						<h3 class="c-0" id="cont-conts" style="font-size: 30pt !important; width: 100%; max-width: 250px">289</h3>
+						<h4 class="c-0" id="cont-conts-text">CONTRIBUTIONS</h4>
+					</div>
+					<b style="font-size: 16pt; width: 100%; text-align: center; display: block; margin-top: 5px; color: #888" id="cont-rank"></b>
+					<div class="spr"></div>
+					<div id="cont-levels">
+						<div class="cont-level-div">
+							<i style="margin-bottom: 5px">Current level:</i>
+							<img id="cont-level">
+							<div>
+								<b id="cont-level-text"></b><i id="cont-level-text2"></i>
+							</div>
+							<i style="margin-top: 6px">Next level:</i>
+							<div id="cont-nextlevel"><div id="cont-nextlevel-progress"></div></div>
+							<div>
+								<b id="cont-nextlevel-text"></b><p id="cont-nextlevel-text2"></p>
+							</div>
+						</div>
+					</div>
+					<div class="spr"></div>
+					<div class="c-0 cont-stats-0"><b class="c-0">Latest contribution: </b><p class="c-0" id="cont-lastcontribution" style="display: inline"></p><i class="c-0" id="cont-lastcontributiondate" style="display: inline; color: #707070"></i></div>
+					<button onclick="searchContributorObjects(event)" id="cont-viewobjects" title="View objects this user has made or contributed to">View Objects</button>
 				</div>
 			</div>
 		</div>
@@ -1535,7 +1666,7 @@
 					<p>{[Object compared to] vs Baltic Sea, Earth, Water, -(images created by these artists: Daniel Roberts (BlenderTimer))}</p>
 					<p>{[Object compared to] vs Banana, Berry, -(images created by these artists: Daniel Roberts (BlenderTimer))}</p>
 					<p>{[Object compared to] vs Bee Hummingbird, Mellisuga helenae, -(images created by these artists: Daniel Roberts (BlenderTimer))}</p>
-					<p>{[Object compared to] vs BelAZ 75710, Dump, Equipment, Mining, Terrestrial, Truck, -(images created by these artists: Daniel Roberts (BlenderTimer))}</p>
+					<p>{[Object compared to] vs BelAZ 75710, Dump truck, Equipment, Mining, Terrestrial, -(images created by these artists: Daniel Roberts (BlenderTimer))}</p>
 					<p>{[Object compared to] vs Bell 206L4, , -(images created by these artists: Daniel Roberts (BlenderTimer), Daniel Roberts (BlenderTimer), Daniel Roberts (BlenderTimer))}</p>
 					<p>{[Object compared to] vs Bernardinelli-Bernstein (Largest Comet), Ice, Rock, -(images created by these artists: Daniel Roberts (BlenderTimer))}</p>
 					<p>{[Object compared to] vs Betelgeuse, Ball, Heat, Hot, M1, M1-2, Red, Sphere, -(images created by these artists: Daniel Roberts (BlenderTimer), Daniel Roberts (BlenderTimer), Daniel Roberts (BlenderTimer))}</p>
@@ -1562,6 +1693,7 @@
 					<p>{[Object compared to] vs Earth, Africa, America, Antarctica, Arctic, Asia, Australia, Ball, Continent, Ocean, Planet, Sea, Solar system, Sphere, Us, Usa, -(images created by these artists: Daniel Roberts (BlenderTimer), Daniel Roberts (BlenderTimer), Daniel Roberts (BlenderTimer))}</p>
 					<p>{[Object compared to] vs Earth's Moon, Ball, Natural satellite, Solar system, Sphere, Terrain, -(images created by these artists: Daniel Roberts (BlenderTimer), Daniel Roberts (BlenderTimer), Daniel Roberts (BlenderTimer))}</p>
 					<p>{[Object compared to] vs Eiffel Tower, France, Paris, -(images created by these artists: Daniel Roberts (BlenderTimer))}</p>
+					<p>{[Object compared to] vs Emperor Penguin, Antarctic, -(images created by these artists: Daniel Roberts (BlenderTimer))}</p>
 					<p>{[Object compared to] vs Empire State Building, New york, Usa, -(images created by these artists: Daniel Roberts (BlenderTimer))}</p>
 					<p>{[Object compared to] vs Eris, Ball, Small, Solar system, Sphere, -(images created by these artists: Daniel Roberts (BlenderTimer), Daniel Roberts (BlenderTimer), Daniel Roberts (BlenderTimer))}</p>
 					<p>{[Object compared to] vs Falcon 9, Nine, Space x, Spacex, -(images created by these artists: Daniel Roberts (BlenderTimer))}</p>
@@ -1572,6 +1704,7 @@
 					<p>{[Object compared to] vs Goldfish, Carassius auratus, -(images created by these artists: Daniel Roberts (BlenderTimer))}</p>
 					<p>{[Object compared to] vs Grand Canyon (Arizona), Earth, National park, Usa, -(images created by these artists: Daniel Roberts (BlenderTimer))}</p>
 					<p>{[Object compared to] vs Great White Shark, Adult, Carcharodon carcharias, Predator, -(images created by these artists: Daniel Roberts (BlenderTimer))}</p>
+					<p>{[Object compared to] vs Grizzly Bear, Bear, Kodiak, -(images created by these artists: Daniel Roberts (BlenderTimer))}</p>
 					<p>{[Object compared to] vs Halley's Comet, Ice, Rock, -(images created by these artists: Daniel Roberts (BlenderTimer))}</p>
 					<p>{[Object compared to] vs Haumea, Ball, Small, Solar system, Sphere, -(images created by these artists: Daniel Roberts (BlenderTimer), Daniel Roberts (BlenderTimer), Daniel Roberts (BlenderTimer))}</p>
 					<p>{[Object compared to] vs Hercules-Corona Borealis Great Wall (Largest Structure), Stars, Supercluster, -(images created by these artists: Daniel Roberts (BlenderTimer))}</p>
@@ -1600,6 +1733,8 @@
 					<p>{[Object compared to] vs Lego Stud, Brick, Bump, -(images created by these artists: Daniel Roberts (BlenderTimer))}</p>
 					<p>{[Object compared to] vs Lenovo ThinkPad T14s Gen 2 14" (open), Amd, Intel, -(images created by these artists: Daniel Roberts (BlenderTimer), Daniel Roberts (BlenderTimer))}</p>
 					<p>{[Object compared to] vs Light-year (measurement), Space, -(images created by these artists: Daniel Roberts (BlenderTimer), Daniel Roberts (BlenderTimer))}</p>
+					<p>{[Object compared to] vs Lightbulb, Florescent, Led, -(images created by these artists: Daniel Roberts (BlenderTimer))}</p>
+					<p>{[Object compared to] vs Lion (Male), Male, -(images created by these artists: Daniel Roberts (BlenderTimer))}</p>
 					<p>{[Object compared to] vs Lithium Atom, Element, Metal, Neutron, Nucleus, Proton, -(images created by these artists: malachi singh)}</p>
 					<p>{[Object compared to] vs Makemake, Ball, Small, Solar system, Sphere, -(images created by these artists: Daniel Roberts (BlenderTimer), Daniel Roberts (BlenderTimer), Daniel Roberts (BlenderTimer))}</p>
 					<p>{[Object compared to] vs Maple Leaf (Generic), Leaves, -(images created by these artists: Daniel Roberts (BlenderTimer))}</p>
@@ -1621,6 +1756,7 @@
 					<p>{[Object compared to] vs Nanometer (measurement), Metric, -(images created by these artists: Daniel Roberts (BlenderTimer), Daniel Roberts (BlenderTimer))}</p>
 					<p>{[Object compared to] vs Neptune, Ball, Planet, Solar system, Sphere, -(images created by these artists: Daniel Roberts (BlenderTimer), Daniel Roberts (BlenderTimer), Daniel Roberts (BlenderTimer))}</p>
 					<p>{[Object compared to] vs Noah's Ark, Boat, Flood, Genesis, Ship, -(images created by these artists: Daniel Roberts (BlenderTimer), Daniel Roberts (BlenderTimer))}</p>
+					<p>{[Object compared to] vs Nuclear Submarine, Military, Submersible, -(images created by these artists: Daniel Roberts (BlenderTimer))}</p>
 					<p>{[Object compared to] vs Oak, Quercus, -(images created by these artists: Daniel Roberts (BlenderTimer))}</p>
 					<p>{[Object compared to] vs Observable Universe, Space, Stars, -(images created by these artists: Daniel Roberts (BlenderTimer))}</p>
 					<p>{[Object compared to] vs Olympus Mons (Mars), Hill, Summit, Volcano, -(images created by these artists: felax)}</p>
@@ -1633,6 +1769,7 @@
 					<p>{[Object compared to] vs Planck Length (measurement), Plank, -(images created by these artists: Daniel Roberts (BlenderTimer), Daniel Roberts (BlenderTimer))}</p>
 					<p>{[Object compared to] vs Planet 9 (Hypothetical), X, Ball, Solar system, Sphere, -(images created by these artists: Daniel Roberts (BlenderTimer), Daniel Roberts (BlenderTimer), Daniel Roberts (BlenderTimer))}</p>
 					<p>{[Object compared to] vs Pluto, Ball, Small, Solar system, Sphere, -(images created by these artists: Daniel Roberts (BlenderTimer), Daniel Roberts (BlenderTimer), Daniel Roberts (BlenderTimer))}</p>
+					<p>{[Object compared to] vs Polar Bear, Arctic, Bear, -(images created by these artists: Daniel Roberts (BlenderTimer))}</p>
 					<p>{[Object compared to] vs Polaris, Ball, F7lb, Heat, Hot, Pulsating, Pulsing, Sphere, Yellow, -(images created by these artists: Daniel Roberts (BlenderTimer), Daniel Roberts (BlenderTimer), Daniel Roberts (BlenderTimer))}</p>
 					<p>{[Object compared to] vs Pollux, Ball, Heat, Hot, K0, K0iii, Orange, Sphere, Yellow, Yellow-orange, -(images created by these artists: Daniel Roberts (BlenderTimer), Daniel Roberts (BlenderTimer), Daniel Roberts (BlenderTimer))}</p>
 					<p>{[Object compared to] vs Ponderosa Pine, Pinus ponderosa, -(images created by these artists: Daniel Roberts (BlenderTimer))}</p>
@@ -1690,7 +1827,7 @@
 				</div>
 			</div>
 		</div>
-		<p id="version">Tool version: 0.4.5 (2024-03-07)</p>
+		<p id="version">Tool version: 0.4.6 (2024-03-09)</p>
 		<script src="./cs-object-info.js"></script>
 		<script type="text/javascript">
 			var title = document.getElementById('title');
@@ -1708,6 +1845,20 @@
 			var svgFormText = document.getElementById('svgform-text-div');
 			var requestFormText = document.getElementById('requestform-text-div');
 			var searchSyntaxText = document.getElementById('searchsyntax-text-div');
+			var contributorInfoText = document.getElementById('contributorinfo-text-div');
+			var contConts = document.getElementById('cont-conts');
+			var contContsText = document.getElementById('cont-conts-text');
+			var contLastCont = document.getElementById('cont-lastcontribution');
+			var contLastContDate = document.getElementById('cont-lastcontributiondate');
+			var contRank = document.getElementById('cont-rank');
+			var contLevel = document.getElementById('cont-level');
+			var contLevelText = document.getElementById('cont-level-text');
+			var contLevelText2 = document.getElementById('cont-level-text2');
+			var contNextLevel = document.getElementById('cont-nextlevel');
+			var contNextLevelProgress = document.getElementById('cont-nextlevel-progress');
+			var contNextLevelText = document.getElementById('cont-nextlevel-text');
+			var contNextLevelText2 = document.getElementById('cont-nextlevel-text2');
+			var imageInfoText = document.getElementById('imageinfo-text-div');
 			var svgFormBTN = document.getElementById('svg-form-btn');
 			var requestFormBTN = document.getElementById('request-form-btn');
 		    var objsCompare = [];
@@ -1737,6 +1888,7 @@
 		    var popupBack = "";
 		    var toolHistory = [];
 		    var toolHistoryPosition = 0;
+		    var currentContributor = -1;
 
 		    var ctrlKey = false;
 		    var shiftKey = false;
@@ -1872,6 +2024,27 @@
 		    				addObjectFlash();
 		    			}
 		    		},3000);
+		    		document.getElementById('oi-category1').addEventListener('click', function(event) {
+						addObjectPopup();
+						search("category:" + (event.srcElement||event.target).textContent);
+					});
+					document.getElementById('oi-category2').addEventListener('click', function(event) {
+						addObjectPopup();
+						search("category:" + (event.srcElement||event.target).textContent);
+					});
+					document.getElementById('oi-category3').addEventListener('click', function(event) {
+						addObjectPopup();
+						search("category:" + (event.srcElement||event.target).textContent);
+					});
+					document.getElementById('oi-sideimageartist').addEventListener('click', function(event) {
+						for (var i=0; i < contributors.length; i++) {
+							if (contributors[i].name == (event.srcElement||event.target).textContent) {
+								currentContributor = i;
+								contributorInfoPopup(contributors[i]);
+								break
+							}
+						}
+					});
 		    		determineLayout();
 		    	}, 100);
 		    	drawComparison()
@@ -2067,6 +2240,7 @@
 		    	svgFormText.style.display = "none";
 		    	requestFormText.style.display = "none";
 		    	searchSyntaxText.style.display = "none";
+		    	contributorInfoText.style.display = "none";
 			}
 
 			var addObjectReset = true;
@@ -2113,27 +2287,160 @@
 			}
 
 			function objectInfoPopup(objectID) {
-				document.getElementById('oi-name').innerHTML = objects[objectID].name;
 				var tags = "";
-				for (var i=0; i < objects[objectID].tags.length; i++) {
-					if (i == 0) {
-						tags += objects[objectID].tags[i];
-					}
-					else {
-						tags += ", " + objects[objectID].tags[i];
-					}
+				while (document.getElementById('oi-tags').children.length > 1) {
+					document.getElementById('oi-tags').removeChild(document.getElementById('oi-tags').lastChild);
 				}
-				document.getElementById('oi-tags').innerHTML = tags;
-				document.getElementById('oi-dateadded').innerHTML = objects[objectID].dateAdded;
-				document.getElementById('oi-lastmodified').innerHTML = objects[objectID].lastModified;
-				document.getElementById('oi-category').innerHTML = objects[objectID].category1 + "/" + objects[objectID].category2 + "/" + objects[objectID].category3;
+				for (var i=0; i < objects[objectID].tags.length; i++) {
+					//if (i == 0) {
+					//	tags += objects[objectID].tags[i];
+					//}
+					//else {
+					//	tags += ", " + objects[objectID].tags[i];
+					//}
+					var t = document.createElement('p');
+					t.className = "objectinfo-tag";
+					t.innerHTML = objects[objectID].tags[i];
+					t.addEventListener('click', function(event) {
+						addObjectPopup();
+						search((event.srcElement||event.target).textContent);
+					});
+					document.getElementById('oi-tags').appendChild(t);
+				}
+				var month = "";
+				if (parseInt(objects[objectID].dateAdded.substring(objects[objectID].dateAdded.indexOf("/")+1, objects[objectID].dateAdded.lastIndexOf("/"))) == 1) {
+					month = "January";
+				}
+				else if (parseInt(objects[objectID].dateAdded.substring(objects[objectID].dateAdded.indexOf("/")+1, objects[objectID].dateAdded.lastIndexOf("/"))) == 2) {
+					month = "February";
+				}
+				else if (parseInt(objects[objectID].dateAdded.substring(objects[objectID].dateAdded.indexOf("/")+1, objects[objectID].dateAdded.lastIndexOf("/"))) == 3) {
+					month = "March";
+				}
+				else if (parseInt(objects[objectID].dateAdded.substring(objects[objectID].dateAdded.indexOf("/")+1, objects[objectID].dateAdded.lastIndexOf("/"))) == 4) {
+					month = "April";
+				}
+				else if (parseInt(objects[objectID].dateAdded.substring(objects[objectID].dateAdded.indexOf("/")+1, objects[objectID].dateAdded.lastIndexOf("/"))) == 5) {
+					month = "May";
+				}
+				else if (parseInt(objects[objectID].dateAdded.substring(objects[objectID].dateAdded.indexOf("/")+1, objects[objectID].dateAdded.lastIndexOf("/"))) == 6) {
+					month = "June";
+				}
+				else if (parseInt(objects[objectID].dateAdded.substring(objects[objectID].dateAdded.indexOf("/")+1, objects[objectID].dateAdded.lastIndexOf("/"))) == 7) {
+					month = "July";
+				}
+				else if (parseInt(objects[objectID].dateAdded.substring(objects[objectID].dateAdded.indexOf("/")+1, objects[objectID].dateAdded.lastIndexOf("/"))) == 8) {
+					month = "August";
+				}
+				else if (parseInt(objects[objectID].dateAdded.substring(objects[objectID].dateAdded.indexOf("/")+1, objects[objectID].dateAdded.lastIndexOf("/"))) == 9) {
+					month = "September";
+				}
+				else if (parseInt(objects[objectID].dateAdded.substring(objects[objectID].dateAdded.indexOf("/")+1, objects[objectID].dateAdded.lastIndexOf("/"))) == 10) {
+					month = "October";
+				}
+				else if (parseInt(objects[objectID].dateAdded.substring(objects[objectID].dateAdded.indexOf("/")+1, objects[objectID].dateAdded.lastIndexOf("/"))) == 11) {
+					month = "November";
+				}
+				else if (parseInt(objects[objectID].dateAdded.substring(objects[objectID].dateAdded.indexOf("/")+1, objects[objectID].dateAdded.lastIndexOf("/"))) == 12) {
+					month = "December";
+				}
+				var month2 = "";
+				if (parseInt(objects[objectID].lastModified.substring(objects[objectID].lastModified.indexOf("/")+1, objects[objectID].lastModified.lastIndexOf("/"))) == 1) {
+					month2 = "January";
+				}
+				else if (parseInt(objects[objectID].lastModified.substring(objects[objectID].lastModified.indexOf("/")+1, objects[objectID].lastModified.lastIndexOf("/"))) == 2) {
+					month2 = "February";
+				}
+				else if (parseInt(objects[objectID].lastModified.substring(objects[objectID].lastModified.indexOf("/")+1, objects[objectID].lastModified.lastIndexOf("/"))) == 3) {
+					month2 = "March";
+				}
+				else if (parseInt(objects[objectID].lastModified.substring(objects[objectID].lastModified.indexOf("/")+1, objects[objectID].lastModified.lastIndexOf("/"))) == 4) {
+					month2 = "April";
+				}
+				else if (parseInt(objects[objectID].lastModified.substring(objects[objectID].lastModified.indexOf("/")+1, objects[objectID].lastModified.lastIndexOf("/"))) == 5) {
+					month2 = "May";
+				}
+				else if (parseInt(objects[objectID].lastModified.substring(objects[objectID].lastModified.indexOf("/")+1, objects[objectID].lastModified.lastIndexOf("/"))) == 6) {
+					month2 = "June";
+				}
+				else if (parseInt(objects[objectID].lastModified.substring(objects[objectID].lastModified.indexOf("/")+1, objects[objectID].lastModified.lastIndexOf("/"))) == 7) {
+					month2 = "July";
+				}
+				else if (parseInt(objects[objectID].lastModified.substring(objects[objectID].lastModified.indexOf("/")+1, objects[objectID].lastModified.lastIndexOf("/"))) == 8) {
+					month2 = "August";
+				}
+				else if (parseInt(objects[objectID].lastModified.substring(objects[objectID].lastModified.indexOf("/")+1, objects[objectID].lastModified.lastIndexOf("/"))) == 9) {
+					month2 = "September";
+				}
+				else if (parseInt(objects[objectID].lastModified.substring(objects[objectID].lastModified.indexOf("/")+1, objects[objectID].lastModified.lastIndexOf("/"))) == 10) {
+					month2 = "October";
+				}
+				else if (parseInt(objects[objectID].lastModified.substring(objects[objectID].lastModified.indexOf("/")+1, objects[objectID].lastModified.lastIndexOf("/"))) == 11) {
+					month2 = "November";
+				}
+				else if (parseInt(objects[objectID].lastModified.substring(objects[objectID].lastModified.indexOf("/")+1, objects[objectID].lastModified.lastIndexOf("/"))) == 12) {
+					month2 = "December";
+				}
+				document.getElementById('oi-dateadded').innerHTML = month + " " + parseInt(objects[objectID].dateAdded.substring(objects[objectID].dateAdded.lastIndexOf("/")+1, objects[objectID].dateAdded.length)).toString() + ", " + parseInt(objects[objectID].dateAdded.substring(0, objects[objectID].dateAdded.indexOf("/"))).toString();
+				document.getElementById('oi-lastmodified').innerHTML = month + " " + parseInt(objects[objectID].lastModified.substring(objects[objectID].lastModified.lastIndexOf("/")+1, objects[objectID].lastModified.length)).toString() + ", " + parseInt(objects[objectID].lastModified.substring(0, objects[objectID].lastModified.indexOf("/"))).toString();
+				document.getElementById('oi-category1').innerHTML = objects[objectID].category1
+				document.getElementById('oi-category2').innerHTML = objects[objectID].category2
+				document.getElementById('oi-category3').innerHTML = objects[objectID].category3
 				document.getElementById('oi-objectid').innerHTML = objects[objectID].originalObjectID;
-				document.getElementById('oi-width').innerHTML = objects[objectID].width + "km | " + (objects[objectID].width * 1000) + "m | " + (objects[objectID].width * 100000) + "cm | " + (objects[objectID].width * 1000000) + "mm | " + (objects[objectID].width * 1000000000) + "µm";
-				document.getElementById('oi-length').innerHTML = objects[objectID].length + "km | " + (objects[objectID].length * 1000) + "m | " + (objects[objectID].length * 100000) + "cm | " + (objects[objectID].length * 1000000) + "mm | " + (objects[objectID].length * 1000000000) + "µm";
-				document.getElementById('oi-height').innerHTML = objects[objectID].height + "km | " + (objects[objectID].height * 1000) + "m | " + (objects[objectID].height * 100000) + "cm | " + (objects[objectID].height * 1000000) + "mm | " + (objects[objectID].height * 1000000000) + "µm";
-				document.getElementById('oi-widthI').innerHTML = (objects[objectID].width * 0.62137119) + "mi | " + (objects[objectID].width * 3280.8398832) + "ft | " + (objects[objectID].width * 39370.0785984) + "in";
-				document.getElementById('oi-lengthI').innerHTML = (objects[objectID].length * 0.62137119) + "mi | " + (objects[objectID].length * 3280.8398832) + "ft | " + (objects[objectID].length * 39370.0785984) + "in";
-				document.getElementById('oi-heightI').innerHTML = (objects[objectID].height * 0.62137119) + "mi | " + (objects[objectID].height * 3280.8398832) + "ft | " + (objects[objectID].height * 39370.0785984) + "in";
+				if (objects[objectID].width >= 9460730472580.8) {
+					document.getElementById('oi-width').innerHTML = (objects[objectID].width / 9460730472580.8).toFixed(3).toString() + " light-years";
+				}
+				else if (objects[objectID].width >= 1) {
+					document.getElementById('oi-width').innerHTML = (objects[objectID].width).toFixed(3).toString() + " kilometers (" + (objects[objectID].width * 0.62137119223733).toFixed(3).toString() + " miles)";
+				}
+				else if (objects[objectID].width >= 0.001) {
+					document.getElementById('oi-width').innerHTML = (objects[objectID].width * 1000).toFixed(3).toString() + " meters (" + (objects[objectID].width / 0.0003048).toFixed(3).toString() + " feet)";
+				}
+				else if (objects[objectID].width >= 0.00001) {
+					document.getElementById('oi-width').innerHTML = (objects[objectID].width * 100000).toFixed(3).toString() + " centimeters (" + (objects[objectID].width / 0.000000000254).toFixed(3).toString() + " inches)";
+				}
+				else if (objects[objectID].width >= 0.000001) {
+					document.getElementById('oi-width').innerHTML = (objects[objectID].width * 1000000).toFixed(3).toString() + " millimeters (" + (objects[objectID].width / 0.0000000000254).toFixed(3).toString() + " inches)";
+				}
+				else if (objects[objectID].width >= 0.000000001) {
+					document.getElementById('oi-width').innerHTML = (objects[objectID].width * 1000000000).toFixed(3).toString() + " micrometers (" + (objects[objectID].width / 0.0000000000254).toFixed(3).toString() + " thous)";
+				}
+				if (objects[objectID].length >= 9460730472580.8) {
+					document.getElementById('oi-length').innerHTML = (objects[objectID].length / 9460730472580.8).toFixed(3).toString() + " light-years";
+				}
+				else if (objects[objectID].length >= 1) {
+					document.getElementById('oi-length').innerHTML = (objects[objectID].length).toFixed(3).toString() + " kilometers (" + (objects[objectID].length * 0.62137119223733).toFixed(3).toString() + " miles)";
+				}
+				else if (objects[objectID].length >= 0.001) {
+					document.getElementById('oi-length').innerHTML = (objects[objectID].length * 1000).toFixed(3).toString() + " meters (" + (objects[objectID].length / 0.0003048).toFixed(3).toString() + " feet)";
+				}
+				else if (objects[objectID].length >= 0.00001) {
+					document.getElementById('oi-length').innerHTML = (objects[objectID].length * 100000).toFixed(3).toString() + " centimeters (" + (objects[objectID].length / 0.000000000254).toFixed(3).toString() + " inches)";
+				}
+				else if (objects[objectID].length >= 0.000001) {
+					document.getElementById('oi-length').innerHTML = (objects[objectID].length * 1000000).toFixed(3).toString() + " millimeters (" + (objects[objectID].length / 0.0000000000254).toFixed(3).toString() + " inches)";
+				}
+				else if (objects[objectID].length >= 0.000000001) {
+					document.getElementById('oi-length').innerHTML = (objects[objectID].length * 1000000000).toFixed(3).toString() + " micrometers (" + (objects[objectID].length / 0.0000000000254).toFixed(3).toString() + " thous)";
+				}
+				if (objects[objectID].height >= 9460730472580.8) {
+					document.getElementById('oi-height').innerHTML = (objects[objectID].height / 9460730472580.8).toFixed(3).toString() + " light-years";
+				}
+				else if (objects[objectID].height >= 1) {
+					document.getElementById('oi-height').innerHTML = (objects[objectID].height).toFixed(3).toString() + " kilometers (" + (objects[objectID].height * 0.62137119223733).toFixed(3).toString() + " miles)";
+				}
+				else if (objects[objectID].height >= 0.001) {
+					document.getElementById('oi-height').innerHTML = (objects[objectID].height * 1000).toFixed(3).toString() + " meters (" + (objects[objectID].height / 0.0003048).toFixed(3).toString() + " feet)";
+				}
+				else if (objects[objectID].height >= 0.00001) {
+					document.getElementById('oi-height').innerHTML = (objects[objectID].height * 100000).toFixed(3).toString() + " centimeters (" + (objects[objectID].height / 0.000000000254).toFixed(3).toString() + " inches)";
+				}
+				else if (objects[objectID].height >= 0.000001) {
+					document.getElementById('oi-height').innerHTML = (objects[objectID].height * 1000000).toFixed(3).toString() + " millimeters (" + (objects[objectID].height / 0.0000000000254).toFixed(3).toString() + " inches)";
+				}
+				else if (objects[objectID].height >= 0.000000001) {
+					document.getElementById('oi-height').innerHTML = (objects[objectID].height * 1000000000).toFixed(3).toString() + " micrometers (" + (objects[objectID].height / 0.0000000000254).toFixed(3).toString() + " thous)";
+				}
 		    	document.getElementById('oi-defaultangle').innerHTML = objects[objectID].defaultAngle + " (" + angleToText(objects[objectID].defaultAngle) + ")";
 		    	document.getElementById('oi-sideimage').innerHTML = objects[objectID].sideImage;
 		    	document.getElementById('oi-sideimage').href = "./compare-size/images/" + objects[objectID].category1 + "/" + objects[objectID].category2 + "/" + objects[objectID].category3 + "/" + objects[objectID].sideImage + ".svg";
@@ -2186,7 +2493,7 @@
 		    		document.getElementById('oi-topimageartist').parentElement.style.display = "none";
 		    		document.getElementById('oi-topimagedate').parentElement.style.display = "none";
 		    	}
-		    	popupTitle.innerHTML = "Object Info";
+		    	popupTitle.innerHTML = objects[objectID].name;
 		    	hidePopupDivs();
 		    	objectInfoText.style.display = "block";
 				setTimeout(function() {addObjectPopupDiv.style.opacity = "1"; popupBackground.style.opacity = "1"}, 1);
@@ -2264,6 +2571,128 @@
 		    	searchSyntaxText.style.display = "block";
 				setTimeout(function() {addObjectPopupDiv.style.opacity = "1"; popupBackground.style.opacity = "1"}, 1);
 				addObjectPopupDiv.style.display = "block";
+				popupBackground.style.display = "block";
+				popupBackground.style.bottom = 0;
+			}
+
+			function contributorInfoPopup(c) {
+				var nextConts = 1;
+				var levelConts = 1;
+				popupBack = "";
+		    	popupTitle.innerHTML = c.name;
+		    	contConts.innerHTML = c.contributions;
+		    	if (c.contributions == 1) {
+		    		contContsText.innerHTML = "CONTRIBUTION";
+		    	}
+		    	else {
+		    		contContsText.innerHTML = "CONTRIBUTIONS";
+		    	}
+		    	contRank.innerHTML = "#" + c.rank + " contributor";
+		    	if (c.level == 10) {
+		    		contLevel.src = "../static-0/files/images/compare-contributorlevel-10.png";
+		    		contLevelText.innerHTML = "Legend";
+		    		contLevelText2.innerHTML = " (level 10)";
+		    		nextConts = -1;
+		    		levelConts = 1000;
+		    		contNextLevelText.innerHTML = "";
+		    		contNextLevelText2.innerHTML = "max level reached";
+		    	}
+		    	else if (c.level == 9) {
+		    		contLevel.src = "../static-0/files/images/compare-contributorlevel-9.png";
+		    		contLevelText.innerHTML = "Incredible";
+		    		contLevelText2.innerHTML = " (level 9)";
+		    		nextConts = 1000;
+		    		levelConts = 500;
+		    		contNextLevelText.innerHTML = (nextConts - c.contributions).toString();
+		    		contNextLevelText2.innerHTML = " contributions till level 10 (Legend)";
+		    	}
+		    	else if (c.level == 8) {
+		    		contLevel.src = "../static-0/files/images/compare-contributorlevel-8.png";
+		    		contLevelText.innerHTML = "Outstanding";
+		    		contLevelText2.innerHTML = " (level 8)";
+		    		nextConts = 500;
+		    		levelConts = 200;
+		    		contNextLevelText.innerHTML = (nextConts - c.contributions).toString();
+		    		contNextLevelText2.innerHTML = " contributions till level 9 (Incredible)";
+		    	}
+		    	else if (c.level == 7) {
+		    		contLevel.src = "../static-0/files/images/compare-contributorlevel-7.png";
+		    		contLevelText.innerHTML = "Amazing";
+		    		contLevelText2.innerHTML = " (level 7)";
+		    		nextConts = 200;
+		    		levelConts = 100;
+		    		contNextLevelText.innerHTML = (nextConts - c.contributions).toString();
+		    		contNextLevelText2.innerHTML = " contributions till level 8 (Outstanding)";
+		    	}
+		    	else if (c.level == 6) {
+		    		contLevel.src = "../static-0/files/images/compare-contributorlevel-6.png";
+		    		contLevelText.innerHTML = "Remarkable";
+		    		contLevelText2.innerHTML = " (level 6)";
+		    		nextConts = 100;
+		    		levelConts = 75;
+		    		contNextLevelText.innerHTML = (nextConts - c.contributions).toString();
+		    		contNextLevelText2.innerHTML = " contributions till level 7 (Amazing)";
+		    	}
+		    	else if (c.level == 5) {
+		    		contLevel.src = "../static-0/files/images/compare-contributorlevel-5.png";
+		    		contLevelText.innerHTML = "Phenomenal";
+		    		contLevelText2.innerHTML = " (level 5)";
+		    		nextConts = 75;
+		    		levelConts = 50;
+		    		contNextLevelText.innerHTML = (nextConts - c.contributions).toString();
+		    		contNextLevelText2.innerHTML = " contributions till level 6 (Remarkable)";
+		    	}
+		    	else if (c.level == 4) {
+		    		contLevel.src = "../static-0/files/images/compare-contributorlevel-4.png";
+		    		contLevelText.innerHTML = "Super";
+		    		contLevelText2.innerHTML = " (level 4)";
+		    		nextConts = 50;
+		    		levelConts = 25;
+		    		contNextLevelText.innerHTML = (nextConts - c.contributions).toString();
+		    		contNextLevelText2.innerHTML = " contributions till level 5 (Phenomenal)";
+		    	}
+		    	else if (c.level == 3) {
+		    		contLevel.src = "../static-0/files/images/compare-contributorlevel-3.png";
+		    		contLevelText.innerHTML = "Great";
+		    		contLevelText2.innerHTML = " (level 3)";
+		    		nextConts = 25;
+		    		levelConts = 10;
+		    		contNextLevelText.innerHTML = (nextConts - c.contributions).toString();
+		    		contNextLevelText2.innerHTML = " contributions till level 4 (Super)";
+		    	}
+		    	else if (c.level == 2) {
+		    		contLevel.src = "../static-0/files/images/compare-contributorlevel-2.png";
+		    		contLevelText.innerHTML = "Better";
+		    		contLevelText2.innerHTML = " (level 2)";
+		    		nextConts = 10;
+		    		levelConts = 5;
+		    		contNextLevelText.innerHTML = (nextConts - c.contributions).toString();
+		    		contNextLevelText2.innerHTML = " contributions till level 3 (Great)";
+		    	}
+		    	else {
+		    		contLevel.src = "../static-0/files/images/compare-contributorlevel-1.png";
+		    		contLevelText.innerHTML = "Good";
+		    		contLevelText2.innerHTML = " (level 1)";
+		    		nextConts = 5;
+		    		levelConts = 1;
+		    		contNextLevelText.innerHTML = (nextConts - c.contributions).toString();
+		    		contNextLevelText2.innerHTML = " contributions till level 2 (Better)";
+		    	}
+		    	contLastCont.innerHTML = c.lastContribution;
+		    	contLastContDate.innerHTML = " (Published on: " + new Date(c.lastContributionDate).getFullYear().toString() + "/" + (new Date(c.lastContributionDate).getMonth() + 1).toString() + "/" + new Date(c.lastContributionDate).getDate().toString() + ")";
+		    	hidePopupDivs();
+		    	contributorInfoText.style.display = "block";
+				setTimeout(function() {addObjectPopupDiv.style.opacity = "1"; popupBackground.style.opacity = "1"}, 1);
+				addObjectPopupDiv.style.display = "block";
+				if (nextConts == -1) {
+					contNextLevelProgress.style.width = "100%";
+				}
+				else {
+					contNextLevelProgress.style.width = (((c.contributions-levelConts) / (nextConts-levelConts)) * 100) + "%";
+				}
+				if (contNextLevelProgress.offsetWidth < 5) {
+					contNextLevelProgress.style.width = "5px";
+				}
 				popupBackground.style.display = "block";
 				popupBackground.style.bottom = 0;
 			}
@@ -3300,8 +3729,8 @@
 			  		cont.classList.add("cont-div");
 			  		cont.addEventListener("click", function(event) {
 						var element = event.target || event.srcElement;
-						addObjectPopup();
-						search("artist:" + contributors[parseInt(element.classList[0].toString().substring(2, element.classList[0].toString().length))].name,"date");
+						currentContributor = parseInt(element.classList[0].toString().substring(2, element.classList[0].toString().length));
+						contributorInfoPopup(contributors[currentContributor]);
 					});
 					var contBadge = document.createElement("img");
 			  		contBadge.classList.add("c-" + i.toString());
@@ -3319,7 +3748,12 @@
 			  		contRankDiv.style.pointerEvents = "none";
 			  		var contContsT = document.createElement("h4");
 			  		contContsT.classList.add("c-" + i.toString());
-			  		contContsT.innerHTML = "CONTRIBUTIONS";
+			  		if (contributors[i].contributions == 1) {
+			  			contContsT.innerHTML = "CONTRIBUTION";
+			  		}
+			  		else {
+			  			contContsT.innerHTML = "CONTRIBUTIONS";
+			  		}
 			  		contContsT.style.pointerEvents = "none";
 			  		var contConts = document.createElement("h3");
 			  		contConts.classList.add("c-" + i.toString());
@@ -3391,51 +3825,61 @@
 			  		if (contributors[i].contributions >= 1000) {
 			  			contLevel.innerHTML = "Legend (level 10 achieved at 1000 contributions)";
 			  			contNextLevel.innerHTML = "None (max level reached)";
-			  		contBadge.src = "../static-0/files/images/compare-contributorlevel-10.png";
-			  		}
-			  		else if (contributors[i].contributions >= 750) {
-			  			contLevel.innerHTML = "Incredible (level 9 achieved at 750 contributions)";
-			  			contNextLevel.innerHTML = "Legend (1000 contributions, " + (1000 - contributors[i].contributions).toString() + " contributions left)";
-			  			contBadge.src = "../static-0/files/images/compare-contributorlevel-9.png";
+			  			contributors[i].level = 10;
+			  			contBadge.src = "../static-0/files/images/compare-contributorlevel-10.png";
 			  		}
 			  		else if (contributors[i].contributions >= 500) {
-			  			contLevel.innerHTML = "Outstanding (level 8 achieved at 500 contributions)";
-			  			contNextLevel.innerHTML = "Incredible (750 contributions, " + (750 - contributors[i].contributions).toString() + " contributions left)";
+			  			contLevel.innerHTML = "Incredible (level 9 achieved at 500 contributions)";
+			  			contNextLevel.innerHTML = "Legend (1000 contributions, " + (1000 - contributors[i].contributions).toString() + " contributions left)";
+			  			contributors[i].level = 9;
+			  			contBadge.src = "../static-0/files/images/compare-contributorlevel-9.png";
+			  		}
+			  		else if (contributors[i].contributions >= 200) {
+			  			contLevel.innerHTML = "Outstanding (level 8 achieved at 200 contributions)";
+			  			contNextLevel.innerHTML = "Incredible (500 contributions, " + (500 - contributors[i].contributions).toString() + " contributions left)";
+			  			contributors[i].level = 8;
 			  			contBadge.src = "../static-0/files/images/compare-contributorlevel-8.png";
 			  		}
-			  		else if (contributors[i].contributions >= 250) {
-			  			contLevel.innerHTML = "Amazing (level 7 achieved at 250 contributions)";
-			  			contNextLevel.innerHTML = "Outstanding (500 contributions, " + (500 - contributors[i].contributions).toString() + " contributions left)";
+			  		else if (contributors[i].contributions >= 100) {
+			  			contLevel.innerHTML = "Amazing (level 7 achieved at 100 contributions)";
+			  			contNextLevel.innerHTML = "Outstanding (150 contributions, " + (150 - contributors[i].contributions).toString() + " contributions left)";
+			  			contributors[i].level = 7;
 			  			contBadge.src = "../static-0/files/images/compare-contributorlevel-7.png";
 			  		}
-			  		else if (contributors[i].contributions >= 100) {
-			  			contLevel.innerHTML = "Remarkable (level 6 achieved at 100 contributions)";
-			  			contNextLevel.innerHTML = "Amazing (250 contributions, " + (250 - contributors[i].contributions).toString() + " contributions left)";
+			  		else if (contributors[i].contributions >= 75) {
+			  			contLevel.innerHTML = "Remarkable (level 6 achieved at 75 contributions)";
+			  			contNextLevel.innerHTML = "Amazing (100 contributions, " + (100 - contributors[i].contributions).toString() + " contributions left)";
+			  			contributors[i].level = 6;
 			  			contBadge.src = "../static-0/files/images/compare-contributorlevel-6.png";
 			  		}
-			  		else if (contributors[i].contributions >= 75) {
-			  			contLevel.innerHTML = "Phenomenal (level 5 achieved at 75 contributions)";
-			  			contNextLevel.innerHTML = "Remarkable (100 contributions, " + (100 - contributors[i].contributions).toString() + " contributions left)";
+			  		else if (contributors[i].contributions >= 50) {
+			  			contLevel.innerHTML = "Phenomenal (level 5 achieved at 50 contributions)";
+			  			contNextLevel.innerHTML = "Remarkable (75 contributions, " + (75 - contributors[i].contributions).toString() + " contributions left)";
+			  			contributors[i].level = 5;
 			  			contBadge.src = "../static-0/files/images/compare-contributorlevel-5.png";
 			  		}
-			  		else if (contributors[i].contributions >= 50) {
-			  			contLevel.innerHTML = "Super (level 4 achieved at 50 contributions)";
-			  			contNextLevel.innerHTML = "Phenomenal (75 contributions, " + (75 - contributors[i].contributions).toString() + " contributions left)";
+			  		else if (contributors[i].contributions >= 25) {
+			  			contLevel.innerHTML = "Super (level 4 achieved at 25 contributions)";
+			  			contNextLevel.innerHTML = "Phenomenal (50 contributions, " + (50 - contributors[i].contributions).toString() + " contributions left)";
+			  			contributors[i].level = 4;
 			  			contBadge.src = "../static-0/files/images/compare-contributorlevel-4.png";
 			  		}
-			  		else if (contributors[i].contributions >= 25) {
-			  			contLevel.innerHTML = "Great (level 3 achieved at 25 contributions)";
-			  			contNextLevel.innerHTML = "Super (50 contributions, " + (50 - contributors[i].contributions).toString() + " contributions left)";
+			  		else if (contributors[i].contributions >= 10) {
+			  			contLevel.innerHTML = "Great (level 3 achieved at 10 contributions)";
+			  			contNextLevel.innerHTML = "Super (25 contributions, " + (25 - contributors[i].contributions).toString() + " contributions left)";
+			  			contributors[i].level = 3;
 			  			contBadge.src = "../static-0/files/images/compare-contributorlevel-3.png";
 			  		}
-			  		else if (contributors[i].contributions >= 10) {
-			  			contLevel.innerHTML = "Better (level 2 achieved at 10 contributions)";
-			  			contNextLevel.innerHTML = "Great (25 contributions, " + (25 - contributors[i].contributions).toString() + " contributions left)";
+			  		else if (contributors[i].contributions >= 5) {
+			  			contLevel.innerHTML = "Better (level 2 achieved at 5 contributions)";
+			  			contNextLevel.innerHTML = "Great (10 contributions, " + (10 - contributors[i].contributions).toString() + " contributions left)";
+			  			contributors[i].level = 2;
 			  			contBadge.src = "../static-0/files/images/compare-contributorlevel-2.png";
 			  		}
 			  		else {
 			  			contLevel.innerHTML = "Good (level 1 achieved at 1 contribution)";
 			  			contNextLevel.innerHTML = "Better (10 contributions, " + (10 - contributors[i].contributions).toString() + " contributions left)";
+			  			contributors[i].level = 1;
 			  			contBadge.src = "../static-0/files/images/compare-contributorlevel-1.png";
 			  		}
 			  		contStats3.appendChild(contLevelT);
@@ -3447,7 +3891,13 @@
 			  		cont.appendChild(contStats);
 			  		contList.appendChild(cont);
 				}
+				loadingText.innerHTML = "Loading web tool...";
 				determineLayout();
+			}
+
+			function searchContributorObjects(event) {
+				addObjectPopup();
+				search("artist:" + contributors[currentContributor].name,"date");
 			}
 
 			Number.prototype.toFullNumber = function() {
@@ -3539,7 +3989,9 @@
 		    	}
 		    	searchBar.focus();
 		    	setTimeout(function() {
-		    		document.getElementById("search-objects-search").scrollTop = 0;
+		    		if (addObjectReset == true) {
+		    			document.getElementById("search-objects-search").scrollTop = 0;
+		    		}
 		    		document.getElementById('no-search-results').style.display = "block";
 		    		document.getElementById('wait-search-results').style.display = "block";
 		    		objectsCount.innerHTML = objects.length + " OBJECTS";
@@ -3868,6 +4320,22 @@
 								searchMouseOver = false;
 								setTimeout(function() {setSearchSelection('redraw')}, 500);
 							});
+							var contributorAuthor = false;
+							if (!(searchObjects[i].sideImageArtist == "") && !(searchObjects[i].sideImageArtist == "Daniel Roberts (BlenderTimer)")) {
+								contributorAuthor = true;
+							}
+							if (!(searchObjects[i].frontImageArtist == "") && !(searchObjects[i].frontImageArtist == "Daniel Roberts (BlenderTimer)")) {
+								contributorAuthor = true;
+							}
+							if (!(searchObjects[i].topImageArtist == "") && !(searchObjects[i].topImageArtist == "Daniel Roberts (BlenderTimer)")) {
+								contributorAuthor = true;
+							}
+							if (contributorAuthor == true) {
+								var objUser = document.createElement("img");
+								objUser.src = "../static-0/files/images/icons/user.svg";
+								objUser.classList.add("user-object-badge");
+								objName.appendChild(objUser);
+							}
 							var objDate = new Date(parseInt(searchObjects[i].lastModified.toString().substring(0, 4)), parseInt(searchObjects[i].lastModified.toString().substring(5, 7)) - 1, parseInt(searchObjects[i].lastModified.toString().substring(8, 10)));
 							if ((((Date.now() - objDate.getTime()) / 1000 / 60 / 60 / 24) < 7)) {
 								var objNew = document.createElement("b");
