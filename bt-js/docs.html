@@ -542,6 +542,30 @@
 				margin-bottom: 5px;
 			}
 
+			.see-also {
+				padding: 3px 5px;
+				box-sizing: border-box;
+				display: inline-block;
+				outline: none;
+				border: none;
+				border-radius: 3px;
+				background: #444;
+				color: #EEE;
+				border: 2px solid #555;
+				padding: 2px 5px;
+				font-size: 11pt;
+				margin: 7px 0px 0px 0px;
+				cursor: pointer;
+				transition: 0.2s;
+				font-family: monospace;
+			}
+
+			.see-also:hover {
+				background: #555;
+				color: #F5F5F5;
+				box-shadow: 0px 0px 7px #0004;
+			}
+
 			.copy-link {
 				width: 30px;
 				height: 30px;
@@ -656,10 +680,12 @@
 				<tr onclick="scrollToID('functions-clearCanvas', true)"><td><p>clearCanvas</p></td><td>Clears the entire canvas drawing and path data.</td></tr>
 				<tr onclick="scrollToID('functions-cursorinfo', true)"><td><p>cursorInfo</p></td><td>A compact, multi-function information retrieval function to get information about the cursor such as its position, its speed, etc.</td></tr>
 				<tr onclick="scrollToID('functions-drawRect', true)"><td><p>drawRect</p></td><td>Creates a rectangle in a canvas (with optional border radius).</td></tr>
+				<tr onclick="scrollToID('functions-isnumber', true)"><td><p>isNumber</p></td><td>Checks a string to see if it is a number or not.</td></tr>
 				<tr onclick="scrollToID('functions-limit', true)"><td><p>limit</p></td><td>Returns the same number but no greater or less than the specified upper and lower limits.</td></tr>
 				<tr onclick="scrollToID('functions-limitdown', true)"><td><p>limitDown</p></td><td>Returns the same number but no less than the specified limit.</td></tr>
 				<tr onclick="scrollToID('functions-limitup', true)"><td><p>limitUp</p></td><td>Returns the same number but no greater than the specified limit.</td></tr>
 				<tr onclick="scrollToID('functions-pointOnCircle', true)"><td><p>pointOnCircle</p></td><td>Returns an object with the X and Y position of a specific angle on a circle.</td></tr>
+				<tr onclick="scrollToID('functions-readcookie', true)"><td><p>readCookie</p></td><td>Returns the value of the specified cookie.</td></tr>
 				<tr onclick="scrollToID('functions-randomnumber', true)"><td><p>randomNumber</p></td><td>Returns a random number from a low and high limit and with a specified number of decimal places.</td></tr>
 				<tr onclick="scrollToID('functions-removeafter', true)"><td><p>removeAfter</p></td><td>Returns the string with everything after the specified character removed.</td></tr>
 				<tr onclick="scrollToID('functions-removebefore', true)"><td><p>removeBefore</p></td><td>Returns the string with everything before the specified character removed.</td></tr>
@@ -667,10 +693,13 @@
 				<tr onclick="scrollToID('functions-selectrandom', true)"><td><p>selectRandom</p></td><td>Returns a random item from an array/list.</td></tr>
 				<tr onclick="scrollToID('functions-sizeCanvas', true)"><td><p>sizeCanvas</p></td><td>Makes the drawing area of a canvas the size of its element size.</td></tr>
 				<tr onclick="scrollToID('functions-sumValues', true)"><td><p>sumValues</p></td><td>Adds the values of an array and returns the total sum.</td></tr>
+				<tr onclick="scrollToID('functions-tofullnumber', true)"><td><p>toFullNumber</p></td><td>Converts an exponent number to a full number string.</td></tr>
+				<tr onclick="scrollToID('functions-translatetime', true)"><td><p>translateTime</p></td><td>Converts a time value (in milliseconds) to a human readable time string.</td></tr>
 				<tr onclick="scrollToID('functions-tonegative', true)"><td><p>toNegative</p></td><td>Takes any number and returns its corresponding negative value (e.g. 3 to -3, -3 to -3).</td></tr>
 				<tr onclick="scrollToID('functions-topositive', true)"><td><p>toPositive</p></td><td>Takes any number and returns its corresponding positive value (e.g. -3 to 3 or 3 to 3).</td></tr>
 				<tr onclick="scrollToID('functions-topropercase', true)"><td><p>toProperCase</p></td><td>Returns the same string converted to Proper Case.</td></tr>
 				<tr onclick="scrollToID('functions-toyesno', true)"><td><p>toYesNo</p></td><td>Returns a boolean as "Yes" or "No" instead of "true" or "false".</td></tr>
+				<tr onclick="scrollToID('functions-writecookie', true)"><td><p>writeCookie</p></td><td>Writes or overwrites a value to a cookie.</td></tr>
 			</table>
 			<br>
 			<br>
@@ -851,7 +880,62 @@
 					<br>
 					<h2>Default:</h2><div class="c"><p class="c1">cursor</p><p class="c2">.</p><p class="c7">elementOver</p></div>
 				</div>
+				<h2>See also:</h2>
+				<button onclick="scrollToID('variables-cursor', true)" class="see-also">cursor</button>
+				<br>
 				<h2>Example:</h2><div class="vc"><p class="c5">cursorInfo</p><p class="c2">(</p><p class="c4">'ex'</p><p class="c2">, </p><p class="c6">document</p><p class="c2">.</p><p class="c5">getElementById</p><p class="c2">(</p><p class="c4">'myDiv'</p><p class="c2">)</p><p class="c2">)</p><p class="c0"> //Returns: 23</p></div>
+				<button class="code-try" onclick="tryCode(event)">Try Snippet</button>
+			</div>
+			<div id="functions-readcookie" class="function-base">
+				<b class="bc">readCookie</b>
+				<img onclick="copyLink(event)" src="../static-0/files/images/copy-link.png" class="copy-link">
+				<br>
+				<p>Returns the value of the specified cookie.</p>
+				<br>
+				<h2>Syntax:</h2><div class="c"><p class="c5">readCookie</p><p class="c2">(</p><i class="c7">name</i><p class="c2">)</p></div>
+				<br>
+				<h2>Returns:</h2><div class="c"><p class="c0">cookie value type</p></div>
+				<br>
+				<h2>Parameters:</h2>
+				<div class="parameter-base">
+					<div class="c"><i class="c7">name</i></div><p> as </p><div class="c"><p class="c6">string</p></div><p> (required)</p>
+					<br>
+					<p class="parameter-description">The name of the cookie.</p>
+				</div>
+				<h2>See also:</h2>
+				<button onclick="scrollToID('functions-writecookie', true)" class="see-also">writeCookie</button>
+				<br>
+				<h2>Example:</h2><div class="c"><p class="c5">readCookie</p><p class="c2">(</p><p class="c4">"cookiename"</p><p class="c2">)</p><p class="c0"> //Returns: The value of the cookie</p></div>
+				<button class="code-try" onclick="tryCode(event)">Try Snippet</button>
+			</div>
+			<div id="functions-writecookie" class="function-base">
+				<b class="bc">writeCookie</b>
+				<img onclick="copyLink(event)" src="../static-0/files/images/copy-link.png" class="copy-link">
+				<br>
+				<p>Writes or overwrites a value to a cookie.</p>
+				<br>
+				<h2>Syntax:</h2><div class="c"><p class="c5">writeCookie</p><p class="c2">(</p><i class="c7">name</i><p class="c2">, </p><i class="c7">value</i><p class="c2">, </p><i class="c7">lifetime</i><p class="c2">)</p></div>
+				<br>
+				<h2>Parameters:</h2>
+				<div class="parameter-base">
+					<div class="c"><i class="c7">name</i></div><p> as </p><div class="c"><p class="c6">string</p></div><p> (required)</p>
+					<br>
+					<p class="parameter-description">The name of the cookie.</p>
+				</div>
+				<div class="parameter-base">
+					<div class="c"><i class="c7">value</i></div><p> as </p><div class="c"><p class="c6">string</p></div><p> (required)</p>
+					<br>
+					<p class="parameter-description">The value to write to the cookie.</p>
+				</div>
+				<div class="parameter-base">
+					<div class="c"><i class="c7">lifetime</i></div><p> as </p><div class="c"><p class="c6">number</p></div><p> (required)</p>
+					<br>
+					<p class="parameter-description">The number of days till the cookie expires.</p>
+				</div>
+				<h2>See also:</h2>
+				<button onclick="scrollToID('functions-readcookie', true)" class="see-also">readCookie</button>
+				<br>
+				<h2>Example:</h2><div class="c"><p class="c5">writeCookie</p><p class="c2">(</p><p class="c4">"cookiename"</p><p class="c1">, </p><p class="c4">"cookievalue"</p><p class="c1">, </p><p class="c8">1</p><p class="c2">)</p><p class="c0"> //Returns: Creates a cookie</p></div>
 				<button class="code-try" onclick="tryCode(event)">Try Snippet</button>
 			</div>
 			<h1 id="number-functions">Number Functions</h1>
@@ -880,6 +964,10 @@
 					<br>
 					<h2>Default:</h2><div class="c"><p class="c8">1</p></div>
 				</div>
+				<h2>See also:</h2>
+				<button onclick="scrollToID('functions-limitdown', true)" class="see-also">limitDown</button>
+				<button onclick="scrollToID('functions-limitup', true)" class="see-also">limitUp</button>
+				<br>
 				<h2>Example:</h2><div class="c"><p class="c2">(<p class="c8">123</p><p class="c2">)</p><p class="c2">.</p><p class="c5">limit</p><p class="c2">(</p><p class="c8">0</p><p class="c2">, </p><p class="c8">100</p><p class="c2">)</p><p class="c0"> //Returns: 100</p></div>
 				<button class="code-try" onclick="tryCode(event)">Try Snippet</button>
 			</div>
@@ -901,6 +989,10 @@
 					<br>
 					<h2>Default:</h2><div class="c"><p class="c8">0</p></div>
 				</div>
+				<h2>See also:</h2>
+				<button onclick="scrollToID('functions-limitup', true)" class="see-also">limitUp</button>
+				<button onclick="scrollToID('functions-limit', true)" class="see-also">limit</button>
+				<br>
 				<h2>Example:</h2><div class="c"><p class="c2">(<p class="c8">-32</p><p class="c2">)</p><p class="c2">.</p><p class="c5">limitDown</p><p class="c2">(</p><p class="c8">0</p><p class="c2">)</p><p class="c0"> //Returns: 0</p></div>
 				<button class="code-try" onclick="tryCode(event)">Try Snippet</button>
 			</div>
@@ -922,6 +1014,10 @@
 					<br>
 					<h2>Default:</h2><div class="c"><p class="c8">0</p></div>
 				</div>
+				<h2>See also:</h2>
+				<button onclick="scrollToID('functions-limitdown', true)" class="see-also">limitDown</button>
+				<button onclick="scrollToID('functions-limit', true)" class="see-also">limit</button>
+				<br>
 				<h2>Example:</h2><div class="c"><p class="c2">(<p class="c8">23</p><p class="c2">)</p><p class="c2">.</p><p class="c5">limitUp</p><p class="c2">(</p><p class="c8">10</p><p class="c2">)</p><p class="c0"> //Returns: 10</p></div>
 				<button class="code-try" onclick="tryCode(event)">Try Snippet</button>
 			</div>
@@ -984,6 +1080,81 @@
 				<h2>Example:</h2><div class="c"><p class="c2">(<p class="c8">3.1415926</p><p class="c2">)</p><p class="c2">.</p><p class="c5">round</p><p class="c2">(</p><p class="c8">3</p><p class="c2">)</p><p class="c0"> //Returns: 3.141</p></div>
 				<button class="code-try" onclick="tryCode(event)">Try Snippet</button>
 			</div>
+			<div id="functions-tofullnumber" class="function-base">
+				<b class="bc">toFullNumber</b>
+				<img onclick="copyLink(event)" src="../static-0/files/images/copy-link.png" class="copy-link">
+				<br>
+				<p>Converts an exponent number to a full number string (e.g. 1e6 to 1000000).</p>
+				<br>
+				<h2>Syntax:</h2><div class="c"><i class="c0">myNumber</i><p class="c2">.</p><p class="c5">toFullNumber</p><p class="c2">()</p></div>
+				<br>
+				<h2>Returns:</h2><div class="c"><p class="c6">string</p></div>
+				<br>
+				<h2>Example:</h2><div class="c"><p class="c2">(<p class="c8">123e-8</p><p class="c2">)</p><p class="c2">.</p><p class="c5">toFullNumber</p><p class="c2">()</p><p class="c0"> //Returns: 0.00000123</p></div>
+				<button class="code-try" onclick="tryCode(event)">Try Snippet</button>
+			</div>
+			<div id="functions-translatetime" class="function-base">
+				<b class="bc">translateTime</b><i class="bi">TIME/DATE</i>
+				<img onclick="copyLink(event)" src="../static-0/files/images/copy-link.png" class="copy-link">
+				<br>
+				<p>Converts a time value (in milliseconds) to a human readable time string.</p>
+				<br>
+				<h2>Syntax:</h2><div class="c"><i class="c0">myTime</i><p class="c2">.</p><p class="c5">translateTime</p><p class="c2">(</p><i class="c7">format</i><p class="c2">)</p></div>
+				<br>
+				<h2>Returns:</h2><div class="c"><p class="c6">string</p></div>
+				<br>
+				<h2>Parameters:</h2>
+				<div class="parameter-base">
+					<div class="c"><i class="c7">format</i></div><p> as </p><div class="c"><p class="c6">string</p></div><p> (optional)</p>
+					<br>
+					<div class="parameter-description"><p>The time string format to return.</p></div>
+					<br>
+					<h2>Key Syntax:</h2><div class="c"><p class="c2">%</p><p class="c4">unit</p><p class="c8">length</p><p class="c2">%</p></div>
+					<br>
+					<div class="parameter-description"><i>Note: The length value sets a minimum length the value must be. 0's will be appended onto the beginning of the unit's time string until the minimum length is met (e.g. if the unit's time string is "1" and the minimum length is 3, the unit's time string will be converted to "001").</i></div>
+					<br>
+					<h2>Valid Keys:</h2>
+					<div class="value-base">
+						<div class="vc"><p class="c2">%</p><p class="c4">yr</p><p class="c2">%</p></div>
+						<br>
+						<p>The year value of the time.</p>
+					</div>
+					<div class="value-base">
+						<div class="vc"><p class="c2">%</p><p class="c4">mo</p><p class="c2">%</p></div>
+						<br>
+						<p>The month value of the time (based on 12 full months in a 365 day year, or about 30.4 days).</p>
+					</div>
+					<div class="value-base">
+						<div class="vc"><p class="c2">%</p><p class="c4">dy</p><p class="c2">%</p></div>
+						<br>
+						<p>The day value of the time.</p>
+					</div>
+					<div class="value-base">
+						<div class="vc"><p class="c2">%</p><p class="c4">hr</p><p class="c2">%</p></div>
+						<br>
+						<p>The hour value of the time.</p>
+					</div>
+					<div class="value-base">
+						<div class="vc"><p class="c2">%</p><p class="c4">min</p><p class="c2">%</p></div>
+						<br>
+						<p>The minute value of the time.</p>
+					</div>
+					<div class="value-base">
+						<div class="vc"><p class="c2">%</p><p class="c4">sec</p><p class="c2">%</p></div>
+						<br>
+						<p>The second value of the time (can use </p><div class="c"><p class="c4">%sec%.%ms3%</p></div><p> to get seconds with 3 decimal places).</p>
+					</div>
+					<div class="value-base">
+						<div class="vc"><p class="c2">%</p><p class="c4">ms</p><p class="c2">%</p></div>
+						<br>
+						<p>The millisecond value of the time.</p>
+					</div>
+					<br>
+					<h2>Default:</h2><div class="c"><p class="c4">"%yr2%-%mo2%-%dy2% %hr2%:%min2%:%sec2%.%ms3%"</p></div>
+				</div>
+				<h2>Example:</h2><div class="c"><p class="c2">(</p><p class="c8">65123</p><p class="c2">).</p><p class="c5">translateTime</p><p class="c2">(</p><p class="c4">"%min%:%sec2%.%ms3%"</p><p>)</p><p class="c0"> //Returns: 1:05.123</p></div>
+				<button class="code-try" onclick="tryCode(event)">Try Snippet</button>
+			</div>
 			<div id="functions-tonegative" class="function-base">
 				<b class="bc">toNegative</b>
 				<img onclick="copyLink(event)" src="../static-0/files/images/copy-link.png" class="copy-link">
@@ -993,6 +1164,9 @@
 				<h2>Syntax:</h2><div class="c"><i class="c0">myNumber</i><p class="c2">.</p><p class="c5">toNegative</p><p class="c2">()</p></div>
 				<br>
 				<h2>Returns:</h2><div class="c"><p class="c6">number</p></div>
+				<br>
+				<h2>See also:</h2>
+				<button onclick="scrollToID('functions-topositive', true)" class="see-also">toPositive</button>
 				<br>
 				<h2>Example:</h2><div class="c"><p class="c2">(</p><p class="c8">3.141</p><p class="c2">).</p><p class="c5">toNegative</p><p class="c2">()</p><p class="c0"> //Returns: -3.141</p></div>
 				<button class="code-try" onclick="tryCode(event)">Try Snippet</button>
@@ -1007,6 +1181,9 @@
 				<br>
 				<h2>Returns:</h2><div class="c"><p class="c6">number</p></div>
 				<br>
+				<h2>See also:</h2>
+				<button onclick="scrollToID('functions-tonegative', true)" class="see-also">toNegative</button>
+				<br>
 				<h2>Example:</h2><div class="c"><p class="c2">(</p><p class="c8">-255</p><p class="c2">).</p><p class="c5">toPositive</p><p class="c2">()</p><p class="c0"> //Returns: 255</p></div>
 				<button class="code-try" onclick="tryCode(event)">Try Snippet</button>
 			</div>
@@ -1017,9 +1194,9 @@
 				<br>
 				<p>Clears/removes the entire canvas drawing and path data.</p>
 				<br>
-				<h2>Syntax:</h2><div class="c"><i class="c0">myCanvasContext2D</i><p class="c2">.</p><p class="c5">clearCanvas</p><p class="c2">()</p></div>
+				<h2>Syntax:</h2><div class="c"><p class="c5">clearCanvas</p><p class="c2">(</p><p class="c7">canvasContext2D</p><p class="c2">)</p></div>
 				<br>
-				<h2>Example:</h2><div class="c"><p class="c1">ctx</p><p class="c2">.</p><p class="c5">clearCanvas</p><p class="c2">()</p><p class="c0"> //Clears the canvas.</p></div>
+				<h2>Example:</h2><div class="c"><p class="c5">clearCanvas</p><p class="c2">(</p><p class="c7">ctx</p><p class="c2">)</p><p class="c0"> //Clears the canvas.</p></div>
 				<button class="code-try" onclick="tryCode(event)">Try Snippet</button>
 			</div>
 			<div id="functions-drawRect" class="function-base">
@@ -1028,9 +1205,14 @@
 				<br>
 				<p>Creates a rectangle in a canvas (with optional border radius). Note that you must use the usual </p><div class="c"><p class="c5">fill</p></div><p> or </p><div class="c"><p class="c5">stroke</p></div><p> functions to make the rectangle visible.</p>
 				<br>
-				<h2>Syntax:</h2><div class="c"><i class="c0">myCanvasContext2D</i><p class="c2">.</p><p class="c5">drawRect</p><p class="c2">(</p><i class="c7">x</i><p class="c2">, </p><i class="c7">y</i><p class="c2">, </p><i class="c7">width</i><p class="c2">, </p><i class="c7">height</i><p class="c2">, </p><i class="c7">borderRadius</i><p class="c2">)</p></div>
+				<h2>Syntax:</h2><div class="c"><p class="c5">drawRect</p><p class="c2">(</p><i class="c7">canvasContext2D</i><p class="c2">, </p><i class="c7">x</i><p class="c2">, </p><i class="c7">y</i><p class="c2">, </p><i class="c7">width</i><p class="c2">, </p><i class="c7">height</i><p class="c2">, </p><i class="c7">borderRadius</i><p class="c2">)</p></div>
 				<br>
 				<h2>Parameters:</h2>
+				<div class="parameter-base">
+					<div class="c"><i class="c7">canvasContext2D</i></div><p> as </p><div class="c"><p class="c6">object</p></div><p> (required, canvas context 2d)</p>
+					<br>
+					<p class="parameter-description">The 2d context of the canvas.</p>
+				</div>
 				<div class="parameter-base">
 					<div class="c"><i class="c7">x</i></div><p> as </p><div class="c"><p class="c6">number</p></div><p> (required)</p>
 					<br>
@@ -1058,7 +1240,7 @@
 					<br>
 					<h2>Default:</h2><div class="c"><p class="c8">0</p></div>
 				</div>
-				<h2>Example:</h2><div class="c"><p class="c1">ctx</p><p class="c2">.</p><p class="c5">drawRect</p><p class="c2">(</p><p class="c8">10</p><p class="c2">, </p><p class="c8">10</p><p class="c2">, </p><p class="c8">150</p><p class="c2">, </p><p class="c8">100</p><p class="c2">, </p><p class="c8">5</p><p class="c2">)</p><p class="c0"> //Creates a rectangle with an X of 10px, a Y of 10px, a width of 150px, a height of 100px, and a border radius of 5px.</p></div>
+				<h2>Example:</h2><div class="c"><p class="c5">drawRect</p><p class="c2">(</p><p class="c1">ctx</p><p class="c2">, </p><p class="c8">10</p><p class="c2">, </p><p class="c8">10</p><p class="c2">, </p><p class="c8">150</p><p class="c2">, </p><p class="c8">100</p><p class="c2">, </p><p class="c8">5</p><p class="c2">)</p><p class="c0"> //Creates a rectangle with an X of 10px, a Y of 10px, a width of 150px, a height of 100px, and a border radius of 5px.</p></div>
 				<button class="code-try" onclick="tryCode(event)">Try Snippet</button>
 			</div>
 			<div id="functions-pointOnCircle" class="function-base">
@@ -1073,7 +1255,7 @@
 				<div class="parameter-base">
 					<div class="c"><i class="c7">radius</i></div><p> as </p><div class="c"><p class="c6">number</p></div><p> or </p><div class="c"><p class="c6">string</p></div><p> (required)</p>
 					<br>
-					<p class="parameter-description">The radius of the circle (as a </p><div class="c"><p class="c6">number</p></div><p>) or the width and height of the circle (as a </p><div class="c"><p class="c6">string</p></div><p>, e.g. </p><div class="c"><p class="c4">"100x100"</p></div><p>).</p>
+					<p class="parameter-description">The radius of the circle (as a</p> <div class="c"><p class="c6">number</p></div><p>) or the width and height of the circle (as a </p><div class="c"><p class="c6">string</p></div><p>, e.g. </p><div class="c"><p class="c4">"100x100"</p></div><p>).</p>
 				</div>
 				<div class="parameter-base">
 					<div class="c"><i class="c7">angle</i></div><p> as </p><div class="c"><p class="c6">number</p></div><p> (required)</p>
@@ -1098,6 +1280,48 @@
 				<h2>Example:</h2><div class="c"><p class="c5">pointOnCircle</p><p class="c2">(</p><p class="c8">50</p><p class="c2">, </p><p class="c8">-45</p><p class="c2">)</p><p class="c2">.</p><p class="c7">x</p><p class="c0"> //Returns the X position of a point along a -45° angle on the circle.</p></div>
 				<button class="code-try" onclick="tryCode(event)">Try Snippet</button>
 			</div>
+			<div id="functions-pointsOnCircle" class="function-base">
+				<b class="bc">pointsOnCircle</b>
+				<img onclick="copyLink(event)" src="../static-0/files/images/copy-link.png" class="copy-link">
+				<br>
+				<p>Returns an object array with the X and Y position of points equally spaced along a circle.</p>
+				<br>
+				<h2>Syntax:</h2><div class="c"><p class="c5">pointsOnCircle</p><p class="c2">(</p><i class="c7">count</i><p class="c2">, </p><i class="c7">radius</i><p class="c2">, </p><i class="c7">angle</i><p class="c2">, </p><i class="c7">x</i><p class="c2">, </p><i class="c7">y</i><p class="c2">)</p></div>
+				<br>
+				<h2>Parameters:</h2>
+				<div class="parameter-base">
+					<div class="c"><i class="c7">count</i></div><p> as </p><div class="c"><p class="c6">number</p></div><p> (required)</p>
+					<br>
+					<p class="parameter-description">The number of points along the circle (max: 1,000,000).</p>
+				</div>
+				<div class="parameter-base">
+					<div class="c"><i class="c7">radius</i></div><p> as </p><div class="c"><p class="c6">number</p></div><p> or </p><div class="c"><p class="c6">string</p></div><p> (required)</p>
+					<br>
+					<p class="parameter-description">The radius of the circle (as a</p> <div class="c"><p class="c6">number</p></div><p>) or the width and height of the circle (as a </p><div class="c"><p class="c6">string</p></div><p>, e.g. </p><div class="c"><p class="c4">"100x100"</p></div><p>).</p>
+				</div>
+				<div class="parameter-base">
+					<div class="c"><i class="c7">angle</i></div><p> as </p><div class="c"><p class="c6">number</p></div><p> (required)</p>
+					<br>
+					<p class="parameter-description">The angle (degrees) with which to offset the points.</p>
+					<img src="./docs/images/pointOnCircle-1.svg" class="parameter-image">
+				</div>
+				<div class="parameter-base">
+					<div class="c"><i class="c7">x</i></div><p> as </p><div class="c"><p class="c6">number</p></div><p> (optional)</p>
+					<br>
+					<p class="parameter-description">The X position of the center of the circle.</p>
+					<br>
+					<h2>Default:</h2><div class="c"><p class="c8">0</p></div>
+				</div>
+				<div class="parameter-base">
+					<div class="c"><i class="c7">y</i></div><p> as </p><div class="c"><p class="c6">number</p></div><p> (optional)</p>
+					<br>
+					<p class="parameter-description">The Y position of the center of the circle.</p>
+					<br>
+					<h2>Default:</h2><div class="c"><p class="c8">0</p></div>
+				</div>
+				<h2>Example:</h2><div class="c"><p class="c5">pointsOnCircle</p><p class="c2">(</p><p class="c8">12</p><p class="c2">, </p><p class="c8">50</p><p class="c2">, </p><p class="c8">15</p><p class="c2">)</p><p class="c0"> //Returns an object array with 12 points along the circle offset by 15 degrees.</p></div>
+				<button class="code-try" onclick="tryCode(event)">Try Snippet</button>
+			</div>
 			<div id="functions-sizeCanvas" class="function-base">
 				<b class="bc">sizeCanvas</b><i class="bi">CANVAS</i>
 				<img onclick="copyLink(event)" src="../static-0/files/images/copy-link.png" class="copy-link">
@@ -1105,9 +1329,14 @@
 				<p>Makes the drawing area of a canvas the size of its </p><div class="c"><p class="c1">canvas</p></div><p> element (i.e. eliminates stretching on the canvas).</p><br>
 				<i>Note: This function must be run before anything is drawn on the canvas.</i>
 				<br>
-				<h2>Syntax:</h2><div class="c"><i class="c0">myCanvas</i><p class="c2">.</p><p class="c5">sizeCanvas</p><p class="c2">(</p><i class="c7">widthBias</i><p class="c2">, </p><i class="c7">heightBias</i><p class="c2">)</p></div>
+				<h2>Syntax:</h2><div class="c"><p class="c5">sizeCanvas</p><p class="c2">(</p><i class="c7">canvas</i><p class="c2">, </p><i class="c7">widthBias</i><p class="c2">, </p><i class="c7">heightBias</i><p class="c2">)</p></div>
 				<br>
 				<h2>Parameters:</h2>
+				<div class="parameter-base">
+					<div class="c"><i class="c7">canvas</i></div><p> as </p><div class="c"><p class="c6">object</p></div><p> (required, canvas DOM element)</p>
+					<br>
+					<p class="parameter-description">The canvas to size.</p>
+				</div>
 				<div class="parameter-base">
 					<div class="c"><i class="c7">widthBias</i></div><p> as </p><div class="c"><p class="c6">number</p></div><p> (optional)</p>
 					<br>
@@ -1122,10 +1351,22 @@
 					<br>
 					<h2>Default:</h2><div class="c"><p class="c8">0</p></div>
 				</div>
-				<h2>Example:</h2><div class="c"><p class="c1">canvas</p><p class="c2">.</p><p class="c5">sizeCanvas</p><p class="c2">()</p><p class="c0"> //Makes the canvas painting size the size of the canvas element.</p></div>
+				<h2>Example:</h2><div class="c"><p class="c5">sizeCanvas</p><p class="c2">(</p><p class="c1">canvas</p><p class="c2">)</p><p class="c0"> //Makes the canvas painting size the size of the canvas element.</p></div>
 				<button class="code-try" onclick="tryCode(event)">Try Snippet</button>
 			</div>
 			<h1 id="string-functions">String Functions</h1>
+			<div id="functions-isnumber" class="function-base">
+				<b class="bc">isNumber</b>
+				<img onclick="copyLink(event)" src="../static-0/files/images/copy-link.png" class="copy-link">
+				<br>
+				<p>Checks a string to see if it is a number or not.</p>
+				<br>
+				<h2>Syntax:</h2><div class="c"><i class="c0">myString</i><p class="c2">.</p><p class="c5">isNumber</p><p class="c2">()</p></div>
+				<br>
+				<h2>Returns:</h2><div class="c"><p class="c6">boolean</p></div>
+				<h2>Example:</h2><div class="c"><p class="c4">"-1.234"</p><p class="c2">.</p><p class="c5">isNumber</p><p class="c2">()</p><p class="c0"> //Returns: true</p></div>
+				<button class="code-try" onclick="tryCode(event)">Try Snippet</button>
+			</div>
 			<div id="functions-removeafter" class="function-base">
 				<b class="bc">removeAfter</b>
 				<img onclick="copyLink(event)" src="../static-0/files/images/copy-link.png" class="copy-link">
@@ -1163,6 +1404,9 @@
 					<br>
 					<h2>Default:</h2><div class="c"><p class="c6">false</p></div>
 				</div>
+				<h2>See also:</h2>
+				<button onclick="scrollToID('functions-removebefore', true)" class="see-also">removeBefore</button>
+				<br>
 				<h2>Example:</h2><div class="c"><p class="c4">"Example #123#0"</p><p class="c2">.</p><p class="c5">removeAfter</p><p class="c2">(</p><p class="c4">"#"</p><p class="c2">, </p><p class="c8">-1</p><p class="c2">, </p><p class="c6">true</p><p class="c2">)</p><p class="c0"> //Returns: "Example #123"</p></div>
 				<button class="code-try" onclick="tryCode(event)">Try Snippet</button>
 			</div>
@@ -1203,6 +1447,9 @@
 					<br>
 					<h2>Default:</h2><div class="c"><p class="c6">false</p></div>
 				</div>
+				<h2>See also:</h2>
+				<button onclick="scrollToID('functions-removeafter', true)" class="see-also">removeAfter</button>
+				<br>
 				<h2>Example:</h2><div class="c"><p class="c4">"#123 Example"</p><p class="c2">.</p><p class="c5">removeBefore</p><p class="c2">(</p><p class="c4">" "</p><p class="c2">, </p><p class="c8">1</p><p class="c2">)</p><p class="c0"> //Returns: "Example"</p></div>
 				<button class="code-try" onclick="tryCode(event)">Try Snippet</button>
 			</div>
@@ -1245,7 +1492,7 @@
 				<button class="code-try" onclick="tryCode(event)">Try Snippet</button>
 			</div>
 			<h1 id="active-variables">Active Variables</h1>
-			<div id="variables-btjsauthor" class="function-base">
+			<div id="variables-cursor" class="function-base">
 				<b class="bcv">cursor</b>
 				<img onclick="copyLink(event)" src="../static-0/files/images/copy-link.png" class="copy-link">
 				<br>
@@ -1324,6 +1571,9 @@
 					<br>
 					<p class="parameter-description">The last time information was gathered about the cursor (the last update/frame step).</p>
 				</div>
+				<h2>See also:</h2>
+				<button onclick="scrollToID('functions-cursorinfo', true)" class="see-also">cursorInfo</button>
+				<br>
 				<h2>Example:</h2><div class="c"><p class="c1">cursor</p><p class="c2">.</p><p class="c7">x</p><p class="c0"> //Returns: 123</p></div>
 				<button class="code-try" onclick="tryCode(event)">Try Snippet</button>
 			</div>
@@ -1348,6 +1598,34 @@
 				<h2>Type:</h2><div class="c"><p class="c6">string</p></div>
 				<br>
 				<h2>Example:</h2><div class="c"><p class="c1">btjsLastUpdated</p><p class="c0"> //Returns: "January 1, 2030"</p></div>
+				<button class="code-try" onclick="tryCode(event)">Try Snippet</button>
+			</div>
+			<div id="variables-btjslicense" class="function-base">
+				<b class="bcv">btjsLicense</b>
+				<img onclick="copyLink(event)" src="../static-0/files/images/copy-link.png" class="copy-link">
+				<br>
+				<p>The license this version of BT-JS is provided under.</p>
+				<br>
+				<h2>Type:</h2><div class="c"><p class="c6">string</p></div>
+				<br>
+				<h2>See also:</h2>
+				<button onclick="scrollToID('variables-btjslicenselink', true)" class="see-also">btjsLicenseLink</button>
+				<br>
+				<h2>Example:</h2><div class="c"><p class="c1">btjsLicense</p><p class="c0"> //Returns: "BT-LU"</p></div>
+				<button class="code-try" onclick="tryCode(event)">Try Snippet</button>
+			</div>
+			<div id="variables-btjslicenselink" class="function-base">
+				<b class="bcv">btjsLicenseLink</b>
+				<img onclick="copyLink(event)" src="../static-0/files/images/copy-link.png" class="copy-link">
+				<br>
+				<p>The link to the license this version of BT-JS is provided under.</p>
+				<br>
+				<h2>Type:</h2><div class="c"><p class="c6">string</p></div>
+				<br>
+				<h2>See also:</h2>
+				<button onclick="scrollToID('variables-btjslicense', true)" class="see-also">btjsLicense</button>
+				<br>
+				<h2>Example:</h2><div class="c"><p class="c1">btjsLicenseLink</p><p class="c0"> //Returns: "https://blendertimer.com/license/bt-lu"</p></div>
 				<button class="code-try" onclick="tryCode(event)">Try Snippet</button>
 			</div>
 			<div id="variables-btjsversion" class="function-base">
@@ -1481,7 +1759,7 @@
 					document.getElementById('code-tester-result').textContent = code;
 				}
 				else {
-					if (document.getElementById('code-tester-text').value.startsWith("ctx.") || document.getElementById('code-tester-text').value.startsWith("canvas.")) {
+					if (document.getElementById('code-tester-text').value.startsWith("ctx.") || document.getElementById('code-tester-text').value.startsWith("canvas.") || document.getElementById('code-tester-text').value.indexOf("(canvas") > -1 || document.getElementById('code-tester-text').value.indexOf("(ctx") > -1) {
 						document.getElementById('code-tester-result').style.display = "none";
 						document.getElementById('code-tester-result-base').style.maxHeight = "200px";
 						document.getElementById('code-tester-result-canvas').style.display = "block";
@@ -1500,6 +1778,27 @@
 						}
 						catch {
 							code = "[ERROR]";
+						}
+					}
+					else if (document.getElementById('code-tester-text').value.startsWith("pointsOnCircle(")) {
+						document.getElementById('code-tester-result-canvas').style.display = "none";
+						document.getElementById('code-tester-result-base').style.maxHeight = "100px";
+						document.getElementById('code-tester-result').style.display = "block";
+						document.getElementById('code-tester-result').style.color = null;
+						if (document.getElementById('code-tester-text').value.length <= 100) {
+							try {
+								code = eval("JSON.stringify(" + document.getElementById('code-tester-text').value + ")").toString();
+							}
+							catch {
+								code = "[ERROR]";
+								document.getElementById('code-tester-result').style.color = "#F32";
+							}
+							if (code.length > 1000) {
+								document.getElementById('code-tester-result').textContent = code.substring(0, 1000) + "...";
+							}
+							else {
+								document.getElementById('code-tester-result').textContent = code;
+							}
 						}
 					}
 					else {
