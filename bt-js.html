@@ -50,7 +50,9 @@
 		<div id="content-main" style="opacity: 0; transition: 1s ease">
 			<div id="primary-block">
 				<h3>BT-JS</h3>
-				<p>BT-JS (BlenderTimer Javascript) is a free javascript library which includes many pre-built functions to make certain web programming areas easier, quicker, and just more time efficient! With BT-JS you can quickly get a random item from a list, get the cursor position relative to an element, convert text to proper case, convert a boolean to "yes" or "no", and much more!</p>
+				<p>BT-JS (BlenderTimer Javascript) is a free javascript library which includes many pre-built functions to make certain web programming areas easier, quicker, and just more time efficient! With BT-JS you can quickly get a random item from a list, get the cursor position relative to an element, translate time to a human readable time string, create cookies, and much more!</p>
+				<br>
+				<a href="./bt-js/docs#all-functions">View a full of list functions here!</a>
 				<div id="primary-links">
 					<a id="btjs-download" href="./bt-js/bt-js.js" download>Download BT-JS</a>
 					<a id="btjs-docs" href="./bt-js/docs">View Documentation</a>
@@ -65,30 +67,50 @@
 						<th style="width: 25%">Area</th>
 						<th style="width: 50%">Notes</th>
 					</tr>
-					<tr onclick="link('./bt-js/docs#functions-pointOnCircle')">
+					<tr onclick="link('./bt-js/docs#function-pointsoncircle')">
 						<td><b>New Object Function</b></td>
-						<td><p>pointOnCircle</p></td>
-						<td>Returns an object with the X and Y position of a specific angle on a circle.</td>
+						<td><p>pointsOnCircle</p></td>
+						<td>Returns an object array with the specified number of points and their x-y positions.</td>
 					</tr>
-					<tr onclick="link('./bt-js/docs#functions-clearCanvas')">
-						<td><b>New Object Function</b></td>
-						<td><p>clearCanvas</p></td>
-						<td>Clears the entire canvas drawing and path data.</td>
+					<tr onclick="link('./bt-js/docs#object-functions')">
+						<td><b>Repaired 3 Object Functions</b></td>
+						<td><p>clearCanvas, drawRect, sizeCanvas</p></td>
+						<td>Changed all Object.prototype functions to standard functions (the prototype functions prevented GTM/GA4 from working).</td>
 					</tr>
-					<tr onclick="link('./bt-js/docs#functions-sizeCanvas')">
-						<td><b>New Object Function</b></td>
-						<td><p>sizeCanvas</p></td>
-						<td>Makes the drawing area of a canvas the size of its element size.</td>
+					<tr onclick="link('./bt-js/docs#functions-tofullnumber')">
+						<td><b>New Number Function</b></td>
+						<td><p>toFullNumber</p></td>
+						<td>Converts an exponent number to a full number string.</td>
 					</tr>
-					<tr onclick="link('./bt-js/docs#functions-sumValues')">
-						<td><b>New Array Function</b></td>
-						<td><p>sumValues</p></td>
-						<td>Adds the values of an array and returns the total sum.</td>
+					<tr onclick="link('./bt-js/docs#variables-btjslicenselink')">
+						<td><b>New Passive Variable</b></td>
+						<td><p>btjsLicenseLink</p></td>
+						<td>The link to the license this version of BT-JS is provided under.</td>
 					</tr>
-					<tr onclick="link('./bt-js/docs#functions-drawRect')">
-						<td><b>New Object Function</b></td>
-						<td><p>drawRect</p></td>
-						<td>Creates a rectangle in a canvas (with optional border radius).</td>
+					<tr onclick="link('./bt-js/docs#variables-btjslicense')">
+						<td><b>New Passive Variable</b></td>
+						<td><p>btjsLicense</p></td>
+						<td>The license this version of BT-JS is provided under.</td>
+					</tr>
+					<tr onclick="link('./bt-js/docs#functions-writecookie')">
+						<td><b>New Misc Function</b></td>
+						<td><p>writeCookie</p></td>
+						<td>Writes or overwrites a value to a cookie.</td>
+					</tr>
+					<tr onclick="link('./bt-js/docs#functions-readcookie')">
+						<td><b>New Misc Function</b></td>
+						<td><p>readCookie</p></td>
+						<td>Returns the value of the specified cookie.</td>
+					</tr>
+					<tr onclick="link('./bt-js/docs#functions-isnumber')">
+						<td><b>New String Function</b></td>
+						<td><p>isNumber</p></td>
+						<td>Checks a string to see if it is a number or not.</td>
+					</tr>
+					<tr onclick="link('./bt-js/docs#functions-translateTime')">
+						<td><b>New Number Function</b></td>
+						<td><p>translateTime</p></td>
+						<td>Converts a time value (in milliseconds) to a human readable time string.</td>
 					</tr>
 				</table>
 			</div>
