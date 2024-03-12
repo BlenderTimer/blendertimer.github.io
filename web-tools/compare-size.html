@@ -950,7 +950,7 @@
 				background: #101010;
 				display: block;
 				border-radius: 5px;
-				height: 70vh;
+				height: 80vh;
 				box-shadow: 0px 0px 20px rgba(255,255,255,0.05);
 				padding: 0px;
 				overflow: hidden;
@@ -1699,6 +1699,7 @@
 					<p>{[Object compared to] vs Falcon 9, Nine, Space x, Spacex, -(images created by these artists: Daniel Roberts (BlenderTimer))}</p>
 					<p>{[Object compared to] vs Falcon 9 (unfolded), Nine, Space x, Spacex, -(images created by these artists: Daniel Roberts (BlenderTimer))}</p>
 					<p>{[Object compared to] vs Foot (measurement), Imperial, -(images created by these artists: Daniel Roberts (BlenderTimer), Daniel Roberts (BlenderTimer))}</p>
+					<p>{[Object compared to] vs Ganymede (Jupiter's Moon), Ball, Largest, Natural satellite, Solar system, Sphere, Terrain, -(images created by these artists: Daniel Roberts (BlenderTimer), Daniel Roberts (BlenderTimer), Daniel Roberts (BlenderTimer))}</p>
 					<p>{[Object compared to] vs German Shepherd, Adult, Dog, Domestic, -(images created by these artists: Daniel Roberts (BlenderTimer), Daniel Roberts (BlenderTimer))}</p>
 					<p>{[Object compared to] vs Giraffe, Adult, Giraffa camelopardalis, Tall, -(images created by these artists: Daniel Roberts (BlenderTimer))}</p>
 					<p>{[Object compared to] vs Goldfish, Carassius auratus, -(images created by these artists: Daniel Roberts (BlenderTimer))}</p>
@@ -1734,7 +1735,7 @@
 					<p>{[Object compared to] vs Lenovo ThinkPad T14s Gen 2 14" (open), Amd, Intel, -(images created by these artists: Daniel Roberts (BlenderTimer), Daniel Roberts (BlenderTimer))}</p>
 					<p>{[Object compared to] vs Light-year (measurement), Space, -(images created by these artists: Daniel Roberts (BlenderTimer), Daniel Roberts (BlenderTimer))}</p>
 					<p>{[Object compared to] vs Lightbulb, Florescent, Led, -(images created by these artists: Daniel Roberts (BlenderTimer))}</p>
-					<p>{[Object compared to] vs Lion (Male), Male, -(images created by these artists: Daniel Roberts (BlenderTimer))}</p>
+					<p>{[Object compared to] vs Lion (Male), African, -(images created by these artists: Daniel Roberts (BlenderTimer))}</p>
 					<p>{[Object compared to] vs Lithium Atom, Element, Metal, Neutron, Nucleus, Proton, -(images created by these artists: malachi singh)}</p>
 					<p>{[Object compared to] vs Makemake, Ball, Small, Solar system, Sphere, -(images created by these artists: Daniel Roberts (BlenderTimer), Daniel Roberts (BlenderTimer), Daniel Roberts (BlenderTimer))}</p>
 					<p>{[Object compared to] vs Maple Leaf (Generic), Leaves, -(images created by these artists: Daniel Roberts (BlenderTimer))}</p>
@@ -1804,6 +1805,7 @@
 					<p>{[Object compared to] vs The Sun, Ball, Dwarf, Fire, G type, G-type, G2-v, G2v, Gtype, Heat, Hot, Sol, Solar, Solar system, Sphere, Yellow, -(images created by these artists: Daniel Roberts (BlenderTimer), Daniel Roberts (BlenderTimer), Daniel Roberts (BlenderTimer))}</p>
 					<p>{[Object compared to] vs Thou (measurement), Imperial, Mil, Thousandth, -(images created by these artists: Daniel Roberts (BlenderTimer), Daniel Roberts (BlenderTimer))}</p>
 					<p>{[Object compared to] vs Three Gorges Dam, China, Yangtze river, -(images created by these artists: Daniel Roberts (BlenderTimer))}</p>
+					<p>{[Object compared to] vs Titan (Saturn's Moon), Ball, Natural satellite, Second largest, Solar system, Sphere, Terrain, -(images created by these artists: Daniel Roberts (BlenderTimer), Daniel Roberts (BlenderTimer), Daniel Roberts (BlenderTimer))}</p>
 					<p>{[Object compared to] vs Titanic (RMS), Boat, Royal mail ship, -(images created by these artists: Daniel Roberts (BlenderTimer))}</p>
 					<p>{[Object compared to] vs Tomato, Berry, Vegetable, -(images created by these artists: Daniel Roberts (BlenderTimer))}</p>
 					<p>{[Object compared to] vs Toyota Corolla (2022), Sedan, Wheel, -(images created by these artists: Daniel Roberts (BlenderTimer), Daniel Roberts (BlenderTimer), Daniel Roberts (BlenderTimer))}</p>
@@ -1827,7 +1829,7 @@
 				</div>
 			</div>
 		</div>
-		<p id="version">Tool version: 0.4.6 (2024-03-09)</p>
+		<p id="version">Tool version: 0.4.7 (2024-03-11)</p>
 		<script src="./cs-object-info.js"></script>
 		<script type="text/javascript">
 			var title = document.getElementById('title');
@@ -4172,6 +4174,13 @@
 		  						if (searchArrayMatches < searchArray.length) {
 		  							if (searchRemoveOverride == false) {
 		  								objects[i].searchRelevance = 0;
+		  							}
+		  						}
+		  						if (objects[i].searchBoosts) {
+		  							for (var i2=0; i2 < objects[i].searchBoosts.length; i2++) {
+		  								if (searchBar.value.toLowerCase() == objects[i].searchBoosts[i2].query) {
+		  									objects[i].searchRelevance += objects[i].searchBoosts[i2].boost;
+		  								}
 		  							}
 		  						}
 		  					}

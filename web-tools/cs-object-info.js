@@ -93,6 +93,7 @@ var objects = [
 		width:0.0005021,
 		length:0.000295,
 		height:0.0017526,
+		searchBoosts:[{query:"h",boost:3},{query:"hu",boost:3},{query:"hum",boost:3},{query:"huma",boost:3},{query:"human",boost:3},{query:"male",boost:3},{query:"mal",boost:3},{query:"person",boost:3}],
 		category1:"nature",
 		category2:"animals",
 		category3:"humans",
@@ -593,6 +594,7 @@ var objects = [
 		width:0.0005221,
 		length:0.000390,
 		height:0.0016256,
+		searchBoosts:[{query:"human",boost:2},{query:"person",boost:2}],
 		category1:"nature",
 		category2:"animals",
 		category3:"humans",
@@ -4193,6 +4195,7 @@ var objects = [
 		width:0.000247655,
 		length:0.00021,
 		height:0.00048,
+		searchBoosts:[{query:"h",boost:1},{query:"hu",boost:1},{query:"hum",boost:1},{query:"huma",boost:1},{query:"human",boost:1},{query:"male",boost:1},{query:"mal",boost:1},{query:"person",boost:1}],
 		category1:"nature",
 		category2:"animals",
 		category3:"humans",
@@ -4621,7 +4624,7 @@ var objects = [
 		category1:"nature",
 		category2:"animals",
 		category3:"mammals",
-		tags:["male"], // don't include anything in categories or name
+		tags:["african"], // don't include anything in categories or name
 		dateAdded:"2024/03/09", // YYYY/MM/DD
 		lastModified:"2024/03/09", // YYYY/MM/DD
 	},
@@ -4674,6 +4677,56 @@ var objects = [
 		tags:["military", "submersible"], // don't include anything in categories or name
 		dateAdded:"2024/03/09", // YYYY/MM/DD
 		lastModified:"2024/03/09", // YYYY/MM/DD
+	},
+	{
+		name:"Ganymede (Jupiter's Moon)",
+		defaultAngle: 0,
+		sideImage:"Ganymede_Jupiters_Moon-side",
+		sideImageAlign:"none",
+		sideImageArtist: "Daniel Roberts (BlenderTimer)",
+		sideImageDate:"2024/03/11", // YYYY/MM/DD
+		frontImage:"Ganymede_Jupiters_Moon-front",
+		frontImageAlign:"none",
+		frontImageArtist: "Daniel Roberts (BlenderTimer)",
+		frontImageDate:"2024/03/11", // YYYY/MM/DD
+		topImage:"Ganymede_Jupiters_Moon-top",
+		topImageAlign:"none",
+		topImageArtist: "Daniel Roberts (BlenderTimer)",
+		topImageDate:"2024/03/11", // YYYY/MM/DD
+		width:5262,
+		length:5262,
+		height:5262,
+		category1:"space",
+		category2:"planets",
+		category3:"moons",
+		tags:["ball", "sphere", "terrain", "natural satellite", "solar system", "largest"], // don't include anything in categories or name
+		dateAdded:"2024/03/11", // YYYY/MM/DD
+		lastModified:"2024/03/11", // YYYY/MM/DD
+	},
+	{
+		name:"Titan (Saturn's Moon)",
+		defaultAngle: 0,
+		sideImage:"Titan_Saturns_Moon-side",
+		sideImageAlign:"none",
+		sideImageArtist: "Daniel Roberts (BlenderTimer)",
+		sideImageDate:"2024/03/11", // YYYY/MM/DD
+		frontImage:"Titan_Saturns_Moon-front",
+		frontImageAlign:"none",
+		frontImageArtist: "Daniel Roberts (BlenderTimer)",
+		frontImageDate:"2024/03/11", // YYYY/MM/DD
+		topImage:"Titan_Saturns_Moon-top",
+		topImageAlign:"none",
+		topImageArtist: "Daniel Roberts (BlenderTimer)",
+		topImageDate:"2024/03/11", // YYYY/MM/DD
+		width:5150,
+		length:5150,
+		height:5150,
+		category1:"space",
+		category2:"planets",
+		category3:"moons",
+		tags:["ball", "sphere", "terrain", "natural satellite", "solar system", "second largest"], // don't include anything in categories or name
+		dateAdded:"2024/03/11", // YYYY/MM/DD
+		lastModified:"2024/03/11", // YYYY/MM/DD
 	},
 ];
 
