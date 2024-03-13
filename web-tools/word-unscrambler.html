@@ -273,6 +273,9 @@
 		    }
 
 		    function unscramble() {
+		    	dataLayer.push({
+            		event: 'unscramble-run'
+        		});
 		    	while (result.firstChild) {
 		    		result.removeChild(result.lastChild);
 		    	}
