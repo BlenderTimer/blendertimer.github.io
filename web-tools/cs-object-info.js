@@ -4728,6 +4728,31 @@ var objects = [
 		dateAdded:"2024/03/11", // YYYY/MM/DD
 		lastModified:"2024/03/11", // YYYY/MM/DD
 	},
+	{
+		name:"Lightning",
+		defaultAngle: 1,
+		sideImage:"",
+		sideImageAlign:"bottom",
+		sideImageArtist: "",
+		sideImageDate:"", // YYYY/MM/DD
+		frontImage:"Lightning-front",
+		frontImageAlign:"bottom",
+		frontImageArtist: "Daniel Roberts (BlenderTimer)",
+		frontImageDate:"2024/03/12", // YYYY/MM/DD
+		topImage:"",
+		topImageAlign:"none",
+		topImageArtist: "",
+		topImageDate:"", // YYYY/MM/DD
+		width:5.015,
+		length:5.015,
+		height:6.43,
+		category1:"nature",
+		category2:"objects",
+		category3:"weather",
+		tags:["electricity"], // don't include anything in categories or name
+		dateAdded:"2024/03/12", // YYYY/MM/DD
+		lastModified:"2024/03/12", // YYYY/MM/DD
+	},
 ];
 
 //	———————— STEPS FOR UPDATING ————————
