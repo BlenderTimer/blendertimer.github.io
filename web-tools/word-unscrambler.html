@@ -389,11 +389,17 @@
 		    		try {germanDictionary} catch {test = false};
 		    		if (test == false) {
 		    			document.getElementById('li-title').innerHTML = "Loading dictionary...";
-		    			document.getElementById("li-title").contentWindow.location.reload(true);
 		    			$.getScript("./word-unscrambler/german-words.js", function() {
 							dictionary = germanDictionary;
 						});
-						document.getElementById('li-title').innerHTML = "Language:";
+						var int = setInterval(function() {
+							var dict = true;
+							try {germanDictionary} catch {test = false};
+							if (dict == true) {
+								document.getElementById('li-title').innerHTML = "Language:";
+								clearInterval(int);
+							}
+						}, 100);
 		    		}
 		    		else {
 		    			dictionary = germanDictionary;
@@ -407,7 +413,14 @@
 		    			$.getScript("./word-unscrambler/spanish-words.js", function() {
 							dictionary = spanishDictionary;
 						});
-						document.getElementById('li-title').innerHTML = "Language:";
+						var int = setInterval(function() {
+							var dict = true;
+							try {spanishDictionary} catch {test = false};
+							if (dict == true) {
+								document.getElementById('li-title').innerHTML = "Language:";
+								clearInterval(int);
+							}
+						}, 100);
 		    		}
 		    		else {
 		    			dictionary = spanishDictionary;
@@ -421,7 +434,14 @@
 		    			$.getScript("./word-unscrambler/french-words.js", function() {
 							dictionary = frenchDictionary;
 						});
-						document.getElementById('li-title').innerHTML = "Language:";
+						var int = setInterval(function() {
+							var dict = true;
+							try {frenchDictionary} catch {test = false};
+							if (dict == true) {
+								document.getElementById('li-title').innerHTML = "Language:";
+								clearInterval(int);
+							}
+						}, 100);
 		    		}
 		    		else {
 		    			dictionary = frenchDictionary;
