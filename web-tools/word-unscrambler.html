@@ -389,6 +389,7 @@
 		    		try {germanDictionary} catch {test = false};
 		    		if (test == false) {
 		    			document.getElementById('li-title').innerHTML = "Loading dictionary...";
+		    			document.getElementById("li-title").contentWindow.location.reload(true);
 		    			$.getScript("./word-unscrambler/german-words.js", function() {
 							dictionary = germanDictionary;
 						});
