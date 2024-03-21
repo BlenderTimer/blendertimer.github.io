@@ -4753,6 +4753,31 @@ var objects = [
 		dateAdded:"2024/03/12", // YYYY/MM/DD
 		lastModified:"2024/03/12", // YYYY/MM/DD
 	},
+	{
+		name:"SD Card",
+		defaultAngle: 2,
+		sideImage:"",
+		sideImageAlign:"bottom",
+		sideImageArtist: "",
+		sideImageDate:"", // YYYY/MM/DD
+		frontImage:"",
+		frontImageAlign:"bottom",
+		frontImageArtist: "",
+		frontImageDate:"", // YYYY/MM/DD
+		topImage:"SD_Card-top",
+		topImageAlign:"none",
+		topImageArtist: "Daniel Roberts (BlenderTimer)",
+		topImageDate:"2024/03/20", // YYYY/MM/DD
+		width:0.000032,
+		length:0.000024,
+		height:0.00000208,
+		category1:"technology",
+		category2:"modern",
+		category3:"storage",
+		tags:["sdxc", "sdhc"], // don't include anything in categories or name
+		dateAdded:"2024/03/20", // YYYY/MM/DD
+		lastModified:"2024/03/20", // YYYY/MM/DD
+	},
 ];
 
 //	———————— STEPS FOR UPDATING ————————
