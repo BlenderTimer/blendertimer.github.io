@@ -4754,29 +4754,54 @@ var objects = [
 		lastModified:"2024/03/12", // YYYY/MM/DD
 	},
 	{
-		name:"SD Card",
-		defaultAngle: 2,
+		name:"Mauna Kea",
+		defaultAngle: 1,
 		sideImage:"",
 		sideImageAlign:"bottom",
 		sideImageArtist: "",
 		sideImageDate:"", // YYYY/MM/DD
-		frontImage:"",
+		frontImage:"Mauna_Kea-front",
 		frontImageAlign:"bottom",
-		frontImageArtist: "",
-		frontImageDate:"", // YYYY/MM/DD
-		topImage:"SD_Card-top",
+		frontImageArtist: "Daniel Roberts (BlenderTimer)",
+		frontImageDate:"2024/03/21", // YYYY/MM/DD
+		topImage:"",
 		topImageAlign:"none",
-		topImageArtist: "Daniel Roberts (BlenderTimer)",
-		topImageDate:"2024/03/20", // YYYY/MM/DD
-		width:0.000032,
-		length:0.000024,
-		height:0.00000208,
-		category1:"technology",
-		category2:"modern",
-		category3:"storage",
-		tags:["sdxc", "sdhc"], // don't include anything in categories or name
-		dateAdded:"2024/03/20", // YYYY/MM/DD
-		lastModified:"2024/03/20", // YYYY/MM/DD
+		topImageArtist: "",
+		topImageDate:"", // YYYY/MM/DD
+		width:26.0143,
+		length:26.0143,
+		height:10.211,
+		category1:"nature",
+		category2:"geography",
+		category3:"mountains",
+		tags:["highest", "tallest"], // don't include anything in categories or name
+		dateAdded:"2024/03/21", // YYYY/MM/DD
+		lastModified:"2024/03/21", // YYYY/MM/DD
+	},
+	{
+		name:"Mauna Kea (with water-line)",
+		defaultAngle: 1,
+		sideImage:"",
+		sideImageAlign:"bottom",
+		sideImageArtist: "",
+		sideImageDate:"", // YYYY/MM/DD
+		frontImage:"Mauna_Kea_with_water_line-front",
+		frontImageAlign:"bottom",
+		frontImageArtist: "Daniel Roberts (BlenderTimer)",
+		frontImageDate:"2024/03/21", // YYYY/MM/DD
+		topImage:"",
+		topImageAlign:"none",
+		topImageArtist: "",
+		topImageDate:"", // YYYY/MM/DD
+		width:26.0143,
+		length:26.0143,
+		height:10.211,
+		category1:"nature",
+		category2:"geography",
+		category3:"mountains",
+		tags:["highest", "tallest"], // don't include anything in categories or name
+		dateAdded:"2024/03/21", // YYYY/MM/DD
+		lastModified:"2024/03/21", // YYYY/MM/DD
 	},
 ];
 
