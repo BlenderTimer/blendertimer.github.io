@@ -4888,6 +4888,31 @@ var objects = [
 		dateAdded:"2024/03/26", // YYYY/MM/DD
 		lastModified:"2024/03/26", // YYYY/MM/DD
 	},
+	{
+		name:"Bathtub",
+		defaultAngle:0,
+		sideImage:"Bathtub-side",
+		sideImageAlign:"bottom",
+		sideImageArtist:"Mels",
+		sideImageDate:"2024/03/27", // YYYY/MM/DD
+		frontImage:"",
+		frontImageAlign:"none",
+		frontImageArtist:"",
+		frontImageDate:"", // YYYY/MM/DD
+		topImage:"",
+		topImageAlign:"none",
+		topImageArtist:"",
+		topImageDate:"", // YYYY/MM/DD
+		width:0.000813,
+		length:0.0016,
+		height:0.0012,
+		category1:"miscellaneous",
+		category2:"household-items",
+		category3:"objects",
+		tags:["bathe","container"], // don't include anything in categories or name
+		dateAdded:"2024/03/27", // YYYY/MM/DD
+		lastModified:"2024/03/27", // YYYY/MM/DD
+	},
 ];
 
 //	———————— STEPS FOR UPDATING ————————
