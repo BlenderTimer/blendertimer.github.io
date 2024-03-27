@@ -1662,6 +1662,7 @@
 					<p>{[Object compared to] vs Atlantic Ocean (south), Earth, Water, -(images created by these artists: Daniel Roberts (BlenderTimer))}</p>
 					<p>{[Object compared to] vs Atlantic Salmon, Salmo salar, -(images created by these artists: Daniel Roberts (BlenderTimer))}</p>
 					<p>{[Object compared to] vs Atom (Generic), Chemical, Element, Neutron, Nucleus, Proton, Thing, -(images created by these artists: Daniel Roberts (BlenderTimer), Daniel Roberts (BlenderTimer), Daniel Roberts (BlenderTimer))}</p>
+					<p>{[Object compared to] vs Avocado, Berry, Vegetable, -(images created by these artists: Daniel Roberts (BlenderTimer))}</p>
 					<p>{[Object compared to] vs Bagger 293, Dig, Digger, Equipment, Mining, Terrestrial, -(images created by these artists: felax)}</p>
 					<p>{[Object compared to] vs Baltic Sea, Earth, Water, -(images created by these artists: Daniel Roberts (BlenderTimer))}</p>
 					<p>{[Object compared to] vs Banana, Berry, -(images created by these artists: Daniel Roberts (BlenderTimer))}</p>
@@ -1724,6 +1725,7 @@
 					<p>{[Object compared to] vs Hyperion (Tallest Tree), California, Coast, Redwood, Sequoia sempervirens, -(images created by these artists: Daniel Roberts (BlenderTimer))}</p>
 					<p>{[Object compared to] vs Inch (measurement), Imperial, -(images created by these artists: Daniel Roberts (BlenderTimer), Daniel Roberts (BlenderTimer))}</p>
 					<p>{[Object compared to] vs Indian Ocean, Earth, Water, -(images created by these artists: Daniel Roberts (BlenderTimer))}</p>
+					<p>{[Object compared to] vs International Space Station (ISS), Research, -(images created by these artists: Daniel Roberts (BlenderTimer), Daniel Roberts (BlenderTimer), Daniel Roberts (BlenderTimer))}</p>
 					<p>{[Object compared to] vs James Webb Space Telescope (JWST), Mirror, -(images created by these artists: felax)}</p>
 					<p>{[Object compared to] vs Jellyfish (Generic), Cyaneidae, Scyphozoa, -(images created by these artists: Daniel Roberts (BlenderTimer))}</p>
 					<p>{[Object compared to] vs Jupiter, Ball, Planet, Solar system, Sphere, -(images created by these artists: Daniel Roberts (BlenderTimer), Daniel Roberts (BlenderTimer), Daniel Roberts (BlenderTimer))}</p>
@@ -1783,6 +1785,7 @@
 					<p>{[Object compared to] vs Red Blood Cell, Anatomy, -(images created by these artists: Daniel Roberts (BlenderTimer), Daniel Roberts (BlenderTimer), Daniel Roberts (BlenderTimer))}</p>
 					<p>{[Object compared to] vs Rigel, B8, B8-ia, Ball, Blue, Heat, Hot, Sphere, -(images created by these artists: Daniel Roberts (BlenderTimer), Daniel Roberts (BlenderTimer), Daniel Roberts (BlenderTimer))}</p>
 					<p>{[Object compared to] vs Rock (generic), Stone, -(images created by these artists: Daniel Roberts (BlenderTimer))}</p>
+					<p>{[Object compared to] vs SD Card, Sdhc, Sdxc, -(images created by these artists: Daniel Roberts (BlenderTimer))}</p>
 					<p>{[Object compared to] vs SR-71 Blackbird, Fastest, Lockheed, Manned, Nasa, Sr71, Strategic reconnaissance, Supersonic, Test, -(images created by these artists: Daniel Roberts (BlenderTimer))}</p>
 					<p>{[Object compared to] vs Sand (Grain), Sediment, -(images created by these artists: Daniel Roberts (BlenderTimer))}</p>
 					<p>{[Object compared to] vs Saturn (with rings), Ball, Ice, Planet, Solar system, Sphere, -(images created by these artists: Daniel Roberts (BlenderTimer))}</p>
@@ -1832,7 +1835,7 @@
 				</div>
 			</div>
 		</div>
-		<p id="version">Tool version: 0.5.1 (2024-03-21)</p>
+		<p id="version">Tool version: 0.5.2 (2024-03-26)</p>
 		<script src="./cs-object-info.js"></script>
 		<script type="text/javascript">
 			var title = document.getElementById('title');
@@ -4060,7 +4063,7 @@
 								objUser.classList.add("user-object-badge");
 								objName.appendChild(objUser);
 							}
-							var objDate = new Date(parseInt(searchObjects[i].lastModified.toString().substring(0, 4)), parseInt(searchObjects[i].lastModified.toString().substring(5, 7)) - 1, parseInt(searchObjects[i].lastModified.toString().substring(8, 10)));
+							var objDate = new Date(parseInt(searchObjects[i].dateAdded.toString().substring(0, 4)), parseInt(searchObjects[i].dateAdded.toString().substring(5, 7)) - 1, parseInt(searchObjects[i].dateAdded.toString().substring(8, 10)));
 							if ((((Date.now() - objDate.getTime()) / 1000 / 60 / 60 / 24) < 7)) {
 								var objNew = document.createElement("b");
 								objNew.innerHTML = "NEW";
@@ -4348,7 +4351,7 @@
 								objUser.classList.add("user-object-badge");
 								objName.appendChild(objUser);
 							}
-							var objDate = new Date(parseInt(searchObjects[i].lastModified.toString().substring(0, 4)), parseInt(searchObjects[i].lastModified.toString().substring(5, 7)) - 1, parseInt(searchObjects[i].lastModified.toString().substring(8, 10)));
+							var objDate = new Date(parseInt(searchObjects[i].dateAdded.toString().substring(0, 4)), parseInt(searchObjects[i].dateAdded.toString().substring(5, 7)) - 1, parseInt(searchObjects[i].dateAdded.toString().substring(8, 10)));
 							if ((((Date.now() - objDate.getTime()) / 1000 / 60 / 60 / 24) < 7)) {
 								var objNew = document.createElement("b");
 								objNew.innerHTML = "NEW";
