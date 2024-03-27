@@ -4873,7 +4873,7 @@ var objects = [
 		frontImage:"Avocado-front",
 		frontImageAlign:"none",
 		frontImageArtist:"Daniel Roberts (BlenderTimer)",
-		frontImageDate:"", // YYYY/MM/DD
+		frontImageDate:"2024/03/26", // YYYY/MM/DD
 		topImage:"",
 		topImageAlign:"none",
 		topImageArtist:"",
