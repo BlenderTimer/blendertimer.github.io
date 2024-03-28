@@ -4903,13 +4903,63 @@ var objects = [
 		topImageAlign:"none",
 		topImageArtist:"",
 		topImageDate:"", // YYYY/MM/DD
-		width:0.000813,
-		length:0.0016,
-		height:0.0012,
+		width:0.000976,
+		length:0.0019,
+		height:0.00144,
 		category1:"miscellaneous",
 		category2:"household-items",
 		category3:"objects",
 		tags:["bathe","container"], // don't include anything in categories or name
+		dateAdded:"2024/03/27", // YYYY/MM/DD
+		lastModified:"2024/03/27", // YYYY/MM/DD
+	},
+	{
+		name:"Watermelon",
+		defaultAngle:1,
+		sideImage:"",
+		sideImageAlign:"none",
+		sideImageArtist:"",
+		sideImageDate:"", // YYYY/MM/DD
+		frontImage:"Watermelon-front",
+		frontImageAlign:"bottom",
+		frontImageArtist:"Daniel Roberts (BlenderTimer)",
+		frontImageDate:"2024/03/27", // YYYY/MM/DD
+		topImage:"",
+		topImageAlign:"none",
+		topImageArtist:"",
+		topImageDate:"", // YYYY/MM/DD
+		width:0.000325,
+		length:0.000325,
+		height:0.000381,
+		category1:"miscellaneous",
+		category2:"food",
+		category3:"fruit",
+		tags:["berry"], // don't include anything in categories or name
+		dateAdded:"2024/03/27", // YYYY/MM/DD
+		lastModified:"2024/03/27", // YYYY/MM/DD
+	},
+	{
+		name:"Jackfruit",
+		defaultAngle:1,
+		sideImage:"",
+		sideImageAlign:"none",
+		sideImageArtist:"",
+		sideImageDate:"", // YYYY/MM/DD
+		frontImage:"Jackfruit-front",
+		frontImageAlign:"bottom",
+		frontImageArtist:"Daniel Roberts (BlenderTimer)",
+		frontImageDate:"2024/03/27", // YYYY/MM/DD
+		topImage:"",
+		topImageAlign:"none",
+		topImageArtist:"",
+		topImageDate:"", // YYYY/MM/DD
+		width:0.00042,
+		length:0.00042,
+		height:0.000762,
+		category1:"miscellaneous",
+		category2:"food",
+		category3:"fruit",
+		tags:["bumpy"], // don't include anything in categories or name
 		dateAdded:"2024/03/27", // YYYY/MM/DD
 		lastModified:"2024/03/27", // YYYY/MM/DD
 	},
