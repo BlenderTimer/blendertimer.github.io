@@ -2426,6 +2426,12 @@
 				else if (objects[objectID].width >= 0.000000001) {
 					document.getElementById('oi-width').innerHTML = (objects[objectID].width * 1000000000).toFixed(3).toString() + " micrometers (" + (objects[objectID].width / 0.0000000000254).toFixed(3).toString() + " thous)";
 				}
+				else if (objects[objectID].width >= 0.000000000001) {
+					document.getElementById('oi-width').innerHTML = (objects[objectID].width * 1000000000000).toFixed(3).toString() + " nanometers (" + (objects[objectID].width / 0.0000000000254).toFixed(3).toString() + " thous)";
+				}
+				else {
+					document.getElementById('oi-width').innerHTML = (objects[objectID].width * 1000000000000000).toFixed(3).toString() + " picometers (" + (objects[objectID].width / 0.0000000000254).toFixed(3).toString() + " thous)";
+				}
 				if (objects[objectID].length >= 9460730472580.8) {
 					document.getElementById('oi-length').innerHTML = (objects[objectID].length / 9460730472580.8).toFixed(3).toString() + " light-years";
 				}
@@ -2444,6 +2450,12 @@
 				else if (objects[objectID].length >= 0.000000001) {
 					document.getElementById('oi-length').innerHTML = (objects[objectID].length * 1000000000).toFixed(3).toString() + " micrometers (" + (objects[objectID].length / 0.0000000000254).toFixed(3).toString() + " thous)";
 				}
+				else if (objects[objectID].length >= 0.000000000001) {
+					document.getElementById('oi-length').innerHTML = (objects[objectID].length * 1000000000000).toFixed(3).toString() + " nanometers (" + (objects[objectID].length / 0.0000000000254).toFixed(3).toString() + " thous)";
+				}
+				else {
+					document.getElementById('oi-length').innerHTML = (objects[objectID].length * 1000000000000000).toFixed(3).toString() + " picometers (" + (objects[objectID].length / 0.0000000000254).toFixed(3).toString() + " thous)";
+				}
 				if (objects[objectID].height >= 9460730472580.8) {
 					document.getElementById('oi-height').innerHTML = (objects[objectID].height / 9460730472580.8).toFixed(3).toString() + " light-years";
 				}
@@ -2461,6 +2473,12 @@
 				}
 				else if (objects[objectID].height >= 0.000000001) {
 					document.getElementById('oi-height').innerHTML = (objects[objectID].height * 1000000000).toFixed(3).toString() + " micrometers (" + (objects[objectID].height / 0.0000000000254).toFixed(3).toString() + " thous)";
+				}
+				else if (objects[objectID].height >= 0.000000000001) {
+					document.getElementById('oi-height').innerHTML = (objects[objectID].height * 1000000000000).toFixed(3).toString() + " nanometers (" + (objects[objectID].height / 0.0000000000254).toFixed(3).toString() + " thous)";
+				}
+				else {
+					document.getElementById('oi-height').innerHTML = (objects[objectID].height * 1000000000000000).toFixed(3).toString() + " picometers (" + (objects[objectID].height / 0.0000000000254).toFixed(3).toString() + " thous)";
 				}
 				document.getElementById('oi-defaultangle').innerHTML = objects[objectID].defaultAngle + " (" + angleToText(objects[objectID].defaultAngle) + ")";
 				document.getElementById('oi-sideimage').innerHTML = objects[objectID].sideImage;
