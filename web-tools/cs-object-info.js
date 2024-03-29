@@ -4963,6 +4963,256 @@ var objects = [
 		dateAdded:"2024/03/27", // YYYY/MM/DD
 		lastModified:"2024/03/27", // YYYY/MM/DD
 	},
+	{
+		name:"Bacteriophage",
+		defaultAngle:1,
+		sideImage:"",
+		sideImageAlign:"none",
+		sideImageArtist:"",
+		sideImageDate:"", // YYYY/MM/DD
+		frontImage:"Bacteriophage-front",
+		frontImageAlign:"bottom",
+		frontImageArtist:"Daniel Roberts (BlenderTimer)",
+		frontImageDate:"2024/03/28", // YYYY/MM/DD
+		topImage:"",
+		topImageAlign:"none",
+		topImageArtist:"",
+		topImageDate:"", // YYYY/MM/DD
+		width:0.0000000001,
+		length:0.0000000001,
+		height:0.0000000001,
+		category1:"miscellaneous",
+		category2:"particles",
+		category3:"viruses",
+		tags:["icosahedral"], // don't include anything in categories or name
+		dateAdded:"2024/03/28", // YYYY/MM/DD
+		lastModified:"2024/03/28", // YYYY/MM/DD
+	},
+	{
+		name:"Japanese Spider Crab",
+		defaultAngle:1,
+		sideImage:"",
+		sideImageAlign:"bottom",
+		sideImageArtist:"",
+		sideImageDate:"", // YYYY/MM/DD
+		frontImage:"Japanese_Spider_Crab-front",
+		frontImageAlign:"bottom",
+		frontImageArtist:"Daniel Roberts (BlenderTimer)",
+		frontImageDate:"2024/03/28", // YYYY/MM/DD
+		topImage:"Japanese_Spider_Crab-top",
+		topImageAlign:"none",
+		topImageArtist:"Daniel Roberts (BlenderTimer)",
+		topImageDate:"2024/03/28", // YYYY/MM/DD
+		width:0.0038,
+		length:0.00323,
+		height:0.00167,
+		category1:"nature",
+		category2:"animals",
+		category3:"crustaceans",
+		tags:["largest"], // don't include anything in categories or name
+		dateAdded:"2024/03/28", // YYYY/MM/DD
+		lastModified:"2024/03/28", // YYYY/MM/DD
+	},
+	{
+		name:"Megalodon",
+		defaultAngle:0,
+		sideImage:"Megalodon-side",
+		sideImageAlign:"none",
+		sideImageArtist:"Daniel Roberts (BlenderTimer)",
+		sideImageDate:"2024/03/28", // YYYY/MM/DD
+		frontImage:"",
+		frontImageAlign:"none",
+		frontImageArtist:"Daniel Roberts (BlenderTimer)",
+		frontImageDate:"", // YYYY/MM/DD
+		topImage:"",
+		topImageAlign:"none",
+		topImageArtist:"",
+		topImageDate:"", // YYYY/MM/DD
+		width:0.0059,
+		length:0.0183,
+		height:0.00622,
+		category1:"nature",
+		category2:"animals",
+		category3:"fish",
+		tags:["megatooth","shark"], // don't include anything in categories or name
+		dateAdded:"2024/03/28", // YYYY/MM/DD
+		lastModified:"2024/03/28", // YYYY/MM/DD
+	},
+	{
+		name:"Tardigrade (Water Bear)",
+		defaultAngle:0,
+		sideImage:"Tardigrade_Water_Bear-side",
+		sideImageAlign:"none",
+		sideImageArtist:"Daniel Roberts (BlenderTimer)",
+		sideImageDate:"2024/03/28", // YYYY/MM/DD
+		frontImage:"",
+		frontImageAlign:"none",
+		frontImageArtist:"",
+		frontImageDate:"", // YYYY/MM/DD
+		topImage:"",
+		topImageAlign:"none",
+		topImageArtist:"",
+		topImageDate:"", // YYYY/MM/DD
+		width:0.00000018,
+		length:0.0000005,
+		height:0.0000002,
+		category1:"nature",
+		category2:"animals",
+		category3:"micro-animals",
+		tags:["invertebrate"], // don't include anything in categories or name
+		dateAdded:"2024/03/28", // YYYY/MM/DD
+		lastModified:"2024/03/28", // YYYY/MM/DD
+	},
+	{
+		name:"Golden Gate Bridge",
+		defaultAngle:0,
+		sideImage:"Golden_Gate_Bridge-side",
+		sideImageAlign:"bottom",
+		sideImageArtist:"Daniel Roberts (BlenderTimer)",
+		sideImageDate:"2024/03/28", // YYYY/MM/DD
+		frontImage:"",
+		frontImageAlign:"bottom",
+		frontImageArtist:"",
+		frontImageDate:"", // YYYY/MM/DD
+		topImage:"",
+		topImageAlign:"none",
+		topImageArtist:"",
+		topImageDate:"", // YYYY/MM/DD
+		width:0.027,
+		length:2.5,
+		height:0.227,
+		category1:"structures",
+		category2:"bridges",
+		category3:"cable-stayed",
+		tags:["san francisco"], // don't include anything in categories or name
+		dateAdded:"2024/03/28", // YYYY/MM/DD
+		lastModified:"2024/03/28", // YYYY/MM/DD
+	},
+	{
+		name:"CCTV Headquarters",
+		defaultAngle:0,
+		sideImage:"CCTV_Headquarters-side",
+		sideImageAlign:"bottom",
+		sideImageArtist:"Daniel Roberts (BlenderTimer)",
+		sideImageDate:"2024/03/28", // YYYY/MM/DD
+		frontImage:"",
+		frontImageAlign:"bottom",
+		frontImageArtist:"",
+		frontImageDate:"", // YYYY/MM/DD
+		topImage:"",
+		topImageAlign:"none",
+		topImageArtist:"",
+		topImageDate:"", // YYYY/MM/DD
+		width:0.2256,
+		length:0.2256,
+		height:0.237,
+		category1:"structures",
+		category2:"buildings",
+		category3:"skyscrapers",
+		tags:["china central television"], // don't include anything in categories or name
+		dateAdded:"2024/03/28", // YYYY/MM/DD
+		lastModified:"2024/03/28", // YYYY/MM/DD
+	},
+	{
+		name:"One World Trade Center",
+		defaultAngle:1,
+		sideImage:"",
+		sideImageAlign:"bottom",
+		sideImageArtist:"",
+		sideImageDate:"", // YYYY/MM/DD
+		frontImage:"One_World_Trade_Center-front",
+		frontImageAlign:"bottom",
+		frontImageArtist:"Daniel Roberts (BlenderTimer)",
+		frontImageDate:"2024/03/28", // YYYY/MM/DD
+		topImage:"",
+		topImageAlign:"none",
+		topImageArtist:"",
+		topImageDate:"", // YYYY/MM/DD
+		width:0.0655,
+		length:0.0655,
+		height:0.546,
+		category1:"structures",
+		category2:"buildings",
+		category3:"skyscrapers",
+		tags:["new york"], // don't include anything in categories or name
+		dateAdded:"2024/03/28", // YYYY/MM/DD
+		lastModified:"2024/03/28", // YYYY/MM/DD
+	},
+	{
+		name:"Petronas Towers",
+		defaultAngle:1,
+		sideImage:"",
+		sideImageAlign:"bottom",
+		sideImageArtist:"",
+		sideImageDate:"", // YYYY/MM/DD
+		frontImage:"Petronas_Towers-front",
+		frontImageAlign:"bottom",
+		frontImageArtist:"Daniel Roberts (BlenderTimer)",
+		frontImageDate:"2024/03/28", // YYYY/MM/DD
+		topImage:"",
+		topImageAlign:"none",
+		topImageArtist:"",
+		topImageDate:"", // YYYY/MM/DD
+		width:0.194,
+		length:0.09,
+		height:0.452,
+		category1:"structures",
+		category2:"buildings",
+		category3:"skyscrapers",
+		tags:["malaysia"], // don't include anything in categories or name
+		dateAdded:"2024/03/28", // YYYY/MM/DD
+		lastModified:"2024/03/28", // YYYY/MM/DD
+	},
+	{
+		name:"UN Headquarters",
+		defaultAngle:1,
+		sideImage:"",
+		sideImageAlign:"bottom",
+		sideImageArtist:"",
+		sideImageDate:"", // YYYY/MM/DD
+		frontImage:"UN_Headquarters-front",
+		frontImageAlign:"bottom",
+		frontImageArtist:"Daniel Roberts (BlenderTimer)",
+		frontImageDate:"2024/03/28", // YYYY/MM/DD
+		topImage:"",
+		topImageAlign:"none",
+		topImageArtist:"",
+		topImageDate:"", // YYYY/MM/DD
+		width:0.0954,
+		length:0.02,
+		height:0.154,
+		category1:"structures",
+		category2:"buildings",
+		category3:"skyscrapers",
+		tags:["united nations"], // don't include anything in categories or name
+		dateAdded:"2024/03/28", // YYYY/MM/DD
+		lastModified:"2024/03/28", // YYYY/MM/DD
+	},
+	{
+		name:"Willis Tower",
+		defaultAngle:1,
+		sideImage:"",
+		sideImageAlign:"bottom",
+		sideImageArtist:"",
+		sideImageDate:"", // YYYY/MM/DD
+		frontImage:"Willis_Tower-front",
+		frontImageAlign:"bottom",
+		frontImageArtist:"Daniel Roberts (BlenderTimer)",
+		frontImageDate:"2024/03/28", // YYYY/MM/DD
+		topImage:"",
+		topImageAlign:"none",
+		topImageArtist:"",
+		topImageDate:"", // YYYY/MM/DD
+		width:0.0738,
+		length:0.0738,
+		height:0.527,
+		category1:"structures",
+		category2:"buildings",
+		category3:"skyscrapers",
+		tags:["sears"], // don't include anything in categories or name
+		dateAdded:"2024/03/28", // YYYY/MM/DD
+		lastModified:"2024/03/28", // YYYY/MM/DD
+	},
 ];
 
 //	———————— STEPS FOR UPDATING ————————
