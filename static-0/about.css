@@ -452,3 +452,13 @@
 .fun-stat-title {
 	margin-right: 10pt;
 }
+
+.funstat {
+	display: block;
+	margin: 5px 0px;
+	padding: 0px;
+}
+
+.funstat p {
+	margin-bottom: 0px;
+}
