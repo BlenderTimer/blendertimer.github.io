@@ -19,8 +19,7 @@
 		<a href="https://www.blendertimer.com/web-tools/compare-size"><img src="../../static-0/files/images/back-factsheet.png" id="nav-home"></a>
 		<h1 id="title" style="margin-top: 0px">Loading...</h1>
 		<div id="content" style="display: block">
-			<div id="submit-images-single" class="forms"></div>
-			<div id="submit-images-multiple" class="forms"></div>
+			<div id="submit-images" class="forms"></div>
 			<div id="request-objects" class="forms"></div>
 		</div>
 	</body>
@@ -116,14 +115,6 @@ body {
 			requestObjects.setAttribute("data-form", "5");
 			requestObjects.src = "https://www.cognitoforms.com/f/seamless.js";
 			document.getElementById('request-objects').appendChild(requestObjects);
-		}
-		else if (window.location.toString().indexOf("?multiple") > -1) {
-			title.innerHTML = "Submit Multiple Images";
-			var imageMultiple = document.createElement("script");
-			imageMultiple.setAttribute("data-key", "ZITzLTGATEuVTYQNX0Ea0w");
-			imageMultiple.setAttribute("data-form", "6");
-			imageMultiple.src = "https://www.cognitoforms.com/f/seamless.js";
-			document.getElementById('submit-images-multiple').appendChild(imageMultiple);
 		}
 		else {
 			title.innerHTML = "Submit Object Images";
