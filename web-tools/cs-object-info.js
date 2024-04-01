@@ -5213,6 +5213,131 @@ var objects = [
 		dateAdded:"2024/03/28", // YYYY/MM/DD
 		lastModified:"2024/03/28", // YYYY/MM/DD
 	},
+	{
+		name:"Human Egg",
+		defaultAngle:1,
+		sideImage:"",
+		sideImageAlign:"none",
+		sideImageArtist:"",
+		sideImageDate:"", // YYYY/MM/DD
+		frontImage:"Human_Egg-front",
+		frontImageAlign:"none",
+		frontImageArtist:"Daniel Roberts (BlenderTimer)",
+		frontImageDate:"2024/03/31", // YYYY/MM/DD
+		topImage:"",
+		topImageAlign:"none",
+		topImageArtist:"",
+		topImageDate:"", // YYYY/MM/DD
+		width:0.00000012,
+		length:0.00000012,
+		height:0.00000012,
+		category1:"miscellaneous",
+		category2:"particles",
+		category3:"cells",
+		tags:["ovum","reproductive","female"], // don't include anything in categories or name
+		dateAdded:"2024/03/31", // YYYY/MM/DD
+		lastModified:"2024/03/31", // YYYY/MM/DD
+	},
+	{
+		name:"Human Sperm",
+		defaultAngle:2,
+		sideImage:"",
+		sideImageAlign:"none",
+		sideImageArtist:"",
+		sideImageDate:"", // YYYY/MM/DD
+		frontImage:"",
+		frontImageAlign:"none",
+		frontImageArtist:"",
+		frontImageDate:"", // YYYY/MM/DD
+		topImage:"Human_Sperm-top",
+		topImageAlign:"none",
+		topImageArtist:"Daniel Roberts (BlenderTimer)",
+		topImageDate:"2024/03/31", // YYYY/MM/DD
+		width:0.00000000588,
+		length:0.000000042,
+		height:0.00000000588,
+		category1:"miscellaneous",
+		category2:"particles",
+		category3:"cells",
+		tags:["reproductive","male"], // don't include anything in categories or name
+		dateAdded:"2024/03/31", // YYYY/MM/DD
+		lastModified:"2024/03/31", // YYYY/MM/DD
+	},
+	{
+		name:"Mimivirus",
+		defaultAngle:1,
+		sideImage:"",
+		sideImageAlign:"none",
+		sideImageArtist:"",
+		sideImageDate:"", // YYYY/MM/DD
+		frontImage:"Mimivirus-front",
+		frontImageAlign:"none",
+		frontImageArtist:"Daniel Roberts (BlenderTimer)",
+		frontImageDate:"2024/03/31", // YYYY/MM/DD
+		topImage:"",
+		topImageAlign:"none",
+		topImageArtist:"",
+		topImageDate:"", // YYYY/MM/DD
+		width:0.000000000665,
+		length:0.000000000665,
+		height:0.0000000007,
+		category1:"miscellaneous",
+		category2:"particles",
+		category3:"viruses",
+		tags:["giant","dna"], // don't include anything in categories or name
+		dateAdded:"2024/03/31", // YYYY/MM/DD
+		lastModified:"2024/03/31", // YYYY/MM/DD
+	},
+	{
+		name:"Escherichia Coli (E. Coli)",
+		defaultAngle:0,
+		sideImage:"Escherichia_Coli_E._Coli-side",
+		sideImageAlign:"none",
+		sideImageArtist:"Daniel Roberts (BlenderTimer)",
+		sideImageDate:"2024/03/31", // YYYY/MM/DD
+		frontImage:"",
+		frontImageAlign:"none",
+		frontImageArtist:"",
+		frontImageDate:"", // YYYY/MM/DD
+		topImage:"",
+		topImageAlign:"none",
+		topImageArtist:"",
+		topImageDate:"", // YYYY/MM/DD
+		width:0.00000000045,
+		length:0.0000000015,
+		height:0.00000000045,
+		category1:"miscellaneous",
+		category2:"particles",
+		category3:"bacteria",
+		tags:["enterobacteriaceae"], // don't include anything in categories or name
+		dateAdded:"2024/03/31", // YYYY/MM/DD
+		lastModified:"2024/03/31", // YYYY/MM/DD
+	},
+	{
+		name:"Human Immunodeficiency Virus (HIV)",
+		defaultAngle:1,
+		sideImage:"",
+		sideImageAlign:"none",
+		sideImageArtist:"",
+		sideImageDate:"", // YYYY/MM/DD
+		frontImage:"Human_Immunodeficiency_Virus_HIV-front",
+		frontImageAlign:"none",
+		frontImageArtist:"Daniel Roberts (BlenderTimer)",
+		frontImageDate:"2024/03/31", // YYYY/MM/DD
+		topImage:"",
+		topImageAlign:"none",
+		topImageArtist:"",
+		topImageDate:"", // YYYY/MM/DD
+		width:0.0000000001,
+		length:0.0000000001,
+		height:0.0000000001,
+		category1:"miscellaneous",
+		category2:"particles",
+		category3:"viruses",
+		tags:["aids"], // don't include anything in categories or name
+		dateAdded:"2024/03/31", // YYYY/MM/DD
+		lastModified:"2024/03/31", // YYYY/MM/DD
+	},
 ];
 
 //	———————— STEPS FOR UPDATING ————————
