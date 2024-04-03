@@ -5338,6 +5338,81 @@ var objects = [
 		dateAdded:"2024/03/31", // YYYY/MM/DD
 		lastModified:"2024/03/31", // YYYY/MM/DD
 	},
+	{
+		name:"Keratinocyte (Human Skin Cell)",
+		defaultAngle:2,
+		sideImage:"",
+		sideImageAlign:"none",
+		sideImageArtist:"",
+		sideImageDate:"", // YYYY/MM/DD
+		frontImage:"",
+		frontImageAlign:"none",
+		frontImageArtist:"",
+		frontImageDate:"", // YYYY/MM/DD
+		topImage:"Keratinocyte_Human_Skin_Cell-top",
+		topImageAlign:"none",
+		topImageArtist:"Daniel Roberts (BlenderTimer)",
+		topImageDate:"2024/04/02", // YYYY/MM/DD
+		width:0.00000001044,
+		length:0.000000012,
+		height:0.000000002,
+		category1:"miscellaneous",
+		category2:"particles",
+		category3:"cells",
+		tags:["epidermis"], // don't include anything in categories or name
+		dateAdded:"2024/04/02", // YYYY/MM/DD
+		lastModified:"2024/04/02", // YYYY/MM/DD
+	},
+	{
+		name:"Paramecium",
+		defaultAngle:2,
+		sideImage:"",
+		sideImageAlign:"none",
+		sideImageArtist:"",
+		sideImageDate:"", // YYYY/MM/DD
+		frontImage:"",
+		frontImageAlign:"none",
+		frontImageArtist:"",
+		frontImageDate:"", // YYYY/MM/DD
+		topImage:"Paramecium-top",
+		topImageAlign:"none",
+		topImageArtist:"Daniel Roberts (BlenderTimer)",
+		topImageDate:"2024/04/02", // YYYY/MM/DD
+		width:0.000000043,
+		length:0.0000001,
+		height:0.000000043,
+		category1:"miscellaneous",
+		category2:"particles",
+		category3:"cells",
+		tags:["organism"], // don't include anything in categories or name
+		dateAdded:"2024/04/02", // YYYY/MM/DD
+		lastModified:"2024/04/02", // YYYY/MM/DD
+	},
+	{
+		name:"Hemoglobin",
+		defaultAngle:2,
+		sideImage:"",
+		sideImageAlign:"none",
+		sideImageArtist:"",
+		sideImageDate:"", // YYYY/MM/DD
+		frontImage:"",
+		frontImageAlign:"none",
+		frontImageArtist:"",
+		frontImageDate:"", // YYYY/MM/DD
+		topImage:"Hemoglobin-top",
+		topImageAlign:"none",
+		topImageArtist:"Daniel Roberts (BlenderTimer)",
+		topImageDate:"2024/04/02", // YYYY/MM/DD
+		width:0.00000000000475,
+		length:0.000000000005,
+		height:0.000000000005,
+		category1:"miscellaneous",
+		category2:"particles",
+		category3:"molecules",
+		tags:["protein"], // don't include anything in categories or name
+		dateAdded:"2024/04/02", // YYYY/MM/DD
+		lastModified:"2024/04/02", // YYYY/MM/DD
+	},
 ];
 
 //	———————— STEPS FOR UPDATING ————————
