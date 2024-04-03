@@ -5413,6 +5413,31 @@ var objects = [
 		dateAdded:"2024/04/02", // YYYY/MM/DD
 		lastModified:"2024/04/02", // YYYY/MM/DD
 	},
+	{
+		name:"Quasi Star (Hypothetical)",
+		defaultAngle:1,
+		sideImage:"",
+		sideImageAlign:"none",
+		sideImageArtist:"",
+		sideImageDate:"", // YYYY/MM/DD
+		frontImage:"Quasi_Star_Hypothetical-front",
+		frontImageAlign:"none",
+		frontImageArtist:"Daniel Roberts (BlenderTimer)",
+		frontImageDate:"2024/04/03", // YYYY/MM/DD
+		topImage:"",
+		topImageAlign:"none",
+		topImageArtist:"",
+		topImageDate:"", // YYYY/MM/DD
+		width:10000000000,
+		length:10000000000,
+		height:10000000000,
+		category1:"space",
+		category2:"stars",
+		category3:"supergiants",
+		tags:["large"], // don't include anything in categories or name
+		dateAdded:"2024/04/03", // YYYY/MM/DD
+		lastModified:"2024/04/03", // YYYY/MM/DD
+	},
 ];
 
 //	———————— STEPS FOR UPDATING ————————
