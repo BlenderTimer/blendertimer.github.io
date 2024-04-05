@@ -5488,6 +5488,31 @@ var objects = [
 		dateAdded:"2024/04/03", // YYYY/MM/DD
 		lastModified:"2024/04/03", // YYYY/MM/DD
 	},
+	{
+		name:"Lacrymaria Olor",
+		defaultAngle:0,
+		sideImage:"Lacrymaria_Olor-side",
+		sideImageAlign:"none",
+		sideImageArtist:"Daniel Roberts (BlenderTimer)",
+		sideImageDate:"2024/03/28", // YYYY/MM/DD
+		frontImage:"",
+		frontImageAlign:"none",
+		frontImageArtist:"",
+		frontImageDate:"", // YYYY/MM/DD
+		topImage:"",
+		topImageAlign:"none",
+		topImageArtist:"",
+		topImageDate:"", // YYYY/MM/DD
+		width:0.000000008,
+		length:0.0000001,
+		height:0.000000008,
+		category1:"nature",
+		category2:"animals",
+		category3:"micro-animals",
+		tags:["swan tear","ciliate protozoan"], // don't include anything in categories or name
+		dateAdded:"2024/04/04", // YYYY/MM/DD
+		lastModified:"2024/04/04", // YYYY/MM/DD
+	},
 ];
 
 //	———————— STEPS FOR UPDATING ————————
