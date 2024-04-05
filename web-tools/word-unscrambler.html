@@ -332,9 +332,6 @@
 		    }
 
 		    function unscramble() {
-		    	dataLayer.push({
-            		event: 'unscramble-run'
-        		});
 		    	while (result.firstChild) {
 		    		result.removeChild(result.lastChild);
 		    	}
@@ -406,7 +403,7 @@
 
 		    function checkKeys(event) {
 		    	if (event.key == "Enter") {
-		    		unscramble();
+		    		unscrambleBTN.click();
 		    	}
 		    }
 
