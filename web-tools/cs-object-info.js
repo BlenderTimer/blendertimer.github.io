@@ -5513,6 +5513,56 @@ var objects = [
 		dateAdded:"2024/04/04", // YYYY/MM/DD
 		lastModified:"2024/04/04", // YYYY/MM/DD
 	},
+	{
+		name:"White Blood Cell",
+		defaultAngle:1,
+		sideImage:"",
+		sideImageAlign:"none",
+		sideImageArtist:"",
+		sideImageDate:"", // YYYY/MM/DD
+		frontImage:"White_Blood_Cell-front",
+		frontImageAlign:"none",
+		frontImageArtist:"Daniel Roberts (BlenderTimer)",
+		frontImageDate:"2024/04/06", // YYYY/MM/DD
+		topImage:"",
+		topImageAlign:"none",
+		topImageArtist:"",
+		topImageDate:"", // YYYY/MM/DD
+		width:0.000000014,
+		length:0.000000014,
+		height:0.000000014,
+		category1:"nature",
+		category2:"animals",
+		category3:"humans",
+		tags:["wbc","immune system"], // don't include anything in categories or name
+		dateAdded:"2024/04/06", // YYYY/MM/DD
+		lastModified:"2024/04/06", // YYYY/MM/DD
+	},
+	{
+		name:"Stentor",
+		defaultAngle:2,
+		sideImage:"",
+		sideImageAlign:"none",
+		sideImageArtist:"",
+		sideImageDate:"", // YYYY/MM/DD
+		frontImage:"",
+		frontImageAlign:"none",
+		frontImageArtist:"",
+		frontImageDate:"", // YYYY/MM/DD
+		topImage:"Stentor-top",
+		topImageAlign:"none",
+		topImageArtist:"Daniel Roberts (BlenderTimer)",
+		topImageDate:"2024/04/06", // YYYY/MM/DD
+		width:0.0000007,
+		length:0.000002,
+		height:0.0000007,
+		category1:"miscellaneous",
+		category2:"particles",
+		category3:"cells",
+		tags:["sedentary","ciliate"], // don't include anything in categories or name
+		dateAdded:"2024/04/06", // YYYY/MM/DD
+		lastModified:"2024/04/06", // YYYY/MM/DD
+	},
 ];
 
 //	———————— STEPS FOR UPDATING ————————
