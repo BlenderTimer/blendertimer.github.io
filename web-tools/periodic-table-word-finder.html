@@ -109,6 +109,14 @@
 				box-sizing: border-box;
 			}
 
+			#web-tool ul {
+				line-height: 3pt;
+			}
+
+			#web-tool li {
+				margin: 0px;
+			}
+
 			.inputs {
 				display: flex;
 				justify-content: center;
@@ -497,6 +505,25 @@
 			<p>This tool finds how a word can be spelled using only element abbreviations from the periodic table! Some words can't be spelled at all while others can be spelled in different ways using different variations of elements! Powerful yet simple, this online tool is completely free to use!</p>
 			<br>
 			<p>Fun fact! The longest English word which can be spelled using the elements on the periodic table is "Nonrepresentationalism", spelled out as "NONRePReSeNTaTiONAlISm" (from: Nitrogen, Oxygen, Nitrogen, Rhenium, Phosphorus, Rhenium, Selenium, Nitrogen, Tantalum, Titanium, Oxygen, Nitrogen, Aluminum, Iodine, and Samarium)!</p>
+			<br>
+			<p>The only elements that can be spelled using the elements on the periodic table are:</p>
+			<ul>
+				<li><p>CArBON</p></li>
+				<li><p>NeON</p></li>
+				<li><p>SILiCON</p></li>
+				<li><p>PHOSPHORuS</p></li>
+				<li><p>IrON</p></li>
+				<li><p>COPPEr</p></li>
+				<li><p>ArSeNIC</p></li>
+				<li><p>KrYPtON</p></li>
+				<li><p>SILvEr</p></li>
+				<li><p>TiN</p></li>
+				<li><p>XeNON</p></li>
+				<li><p>BISmUTh</p></li>
+				<li><p>AsTaTiNe</p></li>
+				<li><p>TeNNEsSINe</p></li>
+				<li><p>OGaNEsSON</p></li>
+			</ul>
 		</div>
 		<p id="version">Tool version: 1.0 (2024-4-6)</p>
 		<script src="../bt-js/bt-js.js"></script>
@@ -523,14 +550,14 @@
 		    	{name:"Carbon",n:"C",number:6},
 		    	{name:"Nitrogen",n:"N",number:7},
 		    	{name:"Oxygen",n:"O",number:8},
-		    	{name:"Fluorine",n:"F",number:9}, //typo on graphic
+		    	{name:"Fluorine",n:"F",number:9},
 		    	{name:"Neon",n:"Ne",number:10},
 		    	{name:"Sodium",n:"Na",number:11},
 		    	{name:"Magnesium",n:"Mg",number:12},
-		    	{name:"Aluminum",n:"Al",number:13}, //typo on graphic
+		    	{name:"Aluminum",n:"Al",number:13},
 		    	{name:"Silicon",n:"Si",number:14},
 		    	{name:"Phosphorus",n:"P",number:15},
-		    	{name:"Sulfur",n:"S",number:16}, //typo on graphic
+		    	{name:"Sulfur",n:"S",number:16},
 		    	{name:"Chlorine",n:"Cl",number:17},
 		    	{name:"Argon",n:"Ar",number:18},
 		    	{name:"Potassium",n:"K",number:19},
@@ -552,7 +579,7 @@
 		    	{name:"Bromine",n:"Br",number:35},
 		    	{name:"Krypton",n:"Kr",number:36},
 		    	{name:"Rubidium",n:"Zn",number:37},
-		    	{name:"Strontium",n:"Sr",number:38}, // typo on graphic
+		    	{name:"Strontium",n:"Sr",number:38},
 		    	{name:"Yttrium",n:"Y",number:39},
 		    	{name:"Zirconium",n:"Zr",number:40},
 		    	{name:"Niobium",n:"Nb",number:41},
@@ -577,7 +604,7 @@
 		    	{name:"Neodymium",n:"Nd",number:60},
 		    	{name:"Promethium",n:"Pm",number:61},
 		    	{name:"Samarium",n:"Sm",number:62},
-		    	{name:"Europium",n:"Eu",number:63}, //typo on graphic
+		    	{name:"Europium",n:"Eu",number:63},
 		    	{name:"Gadolinium",n:"Gd",number:64},
 		    	{name:"Terbium",n:"Tb",number:65},
 		    	{name:"Dysprosium",n:"Dy",number:66},
@@ -867,25 +894,6 @@
 		    	return elementList;
 		    }
 
-		    function bgpr1() {
-		    	var longest = "";
-		    	var l = 0;
-		    	for (var i=0; i < englishDictionary.length; i++) {
-		    		if (!(englishDictionary[i].indexOf("~") > -1 || englishDictionary[i].indexOf("`") > -1 || englishDictionary[i].indexOf("!") > -1 || englishDictionary[i].indexOf("1") > -1 || englishDictionary[i].indexOf("2") > -1 || englishDictionary[i].indexOf("3") > -1 || englishDictionary[i].indexOf("4") > -1 || englishDictionary[i].indexOf("5") > -1 || englishDictionary[i].indexOf("6") > -1 || englishDictionary[i].indexOf("7") > -1 || englishDictionary[i].indexOf("8") > -1 || englishDictionary[i].indexOf("9") > -1 || englishDictionary[i].indexOf("0") > -1 || englishDictionary[i].indexOf("-") > -1 || englishDictionary[i].indexOf(".") > -1 || englishDictionary[i].indexOf("'") > -1)) {
-		    			var w = findWord(englishDictionary[i]);
-		    			if (w.length == englishDictionary[i].length && w.length > longest.length) {
-		    				longest = w;
-		    			}
-		    		}
-		    		if (l > 1000) {
-		    			console.log(longest);
-		    			console.log(((i / 466661)*100).round(2).toString() + "%");
-		    			l = 0;
-		    		}
-		    		l++;
-		    	}
-		    }
-
 		    String.prototype.extendString = function(length, fillChar, appendToBeginning) {
 				if (fillChar == null) {
 					fillChar = " ";
@@ -923,6 +931,31 @@
 				}
 				return str;
 			}
+
+			function bgpr1() {
+		    	var longest = "";
+		    	var l = 0;
+		    	// for (var i=0; i < englishDictionary.length; i++) {
+		    	// 	if (!(englishDictionary[i].indexOf("~") > -1 || englishDictionary[i].indexOf("`") > -1 || englishDictionary[i].indexOf("!") > -1 || englishDictionary[i].indexOf("1") > -1 || englishDictionary[i].indexOf("2") > -1 || englishDictionary[i].indexOf("3") > -1 || englishDictionary[i].indexOf("4") > -1 || englishDictionary[i].indexOf("5") > -1 || englishDictionary[i].indexOf("6") > -1 || englishDictionary[i].indexOf("7") > -1 || englishDictionary[i].indexOf("8") > -1 || englishDictionary[i].indexOf("9") > -1 || englishDictionary[i].indexOf("0") > -1 || englishDictionary[i].indexOf("-") > -1 || englishDictionary[i].indexOf(".") > -1 || englishDictionary[i].indexOf("'") > -1)) {
+		    	// 		var w = findWord(englishDictionary[i]);
+		    	// 		if (w.length == englishDictionary[i].length && w.length > longest.length) {
+		    	// 			longest = w;
+		    	// 		}
+		    	// 	}
+		    	// 	if (l > 1000) {
+		    	// 		console.log(longest);
+		    	// 		console.log(((i / 466661)*100).round(2).toString() + "%");
+		    	// 		l = 0;
+		    	// 	}
+		    	// 	l++;
+		    	// }
+		    	for (var i=0; i < elements.length; i++) {
+		    		var w = findWord(elements[i].name.toLowerCase());
+		    		if (w.length == elements[i].name.length) {
+		    			console.log(w);
+		    		}
+		    	}
+		    }
 		</script>
 	</body>
 </html>
