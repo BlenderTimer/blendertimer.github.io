@@ -544,7 +544,7 @@
 		</div>
 		<p id="version">Tool version: 1.1 (2024-4-7)</p>
 		<script src="../bt-js/bt-js.js"></script>
-		<script src="./word-dictionaries/english-words.js"></script>
+		<!-- <script src="./word-dictionaries/english-words.js"></script> -->
 		<script type="text/javascript">
 			var title = document.getElementById('title');
 			var download = document.getElementById('download');
@@ -723,8 +723,13 @@
 				var me = [];
 				var finalString = "";
 				var bail = 0;
+				var spaces = [];
 				for (var i=0; i < w.length; i++) {
 					var c = w[i];
+					if (c == " ") {
+						spaces.push(i);
+						continue;
+					}
 					for (var i2=0; i2 < elements.length; i2++) {
 						if (elements[i2].n.toLowerCase() == c) {
 							me.push([elements[i2]]);
@@ -757,6 +762,7 @@
 				var ppfs = "";
 				var e = [];
 				var failed = true;
+				word = word.replace(/ /g, "");
 				for (var i=0; i < fs.length; i++) {
 					if (word.startsWith((finalString+fs[i].n).toLowerCase())) {
 						ppfs = pfs;
@@ -810,23 +816,33 @@
 				if (newFS.length >= finalString.length) {
 					finalString = newFS;
 				}
+				for (var i=0; i < spaces.length; i++) {
+					finalString = finalString.substring(0, spaces[i]) + " " + finalString.substring(spaces[i], finalString.length);
+				}
 				if (hidden == false) {
-					e = getElements(finalString);
+					e = getElements(finalString, spaces);
 					// console.log(finalString);
 					// console.log(e);
 					var eString = "";
-					for (var i=0; i < e.length; i++) {
-						if (i == 0) {
-							eString += e[i].name;
-						}
-						else if (i == e.length-1) {
-							eString += ", and " + e[i].name;
-						}
-						else {
-							eString += ", " + e[i].name;
+					if (e.length == 2) {
+						eString = e[0].name + " and " + e[1].name;
+					}
+					else {
+						for (var i=0; i < e.length; i++) {
+							if (!(e[i].n == " ")) {
+								if (i == 0) {
+									eString += e[i].name;
+								}
+								else if (i == e.length-1) {
+									eString += ", and " + e[i].name;
+								}
+								else {
+									eString += ", " + e[i].name;
+								}
+							}
 						}
 					}
-					if (finalString.length == word.length) {
+					if (finalString.length == word.length+spaces.length) {
 						resultText.value = finalString;
 						resultText2.innerHTML = "(" + eString + ")";
 						findWordBTN.style.background = "#35A535";
@@ -839,7 +855,7 @@
 							l += e[i].n.length;
 						}
 						while (l < word.length) {
-							e.push({name:"Nothing",n:"?",number:119});
+							e.push({name:"Nothing", n:"?", number:119});
 							l++;
 						}
 						resultText.style.color = "#F51000";
@@ -853,6 +869,9 @@
 						var ele = document.createElement('img');
 						if (e[i].name == "Nothing") {
 							ele.src = "./periodic-table/119Nothing.png";
+						}
+						else if (e[i].name == "Space") {
+							ele.src = "./periodic-table/0Space.png";
 						}
 						else {
 							ele.src = "./periodic-table/" + e[i].number.toString() + e[i].n + ".png";
@@ -886,9 +905,12 @@
 		    	}
 		    }
 
-		    function getElements(estr) {
+		    function getElements(estr, spaces) {
 		    	var es = estr.split("");
 		    	var els = [];
+		    	for (var i=0; i < spaces.length; i++) {
+					es.splice(spaces[i], 0, " ");
+				}
 		    	for (var i=0; i < es.length; i++) {
 		    		if (es[i].toUpperCase() == es[i]) {
 		    			if (es[i+1] && es[i+1].toLowerCase() == es[i+1]) {
@@ -902,8 +924,12 @@
 		    	}
 		    	var elementList = [];
 		    	for (var i=0; i < els.length; i++) {
+		    		if (els[i] == " ") {
+		    			elementList.push({name:"Space", n:" ", number:0});
+		    			continue;
+		    		}
 		    		for (var i2=0; i2 < elements.length; i2++) {
-		    			if (elements[i2].n == els[i]) {
+		    			if (elements[i2].n == els[i].replace(/ /g, "")) {
 		    				elementList.push(elements[i2]);
 		    			}
 		    		}
