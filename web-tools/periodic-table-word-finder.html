@@ -117,6 +117,20 @@
 				margin: 0px;
 			}
 
+			#web-tool a {
+				font-size: 12pt;
+				color: #85C5F5;
+				display: inline-block;
+				text-decoration: none;
+				transition: 0.3s;
+				cursor: pointer;
+				margin: 0px;
+			}
+
+			#web-tool a:hover {
+				text-shadow: 0px 0px 10px rgba(133,197,245,0.5);
+			}
+
 			.inputs {
 				display: flex;
 				justify-content: center;
@@ -291,7 +305,7 @@
 				display: block;
 				width: 100%;
 			}
-			</style>
+		</style>
 	</head>
 	<body onload="baseLoad(), determineLayout()" onresize="determineLayout()" style="background: #1E1E1E; height: 100%; overflow: hidden">
 		<!-- Google Tag Manager (noscript) -->
@@ -524,10 +538,13 @@
 				<li><p>TeNNEsSINe</p></li>
 				<li><p>OGaNEsSON</p></li>
 			</ul>
+			<br>
+			<p>In total, around 49,000 English words can be spelled using the elements on the periodic table. Though this might sound like a lot, this is less than 11% of the English language!</p>
+			<a href="./periodic-table-word-finder/words">Check out a list of all the words here!</a>
 		</div>
-		<p id="version">Tool version: 1.0 (2024-4-6)</p>
+		<p id="version">Tool version: 1.1 (2024-4-7)</p>
 		<script src="../bt-js/bt-js.js"></script>
-		<!-- <script src="./word-dictionaries/english-words.js"></script> -->
+		<script src="./word-dictionaries/english-words.js"></script>
 		<script type="text/javascript">
 			var title = document.getElementById('title');
 			var download = document.getElementById('download');
@@ -935,26 +952,21 @@
 			function bgpr1() {
 		    	var longest = "";
 		    	var l = 0;
-		    	// for (var i=0; i < englishDictionary.length; i++) {
-		    	// 	if (!(englishDictionary[i].indexOf("~") > -1 || englishDictionary[i].indexOf("`") > -1 || englishDictionary[i].indexOf("!") > -1 || englishDictionary[i].indexOf("1") > -1 || englishDictionary[i].indexOf("2") > -1 || englishDictionary[i].indexOf("3") > -1 || englishDictionary[i].indexOf("4") > -1 || englishDictionary[i].indexOf("5") > -1 || englishDictionary[i].indexOf("6") > -1 || englishDictionary[i].indexOf("7") > -1 || englishDictionary[i].indexOf("8") > -1 || englishDictionary[i].indexOf("9") > -1 || englishDictionary[i].indexOf("0") > -1 || englishDictionary[i].indexOf("-") > -1 || englishDictionary[i].indexOf(".") > -1 || englishDictionary[i].indexOf("'") > -1)) {
-		    	// 		var w = findWord(englishDictionary[i]);
-		    	// 		if (w.length == englishDictionary[i].length && w.length > longest.length) {
-		    	// 			longest = w;
-		    	// 		}
-		    	// 	}
-		    	// 	if (l > 1000) {
-		    	// 		console.log(longest);
-		    	// 		console.log(((i / 466661)*100).round(2).toString() + "%");
-		    	// 		l = 0;
-		    	// 	}
-		    	// 	l++;
-		    	// }
-		    	for (var i=0; i < elements.length; i++) {
-		    		var w = findWord(elements[i].name.toLowerCase());
-		    		if (w.length == elements[i].name.length) {
-		    			console.log(w);
+		    	var str = "";
+		    	for (var i=0; i < englishDictionary.length; i++) {
+		    		if (!(englishDictionary[i].indexOf("~") > -1 || englishDictionary[i].indexOf("`") > -1 || englishDictionary[i].indexOf("!") > -1 || englishDictionary[i].indexOf("1") > -1 || englishDictionary[i].indexOf("2") > -1 || englishDictionary[i].indexOf("3") > -1 || englishDictionary[i].indexOf("4") > -1 || englishDictionary[i].indexOf("5") > -1 || englishDictionary[i].indexOf("6") > -1 || englishDictionary[i].indexOf("7") > -1 || englishDictionary[i].indexOf("8") > -1 || englishDictionary[i].indexOf("9") > -1 || englishDictionary[i].indexOf("0") > -1 || englishDictionary[i].indexOf("-") > -1 || englishDictionary[i].indexOf(".") > -1 || englishDictionary[i].indexOf("'") > -1)) {
+		    			var w = findWord(englishDictionary[i]);
+		    			if (w.length == englishDictionary[i].length) {
+		    				str += "\n" + w;
+		    			}
 		    		}
+		    		if (l > 10000) {
+		    			console.log(((i / 466661)*100).round(2).toString() + "%");
+		    			l = 0;
+		    		}
+		    		l++;
 		    	}
+		    	console.log(str);
 		    }
 		</script>
 	</body>
