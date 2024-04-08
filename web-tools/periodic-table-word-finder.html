@@ -542,7 +542,7 @@
 			<p>In total, around 49,000 English words can be spelled using the elements on the periodic table. Though this might sound like a lot, this is less than 11% of the English language!</p>
 			<a href="./periodic-table-word-finder/words">Check out a list of all the words here!</a>
 		</div>
-		<p id="version">Tool version: 1.1 (2024-4-7)</p>
+		<p id="version">Tool version: 1.2 (2024-4-7)</p>
 		<script src="../bt-js/bt-js.js"></script>
 		<!-- <script src="./word-dictionaries/english-words.js"></script> -->
 		<script type="text/javascript">
@@ -757,7 +757,7 @@
 						fs.push(me[i][i2]);
 					}
 				}
-				// console.log(fs);
+				//console.log(fs);
 				var pfs = "";
 				var ppfs = "";
 				var e = [];
@@ -808,6 +808,9 @@
 							newE.pop();
 							newE.push(fs[i-2]);
 							i -= 1;
+						}
+						if (newFS.toLowerCase() == word) {
+							break;
 						}
 						bail++;
 						if (bail > 1000 || newFS.length > 1000) {break};
@@ -906,20 +909,22 @@
 		    }
 
 		    function getElements(estr, spaces) {
-		    	var es = estr.split("");
+		    	var es = estr.split('');
 		    	var els = [];
-		    	for (var i=0; i < spaces.length; i++) {
-					es.splice(spaces[i], 0, " ");
-				}
 		    	for (var i=0; i < es.length; i++) {
-		    		if (es[i].toUpperCase() == es[i]) {
-		    			if (es[i+1] && es[i+1].toLowerCase() == es[i+1]) {
-		    				els.push(es[i] + es[i+1]);
-		    				i++;
-		    			}
-		    			else {
-		    				els.push(es[i]);
-		    			}
+		    		if (es[i] == " ") {
+			    		els.push(" ");
+		    		}
+		    		else {
+		    			if (es[i].toUpperCase() == es[i]) {
+			    			if (es[i+1] && es[i+1].toLowerCase() == es[i+1] && !(es[i+1] == " ")) {
+			    				els.push(es[i] + es[i+1]);
+			    				i++;
+			    			}
+			    			else {
+			    				els.push(es[i]);
+			    			}
+			    		}
 		    		}
 		    	}
 		    	var elementList = [];
