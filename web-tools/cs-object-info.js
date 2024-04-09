@@ -5563,6 +5563,31 @@ var objects = [
 		dateAdded:"2024/04/06", // YYYY/MM/DD
 		lastModified:"2024/04/06", // YYYY/MM/DD
 	},
+	{
+		name:"Caterpillar 6090 FS",
+		defaultAngle:0,
+		sideImage:"Caterpillar_6090_FS-side",
+		sideImageAlign:"bottom",
+		sideImageArtist:"felax",
+		sideImageDate:"2024/04/08", // YYYY/MM/DD
+		frontImage:"",
+		frontImageAlign:"none",
+		frontImageArtist:"",
+		frontImageDate:"", // YYYY/MM/DD
+		topImage:"",
+		topImageAlign:"none",
+		topImageArtist:"",
+		topImageDate:"", // YYYY/MM/DD
+		width:0.00972,
+		length:0.0217,
+		height:0.00999,
+		category1:"transportation",
+		category2:"vehicles",
+		category3:"construction",
+		tags:["largest","excavator","digger"], // don't include anything in categories or name
+		dateAdded:"2024/04/08", // YYYY/MM/DD
+		lastModified:"2024/04/08", // YYYY/MM/DD
+	},
 ];
 
 //	———————— STEPS FOR UPDATING ————————
