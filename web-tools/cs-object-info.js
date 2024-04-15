@@ -5509,7 +5509,7 @@ var objects = [
 		category1:"nature",
 		category2:"animals",
 		category3:"micro-animals",
-		tags:["swan tear","ciliate protozoan"], // don't include anything in categories or name
+		tags:["ciliate protozoan","swan tear"], // don't include anything in categories or name
 		dateAdded:"2024/04/04", // YYYY/MM/DD
 		lastModified:"2024/04/04", // YYYY/MM/DD
 	},
@@ -5534,7 +5534,7 @@ var objects = [
 		category1:"nature",
 		category2:"animals",
 		category3:"humans",
-		tags:["wbc","immune system"], // don't include anything in categories or name
+		tags:["immune system","wbc"], // don't include anything in categories or name
 		dateAdded:"2024/04/06", // YYYY/MM/DD
 		lastModified:"2024/04/06", // YYYY/MM/DD
 	},
@@ -5559,14 +5559,14 @@ var objects = [
 		category1:"miscellaneous",
 		category2:"particles",
 		category3:"cells",
-		tags:["sedentary","ciliate"], // don't include anything in categories or name
+		tags:["ciliate","sedentary"], // don't include anything in categories or name
 		dateAdded:"2024/04/06", // YYYY/MM/DD
 		lastModified:"2024/04/06", // YYYY/MM/DD
 	},
 	{
-		name:"Caterpillar 6090 FS",
+		name:"Liebherr R 9800",
 		defaultAngle:0,
-		sideImage:"Caterpillar_6090_FS-side",
+		sideImage:"Liebherr_R_9800-side",
 		sideImageAlign:"bottom",
 		sideImageArtist:"felax",
 		sideImageDate:"2024/04/08", // YYYY/MM/DD
@@ -5578,15 +5578,15 @@ var objects = [
 		topImageAlign:"none",
 		topImageArtist:"",
 		topImageDate:"", // YYYY/MM/DD
-		width:0.00972,
-		length:0.0217,
-		height:0.00999,
+		width:0.0105,
+		length:0.025435,
+		height:0.0117,
 		category1:"transportation",
 		category2:"vehicles",
 		category3:"construction",
-		tags:["largest","excavator","digger"], // don't include anything in categories or name
+		tags:["digger","excavator","largest"], // don't include anything in categories or name
 		dateAdded:"2024/04/08", // YYYY/MM/DD
-		lastModified:"2024/04/08", // YYYY/MM/DD
+		lastModified:"2024/04/15", // YYYY/MM/DD
 	},
 ];
 
