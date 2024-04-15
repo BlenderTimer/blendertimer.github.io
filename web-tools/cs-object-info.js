@@ -5588,6 +5588,56 @@ var objects = [
 		dateAdded:"2024/04/08", // YYYY/MM/DD
 		lastModified:"2024/04/15", // YYYY/MM/DD
 	},
+	{
+		name:"20ft Intermodal Container",
+		defaultAngle:0,
+		sideImage:"20ft_Intermodal_Container-side",
+		sideImageAlign:"bottom",
+		sideImageArtist:"Daniel Roberts (BlenderTimer)",
+		sideImageDate:"2024/04/15", // YYYY/MM/DD
+		frontImage:"",
+		frontImageAlign:"none",
+		frontImageArtist:"",
+		frontImageDate:"", // YYYY/MM/DD
+		topImage:"",
+		topImageAlign:"none",
+		topImageArtist:"",
+		topImageDate:"", // YYYY/MM/DD
+		width:0.00244,
+		length:0.0061,
+		height:0.00259,
+		category1:"transportation",
+		category2:"containers",
+		category3:"industrial",
+		tags:["freight","shipping"], // don't include anything in categories or name
+		dateAdded:"2024/04/15", // YYYY/MM/DD
+		lastModified:"2024/04/15", // YYYY/MM/DD
+	},
+	{
+		name:"40ft Intermodal Container",
+		defaultAngle:0,
+		sideImage:"40ft_Intermodal_Container-side",
+		sideImageAlign:"bottom",
+		sideImageArtist:"Daniel Roberts (BlenderTimer)",
+		sideImageDate:"2024/04/15", // YYYY/MM/DD
+		frontImage:"",
+		frontImageAlign:"none",
+		frontImageArtist:"",
+		frontImageDate:"", // YYYY/MM/DD
+		topImage:"",
+		topImageAlign:"none",
+		topImageArtist:"",
+		topImageDate:"", // YYYY/MM/DD
+		width:0.00244,
+		length:0.012192,
+		height:0.00259,
+		category1:"transportation",
+		category2:"containers",
+		category3:"industrial",
+		tags:["freight","shipping"], // don't include anything in categories or name
+		dateAdded:"2024/04/15", // YYYY/MM/DD
+		lastModified:"2024/04/15", // YYYY/MM/DD
+	},
 ];
 
 //	———————— STEPS FOR UPDATING ————————
