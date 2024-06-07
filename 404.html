@@ -143,7 +143,10 @@
                 if (url.indexOf("#") > -1) {
                     ids = url.substring(url.indexOf("#"), url.length);
                 }
-                if (url.indexOf("/video-sources/") > -1) {
+                if (url.endsWith("/") || url.indexOf("/#") > -1) {
+                    window.location = url.substring(0, url.lastIndexOf("/")) + ids;
+                }
+                else if (url.indexOf("/video-sources/") > -1) {
                     var newURL = url.substring(0, url.indexOf("/video-sources/") + 15);
                     var endURL = url.substring(url.indexOf("/video-sources/") + 15, url.length);
                     var tui = 0;
