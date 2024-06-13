@@ -2,6 +2,8 @@ var contactMain = document.getElementById('contact');
 var contactLink = document.getElementById('contact-link');
 var contactText = document.getElementById('contact-text');
 var contactImage = document.getElementById('contact-image');
+var socialMain = document.getElementById('social-platforms');
+var supportMain = document.getElementById('support');
 var linkOpen = false
 var logoTimelineLogos = document.getElementsByClassName('logo-timeline-logo');
 var lastLogo = document.getElementById('last-logo');
@@ -18,9 +20,17 @@ var cpdTitle = document.getElementById('cpd-title');
 var cpdText = document.getElementById('cpd-text');
 
 function init() {
+	if (window.location.toString().indexOf("#social") > -1) {
+		setTimeout(function() {socialMain.style.background = "#B02525"}, 50);
+		setTimeout(function() {socialMain.style.background = "#252525"}, 2000);
+	}
 	if (window.location.toString().indexOf("#contact") > -1) {
 		setTimeout(function() {contactMain.style.background = "#B02525"}, 50);
 		setTimeout(function() {contactMain.style.background = "#252525"}, 2000);
+	}
+	if (window.location.toString().indexOf("#support") > -1 || window.location.toString().indexOf("#donate") > -1) {
+		setTimeout(function() {supportMain.style.background = "#B02525"}, 50);
+		setTimeout(function() {supportMain.style.background = "#252525"}, 2000);
 	}
 	var cxbc = closeXButton.getContext("2d");
 	cxbc.beginPath();
@@ -79,7 +89,7 @@ function lastLogoV(m) {
 	}
 }
 
-function determineLayout() {
+function determineLayoutt() {
 	if (window.innerWidth < 800) {
 		faq.style.width = "100%";
 		faq.style.marginTop = "15px";
