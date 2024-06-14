@@ -89,7 +89,7 @@ function lastLogoV(m) {
 	}
 }
 
-function determineLayoutt() {
+function determineLayout() {
 	if (window.innerWidth < 800) {
 		faq.style.width = "100%";
 		faq.style.marginTop = "15px";
