@@ -5638,6 +5638,306 @@ var objects = [
 		dateAdded:"2024/04/15", // YYYY/MM/DD
 		lastModified:"2024/04/15", // YYYY/MM/DD
 	},
+	{
+		name:"Strawberry",
+		defaultAngle:1,
+		sideImage:"",
+		sideImageAlign:"none",
+		sideImageArtist:"",
+		sideImageDate:"", // YYYY/MM/DD
+		frontImage:"Strawberry-front",
+		frontImageAlign:"none",
+		frontImageArtist:"Daniel Roberts (BlenderTimer)",
+		frontImageDate:"2024/06/25", // YYYY/MM/DD
+		topImage:"",
+		topImageAlign:"none",
+		topImageArtist:"",
+		topImageDate:"", // YYYY/MM/DD
+		width:0.0000195,
+		length:0.0000195,
+		height:0.00003048,
+		category1:"miscellaneous",
+		category2:"food",
+		category3:"fruit",
+		tags:["fragaria"], // don't include anything in categories or name
+		dateAdded:"2024/06/25", // YYYY/MM/DD
+		lastModified:"2024/06/25", // YYYY/MM/DD
+	},
+	{
+		name:"Jalapeño",
+		defaultAngle:1,
+		sideImage:"",
+		sideImageAlign:"none",
+		sideImageArtist:"",
+		sideImageDate:"", // YYYY/MM/DD
+		frontImage:"Jalapeno-front",
+		frontImageAlign:"none",
+		frontImageArtist:"Daniel Roberts (BlenderTimer)",
+		frontImageDate:"2024/06/25", // YYYY/MM/DD
+		topImage:"",
+		topImageAlign:"none",
+		topImageArtist:"",
+		topImageDate:"", // YYYY/MM/DD
+		width:0.00002682,
+		length:0.00002682,
+		height:0.00008128,
+		category1:"miscellaneous",
+		category2:"food",
+		category3:"vegetables",
+		tags:["jalapeno","pepper","hot","spicy","spice"], // don't include anything in categories or name
+		dateAdded:"2024/06/25", // YYYY/MM/DD
+		lastModified:"2024/06/25", // YYYY/MM/DD
+	},
+	{
+		name:"Spinosaurus Aegyptiacus",
+		defaultAngle:0,
+		sideImage:"Spinosaurus_Aegyptiacus-side",
+		sideImageAlign:"bottom",
+		sideImageArtist:"Daniel Roberts (BlenderTimer)",
+		sideImageDate:"2024/06/25", // YYYY/MM/DD
+		frontImage:"",
+		frontImageAlign:"none",
+		frontImageArtist:"",
+		frontImageDate:"", // YYYY/MM/DD
+		topImage:"",
+		topImageAlign:"none",
+		topImageArtist:"",
+		topImageDate:"", // YYYY/MM/DD
+		width:0.002,
+		length:0.0152,
+		height:0.00532,
+		category1:"nature",
+		category2:"animals",
+		category3:"reptiles",
+		tags:["dinosaur"], // don't include anything in categories or name
+		dateAdded:"2024/06/25", // YYYY/MM/DD
+		lastModified:"2024/06/25", // YYYY/MM/DD
+	},
+	{
+		name:"North Sentinel Island",
+		defaultAngle:2,
+		sideImage:"",
+		sideImageAlign:"none",
+		sideImageArtist:"",
+		sideImageDate:"", // YYYY/MM/DD
+		frontImage:"",
+		frontImageAlign:"none",
+		frontImageArtist:"",
+		frontImageDate:"", // YYYY/MM/DD
+		topImage:"North_Sentinel_Island-top",
+		topImageAlign:"none",
+		topImageArtist:"Daniel Roberts (BlenderTimer)",
+		topImageDate:"2024/06/25", // YYYY/MM/DD
+		width:8.73,
+		length:7.5,
+		height:0.122,
+		category1:"nature",
+		category2:"geography",
+		category3:"land",
+		tags:["andaman"], // don't include anything in categories or name
+		dateAdded:"2024/06/25", // YYYY/MM/DD
+		lastModified:"2024/06/25", // YYYY/MM/DD
+	},
+	{
+		name:"Continental United States",
+		defaultAngle:2,
+		sideImage:"",
+		sideImageAlign:"none",
+		sideImageArtist:"",
+		sideImageDate:"", // YYYY/MM/DD
+		frontImage:"",
+		frontImageAlign:"none",
+		frontImageArtist:"",
+		frontImageDate:"", // YYYY/MM/DD
+		topImage:"Continental_United_States-top",
+		topImageAlign:"none",
+		topImageArtist:"Daniel Roberts (BlenderTimer)",
+		topImageDate:"2024/06/25", // YYYY/MM/DD
+		width:3094,
+		length:4912,
+		height:4.418,
+		category1:"nature",
+		category2:"geography",
+		category3:"land",
+		tags:["usa","america","north","u.s.a.","conterminous"], // don't include anything in categories or name
+		dateAdded:"2024/06/25", // YYYY/MM/DD
+		lastModified:"2024/06/25", // YYYY/MM/DD
+	},
+	{
+		name:"Robert Waldow",
+		defaultAngle:1,
+		sideImage:"",
+		sideImageAlign:"none",
+		sideImageArtist:"",
+		sideImageDate:"", // YYYY/MM/DD
+		frontImage:"Robert_Waldow-front",
+		frontImageAlign:"bottom",
+		frontImageArtist:"Daniel Roberts (BlenderTimer)",
+		frontImageDate:"2024/06/25", // YYYY/MM/DD
+		topImage:"",
+		topImageAlign:"none",
+		topImageArtist:"",
+		topImageDate:"", // YYYY/MM/DD
+		width:0.00073408,
+		length:0.0006,
+		height:0.00272,
+		category1:"nature",
+		category2:"animals",
+		category3:"humans",
+		tags:["largest","tallest","person","man","perishing","alton","giant"], // don't include anything in categories or name
+		dateAdded:"2024/06/25", // YYYY/MM/DD
+		lastModified:"2024/06/25", // YYYY/MM/DD
+	},
+	{
+		name:"Vesta",
+		defaultAngle:1,
+		sideImage:"",
+		sideImageAlign:"none",
+		sideImageArtist:"",
+		sideImageDate:"", // YYYY/MM/DD
+		frontImage:"Vesta-front",
+		frontImageAlign:"none",
+		frontImageArtist:"Daniel Roberts (BlenderTimer)",
+		frontImageDate:"2024/06/25", // YYYY/MM/DD
+		topImage:"",
+		topImageAlign:"none",
+		topImageArtist:"",
+		topImageDate:"", // YYYY/MM/DD
+		width:530,
+		length:430,
+		height:429,
+		category1:"space",
+		category2:"objects",
+		category3:"asteroids",
+		tags:["largest"], // don't include anything in categories or name
+		dateAdded:"2024/06/25", // YYYY/MM/DD
+		lastModified:"2024/06/25", // YYYY/MM/DD
+	},
+	{
+		name:"Sirius B",
+		defaultAngle:1,
+		sideImage:"",
+		sideImageAlign:"none",
+		sideImageArtist:"",
+		sideImageDate:"", // YYYY/MM/DD
+		frontImage:"Sirius_B-front",
+		frontImageAlign:"none",
+		frontImageArtist:"Daniel Roberts (BlenderTimer)",
+		frontImageDate:"2024/06/25", // YYYY/MM/DD
+		topImage:"",
+		topImageAlign:"none",
+		topImageArtist:"",
+		topImageDate:"", // YYYY/MM/DD
+		width:11687,
+		length:11687,
+		height:11687,
+		category1:"space",
+		category2:"stars",
+		category3:"white-dwarfs",
+		tags:["pup"], // don't include anything in categories or name
+		dateAdded:"2024/06/25", // YYYY/MM/DD
+		lastModified:"2024/06/25", // YYYY/MM/DD
+	},
+	{
+		name:"J1407b",
+		defaultAngle:2,
+		sideImage:"",
+		sideImageAlign:"none",
+		sideImageArtist:"",
+		sideImageDate:"", // YYYY/MM/DD
+		frontImage:"",
+		frontImageAlign:"none",
+		frontImageArtist:"",
+		frontImageDate:"", // YYYY/MM/DD
+		topImage:"J1407b_Rings-top",
+		topImageAlign:"none",
+		topImageArtist:"Daniel Roberts (BlenderTimer)",
+		topImageDate:"2024/06/25", // YYYY/MM/DD
+		width:180000000,
+		length:180000000,
+		height:100,
+		category1:"space",
+		category2:"planets",
+		category3:"gaseous",
+		tags:["exoplanet"], // don't include anything in categories or name
+		dateAdded:"2024/06/25", // YYYY/MM/DD
+		lastModified:"2024/06/25", // YYYY/MM/DD
+	},
+	{
+		name:"Charon (Pluto's Moon)",
+		defaultAngle:1,
+		sideImage:"",
+		sideImageAlign:"none",
+		sideImageArtist:"",
+		sideImageDate:"", // YYYY/MM/DD
+		frontImage:"Charon_Plutos_Moon-front",
+		frontImageAlign:"none",
+		frontImageArtist:"Daniel Roberts (BlenderTimer)",
+		frontImageDate:"2024/06/25", // YYYY/MM/DD
+		topImage:"",
+		topImageAlign:"none",
+		topImageArtist:"",
+		topImageDate:"", // YYYY/MM/DD
+		width:606,
+		length:606,
+		height:606,
+		category1:"space",
+		category2:"planets",
+		category3:"moons",
+		tags:["largest","i"], // don't include anything in categories or name
+		dateAdded:"2024/06/25", // YYYY/MM/DD
+		lastModified:"2024/06/25", // YYYY/MM/DD
+	},
+	{
+		name:"Taj Mahal",
+		defaultAngle:1,
+		sideImage:"",
+		sideImageAlign:"none",
+		sideImageArtist:"",
+		sideImageDate:"", // YYYY/MM/DD
+		frontImage:"Taj_Mahal-front",
+		frontImageAlign:"bottom",
+		frontImageArtist:"Daniel Roberts (BlenderTimer)",
+		frontImageDate:"2024/06/25", // YYYY/MM/DD
+		topImage:"",
+		topImageAlign:"none",
+		topImageArtist:"",
+		topImageDate:"", // YYYY/MM/DD
+		width:0.114,
+		length:0.095,
+		height:0.073,
+		category1:"structures",
+		category2:"buildings",
+		category3:"religious-buildings",
+		tags:["temple","crown of the palace","mausoleum"], // don't include anything in categories or name
+		dateAdded:"2024/06/25", // YYYY/MM/DD
+		lastModified:"2024/06/25", // YYYY/MM/DD
+	},
+	{
+		name:"Statue of Unity",
+		defaultAngle:1,
+		sideImage:"",
+		sideImageAlign:"none",
+		sideImageArtist:"",
+		sideImageDate:"", // YYYY/MM/DD
+		frontImage:"Statue_of_Unity-front",
+		frontImageAlign:"bottom",
+		frontImageArtist:"Daniel Roberts (BlenderTimer)",
+		frontImageDate:"2024/06/25", // YYYY/MM/DD
+		topImage:"",
+		topImageAlign:"none",
+		topImageArtist:"",
+		topImageDate:"", // YYYY/MM/DD
+		width:0.071,
+		length:0.061,
+		height:0.182,
+		category1:"structures",
+		category2:"monuments",
+		category3:"statues",
+		tags:["tallest","largest"], // don't include anything in categories or name
+		dateAdded:"2024/06/25", // YYYY/MM/DD
+		lastModified:"2024/06/25", // YYYY/MM/DD
+	},
 ];
 
 //	———————— STEPS FOR UPDATING ————————
