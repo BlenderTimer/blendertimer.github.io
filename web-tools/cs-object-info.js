@@ -5839,7 +5839,7 @@ var objects = [
 		lastModified:"2024/06/25", // YYYY/MM/DD
 	},
 	{
-		name:"J1407b",
+		name:"J1407b Rings",
 		defaultAngle:2,
 		sideImage:"",
 		sideImageAlign:"none",
