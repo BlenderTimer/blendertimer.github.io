@@ -5938,6 +5938,56 @@ var objects = [
 		dateAdded:"2024/06/25", // YYYY/MM/DD
 		lastModified:"2024/06/25", // YYYY/MM/DD
 	},
+	{
+		name:"Cat's Eye Nebula",
+		defaultAngle:2,
+		sideImage:"",
+		sideImageAlign:"none",
+		sideImageArtist:"",
+		sideImageDate:"", // YYYY/MM/DD
+		frontImage:"",
+		frontImageAlign:"none",
+		frontImageArtist:"",
+		frontImageDate:"", // YYYY/MM/DD
+		topImage:"Cats_Eye_Nebula-top",
+		topImageAlign:"none",
+		topImageArtist:"Daniel Roberts (BlenderTimer)",
+		topImageDate:"2024/06/26", // YYYY/MM/DD
+		width:29326000000000,
+		length:47300000000000,
+		height:29326000000000,
+		category1:"space",
+		category2:"objects",
+		category3:"nebulae",
+		tags:["nebulas"], // don't include anything in categories or name
+		dateAdded:"2024/06/26", // YYYY/MM/DD
+		lastModified:"2024/06/26", // YYYY/MM/DD
+	},
+	{
+		name:"Oort Cloud",
+		defaultAngle:2,
+		sideImage:"",
+		sideImageAlign:"none",
+		sideImageArtist:"",
+		sideImageDate:"", // YYYY/MM/DD
+		frontImage:"",
+		frontImageAlign:"none",
+		frontImageArtist:"",
+		frontImageDate:"", // YYYY/MM/DD
+		topImage:"Oort_Cloud-top",
+		topImageAlign:"none",
+		topImageArtist:"Daniel Roberts (BlenderTimer)",
+		topImageDate:"2024/06/26", // YYYY/MM/DD
+		width:14959800000000,
+		length:14959800000000,
+		height:14959800000000,
+		category1:"space",
+		category2:"objects",
+		category3:"clusters",
+		tags:["solar system"], // don't include anything in categories or name
+		dateAdded:"2024/06/26", // YYYY/MM/DD
+		lastModified:"2024/06/26", // YYYY/MM/DD
+	},
 ];
 
 //	———————— STEPS FOR UPDATING ————————
