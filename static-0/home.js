@@ -7,6 +7,17 @@ var latestVideo = document.getElementById('latest-video-video');
 var latestShort = document.getElementById('latest-video-short');
 var videoFound = false;
 var shortFound = false;
+for (var i=videos.length-1; i > 0; i-=1) {
+    if (videos[i].type = "short" && shortFound == false) {
+        document.getElementById("latest-video-short").src = "https://www.youtube.com/embed/" + videos[i].youtubeID;
+        shortFound = true;
+    }
+    else if (videoFound == false) {
+        document.getElementById("latest-video-video").src = "https://www.youtube.com/embed/" + videos[i].youtubeID;
+        videoFound = true;
+    }
+    if (videoFound == true && shortFound == true) {break};
+}
 function determineLayout() {
     if (window.innerWidth < 350) {
         submitAVideoIdea.style.width = "100%";
@@ -65,30 +76,30 @@ function determineLayout() {
 	}
 }
 
-$.get(
-        "https://www.googleapis.com/youtube/v3/search",{
-        part: 'snippet',
-        maxResults: 10,
-        channelId: 'UCFMTkXP-dTa3cBh8XxVKBGQ',
-        order: 'date',
-        type: 'video',
-        key: 'AIzaSyDsaGX5mhvqCpI3jWMFFGMmmmB5IUEyUrk'},
-        function(data) {
-        $.each( data.items, function(i, item) {
-            if (videoFound == false) {
-                if (item.snippet.title.toString().indexOf("#shorts") < 0) {
-                    document.getElementById("latest-video-video").src = "https://www.youtube.com/embed/" + item.id.videoId;
-                    videoFound = true;
-                };
-            };
-        });
-        $.each( data.items, function(i, item) {
-            if (shortFound == false) {
-                if (item.snippet.title.toString().indexOf("#shorts") > -1) {
-                    document.getElementById("latest-video-short").src = "https://www.youtube.com/embed/" + item.id.videoId;
-                    shortFound = true;
-                };
-            };
-        });
-    }
-);
+// $.get(
+//         "https://www.googleapis.com/youtube/v3/search",{
+//         part: 'snippet',
+//         maxResults: 10,
+//         channelId: 'UCFMTkXP-dTa3cBh8XxVKBGQ',
+//         order: 'date',
+//         type: 'video',
+//         key: 'AIzaSyDsaGX5mhvqCpI3jWMFFGMmmmB5IUEyUrk'},
+//         function(data) {
+//         $.each( data.items, function(i, item) {
+//             if (videoFound == false) {
+//                 if (item.snippet.title.toString().indexOf("#shorts") < 0) {
+//                     document.getElementById("latest-video-video").src = "https://www.youtube.com/embed/" + item.id.videoId;
+//                     videoFound = true;
+//                 };
+//             };
+//         });
+//         $.each( data.items, function(i, item) {
+//             if (shortFound == false) {
+//                 if (item.snippet.title.toString().indexOf("#shorts") > -1) {
+//                     document.getElementById("latest-video-short").src = "https://www.youtube.com/embed/" + item.id.videoId;
+//                     shortFound = true;
+//                 };
+//             };
+//         });
+//     }
+// );
