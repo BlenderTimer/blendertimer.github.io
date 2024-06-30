@@ -5684,7 +5684,7 @@ var objects = [
 		category1:"miscellaneous",
 		category2:"food",
 		category3:"vegetables",
-		tags:["jalapeno","pepper","hot","spicy","spice"], // don't include anything in categories or name
+		tags:["hot","jalapeno","pepper","spice","spicy"], // don't include anything in categories or name
 		dateAdded:"2024/06/25", // YYYY/MM/DD
 		lastModified:"2024/06/25", // YYYY/MM/DD
 	},
@@ -5759,7 +5759,7 @@ var objects = [
 		category1:"nature",
 		category2:"geography",
 		category3:"land",
-		tags:["usa","america","north","u.s.a.","conterminous"], // don't include anything in categories or name
+		tags:["america","conterminous","north","u.s.a.","usa"], // don't include anything in categories or name
 		dateAdded:"2024/06/25", // YYYY/MM/DD
 		lastModified:"2024/06/25", // YYYY/MM/DD
 	},
@@ -5784,7 +5784,7 @@ var objects = [
 		category1:"nature",
 		category2:"animals",
 		category3:"humans",
-		tags:["largest","tallest","person","man","perishing","alton","giant"], // don't include anything in categories or name
+		tags:["alton","giant","largest","man","perishing","person","tallest"], // don't include anything in categories or name
 		dateAdded:"2024/06/25", // YYYY/MM/DD
 		lastModified:"2024/06/25", // YYYY/MM/DD
 	},
@@ -5884,7 +5884,7 @@ var objects = [
 		category1:"space",
 		category2:"planets",
 		category3:"moons",
-		tags:["largest","i"], // don't include anything in categories or name
+		tags:["i","largest"], // don't include anything in categories or name
 		dateAdded:"2024/06/25", // YYYY/MM/DD
 		lastModified:"2024/06/25", // YYYY/MM/DD
 	},
@@ -5909,7 +5909,7 @@ var objects = [
 		category1:"structures",
 		category2:"buildings",
 		category3:"religious-buildings",
-		tags:["temple","crown of the palace","mausoleum"], // don't include anything in categories or name
+		tags:["crown of the palace","mausoleum","temple"], // don't include anything in categories or name
 		dateAdded:"2024/06/25", // YYYY/MM/DD
 		lastModified:"2024/06/25", // YYYY/MM/DD
 	},
@@ -5934,7 +5934,7 @@ var objects = [
 		category1:"structures",
 		category2:"monuments",
 		category3:"statues",
-		tags:["tallest","largest"], // don't include anything in categories or name
+		tags:["largest","tallest"], // don't include anything in categories or name
 		dateAdded:"2024/06/25", // YYYY/MM/DD
 		lastModified:"2024/06/25", // YYYY/MM/DD
 	},
@@ -5987,6 +5987,31 @@ var objects = [
 		tags:["solar system"], // don't include anything in categories or name
 		dateAdded:"2024/06/26", // YYYY/MM/DD
 		lastModified:"2024/06/26", // YYYY/MM/DD
+	},
+	{
+		name:"Hub Island (Just Enough Room Island)",
+		defaultAngle:2,
+		sideImage:"",
+		sideImageAlign:"none",
+		sideImageArtist:"",
+		sideImageDate:"", // YYYY/MM/DD
+		frontImage:"",
+		frontImageAlign:"none",
+		frontImageArtist:"",
+		frontImageDate:"", // YYYY/MM/DD
+		topImage:"Hub_Island_Just_Enough_Room_Island-top",
+		topImageAlign:"none",
+		topImageArtist:"Daniel Roberts (BlenderTimer)",
+		topImageDate:"2024/06/29", // YYYY/MM/DD
+		width:0.03713,
+		length:0.02859,
+		height:0.005,
+		category1:"nature",
+		category2:"geography",
+		category3:"land",
+		tags:["smallest","thousand"], // don't include anything in categories or name
+		dateAdded:"2024/06/29", // YYYY/MM/DD
+		lastModified:"2024/06/29", // YYYY/MM/DD
 	},
 ];
 
