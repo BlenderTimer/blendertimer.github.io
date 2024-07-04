@@ -2615,7 +2615,7 @@ var objects = [
 		frontImage:"TON_618_Black_Hole-front",
 		frontImageAlign:"none",
 		frontImageArtist:"Daniel Roberts (BlenderTimer)",
-		frontImageDate:"2023/08/29", // YYYY/MM/DD
+		frontImageDate:"2024/07/02", // YYYY/MM/DD
 		topImage:"",
 		topImageAlign:"none",
 		topImageArtist:"",
@@ -2623,12 +2623,13 @@ var objects = [
 		width:390000000000,
 		length:390000000000,
 		height:390000000000,
+		requestedBy:"hellishbroamongus",
 		category1:"space",
 		category2:"galaxies",
 		category3:"black_holes",
 		tags:["2nd","quasar","second largest"], // don't include anything in categories or name
 		dateAdded:"2023/08/29", // YYYY/MM/DD
-		lastModified:"2023/08/29", // YYYY/MM/DD
+		lastModified:"2024/07/02", // YYYY/MM/DD
 	},
 	{
 		name:"Grand Canyon (Arizona)",
@@ -2698,12 +2699,13 @@ var objects = [
 		width:0.003,
 		length:0.0124,
 		height:0.00618,
+		requestedBy:"Anonymous",
 		category1:"nature",
 		category2:"animals",
 		category3:"reptiles",
 		tags:["dinosaur"], // don't include anything in categories or name
 		dateAdded:"2023/09/02", // YYYY/MM/DD
-		lastModified:"2023/09/02", // YYYY/MM/DD
+		lastModified:"2024/07/02", // YYYY/MM/DD
 	},
 	{
 		name:"BelAZ 75710",
@@ -2790,7 +2792,7 @@ var objects = [
 		frontImage:"Airbus_A380_800-front",
 		frontImageAlign:"bottom",
 		frontImageArtist:"Daniel Roberts (BlenderTimer)",
-		frontImageDate:"2023/09/07", // YYYY/MM/DD
+		frontImageDate:"2024/07/02", // YYYY/MM/DD
 		topImage:"Airbus_A380_800-top",
 		topImageAlign:"none",
 		topImageArtist:"Daniel Roberts (BlenderTimer)",
@@ -2799,12 +2801,13 @@ var objects = [
 		length:0.07272,
 		height:0.0241,
 		searchBoosts:[{query:"plane",boost:2000}],
+		requestedBy:"Anonymous",
 		category1:"transportation",
 		category2:"aircraft",
 		category3:"airplanes",
 		tags:["airliner"], // don't include anything in categories or name
 		dateAdded:"2023/09/07", // YYYY/MM/DD
-		lastModified:"2024/03/26", // YYYY/MM/DD
+		lastModified:"2024/07/02", // YYYY/MM/DD
 	},
 	{
 		name:"Boeing 747",
@@ -2816,7 +2819,7 @@ var objects = [
 		frontImage:"Boeing_747-front",
 		frontImageAlign:"bottom",
 		frontImageArtist:"Daniel Roberts (BlenderTimer)",
-		frontImageDate:"2023/09/07", // YYYY/MM/DD
+		frontImageDate:"2024/07/02", // YYYY/MM/DD
 		topImage:"Boeing_747-top",
 		topImageAlign:"none",
 		topImageArtist:"Daniel Roberts (BlenderTimer)",
@@ -2825,12 +2828,13 @@ var objects = [
 		length:0.0706,
 		height:0.0193,
 		searchBoosts:[{query:"plane",boost:2000}],
+		requestedBy:"Anonymous",
 		category1:"transportation",
 		category2:"aircraft",
 		category3:"airplanes",
 		tags:["airliner"], // don't include anything in categories or name
 		dateAdded:"2023/09/07", // YYYY/MM/DD
-		lastModified:"2024/03/26", // YYYY/MM/DD
+		lastModified:"2024/07/02", // YYYY/MM/DD
 	},
 	{
 		name:"Lego Stud",
@@ -3075,12 +3079,13 @@ var objects = [
 		width:14110,
 		length:18655,
 		height:10.925,
+		requestedBy:"Anonymous",
 		category1:"nature",
 		category2:"geography",
 		category3:"oceans",
 		tags:["earth","largest","water"], // don't include anything in categories or name
 		dateAdded:"2023/09/12", // YYYY/MM/DD
-		lastModified:"2023/09/12", // YYYY/MM/DD
+		lastModified:"2024/07/02", // YYYY/MM/DD
 	},
 	{
 		name:"Atlantic Ocean",
@@ -3100,12 +3105,13 @@ var objects = [
 		width:14294,
 		length:12360,
 		height:8.74,
+		requestedBy:"Anonymous",
 		category1:"nature",
 		category2:"geography",
 		category3:"oceans",
 		tags:["earth","water"], // don't include anything in categories or name
 		dateAdded:"2023/09/12", // YYYY/MM/DD
-		lastModified:"2023/09/12", // YYYY/MM/DD
+		lastModified:"2024/07/02", // YYYY/MM/DD
 	},
 	{
 		name:"Indian Ocean",
@@ -3125,12 +3131,13 @@ var objects = [
 		width:10088,
 		length:12833,
 		height:7.725,
+		requestedBy:"Anonymous",
 		category1:"nature",
 		category2:"geography",
 		category3:"oceans",
 		tags:["earth","water"], // don't include anything in categories or name
 		dateAdded:"2023/09/12", // YYYY/MM/DD
-		lastModified:"2023/09/12", // YYYY/MM/DD
+		lastModified:"2024/07/02", // YYYY/MM/DD
 	},
 	{
 		name:"Pacific Ocean (north)",
@@ -3150,12 +3157,13 @@ var objects = [
 		width:7384,
 		length:18177,
 		height:10.925,
+		requestedBy:"Anonymous",
 		category1:"nature",
 		category2:"geography",
 		category3:"oceans",
 		tags:["earth","water"], // don't include anything in categories or name
 		dateAdded:"2023/09/12", // YYYY/MM/DD
-		lastModified:"2023/09/12", // YYYY/MM/DD
+		lastModified:"2024/07/02", // YYYY/MM/DD
 	},
 	{
 		name:"Pacific Ocean (south)",
@@ -3175,12 +3183,13 @@ var objects = [
 		width:6948,
 		length:17426,
 		height:10.882,
+		requestedBy:"Anonymous",
 		category1:"nature",
 		category2:"geography",
 		category3:"oceans",
 		tags:["earth","water"], // don't include anything in categories or name
 		dateAdded:"2023/09/12", // YYYY/MM/DD
-		lastModified:"2023/09/12", // YYYY/MM/DD
+		lastModified:"2024/07/02", // YYYY/MM/DD
 	},
 	{
 		name:"Atlantic Ocean (north)",
@@ -3200,12 +3209,13 @@ var objects = [
 		width:7669,
 		length:11755,
 		height:8.74,
+		requestedBy:"Anonymous",
 		category1:"nature",
 		category2:"geography",
 		category3:"oceans",
 		tags:["earth","water"], // don't include anything in categories or name
 		dateAdded:"2023/09/12", // YYYY/MM/DD
-		lastModified:"2023/09/12", // YYYY/MM/DD
+		lastModified:"2024/07/02", // YYYY/MM/DD
 	},
 	{
 		name:"Atlantic Ocean (south)",
@@ -3225,12 +3235,13 @@ var objects = [
 		width:6714,
 		length:8558,
 		height:8.428,
+		requestedBy:"Anonymous",
 		category1:"nature",
 		category2:"geography",
 		category3:"oceans",
 		tags:["earth","water"], // don't include anything in categories or name
 		dateAdded:"2023/09/12", // YYYY/MM/DD
-		lastModified:"2023/09/12", // YYYY/MM/DD
+		lastModified:"2024/07/02", // YYYY/MM/DD
 	},
 	{
 		name:"Southern Ocean",
@@ -3250,12 +3261,13 @@ var objects = [
 		width:7522,
 		length:7522,
 		height:8.125,
+		requestedBy:"Anonymous",
 		category1:"nature",
 		category2:"geography",
 		category3:"oceans",
 		tags:["antarctica","earth","water"], // don't include anything in categories or name
 		dateAdded:"2023/09/12", // YYYY/MM/DD
-		lastModified:"2023/09/12", // YYYY/MM/DD
+		lastModified:"2024/07/02", // YYYY/MM/DD
 	},
 	{
 		name:"Arctic Ocean",
@@ -3275,12 +3287,13 @@ var objects = [
 		width:7728,
 		length:8708,
 		height:5.669,
+		requestedBy:"Anonymous",
 		category1:"nature",
 		category2:"geography",
 		category3:"oceans",
 		tags:["earth","north","water"], // don't include anything in categories or name
 		dateAdded:"2023/09/12", // YYYY/MM/DD
-		lastModified:"2023/09/12", // YYYY/MM/DD
+		lastModified:"2024/07/02", // YYYY/MM/DD
 	},
 	{
 		name:"South China Sea",
@@ -3300,12 +3313,13 @@ var objects = [
 		width:5099,
 		length:6121,
 		height:5.016,
+		requestedBy:"Anonymous",
 		category1:"nature",
 		category2:"geography",
 		category3:"oceans",
 		tags:["earth","water"], // don't include anything in categories or name
 		dateAdded:"2023/09/12", // YYYY/MM/DD
-		lastModified:"2023/09/12", // YYYY/MM/DD
+		lastModified:"2024/07/02", // YYYY/MM/DD
 	},
 	{
 		name:"Mediterranean Sea",
@@ -3325,12 +3339,13 @@ var objects = [
 		width:2708,
 		length:5410,
 		height:5.267,
+		requestedBy:"Anonymous",
 		category1:"nature",
 		category2:"geography",
 		category3:"oceans",
 		tags:["earth","water"], // don't include anything in categories or name
 		dateAdded:"2023/09/12", // YYYY/MM/DD
-		lastModified:"2023/09/12", // YYYY/MM/DD
+		lastModified:"2024/07/02", // YYYY/MM/DD
 	},
 	{
 		name:"Baltic Sea",
@@ -3350,12 +3365,13 @@ var objects = [
 		width:1862,
 		length:1594,
 		height:459,
+		requestedBy:"Anonymous",
 		category1:"nature",
 		category2:"geography",
 		category3:"oceans",
 		tags:["earth","water"], // don't include anything in categories or name
 		dateAdded:"2023/09/12", // YYYY/MM/DD
-		lastModified:"2023/09/12", // YYYY/MM/DD
+		lastModified:"2024/07/02", // YYYY/MM/DD
 	},
 	{
 		name:"Mil Mi-26",
@@ -3417,7 +3433,7 @@ var objects = [
 		frontImage:"Aero_Spacelines_Super_Guppy-front",
 		frontImageAlign:"bottom",
 		frontImageArtist:"Daniel Roberts (BlenderTimer)",
-		frontImageDate:"2023/09/17", // YYYY/MM/DD
+		frontImageDate:"2024/07/02", // YYYY/MM/DD
 		topImage:"Aero_Spacelines_Super_Guppy-top",
 		topImageAlign:"none",
 		topImageArtist:"Daniel Roberts (BlenderTimer)",
@@ -3426,12 +3442,13 @@ var objects = [
 		length:0.04384,
 		height:0.01478,
 		searchBoosts:[{query:"plane",boost:2000}],
+		requestedBy:"felax",
 		category1:"transportation",
 		category2:"aircraft",
 		category3:"airplanes",
 		tags:["boeing"], // don't include anything in categories or name
 		dateAdded:"2023/09/17", // YYYY/MM/DD
-		lastModified:"2024/03/26", // YYYY/MM/DD
+		lastModified:"2024/07/02", // YYYY/MM/DD
 	},
 	{
 		name:"California Redwood",
@@ -3544,7 +3561,7 @@ var objects = [
 		frontImage:"Measurement-vertical",
 		frontImageAlign:"none",
 		frontImageArtist:"Daniel Roberts (BlenderTimer)",
-		frontImageDate:"2023/09/09", // YYYY/MM/DD
+		frontImageDate:"2024/07/02", // YYYY/MM/DD
 		topImage:"Measurement-horizontal",
 		topImageAlign:"none",
 		topImageArtist:"Daniel Roberts (BlenderTimer)",
@@ -3552,12 +3569,13 @@ var objects = [
 		width:9111866036404383000000,
 		length:126773788332582730000000,
 		height:126773788332582730000000,
+		requestedBy:"Anonymous",
 		category1:"miscellaneous",
 		category2:"non-objects",
 		category3:"measurements",
 		tags:["telescope"], // don't include anything in categories or name
 		dateAdded:"2023/09/30", // YYYY/MM/DD
-		lastModified:"2023/09/30", // YYYY/MM/DD
+		lastModified:"2024/07/02", // YYYY/MM/DD
 	},
 	{
 		name:"Reach of JWST (measurement)",
@@ -3569,7 +3587,7 @@ var objects = [
 		frontImage:"Measurement-vertical",
 		frontImageAlign:"none",
 		frontImageArtist:"Daniel Roberts (BlenderTimer)",
-		frontImageDate:"2023/09/09", // YYYY/MM/DD
+		frontImageDate:"2024/07/02", // YYYY/MM/DD
 		topImage:"Measurement-horizontal",
 		topImageAlign:"none",
 		topImageArtist:"Daniel Roberts (BlenderTimer)",
@@ -3577,12 +3595,13 @@ var objects = [
 		width:9247864036947732000000,
 		length:128665934427098880000000,
 		height:128665934427098880000000,
+		requestedBy:"Anonymous",
 		category1:"miscellaneous",
 		category2:"non-objects",
 		category3:"measurements",
 		tags:["james","space","telescope","webb"], // don't include anything in categories or name
 		dateAdded:"2023/09/30", // YYYY/MM/DD
-		lastModified:"2023/09/30", // YYYY/MM/DD
+		lastModified:"2024/07/02", // YYYY/MM/DD
 	},
 	{
 		name:"Airfish 8",
@@ -3678,12 +3697,13 @@ var objects = [
 		width:0.111,
 		length:0.115,
 		height:0.019,
+		requestedBy:"Anonymous",
 		category1:"space",
 		category2:"objects",
 		category3:"asteroids",
 		tags:["interstellar"], // don't include anything in categories or name
 		dateAdded:"2023/10/02", // YYYY/MM/DD
-		lastModified:"2023/10/02", // YYYY/MM/DD
+		lastModified:"2024/07/02", // YYYY/MM/DD
 	},
 	{
 		name:"Meter (measurement)",
@@ -4053,12 +4073,13 @@ var objects = [
 		width:0.8246,
 		length:2.335,
 		height:0.181,
+		requestedBy:"Anonymous",
 		category1:"structures",
 		category2:"barriers",
 		category3:"dams",
 		tags:["china","yangtze river"], // don't include anything in categories or name
 		dateAdded:"2023/10/05", // YYYY/MM/DD
-		lastModified:"2023/10/05", // YYYY/MM/DD
+		lastModified:"2024/07/02", // YYYY/MM/DD
 	},
 	{
 		name:"Viaduc de Millau",
@@ -4078,12 +4099,13 @@ var objects = [
 		width:0.032,
 		length:2.46,
 		height:0.27,
+		requestedBy:"felax",
 		category1:"structures",
 		category2:"bridges",
 		category3:"cable-stayed",
 		tags:["aveyron","france","gorge valley","tarn"], // don't include anything in categories or name
 		dateAdded:"2023/10/08", // YYYY/MM/DD
-		lastModified:"2023/10/08", // YYYY/MM/DD
+		lastModified:"2024/07/02", // YYYY/MM/DD
 	},
 	{
 		name:"Rock (generic)",
@@ -4195,7 +4217,7 @@ var objects = [
 		frontImage:"Human_Baby_Male-front",
 		frontImageAlign:"none",
 		frontImageArtist:"Daniel Roberts (BlenderTimer)",
-		frontImageDate:"2023/11/12", // YYYY/MM/DD
+		frontImageDate:"2024/07/02", // YYYY/MM/DD
 		topImage:"",
 		topImageAlign:"none",
 		topImageArtist:"",
@@ -4204,12 +4226,13 @@ var objects = [
 		length:0.00021,
 		height:0.00048,
 		searchBoosts:[{query:"h",boost:1},{query:"hu",boost:1},{query:"hum",boost:1},{query:"huma",boost:1},{query:"human",boost:1},{query:"male",boost:1},{query:"mal",boost:1},{query:"person",boost:1}],
+		requestedBy:"velxo",
 		category1:"nature",
 		category2:"animals",
 		category3:"humans",
 		tags:["boy","child","homo sapiens","kid","people","person","young"], // don't include anything in categories or name
 		dateAdded:"2023/11/12", // YYYY/MM/DD
-		lastModified:"2023/11/12", // YYYY/MM/DD
+		lastModified:"2024/07/02", // YYYY/MM/DD
 	},
 	{
 		name:"Human (Baby Female)",
@@ -4221,7 +4244,7 @@ var objects = [
 		frontImage:"Human_Baby_Female-front",
 		frontImageAlign:"none",
 		frontImageArtist:"Daniel Roberts (BlenderTimer)",
-		frontImageDate:"2023/11/12", // YYYY/MM/DD
+		frontImageDate:"2024/07/02", // YYYY/MM/DD
 		topImage:"",
 		topImageAlign:"none",
 		topImageArtist:"",
@@ -4229,12 +4252,13 @@ var objects = [
 		width:0.000259234,
 		length:0.00022,
 		height:0.000465,
+		requestedBy:"velxo",
 		category1:"nature",
 		category2:"animals",
 		category3:"humans",
 		tags:["child","girl","homo sapiens","kid","people","person","young"], // don't include anything in categories or name
 		dateAdded:"2023/11/12", // YYYY/MM/DD
-		lastModified:"2023/11/12", // YYYY/MM/DD
+		lastModified:"2024/07/02", // YYYY/MM/DD
 	},
 	{
 		name:"Falcon 9",
@@ -4246,7 +4270,7 @@ var objects = [
 		frontImage:"Falcon_9-front",
 		frontImageAlign:"bottom",
 		frontImageArtist:"Daniel Roberts (BlenderTimer)",
-		frontImageDate:"2023/11/12", // YYYY/MM/DD
+		frontImageDate:"2024/07/02", // YYYY/MM/DD
 		topImage:"",
 		topImageAlign:"none",
 		topImageArtist:"",
@@ -4254,12 +4278,13 @@ var objects = [
 		width:0.005226443,
 		length:0.005226443,
 		height:0.07,
+		requestedBy:":)",
 		category1:"transportation",
 		category2:"spacecraft",
 		category3:"rockets",
 		tags:["nine","space x","spacex"], // don't include anything in categories or name
 		dateAdded:"2023/11/12", // YYYY/MM/DD
-		lastModified:"2023/11/12", // YYYY/MM/DD
+		lastModified:"2024/07/02", // YYYY/MM/DD
 	},
 	{
 		name:"Falcon 9 (unfolded)",
@@ -4271,7 +4296,7 @@ var objects = [
 		frontImage:"Falcon_9_unfolded-front",
 		frontImageAlign:"bottom",
 		frontImageArtist:"Daniel Roberts (BlenderTimer)",
-		frontImageDate:"2023/11/12", // YYYY/MM/DD
+		frontImageDate:"2024/07/02", // YYYY/MM/DD
 		topImage:"",
 		topImageAlign:"none",
 		topImageArtist:"",
@@ -4279,12 +4304,13 @@ var objects = [
 		width:0.017733977,
 		length:0.017733977,
 		height:0.0725538645,
+		requestedBy:":)",
 		category1:"transportation",
 		category2:"spacecraft",
 		category3:"rockets",
 		tags:["nine","space x","spacex"], // don't include anything in categories or name
 		dateAdded:"2023/11/12", // YYYY/MM/DD
-		lastModified:"2023/11/12", // YYYY/MM/DD
+		lastModified:"2024/07/02", // YYYY/MM/DD
 	},
 	{
 		name:"X-15",
@@ -4523,20 +4549,21 @@ var objects = [
 		frontImage:"Noah's_Ark-front",
 		frontImageAlign:"bottom",
 		frontImageArtist:"Daniel Roberts (BlenderTimer)",
-		frontImageDate:"2024/03/07", // YYYY/MM/DD
+		frontImageDate:"2024/07/02", // YYYY/MM/DD
 		topImage:"",
 		topImageAlign:"none",
 		topImageArtist:"",
 		topImageDate:"", // YYYY/MM/DD
-		width:0.02286,
-		length:0.13716,
-		height:0.0141855444,
+		width:0.026,
+		length:0.156,
+		height:0.0156,
+		notes:"Due to the fact that cubits are relative to the size a man's arm, we don't know the exact size of Noah's Ark. In the Bible it is described as 300 cubits long, 50 cubits wide, and 30 cubits tall. There are two common modern measurements for a cubit, the Royal Cubit (52cm) and the Short Cubit (44.5cm). Most sources measure the Ark using the Short Cubit, however, based on biblical sources as well as more modern archaeological finds, it's more likely that the Royal Cubit (52cm) is what God used when he told Noah the dimensions of the Ark. But, again, this still may not be accurate as pre-flood humans were likely much taller than post-flood humans, thus making a cubit much larger.",
 		category1:"miscellaneous",
 		category2:"bible",
 		category3:"objects",
 		tags:["boat","flood","genesis","ship"], // don't include anything in categories or name
 		dateAdded:"2024/03/07", // YYYY/MM/DD
-		lastModified:"2024/03/07", // YYYY/MM/DD
+		lastModified:"2024/07/02", // YYYY/MM/DD
 	},
 	{
 		name:"Grizzly Bear",
@@ -4698,7 +4725,7 @@ var objects = [
 		frontImage:"Ganymede_Jupiters_Moon-front",
 		frontImageAlign:"none",
 		frontImageArtist:"Daniel Roberts (BlenderTimer)",
-		frontImageDate:"2024/03/11", // YYYY/MM/DD
+		frontImageDate:"2024/07/02", // YYYY/MM/DD
 		topImage:"Ganymede_Jupiters_Moon-top",
 		topImageAlign:"none",
 		topImageArtist:"Daniel Roberts (BlenderTimer)",
@@ -4706,12 +4733,13 @@ var objects = [
 		width:5262,
 		length:5262,
 		height:5262,
+		requestedBy:"Denis Bazhenov",
 		category1:"space",
 		category2:"planets",
 		category3:"moons",
 		tags:["ball","largest","natural satellite","solar system","sphere","terrain"], // don't include anything in categories or name
 		dateAdded:"2024/03/11", // YYYY/MM/DD
-		lastModified:"2024/03/11", // YYYY/MM/DD
+		lastModified:"2024/07/02", // YYYY/MM/DD
 	},
 	{
 		name:"Titan (Saturn's Moon)",
@@ -4723,7 +4751,7 @@ var objects = [
 		frontImage:"Titan_Saturns_Moon-front",
 		frontImageAlign:"none",
 		frontImageArtist:"Daniel Roberts (BlenderTimer)",
-		frontImageDate:"2024/03/11", // YYYY/MM/DD
+		frontImageDate:"2024/07/02", // YYYY/MM/DD
 		topImage:"Titan_Saturns_Moon-top",
 		topImageAlign:"none",
 		topImageArtist:"Daniel Roberts (BlenderTimer)",
@@ -4731,12 +4759,13 @@ var objects = [
 		width:5150,
 		length:5150,
 		height:5150,
+		requestedBy:"Denis Bazhenov",
 		category1:"space",
 		category2:"planets",
 		category3:"moons",
 		tags:["ball","natural satellite","second largest","solar system","sphere","terrain"], // don't include anything in categories or name
 		dateAdded:"2024/03/11", // YYYY/MM/DD
-		lastModified:"2024/03/11", // YYYY/MM/DD
+		lastModified:"2024/07/02", // YYYY/MM/DD
 	},
 	{
 		name:"Lightning",
@@ -4773,7 +4802,7 @@ var objects = [
 		frontImage:"Mauna_Kea-front",
 		frontImageAlign:"bottom",
 		frontImageArtist:"Daniel Roberts (BlenderTimer)",
-		frontImageDate:"2024/03/21", // YYYY/MM/DD
+		frontImageDate:"2024/07/02", // YYYY/MM/DD
 		topImage:"",
 		topImageAlign:"none",
 		topImageArtist:"",
@@ -4781,12 +4810,13 @@ var objects = [
 		width:26.0143,
 		length:26.0143,
 		height:10.211,
+		requestedBy:"Dude_101",
 		category1:"nature",
 		category2:"geography",
 		category3:"mountains",
 		tags:["highest","tallest"], // don't include anything in categories or name
 		dateAdded:"2024/03/21", // YYYY/MM/DD
-		lastModified:"2024/03/21", // YYYY/MM/DD
+		lastModified:"2024/07/02", // YYYY/MM/DD
 	},
 	{
 		name:"Mauna Kea (with water-line)",
@@ -4798,7 +4828,7 @@ var objects = [
 		frontImage:"Mauna_Kea_with_water_line-front",
 		frontImageAlign:"bottom",
 		frontImageArtist:"Daniel Roberts (BlenderTimer)",
-		frontImageDate:"2024/03/21", // YYYY/MM/DD
+		frontImageDate:"2024/07/02", // YYYY/MM/DD
 		topImage:"",
 		topImageAlign:"none",
 		topImageArtist:"",
@@ -4806,12 +4836,13 @@ var objects = [
 		width:26.0143,
 		length:26.0143,
 		height:10.211,
+		requestedBy:"Dude_101",
 		category1:"nature",
 		category2:"geography",
 		category3:"mountains",
 		tags:["highest","tallest"], // don't include anything in categories or name
 		dateAdded:"2024/03/21", // YYYY/MM/DD
-		lastModified:"2024/03/21", // YYYY/MM/DD
+		lastModified:"2024/07/02", // YYYY/MM/DD
 	},
 	{
 		name:"SD Card",
@@ -4873,7 +4904,7 @@ var objects = [
 		frontImage:"Avocado-front",
 		frontImageAlign:"none",
 		frontImageArtist:"Daniel Roberts (BlenderTimer)",
-		frontImageDate:"2024/03/26", // YYYY/MM/DD
+		frontImageDate:"2024/07/02", // YYYY/MM/DD
 		topImage:"",
 		topImageAlign:"none",
 		topImageArtist:"",
@@ -4881,12 +4912,13 @@ var objects = [
 		width:0.000073,
 		length:0.000073,
 		height:0.0001,
+		requestedBy:"Adarion Ciaravino",
 		category1:"miscellaneous",
 		category2:"food",
 		category3:"fruit",
 		tags:["berry","vegetable"], // don't include anything in categories or name
 		dateAdded:"2024/03/26", // YYYY/MM/DD
-		lastModified:"2024/03/26", // YYYY/MM/DD
+		lastModified:"2024/07/02", // YYYY/MM/DD
 	},
 	{
 		name:"Bathtub",
@@ -4923,7 +4955,7 @@ var objects = [
 		frontImage:"Watermelon-front",
 		frontImageAlign:"bottom",
 		frontImageArtist:"Daniel Roberts (BlenderTimer)",
-		frontImageDate:"2024/03/27", // YYYY/MM/DD
+		frontImageDate:"2024/07/02", // YYYY/MM/DD
 		topImage:"",
 		topImageAlign:"none",
 		topImageArtist:"",
@@ -4931,12 +4963,13 @@ var objects = [
 		width:0.000325,
 		length:0.000325,
 		height:0.000381,
+		requestedBy:"Adarion Ciaravino",
 		category1:"miscellaneous",
 		category2:"food",
 		category3:"fruit",
 		tags:["berry"], // don't include anything in categories or name
 		dateAdded:"2024/03/27", // YYYY/MM/DD
-		lastModified:"2024/03/27", // YYYY/MM/DD
+		lastModified:"2024/07/02", // YYYY/MM/DD
 	},
 	{
 		name:"Jackfruit",
@@ -4948,7 +4981,7 @@ var objects = [
 		frontImage:"Jackfruit-front",
 		frontImageAlign:"bottom",
 		frontImageArtist:"Daniel Roberts (BlenderTimer)",
-		frontImageDate:"2024/03/27", // YYYY/MM/DD
+		frontImageDate:"2024/07/02", // YYYY/MM/DD
 		topImage:"",
 		topImageAlign:"none",
 		topImageArtist:"",
@@ -4956,12 +4989,13 @@ var objects = [
 		width:0.00042,
 		length:0.00042,
 		height:0.000762,
+		requestedBy:"Adarion Ciaravino",
 		category1:"miscellaneous",
 		category2:"food",
 		category3:"fruit",
 		tags:["bumpy"], // don't include anything in categories or name
 		dateAdded:"2024/03/27", // YYYY/MM/DD
-		lastModified:"2024/03/27", // YYYY/MM/DD
+		lastModified:"2024/07/02", // YYYY/MM/DD
 	},
 	{
 		name:"Bacteriophage",
@@ -4973,7 +5007,7 @@ var objects = [
 		frontImage:"Bacteriophage-front",
 		frontImageAlign:"bottom",
 		frontImageArtist:"Daniel Roberts (BlenderTimer)",
-		frontImageDate:"2024/03/28", // YYYY/MM/DD
+		frontImageDate:"2024/07/02", // YYYY/MM/DD
 		topImage:"",
 		topImageAlign:"none",
 		topImageArtist:"",
@@ -4981,12 +5015,13 @@ var objects = [
 		width:0.0000000001,
 		length:0.0000000001,
 		height:0.0000000001,
+		requestedBy:"Adarion Ciaravino",
 		category1:"miscellaneous",
 		category2:"particles",
 		category3:"viruses",
 		tags:["icosahedral"], // don't include anything in categories or name
 		dateAdded:"2024/03/28", // YYYY/MM/DD
-		lastModified:"2024/03/28", // YYYY/MM/DD
+		lastModified:"2024/07/02", // YYYY/MM/DD
 	},
 	{
 		name:"Japanese Spider Crab",
@@ -4998,7 +5033,7 @@ var objects = [
 		frontImage:"Japanese_Spider_Crab-front",
 		frontImageAlign:"bottom",
 		frontImageArtist:"Daniel Roberts (BlenderTimer)",
-		frontImageDate:"2024/03/28", // YYYY/MM/DD
+		frontImageDate:"2024/07/02", // YYYY/MM/DD
 		topImage:"Japanese_Spider_Crab-top",
 		topImageAlign:"none",
 		topImageArtist:"Daniel Roberts (BlenderTimer)",
@@ -5006,12 +5041,13 @@ var objects = [
 		width:0.0038,
 		length:0.00323,
 		height:0.00167,
+		requestedBy:"Dude_101",
 		category1:"nature",
 		category2:"animals",
 		category3:"crustaceans",
 		tags:["largest"], // don't include anything in categories or name
 		dateAdded:"2024/03/28", // YYYY/MM/DD
-		lastModified:"2024/03/28", // YYYY/MM/DD
+		lastModified:"2024/07/02", // YYYY/MM/DD
 	},
 	{
 		name:"Megalodon",
@@ -5031,12 +5067,13 @@ var objects = [
 		width:0.0059,
 		length:0.0183,
 		height:0.00622,
+		requestedBy:"Dude_101",
 		category1:"nature",
 		category2:"animals",
 		category3:"fish",
 		tags:["megatooth","shark"], // don't include anything in categories or name
 		dateAdded:"2024/03/28", // YYYY/MM/DD
-		lastModified:"2024/03/28", // YYYY/MM/DD
+		lastModified:"2024/07/02", // YYYY/MM/DD
 	},
 	{
 		name:"Tardigrade (Water Bear)",
@@ -5056,12 +5093,13 @@ var objects = [
 		width:0.00000018,
 		length:0.0000005,
 		height:0.0000002,
+		requestedBy:"Lelol",
 		category1:"nature",
 		category2:"animals",
 		category3:"micro-animals",
 		tags:["invertebrate"], // don't include anything in categories or name
 		dateAdded:"2024/03/28", // YYYY/MM/DD
-		lastModified:"2024/03/28", // YYYY/MM/DD
+		lastModified:"2024/07/02", // YYYY/MM/DD
 	},
 	{
 		name:"Golden Gate Bridge",
@@ -5081,12 +5119,13 @@ var objects = [
 		width:0.027,
 		length:2.5,
 		height:0.227,
+		requestedBy:"Dude_101",
 		category1:"structures",
 		category2:"bridges",
 		category3:"cable-stayed",
 		tags:["san francisco"], // don't include anything in categories or name
 		dateAdded:"2024/03/28", // YYYY/MM/DD
-		lastModified:"2024/03/28", // YYYY/MM/DD
+		lastModified:"2024/07/02", // YYYY/MM/DD
 	},
 	{
 		name:"CCTV Headquarters",
@@ -5106,12 +5145,13 @@ var objects = [
 		width:0.2256,
 		length:0.2256,
 		height:0.237,
+		requestedBy:"Dude_101",
 		category1:"structures",
 		category2:"buildings",
 		category3:"skyscrapers",
 		tags:["china central television"], // don't include anything in categories or name
 		dateAdded:"2024/03/28", // YYYY/MM/DD
-		lastModified:"2024/03/28", // YYYY/MM/DD
+		lastModified:"2024/07/02", // YYYY/MM/DD
 	},
 	{
 		name:"One World Trade Center",
@@ -5123,7 +5163,7 @@ var objects = [
 		frontImage:"One_World_Trade_Center-front",
 		frontImageAlign:"bottom",
 		frontImageArtist:"Daniel Roberts (BlenderTimer)",
-		frontImageDate:"2024/03/28", // YYYY/MM/DD
+		frontImageDate:"2024/07/02", // YYYY/MM/DD
 		topImage:"",
 		topImageAlign:"none",
 		topImageArtist:"",
@@ -5131,12 +5171,13 @@ var objects = [
 		width:0.0655,
 		length:0.0655,
 		height:0.546,
+		requestedBy:"Dude_101",
 		category1:"structures",
 		category2:"buildings",
 		category3:"skyscrapers",
 		tags:["new york"], // don't include anything in categories or name
 		dateAdded:"2024/03/28", // YYYY/MM/DD
-		lastModified:"2024/03/28", // YYYY/MM/DD
+		lastModified:"2024/07/02", // YYYY/MM/DD
 	},
 	{
 		name:"Petronas Towers",
@@ -5148,7 +5189,7 @@ var objects = [
 		frontImage:"Petronas_Towers-front",
 		frontImageAlign:"bottom",
 		frontImageArtist:"Daniel Roberts (BlenderTimer)",
-		frontImageDate:"2024/03/28", // YYYY/MM/DD
+		frontImageDate:"2024/07/02", // YYYY/MM/DD
 		topImage:"",
 		topImageAlign:"none",
 		topImageArtist:"",
@@ -5156,12 +5197,13 @@ var objects = [
 		width:0.194,
 		length:0.09,
 		height:0.452,
+		requestedBy:"Dude_101",
 		category1:"structures",
 		category2:"buildings",
 		category3:"skyscrapers",
 		tags:["malaysia"], // don't include anything in categories or name
 		dateAdded:"2024/03/28", // YYYY/MM/DD
-		lastModified:"2024/03/28", // YYYY/MM/DD
+		lastModified:"2024/07/02", // YYYY/MM/DD
 	},
 	{
 		name:"UN Headquarters",
@@ -5173,7 +5215,7 @@ var objects = [
 		frontImage:"UN_Headquarters-front",
 		frontImageAlign:"bottom",
 		frontImageArtist:"Daniel Roberts (BlenderTimer)",
-		frontImageDate:"2024/03/28", // YYYY/MM/DD
+		frontImageDate:"2024/07/02", // YYYY/MM/DD
 		topImage:"",
 		topImageAlign:"none",
 		topImageArtist:"",
@@ -5181,12 +5223,13 @@ var objects = [
 		width:0.0954,
 		length:0.02,
 		height:0.154,
+		requestedBy:"Dude_101",
 		category1:"structures",
 		category2:"buildings",
 		category3:"skyscrapers",
 		tags:["united nations"], // don't include anything in categories or name
 		dateAdded:"2024/03/28", // YYYY/MM/DD
-		lastModified:"2024/03/28", // YYYY/MM/DD
+		lastModified:"2024/07/02", // YYYY/MM/DD
 	},
 	{
 		name:"Willis Tower",
@@ -5198,7 +5241,7 @@ var objects = [
 		frontImage:"Willis_Tower-front",
 		frontImageAlign:"bottom",
 		frontImageArtist:"Daniel Roberts (BlenderTimer)",
-		frontImageDate:"2024/03/28", // YYYY/MM/DD
+		frontImageDate:"2024/07/02", // YYYY/MM/DD
 		topImage:"",
 		topImageAlign:"none",
 		topImageArtist:"",
@@ -5206,12 +5249,13 @@ var objects = [
 		width:0.0738,
 		length:0.0738,
 		height:0.527,
+		requestedBy:"Dude_101",
 		category1:"structures",
 		category2:"buildings",
 		category3:"skyscrapers",
 		tags:["sears"], // don't include anything in categories or name
 		dateAdded:"2024/03/28", // YYYY/MM/DD
-		lastModified:"2024/03/28", // YYYY/MM/DD
+		lastModified:"2024/07/02", // YYYY/MM/DD
 	},
 	{
 		name:"Human Egg",
@@ -5273,7 +5317,7 @@ var objects = [
 		frontImage:"Mimivirus-front",
 		frontImageAlign:"none",
 		frontImageArtist:"Daniel Roberts (BlenderTimer)",
-		frontImageDate:"2024/03/31", // YYYY/MM/DD
+		frontImageDate:"2024/07/02", // YYYY/MM/DD
 		topImage:"",
 		topImageAlign:"none",
 		topImageArtist:"",
@@ -5281,12 +5325,13 @@ var objects = [
 		width:0.000000000665,
 		length:0.000000000665,
 		height:0.0000000007,
+		requestedBy:"Adarion Ciaravino",
 		category1:"miscellaneous",
 		category2:"particles",
 		category3:"viruses",
 		tags:["dna","giant"], // don't include anything in categories or name
 		dateAdded:"2024/03/31", // YYYY/MM/DD
-		lastModified:"2024/03/31", // YYYY/MM/DD
+		lastModified:"2024/07/02", // YYYY/MM/DD
 	},
 	{
 		name:"Escherichia Coli (E. Coli)",
@@ -5356,12 +5401,13 @@ var objects = [
 		width:0.00000001044,
 		length:0.000000012,
 		height:0.000000002,
+		requestedBy:"Adarion Ciaravino",
 		category1:"miscellaneous",
 		category2:"particles",
 		category3:"cells",
 		tags:["epidermis"], // don't include anything in categories or name
 		dateAdded:"2024/04/02", // YYYY/MM/DD
-		lastModified:"2024/04/02", // YYYY/MM/DD
+		lastModified:"2024/07/02", // YYYY/MM/DD
 	},
 	{
 		name:"Paramecium",
@@ -5381,12 +5427,13 @@ var objects = [
 		width:0.000000043,
 		length:0.0000001,
 		height:0.000000043,
+		requestedBy:"Adarion Ciaravino",
 		category1:"miscellaneous",
 		category2:"particles",
 		category3:"cells",
 		tags:["organism"], // don't include anything in categories or name
 		dateAdded:"2024/04/02", // YYYY/MM/DD
-		lastModified:"2024/04/02", // YYYY/MM/DD
+		lastModified:"2024/07/02", // YYYY/MM/DD
 	},
 	{
 		name:"Hemoglobin",
@@ -5406,12 +5453,13 @@ var objects = [
 		width:0.00000000000475,
 		length:0.000000000005,
 		height:0.000000000005,
+		requestedBy:"Adarion Ciaravino",
 		category1:"miscellaneous",
 		category2:"particles",
 		category3:"molecules",
 		tags:["protein"], // don't include anything in categories or name
 		dateAdded:"2024/04/02", // YYYY/MM/DD
-		lastModified:"2024/04/02", // YYYY/MM/DD
+		lastModified:"2024/07/02", // YYYY/MM/DD
 	},
 	{
 		name:"Quasi Star (Hypothetical)",
@@ -5448,7 +5496,7 @@ var objects = [
 		frontImage:"Hydrogen_Atom-front",
 		frontImageAlign:"none",
 		frontImageArtist:"Daniel Roberts (BlenderTimer)",
-		frontImageDate:"2024/04/03", // YYYY/MM/DD
+		frontImageDate:"2024/07/02", // YYYY/MM/DD
 		topImage:"",
 		topImageAlign:"none",
 		topImageArtist:"",
@@ -5456,12 +5504,13 @@ var objects = [
 		width:0.0000000000001,
 		length:0.0000000000001,
 		height:0.0000000000001,
+		requestedBy:"Nobody",
 		category1:"miscellaneous",
 		category2:"particles",
 		category3:"atoms",
 		tags:["simplest"], // don't include anything in categories or name
 		dateAdded:"2024/04/03", // YYYY/MM/DD
-		lastModified:"2024/04/03", // YYYY/MM/DD
+		lastModified:"2024/07/02", // YYYY/MM/DD
 	},
 	{
 		name:"Francium Atom",
@@ -5473,7 +5522,7 @@ var objects = [
 		frontImage:"Hydrogen_Atom-front",
 		frontImageAlign:"none",
 		frontImageArtist:"Daniel Roberts (BlenderTimer)",
-		frontImageDate:"2024/04/03", // YYYY/MM/DD
+		frontImageDate:"2024/07/02", // YYYY/MM/DD
 		topImage:"",
 		topImageAlign:"none",
 		topImageArtist:"",
@@ -5481,12 +5530,13 @@ var objects = [
 		width:0.000000000000348,
 		length:0.000000000000348,
 		height:0.000000000000348,
+		requestedBy:"Nobody",
 		category1:"miscellaneous",
 		category2:"particles",
 		category3:"atoms",
 		tags:["radioactive"], // don't include anything in categories or name
 		dateAdded:"2024/04/03", // YYYY/MM/DD
-		lastModified:"2024/04/03", // YYYY/MM/DD
+		lastModified:"2024/07/02", // YYYY/MM/DD
 	},
 	{
 		name:"Lacrymaria Olor",
@@ -5506,12 +5556,13 @@ var objects = [
 		width:0.000000008,
 		length:0.0000001,
 		height:0.000000008,
+		requestedBy:"Lelol",
 		category1:"nature",
 		category2:"animals",
 		category3:"micro-animals",
 		tags:["ciliate protozoan","swan tear"], // don't include anything in categories or name
 		dateAdded:"2024/04/04", // YYYY/MM/DD
-		lastModified:"2024/04/04", // YYYY/MM/DD
+		lastModified:"2024/07/02", // YYYY/MM/DD
 	},
 	{
 		name:"White Blood Cell",
@@ -5523,7 +5574,7 @@ var objects = [
 		frontImage:"White_Blood_Cell-front",
 		frontImageAlign:"none",
 		frontImageArtist:"Daniel Roberts (BlenderTimer)",
-		frontImageDate:"2024/04/06", // YYYY/MM/DD
+		frontImageDate:"2024/07/02", // YYYY/MM/DD
 		topImage:"",
 		topImageAlign:"none",
 		topImageArtist:"",
@@ -5531,12 +5582,13 @@ var objects = [
 		width:0.000000014,
 		length:0.000000014,
 		height:0.000000014,
+		requestedBy:"Lelol",
 		category1:"nature",
 		category2:"animals",
 		category3:"humans",
 		tags:["immune system","wbc"], // don't include anything in categories or name
 		dateAdded:"2024/04/06", // YYYY/MM/DD
-		lastModified:"2024/04/06", // YYYY/MM/DD
+		lastModified:"2024/07/02", // YYYY/MM/DD
 	},
 	{
 		name:"Stentor",
@@ -5556,12 +5608,13 @@ var objects = [
 		width:0.0000007,
 		length:0.000002,
 		height:0.0000007,
+		requestedBy:"Lelol",
 		category1:"miscellaneous",
 		category2:"particles",
 		category3:"cells",
 		tags:["ciliate","sedentary"], // don't include anything in categories or name
 		dateAdded:"2024/04/06", // YYYY/MM/DD
-		lastModified:"2024/04/06", // YYYY/MM/DD
+		lastModified:"2024/07/02", // YYYY/MM/DD
 	},
 	{
 		name:"Liebherr R 9800",
@@ -5606,12 +5659,13 @@ var objects = [
 		width:0.00244,
 		length:0.0061,
 		height:0.00259,
+		requestedBy:"fimtow",
 		category1:"transportation",
 		category2:"containers",
 		category3:"industrial",
 		tags:["freight","shipping"], // don't include anything in categories or name
 		dateAdded:"2024/04/15", // YYYY/MM/DD
-		lastModified:"2024/04/15", // YYYY/MM/DD
+		lastModified:"2024/07/02", // YYYY/MM/DD
 	},
 	{
 		name:"40ft Intermodal Container",
@@ -5631,12 +5685,13 @@ var objects = [
 		width:0.00244,
 		length:0.012192,
 		height:0.00259,
+		requestedBy:"fimtow",
 		category1:"transportation",
 		category2:"containers",
 		category3:"industrial",
 		tags:["freight","shipping"], // don't include anything in categories or name
 		dateAdded:"2024/04/15", // YYYY/MM/DD
-		lastModified:"2024/04/15", // YYYY/MM/DD
+		lastModified:"2024/07/02", // YYYY/MM/DD
 	},
 	{
 		name:"Strawberry",
@@ -5648,7 +5703,7 @@ var objects = [
 		frontImage:"Strawberry-front",
 		frontImageAlign:"none",
 		frontImageArtist:"Daniel Roberts (BlenderTimer)",
-		frontImageDate:"2024/06/25", // YYYY/MM/DD
+		frontImageDate:"2024/07/02", // YYYY/MM/DD
 		topImage:"",
 		topImageAlign:"none",
 		topImageArtist:"",
@@ -5656,12 +5711,13 @@ var objects = [
 		width:0.0000195,
 		length:0.0000195,
 		height:0.00003048,
+		requestedBy:"ankit agarwal",
 		category1:"miscellaneous",
 		category2:"food",
 		category3:"fruit",
 		tags:["fragaria"], // don't include anything in categories or name
 		dateAdded:"2024/06/25", // YYYY/MM/DD
-		lastModified:"2024/06/25", // YYYY/MM/DD
+		lastModified:"2024/07/02", // YYYY/MM/DD
 	},
 	{
 		name:"Jalapeño",
@@ -5673,7 +5729,7 @@ var objects = [
 		frontImage:"Jalapeno-front",
 		frontImageAlign:"none",
 		frontImageArtist:"Daniel Roberts (BlenderTimer)",
-		frontImageDate:"2024/06/25", // YYYY/MM/DD
+		frontImageDate:"2024/07/02", // YYYY/MM/DD
 		topImage:"",
 		topImageAlign:"none",
 		topImageArtist:"",
@@ -5681,12 +5737,13 @@ var objects = [
 		width:0.00002682,
 		length:0.00002682,
 		height:0.00008128,
+		requestedBy:"Adarion Ciaravino",
 		category1:"miscellaneous",
 		category2:"food",
 		category3:"vegetables",
 		tags:["hot","jalapeno","pepper","spice","spicy"], // don't include anything in categories or name
 		dateAdded:"2024/06/25", // YYYY/MM/DD
-		lastModified:"2024/06/25", // YYYY/MM/DD
+		lastModified:"2024/07/02", // YYYY/MM/DD
 	},
 	{
 		name:"Spinosaurus Aegyptiacus",
@@ -5706,12 +5763,13 @@ var objects = [
 		width:0.002,
 		length:0.0152,
 		height:0.00532,
+		requestedBy:"Kazu Kibuishi",
 		category1:"nature",
 		category2:"animals",
 		category3:"reptiles",
 		tags:["dinosaur"], // don't include anything in categories or name
 		dateAdded:"2024/06/25", // YYYY/MM/DD
-		lastModified:"2024/06/25", // YYYY/MM/DD
+		lastModified:"2024/07/02", // YYYY/MM/DD
 	},
 	{
 		name:"North Sentinel Island",
@@ -5731,12 +5789,13 @@ var objects = [
 		width:8.73,
 		length:7.5,
 		height:0.122,
+		requestedBy:"Lelol",
 		category1:"nature",
 		category2:"geography",
 		category3:"land",
 		tags:["andaman"], // don't include anything in categories or name
 		dateAdded:"2024/06/25", // YYYY/MM/DD
-		lastModified:"2024/06/25", // YYYY/MM/DD
+		lastModified:"2024/07/02", // YYYY/MM/DD
 	},
 	{
 		name:"Continental United States",
@@ -5756,12 +5815,13 @@ var objects = [
 		width:3094,
 		length:4912,
 		height:4.418,
+		requestedBy:"The_Orwell",
 		category1:"nature",
 		category2:"geography",
 		category3:"land",
 		tags:["america","conterminous","north","u.s.a.","usa"], // don't include anything in categories or name
 		dateAdded:"2024/06/25", // YYYY/MM/DD
-		lastModified:"2024/06/25", // YYYY/MM/DD
+		lastModified:"2024/07/02", // YYYY/MM/DD
 	},
 	{
 		name:"Robert Waldow",
@@ -5773,7 +5833,7 @@ var objects = [
 		frontImage:"Robert_Waldow-front",
 		frontImageAlign:"bottom",
 		frontImageArtist:"Daniel Roberts (BlenderTimer)",
-		frontImageDate:"2024/06/25", // YYYY/MM/DD
+		frontImageDate:"2024/07/02", // YYYY/MM/DD
 		topImage:"",
 		topImageAlign:"none",
 		topImageArtist:"",
@@ -5781,12 +5841,13 @@ var objects = [
 		width:0.00073408,
 		length:0.0006,
 		height:0.00272,
+		requestedBy:"Dude_101",
 		category1:"nature",
 		category2:"animals",
 		category3:"humans",
 		tags:["alton","giant","largest","man","perishing","person","tallest"], // don't include anything in categories or name
 		dateAdded:"2024/06/25", // YYYY/MM/DD
-		lastModified:"2024/06/25", // YYYY/MM/DD
+		lastModified:"2024/07/02", // YYYY/MM/DD
 	},
 	{
 		name:"Vesta",
@@ -5798,7 +5859,7 @@ var objects = [
 		frontImage:"Vesta-front",
 		frontImageAlign:"none",
 		frontImageArtist:"Daniel Roberts (BlenderTimer)",
-		frontImageDate:"2024/06/25", // YYYY/MM/DD
+		frontImageDate:"2024/07/02", // YYYY/MM/DD
 		topImage:"",
 		topImageAlign:"none",
 		topImageArtist:"",
@@ -5806,12 +5867,13 @@ var objects = [
 		width:530,
 		length:430,
 		height:429,
+		requestedBy:"cs2704163",
 		category1:"space",
 		category2:"objects",
 		category3:"asteroids",
 		tags:["largest"], // don't include anything in categories or name
 		dateAdded:"2024/06/25", // YYYY/MM/DD
-		lastModified:"2024/06/25", // YYYY/MM/DD
+		lastModified:"2024/07/02", // YYYY/MM/DD
 	},
 	{
 		name:"Sirius B",
@@ -5823,7 +5885,7 @@ var objects = [
 		frontImage:"Sirius_B-front",
 		frontImageAlign:"none",
 		frontImageArtist:"Daniel Roberts (BlenderTimer)",
-		frontImageDate:"2024/06/25", // YYYY/MM/DD
+		frontImageDate:"2024/07/02", // YYYY/MM/DD
 		topImage:"",
 		topImageAlign:"none",
 		topImageArtist:"",
@@ -5831,12 +5893,13 @@ var objects = [
 		width:11687,
 		length:11687,
 		height:11687,
+		requestedBy:"cs2704163",
 		category1:"space",
 		category2:"stars",
 		category3:"white-dwarfs",
 		tags:["pup"], // don't include anything in categories or name
 		dateAdded:"2024/06/25", // YYYY/MM/DD
-		lastModified:"2024/06/25", // YYYY/MM/DD
+		lastModified:"2024/07/02", // YYYY/MM/DD
 	},
 	{
 		name:"J1407b Rings",
@@ -5856,12 +5919,13 @@ var objects = [
 		width:180000000,
 		length:180000000,
 		height:100,
+		requestedBy:"cs2704163",
 		category1:"space",
 		category2:"planets",
 		category3:"gaseous",
 		tags:["exoplanet"], // don't include anything in categories or name
 		dateAdded:"2024/06/25", // YYYY/MM/DD
-		lastModified:"2024/06/25", // YYYY/MM/DD
+		lastModified:"2024/07/02", // YYYY/MM/DD
 	},
 	{
 		name:"Charon (Pluto's Moon)",
@@ -5873,20 +5937,21 @@ var objects = [
 		frontImage:"Charon_Plutos_Moon-front",
 		frontImageAlign:"none",
 		frontImageArtist:"Daniel Roberts (BlenderTimer)",
-		frontImageDate:"2024/06/25", // YYYY/MM/DD
+		frontImageDate:"2024/07/04", // YYYY/MM/DD
 		topImage:"",
 		topImageAlign:"none",
 		topImageArtist:"",
 		topImageDate:"", // YYYY/MM/DD
-		width:606,
-		length:606,
-		height:606,
+		width:1214,
+		length:1214,
+		height:1214,
+		requestedBy:"cs2704163",
 		category1:"space",
 		category2:"planets",
 		category3:"moons",
 		tags:["i","largest"], // don't include anything in categories or name
 		dateAdded:"2024/06/25", // YYYY/MM/DD
-		lastModified:"2024/06/25", // YYYY/MM/DD
+		lastModified:"2024/07/04", // YYYY/MM/DD
 	},
 	{
 		name:"Taj Mahal",
@@ -5898,7 +5963,7 @@ var objects = [
 		frontImage:"Taj_Mahal-front",
 		frontImageAlign:"bottom",
 		frontImageArtist:"Daniel Roberts (BlenderTimer)",
-		frontImageDate:"2024/06/25", // YYYY/MM/DD
+		frontImageDate:"2024/07/02", // YYYY/MM/DD
 		topImage:"",
 		topImageAlign:"none",
 		topImageArtist:"",
@@ -5906,12 +5971,13 @@ var objects = [
 		width:0.114,
 		length:0.095,
 		height:0.073,
+		requestedBy:"Dude_101",
 		category1:"structures",
 		category2:"buildings",
 		category3:"religious-buildings",
 		tags:["crown of the palace","mausoleum","temple"], // don't include anything in categories or name
 		dateAdded:"2024/06/25", // YYYY/MM/DD
-		lastModified:"2024/06/25", // YYYY/MM/DD
+		lastModified:"2024/07/02", // YYYY/MM/DD
 	},
 	{
 		name:"Statue of Unity",
@@ -5923,7 +5989,7 @@ var objects = [
 		frontImage:"Statue_of_Unity-front",
 		frontImageAlign:"bottom",
 		frontImageArtist:"Daniel Roberts (BlenderTimer)",
-		frontImageDate:"2024/06/25", // YYYY/MM/DD
+		frontImageDate:"2024/07/02", // YYYY/MM/DD
 		topImage:"",
 		topImageAlign:"none",
 		topImageArtist:"",
@@ -5931,12 +5997,13 @@ var objects = [
 		width:0.071,
 		length:0.061,
 		height:0.182,
+		requestedBy:"Lelol",
 		category1:"structures",
 		category2:"monuments",
 		category3:"statues",
 		tags:["largest","tallest"], // don't include anything in categories or name
 		dateAdded:"2024/06/25", // YYYY/MM/DD
-		lastModified:"2024/06/25", // YYYY/MM/DD
+		lastModified:"2024/07/02", // YYYY/MM/DD
 	},
 	{
 		name:"Cat's Eye Nebula",
@@ -5956,12 +6023,13 @@ var objects = [
 		width:29326000000000,
 		length:47300000000000,
 		height:29326000000000,
+		requestedBy:"Paul Thang",
 		category1:"space",
 		category2:"objects",
 		category3:"nebulae",
 		tags:["nebulas"], // don't include anything in categories or name
 		dateAdded:"2024/06/26", // YYYY/MM/DD
-		lastModified:"2024/06/26", // YYYY/MM/DD
+		lastModified:"2024/07/02", // YYYY/MM/DD
 	},
 	{
 		name:"Oort Cloud",
@@ -5981,12 +6049,13 @@ var objects = [
 		width:14959800000000,
 		length:14959800000000,
 		height:14959800000000,
+		requestedBy:"Paul Thang",
 		category1:"space",
 		category2:"objects",
 		category3:"clusters",
 		tags:["solar system"], // don't include anything in categories or name
 		dateAdded:"2024/06/26", // YYYY/MM/DD
-		lastModified:"2024/06/26", // YYYY/MM/DD
+		lastModified:"2024/07/02", // YYYY/MM/DD
 	},
 	{
 		name:"Hub Island (Just Enough Room Island)",
@@ -6006,12 +6075,13 @@ var objects = [
 		width:0.03713,
 		length:0.02859,
 		height:0.005,
+		requestedBy:"Lelol",
 		category1:"nature",
 		category2:"geography",
 		category3:"land",
 		tags:["smallest","thousand"], // don't include anything in categories or name
 		dateAdded:"2024/06/29", // YYYY/MM/DD
-		lastModified:"2024/06/29", // YYYY/MM/DD
+		lastModified:"2024/07/02", // YYYY/MM/DD
 	},
 ];
 
