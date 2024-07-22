@@ -1,26 +1,25 @@
 <!DOCTYPE html>
 <html lang="en-US">
 	<head>
-        <!-- Google tag (gtag.js) -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-  SYR26MG6YV"></script>
-        <script>
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            
-            gtag('config', 'G-SYR26MG6YV');
-        </script>
-        <meta charset="UTF-8">
-        <script src="./static-0/jquery-3.6.3.js"></script>
+		<!-- Google tag (gtag.js) -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-  SYR26MG6YV"></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
+			
+			gtag('config', 'G-SYR26MG6YV');
+		</script>
+		<meta charset="utf-8">
 		<title>BlenderTimer</title>
-		<meta name="description" content="Welcome to BlenderTimer! Check out the latest video or short, check out some of the super useful web tools, have some fun with the fun demos, check out the channel timeline or overview, some beautiful free photos on Pixabay, and much more! The home base of everything BlenderTimer!">
+		<meta name="description" content="Check out the latest videos on the channel, shop for cool merch, check out some of the web tools, some factsheets, have some fun with web tools, learn about BlenderTimer in the FAQs, and much more!">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="icon" href="./favicon.png" type="image/x-icon">
 		<link rel="stylesheet" type="text/css" href="./static-0/general.css">
 		<link rel="stylesheet" type="text/css" href="./static-0/home.css">
+		<script src="./bt-js/bt-js.js"></script>
 	</head>
-	<body onload="baseLoad(), determineLayout()" onresize="determineDisplayMenu(), determineLayout()">
-		<div id="warning-banner" onclick="hideWarningBanner()" style="margin: 0px 0px -100px 0px; opacity: 0; display: none"><div id="warning-banner-main"><img alt="Close" id="wb-close" src="./static-0/files/images/close-x.png"><p>UNDER CONSTRUCTION</p></div></div>
+	<body onresize="determineDisplayMenu()">
 		<div id="background-plate"></div>
 		<div id="banner-menu">
 			<nav>
@@ -33,41 +32,92 @@
 				<div id="small-menu" style="display: none" onclick="smallMenuToggle()"><img alt="Menu" src="./static-0/files/images/menu-bars.png"></div>
 				<div id="small-menu-main"></div>
 			</nav>
+			<script src="./static-0/nav-links.js"></script>
+			<script src="./static-0/load-menus.js"></script>
 		</div>
 		<div id="loader" style="width: 100%; height: calc(100% - 50px); top: 50px; left: 0px; position: fixed; z-index: -99999">
 			<img alt="Loading" src="./static-0/files/images/loading-general.gif" style="width: 100px; height: 100px; position: fixed; left: calc(50% - 50px); top: calc(50% - 25px); filter: drop-shadow(0px 0px 15px #000000)">
 		</div>
 		<div id="content-main" style="opacity: 0; transition: 1s ease">
-			<div id="welcome-block">
-				<h1 id="welcome-text-main" style="font-size: 30pt !important">Welcome to BlenderTimer.com!</h1>
-				<h3>Check out the latest video or the latest short!</h3>
-                <div id="latest-content">
-				    <iframe style="aspect-ratio: 16 / 9" title="Latest video." src="" id="latest-video-video"></iframe>
-                    <iframe style="aspect-ratio: 9 / 16" title="Latest short." src="" id="latest-video-short"></iframe>
-                </div>
+			<h1>Welcome to BlenderTimer!</h1>
+			<div><p>Check out some of the popular web tools (especially the </p><a href="./web-tools/size-comparison">Size Comparison</a><p> tool), watch the latest videos, shop for cool BlenderTimer merch, analyze the factsheets, submit great video ideas, and much more!</p><br><p>Additionally, you can connect with BlenderTimer via the many platforms listed on the About page (including our </p><a href="https://discord.gg/EBYeZ3E58c">Discord server</a><p>), and find out more behind the channel with the </p><a href="./about#faq">FAQs</a><p>! And, if you're feeling generous, consider </p><a href="./about#support">donating</a><p> to support BlenderTimer!</p></div>
+			<h2>LATEST VIDEOS</h2>
+			<div id="latest-videos">
+				<span id="latest-videos-end"></span>
+				<div id="latest-videos-more"><a href="./channel">View More!</a></div>
+				<script src="./static-0/videos.js"></script>
+				<script type="text/javascript">
+					for (var i=videos.length-1; i > 0; i-=1) {
+						var vb = document.createElement('a');
+						vb.className = "latest-video-block";
+						vb.id = "video-" + videos[i].id;
+						vb.href = "https://youtube.com/watch?v=" + videos[i].youtubeID;
+						var vType = document.createElement('img');
+						vType.className = "latest-video-type";
+						if (videos[i].type == "short") {
+							vType.alt = "Short";
+							vType.title = "This video is a short.";
+							vType.src = "./static-0/files/images/videotype-short.png";
+						}
+						else {
+							vType.alt = "Full Video";
+							vType.title = "This is a full video.";
+							vType.src = "./static-0/files/images/videotype-fullvideo.png";
+						}
+						var y = parseInt(videos[i].date.removeBefore("-", 1, true));
+						var m = parseInt(videos[i].date.removeBefore("-", 1).removeAfter("-", -1, true));
+						var d = parseInt(videos[i].date.removeAfter("-", -1));
+						if ((Date.now() - new Date(y, m-1, d).getTime()) <= 604800000) {
+							var vNew = document.createElement('b');
+							vNew.className = "latest-video-new";
+							vNew.textContent = "NEW!";
+							vNew.title = "This video is a recent upload!"
+							vb.appendChild(vNew);
+						}
+						if (new Date(videos[i].date))
+						var vThumb = document.createElement('img');
+						vThumb.className = "latest-video-thumb";
+						vThumb.alt = "Thumbnail";
+						vThumb.src = "./static-0/files/images/videoThumb-" + videos[i].tui + "-" + videos[i].name.replaceAll(" ", "_").replaceAll(".", "").replaceAll("!", "").replaceAll("?", "").replaceAll(",", "") + "-180.png";
+						var vTitle = document.createElement('div');
+						vTitle.className = "latest-video-title";
+						vTitle.innerHTML = "<p>" + videos[i].name + "</p>"
+						vb.appendChild(vType);
+						vb.appendChild(vThumb);
+						vb.appendChild(vTitle);
+						document.getElementById('latest-videos').appendChild(vb);
+					}
+				</script>
 			</div>
-			<div id="misc-content-1">
-				<div id="submitavideoidea">
-					<img alt="Submit a Video Idea" src="./static-0/files/images/lightbulb-pixabay6602798-512.png" class="misc-content-img">
-					<h3>Have a great video idea?</h3>
-					<a href="./submit-a-video-idea" class="misc-content-button">Submit it here!</a>
-				</div>
-				<div id="channel-milestones">
-					<img alt="Channel Milestones" src="./static-0/files/images/milestoneflag-512.png" class="misc-content-img">
-					<h3>Channel Milestones</h3>
-					<a href="./channel-milestones" class="misc-content-button">View full timeline</a>
-				</div>
-				<div id="fun-demos">
-					<img alt="Fun Demos" src="./static-0/files/images/monitor-512.png" class="misc-content-img">
-					<h3>Fun demos!</h3>
-					<a href="./fun-demos" class="misc-content-button">Check them out</a>
-				</div>
+			<h2>TOOLS AND RESOURCES</h2>
+			<div id="main-links">
+				<a href="./web-tools">
+					<img alt="Web Tools" src="./static-0/files/images/webtools.svg" class="misc-content-img">
+					<b>Web Tools</b>
+				</a>
+				<a href="./stock">
+					<img alt="Free Stock Media" src="./static-0/files/images/desert.svg" class="misc-content-img">
+					<b>Free Stock Media</b>
+				</a>
+				<a href="./submit-a-video-idea">
+					<img alt="Lightbulb" src="./static-0/files/images/lightbulb.svg" class="misc-content-img">
+					<b>Video Idea Submissions</b>
+				</a>
+				<a href="./channel-milestones">
+					<img alt="Channel Milestones" src="./static-0/files/images/milestone-flag.svg" class="misc-content-img">
+					<b>Channel Milestones</b>
+				</a>
+				<a href="./factsheets">
+					<img alt="Factsheets" src="./static-0/files/images/factsheet.svg" class="misc-content-img">
+					<b>Factsheets</b>
+				</a>
+				<a href="./fun-demos">
+					<img alt="Fun Demos" src="./static-0/files/images/fundemos.svg" class="misc-content-img">
+					<b>Fun Demos</b>
+				</a>
 			</div>
 			<div id="site-activity-block"><div id="revolver-map"><h3>Site Activity</h3><p>(since November 29, 2022)</p><div id="revolver-map-0" title="Site activity map." style="background: #1E1E1E"><h7>Loading map...</h7><script src="//rf.revolvermaps.com/0/0/7.js?i=5cgjr9bkw1v&amp;m=7&amp;c=ffc000&amp;cr1=fff5a0&amp;crb1=ffffff&amp;br=8&amp;sx=0&amp;cdb=200000&amp;dds=20&amp;rs=50&amp;as=100&amp;rg=100&amp;ds=10" async="async"></script></div></div></div>
 		</div>
-		<script src="./static-0/nav-links.js"></script>
-		<script src="./static-0/videos.js"></script>
-		<script src="./static-0/general.js"></script>
 		<script src="./static-0/home.js"></script>
 	</body>
 </html>
