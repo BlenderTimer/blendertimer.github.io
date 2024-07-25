@@ -6083,6 +6083,32 @@ var objects = [
 		dateAdded:"2024/06/29", // YYYY/MM/DD
 		lastModified:"2024/07/02", // YYYY/MM/DD
 	},
+	{
+		name:"Phoenix A (Black Hole)",
+		defaultAngle:1,
+		sideImage:"",
+		sideImageAlign:"bottom",
+		sideImageArtist:"",
+		sideImageDate:"", // YYYY/MM/DD
+		frontImage:"Phoenix_A_Black_Hole-front",
+		frontImageAlign:"none",
+		frontImageArtist:"Daniel Roberts (BlenderTimer)",
+		frontImageDate:"2024/07/24", // YYYY/MM/DD
+		topImage:"",
+		topImageAlign:"none",
+		topImageArtist:"",
+		topImageDate:"", // YYYY/MM/DD
+		width:590500000000,
+		length:590500000000,
+		height:590500000000,
+		requestedBy:"TheSolidRock",
+		category1:"space",
+		category2:"galaxies",
+		category3:"black_holes",
+		tags:["largest"], // don't include anything in categories or name
+		dateAdded:"2024/07/24", // YYYY/MM/DD
+		lastModified:"2024/07/24", // YYYY/MM/DD
+	},
 ];
 
 //	———————— STEPS FOR UPDATING ————————
