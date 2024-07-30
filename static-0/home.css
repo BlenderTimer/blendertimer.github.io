@@ -8,6 +8,10 @@
 	text-align: center;
 }
 
+#welcome-text {
+	margin-bottom: 20px;
+}
+
 #latest-videos {
 	display: flex;
 	flex-wrap: wrap;
