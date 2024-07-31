@@ -47,7 +47,9 @@
 				<div id="latest-videos-more"><a href="./channel">View More!</a></div>
 				<script src="./static-0/videos.js"></script>
 				<script type="text/javascript">
-					for (var i=videos.length-1; i > 0; i-=1) {
+					var limit = 50;
+					for (var i=videos.length-1; i >= 0; i-=1) {
+						if (limit == 0) {break};
 						var vb = document.createElement('a');
 						vb.className = "latest-video-block";
 						vb.id = "video-" + videos[i].id;
@@ -78,7 +80,7 @@
 						var vThumb = document.createElement('img');
 						vThumb.className = "latest-video-thumb";
 						vThumb.alt = "Thumbnail";
-						vThumb.src = "./static-0/files/images/videoThumb-" + videos[i].tui + "-" + videos[i].name.replaceAll(" ", "_").replaceAll(".", "").replaceAll("!", "").replaceAll("?", "").replaceAll(",", "") + "-180.png";
+						vThumb.src = "./static-0/files/images/videoThumb-" + videos[i].tui + "-" + videos[i].name.replaceAll(/ /g, "_").replaceAll(/\./g, "").replaceAll(/\!/g, "").replaceAll(/\?/g, "").replaceAll(/\,/g, "") + "-180.png";
 						var vTitle = document.createElement('div');
 						vTitle.className = "latest-video-title";
 						vTitle.innerHTML = "<p>" + videos[i].name + "</p>"
@@ -86,6 +88,7 @@
 						vb.appendChild(vThumb);
 						vb.appendChild(vTitle);
 						document.getElementById('latest-videos').appendChild(vb);
+						limit -= 1;
 					}
 				</script>
 			</div>
@@ -118,6 +121,6 @@
 			</div>
 			<div id="site-activity-block"><div id="revolver-map"><h3>Site Activity</h3><p>(since November 29, 2022)</p><div id="revolver-map-0" title="Site activity map." style="background: #1E1E1E"><h7>Loading map...</h7><script src="//rf.revolvermaps.com/0/0/7.js?i=5cgjr9bkw1v&amp;m=7&amp;c=ffc000&amp;cr1=fff5a0&amp;crb1=ffffff&amp;br=8&amp;sx=0&amp;cdb=200000&amp;dds=20&amp;rs=50&amp;as=100&amp;rg=100&amp;ds=10" async="async"></script></div></div></div>
 		</div>
-		<script src="./static-0/home.js"></script>
+		<script src="./static-0/main.js"></script>
 	</body>
 </html>
