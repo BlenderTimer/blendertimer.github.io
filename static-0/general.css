@@ -503,16 +503,25 @@ nav ul li ul li a:hover {
 }
 
 #content-main h1 {
-	font-size: 30pt;
-	color: #F5F5F5;
+	font-size: 18pt;
+	margin-bottom: 10px;
+	color: var(--base-text);
 	font-weight: bold;
 	text-align: center;
 	cursor: default;
 }
 
+#content-main h2 {
+	font-size: 15pt;
+	text-align: center;
+	color: var(--base-text);
+	font-weight: bold;
+	cursor: default;
+}
+
 #content-main h3 {
 	font-size: 15pt;
-	color: #F5F5F5;
+	color: var(--base-text);
 	font-weight: bold;
 	text-align: center;
 	cursor: default;
@@ -520,7 +529,7 @@ nav ul li ul li a:hover {
 
 #content-main h4 {
 	font-size: 12pt;
-	color: #F5F5F5;
+	color: var(--base-text);
 	font-weight: bold;
 	text-align: center;
 	margin: 0px 0px 10px 0px;
