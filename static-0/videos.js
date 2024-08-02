@@ -319,6 +319,6 @@ const videos = [
 		views10: 152,
 		views30: 362,
 		views1: 566,
-		views24: -1,
+		views24: 3298,
 	},
 ];
