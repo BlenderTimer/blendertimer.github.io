@@ -109,7 +109,7 @@ function loadVideos(vl, srch, srt) {
 		var vThumb = document.createElement('img');
 		vThumb.className = "video-thumb";
 		vThumb.alt = "Thumbnail";
-		vThumb.src = "./static-0/files/images/videoThumb-" + vlist[i].tui + "-" + vlist[i].name.replaceAll(/ /g, "_").replaceAll(/\./g, "").replaceAll(/\!/g, "").replaceAll(/\?/g, "").replaceAll(/\,/g, "") + "-180.png";
+		vThumb.src = "./video-sources/thumbnails/" + videos[i].tui + "-" + videos[i].name.toLowerCase().replaceAll(/ /g, "_").replaceAll(/\./g, "").replaceAll(/\!/g, "").replaceAll(/\?/g, "").replaceAll(/\,/g, "").replaceAll(/\'/g, "") + "-180.png";
 		var vTitle = document.createElement('div');
 		vTitle.className = "video-title";
 		vTitle.innerHTML = "<p>" + vlist[i].name + "</p>"
