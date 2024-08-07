@@ -101,9 +101,9 @@
 								likes = data.items[0].statistics.likeCount;
 								comments = data.items[0].statistics.commentCount;
 								document.getElementById("realtime-stats").children[0].children[1].innerHTML = views.toLocaleString();
-								document.getElementById("realtime-stats").children[0].children[1].innerHTML = likes.toLocaleString();
-								document.getElementById("realtime-stats").children[0].children[1].innerHTML = comments.toLocaleString();
-								}
+								document.getElementById("realtime-stats").children[1].children[1].innerHTML = likes.toLocaleString();
+								document.getElementById("realtime-stats").children[2].children[1].innerHTML = comments.toLocaleString();
+							}
 						);
 					</script>
 				</div>
