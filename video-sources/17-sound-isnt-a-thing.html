@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en-US">
+	<head>
+		<!-- Google tag (gtag.js) -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-  SYR26MG6YV"></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
+			
+			gtag('config', 'G-SYR26MG6YV');
+		</script>
+		<meta charset="utf-8">
+		<title>Sound ISN'T a Thing - BlenderTimer Video Sources</title>
+		<meta name="description" content="The video sources for Sound ISN'T a Thing.">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="icon" href="../favicon.png" type="image/x-icon">
+		<link rel="stylesheet" type="text/css" href="../static-0/general.css">
+		<link rel="stylesheet" type="text/css" href="../static-0/main.css">
+		<link rel="stylesheet" type="text/css" href="../static-0/video-sources-pages.css">
+		<script src="../bt-js/bt-js.js"></script>
+		<script src="../static-0/videos.js"></script>
+		<script src="../static-0/jquery-3.6.3.js"></script>
+	</head>
+	<body onresize="determineDisplayMenu()">
+		<div id="background-plate"></div>
+		<div id="banner-menu">
+			<nav>
+				<!--====================  LARGE MENU  ====================-->
+				<ul id="large-menu">
+					<li id="nav-home"><a href="/"><img alt="BlenderTimer" src="../static-0/files/images/nav-logohome.png"></a></li>
+				</ul>
+				<div id="revolve-button" title="Current visitors on this site."><script src="https://rf.revolvermaps.com/0/0/3.js?i=5cgjr9bkw1v&b=0&s=40&m=2&cl=555555&co=000000&cd=ffffff&v0=25&v1=100&r=1" async="async"></script></div>
+				<!--====================  SMALL MENU  ====================-->
+				<div id="small-menu" style="display: none" onclick="smallMenuToggle()"><img alt="Menu" src="../static-0/files/images/menu-bars.png"></div>
+				<div id="small-menu-main"></div>
+			</nav>
+			<script src="../static-0/nav-links.js"></script>
+			<script src="../static-0/load-menus.js"></script>
+		</div>
+		<div id="loader" style="width: 100%; height: calc(100% - 50px); top: 50px; left: 0px; position: fixed; z-index: -99999">
+			<img alt="Loading" src="../static-0/files/images/loading-general.gif" style="width: 100px; height: 100px; position: fixed; left: calc(50% - 50px); top: calc(50% - 25px); filter: drop-shadow(0px 0px 15px #000000)">
+		</div>
+		<div id="content-main" style="opacity: 0; transition: 1s ease">
+			<h1 id="title">Sound ISN'T a Thing</h1>
+			<p id="published-date">Published: January 13, 2024 at 8:37 PM (PT)</p>
+			<div id="video-info">
+				<div id="vid-info-left">
+					<b class="vit">Video Information</b>
+					<span><b>Length:</b><p>7:35</p><i>(13654 frames/30fps)</i></span>
+					<span><b>Resolution:</b><p>1920x1080</p><i>(FHD)</i></span>
+					<span><b>Most Rewatched:</b><a href="https://www.youtube.com/watch?v=yWUlgvk5n6w&t=198s">3:18 to 3:36</a></span>
+					<span class="spr"></span>
+					<b class="vit">Realtime Statistics</b>
+					<div id="realtime-stats">
+						<span title="Views"><img src="../static-0/files/images/icons/eye.svg" alt="Views"><b>...</b></span>
+						<span title="Likes"><img src="../static-0/files/images/icons/like.svg" alt="Likes"><b>...</b></span>
+						<span title="Comments"><img src="../static-0/files/images/icons/comment.svg" alt="Comments"><b>...</b></span>
+					</div>
+					<span class="spr"></span>
+					<b class="vit">Views in the First</b>
+					<div id="first-views">
+						<span><b>10 Minutes</b><p>...</p></span>
+						<span><b>30 Minutes</b><p>...</p></span>
+						<span><b>Hour</b><p>...</p></span>
+						<span><b>24 Hours</b><p>...</p></span>
+					</div>
+				</div>
+				<span class="spr" id="info1-spr" style="display: none"></span>
+				<div id="vid-info-right">
+					<a id="thumbnail" href="./thumbnails/17-sound_isnt_a_thing-1080.png" target="blank"><img src="./thumbnails/17-sound_isnt_a_thing-180.png" alt="Thumbnail"></a>
+					<div id="video-icons">
+						<span><b>Upload ID</b><p>17</p></span>
+						<span><b>Video ID</b><p>11</p></span>
+						<span><b>Type</b><p>Video</p></span>
+					</div>
+					<span id="yt-link"><a href="https://youtu.be/yWUlgvk5n6w" target="blank">https://youtu.be/yWUlgvk5n6w</a><img src="../static-0/files/images/icons/copy-link.svg" alt="Copy link" onclick="copyVideoLink(event)"></span>
+					<script type="text/javascript">
+						var fv = document.getElementById('first-views');
+						var video = videos[parseInt(document.getElementById('video-icons').children[0].children[1].textContent)-1];
+						if (video.views10 == -1) {fv.children[0].children[1].innerHTML = "NO DATA"}
+						else {fv.children[0].children[1].innerHTML = video.views10};
+						if (video.views10 == -1) {fv.children[1].children[1].innerHTML = "NO DATA"}
+						else {fv.children[1].children[1].innerHTML = video.views30};
+						if (video.views10 == -1) {fv.children[2].children[1].innerHTML = "NO DATA"}
+						else {fv.children[2].children[1].innerHTML = video.views1};
+						if (video.views10 == -1) {fv.children[3].children[1].innerHTML = "NO DATA"}
+						else {fv.children[3].children[1].innerHTML = video.views24};
+						//Realtime Stats
+						var ytid = document.getElementById('yt-link').children[0].textContent.removeBefore("/", 1, true);
+						$.get(
+							"https://www.googleapis.com/youtube/v3/videos",{
+							part: 'statistics',
+							id: ytid,
+							key: 'AIzaSyDsaGX5mhvqCpI3jWMFFGMmmmB5IUEyUrk'},
+							function(data) {
+								var views = 0;
+								var likes = 0;
+								var comments = 0;
+								views = data.items[0].statistics.viewCount;
+								likes = data.items[0].statistics.likeCount;
+								comments = data.items[0].statistics.commentCount;
+								document.getElementById("realtime-stats").children[0].children[1].innerHTML = views.toLocaleString();
+								document.getElementById("realtime-stats").children[0].children[1].innerHTML = likes.toLocaleString();
+								document.getElementById("realtime-stats").children[0].children[1].innerHTML = comments.toLocaleString();
+								}
+						);
+					</script>
+				</div>
+			</div>
+			<h2>Information Sources</h2>
+			<div id="info-sources" class="sources">
+					<a href="https://en.wikipedia.org/wiki/Speed_of_sound" target="blank"><b>Speed of Sound Facts</b><p>https://en.wikipedia.org/wiki/Speed_of_sound</p></a>
+				<a href="https://en.wikipedia.org/wiki/Light" target="blank"><b>Light Facts</b><p>https://en.wikipedia.org/wiki/Light</p></a>
+				<a href="https://science.nasa.gov/ems/02_anatomy" target="blank"><b>Anatomy of Light</b><p>https://science.nasa.gov/ems/02_anatomy</p></a>
+				<a href="https://www.iau.org/static/resolutions/IAU1976_French.pdf#page=9" target="blank"><b>Speed of Light</b><p>https://www.iau.org/static/resolutions/IAU1976_French.pdf#page=9</p></a>
+				<a href="https://www.valispace.com/whats-that-formula-the-mach-number" target="blank"><b>Mach Number History</b><p>https://www.valispace.com/whats-that-formula-the-mach-number</p></a>
+				<a href="https://www.nasa.gov/wp-content/uploads/2009/07/366588main_X-15_Poster.pdf" target="blank"><b>X-15 Facts</b><p>https://www.nasa.gov/wp-content/uploads/2009/07/366588main_X-15_Poster.pdf</p></a>
+				<a href="https://aerospaceweb.org/aircraft/research/x15" target="blank"><b>X-15 Facts (2)</b><p>https://aerospaceweb.org/aircraft/research/x15</p></a>
+				<a href="https://history.nasa.gov/SP-60/ch-5.html" target="blank"><b>X-15 Facts (3)</b><p>https://history.nasa.gov/SP-60/ch-5.html</p></a>
+				<a href="https://en.wikipedia.org/wiki/International_Standard_Atmosphere" target="blank"><b>International Standard Atmosphere</b><p>https://en.wikipedia.org/wiki/International_Standard_Atmosphere</p></a>
+			</div>
+			<h2>Graphic Sources</h2>
+			<div id="graphic-sources" class="sources">
+					<a href="https://pixabay.com/vectors/laptop-computer-technology-business-7884573" target="blank"><b>Laptop (Daniel Roberts)</b><p>https://pixabay.com/vectors/laptop-computer-technology-business-7884573</p></a>
+				<a href="https://pixabay.com/vectors/person-man-stand-human-arms-legs-8238232" target="blank"><b>Man (Daniel Roberts)</b><p>https://pixabay.com/vectors/person-man-stand-human-arms-legs-8238232</p></a>
+				<a href="https://pixabay.com/vectors/color-rgb-red-green-blue-model-8318324" target="blank"><b>RGB Color Model (Daniel Roberts)</b><p>https://pixabay.com/vectors/color-rgb-red-green-blue-model-8318324</p></a>
+				<a href="https://pixabay.com/vectors/sun-star-space-solar-light-bright-8328084" target="blank"><b>The Sun (Daniel Roberts)</b><p>https://pixabay.com/vectors/sun-star-space-solar-light-bright-8328084</p></a>
+				<a href="https://pixabay.com/vectors/earth-planet-space-terrestrial-8233221" target="blank"><b>Earth (Daniel Roberts)</b><p>https://pixabay.com/vectors/earth-planet-space-terrestrial-8233221</p></a>
+				<a><b>10-Story Building (Daniel Roberts)</b><p>N/A</p></a>
+				<a href="https://pixabay.com/vectors/molecule-water-atom-science-small-8307719" target="blank"><b>Water Molecule (Daniel Roberts)</b><p>https://pixabay.com/vectors/molecule-water-atom-science-small-8307719</p></a>
+				<a><b>Water Drop (Daniel Roberts)</b><p>N/A</p></a>
+				<a href="https://pixabay.com/vectors/bernardinelli-bernstein-comet-8213823" target="blank"><b>Bernardinelli-Bernstein (Daniel Roberts)</b><p>https://pixabay.com/vectors/bernardinelli-bernstein-comet-8213823</p></a>
+				<a href="https://www.alamy.com/just-an-orange-car-image471694088.html" target="blank"><b>Car (slightly edited) (Daniel Roberts)</b><p>https://www.alamy.com/just-an-orange-car-image471694088.html</p></a>
+				<a href="https://pixabay.com/vectors/grass-ground-dirt-rocks-green-7855873" target="blank"><b>Ground Surface (Daniel Roberts)</b><p>https://pixabay.com/vectors/grass-ground-dirt-rocks-green-7855873</p></a>
+				<a><b>Air molecule (Daniel Roberts)</b><p>N/A</p></a>
+				<a><b>Tin Can (Daniel Roberts)</b><p>N/A</p></a>
+				<a><b>Tomato (Daniel Roberts)</b><p>N/A</p></a>
+				<a><b>Snail (Daniel Roberts)</b><p>N/A</p></a>
+				<a><b>Atomic Bomb (Daniel Roberts)</b><p>N/A</p></a>
+				<a href="https://pixabay.com/vectors/airplane-plane-aircraft-airliner-7719425" target="blank"><b>Airplane (Daniel Roberts)</b><p>https://pixabay.com/vectors/airplane-plane-aircraft-airliner-7719425</p></a>
+				<a><b>Cannon (Daniel Roberts)</b><p>N/A</p></a>
+				<a href="https://en.wikipedia.org/wiki/Ernst_Mach#/media/File:Ernst_Mach_01.jpg" target="blank"><b>Ernst Mach (N/A)</b><p>https://en.wikipedia.org/wiki/Ernst_Mach#/media/File:Ernst_Mach_01.jpg</p></a>
+				<a href="https://en.wikipedia.org/wiki/Ernst_Mach#/media/File:Photography_of_bow_shock_waves_around_a_brass_bullet,_1888.jpg" target="blank"><b>Bow Shockwave (Ernst Mach)</b><p>https://en.wikipedia.org/wiki/Ernst_Mach#/media/File:Photography_of_bow_shock_waves_around_a_brass_bullet,_1888.jpg</p></a>
+				<a href="https://pixabay.com/vectors/thermometers-temperature-gauge-rank-8442663" target="blank"><b>Thermometer (Daniel Roberts)</b><p>https://pixabay.com/vectors/thermometers-temperature-gauge-rank-8442663</p></a>
+				<a><b>X-15 (Daniel Roberts)</b><p>N/A</p></a>
+				<a><b>SR-71 Blackbird (Daniel Roberts)</b><p>N/A</p></a>
+				<a><b>Steel Pipe (Daniel Roberts)</b><p>N/A</p></a>
+				<a><b>Wheel (Daniel Roberts)</b><p>N/A</p></a>
+				<a><b>Diamond (Daniel Roberts)</b><p>N/A</p></a>
+			</div>
+			<h2>Audio Sources</h2>
+			<div id="audio-sources" class="sources">
+					<a><b>Narration (Daniel Roberts)</b><p>N/A</p></a>
+				<a href="https://pixabay.com/music/ambient-to-the-galaxy-10734" target="blank"><b>To the Galaxy (Daniel Roberts) (heavily edited)</b><p>https://pixabay.com/music/ambient-to-the-galaxy-10734</p></a>
+				<a href="https://pixabay.com/sound-effects/loud-thunder-7932" target="blank"><b>Thunder Loud (Daniel Roberts) (0.5x speed)</b><p>https://pixabay.com/sound-effects/loud-thunder-7932</p></a>
+				<a href="https://www.premiumbeat.com/blog/free-explosion-sfx-vfx-elements" target="blank"><b>0017_explo_grenade_02_PremiumBeat (Detonate, PremiumBeat)</b><p>https://www.premiumbeat.com/blog/free-explosion-sfx-vfx-elements</p></a>
+				<a href="https://pixabay.com/music/main-title-revolution-epic-cinematic-111025" target="blank"><b>Revolution-Epic Cinematic (heavily edited) (Daniel Roberts)</b><p>https://pixabay.com/music/main-title-revolution-epic-cinematic-111025</p></a>
+				<a><b>Car stopping1 (Daniel Roberts)</b><p>N/A</p></a>
+				<a><b>Car horn in parking structure (Unknown)</b><p>N/A</p></a>
+				<a><b>500Hz Tone (Daniel Roberts)</b><p>N/A</p></a>
+				<a href="https://pixabay.com/sound-effects/object-flyby-8115" target="blank"><b>Object Flyby (Daniel Roberts)</b><p>https://pixabay.com/sound-effects/object-flyby-8115</p></a>
+				<a><b>Metal-Strike-1 (Daniel Roberts)</b><p>N/A</p></a>
+				<a><b>Cartoon sound effects - spit (Unknown)</b><p>N/A</p></a>
+				<a href="https://pixabay.com/sound-effects/object-flyby-8115" target="blank"><b>Object Flyby (Daniel Roberts)</b><p>https://pixabay.com/sound-effects/object-flyby-8115</p></a>
+				<a href="https://www.premiumbeat.com/blog/free-explosion-sfx-vfx-elements" target="blank"><b>0017_explo_mine_09_PremiumBeat (Detonate, PremiumBeat)</b><p>https://www.premiumbeat.com/blog/free-explosion-sfx-vfx-elements</p></a>
+				<a><b>Chart Ballad-with strings (Daniel Roberts) (heavily edited)</b><p>N/A</p></a>
+				<a><b>Rumble-LOOP-1 (Daniel Roberts)</b><p>N/A</p></a>
+				<a><b>Fast-Hit-2 (Daniel Roberts)</b><p>N/A</p></a>
+				<a href="https://www.premiumbeat.com/blog/free-explosion-sfx-vfx-elements" target="blank"><b>SFX 13 0017_explo_bomb_01_PremiumBeat (Detonate, PremiumBeat)</b><p>https://www.premiumbeat.com/blog/free-explosion-sfx-vfx-elements</p></a>
+				<a href="https://www.premiumbeat.com/blog/free-explosion-sfx-vfx-elements" target="blank"><b>0017_explo_mine_09_PremiumBeat (Detonate, PremiumBeat)</b><p>https://www.premiumbeat.com/blog/free-explosion-sfx-vfx-elements</p></a>
+				<a href="https://www.premiumbeat.com/blog/free-explosion-sfx-vfx-elements" target="blank"><b>0017_explo_grenade_02_PremiumBeat (Detonate, PremiumBeat)</b><p>https://www.premiumbeat.com/blog/free-explosion-sfx-vfx-elements</p></a>
+				<a href="https://www.premiumbeat.com/blog/free-explosion-sfx-vfx-elements" target="blank"><b>0017_explo_grenade_09_PremiumBeat (Detonate, PremiumBeat)</b><p>https://www.premiumbeat.com/blog/free-explosion-sfx-vfx-elements</p></a>
+				<a href="https://www.premiumbeat.com/blog/free-explosion-sfx-vfx-elements" target="blank"><b>0017_explo_mine_01_PremiumBeat (Detonate, PremiumBeat)</b><p>https://www.premiumbeat.com/blog/free-explosion-sfx-vfx-elements</p></a>
+				<a href="https://pixabay.com/sound-effects/object-flyby-8115" target="blank"><b>Object Flyby (Daniel Roberts)</b><p>https://pixabay.com/sound-effects/object-flyby-8115</p></a>
+				<a href="https://pixabay.com/music/introoutro-bouncing-joy-126495" target="blank"><b>Bouncing Joy (Daniel Roberts) (heavily edited)</b><p>https://pixabay.com/music/introoutro-bouncing-joy-126495</p></a>
+				<a href="https://freesound.org/people/InspectorJ/sounds/376415" target="blank"><b>Wind, Synthesized, A (InspectorJ)</b><p>https://freesound.org/people/InspectorJ/sounds/376415</p></a>
+				<a href="https://pixabay.com/music/suspense-escape-of-triumph-epic-cinematic-127029" target="blank"><b>Escape of Triumph (Daniel Roberts) (heavily edited)</b><p>https://pixabay.com/music/suspense-escape-of-triumph-epic-cinematic-127029</p></a>
+			</div>
+			<h2>Chapters</h2>
+			<div id="chapters">
+				<span><b>0:00</b><p>Introduction to Sound</p></span>
+				<span><b>0:38</b><p>Why sound isn't a thing and what sound is</p></span>
+				<span><b>1:30</b><p>Visualizing sound (how sound works)</p></span>
+				<span><b>2:41</b><p>What determines the speed of sound</p></span>
+				<span><b>2:59</b><p>The speed of sound in air</p></span>
+				<span><b>3:28</b><p>Mach number</p></span>
+				<span><b>4:09</b><p>The only hypersonic manned aircraft</p></span>
+				<span><b>4:44</b><p>Acoustic shadow zones</p></span>
+				<span><b>5:55</b><p>The advantages of sound vs light</p></span>
+				<span><b>6:10</b><p>The speed of sound in other objects</p></span>
+			</div>
+			<div id="cc"><h2>Subtitles</h2><a href="./cc/17.txt" download="Sound ISN'T a Thing - Subtitles.txt" title="Download subtitles"><img src="../static-0/files/images/icons/download.svg" alt="Download"></a></div>
+			<div id="subtitles">
+					<p>The speed of sound is about 1235</p>
+				<p>kilometers per hour or 768 miles</p>
+				<p>per hour . And, no, I'm not going</p>
+				<p>to delay the audio of the entire</p>
+				<p>video like that. But that is what</p>
+				<p>you would have experienced if</p>
+				<p>you were just 150 meters or 500</p>
+				<p>feet from this video unless, of</p>
+				<p>course, you are in an acoustic</p>
+				<p>shadow zone. But anyway, the reason</p>
+				<p>I say the speed of sound is "about"</p>
+				<p>1235 kilometers per hour is because</p>
+				<p>the speed of sound is not absolute,</p>
+				<p>partially because sound...isn't</p>
+				<p>really "a thing".</p>
+				<p>Sound is often compared with</p>
+				<p>light because they are really</p>
+				<p>the two largest building blocks</p>
+				<p>that give us our perception of reality.</p>
+				<p>But, unlike light, sound can't</p>
+				<p>exist on it's own. Light can travel</p>
+				<p>through space all the way from</p>
+				<p>the Sun to Earth without anything</p>
+				<p>there in space. But sound could not.</p>
+				<p>You see, while light was created</p>
+				<p>as electromagnetic radiation and</p>
+				<p>is therefore propagated by electromagnetic</p>
+				<p>waves, sound is composed of mechanical waves.</p>
+				<p>Putting that into simpler terms,</p>
+				<p>light is it's own thing, electric</p>
+				<p>and magnetic fields that are made</p>
+				<p>of photons. It can therefore travel</p>
+				<p>on it's own without anything else</p>
+				<p>around it. But sound is not it's</p>
+				<p>own thing, it requires a medium</p>
+				<p>with which to pass through, otherwise...</p>
+				<p>it simply doesn't exist. As a</p>
+				<p>mechanical wave, sound requires</p>
+				<p>physical interaction between the</p>
+				<p>medium's molecules or their bonds.</p>
+				<p>The best way to visualize sound</p>
+				<p>is with a grid. The grid is the</p>
+				<p>medium (or substance) through</p>
+				<p>which the sound is traveling.</p>
+				<p>The points on the grid are the</p>
+				<p>material's molecules. The lines</p>
+				<p>connecting the dots are the bonds</p>
+				<p>connecting the molecules together.</p>
+				<p>In elastic (or springy) materials,</p>
+				<p>the only materials through which</p>
+				<p>sound can travel, these bonds</p>
+				<p>are compressible. This is what</p>
+				<p>allows sound to propagate so we'll</p>
+				<p>visualize these lines as springs.</p>
+				<p>For simplicity's sake, we'll only</p>
+				<p>visualize one sound wave at a</p>
+				<p>time and at a much slower speed,</p>
+				<p>otherwise...it'd be a confusing mess.</p>
+				<p>There are two types of sound</p>
+				<p>waves, shear waves and compression waves.</p>
+				<p>Shear waves only exist in solids.</p>
+				<p>Liquids and gases don't have shear</p>
+				<p>waves, so for simplicity's sake</p>
+				<p>we'll focus on compression waves.</p>
+				<p>If a sound is created on this</p>
+				<p>side of the material, the sound</p>
+				<p>propagates through the material</p>
+				<p>like this. The amount the wave</p>
+				<p>compresses and stretches the material</p>
+				<p>is the amplitude (or volume) of</p>
+				<p>the sound and the speed of the</p>
+				<p>wave is the speed of sound. This</p>
+				<p>speed varies greatly depending</p>
+				<p>on the material and the material's</p>
+				<p>temperature. This is why there</p>
+				<p>is really no absolute speed of sound.</p>
+				<p>There are a fair number of factors</p>
+				<p>that play into what the speed</p>
+				<p>of sound is for different materials.</p>
+				<p>For solids and liquids the speed</p>
+				<p>of sound is most affected by the</p>
+				<p>material's stiffness and density.</p>
+				<p>For gases, however, it's primarily</p>
+				<p>the temperature and molecular</p>
+				<p>structure of the gas that determines</p>
+				<p>the speed of sound. Air is basically</p>
+				<p>an ideal gas, so the speed of</p>
+				<p>sound in air is primarily affected</p>
+				<p>by the air's temperature. The</p>
+				<p>colder the temperature, the slower</p>
+				<p>the speed of sound, and the hotter</p>
+				<p>the temperature, the faster the</p>
+				<p>speed of sound. At a typical 20</p>
+				<p>degrees Celsius (or 68 degrees</p>
+				<p>Fahrenheit) the speed of sound</p>
+				<p>through air is about 1235 kilometers</p>
+				<p>per hour or 768 miles per hour</p>
+				<p>or about 0.0001% the speed of light.</p>
+				<p>A common measurement in various</p>
+				<p>fields, such as aerodynamics and</p>
+				<p>ballistics, is Mach number, named</p>
+				<p>after physicist Ernst Mach who</p>
+				<p>captured the first photograph</p>
+				<p>of a bow shockwave on an object</p>
+				<p>traveling faster than the speed</p>
+				<p>of sound. Mach number is not a</p>
+				<p>specific speed but instead the</p>
+				<p>ratio of the object's airspeed</p>
+				<p>to the speed of sound. Mach 1</p>
+				<p>is always equal to the speed of</p>
+				<p>sound, but, of course, the speed</p>
+				<p>of sound is not always the same.</p>
+				<p>For example 100 kilometers per</p>
+				<p>hour could be Mach 0.081  if the</p>
+				<p>temperature is 20 degrees Celsius</p>
+				<p>or 100 kilometers per hour could</p>
+				<p>be Mach 0.084  if the temperature</p>
+				<p>is 0 degrees Celsius. Anything</p>
+				<p>with a Mach number higher than</p>
+				<p>Mach 1 is supersonic. The fastest</p>
+				<p>manned aircraft ever was the X-15</p>
+				<p>which traveled at a top speed</p>
+				<p>of 7274 kilometers per hour or</p>
+				<p>4520 miles per hour which (at</p>
+				<p>an altitude of about 31 kilometers)</p>
+				<p>is Mach 6.7; two times faster</p>
+				<p>than the renowned SR-71 Blackbird!</p>
+				<p>Because of the incredible speed,</p>
+				<p>the surface temperature of the</p>
+				<p>X-15 on some of these missions</p>
+				<p>reached temperatures of over 700</p>
+				<p>degrees Celsius or 1300 degrees</p>
+				<p>Fahrenheit simply due to friction</p>
+				<p>with the air!</p>
+				<p>The average temperature of Earth's</p>
+				<p>atmosphere varies greatly depending</p>
+				<p>on the altitude. What's interesting</p>
+				<p>about this is that, up to about</p>
+				<p>11 kilometers, the temperature</p>
+				<p>of the air decreases which causes</p>
+				<p>the speed of sound to decrease as well.</p>
+				<p>This causes an interesting phenomenon</p>
+				<p>where sound is actually refracted</p>
+				<p>upward and thus causes an acoustic</p>
+				<p>shadow some distance from the</p>
+				<p>source of the sound. Wind gradients</p>
+				<p>can also decrease or increase</p>
+				<p>this effect to such an extent</p>
+				<p>that in some cases the sound of</p>
+				<p>war can't even be heard just 3</p>
+				<p>kilometers away! In fact, on one</p>
+				<p>occasion, during World War 1,</p>
+				<p>a bombardment of German cannon</p>
+				<p>fire could not be heard 50 to</p>
+				<p>100 kilometers from the source.</p>
+				<p>The sound was heard past the 100</p>
+				<p>kilometer radius, but anyone inside</p>
+				<p>the 50 to 100 kilometer radius</p>
+				<p>could not hear the explosions.</p>
+				<p>This means that air temperatures</p>
+				<p>and wind gradients refracted the</p>
+				<p>sound first up but then down.</p>
+				<p>These temperature and wind gradients</p>
+				<p>are the reason why some times</p>
+				<p>you will see a flash of lightning,</p>
+				<p>but never hear it. It's not necessarily</p>
+				<p>because you're too far to hear</p>
+				<p>it, it could just be because you're</p>
+				<p>in an acoustic shadow zone.</p>
+				<p>One advantage sound has over</p>
+				<p>light is that, unlike light, sound</p>
+				<p>can travel through almost anything,</p>
+				<p>so long as there is something.</p>
+				<p>We generally think of sound traveling</p>
+				<p>through air, but sound travels</p>
+				<p>through much more than just air.</p>
+				<p>In fact, the speed of sound is</p>
+				<p>generally faster through solid</p>
+				<p>objects than it is through air.</p>
+				<p>Even though the speed of sound</p>
+				<p>through air is generally a fairly</p>
+				<p>slow 1200 kilometers per hour,</p>
+				<p>the speed of sound in steel is</p>
+				<p>21,600 kilometers per hour or</p>
+				<p>13,422 miles per hour! The speed</p>
+				<p>of sound through water is also</p>
+				<p>faster than through air at about</p>
+				<p>5400 kilometers per hour or 3355</p>
+				<p>miles per hour. Although in steel</p>
+				<p>and water the speed of sound is</p>
+				<p>faster than through air, the speed</p>
+				<p>of sound through rubber is slower</p>
+				<p>than the speed of sound through</p>
+				<p>air at a quite slow 216 kilometers</p>
+				<p>per hour or 134 miles per hour.</p>
+				<p>Diamond compensates for whatever</p>
+				<p>rubber lacks though. Since diamond</p>
+				<p>is one of the stiffest substances</p>
+				<p>we know of, the speed of sound</p>
+				<p>through diamond is one of the</p>
+				<p>fastest possible under normal</p>
+				<p>circumstances. The speed of sound</p>
+				<p>through diamond is an absolutely</p>
+				<p>mind-boggling 43,200 kilometers</p>
+				<p>per hour or 26,843 miles per hour!</p>
+				<p>But this absolutely mind-boggling</p>
+				<p>speed is only 0.004% the speed of light!</p>
+			</div>
+			<h2>Thumbnails</h2>
+			<div id="thumbnails">
+						<a href="./thumbnails/17-sound_isnt_a_thing-1080-1.png" class="tb">
+					<img src="./thumbnails/17-sound_isnt_a_thing-180-1.png" alt="Thumbnail">
+					<b>January 13, 2024</b>
+				</a>
+				<a href="./thumbnails/17-sound_isnt_a_thing-1080.png" class="tb">
+					<img src="./thumbnails/17-sound_isnt_a_thing-180.png" alt="Thumbnail">
+					<b>January 24, 2024</b>
+				</a>
+			</div>
+		</div>
+		<script src="../static-0/main.js"></script>
+		<script src="../static-0/video-sources-pages.js"></script>
+	</body>
+</html>
