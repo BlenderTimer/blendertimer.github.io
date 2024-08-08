@@ -6109,6 +6109,31 @@ var objects = [
 		dateAdded:"2024/07/24", // YYYY/MM/DD
 		lastModified:"2024/07/24", // YYYY/MM/DD
 	},
+	{
+		name:"Pistol Star",
+		defaultAngle:1,
+		sideImage:"",
+		sideImageAlign:"none",
+		sideImageArtist:"",
+		sideImageDate:"", // YYYY/MM/DD
+		frontImage:"Pistol_Star-front",
+		frontImageAlign:"none",
+		frontImageArtist:"User49258",
+		frontImageDate:"2024/08/08", // YYYY/MM/DD
+		topImage:"",
+		topImageAlign:"none",
+		topImageArtist:"",
+		topImageDate:"", // YYYY/MM/DD
+		width:425768048,
+		length:425768048,
+		height:425768048,
+		category1:"space",
+		category2:"stars",
+		category3:"hypergiants",
+		tags:["blue"], // don't include anything in categories or name
+		dateAdded:"2024/08/08", // YYYY/MM/DD
+		lastModified:"2024/08/08", // YYYY/MM/DD
+	},
 ];
 
 //	———————— STEPS FOR UPDATING ————————
