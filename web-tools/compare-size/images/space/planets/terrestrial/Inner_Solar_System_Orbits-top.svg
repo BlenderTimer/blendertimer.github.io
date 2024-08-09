@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   viewBox="0 0 456.21042 456.21045"
+   version="1.1"
+   id="svg5"
+   sodipodi:docname="Inner_Solar_System-front.svg"
+   width="456.21042"
+   height="456.21045"
+   inkscape:version="1.3 (0e150ed, 2023-07-21)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs5" />
+  <sodipodi:namedview
+     id="namedview5"
+     pagecolor="#505050"
+     bordercolor="#ffffff"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="1"
+     inkscape:deskcolor="#505050"
+     inkscape:zoom="0.77014925"
+     inkscape:cx="282.41279"
+     inkscape:cy="244.10853"
+     inkscape:current-layer="svg5" />
+  <path
+     id="ellipse2"
+     style="fill:none;stroke:#555555;stroke-width:3"
+     d="m 284.98951,228.10522 a 56.884304,56.884304 0 0 1 -56.8843,56.88431 56.884304,56.884304 0 0 1 -56.8843,-56.88431 56.884304,56.884304 0 0 1 56.8843,-56.8843 56.884304,56.884304 0 0 1 56.8843,56.8843 z" />
+  <path
+     id="ellipse3"
+     style="fill:none;stroke:#555555;stroke-width:3"
+     d="M 335.1811,228.10522 A 107.07589,107.07589 0 0 1 228.10521,335.18111 107.07589,107.07589 0 0 1 121.02932,228.10522 107.07589,107.07589 0 0 1 228.10521,121.02934 107.07589,107.07589 0 0 1 335.1811,228.10522 Z" />
+  <path
+     id="ellipse4"
+     style="fill:none;stroke:#555555;stroke-width:3"
+     d="M 376.52847,228.10522 A 148.42326,148.42326 0 0 1 228.10521,376.52849 148.42326,148.42326 0 0 1 79.681946,228.10522 148.42326,148.42326 0 0 1 228.10521,79.681961 148.42326,148.42326 0 0 1 376.52847,228.10522 Z" />
+  <path
+     id="ellipse5"
+     style="fill:none;stroke:#555555;stroke-width:3"
+     d="M 454.71042,228.10522 A 226.60521,226.60522 0 0 1 228.10521,454.71045 226.60521,226.60522 0 0 1 1.5,228.10522 226.60521,226.60522 0 0 1 228.10521,1.5 226.60521,226.60522 0 0 1 454.71042,228.10522 Z" />
+</svg>
