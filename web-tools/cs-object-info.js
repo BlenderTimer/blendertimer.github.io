@@ -6134,6 +6134,106 @@ var objects = [
 		dateAdded:"2024/08/08", // YYYY/MM/DD
 		lastModified:"2024/08/08", // YYYY/MM/DD
 	},
+	{
+		name:"Inner Solar System (Orbits)",
+		defaultAngle:2,
+		sideImage:"",
+		sideImageAlign:"none",
+		sideImageArtist:"",
+		sideImageDate:"", // YYYY/MM/DD
+		frontImage:"",
+		frontImageAlign:"none",
+		frontImageArtist:"",
+		frontImageDate:"", // YYYY/MM/DD
+		topImage:"Inner_Solar_System_Orbits-top",
+		topImageAlign:"none",
+		topImageArtist:"User49258",
+		topImageDate:"2024/08/09", // YYYY/MM/DD
+		width:455911000,
+		length:455911000,
+		height:455911000,
+		category1:"space",
+		category2:"planets",
+		category3:"terrestrial",
+		tags:["earth","mars","mercury","venus"], // don't include anything in categories or name
+		dateAdded:"2024/08/09", // YYYY/MM/DD
+		lastModified:"2024/08/09", // YYYY/MM/DD
+	},
+	{
+		name:"VFTS 352 (Contact Binary)",
+		defaultAngle:1,
+		sideImage:"",
+		sideImageAlign:"none",
+		sideImageArtist:"",
+		sideImageDate:"", // YYYY/MM/DD
+		frontImage:"VFTS_352_Contact_Binary-front",
+		frontImageAlign:"none",
+		frontImageArtist:"User49258",
+		frontImageDate:"2024/08/09", // YYYY/MM/DD
+		topImage:"",
+		topImageAlign:"none",
+		topImageArtist:"",
+		topImageDate:"", // YYYY/MM/DD
+		width:18914343,
+		length:10087650,
+		height:10087650,
+		category1:"space",
+		category2:"stars",
+		category3:"main-sequence-stars",
+		tags:["type o"], // don't include anything in categories or name
+		dateAdded:"2024/08/09", // YYYY/MM/DD
+		lastModified:"2024/08/09", // YYYY/MM/DD
+	},
+	{
+		name:"IC 1101",
+		defaultAngle:1,
+		sideImage:"",
+		sideImageAlign:"none",
+		sideImageArtist:"",
+		sideImageDate:"", // YYYY/MM/DD
+		frontImage:"IC1101-front",
+		frontImageAlign:"none",
+		frontImageArtist:"User49258",
+		frontImageDate:"2024/08/09", // YYYY/MM/DD
+		topImage:"",
+		topImageAlign:"none",
+		topImageArtist:"",
+		topImageDate:"", // YYYY/MM/DD
+		width:5203401759919441000,
+		length:5203401759919441000,
+		height:2139176279077992200,
+		category1:"space",
+		category2:"galaxies",
+		category3:"lenticular",
+		tags:["type o"], // don't include anything in categories or name
+		dateAdded:"2024/08/09", // YYYY/MM/DD
+		lastModified:"2024/08/09", // YYYY/MM/DD
+	},
+	{
+		name:"IC 1101 (Black Hole)",
+		defaultAngle:1,
+		sideImage:"",
+		sideImageAlign:"none",
+		sideImageArtist:"",
+		sideImageDate:"", // YYYY/MM/DD
+		frontImage:"IC1101_Black_Hole-front",
+		frontImageAlign:"none",
+		frontImageArtist:"User49258",
+		frontImageDate:"2024/08/09", // YYYY/MM/DD
+		topImage:"",
+		topImageAlign:"none",
+		topImageArtist:"",
+		topImageDate:"", // YYYY/MM/DD
+		width:246000000000,
+		length:246000000000,
+		height:246000000000,
+		category1:"space",
+		category2:"galaxies",
+		category3:"black_holes",
+		tags:["overmassive","supermassive"], // don't include anything in categories or name
+		dateAdded:"2024/08/09", // YYYY/MM/DD
+		lastModified:"2024/08/09", // YYYY/MM/DD
+	},
 ];
 
 //	———————— STEPS FOR UPDATING ————————
