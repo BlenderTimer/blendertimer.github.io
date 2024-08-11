@@ -10,291 +10,307 @@
             
             gtag('config', 'G-SYR26MG6YV');
         </script>
-        <meta charset="UTF-8">
+        <meta charset="utf-8">
 		<title>Fun Demos - BlenderTimer</title>
-		<meta name="description" content="Just some fun demostrations of various things.">
+		<meta name="description" content="Check out some of these fun, interesting demostrations of various things!">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="icon" href="./favicon.png" type="image/x-icon">
 		<link rel="stylesheet" type="text/css" href="./static-0/general.css">
+		<link rel="stylesheet" type="text/css" href="./static-0/main.css">
 		<link rel="stylesheet" type="text/css" href="./static-0/fun-demos.css">
+		<script src="./bt-js/bt-js.js"></script>
 	</head>
-	<body onload="baseLoad(), planetsTravelDistance(), determineLayout()" onresize="determineDisplayMenu(), determineLayout()">
+	<body onresize="determineDisplayMenu()">
 		<div id="warning-banner" onclick="hideWarningBanner()" style="margin: 0px 0px -100px 0px; opacity: 0; display: none"><div id="warning-banner-main"><img alt="Close" id="wb-close" src="./static-0/files/images/close-x.png"><p>UNDER CONSTRUCTION</p></div></div>
 		<div id="background-plate"></div>
 		<div id="banner-menu">
 			<nav>
 				<!--====================  LARGE MENU  ====================-->
 				<ul id="large-menu">
-					<li id="nav-home"><a href="./"><img alt="BlenderTimer" src="./static-0/files/images/nav-logohome.png"></a></li>
+					<li id="nav-home"><a href="/"><img alt="BlenderTimer" src="./static-0/files/images/nav-logohome.png"></a></li>
 				</ul>
 				<div id="revolve-button" title="Current visitors on this site."><script src="https://rf.revolvermaps.com/0/0/3.js?i=5cgjr9bkw1v&b=0&s=40&m=2&cl=555555&co=000000&cd=ffffff&v0=25&v1=100&r=1" async="async"></script></div>
 				<!--====================  SMALL MENU  ====================-->
 				<div id="small-menu" style="display: none" onclick="smallMenuToggle()"><img alt="Menu" src="./static-0/files/images/menu-bars.png"></div>
 				<div id="small-menu-main"></div>
 			</nav>
+			<script src="./static-0/nav-links.js"></script>
+			<script src="./static-0/load-menus.js"></script>
 		</div>
 		<div id="loader" style="width: 100%; height: calc(100% - 50px); top: 50px; left: 0px; position: fixed; z-index: -99999">
 			<img alt="Loading" src="./static-0/files/images/loading-general.gif" style="width: 100px; height: 100px; position: fixed; left: calc(50% - 50px); top: calc(50% - 25px); filter: drop-shadow(0px 0px 15px #000000)">
 		</div>
 		<div id="content-main" style="opacity: 0; transition: 1s ease">
 			<div id="primary-block">
-				<h3>Fun Demos</h3>
-				<div id="title-text2">
-					<p>These are just some cool demonstrations of various things.</p>
-				</div>
+				<h1>Fun Demos</h1>
+				<p>These are just some cool demonstrations of various things.</p>
 				<div id="planets-distance-traveled" class="fdb">
-					<img onclick="copyFDID('planets-distance-traveled')" src="./static-0/files/images/copy-link.png" class="copy-fdid" data-toggle="tooltip" title="Copy Fun Demo Link/ID (FDID)" alt="">
-					<h4>Planets Distance Traveled</h4>
+					<img onclick="copyFDLink('planets-distance-traveled')" src="./static-0/files/images/icons/copy-link.svg" class="copy-fdlink" data-toggle="tooltip" title="Copy Fun Demo Link" alt="Copy Link">
+					<h2>Planets Distance Traveled</h2>
 					<p>This is how far each of the planets in our Solar System has traveled since you loaded this page!</p>
-					<div id="ptd-container">
+					<div id="pdt-container">
 						<!--==========MERCURY==========-->
-						<div id="ptd-c-mercury-block" class="ptd-c-planet-block" style="background: #3D342D">
-							<img alt="Mercury" src="./static-0/files/images/planet-mercury-256.png" style="width: 100px; margin: 0px auto 10px auto">
-							<h3 style="margin-bottom: 15px">Mercury</h3>
-							<h4 id="mercury-dt-mi" style="font-size: 25pt; margin-bottom: 0px">0 mi</h4>
-							<h4 id="mercury-dt-km" style="font-size: 15pt; margin-bottom: 20px; color: #AAAAAA">0 km</h4>
-							<div class="ptd-c-planet-block-infoblock">
-								<h4 style="margin-bottom: 0px; color: #BBBBBB">Orbit Speed: </h4>
-								<p style="color: #888888; display: block">29.4 mi/s</p>
-								<p style="color: #888888; display: block">47.3 km/s</p>
+						<div class="pdt-planet-block" style="background: #3D342D">
+							<img alt="Mercury" src="./static-0/files/images/planet-mercury-256.png">
+							<b>Mercury</b>
+							<h1>0 km</h1>
+							<h2>0 mi</h2>
+							<div>
+								<b>Orbit Speed:</b>
+								<p>48.9 km/s</p>
+								<i>(30.4 mi/s)</i>
 							</div>
-							<div class="ptd-c-planet-block-infoblock">
-								<h4 style="margin-bottom: 0px; color: #BBBBBB">Orbital Period: </h4>
-								<p style="color: #888888">88.0 days (0.2yrs)</p>
+							<div>
+								<b>Orbital Period:</b>
+								<p>88.0 days</p>
+								<i>(0.2 years)</i>
 							</div>
 						</div>
 						<!--==========VENUS==========-->
-						<div id="ptd-c-venus-block" class="ptd-c-planet-block" style="background: #3F311F">
-							<img alt="Venus" src="./static-0/files/images/planet-venus-256.png" style="width: 100px; margin: 0px auto">
-							<h3 style="margin-bottom: 15px">Venus</h3>
-							<h4 id="venus-dt-mi" style="font-size: 25pt; margin-bottom: 0px">0 mi</h4>
-							<h4 id="venus-dt-km" style="font-size: 15pt; margin-bottom: 20px; color: #AAAAAA">0 km</h4>
-							<div class="ptd-c-planet-block-infoblock">
-								<h4 style="margin-bottom: 0px; color: #BBBBBB">Orbit Speed: </h4>
-								<p style="color: #888888; display: block">21.8 mi/s</p>
-								<p style="color: #888888; display: block">35.1 km/s</p>
+						<div class="pdt-planet-block" style="background: #3F311F">
+							<img alt="Venus" src="./static-0/files/images/planet-venus-256.png">
+							<b>Venus</b>
+							<h1>0 km</h1>
+							<h2>0 mi</h2>
+							<div>
+								<b>Orbit Speed:</b>
+								<p>35.0 km/s</p>
+								<i>(21.8 mi/s)</i>
 							</div>
-							<div class="ptd-c-planet-block-infoblock">
-								<h4 style="margin-bottom: 0px; color: #BBBBBB">Orbital Period: </h4>
-								<p style="color: #888888">224.7 days (0.6yrs)</p>
+							<div>
+								<b>Orbital Period:</b>
+								<p>224.7 days</p>
+								<i>(0.6 years)</i>
 							</div>
 						</div>
 						<!--==========EARTH==========-->
-						<div id="ptd-c-earth-block" class="ptd-c-planet-block" style="background: #0F1E32">
-							<img alt="Earth" src="./static-0/files/images/planet-earth-256.png" style="width: 100px; margin: 0px auto 10px auto">
-							<h3 style="margin-bottom: 15px">Earth</h3>
-							<h4 id="earth-dt-mi" style="font-size: 25pt; margin-bottom: 0px">0 mi</h4>
-							<h4 id="earth-dt-km" style="font-size: 15pt; margin-bottom: 20px; color: #AAAAAA">0 km</h4>
-							<div class="ptd-c-planet-block-infoblock">
-								<h4 style="margin-bottom: 0px; color: #BBBBBB">Orbit Speed: </h4>
-								<p style="color: #888888; display: block">18.5 mi/s</p>
-								<p style="color: #888888; display: block">29.8 km/s</p>
+						<div class="pdt-planet-block" style="background: #0F1E32">
+							<img alt="Earth" src="./static-0/files/images/planet-earth-256.png">
+							<b>Earth</b>
+							<h1>0 km</h1>
+							<h2>0 mi</h2>
+							<div>
+								<b>Orbit Speed:</b>
+								<p>29.8 km/s</p>
+								<i>(18.5 mi/s)</i>
 							</div>
-							<div class="ptd-c-planet-block-infoblock">
-								<h4 style="margin-bottom: 0px; color: #BBBBBB">Orbital Period: </h4>
-								<p style="color: #888888">365.2 days (1yrs)</p>
+							<div>
+								<b>Orbital Period:</b>
+								<p>365.3 days</p>
+								<i>(1.0 years)</i>
 							</div>
 						</div>
 						<!--==========MARS==========-->
-						<div id="ptd-c-mars-block" class="ptd-c-planet-block" style="background: #4D1A0D">
-							<img alt="Mars" src="./static-0/files/images/planet-mars-256.png" style="width: 100px; margin: 0px auto 10px auto">
-							<h3 style="margin-bottom: 15px">Mars</h3>
-							<h4 id="mars-dt-mi" style="font-size: 25pt; margin-bottom: 0px">0 mi</h4>
-							<h4 id="mars-dt-km" style="font-size: 15pt; margin-bottom: 20px; color: #AAAAAA">0 km</h4>
-							<div class="ptd-c-planet-block-infoblock">
-								<h4 style="margin-bottom: 0px; color: #BBBBBB">Orbit Speed: </h4>
-								<p style="color: #888888; display: block">15.0 mi/s</p>
-								<p style="color: #888888; display: block">24.1 km/s</p>
+						<div class="pdt-planet-block" style="background: #4D1A0D">
+							<img alt="Mars" src="./static-0/files/images/planet-mars-256.png">
+							<b>Mars</b>
+							<h1>0 km</h1>
+							<h2>0 mi</h2>
+							<div>
+								<b>Orbit Speed:</b>
+								<p>24.2 km/s</p>
+								<i>(15.1 mi/s)</i>
 							</div>
-							<div class="ptd-c-planet-block-infoblock">
-								<h4 style="margin-bottom: 0px; color: #BBBBBB">Orbital Period: </h4>
-								<p style="color: #888888">687.0 days (1.9yrs)</p>
+							<div>
+								<b>Orbital Period:</b>
+								<p>687.0 days</p>
+								<i>(1.9 years)</i>
 							</div>
 						</div>
 						<!--==========JUPITER==========-->
-						<div id="ptd-c-jupiter-block" class="ptd-c-planet-block" style="background: #4B3D2F">
-							<img alt="Jupiter" src="./static-0/files/images/planet-jupiter-256.png" style="width: 100px; margin: 0px auto 10px auto">
-							<h3 style="margin-bottom: 15px">Jupiter</h3>
-							<h4 id="jupiter-dt-mi" style="font-size: 25pt; margin-bottom: 0px">0 mi</h4>
-							<h4 id="jupiter-dt-km" style="font-size: 15pt; margin-bottom: 20px; color: #AAAAAA">0 km</h4>
-							<div class="ptd-c-planet-block-infoblock">
-								<h4 style="margin-bottom: 0px; color: #BBBBBB">Orbit Speed: </h4>
-								<p style="color: #888888; display: block">8.1 mi/s</p>
-								<p style="color: #888888; display: block">13.0 km/s</p>
+						<div class="pdt-planet-block" style="background: #4B3D2F">
+							<img alt="Jupiter" src="./static-0/files/images/planet-jupiter-256.png">
+							<b>Jupiter</b>
+							<h1>0 km</h1>
+							<h2>0 mi</h2>
+							<div>
+								<b>Orbit Speed:</b>
+								<p>13.1 km/s</p>
+								<i>(8.1 mi/s)</i>
 							</div>
-							<div class="ptd-c-planet-block-infoblock">
-								<h4 style="margin-bottom: 0px; color: #BBBBBB">Orbital Period: </h4>
-								<p style="color: #888888">4331 days (12yrs)</p>
+							<div>
+								<b>Orbital Period:</b>
+								<p>4,332.6 days</p>
+								<i>(11.9 years)</i>
 							</div>
 						</div>
 						<!--==========SATURN==========-->
-						<div id="ptd-c-saturn-block" class="ptd-c-planet-block" style="background: #594F43">
-							<img alt="Saturn" src="./static-0/files/images/planet-saturn-256.png" style="width: 100px; margin: 0px auto 10px auto">
-							<h3 style="margin-bottom: 15px">Saturn</h3>
-							<h4 id="saturn-dt-mi" style="font-size: 25pt; margin-bottom: 0px">0 mi</h4>
-							<h4 id="saturn-dt-km" style="font-size: 15pt; margin-bottom: 20px; color: #AAAAAA">0 km</h4>
-							<div class="ptd-c-planet-block-infoblock">
-								<h4 style="margin-bottom: 0px; color: #BBBBBB">Orbit Speed: </h4>
-								<p style="color: #888888; display: block">6.0 mi/s</p>
-								<p style="color: #888888; display: block">9.7 km/s</p>
+						<div class="pdt-planet-block" style="background: #594F43">
+							<img alt="Saturn" src="./static-0/files/images/planet-saturn-256.png">
+							<b>Saturn</b>
+							<h1>0 km</h1>
+							<h2>0 mi</h2>
+							<div>
+								<b>Orbit Speed:</b>
+								<p>9.6 km/s</p>
+								<i>(6.0 mi/s)</i>
 							</div>
-							<div class="ptd-c-planet-block-infoblock">
-								<h4 style="margin-bottom: 0px; color: #BBBBBB">Orbital Period: </h4>
-								<p style="color: #888888">10,747 days (29yrs)</p>
+							<div>
+								<b>Orbital Period:</b>
+								<p>10,759.2 days</p>
+								<i>(29.5 years)</i>
 							</div>
 						</div>
 						<!--==========URANUS==========-->
-						<div id="ptd-c-uranus-block" class="ptd-c-planet-block" style="background: #2C525E">
-							<img alt="Uranus" src="./static-0/files/images/planet-uranus-256.png" style="width: 100px; margin: 0px auto 10px auto">
-							<h3 style="margin-bottom: 15px">Uranus</h3>
-							<h4 id="uranus-dt-mi" style="font-size: 25pt; margin-bottom: 0px">0 mi</h4>
-							<h4 id="uranus-dt-km" style="font-size: 15pt; margin-bottom: 20px; color: #AAAAAA">0 km</h4>
-							<div class="ptd-c-planet-block-infoblock">
-								<h4 style="margin-bottom: 0px; color: #BBBBBB">Orbit Speed: </h4>
-								<p style="color: #888888; display: block">4.2 mi/s</p>
-								<p style="color: #888888; display: block">6.8 km/s</p>
+						<div class="pdt-planet-block" style="background: #2C525E">
+							<img alt="Uranus" src="./static-0/files/images/planet-uranus-256.png">
+							<b>Uranus</b>
+							<h1>0 km</h1>
+							<h2>0 mi</h2>
+							<div>
+								<b>Orbit Speed:</b>
+								<p>6.8 km/s</p>
+								<i>(4.2 mi/s)</i>
 							</div>
-							<div class="ptd-c-planet-block-infoblock">
-								<h4 style="margin-bottom: 0px; color: #BBBBBB">Orbital Period: </h4>
-								<p style="color: #888888">30,589 days (84yrs)</p>
+							<div>
+								<b>Orbital Period:</b>
+								<p>30,685.4 days</p>
+								<i>(84.1 years)</i>
 							</div>
 						</div>
 						<!--==========NEPTUNE==========-->
-						<div id="ptd-c-neptune-block" class="ptd-c-planet-block" style="background: #11305E">
-							<img alt="Neptune" src="./static-0/files/images/planet-neptune-256.png" style="width: 100px; margin: 0px auto 10px auto">
-							<h3 style="margin-bottom: 15px">Neptune</h3>
-							<h4 id="neptune-dt-mi" style="font-size: 25pt; margin-bottom: 0px">0 mi</h4>
-							<h4 id="neptune-dt-km" style="font-size: 15pt; margin-bottom: 20px; color: #AAAAAA">0 km</h4>
-							<div class="ptd-c-planet-block-infoblock">
-								<h4 style="margin-bottom: 0px; color: #BBBBBB">Orbit Speed: </h4>
-								<p style="color: #888888; display: block">3.4 mi/s</p>
-								<p style="color: #888888; display: block">5.5 km/s</p>
+						<div class="pdt-planet-block" style="background: #11305E">
+							<img alt="Neptune" src="./static-0/files/images/planet-neptune-256.png">
+							<b>Neptune</b>
+							<h1>0 km</h1>
+							<h2>0 mi</h2>
+							<div>
+								<b>Orbit Speed:</b>
+								<p>5.4 km/s</p>
+								<i>(3.4 mi/s)</i>
 							</div>
-							<div class="ptd-c-planet-block-infoblock">
-								<h4 style="margin-bottom: 0px; color: #BBBBBB">Orbital Period: </h4>
-								<p style="color: #888888">59,800 days (164yrs)</p>
+							<div>
+								<b>Orbital Period:</b>
+								<p>60,189 days</p>
+								<i>(164.9 years)</i>
 							</div>
 						</div>
 					</div>
-					<div id="dptd-container">
+					<div id="dpdt-container">
 						<!--==========CERES==========-->
-						<div id="dptd-c-ceres-block" class="dptd-c-planet-block" style="background: #555555">
-							<img alt="Ceres" src="./static-0/files/images/dwarfplanet-ceres-256.png" style="width: 100px; margin: 0px auto 10px auto">
-							<h3 style="margin-bottom: 15px">Ceres</h3>
-							<h4 id="ceres-dt-mi" style="font-size: 20pt; margin-bottom: 0px">0 mi</h4>
-							<h4 id="ceres-dt-km" style="font-size: 12pt; margin-bottom: 20px; color: #AAAAAA">0 km</h4>
-							<div class="dptd-c-planet-block-infoblock">
-								<h4 style="margin-bottom: 0px; color: #BBBBBB; font-size: 11pt">Orbit Speed: </h4>
-								<p style="color: #888888; display: block; font-size: 10pt">11.1 mi/s</p>
-								<p style="color: #888888; display: block; font-size: 10pt">17.9 km/s</p>
+						<div class="dpdt-planet-block" style="background: #555555">
+							<img alt="Ceres" src="./static-0/files/images/dwarfplanet-ceres-256.png">
+							<b>Ceres</b>
+							<h1>0 km</h1>
+							<h2>0 mi</h2>
+							<div>
+								<b>Orbit Speed:</b>
+								<p>17.9 km/s</p>
+								<i>(11.1 mi/s)</i>
 							</div>
-							<div class="dptd-c-planet-block-infoblock">
-								<h4 style="margin-bottom: 0px; color: #BBBBBB; font-size: 11pt">Orbital Period: </h4>
-								<p style="color: #888888; font-size: 10pt">1680 days (4.6yrs)</p>
+							<div>
+								<b>Orbital Period:</b>
+								<p>1,680.3 days</p>
+								<i>(4.6 years)</i>
 							</div>
 						</div>
 						<!--==========PLUTO==========-->
-						<div id="dptd-c-pluto-block" class="dptd-c-planet-block" style="background: #4D3B30">
-							<img alt="Pluto" src="./static-0/files/images/dwarfplanet-pluto-256.png" style="width: 100px; margin: 0px auto 10px auto">
-							<h3 style="margin-bottom: 15px">Pluto</h3>
-							<h4 id="pluto-dt-mi" style="font-size: 20pt; margin-bottom: 0px">0 mi</h4>
-							<h4 id="pluto-dt-km" style="font-size: 12pt; margin-bottom: 20px; color: #AAAAAA">0 km</h4>
-							<div class="dptd-c-planet-block-infoblock">
-								<h4 style="margin-bottom: 0px; color: #BBBBBB; font-size: 11pt">Orbit Speed: </h4>
-								<p style="color: #888888; display: block; font-size: 10pt">3.0 mi/s</p>
-								<p style="color: #888888; display: block; font-size: 10pt">4.7 km/s</p>
+						<div class="dpdt-planet-block" style="background: #4D3B30">
+							<img alt="Pluto" src="./static-0/files/images/dwarfplanet-pluto-256.png">
+							<b>Pluto</b>
+							<h1>0 km</h1>
+							<h2>0 mi</h2>
+							<div>
+								<b>Orbit Speed:</b>
+								<p>4.6 km/s</p>
+								<i>(2.9 mi/s)</i>
 							</div>
-							<div class="dptd-c-planet-block-infoblock">
-								<h4 style="margin-bottom: 0px; color: #BBBBBB; font-size: 11pt">Orbital Period: </h4>
-								<p style="color: #888888; font-size: 10pt">90,460 days (248yrs)</p>
+							<div>
+								<b>Orbital Period:</b>
+								<p>90,425.3 days</p>
+								<i>(247.7 years)</i>
 							</div>
 						</div>
 						<!--==========HAUMEA==========-->
-						<div id="dptd-c-haumea-block" class="dptd-c-planet-block" style="background: #323232">
-							<img alt="Haumea" src="./static-0/files/images/dwarfplanet-haumea-256.png" style="width: 100px; margin: 0px auto 10px auto">
-							<h3 style="margin-bottom: 15px">Haumea</h3>
-							<h4 id="haumea-dt-mi" style="font-size: 20pt; margin-bottom: 0px">0 mi</h4>
-							<h4 id="haumea-dt-km" style="font-size: 12pt; margin-bottom: 20px; color: #AAAAAA">0 km</h4>
-							<div class="dptd-c-planet-block-infoblock">
-								<h4 style="margin-bottom: 0px; color: #BBBBBB; font-size: 11pt">Orbit Speed: </h4>
-								<p style="color: #888888; display: block; font-size: 10pt">2.8 mi/s</p>
-								<p style="color: #888888; display: block; font-size: 10pt">4.5 km/s</p>
+						<div class="dpdt-planet-block" style="background: #383838">
+							<img alt="Haumea" src="./static-0/files/images/dwarfplanet-haumea-256.png">
+							<b>Haumea</b>
+							<h1>0 km</h1>
+							<h2>0 mi</h2>
+							<div>
+								<b>Orbit Speed:</b>
+								<p>4.5 km/s</p>
+								<i>(2.8 mi/s)</i>
 							</div>
-							<div class="dptd-c-planet-block-infoblock">
-								<h4 style="margin-bottom: 0px; color: #BBBBBB; font-size: 11pt">Orbital Period: </h4>
-								<p style="color: #888888; font-size: 10pt">104,228 days (285yrs)</p>
+							<div>
+								<b>Orbital Period:</b>
+								<p>102,532.6 days</p>
+								<i>(280.9 years)</i>
 							</div>
 						</div>
 						<!--==========MAKEMAKE==========-->
-						<div id="dptd-c-makemake-block" class="dptd-c-planet-block" style="background: #40281F">
-							<img alt="Makemake" src="./static-0/files/images/dwarfplanet-makemake-256.png" style="width: 100px; margin: 0px auto 10px auto">
-							<h3 style="margin-bottom: 15px">Makemake</h3>
-							<h4 id="makemake-dt-mi" style="font-size: 20pt; margin-bottom: 0px">0 mi</h4>
-							<h4 id="makemake-dt-km" style="font-size: 12pt; margin-bottom: 20px; color: #AAAAAA">0 km</h4>
-							<div class="dptd-c-planet-block-infoblock">
-								<h4 style="margin-bottom: 0px; color: #BBBBBB; font-size: 11pt">Orbit Speed: </h4>
-								<p style="color: #888888; display: block; font-size: 10pt">2.7 mi/s</p>
-								<p style="color: #888888; display: block; font-size: 10pt">4.4 km/s</p>
+						<div class="dpdt-planet-block" style="background: #40281F">
+							<img alt="Makemake" src="./static-0/files/images/dwarfplanet-makemake-256.png">
+							<b>Makemake</b>
+							<h1>0 km</h1>
+							<h2>0 mi</h2>
+							<div>
+								<b>Orbit Speed:</b>
+								<p>4.4 km/s</p>
+								<i>(2.8 mi/s)</i>
 							</div>
-							<div class="dptd-c-planet-block-infoblock">
-								<h4 style="margin-bottom: 0px; color: #BBBBBB; font-size: 11pt">Orbital Period: </h4>
-								<p style="color: #888888; font-size: 10pt">113,168 days (310yrs)</p>
+							<div>
+								<b>Orbital Period:</b>
+								<p>111,234.9 days</p>
+								<i>(304.8 years)</i>
 							</div>
 						</div>
 						<!--==========ERIS==========-->
-						<div id="dptd-c-eris-block" class="dptd-c-planet-block" style="background: #35312D">
-							<img alt="Eris" src="./static-0/files/images/dwarfplanet-eris-256.png" style="width: 100px; margin: 0px auto 10px auto">
-							<h3 style="margin-bottom: 15px">Eris</h3>
-							<h4 id="eris-dt-mi" style="font-size: 20pt; margin-bottom: 0px">0 mi</h4>
-							<h4 id="eris-dt-km" style="font-size: 12pt; margin-bottom: 20px; color: #AAAAAA">0 km</h4>
-							<div class="dptd-c-planet-block-infoblock">
-								<h4 style="margin-bottom: 0px; color: #BBBBBB; font-size: 11pt">Orbit Speed: </h4>
-								<p style="color: #888888; display: block; font-size: 10pt">2.1 mi/s</p>
-								<p style="color: #888888; display: block; font-size: 10pt">3.4 km/s</p>
+						<div class="dpdt-planet-block" style="background: #35312D">
+							<img alt="Eris" src="./static-0/files/images/dwarfplanet-eris-256.png">
+							<b>Eris</b>
+							<h1>0 km</h1>
+							<h2>0 mi</h2>
+							<div>
+								<b>Orbit Speed:</b>
+								<p>3.4 km/s</p>
+								<i>(2.1 mi/s)</i>
 							</div>
-							<div class="dptd-c-planet-block-infoblock">
-								<h4 style="margin-bottom: 0px; color: #BBBBBB; font-size: 11pt">Orbital Period: </h4>
-								<p style="color: #888888; font-size: 10pt">203,416 days (557yrs)</p>
+							<div>
+								<b>Orbital Period:</b>
+								<p>205,367.9 days</p>
+								<i>(562.7 years)</i>
 							</div>
 						</div>
 					</div>
-					<div id="std-container">
+					<div id="sdt-container">
 						<!--==========SUN==========-->
-						<div id="std-c-sun-block" class="std-c-star-block" style="background: #303030; text-align: left">
-							<div id="sun-dt-block1"  style="width: 190px; height: 210px; margin-right: 20px; float: left; position: absolute; text-align: center">
-								<img alt="Sun" id="sun-dt-block1-img" src="./static-0/files/images/star-sun-256.png" style="width: 150px; margin: 20px 20px 5px 20px">
-								<h3 id="sun-dt-block1-title" style="margin-bottom: 15px; display: block">Sun</h3>
+						<div class="sdt-star-block" style="background: #222">
+							<div id="sun-main">
+								<img alt="The Sun" src="./static-0/files/images/star-sun-256.png">
+								<b id="sun-title">The Sun</b>
 							</div>
-							<div id="sun-dt-block2" style="display: block; width: calc(100% - 500px); height: 210px; margin-right: 20px; margin-left: 190px; text-align: center; position: absolute; margin-top: 72px">
-								<h4 id="sun-dt-mi" style="font-size: 25pt; margin-bottom: 0px">0 mi</h4>
-								<h4 id="sun-dt-km" style="font-size: 15pt; margin-bottom: 20px; color: #AAAAAA">0 km</h4>
+							<div>
+								<h1>0 km</h1>
+								<h2>0 mi</h2>
 							</div>
-							<div id="sun-dt-block3" style="display: block; width: 190px; height: 210px; margin-right: 0px; float: right; text-align: center">
-								<div class="std-c-sun-block-infoblock" style="margin-top: 42px">
-									<h4 style="margin-bottom: 0px; color: #BBBBBB; font-size: 12pt">Orbit Speed: </h4>
-									<p style="color: #888888; display: block; font-size: 12pt">142.9 mi/s</p>
-									<p style="color: #888888; display: block; font-size: 12pt">230.1 km/s</p>
+							<div id="sun-info">
+								<div>
+									<b>Orbit Speed:</b>
+									<p>230.0 km/s</p>
+									<i>(142.9 mi/s)</i>
 								</div>
-								<div class="std-c-sun-block-infoblock">
-									<h4 style="margin-bottom: 0px; color: #BBBBBB; font-size: 12pt">Orbital Period: </h4>
-									<p style="color: #888888; font-size: 12pt">82,535,200,000 days (226,000,000yrs)</p>
+								<div>
+									<b>Orbital Period:</b>
+									<p>82,490,000,000 days</p>
+									<i>(226,000,000 years)</i>
 								</div>
 							</div>
 						</div>
 					</div>
 				</div>
 				<div id="how-much-you-weigh-on-each-planet" class="fdb">
-					<img onclick="copyFDID('how-much-you-weigh-on-each-planet')" src="./static-0/files/images/copy-link.png" class="copy-fdid" data-toggle="tooltip" title="Copy Fun Demo Link/ID (FDID)" alt="">
-					<h4>How much you weigh on each planet</h4>
+					<img onclick="copyFDLink('how-much-you-weigh-on-each-planet')" src="./static-0/files/images/icons/copy-link.svg" class="copy-fdlink" data-toggle="tooltip" title="Copy Fun Demo Link" alt="Copy Link">
+					<h2>How much you weigh on each planet</h2>
 					<p>See how much you would weigh on each planet!</p>
 					<div id="hmywoep-container">
 						<div id="hmywoep-input">
-							<input type="number" id="hmywoep-weight-lb" value="" placeholder="Your weight in pounds">
-							<b>OR</b>
 							<input type="number" id="hmywoep-weight-kg" value="" placeholder="Your weight in kilograms">
+							<b>OR</b>
+							<input type="number" id="hmywoep-weight-lb" value="" placeholder="Your weight in pounds">
 						</div>
 						<div id="hmywoep-result">
-							<h3>You would weigh:</h3>
+							<h1>You would weigh:</h1>
 							<p id="hmywoep-mercury">... on Mercury</p>
 							<p id="hmywoep-venus">... on Venus</p>
 							<p id="hmywoep-mars">... on Mars</p>
@@ -305,10 +321,15 @@
 						</div>
 					</div>
 				</div>
+				<div id="our-massively-tiny-solar-system" class="fdb">
+					<img onclick="copyFDLink('our-massively-tiny-solar-system')" src="./static-0/files/images/icons/copy-link.svg" class="copy-fdlink" data-toggle="tooltip" title="Copy Fun Demo Link" alt="Copy Link">
+					<h4>Our Massively Tiny Solar System</h4>
+					<p>Travel through our Solar System at the speed of light and beyond!</p>
+					<a href="./fun-demos/solar-system">Our Massively Tiny Solar System</a>
+				</div>
 			</div>
 		</div>
-		<script src="./static-0/nav-links.js"></script>
-		<script src="./static-0/general.js"></script>
+		<script src="./static-0/main.js"></script>
 		<script src="./static-0/fun-demos.js"></script>
 	</body>
 </html>
