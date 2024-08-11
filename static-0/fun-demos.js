@@ -1,130 +1,87 @@
-var initialTime = new Date().getTime();
-var copyFDIDBtns = document.getElementsByClassName("copy-fdid");
-
-function copyFDID(FDID) {
-	if (window.location.toString().search("#" + FDID) > -1) {
-		FDID = window.location.toString()
-	}
-	else {
-		FDID = window.location.toString() + "#" + FDID
-	}
-	navigator.clipboard.writeText(FDID);
+//----------Load
+var initialTime = Date.now();
+var timeElapsed = 0;
+//----------Functions
+function copyFDLink(fdid) {
+	navigator.clipboard.writeText(window.location.toString().removeAfter("#", -1) + "#" + fdid);
 }
 
 //==========Planet Distance Traveled==========//
-var dptdCPlanetBlocks = document.getElementsByClassName("dptd-c-planet-block");
-var ptdCPlanetBlocks = document.getElementsByClassName("ptd-c-planet-block");
+var pdtPlanetBlocks = document.getElementsByClassName("pdt-planet-block");
+var dpdtPlanetBlocks = document.getElementsByClassName("dpdt-planet-block");
+var sunBlock = document.getElementsByClassName("sdt-star-block")[0];
+var planetData = [
+	{
+		name:"Mercury",
+		velocity:48.915,
+	},
+	{
+		name:"Venus",
+		velocity:35.02,
+	},
+	{
+		name:"Earth",
+		velocity:29.79,
+	},
+	{
+		name:"Mars",
+		velocity:24.235,
+	},
+	{
+		name:"Jupiter",
+		velocity:13.08,
+	},
+	{
+		name:"Saturn",
+		velocity:9.64,
+	},
+	{
+		name:"Uranus",
+		velocity:6.81,
+	},
+	{
+		name:"Neptune",
+		velocity:5.42,
+	},
+];
+var dwarfPlanetData = [
+	{
+		name:"Ceres",
+		velocity:17.9,
+	},
+	{
+		name:"Pluto",
+		velocity:4.64,
+	},
+	{
+		name:"Haumea",
+		velocity:4.53,
+	},
+	{
+		name:"Makemake",
+		velocity:4.419,
+	},
+	{
+		name:"Eris",
+		velocity:3.434,
+	},
+];
+var sunVelocity = 230;
 
-var mercuryDTMiles = document.getElementById("mercury-dt-mi");
-var mercuryDTKilometers = document.getElementById("mercury-dt-km");
-var venusDTMiles = document.getElementById("venus-dt-mi");
-var venusDTKilometers = document.getElementById("venus-dt-km");
-var earthDTMiles = document.getElementById("earth-dt-mi");
-var earthDTKilometers = document.getElementById("earth-dt-km");
-var marsDTMiles = document.getElementById("mars-dt-mi");
-var marsDTKilometers = document.getElementById("mars-dt-km");
-var jupiterDTMiles = document.getElementById("jupiter-dt-mi");
-var jupiterDTKilometers = document.getElementById("jupiter-dt-km");
-var saturnDTMiles = document.getElementById("saturn-dt-mi");
-var saturnDTKilometers = document.getElementById("saturn-dt-km");
-var uranusDTMiles = document.getElementById("uranus-dt-mi");
-var uranusDTKilometers = document.getElementById("uranus-dt-km");
-var neptuneDTMiles = document.getElementById("neptune-dt-mi");
-var neptuneDTKilometers = document.getElementById("neptune-dt-km");
-
-var ceresDTMiles = document.getElementById("ceres-dt-mi");
-var ceresDTKilometers = document.getElementById("ceres-dt-km");
-var plutoDTMiles = document.getElementById("pluto-dt-mi");
-var plutoDTKilometers = document.getElementById("pluto-dt-km");
-var haumeaDTMiles = document.getElementById("haumea-dt-mi");
-var haumeaDTKilometers = document.getElementById("haumea-dt-km");
-var makemakeDTMiles = document.getElementById("makemake-dt-mi");
-var makemakeDTKilometers = document.getElementById("makemake-dt-km");
-var erisDTMiles = document.getElementById("eris-dt-mi");
-var erisDTKilometers = document.getElementById("eris-dt-km");
-
-var sunDTMiles = document.getElementById("sun-dt-mi");
-var sunDTKilometers = document.getElementById("sun-dt-km");
-var stdSun = document.getElementById("std-c-sun-block");
-var sunDTBlock1 = document.getElementById("sun-dt-block1");
-var sunDTBlock2 = document.getElementById("sun-dt-block2");
-var sunDTBlock3 = document.getElementById("sun-dt-block3");
-
-function setPlanetDistance(planet) {
-	if (planet == "mercury") {
-		mercuryDTMiles.innerHTML = Math.round(((new Date().getTime() - initialTime) / 1000) * 29.4) + " mi";
-		mercuryDTKilometers.innerHTML = Math.round(((new Date().getTime() - initialTime) / 1000) * 29.4 * 1.609344) + " km";
+//----------PDT Main
+setInterval(function() {
+	timeElapsed = Date.now()-initialTime;
+	for (var i=0; i < pdtPlanetBlocks.length; i++) {
+		pdtPlanetBlocks[i].children[2].innerHTML = Math.floor(planetData[i].velocity*(timeElapsed/1000)) + " km";
+		pdtPlanetBlocks[i].children[3].innerHTML = Math.floor((planetData[i].velocity*0.62137119223733)*(timeElapsed/1000)) + " mi";
 	}
-	else if (planet == "venus") {
-		venusDTMiles.innerHTML = Math.round(((new Date().getTime() - initialTime) / 1000) * 21.8) + " mi";
-		venusDTKilometers.innerHTML = Math.round(((new Date().getTime() - initialTime) / 1000) * 21.8 * 1.609344) + " km";
+	for (var i=0; i < dpdtPlanetBlocks.length; i++) {
+		dpdtPlanetBlocks[i].children[2].innerHTML = Math.floor(dwarfPlanetData[i].velocity*(timeElapsed/1000)) + " km";
+		dpdtPlanetBlocks[i].children[3].innerHTML = Math.floor((dwarfPlanetData[i].velocity*0.62137119223733)*(timeElapsed/1000)) + " mi";
 	}
-	else if (planet == "earth") {
-		earthDTMiles.innerHTML = Math.round(((new Date().getTime() - initialTime) / 1000) * 18.5) + " mi";
-		earthDTKilometers.innerHTML = Math.round(((new Date().getTime() - initialTime) / 1000) * 18.5 * 1.609344) + " km";
-	}
-	else if (planet == "mars") {
-		marsDTMiles.innerHTML = Math.round(((new Date().getTime() - initialTime) / 1000) * 15.0) + " mi";
-		marsDTKilometers.innerHTML = Math.round(((new Date().getTime() - initialTime) / 1000) * 15.0 * 1.609344) + " km";
-	}
-	else if (planet == "jupiter") {
-		jupiterDTMiles.innerHTML = Math.round(((new Date().getTime() - initialTime) / 1000) * 8.1) + " mi";
-		jupiterDTKilometers.innerHTML = Math.round(((new Date().getTime() - initialTime) / 1000) * 8.1 * 1.609344) + " km";
-	}
-	else if (planet == "saturn") {
-		saturnDTMiles.innerHTML = Math.round(((new Date().getTime() - initialTime) / 1000) * 6.0) + " mi";
-		saturnDTKilometers.innerHTML = Math.round(((new Date().getTime() - initialTime) / 1000) * 6.0 * 1.609344) + " km";
-	}
-	else if (planet == "uranus") {
-		uranusDTMiles.innerHTML = Math.round(((new Date().getTime() - initialTime) / 1000) * 4.2) + " mi";
-		uranusDTKilometers.innerHTML = Math.round(((new Date().getTime() - initialTime) / 1000) * 4.2 * 1.609344) + " km";
-	}
-	else if (planet == "neptune") {
-		neptuneDTMiles.innerHTML = Math.round(((new Date().getTime() - initialTime) / 1000) * 3.4) + " mi";
-		neptuneDTKilometers.innerHTML = Math.round(((new Date().getTime() - initialTime) / 1000) * 3.4 * 1.609344) + " km";
-	}
-	else if (planet == "ceres") {
-		ceresDTMiles.innerHTML = Math.round(((new Date().getTime() - initialTime) / 1000) * 11.11235) + " mi";
-		ceresDTKilometers.innerHTML = Math.round(((new Date().getTime() - initialTime) / 1000) * 11.11235 * 1.609344) + " km";
-	}
-	else if (planet == "pluto") {
-		plutoDTMiles.innerHTML = Math.round(((new Date().getTime() - initialTime) / 1000) * 2.945563) + " mi";
-		plutoDTKilometers.innerHTML = Math.round(((new Date().getTime() - initialTime) / 1000) * 2.945563 * 1.609344) + " km";
-	}
-	else if (planet == "haumea") {
-		haumeaDTMiles.innerHTML = Math.round(((new Date().getTime() - initialTime) / 1000) * 2.786478) + " mi";
-		haumeaDTKilometers.innerHTML = Math.round(((new Date().getTime() - initialTime) / 1000) * 2.786478 * 1.609344) + " km";
-	}
-	else if (planet == "makemake") {
-		makemakeDTMiles.innerHTML = Math.round(((new Date().getTime() - initialTime) / 1000) * 2.746085) + " mi";
-		makemakeDTKilometers.innerHTML = Math.round(((new Date().getTime() - initialTime) / 1000) * 2.746085 * 1.609344) + " km";
-	}
-	else if (planet == "eris") {
-		erisDTMiles.innerHTML = Math.round(((new Date().getTime() - initialTime) / 1000) * 2.135222) + " mi";
-		erisDTKilometers.innerHTML = Math.round(((new Date().getTime() - initialTime) / 1000) * 2.135222 * 1.609344) + " km";
-	}
-	else if (planet == "sun") {
-		sunDTMiles.innerHTML = Math.round(((new Date().getTime() - initialTime) / 1000) * 142.9282) + " mi";
-		sunDTKilometers.innerHTML = Math.round(((new Date().getTime() - initialTime) / 1000) * 142.9282 * 1.609344) + " km";
-	}
-}
-
-function planetsTravelDistance() {
-	setInterval(function() {setPlanetDistance("mercury")},30);
-	setInterval(function() {setPlanetDistance("venus")},30);
-	setInterval(function() {setPlanetDistance("earth")},30);
-	setInterval(function() {setPlanetDistance("mars")},30);
-	setInterval(function() {setPlanetDistance("jupiter")},30);
-	setInterval(function() {setPlanetDistance("saturn")},30);
-	setInterval(function() {setPlanetDistance("uranus")},30);
-	setInterval(function() {setPlanetDistance("neptune")},30);
-	setInterval(function() {setPlanetDistance("ceres")},30);
-	setInterval(function() {setPlanetDistance("pluto")},30);
-	setInterval(function() {setPlanetDistance("haumea")},30);
-	setInterval(function() {setPlanetDistance("makemake")},30);
-	setInterval(function() {setPlanetDistance("eris")},30);
-	setInterval(function() {setPlanetDistance("sun")},30);
-}
+	sunBlock.children[1].children[0].innerHTML = Math.floor(sunVelocity*(timeElapsed/1000)) + " km";
+	sunBlock.children[1].children[1].innerHTML = Math.floor((sunVelocity*0.62137119223733)*(timeElapsed/1000)) + " mi";
+}, 10);
 
 //==========How much you weigh on each planet==========//
 var hmywoepLB = document.getElementById("hmywoep-weight-lb");
@@ -156,13 +113,13 @@ function hmywoepCalculate() {
 			hmywoepNeptune.textContent = "... on Neptune";
 		}
 		else {
-			hmywoepMercury.textContent = (hmywoepLB.value * 0.37730).toFixed(1).toString() + " " + hmywoepUnit + " on Mercury";
-			hmywoepVenus.textContent = (hmywoepLB.value * 0.90449).toFixed(1).toString() + " " + hmywoepUnit + " on Venus";
-			hmywoepMars.textContent = (hmywoepLB.value * 0.37941).toFixed(1).toString() + " " + hmywoepUnit + " on Mars";
-			hmywoepJupiter.textContent = (hmywoepLB.value * 2.52800).toFixed(1).toString() + " " + hmywoepUnit + " on Jupiter";
-			hmywoepSaturn.textContent = (hmywoepLB.value * 1.06500).toFixed(1).toString() + " " + hmywoepUnit + " on Saturn";
-			hmywoepUranus.textContent = (hmywoepLB.value * 0.88600).toFixed(1).toString() + " " + hmywoepUnit + " on Uranus";
-			hmywoepNeptune.textContent = (hmywoepLB.value * 1.14000).toFixed(1).toString() + " " + hmywoepUnit + " on Neptune";
+			hmywoepMercury.textContent = (hmywoepLB.value * 0.37730).round(1).toLocaleString() + " " + hmywoepUnit + " on Mercury";
+			hmywoepVenus.textContent = (hmywoepLB.value * 0.90449).round(1).toLocaleString() + " " + hmywoepUnit + " on Venus";
+			hmywoepMars.textContent = (hmywoepLB.value * 0.37941).round(1).toLocaleString() + " " + hmywoepUnit + " on Mars";
+			hmywoepJupiter.textContent = (hmywoepLB.value * 2.52800).round(1).toLocaleString() + " " + hmywoepUnit + " on Jupiter";
+			hmywoepSaturn.textContent = (hmywoepLB.value * 1.06500).round(1).toLocaleString() + " " + hmywoepUnit + " on Saturn";
+			hmywoepUranus.textContent = (hmywoepLB.value * 0.88600).round(1).toLocaleString() + " " + hmywoepUnit + " on Uranus";
+			hmywoepNeptune.textContent = (hmywoepLB.value * 1.14000).round(1).toLocaleString() + " " + hmywoepUnit + " on Neptune";
 		}
 	}
 	else {
@@ -176,13 +133,13 @@ function hmywoepCalculate() {
 			hmywoepNeptune.textContent = "... on Neptune";
 		}
 		else {
-			hmywoepMercury.textContent = (hmywoepKG.value * 0.37730).toFixed(1).toString() + " " + hmywoepUnit + " on Mercury";
-			hmywoepVenus.textContent = (hmywoepKG.value * 0.90449).toFixed(1).toString() + " " + hmywoepUnit + " on Venus";
-			hmywoepMars.textContent = (hmywoepKG.value * 0.37941).toFixed(1).toString() + " " + hmywoepUnit + " on Mars";
-			hmywoepJupiter.textContent = (hmywoepKG.value * 2.52800).toFixed(1).toString() + " " + hmywoepUnit + " on Jupiter";
-			hmywoepSaturn.textContent = (hmywoepKG.value * 1.06500).toFixed(1).toString() + " " + hmywoepUnit + " on Saturn";
-			hmywoepUranus.textContent = (hmywoepKG.value * 0.88600).toFixed(1).toString() + " " + hmywoepUnit + " on Uranus";
-			hmywoepNeptune.textContent = (hmywoepKG.value * 1.14000).toFixed(1).toString() + " " + hmywoepUnit + " on Neptune";
+			hmywoepMercury.textContent = (hmywoepKG.value * 0.37730).round(1).toLocaleString() + " " + hmywoepUnit + " on Mercury";
+			hmywoepVenus.textContent = (hmywoepKG.value * 0.90449).round(1).toLocaleString() + " " + hmywoepUnit + " on Venus";
+			hmywoepMars.textContent = (hmywoepKG.value * 0.37941).round(1).toLocaleString() + " " + hmywoepUnit + " on Mars";
+			hmywoepJupiter.textContent = (hmywoepKG.value * 2.52800).round(1).toLocaleString() + " " + hmywoepUnit + " on Jupiter";
+			hmywoepSaturn.textContent = (hmywoepKG.value * 1.06500).round(1).toLocaleString() + " " + hmywoepUnit + " on Saturn";
+			hmywoepUranus.textContent = (hmywoepKG.value * 0.88600).round(1).toLocaleString() + " " + hmywoepUnit + " on Uranus";
+			hmywoepNeptune.textContent = (hmywoepKG.value * 1.14000).round(1).toLocaleString() + " " + hmywoepUnit + " on Neptune";
 		}
 	}
 }
