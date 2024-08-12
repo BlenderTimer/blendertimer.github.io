@@ -6249,9 +6249,9 @@ var objects = [
 		topImageAlign:"none",
 		topImageArtist:"",
 		topImageDate:"", // YYYY/MM/DD
-		width:288033,
-		length:288033,
-		height:288033,
+		width:144016.66,
+		length:144016.66,
+		height:144016.66,
 		category1:"space",
 		category2:"planets",
 		category3:"exoplanets",
