@@ -6234,6 +6234,31 @@ var objects = [
 		dateAdded:"2024/08/09", // YYYY/MM/DD
 		lastModified:"2024/08/09", // YYYY/MM/DD
 	},
+	{
+		name:"KPS-01 b",
+		defaultAngle:1,
+		sideImage:"",
+		sideImageAlign:"none",
+		sideImageArtist:"",
+		sideImageDate:"", // YYYY/MM/DD
+		frontImage:"KPS_01_b-front",
+		frontImageAlign:"none",
+		frontImageArtist:"MasterNeonlight",
+		frontImageDate:"2024/08/12", // YYYY/MM/DD
+		topImage:"",
+		topImageAlign:"none",
+		topImageArtist:"",
+		topImageDate:"", // YYYY/MM/DD
+		width:288033,
+		length:288033,
+		height:288033,
+		category1:"space",
+		category2:"planets",
+		category3:"exoplanets",
+		tags:["gas","giant"], // don't include anything in categories or name
+		dateAdded:"2024/08/12", // YYYY/MM/DD
+		lastModified:"2024/08/12", // YYYY/MM/DD
+	},
 ];
 
 //	———————— STEPS FOR UPDATING ————————
