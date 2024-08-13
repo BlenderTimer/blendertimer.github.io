@@ -6259,6 +6259,31 @@ var objects = [
 		dateAdded:"2024/08/12", // YYYY/MM/DD
 		lastModified:"2024/08/12", // YYYY/MM/DD
 	},
+	{
+		name:"Kepler-10b",
+		defaultAngle:1,
+		sideImage:"",
+		sideImageAlign:"none",
+		sideImageArtist:"",
+		sideImageDate:"", // YYYY/MM/DD
+		frontImage:"Kepler_10b-front",
+		frontImageAlign:"none",
+		frontImageArtist:"MasterNeonlight",
+		frontImageDate:"2024/08/12", // YYYY/MM/DD
+		topImage:"",
+		topImageAlign:"none",
+		topImageArtist:"",
+		topImageDate:"", // YYYY/MM/DD
+		width:18730.74,
+		length:18730.74,
+		height:18730.74,
+		category1:"space",
+		category2:"planets",
+		category3:"exoplanets",
+		tags:["terrestrial"], // don't include anything in categories or name
+		dateAdded:"2024/08/12", // YYYY/MM/DD
+		lastModified:"2024/08/12", // YYYY/MM/DD
+	},
 ];
 
 //	———————— STEPS FOR UPDATING ————————
