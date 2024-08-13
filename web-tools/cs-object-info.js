@@ -6343,7 +6343,7 @@ var objects = [
 		sideImageDate:"", // YYYY/MM/DD
 		frontImage:"HD_100546_b-front",
 		frontImageAlign:"none",
-		frontImageArtist:"MasterNeonlight",
+		frontImageArtist:"TheCreatorofUniverse",
 		frontImageDate:"2024/08/13", // YYYY/MM/DD
 		topImage:"",
 		topImageAlign:"none",
