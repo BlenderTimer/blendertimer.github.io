@@ -6284,6 +6284,81 @@ var objects = [
 		dateAdded:"2024/08/12", // YYYY/MM/DD
 		lastModified:"2024/08/12", // YYYY/MM/DD
 	},
+	{
+		name:"TOI-1753 b",
+		defaultAngle:1,
+		sideImage:"",
+		sideImageAlign:"none",
+		sideImageArtist:"",
+		sideImageDate:"", // YYYY/MM/DD
+		frontImage:"TOI_1753_b-front",
+		frontImageAlign:"none",
+		frontImageArtist:"MasterNeonlight",
+		frontImageDate:"2024/08/13", // YYYY/MM/DD
+		topImage:"",
+		topImageAlign:"none",
+		topImageArtist:"",
+		topImageDate:"", // YYYY/MM/DD
+		width:31587.418,
+		length:31587.418,
+		height:31587.418,
+		category1:"space",
+		category2:"planets",
+		category3:"exoplanets",
+		tags:["terrestrial"], // don't include anything in categories or name
+		dateAdded:"2024/08/13", // YYYY/MM/DD
+		lastModified:"2024/08/13", // YYYY/MM/DD
+	},
+	{
+		name:"Kepler-9 b",
+		defaultAngle:1,
+		sideImage:"",
+		sideImageAlign:"none",
+		sideImageArtist:"",
+		sideImageDate:"", // YYYY/MM/DD
+		frontImage:"Kepler_9_b-front",
+		frontImageAlign:"none",
+		frontImageArtist:"MasterNeonlight",
+		frontImageDate:"2024/08/13", // YYYY/MM/DD
+		topImage:"",
+		topImageAlign:"none",
+		topImageArtist:"",
+		topImageDate:"", // YYYY/MM/DD
+		width:103468.28,
+		length:103468.28,
+		height:103468.28,
+		category1:"space",
+		category2:"planets",
+		category3:"exoplanets",
+		tags:["gas","giant"], // don't include anything in categories or name
+		dateAdded:"2024/08/13", // YYYY/MM/DD
+		lastModified:"2024/08/13", // YYYY/MM/DD
+	},
+	{
+		name:"HD 100546 b",
+		defaultAngle:1,
+		sideImage:"",
+		sideImageAlign:"none",
+		sideImageArtist:"",
+		sideImageDate:"", // YYYY/MM/DD
+		frontImage:"HD_100546_b-front",
+		frontImageAlign:"none",
+		frontImageArtist:"MasterNeonlight",
+		frontImageDate:"2024/08/13", // YYYY/MM/DD
+		topImage:"",
+		topImageAlign:"none",
+		topImageArtist:"",
+		topImageDate:"", // YYYY/MM/DD
+		width:964771.8,
+		length:964771.8,
+		height:964771.8,
+		category1:"space",
+		category2:"planets",
+		category3:"exoplanets",
+		tags:["gas","giant"], // don't include anything in categories or name
+		dateAdded:"2024/08/13", // YYYY/MM/DD
+		lastModified:"2024/08/13", // YYYY/MM/DD
+	},
 ];
 
 //	———————— STEPS FOR UPDATING ————————
