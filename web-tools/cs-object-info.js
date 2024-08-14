@@ -6359,6 +6359,306 @@ var objects = [
 		dateAdded:"2024/08/13", // YYYY/MM/DD
 		lastModified:"2024/08/13", // YYYY/MM/DD
 	},
+	{
+		name:"Archelon Ischyros",
+		defaultAngle:0,
+		sideImage:"Archelon_Ischyros-side",
+		sideImageAlign:"none",
+		sideImageArtist:"MasterNeonlight",
+		sideImageDate:"2024/08/14", // YYYY/MM/DD
+		frontImage:"",
+		frontImageAlign:"none",
+		frontImageArtist:"",
+		frontImageDate:"", // YYYY/MM/DD
+		topImage:"",
+		topImageAlign:"none",
+		topImageArtist:"",
+		topImageDate:"", // YYYY/MM/DD
+		width:0.0025,
+		length:0.0035,
+		height:0.001595,
+		category1:"nature",
+		category2:"animals",
+		category3:"reptiles",
+		tags:["turtle"], // don't include anything in categories or name
+		dateAdded:"2024/08/14", // YYYY/MM/DD
+		lastModified:"2024/08/14", // YYYY/MM/DD
+	},
+	{
+		name:"Bengal Tiger",
+		defaultAngle:0,
+		sideImage:"Bengal_Tiger-side",
+		sideImageAlign:"none",
+		sideImageArtist:"MasterNeonlight",
+		sideImageDate:"2024/08/14", // YYYY/MM/DD
+		frontImage:"",
+		frontImageAlign:"none",
+		frontImageArtist:"",
+		frontImageDate:"", // YYYY/MM/DD
+		topImage:"",
+		topImageAlign:"none",
+		topImageArtist:"",
+		topImageDate:"", // YYYY/MM/DD
+		width:0.0008,
+		length:0.003,
+		height:0.001767,
+		category1:"nature",
+		category2:"animals",
+		category3:"mammals",
+		tags:["endangered"], // don't include anything in categories or name
+		dateAdded:"2024/08/14", // YYYY/MM/DD
+		lastModified:"2024/08/14", // YYYY/MM/DD
+	},
+	{
+		name:"Kepler-89 b",
+		defaultAngle:1,
+		sideImage:"",
+		sideImageAlign:"none",
+		sideImageArtist:"",
+		sideImageDate:"", // YYYY/MM/DD
+		frontImage:"Kepler_89_b-front",
+		frontImageAlign:"none",
+		frontImageArtist:"MasterNeonlight",
+		frontImageDate:"2024/08/14", // YYYY/MM/DD
+		topImage:"",
+		topImageAlign:"none",
+		topImageArtist:"",
+		topImageDate:"", // YYYY/MM/DD
+		width:21392.766,
+		length:21392.766,
+		height:21392.766,
+		category1:"space",
+		category2:"planets",
+		category3:"exoplanets",
+		tags:["terrestrial"], // don't include anything in categories or name
+		dateAdded:"2024/08/14", // YYYY/MM/DD
+		lastModified:"2024/08/14", // YYYY/MM/DD
+	},
+	{
+		name:"CoRoT-7b",
+		defaultAngle:1,
+		sideImage:"",
+		sideImageAlign:"none",
+		sideImageArtist:"",
+		sideImageDate:"", // YYYY/MM/DD
+		frontImage:"CoRoT_7b-front",
+		frontImageAlign:"none",
+		frontImageArtist:"MasterNeonlight",
+		frontImageDate:"2024/08/14", // YYYY/MM/DD
+		topImage:"",
+		topImageAlign:"none",
+		topImageArtist:"",
+		topImageDate:"", // YYYY/MM/DD
+		width:10709.651,
+		length:10709.651,
+		height:10709.651,
+		category1:"space",
+		category2:"planets",
+		category3:"exoplanets",
+		tags:["terrestrial"], // don't include anything in categories or name
+		dateAdded:"2024/08/14", // YYYY/MM/DD
+		lastModified:"2024/08/14", // YYYY/MM/DD
+	},
+	{
+		name:"Utahraptor Ostrommaysi",
+		defaultAngle:0,
+		sideImage:"Utahraptor_Ostrommaysi-side",
+		sideImageAlign:"bottom",
+		sideImageArtist:"MasterNeonlight",
+		sideImageDate:"2024/08/14", // YYYY/MM/DD
+		frontImage:"",
+		frontImageAlign:"none",
+		frontImageArtist:"",
+		frontImageDate:"", // YYYY/MM/DD
+		topImage:"",
+		topImageAlign:"none",
+		topImageArtist:"",
+		topImageDate:"", // YYYY/MM/DD
+		width:0.0016,
+		length:0.0067,
+		height:0.0024567,
+		category1:"nature",
+		category2:"animals",
+		category3:"reptiles",
+		tags:["dromaeosauridae"], // don't include anything in categories or name
+		dateAdded:"2024/08/14", // YYYY/MM/DD
+		lastModified:"2024/08/14", // YYYY/MM/DD
+	},
+	{
+		name:"Vela Pulsar",
+		defaultAngle:1,
+		sideImage:"",
+		sideImageAlign:"none",
+		sideImageArtist:"",
+		sideImageDate:"", // YYYY/MM/DD
+		frontImage:"Vela_Pulsar-front",
+		frontImageAlign:"none",
+		frontImageArtist:"MasterNeonlight",
+		frontImageDate:"2024/08/14", // YYYY/MM/DD
+		topImage:"",
+		topImageAlign:"none",
+		topImageArtist:"",
+		topImageDate:"", // YYYY/MM/DD
+		width:19.312128,
+		length:19.312128,
+		height:19.312128,
+		category1:"space",
+		category2:"stars",
+		category3:"pulsars",
+		tags:["gamma","optical","radio","x-ray","xray"], // don't include anything in categories or name
+		dateAdded:"2024/08/14", // YYYY/MM/DD
+		lastModified:"2024/08/14", // YYYY/MM/DD
+	},
+	{
+		name:"Lich Pulsar",
+		defaultAngle:1,
+		sideImage:"",
+		sideImageAlign:"none",
+		sideImageArtist:"",
+		sideImageDate:"", // YYYY/MM/DD
+		frontImage:"Lich_Pulsar-front",
+		frontImageAlign:"none",
+		frontImageArtist:"MasterNeonlight",
+		frontImageDate:"2024/08/14", // YYYY/MM/DD
+		topImage:"",
+		topImageAlign:"none",
+		topImageArtist:"",
+		topImageDate:"", // YYYY/MM/DD
+		width:20,
+		length:20,
+		height:20,
+		category1:"space",
+		category2:"stars",
+		category3:"pulsars",
+		tags:["millisecond"], // don't include anything in categories or name
+		dateAdded:"2024/08/14", // YYYY/MM/DD
+		lastModified:"2024/08/14", // YYYY/MM/DD
+	},
+	{
+		name:"Crab Pulsar",
+		defaultAngle:1,
+		sideImage:"",
+		sideImageAlign:"none",
+		sideImageArtist:"",
+		sideImageDate:"", // YYYY/MM/DD
+		frontImage:"Crab_Pulsar-front",
+		frontImageAlign:"none",
+		frontImageArtist:"MasterNeonlight",
+		frontImageDate:"2024/08/14", // YYYY/MM/DD
+		topImage:"",
+		topImageAlign:"none",
+		topImageArtist:"",
+		topImageDate:"", // YYYY/MM/DD
+		width:30,
+		length:30,
+		height:30,
+		category1:"space",
+		category2:"stars",
+		category3:"pulsars",
+		tags:["neutron"], // don't include anything in categories or name
+		dateAdded:"2024/08/14", // YYYY/MM/DD
+		lastModified:"2024/08/14", // YYYY/MM/DD
+	},
+	{
+		name:"Saltwater Crocodile",
+		defaultAngle:0,
+		sideImage:"Saltwater_Crocodile-side",
+		sideImageAlign:"bottom",
+		sideImageArtist:"MasterNeonlight",
+		sideImageDate:"2024/08/14", // YYYY/MM/DD
+		frontImage:"",
+		frontImageAlign:"none",
+		frontImageArtist:"",
+		frontImageDate:"", // YYYY/MM/DD
+		topImage:"",
+		topImageAlign:"none",
+		topImageArtist:"",
+		topImageDate:"", // YYYY/MM/DD
+		width:0.0012,
+		length:0.006096,
+		height:0.000948267,
+		category1:"nature",
+		category2:"animals",
+		category3:"reptiles",
+		tags:["crocodilian"], // don't include anything in categories or name
+		dateAdded:"2024/08/14", // YYYY/MM/DD
+		lastModified:"2024/08/14", // YYYY/MM/DD
+	},
+	{
+		name:"Planck Particle",
+		defaultAngle:1,
+		sideImage:"",
+		sideImageAlign:"none",
+		sideImageArtist:"",
+		sideImageDate:"", // YYYY/MM/DD
+		frontImage:"Planck_Particle-front",
+		frontImageAlign:"none",
+		frontImageArtist:"MasterNeonlight",
+		frontImageDate:"2024/08/14", // YYYY/MM/DD
+		topImage:"",
+		topImageAlign:"none",
+		topImageArtist:"",
+		topImageDate:"", // YYYY/MM/DD
+		width:0.00000000000000000000000000000000000004,
+		length:0.00000000000000000000000000000000000004,
+		height:0.00000000000000000000000000000000000004,
+		category1:"miscellaneous",
+		category2:"particles",
+		category3:"atoms",
+		tags:["hypothetical"], // don't include anything in categories or name
+		dateAdded:"2024/08/14", // YYYY/MM/DD
+		lastModified:"2024/08/14", // YYYY/MM/DD
+	},
+	{
+		name:"Blue Wildebeest",
+		defaultAngle:0,
+		sideImage:"Blue_Wildebeest-side",
+		sideImageAlign:"bottom",
+		sideImageArtist:"MasterNeonlight",
+		sideImageDate:"2024/08/14", // YYYY/MM/DD
+		frontImage:"",
+		frontImageAlign:"none",
+		frontImageArtist:"",
+		frontImageDate:"", // YYYY/MM/DD
+		topImage:"",
+		topImageAlign:"none",
+		topImageArtist:"",
+		topImageDate:"", // YYYY/MM/DD
+		width:0.0008,
+		length:0.0024384,
+		height:0.001652693,
+		category1:"nature",
+		category2:"animals",
+		category3:"mammals",
+		tags:["bearded","brindled","common","white","white-bearded gnu"], // don't include anything in categories or name
+		dateAdded:"2024/08/14", // YYYY/MM/DD
+		lastModified:"2024/08/14", // YYYY/MM/DD
+	},
+	{
+		name:"Liger",
+		defaultAngle:0,
+		sideImage:"Liger-side",
+		sideImageAlign:"bottom",
+		sideImageArtist:"MasterNeonlight",
+		sideImageDate:"2024/08/14", // YYYY/MM/DD
+		frontImage:"",
+		frontImageAlign:"none",
+		frontImageArtist:"",
+		frontImageDate:"", // YYYY/MM/DD
+		topImage:"",
+		topImageAlign:"none",
+		topImageArtist:"",
+		topImageDate:"", // YYYY/MM/DD
+		width:0.0009,
+		length:0.0032004,
+		height:0.00192024,
+		category1:"nature",
+		category2:"animals",
+		category3:"mammals",
+		tags:["lion","tiger"], // don't include anything in categories or name
+		dateAdded:"2024/08/14", // YYYY/MM/DD
+		lastModified:"2024/08/14", // YYYY/MM/DD
+	},
 ];
 
 //	———————— STEPS FOR UPDATING ————————
