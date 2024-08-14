@@ -30,7 +30,7 @@
 				</ul>
 				<div id="revolve-button" title="Current visitors on this site."><script src="https://rf.revolvermaps.com/0/0/3.js?i=5cgjr9bkw1v&b=0&s=40&m=2&cl=555555&co=000000&cd=ffffff&v0=25&v1=100&r=1" async="async"></script></div>
 				<!--====================  SMALL MENU  ====================-->
-				<div id="small-menu" style="display: none" onclick="smallMenuToggle()"><img alt="Menu" src="./static-0/files/images/menu-bars.png"></div>
+				<div id="small-menu" style="display: none" onclick="smallMenuToggle()"><img alt="Menu" src="../static-0/files/images/menu-bars.png"></div>
 				<div id="small-menu-main"></div>
 			</nav>
 			<script src="../static-0/nav-links.js"></script>
@@ -40,6 +40,8 @@
 			<img alt="Loading" src="../static-0/files/images/loading-general.gif" style="width: 100px; height: 100px; position: fixed; left: calc(50% - 50px); top: calc(50% - 25px); filter: drop-shadow(0px 0px 15px #000000)">
 		</div>
 		<div id="content-main" style="opacity: 0; transition: 1s ease">
+			<audio src="./solar-system/audio/beep-object.wav" style="display:none" id="beep-object" preload="auto"></audio>
+			<audio src="./solar-system/audio/beep-30s.wav" style="display:none" id="beep-30s" preload="auto"></audio>
 			<div id="primary-block">
 				<h1>Our Massively Tiny Solar System</h1>
 				<div id="title-text2">
@@ -103,13 +105,17 @@
 									<label for="c-zoom">Zoom:</label><input type="range" id="c-zoom" min=0.8 max=12 value=3 step=0.01 oninput="setZoom()">
 								</div>
 								<div class="c-button-group">
-									<label for="c-zoom">Background grid:</label><div onclick="checkbox(event), setBackgroundGrid(event)" class="checkbox" id="grid-checkbox"></div>
+									<label for="grid-checkbox">Background grid:</label><div onclick="checkbox(event), setBackgroundGrid(event)" class="checkbox" id="grid-checkbox"></div>
+								</div>
+								<div class="c-button-group">
+									<label for="beep-checkbox">Beep for objects:</label><div onclick="checkbox(event), setBeeps(event)" class="checkbox" id="beep-checkbox"></div>
 								</div>
 							</div>
 						</div>
 					</div>
 					<canvas id="ss-canvas"></canvas>
 				</div>
+				<i id="beeps-des">2 long beeps: 30 seconds to the next object - 2 short beeps: passing an object</i>
 				<h2 id="journey" style="margin: 20px 0px -5px 0px">Your journey will include:</h2>
 				<div id="journey-list">
 					<div class="object">
@@ -318,6 +324,32 @@
 						</div>
 						<div class="parameters">
 							<p>Size: 2341x2341</p> <!-- image km -->
+						</div>
+					</div>
+					<div class="object" id="voyager2">
+						<img src="./solar-system/images/Voyager.svg">
+						<div>
+							<h3>Voyager 2</h3>
+							<i>At:</i>
+							<b class="metric">...</b>
+							<b class="imperial">...</b>
+							<i>from the Sun.</i>
+						</div>
+						<div class="parameters">
+							<p>Size: 0.0173736x0.0028956</p> <!-- image km -->
+						</div>
+					</div>
+					<div class="object" id="voyager1">
+						<img src="./solar-system/images/Voyager.svg">
+						<div>
+							<h3>Voyager 1</h3>
+							<i>At:</i>
+							<b class="metric">...</b>
+							<b class="imperial">...</b>
+							<i>from the Sun.</i>
+						</div>
+						<div class="parameters">
+							<p>Size: 0.0173736x0.0028956</p> <!-- image km -->
 						</div>
 					</div>
 					<div class="object">

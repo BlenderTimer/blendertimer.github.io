@@ -1,4 +1,6 @@
 //———————————HTML ELEMENTS——————————————————
+var beepObject = document.getElementById("beep-object");
+var beep30s = document.getElementById("beep-30s");
 var fpsText = document.getElementById("fps-text");
 
 var solarSystem = document.getElementById("solar-system");
@@ -29,6 +31,8 @@ var endAnimation = true;
 var grid = true;
 var lastDistanceInput = 0;
 var lastSpeedInput = 0;
+var beeps = true;
+var lastNextTime = 100000;
 
 //———————————SETTINGS———————————————————————
 var speedMultiplier = 1;
@@ -36,7 +40,28 @@ var zoom = 243;
 var sizeBias = 350000;
 //——————————————————————————————————————————
 
+function voyager(probe) {
+	//Calculate date from current_ms-((current_km_distance/speed)*1000)
+	if (probe == 1) {
+		var speed = 16.9994873; // km/s
+		var date = new Date(276856370061);
+		return ((Date.now()-date.getTime())/1000)*speed;
+	}
+	else if (probe == 2) {
+		var speed = 15.3741437; // km/s
+		var date = new Date(387319077994);
+		return ((Date.now()-date.getTime())/1000)*speed;
+	}
+	else {
+		return 0;
+	}
+}
+
 function loadJourney() {
+	document.getElementById('voyager2').children[1].children[2].innerHTML = voyager(2).round(0).toLocaleString() + " kilometers";
+	document.getElementById('voyager2').children[1].children[3].innerHTML = (voyager(2)*0.62137119223733).round(0).toLocaleString() + " miles";
+	document.getElementById('voyager1').children[1].children[2].innerHTML = voyager(1).round(0).toLocaleString() + " kilometers";
+	document.getElementById('voyager1').children[1].children[3].innerHTML = (voyager(1)*0.62137119223733).round(0).toLocaleString() + " miles";
 	for (var i=0; i < journeyList.children.length; i++) {
 		objects.push({
 			id:i,
@@ -56,11 +81,13 @@ function loadDemo() {
 	loadJourney();
 	setSpeedMultiplier(1);
 	checkbox('grid-checkbox');
+	checkbox('beep-checkbox');
 	setCanvasSize();
 	setTimeout(function() {setCanvasSize(); dataInit(); drawCanvas(); drawStart()},5);
 	setTimeout(function() {setCanvasSize(); dataInit(); drawCanvas(); drawStart()},10);
 	setTimeout(function() {setCanvasSize(); dataInit(); drawCanvas(); drawStart()},20);
 	setTimeout(function() {setCanvasSize(); dataInit(); drawCanvas(); drawStart()},50);
+	setTimeout(function() {document.getElementById('beeps-des').style.display = "none"},3000);
 }
 
 function setCanvasSize() {
@@ -435,6 +462,14 @@ function drawCanvas(disableUpdate) {
 		}
 		else {
 			ss2d.fillText(Math.round(nextObject.distance - distance).toLocaleString() + " km", ssCenter.y / 15, ssSize.height - (ssCenter.y / 14.5));
+		}
+	}
+	if (beeps == true) {
+		if (distanceToTime(nextObject.distance-distance) > 29500 && distanceToTime(nextObject.distance-distance) < 30500) {
+			beep30s.play();
+		}
+		if (distanceToTime(nextObject.distance-distance) > 500 && distanceToTime(nextObject.distance-distance) < 1500) {
+			beepObject.play();
 		}
 	}
 }
@@ -903,9 +938,9 @@ function setTime(t) {
 }
 
 function makeReadableTime(t) {
-	var years = (t/1000/60/60/24/365);
+	var years = (t/1000/60/60/24/365.25);
 	var months = (years-Math.floor(years))*12;
-	var days = (months-Math.floor(months))*(365/12);
+	var days = (months-Math.floor(months))*(365.25/12);
 	var hours = (days-Math.floor(days))*24;
 	var minutes = (hours-Math.floor(hours))*60;
 	var seconds = (minutes-Math.floor(minutes))*60;
@@ -963,7 +998,7 @@ function readTime(t) {
 	minutes = parseFloat(t.removeAfter(":", -1));
 	t = t.removeBefore(":", 1);
 	seconds = parseFloat(t.removeAfter(":", -1));
-	return (seconds*1000) + (minutes*60*1000) + (hours*60*60*1000) + (days*24*60*60*1000) + (months*(365/12)*60*60*1000) + (years*12*(365/12)*60*60*1000);
+	return (seconds*1000) + (minutes*60*1000) + (hours*60*60*1000) + (days*24*60*60*1000) + (months*(365.25/12)*60*60*1000) + (years*12*(365.25/12)*60*60*1000);
 }
 
 function setSpeed(s, lsi) {
@@ -1137,4 +1172,16 @@ function setBackgroundGrid(event) {
 		grid = false;
 	}
 	generalDraw();
+}
+
+function setBeeps(event) {
+	var element = event.target || event.srcElement;
+	if (element.children.length > 0) {
+		beeps = true;
+		document.getElementById('beeps-des').style.display = "block";
+		setTimeout(function() {document.getElementById('beeps-des').style.display = "none"},3000);
+	}
+	else {
+		beeps = false;
+	}
 }
