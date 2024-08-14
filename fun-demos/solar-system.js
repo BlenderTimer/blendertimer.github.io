@@ -775,7 +775,7 @@ function generalDraw() {
 }
 
 function convertKMtoMI(d) {
-	return d*(1/0.62137119223733);
+	return d*0.62137119223733;
 }
 
 var lObject = {};
@@ -797,10 +797,10 @@ function setDistance(d, ldi) {
 				icDistance.value = Math.round(distance*1000);
 			}
 			else if (icDistanceUnit.value == 'ft') {
-				icDistance.value = Math.round(distance*5280*(1/0.62137119223733));
+				icDistance.value = Math.round(distance*5280*0.62137119223733);
 			}
 			else if (icDistanceUnit.value == 'mi') {
-				icDistance.value = Math.round(distance/0.62137119223733);
+				icDistance.value = Math.round(distance*0.62137119223733);
 			}
 			else if (icDistanceUnit.value == 'sr') {
 				icDistance.value = (distance/695700).round(2);
