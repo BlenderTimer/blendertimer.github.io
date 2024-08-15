@@ -18,10 +18,10 @@
 		<link rel="stylesheet" type="text/css" href="./static-0/general.css">
 		<link rel="stylesheet" type="text/css" href="./static-0/main.css">
 		<link rel="stylesheet" type="text/css" href="./static-0/home.css">
+		<script src="./static-0/videos.js"></script>
 		<script src="./bt-js/bt-js.js"></script>
 	</head>
 	<body onresize="determineDisplayMenu()">
-		<div id="background-plate"></div>
 		<div id="banner-menu">
 			<nav>
 				<!--====================  LARGE MENU  ====================-->
@@ -39,14 +39,13 @@
 		<div id="loader" style="width: 100%; height: calc(100% - 50px); top: 50px; left: 0px; position: fixed; z-index: -99999">
 			<img alt="Loading" src="./static-0/files/images/loading-general.gif" style="width: 100px; height: 100px; position: fixed; left: calc(50% - 50px); top: calc(50% - 25px); filter: drop-shadow(0px 0px 15px #000000)">
 		</div>
-		<div id="content-main" style="opacity: 0; transition: 1s ease">
+		<div id="content-main" style="opacity: 0; transition: 0.5s ease">
 			<h1>Welcome to BlenderTimer!</h1>
 			<div id="welcome-text"><p>Check out some of the popular web tools (especially the </p><a href="./web-tools/compare-size">Size Comparison</a><p> tool), watch the latest videos, shop for cool BlenderTimer merch, analyze the factsheets, submit great video ideas, and much more!</p><br><p>Additionally, you can connect with BlenderTimer via the many platforms listed on the About page (including our </p><a href="https://discord.gg/EBYeZ3E58c">Discord server</a><p>), and find out more behind the channel with the </p><a href="./about#faq">FAQs</a><p>! And, if you're feeling generous, consider </p><a href="./about#support">donating</a><p> to support BlenderTimer!</p></div>
 			<h2>LATEST VIDEOS</h2>
 			<div id="latest-videos">
 				<span id="latest-videos-end"></span>
 				<div id="latest-videos-more"><a href="./channel">View More!</a></div>
-				<script src="./static-0/videos.js"></script>
 				<script type="text/javascript">
 					var limit = 50;
 					for (var i=videos.length-1; i >= 0; i-=1) {
