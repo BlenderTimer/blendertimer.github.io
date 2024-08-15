@@ -481,16 +481,16 @@ nav ul li ul li a:hover {
 	width: auto;
 	display: block;
 	position: relative;
-	margin: 50px 5vw 50px 5vw;
+	margin: 0px;
+	min-height: calc(100vh - 50px);
+	padding: 20px;
 	box-shadow: 0px 0px 20px #000;
 	z-index: -99;
 	font-family: monospace;
 	font-size: 15pt;
 	color: #F5F5F5;
-	min-height: calc(100vh - 150px);
-	border-radius: 10px;
 	box-sizing: border-box;
-    padding: 30px;
+    padding: 20px;
     overflow: hidden;
 }
 
