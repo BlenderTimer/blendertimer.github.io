@@ -6405,9 +6405,9 @@ var objects = [
 		category1:"nature",
 		category2:"animals",
 		category3:"mammals",
-		tags:["endangered"], // don't include anything in categories or name
+		tags:["cat","endangered"], // don't include anything in categories or name
 		dateAdded:"2024/08/14", // YYYY/MM/DD
-		lastModified:"2024/08/14", // YYYY/MM/DD
+		lastModified:"2024/08/15", // YYYY/MM/DD
 	},
 	{
 		name:"Kepler-89 b",
@@ -6655,9 +6655,184 @@ var objects = [
 		category1:"nature",
 		category2:"animals",
 		category3:"mammals",
-		tags:["lion","tiger"], // don't include anything in categories or name
+		tags:["cat","lion","tiger"], // don't include anything in categories or name
 		dateAdded:"2024/08/14", // YYYY/MM/DD
-		lastModified:"2024/08/14", // YYYY/MM/DD
+		lastModified:"2024/08/15", // YYYY/MM/DD
+	},
+	{
+		name:"Koolasuchus Cleelandi",
+		defaultAngle:0,
+		sideImage:"Koolasuchus_Cleelandi-side",
+		sideImageAlign:"bottom",
+		sideImageArtist:"MasterNeonlight",
+		sideImageDate:"2024/08/15", // YYYY/MM/DD
+		frontImage:"",
+		frontImageAlign:"none",
+		frontImageArtist:"",
+		frontImageDate:"", // YYYY/MM/DD
+		topImage:"",
+		topImageAlign:"none",
+		topImageArtist:"",
+		topImageDate:"", // YYYY/MM/DD
+		width:0.0008,
+		length:0.003,
+		height:0.00063,
+		category1:"nature",
+		category2:"animals",
+		category3:"amphibians",
+		tags:["brachyopoid temnospondyl"], // don't include anything in categories or name
+		dateAdded:"2024/08/15", // YYYY/MM/DD
+		lastModified:"2024/08/15", // YYYY/MM/DD
+	},
+	{
+		name:"Koala",
+		defaultAngle:0,
+		sideImage:"Koala-side",
+		sideImageAlign:"bottom",
+		sideImageArtist:"MasterNeonlight",
+		sideImageDate:"2024/08/15", // YYYY/MM/DD
+		frontImage:"",
+		frontImageAlign:"none",
+		frontImageArtist:"",
+		frontImageDate:"", // YYYY/MM/DD
+		topImage:"",
+		topImageAlign:"none",
+		topImageArtist:"",
+		topImageDate:"", // YYYY/MM/DD
+		width:0.0003,
+		length:0.0007,
+		height:0.000521,
+		category1:"nature",
+		category2:"animals",
+		category3:"mammals",
+		tags:["bear"], // don't include anything in categories or name
+		dateAdded:"2024/08/15", // YYYY/MM/DD
+		lastModified:"2024/08/15", // YYYY/MM/DD
+	},
+	{
+		name:"Giant Eland",
+		defaultAngle:0,
+		sideImage:"Giant_Eland-side",
+		sideImageAlign:"bottom",
+		sideImageArtist:"MasterNeonlight",
+		sideImageDate:"2024/08/15", // YYYY/MM/DD
+		frontImage:"",
+		frontImageAlign:"none",
+		frontImageArtist:"",
+		frontImageDate:"", // YYYY/MM/DD
+		topImage:"",
+		topImageAlign:"none",
+		topImageArtist:"",
+		topImageDate:"", // YYYY/MM/DD
+		width:0.0009,
+		length:0.0029,
+		height:0.0024167,
+		category1:"nature",
+		category2:"animals",
+		category3:"mammals",
+		tags:["antelope","largest"], // don't include anything in categories or name
+		dateAdded:"2024/08/15", // YYYY/MM/DD
+		lastModified:"2024/08/15", // YYYY/MM/DD
+	},
+	{
+		name:"Hippopotamus",
+		defaultAngle:0,
+		sideImage:"Hippopotamus-side",
+		sideImageAlign:"bottom",
+		sideImageArtist:"MasterNeonlight",
+		sideImageDate:"2024/08/15", // YYYY/MM/DD
+		frontImage:"",
+		frontImageAlign:"none",
+		frontImageArtist:"",
+		frontImageDate:"", // YYYY/MM/DD
+		topImage:"",
+		topImageAlign:"none",
+		topImageArtist:"",
+		topImageDate:"", // YYYY/MM/DD
+		width:0.0015,
+		length:0.0037229,
+		height:0.00173736,
+		category1:"nature",
+		category2:"animals",
+		category3:"mammals",
+		tags:["common","nile","river"], // don't include anything in categories or name
+		dateAdded:"2024/08/15", // YYYY/MM/DD
+		lastModified:"2024/08/15", // YYYY/MM/DD
+	},
+	{
+		name:"Cheetah",
+		defaultAngle:0,
+		sideImage:"Cheetah-side",
+		sideImageAlign:"bottom",
+		sideImageArtist:"MasterNeonlight",
+		sideImageDate:"2024/08/15", // YYYY/MM/DD
+		frontImage:"",
+		frontImageAlign:"none",
+		frontImageArtist:"",
+		frontImageDate:"", // YYYY/MM/DD
+		topImage:"",
+		topImageAlign:"none",
+		topImageArtist:"",
+		topImageDate:"", // YYYY/MM/DD
+		width:0.0001,
+		length:0.0008,
+		height:0.00048,
+		category1:"nature",
+		category2:"animals",
+		category3:"mammals",
+		tags:["cat","fastest land animal"], // don't include anything in categories or name
+		dateAdded:"2024/08/15", // YYYY/MM/DD
+		lastModified:"2024/08/15", // YYYY/MM/DD
+	},
+	{
+		name:"Ostrich",
+		defaultAngle:0,
+		sideImage:"Ostrich-side",
+		sideImageAlign:"bottom",
+		sideImageArtist:"MasterNeonlight",
+		sideImageDate:"2024/08/15", // YYYY/MM/DD
+		frontImage:"",
+		frontImageAlign:"none",
+		frontImageArtist:"",
+		frontImageDate:"", // YYYY/MM/DD
+		topImage:"",
+		topImageAlign:"none",
+		topImageArtist:"",
+		topImageDate:"", // YYYY/MM/DD
+		width:0.002,
+		length:0.002286,
+		height:0.0027432,
+		category1:"nature",
+		category2:"animals",
+		category3:"birds",
+		tags:["flightless","largest"], // don't include anything in categories or name
+		dateAdded:"2024/08/15", // YYYY/MM/DD
+		lastModified:"2024/08/15", // YYYY/MM/DD
+	},
+	{
+		name:"Ostrich Egg",
+		defaultAngle:1,
+		sideImage:"",
+		sideImageAlign:"none",
+		sideImageArtist:"",
+		sideImageDate:"", // YYYY/MM/DD
+		frontImage:"Ostrich_Egg-front",
+		frontImageAlign:"bottom",
+		frontImageArtist:"MasterNeonlight",
+		frontImageDate:"2024/08/15", // YYYY/MM/DD
+		topImage:"",
+		topImageAlign:"none",
+		topImageArtist:"",
+		topImageDate:"", // YYYY/MM/DD
+		width:0.0001253,
+		length:0.0001253,
+		height:0.0001524,
+		category1:"nature",
+		category2:"animals",
+		category3:"birds",
+		tags:["largest"], // don't include anything in categories or name
+		dateAdded:"2024/08/15", // YYYY/MM/DD
+		lastModified:"2024/08/15", // YYYY/MM/DD
 	},
 ];
 
