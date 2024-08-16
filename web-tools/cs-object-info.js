@@ -6480,9 +6480,9 @@ var objects = [
 		category1:"nature",
 		category2:"animals",
 		category3:"reptiles",
-		tags:["dromaeosauridae"], // don't include anything in categories or name
+		tags:["dinosaur","dromaeosauridae"], // don't include anything in categories or name
 		dateAdded:"2024/08/14", // YYYY/MM/DD
-		lastModified:"2024/08/14", // YYYY/MM/DD
+		lastModified:"2024/08/16", // YYYY/MM/DD
 	},
 	{
 		name:"Vela Pulsar",
@@ -6833,6 +6833,31 @@ var objects = [
 		tags:["largest"], // don't include anything in categories or name
 		dateAdded:"2024/08/15", // YYYY/MM/DD
 		lastModified:"2024/08/15", // YYYY/MM/DD
+	},
+	{
+		name:"Triceratops Horridus",
+		defaultAngle:0,
+		sideImage:"Triceratops_Horridus-side",
+		sideImageAlign:"bottom",
+		sideImageArtist:"MasterNeonlight",
+		sideImageDate:"2024/08/16", // YYYY/MM/DD
+		frontImage:"",
+		frontImageAlign:"none",
+		frontImageArtist:"",
+		frontImageDate:"", // YYYY/MM/DD
+		topImage:"",
+		topImageAlign:"none",
+		topImageArtist:"",
+		topImageDate:"", // YYYY/MM/DD
+		width:0.0028,
+		length:0.007,
+		height:0.003189,
+		category1:"nature",
+		category2:"animals",
+		category3:"reptiles",
+		tags:["dinosaur"], // don't include anything in categories or name
+		dateAdded:"2024/08/16", // YYYY/MM/DD
+		lastModified:"2024/08/16", // YYYY/MM/DD
 	},
 ];
 
