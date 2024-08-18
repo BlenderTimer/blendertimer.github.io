@@ -6859,6 +6859,606 @@ var objects = [
 		dateAdded:"2024/08/16", // YYYY/MM/DD
 		lastModified:"2024/08/16", // YYYY/MM/DD
 	},
+	{
+		name:"Saurophaganax Maximus",
+		defaultAngle:0,
+		sideImage:"Saurophaganax_Maximus-side",
+		sideImageAlign:"bottom",
+		sideImageArtist:"MasterNeonlight",
+		sideImageDate:"2024/08/17", // YYYY/MM/DD
+		frontImage:"",
+		frontImageAlign:"none",
+		frontImageArtist:"",
+		frontImageDate:"", // YYYY/MM/DD
+		topImage:"",
+		topImageAlign:"none",
+		topImageArtist:"",
+		topImageDate:"", // YYYY/MM/DD
+		width:0.002,
+		length:0.013,
+		height:0.0039,
+		category1:"nature",
+		category2:"animals",
+		category3:"reptiles",
+		tags:["dinosaur"], // don't include anything in categories or name
+		dateAdded:"2024/08/17", // YYYY/MM/DD
+		lastModified:"2024/08/17", // YYYY/MM/DD
+	},
+	{
+		name:"Horse (Generic)",
+		defaultAngle:0,
+		sideImage:"Horse_Generic-side",
+		sideImageAlign:"bottom",
+		sideImageArtist:"MasterNeonlight",
+		sideImageDate:"2024/08/17", // YYYY/MM/DD
+		frontImage:"",
+		frontImageAlign:"none",
+		frontImageArtist:"",
+		frontImageDate:"", // YYYY/MM/DD
+		topImage:"",
+		topImageAlign:"none",
+		topImageArtist:"",
+		topImageDate:"", // YYYY/MM/DD
+		width:0.0008,
+		length:0.0023377,
+		height:0.002,
+		category1:"nature",
+		category2:"animals",
+		category3:"mammals",
+		tags:["domestic"], // don't include anything in categories or name
+		dateAdded:"2024/08/17", // YYYY/MM/DD
+		lastModified:"2024/08/17", // YYYY/MM/DD
+	},
+	{
+		name:"Green Anaconda",
+		defaultAngle:0,
+		sideImage:"Green_Anaconda-side",
+		sideImageAlign:"bottom",
+		sideImageArtist:"MasterNeonlight",
+		sideImageDate:"2024/08/17", // YYYY/MM/DD
+		frontImage:"",
+		frontImageAlign:"none",
+		frontImageArtist:"",
+		frontImageDate:"", // YYYY/MM/DD
+		topImage:"",
+		topImageAlign:"none",
+		topImageArtist:"",
+		topImageDate:"", // YYYY/MM/DD
+		width:0.00018288,
+		length:0.0054864,
+		height:0.00018288,
+		category1:"nature",
+		category2:"animals",
+		category3:"reptiles",
+		tags:["heaviest"], // don't include anything in categories or name
+		dateAdded:"2024/08/17", // YYYY/MM/DD
+		lastModified:"2024/08/17", // YYYY/MM/DD
+	},
+	{
+		name:"Burmese Python",
+		defaultAngle:0,
+		sideImage:"Burmese_Python-side",
+		sideImageAlign:"bottom",
+		sideImageArtist:"MasterNeonlight",
+		sideImageDate:"2024/08/17", // YYYY/MM/DD
+		frontImage:"",
+		frontImageAlign:"none",
+		frontImageArtist:"",
+		frontImageDate:"", // YYYY/MM/DD
+		topImage:"",
+		topImageAlign:"none",
+		topImageArtist:"",
+		topImageDate:"", // YYYY/MM/DD
+		width:0.00016256,
+		length:0.0048768,
+		height:0.00016256,
+		category1:"nature",
+		category2:"animals",
+		category3:"reptiles",
+		tags:["indian"], // don't include anything in categories or name
+		dateAdded:"2024/08/17", // YYYY/MM/DD
+		lastModified:"2024/08/17", // YYYY/MM/DD
+	},
+	{
+		name:"Brachiosaurus Altihorax",
+		defaultAngle:0,
+		sideImage:"Brachiosaurus_Altihorax-side",
+		sideImageAlign:"bottom",
+		sideImageArtist:"MasterNeonlight",
+		sideImageDate:"2024/08/17", // YYYY/MM/DD
+		frontImage:"",
+		frontImageAlign:"none",
+		frontImageArtist:"",
+		frontImageDate:"", // YYYY/MM/DD
+		topImage:"",
+		topImageAlign:"none",
+		topImageArtist:"",
+		topImageDate:"", // YYYY/MM/DD
+		width:0.005,
+		length:0.02008,
+		height:0.0145,
+		category1:"nature",
+		category2:"animals",
+		category3:"reptiles",
+		tags:["dinosaur"], // don't include anything in categories or name
+		dateAdded:"2024/08/17", // YYYY/MM/DD
+		lastModified:"2024/08/17", // YYYY/MM/DD
+	},
+	{
+		name:"Parasaurolophus Walkeri",
+		defaultAngle:0,
+		sideImage:"Parasaurolophus_Walkeri-side",
+		sideImageAlign:"bottom",
+		sideImageArtist:"MasterNeonlight",
+		sideImageDate:"2024/08/17", // YYYY/MM/DD
+		frontImage:"",
+		frontImageAlign:"none",
+		frontImageArtist:"",
+		frontImageDate:"", // YYYY/MM/DD
+		topImage:"",
+		topImageAlign:"none",
+		topImageArtist:"",
+		topImageDate:"", // YYYY/MM/DD
+		width:0.0023,
+		length:0.0095,
+		height:0.0038,
+		category1:"nature",
+		category2:"animals",
+		category3:"reptiles",
+		tags:["dinosaur"], // don't include anything in categories or name
+		dateAdded:"2024/08/17", // YYYY/MM/DD
+		lastModified:"2024/08/17", // YYYY/MM/DD
+	},
+	{
+		name:"Tylosaurus Proriger",
+		defaultAngle:0,
+		sideImage:"Tylosaurus_Proriger-side",
+		sideImageAlign:"none",
+		sideImageArtist:"MasterNeonlight",
+		sideImageDate:"2024/08/17", // YYYY/MM/DD
+		frontImage:"",
+		frontImageAlign:"none",
+		frontImageArtist:"",
+		frontImageDate:"", // YYYY/MM/DD
+		topImage:"",
+		topImageAlign:"none",
+		topImageArtist:"",
+		topImageDate:"", // YYYY/MM/DD
+		width:0.0026,
+		length:0.013716,
+		height:0.0028956,
+		category1:"nature",
+		category2:"animals",
+		category3:"reptiles",
+		tags:["dinosaur"], // don't include anything in categories or name
+		dateAdded:"2024/08/17", // YYYY/MM/DD
+		lastModified:"2024/08/17", // YYYY/MM/DD
+	},
+	{
+		name:"Bison Latifrons",
+		defaultAngle:0,
+		sideImage:"Bison_Latifrons-side",
+		sideImageAlign:"bottom",
+		sideImageArtist:"MasterNeonlight",
+		sideImageDate:"2024/08/17", // YYYY/MM/DD
+		frontImage:"",
+		frontImageAlign:"none",
+		frontImageArtist:"",
+		frontImageDate:"", // YYYY/MM/DD
+		topImage:"",
+		topImageAlign:"none",
+		topImageArtist:"",
+		topImageDate:"", // YYYY/MM/DD
+		width:0.002,
+		length:0.00475,
+		height:0.002902778,
+		category1:"nature",
+		category2:"animals",
+		category3:"mammals",
+		tags:["bovid"], // don't include anything in categories or name
+		dateAdded:"2024/08/17", // YYYY/MM/DD
+		lastModified:"2024/08/17", // YYYY/MM/DD
+	},
+	{
+		name:"Warwick Ashley Davis",
+		defaultAngle:1,
+		sideImage:"",
+		sideImageAlign:"none",
+		sideImageArtist:"",
+		sideImageDate:"", // YYYY/MM/DD
+		frontImage:"Warwick_Ashley_Davis-front",
+		frontImageAlign:"bottom",
+		frontImageArtist:"MasterNeonlight",
+		frontImageDate:"2024/08/17", // YYYY/MM/DD
+		topImage:"",
+		topImageAlign:"none",
+		topImageArtist:"",
+		topImageDate:"", // YYYY/MM/DD
+		width:0.000889,
+		length:0.0004,
+		height:0.0010668,
+		category1:"nature",
+		category2:"animals",
+		category3:"humans",
+		tags:["actor"], // don't include anything in categories or name
+		dateAdded:"2024/08/17", // YYYY/MM/DD
+		lastModified:"2024/08/17", // YYYY/MM/DD
+	},
+	{
+		name:"Chandra Bahadur Dangi (Sitting)",
+		defaultAngle:1,
+		sideImage:"",
+		sideImageAlign:"none",
+		sideImageArtist:"",
+		sideImageDate:"", // YYYY/MM/DD
+		frontImage:"Chandra_Bahadur_Dangi_Sitting-front",
+		frontImageAlign:"bottom",
+		frontImageArtist:"MasterNeonlight",
+		frontImageDate:"2024/08/17", // YYYY/MM/DD
+		topImage:"",
+		topImageAlign:"none",
+		topImageArtist:"",
+		topImageDate:"", // YYYY/MM/DD
+		width:0.00035922,
+		length:0.000359,
+		height:0.00053,
+		category1:"nature",
+		category2:"animals",
+		category3:"humans",
+		tags:["man","shortest"], // don't include anything in categories or name
+		dateAdded:"2024/08/17", // YYYY/MM/DD
+		lastModified:"2024/08/17", // YYYY/MM/DD
+	},
+	{
+		name:"Panzer VIII Maus",
+		defaultAngle:0,
+		sideImage:"Panzer_VIII_Maus-side",
+		sideImageAlign:"bottom",
+		sideImageArtist:"MasterNeonlight",
+		sideImageDate:"2024/08/17", // YYYY/MM/DD
+		frontImage:"",
+		frontImageAlign:"none",
+		frontImageArtist:"",
+		frontImageDate:"", // YYYY/MM/DD
+		topImage:"",
+		topImageAlign:"none",
+		topImageArtist:"",
+		topImageDate:"", // YYYY/MM/DD
+		width:0.0037099999999999998,
+		length:0.0102,
+		height:0.00363,
+		category1:"transportation",
+		category2:"vehicles",
+		category3:"military",
+		tags:["german","ii","tank","world war 2","ww2"], // don't include anything in categories or name
+		dateAdded:"2024/08/17", // YYYY/MM/DD
+		lastModified:"2024/08/17", // YYYY/MM/DD
+	},
+	{
+		name:"Kliment Voroshilov",
+		defaultAngle:0,
+		sideImage:"Kliment_Voroshilov-side",
+		sideImageAlign:"bottom",
+		sideImageArtist:"MasterNeonlight",
+		sideImageDate:"2024/08/17", // YYYY/MM/DD
+		frontImage:"",
+		frontImageAlign:"none",
+		frontImageArtist:"",
+		frontImageDate:"", // YYYY/MM/DD
+		topImage:"",
+		topImageAlign:"none",
+		topImageArtist:"",
+		topImageDate:"", // YYYY/MM/DD
+		width:0.00332,
+		length:0.00675,
+		height:0.00271,
+		category1:"transportation",
+		category2:"vehicles",
+		category3:"military",
+		tags:["kv 1","kv-1","tank"], // don't include anything in categories or name
+		dateAdded:"2024/08/17", // YYYY/MM/DD
+		lastModified:"2024/08/17", // YYYY/MM/DD
+	},
+	{
+		name:"Little David Ammunition",
+		defaultAngle:0,
+		sideImage:"Little_David_Ammunition-side",
+		sideImageAlign:"none",
+		sideImageArtist:"MasterNeonlight",
+		sideImageDate:"2024/08/17", // YYYY/MM/DD
+		frontImage:"",
+		frontImageAlign:"none",
+		frontImageArtist:"",
+		frontImageDate:"", // YYYY/MM/DD
+		topImage:"",
+		topImageAlign:"none",
+		topImageArtist:"",
+		topImageDate:"", // YYYY/MM/DD
+		width:0.0009144,
+		length:0.0018704,
+		height:0.0009144,
+		category1:"miscellaneous",
+		category2:"weapons",
+		category3:"ammunition",
+		tags:["mortar"], // don't include anything in categories or name
+		dateAdded:"2024/08/17", // YYYY/MM/DD
+		lastModified:"2024/08/17", // YYYY/MM/DD
+	},
+	{
+		name:"X-Seed 4000 (Concept)",
+		defaultAngle:1,
+		sideImage:"",
+		sideImageAlign:"none",
+		sideImageArtist:"",
+		sideImageDate:"", // YYYY/MM/DD
+		frontImage:"X_Seed_4000_Concept-front",
+		frontImageAlign:"bottom",
+		frontImageArtist:"MasterNeonlight",
+		frontImageDate:"2024/08/17", // YYYY/MM/DD
+		topImage:"",
+		topImageAlign:"none",
+		topImageArtist:"",
+		topImageDate:"", // YYYY/MM/DD
+		width:6,
+		length:6,
+		height:4,
+		category1:"structures",
+		category2:"buildings",
+		category3:"skyscrapers",
+		tags:["megatall"], // don't include anything in categories or name
+		dateAdded:"2024/08/17", // YYYY/MM/DD
+		lastModified:"2024/08/17", // YYYY/MM/DD
+	},
+	{
+		name:"Velociraptor Mongoliensis",
+		defaultAngle:0,
+		sideImage:"Velociraptor_Mongoliensis-side",
+		sideImageAlign:"bottom",
+		sideImageArtist:"MasterNeonlight",
+		sideImageDate:"2024/08/17", // YYYY/MM/DD
+		frontImage:"",
+		frontImageAlign:"none",
+		frontImageArtist:"",
+		frontImageDate:"", // YYYY/MM/DD
+		topImage:"",
+		topImageAlign:"none",
+		topImageArtist:"",
+		topImageDate:"", // YYYY/MM/DD
+		width:0.0003,
+		length:0.0024,
+		height:0.0008,
+		category1:"nature",
+		category2:"animals",
+		category3:"reptiles",
+		tags:["dinosaur"], // don't include anything in categories or name
+		dateAdded:"2024/08/17", // YYYY/MM/DD
+		lastModified:"2024/08/17", // YYYY/MM/DD
+	},
+	{
+		name:"Shantungosaurus Giganteus",
+		defaultAngle:0,
+		sideImage:"Shantungosaurus_Giganteus-side",
+		sideImageAlign:"bottom",
+		sideImageArtist:"MasterNeonlight",
+		sideImageDate:"2024/08/17", // YYYY/MM/DD
+		frontImage:"",
+		frontImageAlign:"none",
+		frontImageArtist:"",
+		frontImageDate:"", // YYYY/MM/DD
+		topImage:"",
+		topImageAlign:"none",
+		topImageArtist:"",
+		topImageDate:"", // YYYY/MM/DD
+		width:0.003,
+		length:0.017,
+		height:0.006233,
+		category1:"nature",
+		category2:"animals",
+		category3:"reptiles",
+		tags:["dinosaur"], // don't include anything in categories or name
+		dateAdded:"2024/08/17", // YYYY/MM/DD
+		lastModified:"2024/08/17", // YYYY/MM/DD
+	},
+	{
+		name:"Kepler-392 b",
+		defaultAngle:1,
+		sideImage:"",
+		sideImageAlign:"none",
+		sideImageArtist:"",
+		sideImageDate:"", // YYYY/MM/DD
+		frontImage:"Kepler_392_b-front",
+		frontImageAlign:"none",
+		frontImageArtist:"MasterNeonlight",
+		frontImageDate:"2024/08/17", // YYYY/MM/DD
+		topImage:"",
+		topImageAlign:"none",
+		topImageArtist:"",
+		topImageDate:"", // YYYY/MM/DD
+		width:12742,
+		length:12742,
+		height:12742,
+		category1:"space",
+		category2:"planets",
+		category3:"exoplanets",
+		tags:["terrestrial"], // don't include anything in categories or name
+		dateAdded:"2024/08/17", // YYYY/MM/DD
+		lastModified:"2024/08/17", // YYYY/MM/DD
+	},
+	{
+		name:"Cave Bear",
+		defaultAngle:0,
+		sideImage:"Cave_Bear-side",
+		sideImageAlign:"bottom",
+		sideImageArtist:"MasterNeonlight",
+		sideImageDate:"2024/08/17", // YYYY/MM/DD
+		frontImage:"",
+		frontImageAlign:"none",
+		frontImageArtist:"",
+		frontImageDate:"", // YYYY/MM/DD
+		topImage:"",
+		topImageAlign:"none",
+		topImageArtist:"",
+		topImageDate:"", // YYYY/MM/DD
+		width:0.0008,
+		length:0.0035,
+		height:0.0019833,
+		category1:"nature",
+		category2:"animals",
+		category3:"mammals",
+		tags:["spelaeus"], // don't include anything in categories or name
+		dateAdded:"2024/08/17", // YYYY/MM/DD
+		lastModified:"2024/08/17", // YYYY/MM/DD
+	},
+	{
+		name:"Holstein Friesian Cattle",
+		defaultAngle:0,
+		sideImage:"Holstein_Friesian_Cattle-side",
+		sideImageAlign:"bottom",
+		sideImageArtist:"MasterNeonlight",
+		sideImageDate:"2024/08/17", // YYYY/MM/DD
+		frontImage:"",
+		frontImageAlign:"none",
+		frontImageArtist:"",
+		frontImageDate:"", // YYYY/MM/DD
+		topImage:"",
+		topImageAlign:"none",
+		topImageArtist:"",
+		topImageDate:"", // YYYY/MM/DD
+		width:0.0009,
+		length:0.002633472,
+		height:0.00146304,
+		category1:"nature",
+		category2:"animals",
+		category3:"mammals",
+		tags:["cow","diary"], // don't include anything in categories or name
+		dateAdded:"2024/08/17", // YYYY/MM/DD
+		lastModified:"2024/08/17", // YYYY/MM/DD
+	},
+	{
+		name:"Double Bass",
+		defaultAngle:1,
+		sideImage:"",
+		sideImageAlign:"none",
+		sideImageArtist:"",
+		sideImageDate:"", // YYYY/MM/DD
+		frontImage:"Double_Bass-front",
+		frontImageAlign:"bottom",
+		frontImageArtist:"MasterNeonlight",
+		frontImageDate:"2024/08/17", // YYYY/MM/DD
+		topImage:"",
+		topImageAlign:"none",
+		topImageArtist:"",
+		topImageDate:"", // YYYY/MM/DD
+		width:0.0007078,
+		length:0.0002,
+		height:0.00182,
+		category1:"miscellaneous",
+		category2:"instruments",
+		category3:"stringed",
+		tags:["modern"], // don't include anything in categories or name
+		dateAdded:"2024/08/17", // YYYY/MM/DD
+		lastModified:"2024/08/17", // YYYY/MM/DD
+	},
+	{
+		name:"Tecopa Pupfish",
+		defaultAngle:0,
+		sideImage:"Tecopa_Pupfish-side",
+		sideImageAlign:"none",
+		sideImageArtist:"MasterNeonlight",
+		sideImageDate:"2024/08/17", // YYYY/MM/DD
+		frontImage:"",
+		frontImageAlign:"none",
+		frontImageArtist:"",
+		frontImageDate:"", // YYYY/MM/DD
+		topImage:"",
+		topImageAlign:"none",
+		topImageArtist:"",
+		topImageDate:"", // YYYY/MM/DD
+		width:0.000015,
+		length:0.0000508,
+		height:0.0000220133,
+		category1:"nature",
+		category2:"animals",
+		category3:"fish",
+		tags:["amargosa"], // don't include anything in categories or name
+		dateAdded:"2024/08/17", // YYYY/MM/DD
+		lastModified:"2024/08/17", // YYYY/MM/DD
+	},
+	{
+		name:"Megalosaurus Bucklandii",
+		defaultAngle:0,
+		sideImage:"Megalosaurus_Bucklandii-side",
+		sideImageAlign:"bottom",
+		sideImageArtist:"MasterNeonlight",
+		sideImageDate:"2024/08/17", // YYYY/MM/DD
+		frontImage:"",
+		frontImageAlign:"none",
+		frontImageArtist:"",
+		frontImageDate:"", // YYYY/MM/DD
+		topImage:"",
+		topImageAlign:"none",
+		topImageArtist:"",
+		topImageDate:"", // YYYY/MM/DD
+		width:0.0008,
+		length:0.006,
+		height:0.0018667,
+		category1:"nature",
+		category2:"animals",
+		category3:"reptiles",
+		tags:["dinosaur"], // don't include anything in categories or name
+		dateAdded:"2024/08/17", // YYYY/MM/DD
+		lastModified:"2024/08/17", // YYYY/MM/DD
+	},
+	{
+		name:"Carcharodontosaurus Saharicus",
+		defaultAngle:0,
+		sideImage:"Carcharodontosaurus_Saharicus-side",
+		sideImageAlign:"bottom",
+		sideImageArtist:"MasterNeonlight",
+		sideImageDate:"2024/08/17", // YYYY/MM/DD
+		frontImage:"",
+		frontImageAlign:"none",
+		frontImageArtist:"",
+		frontImageDate:"", // YYYY/MM/DD
+		topImage:"",
+		topImageAlign:"none",
+		topImageArtist:"",
+		topImageDate:"", // YYYY/MM/DD
+		width:0.0023,
+		length:0.013,
+		height:0.004622,
+		category1:"nature",
+		category2:"animals",
+		category3:"reptiles",
+		tags:["dinosaur"], // don't include anything in categories or name
+		dateAdded:"2024/08/17", // YYYY/MM/DD
+		lastModified:"2024/08/17", // YYYY/MM/DD
+	},
+	{
+		name:"Capybara",
+		defaultAngle:0,
+		sideImage:"Capybara-side",
+		sideImageAlign:"bottom",
+		sideImageArtist:"MasterNeonlight",
+		sideImageDate:"2024/08/17", // YYYY/MM/DD
+		frontImage:"",
+		frontImageAlign:"none",
+		frontImageArtist:"",
+		frontImageDate:"", // YYYY/MM/DD
+		topImage:"",
+		topImageAlign:"none",
+		topImageArtist:"",
+		topImageDate:"", // YYYY/MM/DD
+		width:0.0005,
+		length:0.0012192,
+		height:0.000704427,
+		category1:"nature",
+		category2:"animals",
+		category3:"mammals",
+		tags:["largest","rodent"], // don't include anything in categories or name
+		dateAdded:"2024/08/17", // YYYY/MM/DD
+		lastModified:"2024/08/17", // YYYY/MM/DD
+	},
 ];
 
 //	———————— STEPS FOR UPDATING ————————
