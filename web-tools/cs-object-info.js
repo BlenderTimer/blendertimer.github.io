@@ -7459,6 +7459,606 @@ var objects = [
 		dateAdded:"2024/08/17", // YYYY/MM/DD
 		lastModified:"2024/08/17", // YYYY/MM/DD
 	},
+	{
+		name:"Compsognathus Longipes",
+		defaultAngle:0,
+		sideImage:"Compsognathus_Longipes-side",
+		sideImageAlign:"bottom",
+		sideImageArtist:"MasterNeonlight",
+		sideImageDate:"2024/08/19", // YYYY/MM/DD
+		frontImage:"",
+		frontImageAlign:"none",
+		frontImageArtist:"",
+		frontImageDate:"", // YYYY/MM/DD
+		topImage:"",
+		topImageAlign:"none",
+		topImageArtist:"",
+		topImageDate:"", // YYYY/MM/DD
+		width:0.002,
+		length:0.0008,
+		height:0.004622,
+		category1:"nature",
+		category2:"animals",
+		category3:"reptiles",
+		tags:["dinosaur"], // don't include anything in categories or name
+		dateAdded:"2024/08/19", // YYYY/MM/DD
+		lastModified:"2024/08/19", // YYYY/MM/DD
+	},
+	{
+		name:"Liopleurodon Ferox",
+		defaultAngle:0,
+		sideImage:"Liopleurodon_Ferox-side",
+		sideImageAlign:"none",
+		sideImageArtist:"MasterNeonlight",
+		sideImageDate:"2024/08/19", // YYYY/MM/DD
+		frontImage:"",
+		frontImageAlign:"none",
+		frontImageArtist:"",
+		frontImageDate:"", // YYYY/MM/DD
+		topImage:"",
+		topImageAlign:"none",
+		topImageArtist:"",
+		topImageDate:"", // YYYY/MM/DD
+		width:0.001711,
+		length:0.007,
+		height:0.001711,
+		category1:"nature",
+		category2:"animals",
+		category3:"reptiles",
+		tags:["dinosaur"], // don't include anything in categories or name
+		dateAdded:"2024/08/19", // YYYY/MM/DD
+		lastModified:"2024/08/19", // YYYY/MM/DD
+	},
+	{
+		name:"Plains Zebra",
+		defaultAngle:0,
+		sideImage:"Plains_Zebra-side",
+		sideImageAlign:"bottom",
+		sideImageArtist:"MasterNeonlight",
+		sideImageDate:"2024/08/19", // YYYY/MM/DD
+		frontImage:"",
+		frontImageAlign:"none",
+		frontImageArtist:"",
+		frontImageDate:"", // YYYY/MM/DD
+		topImage:"",
+		topImageAlign:"none",
+		topImageArtist:"",
+		topImageDate:"", // YYYY/MM/DD
+		width:0.0005,
+		length:0.00193431,
+		height:0.0016764,
+		category1:"nature",
+		category2:"animals",
+		category3:"mammals",
+		tags:["equus quagga"], // don't include anything in categories or name
+		dateAdded:"2024/08/19", // YYYY/MM/DD
+		lastModified:"2024/08/19", // YYYY/MM/DD
+	},
+	{
+		name:"Kepler-202 c",
+		defaultAngle:1,
+		sideImage:"",
+		sideImageAlign:"none",
+		sideImageArtist:"",
+		sideImageDate:"", // YYYY/MM/DD
+		frontImage:"Kepler_202_c-front",
+		frontImageAlign:"none",
+		frontImageArtist:"MasterNeonlight",
+		frontImageDate:"2024/08/19", // YYYY/MM/DD
+		topImage:"",
+		topImageAlign:"none",
+		topImageArtist:"",
+		topImageDate:"", // YYYY/MM/DD
+		width:23572.7,
+		length:23572.7,
+		height:23572.7,
+		category1:"space",
+		category2:"planets",
+		category3:"exoplanets",
+		tags:["terrestrial"], // don't include anything in categories or name
+		dateAdded:"2024/08/19", // YYYY/MM/DD
+		lastModified:"2024/08/19", // YYYY/MM/DD
+	},
+	{
+		name:"Kepler-37 b",
+		defaultAngle:1,
+		sideImage:"",
+		sideImageAlign:"none",
+		sideImageArtist:"",
+		sideImageDate:"", // YYYY/MM/DD
+		frontImage:"Kepler_37_b-front",
+		frontImageAlign:"none",
+		frontImageArtist:"MasterNeonlight",
+		frontImageDate:"2024/08/19", // YYYY/MM/DD
+		topImage:"",
+		topImageAlign:"none",
+		topImageArtist:"",
+		topImageDate:"", // YYYY/MM/DD
+		width:3950,
+		length:3950,
+		height:3950,
+		category1:"space",
+		category2:"planets",
+		category3:"exoplanets",
+		tags:["terrestrial"], // don't include anything in categories or name
+		dateAdded:"2024/08/19", // YYYY/MM/DD
+		lastModified:"2024/08/19", // YYYY/MM/DD
+	},
+	{
+		name:"SDSS J1228+1040 b",
+		defaultAngle:1,
+		sideImage:"",
+		sideImageAlign:"none",
+		sideImageArtist:"",
+		sideImageDate:"", // YYYY/MM/DD
+		frontImage:"SDSS_J1228_1040_b-front",
+		frontImageAlign:"none",
+		frontImageArtist:"MasterNeonlight",
+		frontImageDate:"2024/08/19", // YYYY/MM/DD
+		topImage:"",
+		topImageAlign:"none",
+		topImageArtist:"",
+		topImageDate:"", // YYYY/MM/DD
+		width:127,
+		length:127,
+		height:127,
+		category1:"space",
+		category2:"planets",
+		category3:"exoplanets",
+		tags:["smallest","theoretical"], // don't include anything in categories or name
+		dateAdded:"2024/08/19", // YYYY/MM/DD
+		lastModified:"2024/08/19", // YYYY/MM/DD
+	},
+	{
+		name:"WASP-17 b",
+		defaultAngle:1,
+		sideImage:"",
+		sideImageAlign:"none",
+		sideImageArtist:"",
+		sideImageDate:"", // YYYY/MM/DD
+		frontImage:"WASP_17_b-front",
+		frontImageAlign:"none",
+		frontImageArtist:"MasterNeonlight",
+		frontImageDate:"2024/08/19", // YYYY/MM/DD
+		topImage:"",
+		topImageAlign:"none",
+		topImageArtist:"",
+		topImageDate:"", // YYYY/MM/DD
+		width:261467,
+		length:261467,
+		height:261467,
+		category1:"space",
+		category2:"planets",
+		category3:"exoplanets",
+		tags:["gas giant"], // don't include anything in categories or name
+		dateAdded:"2024/08/19", // YYYY/MM/DD
+		lastModified:"2024/08/19", // YYYY/MM/DD
+	},
+	{
+		name:"Afghanistan",
+		defaultAngle:2,
+		sideImage:"",
+		sideImageAlign:"none",
+		sideImageArtist:"",
+		sideImageDate:"", // YYYY/MM/DD
+		frontImage:"",
+		frontImageAlign:"none",
+		frontImageArtist:"",
+		frontImageDate:"", // YYYY/MM/DD
+		topImage:"Afghanistan-top",
+		topImageAlign:"none",
+		topImageArtist:"MasterNeonlight",
+		topImageDate:"2024/08/19", // YYYY/MM/DD
+		width:1013,
+		length:1280,
+		height:7,
+		category1:"nature",
+		category2:"geography",
+		category3:"land",
+		tags:["countries","country","islamic emirate of afghanistan"], // don't include anything in categories or name
+		dateAdded:"2024/08/19", // YYYY/MM/DD
+		lastModified:"2024/08/19", // YYYY/MM/DD
+	},
+	{
+		name:"Vietnam",
+		defaultAngle:2,
+		sideImage:"",
+		sideImageAlign:"none",
+		sideImageArtist:"",
+		sideImageDate:"", // YYYY/MM/DD
+		frontImage:"",
+		frontImageAlign:"none",
+		frontImageArtist:"",
+		frontImageDate:"", // YYYY/MM/DD
+		topImage:"Vietnam-top",
+		topImageAlign:"none",
+		topImageArtist:"MasterNeonlight",
+		topImageDate:"2024/08/19", // YYYY/MM/DD
+		width:1658,
+		length:800,
+		height:3.143,
+		category1:"nature",
+		category2:"geography",
+		category3:"land",
+		tags:["countries","country","indochinese"], // don't include anything in categories or name
+		dateAdded:"2024/08/19", // YYYY/MM/DD
+		lastModified:"2024/08/19", // YYYY/MM/DD
+	},
+	{
+		name:"Paraguay",
+		defaultAngle:2,
+		sideImage:"",
+		sideImageAlign:"none",
+		sideImageArtist:"",
+		sideImageDate:"", // YYYY/MM/DD
+		frontImage:"",
+		frontImageAlign:"none",
+		frontImageArtist:"",
+		frontImageDate:"", // YYYY/MM/DD
+		topImage:"Paraguay-top",
+		topImageAlign:"none",
+		topImageArtist:"MasterNeonlight",
+		topImageDate:"2024/08/19", // YYYY/MM/DD
+		width:920,
+		length:859,
+		height:842,
+		category1:"nature",
+		category2:"geography",
+		category3:"land",
+		tags:["countries","country"], // don't include anything in categories or name
+		dateAdded:"2024/08/19", // YYYY/MM/DD
+		lastModified:"2024/08/19", // YYYY/MM/DD
+	},
+	{
+		name:"France",
+		defaultAngle:2,
+		sideImage:"",
+		sideImageAlign:"none",
+		sideImageArtist:"",
+		sideImageDate:"", // YYYY/MM/DD
+		frontImage:"",
+		frontImageAlign:"none",
+		frontImageArtist:"",
+		frontImageDate:"", // YYYY/MM/DD
+		topImage:"France-top",
+		topImageAlign:"none",
+		topImageArtist:"MasterNeonlight",
+		topImageDate:"2024/08/19", // YYYY/MM/DD
+		width:1075,
+		length:1073,
+		height:4.80559,
+		category1:"nature",
+		category2:"geography",
+		category3:"land",
+		tags:["countries","country","french"], // don't include anything in categories or name
+		dateAdded:"2024/08/19", // YYYY/MM/DD
+		lastModified:"2024/08/19", // YYYY/MM/DD
+	},
+	{
+		name:"Germany",
+		defaultAngle:2,
+		sideImage:"",
+		sideImageAlign:"none",
+		sideImageArtist:"",
+		sideImageDate:"", // YYYY/MM/DD
+		frontImage:"",
+		frontImageAlign:"none",
+		frontImageArtist:"",
+		frontImageDate:"", // YYYY/MM/DD
+		topImage:"Germany-top",
+		topImageAlign:"none",
+		topImageArtist:"MasterNeonlight",
+		topImageDate:"2024/08/19", // YYYY/MM/DD
+		width:859,
+		length:630,
+		height:2.962,
+		category1:"nature",
+		category2:"geography",
+		category3:"land",
+		tags:["countries","country"], // don't include anything in categories or name
+		dateAdded:"2024/08/19", // YYYY/MM/DD
+		lastModified:"2024/08/19", // YYYY/MM/DD
+	},
+	{
+		name:"M1 Abrams",
+		defaultAngle:0,
+		sideImage:"M1_Abrams-side",
+		sideImageAlign:"bottom",
+		sideImageArtist:"MasterNeonlight",
+		sideImageDate:"2024/08/19", // YYYY/MM/DD
+		frontImage:"",
+		frontImageAlign:"none",
+		frontImageArtist:"",
+		frontImageDate:"", // YYYY/MM/DD
+		topImage:"",
+		topImageAlign:"none",
+		topImageArtist:"",
+		topImageDate:"", // YYYY/MM/DD
+		width:0.00365,
+		length:0.00983,
+		height:0.00327667,
+		category1:"transportation",
+		category2:"vehicles",
+		category3:"military",
+		tags:["tank"], // don't include anything in categories or name
+		dateAdded:"2024/08/19", // YYYY/MM/DD
+		lastModified:"2024/08/19", // YYYY/MM/DD
+	},
+	{
+		name:"Christ the Redeemer",
+		defaultAngle:1,
+		sideImage:"",
+		sideImageAlign:"none",
+		sideImageArtist:"",
+		sideImageDate:"", // YYYY/MM/DD
+		frontImage:"Christ_the_Redeemer-front",
+		frontImageAlign:"bottom",
+		frontImageArtist:"MasterNeonlight",
+		frontImageDate:"2024/08/19", // YYYY/MM/DD
+		topImage:"",
+		topImageAlign:"none",
+		topImageArtist:"",
+		topImageDate:"", // YYYY/MM/DD
+		width:0.028,
+		length:0.008,
+		height:0.038,
+		category1:"structures",
+		category2:"monuments",
+		category3:"statues",
+		tags:["jesus"], // don't include anything in categories or name
+		dateAdded:"2024/08/19", // YYYY/MM/DD
+		lastModified:"2024/08/19", // YYYY/MM/DD
+	},
+	{
+		name:"The Discobolus",
+		defaultAngle:1,
+		sideImage:"",
+		sideImageAlign:"none",
+		sideImageArtist:"",
+		sideImageDate:"", // YYYY/MM/DD
+		frontImage:"The_Discobolus-front",
+		frontImageAlign:"bottom",
+		frontImageArtist:"MasterNeonlight",
+		frontImageDate:"2024/08/19", // YYYY/MM/DD
+		topImage:"",
+		topImageAlign:"none",
+		topImageArtist:"",
+		topImageDate:"", // YYYY/MM/DD
+		width:0.00097644,
+		length:0.00063,
+		height:0.00169,
+		category1:"structures",
+		category2:"monuments",
+		category3:"statues",
+		tags:["greek"], // don't include anything in categories or name
+		dateAdded:"2024/08/19", // YYYY/MM/DD
+		lastModified:"2024/08/19", // YYYY/MM/DD
+	},
+	{
+		name:"Gigantopithecus Blacki",
+		defaultAngle:0,
+		sideImage:"Gigantopithecus_Blacki-side",
+		sideImageAlign:"bottom",
+		sideImageArtist:"MasterNeonlight",
+		sideImageDate:"2024/08/19", // YYYY/MM/DD
+		frontImage:"",
+		frontImageAlign:"none",
+		frontImageArtist:"",
+		frontImageDate:"", // YYYY/MM/DD
+		topImage:"",
+		topImageAlign:"none",
+		topImageArtist:"",
+		topImageDate:"", // YYYY/MM/DD
+		width:0.001,
+		length:0.0015578667,
+		height:0.0017526,
+		category1:"nature",
+		category2:"animals",
+		category3:"mammals",
+		tags:["ape"], // don't include anything in categories or name
+		dateAdded:"2024/08/19", // YYYY/MM/DD
+		lastModified:"2024/08/19", // YYYY/MM/DD
+	},
+	{
+		name:"Rüppell's Griffon Vulture",
+		defaultAngle:0,
+		sideImage:"Ruppells_Griffon_Vulture-side",
+		sideImageAlign:"bottom",
+		sideImageArtist:"MasterNeonlight",
+		sideImageDate:"2024/08/19", // YYYY/MM/DD
+		frontImage:"",
+		frontImageAlign:"none",
+		frontImageArtist:"",
+		frontImageDate:"", // YYYY/MM/DD
+		topImage:"",
+		topImageAlign:"none",
+		topImageArtist:"",
+		topImageDate:"", // YYYY/MM/DD
+		width:0.00035,
+		length:0.00091833,
+		height:0.00095,
+		category1:"nature",
+		category2:"animals",
+		category3:"birds",
+		tags:["african"], // don't include anything in categories or name
+		dateAdded:"2024/08/19", // YYYY/MM/DD
+		lastModified:"2024/08/19", // YYYY/MM/DD
+	},
+	{
+		name:"Dodo",
+		defaultAngle:0,
+		sideImage:"Dodo-side",
+		sideImageAlign:"bottom",
+		sideImageArtist:"MasterNeonlight",
+		sideImageDate:"2024/08/19", // YYYY/MM/DD
+		frontImage:"",
+		frontImageAlign:"none",
+		frontImageArtist:"",
+		frontImageDate:"", // YYYY/MM/DD
+		topImage:"",
+		topImageAlign:"none",
+		topImageArtist:"",
+		topImageDate:"", // YYYY/MM/DD
+		width:0.00035,
+		length:0.00085344,
+		height:0.0009144,
+		category1:"nature",
+		category2:"animals",
+		category3:"birds",
+		tags:["flightless"], // don't include anything in categories or name
+		dateAdded:"2024/08/19", // YYYY/MM/DD
+		lastModified:"2024/08/19", // YYYY/MM/DD
+	},
+	{
+		name:"Argentinosaurus Huinculensis",
+		defaultAngle:0,
+		sideImage:"Argentinosaurus_Huinculensis-side",
+		sideImageAlign:"bottom",
+		sideImageArtist:"MasterNeonlight",
+		sideImageDate:"2024/08/19", // YYYY/MM/DD
+		frontImage:"",
+		frontImageAlign:"none",
+		frontImageArtist:"",
+		frontImageDate:"", // YYYY/MM/DD
+		topImage:"",
+		topImageAlign:"none",
+		topImageArtist:"",
+		topImageDate:"", // YYYY/MM/DD
+		width:0.005,
+		length:0.034,
+		height:0.010956,
+		category1:"nature",
+		category2:"animals",
+		category3:"reptiles",
+		tags:["dinosaur"], // don't include anything in categories or name
+		dateAdded:"2024/08/19", // YYYY/MM/DD
+		lastModified:"2024/08/19", // YYYY/MM/DD
+	},
+	{
+		name:"Deinonychus Antirrhopus",
+		defaultAngle:0,
+		sideImage:"Deinonychus_Antirrhopus-side",
+		sideImageAlign:"bottom",
+		sideImageArtist:"MasterNeonlight",
+		sideImageDate:"2024/08/19", // YYYY/MM/DD
+		frontImage:"",
+		frontImageAlign:"none",
+		frontImageArtist:"",
+		frontImageDate:"", // YYYY/MM/DD
+		topImage:"",
+		topImageAlign:"none",
+		topImageArtist:"",
+		topImageDate:"", // YYYY/MM/DD
+		width:0.0006,
+		length:0.0034,
+		height:0.0011711,
+		category1:"nature",
+		category2:"animals",
+		category3:"reptiles",
+		tags:["dinosaur"], // don't include anything in categories or name
+		dateAdded:"2024/08/19", // YYYY/MM/DD
+		lastModified:"2024/08/19", // YYYY/MM/DD
+	},
+	{
+		name:"Suchomimus Tenerensis",
+		defaultAngle:0,
+		sideImage:"Suchomimus_Tenerensis-side",
+		sideImageAlign:"bottom",
+		sideImageArtist:"MasterNeonlight",
+		sideImageDate:"2024/08/19", // YYYY/MM/DD
+		frontImage:"",
+		frontImageAlign:"none",
+		frontImageArtist:"",
+		frontImageDate:"", // YYYY/MM/DD
+		topImage:"",
+		topImageAlign:"none",
+		topImageArtist:"",
+		topImageDate:"", // YYYY/MM/DD
+		width:0.0012,
+		length:0.0105,
+		height:0.00315,
+		category1:"nature",
+		category2:"animals",
+		category3:"reptiles",
+		tags:["dinosaur"], // don't include anything in categories or name
+		dateAdded:"2024/08/19", // YYYY/MM/DD
+		lastModified:"2024/08/19", // YYYY/MM/DD
+	},
+	{
+		name:"Basilosaurus Cetoides",
+		defaultAngle:0,
+		sideImage:"Basilosaurus_Cetoides-side",
+		sideImageAlign:"none",
+		sideImageArtist:"MasterNeonlight",
+		sideImageDate:"2024/08/19", // YYYY/MM/DD
+		frontImage:"",
+		frontImageAlign:"none",
+		frontImageArtist:"",
+		frontImageDate:"", // YYYY/MM/DD
+		topImage:"",
+		topImageAlign:"none",
+		topImageArtist:"",
+		topImageDate:"", // YYYY/MM/DD
+		width:0.002,
+		length:0.02,
+		height:0.00244,
+		category1:"nature",
+		category2:"animals",
+		category3:"mammals",
+		tags:["whale"], // don't include anything in categories or name
+		dateAdded:"2024/08/19", // YYYY/MM/DD
+		lastModified:"2024/08/19", // YYYY/MM/DD
+	},
+	{
+		name:"Whale Shark",
+		defaultAngle:0,
+		sideImage:"Whale_Shark-side",
+		sideImageAlign:"none",
+		sideImageArtist:"MasterNeonlight",
+		sideImageDate:"2024/08/19", // YYYY/MM/DD
+		frontImage:"",
+		frontImageAlign:"none",
+		frontImageArtist:"",
+		frontImageDate:"", // YYYY/MM/DD
+		topImage:"",
+		topImageAlign:"none",
+		topImageArtist:"",
+		topImageDate:"", // YYYY/MM/DD
+		width:0.005,
+		length:0.0188,
+		height:0.00647556,
+		category1:"nature",
+		category2:"animals",
+		category3:"fish",
+		tags:["largest"], // don't include anything in categories or name
+		dateAdded:"2024/08/19", // YYYY/MM/DD
+		lastModified:"2024/08/19", // YYYY/MM/DD
+	},
+	{
+		name:"Palaeoloxodon Namadicus",
+		defaultAngle:0,
+		sideImage:"Palaeoloxodon_Namadicus-side",
+		sideImageAlign:"bottom",
+		sideImageArtist:"MasterNeonlight",
+		sideImageDate:"2024/08/19", // YYYY/MM/DD
+		frontImage:"",
+		frontImageAlign:"none",
+		frontImageArtist:"",
+		frontImageDate:"", // YYYY/MM/DD
+		topImage:"",
+		topImageAlign:"none",
+		topImageArtist:"",
+		topImageDate:"", // YYYY/MM/DD
+		width:0.0022,
+		length:0.0088302,
+		height:0.0052,
+		category1:"nature",
+		category2:"animals",
+		category3:"mammals",
+		tags:["asian straight-tusked elephant"], // don't include anything in categories or name
+		dateAdded:"2024/08/19", // YYYY/MM/DD
+		lastModified:"2024/08/19", // YYYY/MM/DD
+	},
 ];
 
 //	———————— STEPS FOR UPDATING ————————
