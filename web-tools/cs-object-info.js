@@ -7474,9 +7474,9 @@ var objects = [
 		topImageAlign:"none",
 		topImageArtist:"",
 		topImageDate:"", // YYYY/MM/DD
-		width:0.002,
+		width:0.0001,
 		length:0.0008,
-		height:0.004622,
+		height:0.00025778,
 		category1:"nature",
 		category2:"animals",
 		category3:"reptiles",
