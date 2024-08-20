@@ -8059,6 +8059,956 @@ var objects = [
 		dateAdded:"2024/08/19", // YYYY/MM/DD
 		lastModified:"2024/08/19", // YYYY/MM/DD
 	},
+	{
+		name:"WASP-8 b",
+		defaultAngle:1,
+		sideImage:"",
+		sideImageAlign:"none",
+		sideImageArtist:"",
+		sideImageDate:"", // YYYY/MM/DD
+		frontImage:"WASP_8_b-front",
+		frontImageAlign:"none",
+		frontImageArtist:"MasterNeonlight",
+		frontImageDate:"2024/08/20", // YYYY/MM/DD
+		topImage:"",
+		topImageAlign:"none",
+		topImageArtist:"",
+		topImageDate:"", // YYYY/MM/DD
+		width:157998.86,
+		length:157998.86,
+		height:157998.86,
+		category1:"space",
+		category2:"planets",
+		category3:"exoplanets",
+		tags:["gas giant"], // don't include anything in categories or name
+		dateAdded:"2024/08/20", // YYYY/MM/DD
+		lastModified:"2024/08/20", // YYYY/MM/DD
+	},
+	{
+		name:"Kepler-1412 b",
+		defaultAngle:1,
+		sideImage:"",
+		sideImageAlign:"none",
+		sideImageArtist:"",
+		sideImageDate:"", // YYYY/MM/DD
+		frontImage:"Kepler_1412_b-front",
+		frontImageAlign:"none",
+		frontImageArtist:"MasterNeonlight",
+		frontImageDate:"2024/08/20", // YYYY/MM/DD
+		topImage:"",
+		topImageAlign:"none",
+		topImageArtist:"",
+		topImageDate:"", // YYYY/MM/DD
+		width:10575.86,
+		length:10575.86,
+		height:10575.86,
+		category1:"space",
+		category2:"planets",
+		category3:"exoplanets",
+		tags:["gas giant"], // don't include anything in categories or name
+		dateAdded:"2024/08/20", // YYYY/MM/DD
+		lastModified:"2024/08/20", // YYYY/MM/DD
+	},
+	{
+		name:"Kepler-131 c",
+		defaultAngle:1,
+		sideImage:"",
+		sideImageAlign:"none",
+		sideImageArtist:"",
+		sideImageDate:"", // YYYY/MM/DD
+		frontImage:"Kepler_1412_b-front",
+		frontImageAlign:"none",
+		frontImageArtist:"MasterNeonlight",
+		frontImageDate:"2024/08/20", // YYYY/MM/DD
+		topImage:"",
+		topImageAlign:"none",
+		topImageArtist:"",
+		topImageDate:"", // YYYY/MM/DD
+		width:10703.28,
+		length:10703.28,
+		height:10703.28,
+		category1:"space",
+		category2:"planets",
+		category3:"exoplanets",
+		tags:["terrestrial"], // don't include anything in categories or name
+		dateAdded:"2024/08/20", // YYYY/MM/DD
+		lastModified:"2024/08/20", // YYYY/MM/DD
+	},
+	{
+		name:"Kepler-1507 b",
+		defaultAngle:1,
+		sideImage:"",
+		sideImageAlign:"none",
+		sideImageArtist:"",
+		sideImageDate:"", // YYYY/MM/DD
+		frontImage:"Kepler_1507_b-front",
+		frontImageAlign:"none",
+		frontImageArtist:"MasterNeonlight",
+		frontImageDate:"2024/08/20", // YYYY/MM/DD
+		topImage:"",
+		topImageAlign:"none",
+		topImageArtist:"",
+		topImageDate:"", // YYYY/MM/DD
+		width:10703,
+		length:10703,
+		height:10703,
+		category1:"space",
+		category2:"planets",
+		category3:"exoplanets",
+		tags:["terrestrial"], // don't include anything in categories or name
+		dateAdded:"2024/08/20", // YYYY/MM/DD
+		lastModified:"2024/08/20", // YYYY/MM/DD
+	},
+	{
+		name:"Kepler-1520 b",
+		defaultAngle:1,
+		sideImage:"",
+		sideImageAlign:"none",
+		sideImageArtist:"",
+		sideImageDate:"", // YYYY/MM/DD
+		frontImage:"Kepler_1520_b-front",
+		frontImageAlign:"none",
+		frontImageArtist:"MasterNeonlight",
+		frontImageDate:"2024/08/20", // YYYY/MM/DD
+		topImage:"",
+		topImageAlign:"none",
+		topImageArtist:"",
+		topImageDate:"", // YYYY/MM/DD
+		width:72008,
+		length:72008,
+		height:72008,
+		category1:"space",
+		category2:"planets",
+		category3:"exoplanets",
+		tags:["gas giant"], // don't include anything in categories or name
+		dateAdded:"2024/08/20", // YYYY/MM/DD
+		lastModified:"2024/08/20", // YYYY/MM/DD
+	},
+	{
+		name:"Kepler-107 d",
+		defaultAngle:1,
+		sideImage:"",
+		sideImageAlign:"none",
+		sideImageArtist:"",
+		sideImageDate:"", // YYYY/MM/DD
+		frontImage:"Kepler_107_d-front",
+		frontImageAlign:"none",
+		frontImageArtist:"MasterNeonlight",
+		frontImageDate:"2024/08/20", // YYYY/MM/DD
+		topImage:"",
+		topImageAlign:"none",
+		topImageArtist:"",
+		topImageDate:"", // YYYY/MM/DD
+		width:10958,
+		length:10958,
+		height:10958,
+		category1:"space",
+		category2:"planets",
+		category3:"exoplanets",
+		tags:["terrestrial"], // don't include anything in categories or name
+		dateAdded:"2024/08/20", // YYYY/MM/DD
+		lastModified:"2024/08/20", // YYYY/MM/DD
+	},
+	{
+		name:"Kepler-20 e",
+		defaultAngle:1,
+		sideImage:"",
+		sideImageAlign:"none",
+		sideImageArtist:"",
+		sideImageDate:"", // YYYY/MM/DD
+		frontImage:"Kepler_20_e-front",
+		frontImageAlign:"none",
+		frontImageArtist:"MasterNeonlight",
+		frontImageDate:"2024/08/20", // YYYY/MM/DD
+		topImage:"",
+		topImageAlign:"none",
+		topImageArtist:"",
+		topImageDate:"", // YYYY/MM/DD
+		width:10461,
+		length:10461,
+		height:10461,
+		category1:"space",
+		category2:"planets",
+		category3:"exoplanets",
+		tags:["terrestrial"], // don't include anything in categories or name
+		dateAdded:"2024/08/20", // YYYY/MM/DD
+		lastModified:"2024/08/20", // YYYY/MM/DD
+	},
+	{
+		name:"Kepler-1152 b",
+		defaultAngle:1,
+		sideImage:"",
+		sideImageAlign:"none",
+		sideImageArtist:"",
+		sideImageDate:"", // YYYY/MM/DD
+		frontImage:"Kepler_1152_b-front",
+		frontImageAlign:"none",
+		frontImageArtist:"MasterNeonlight",
+		frontImageDate:"2024/08/20", // YYYY/MM/DD
+		topImage:"",
+		topImageAlign:"none",
+		topImageArtist:"",
+		topImageDate:"", // YYYY/MM/DD
+		width:11086,
+		length:NaN,
+		height:11086,
+		category1:"space",
+		category2:"planets",
+		category3:"exoplanets",
+		tags:["terrestrial"], // don't include anything in categories or name
+		dateAdded:"2024/08/20", // YYYY/MM/DD
+		lastModified:"2024/08/20", // YYYY/MM/DD
+	},
+	{
+		name:"Kepler-70 c",
+		defaultAngle:1,
+		sideImage:"",
+		sideImageAlign:"none",
+		sideImageArtist:"",
+		sideImageDate:"", // YYYY/MM/DD
+		frontImage:"Kepler_70_c-front",
+		frontImageAlign:"none",
+		frontImageArtist:"MasterNeonlight",
+		frontImageDate:"2024/08/20", // YYYY/MM/DD
+		topImage:"",
+		topImageAlign:"none",
+		topImageArtist:"",
+		topImageDate:"", // YYYY/MM/DD
+		width:10766,
+		length:10766,
+		height:10766,
+		category1:"space",
+		category2:"planets",
+		category3:"exoplanets",
+		tags:["koi-55 c"], // don't include anything in categories or name
+		dateAdded:"2024/08/20", // YYYY/MM/DD
+		lastModified:"2024/08/20", // YYYY/MM/DD
+	},
+	{
+		name:"K2-137 b",
+		defaultAngle:1,
+		sideImage:"",
+		sideImageAlign:"none",
+		sideImageArtist:"",
+		sideImageDate:"", // YYYY/MM/DD
+		frontImage:"K2_137_b-front",
+		frontImageAlign:"none",
+		frontImageArtist:"MasterNeonlight",
+		frontImageDate:"2024/08/20", // YYYY/MM/DD
+		topImage:"",
+		topImageAlign:"none",
+		topImageArtist:"",
+		topImageDate:"", // YYYY/MM/DD
+		width:8155,
+		length:8155,
+		height:8155,
+		category1:"space",
+		category2:"planets",
+		category3:"exoplanets",
+		tags:["terrestrial"], // don't include anything in categories or name
+		dateAdded:"2024/08/20", // YYYY/MM/DD
+		lastModified:"2024/08/20", // YYYY/MM/DD
+	},
+	{
+		name:"Kepler-1547 b",
+		defaultAngle:1,
+		sideImage:"",
+		sideImageAlign:"none",
+		sideImageArtist:"",
+		sideImageDate:"", // YYYY/MM/DD
+		frontImage:"Kepler_1547_b-front",
+		frontImageAlign:"none",
+		frontImageArtist:"MasterNeonlight",
+		frontImageDate:"2024/08/20", // YYYY/MM/DD
+		topImage:"",
+		topImageAlign:"none",
+		topImageArtist:"",
+		topImageDate:"", // YYYY/MM/DD
+		width:11468,
+		length:11468,
+		height:11468,
+		category1:"space",
+		category2:"planets",
+		category3:"exoplanets",
+		tags:["terrestrial"], // don't include anything in categories or name
+		dateAdded:"2024/08/20", // YYYY/MM/DD
+		lastModified:"2024/08/20", // YYYY/MM/DD
+	},
+	{
+		name:"Kepler-68 c",
+		defaultAngle:1,
+		sideImage:"",
+		sideImageAlign:"none",
+		sideImageArtist:"",
+		sideImageDate:"", // YYYY/MM/DD
+		frontImage:"Kepler_68_c-front",
+		frontImageAlign:"none",
+		frontImageArtist:"MasterNeonlight",
+		frontImageDate:"2024/08/20", // YYYY/MM/DD
+		topImage:"",
+		topImageAlign:"none",
+		topImageArtist:"",
+		topImageDate:"", // YYYY/MM/DD
+		width:12474,
+		length:12474,
+		height:12474,
+		category1:"space",
+		category2:"planets",
+		category3:"exoplanets",
+		tags:["terrestrial"], // don't include anything in categories or name
+		dateAdded:"2024/08/20", // YYYY/MM/DD
+		lastModified:"2024/08/20", // YYYY/MM/DD
+	},
+	{
+		name:"Kepler-1421 b",
+		defaultAngle:1,
+		sideImage:"",
+		sideImageAlign:"none",
+		sideImageArtist:"",
+		sideImageDate:"", // YYYY/MM/DD
+		frontImage:"Kepler_1421_b-front",
+		frontImageAlign:"none",
+		frontImageArtist:"MasterNeonlight",
+		frontImageDate:"2024/08/20", // YYYY/MM/DD
+		topImage:"",
+		topImageAlign:"none",
+		topImageArtist:"",
+		topImageDate:"", // YYYY/MM/DD
+		width:11850,
+		length:11850,
+		height:11850,
+		category1:"space",
+		category2:"planets",
+		category3:"exoplanets",
+		tags:["terrestrial"], // don't include anything in categories or name
+		dateAdded:"2024/08/20", // YYYY/MM/DD
+		lastModified:"2024/08/20", // YYYY/MM/DD
+	},
+	{
+		name:"Kepler-106 d",
+		defaultAngle:1,
+		sideImage:"",
+		sideImageAlign:"none",
+		sideImageArtist:"",
+		sideImageDate:"", // YYYY/MM/DD
+		frontImage:"Kepler_106_d-front",
+		frontImageAlign:"none",
+		frontImageArtist:"MasterNeonlight",
+		frontImageDate:"2024/08/20", // YYYY/MM/DD
+		topImage:"",
+		topImageAlign:"none",
+		topImageArtist:"",
+		topImageDate:"", // YYYY/MM/DD
+		width:12105,
+		length:12105,
+		height:12105,
+		category1:"space",
+		category2:"planets",
+		category3:"exoplanets",
+		tags:["terrestrial"], // don't include anything in categories or name
+		dateAdded:"2024/08/20", // YYYY/MM/DD
+		lastModified:"2024/08/20", // YYYY/MM/DD
+	},
+	{
+		name:"Kepler-524 c",
+		defaultAngle:1,
+		sideImage:"",
+		sideImageAlign:"none",
+		sideImageArtist:"",
+		sideImageDate:"", // YYYY/MM/DD
+		frontImage:"Kepler_524_c-front",
+		frontImageAlign:"none",
+		frontImageArtist:"MasterNeonlight",
+		frontImageDate:"2024/08/20", // YYYY/MM/DD
+		topImage:"",
+		topImageAlign:"none",
+		topImageArtist:"",
+		topImageDate:"", // YYYY/MM/DD
+		width:12232,
+		length:12232,
+		height:12232,
+		category1:"space",
+		category2:"planets",
+		category3:"exoplanets",
+		tags:["terrestrial"], // don't include anything in categories or name
+		dateAdded:"2024/08/20", // YYYY/MM/DD
+		lastModified:"2024/08/20", // YYYY/MM/DD
+	},
+	{
+		name:"Kepler-1297 b",
+		defaultAngle:1,
+		sideImage:"",
+		sideImageAlign:"none",
+		sideImageArtist:"",
+		sideImageDate:"", // YYYY/MM/DD
+		frontImage:"Kepler_1297_b-front",
+		frontImageAlign:"none",
+		frontImageArtist:"MasterNeonlight",
+		frontImageDate:"2024/08/20", // YYYY/MM/DD
+		topImage:"",
+		topImageAlign:"none",
+		topImageArtist:"",
+		topImageDate:"", // YYYY/MM/DD
+		width:12360,
+		length:12360,
+		height:12360,
+		category1:"space",
+		category2:"planets",
+		category3:"exoplanets",
+		tags:["terrestrial"], // don't include anything in categories or name
+		dateAdded:"2024/08/20", // YYYY/MM/DD
+		lastModified:"2024/08/20", // YYYY/MM/DD
+	},
+	{
+		name:"Kepler-969 c",
+		defaultAngle:1,
+		sideImage:"",
+		sideImageAlign:"none",
+		sideImageArtist:"",
+		sideImageDate:"", // YYYY/MM/DD
+		frontImage:"Kepler_969_c-front",
+		frontImageAlign:"none",
+		frontImageArtist:"MasterNeonlight",
+		frontImageDate:"2024/08/20", // YYYY/MM/DD
+		topImage:"",
+		topImageAlign:"none",
+		topImageArtist:"",
+		topImageDate:"", // YYYY/MM/DD
+		width:12615,
+		length:12615,
+		height:12615,
+		category1:"space",
+		category2:"planets",
+		category3:"exoplanets",
+		tags:["terrestrial"], // don't include anything in categories or name
+		dateAdded:"2024/08/20", // YYYY/MM/DD
+		lastModified:"2024/08/20", // YYYY/MM/DD
+	},
+	{
+		name:"Kepler-20 f",
+		defaultAngle:1,
+		sideImage:"",
+		sideImageAlign:"none",
+		sideImageArtist:"",
+		sideImageDate:"", // YYYY/MM/DD
+		frontImage:"Kepler_20_f-front",
+		frontImageAlign:"none",
+		frontImageArtist:"MasterNeonlight",
+		frontImageDate:"2024/08/20", // YYYY/MM/DD
+		topImage:"",
+		topImageAlign:"none",
+		topImageArtist:"",
+		topImageDate:"", // YYYY/MM/DD
+		width:12130,
+		length:12130,
+		height:12130,
+		category1:"space",
+		category2:"planets",
+		category3:"exoplanets",
+		tags:["terrestrial"], // don't include anything in categories or name
+		dateAdded:"2024/08/20", // YYYY/MM/DD
+		lastModified:"2024/08/20", // YYYY/MM/DD
+	},
+	{
+		name:"Kepler-1081 b",
+		defaultAngle:1,
+		sideImage:"",
+		sideImageAlign:"none",
+		sideImageArtist:"",
+		sideImageDate:"", // YYYY/MM/DD
+		frontImage:"Kepler_1081_b-front",
+		frontImageAlign:"none",
+		frontImageArtist:"MasterNeonlight",
+		frontImageDate:"2024/08/20", // YYYY/MM/DD
+		topImage:"",
+		topImageAlign:"none",
+		topImageArtist:"",
+		topImageDate:"", // YYYY/MM/DD
+		width:12869,
+		length:12869,
+		height:12869,
+		category1:"space",
+		category2:"planets",
+		category3:"exoplanets",
+		tags:["terrestrial"], // don't include anything in categories or name
+		dateAdded:"2024/08/20", // YYYY/MM/DD
+		lastModified:"2024/08/20", // YYYY/MM/DD
+	},
+	{
+		name:"Kepler-1150 b",
+		defaultAngle:1,
+		sideImage:"",
+		sideImageAlign:"none",
+		sideImageArtist:"",
+		sideImageDate:"", // YYYY/MM/DD
+		frontImage:"Kepler_1150_b-front",
+		frontImageAlign:"none",
+		frontImageArtist:"MasterNeonlight",
+		frontImageDate:"2024/08/20", // YYYY/MM/DD
+		topImage:"",
+		topImageAlign:"none",
+		topImageArtist:"",
+		topImageDate:"", // YYYY/MM/DD
+		width:12997,
+		length:12997,
+		height:12997,
+		category1:"space",
+		category2:"planets",
+		category3:"exoplanets",
+		tags:["terrestrial"], // don't include anything in categories or name
+		dateAdded:"2024/08/20", // YYYY/MM/DD
+		lastModified:"2024/08/20", // YYYY/MM/DD
+	},
+	{
+		name:"Kepler-395 b",
+		defaultAngle:1,
+		sideImage:"",
+		sideImageAlign:"none",
+		sideImageArtist:"",
+		sideImageDate:"", // YYYY/MM/DD
+		frontImage:"Kepler_395_b-front",
+		frontImageAlign:"none",
+		frontImageArtist:"MasterNeonlight",
+		frontImageDate:"2024/08/20", // YYYY/MM/DD
+		topImage:"",
+		topImageAlign:"none",
+		topImageArtist:"",
+		topImageDate:"", // YYYY/MM/DD
+		width:13124,
+		length:13124,
+		height:13124,
+		category1:"space",
+		category2:"planets",
+		category3:"exoplanets",
+		tags:["terrestrial"], // don't include anything in categories or name
+		dateAdded:"2024/08/20", // YYYY/MM/DD
+		lastModified:"2024/08/20", // YYYY/MM/DD
+	},
+	{
+		name:"TRAPPIST-1 b",
+		defaultAngle:1,
+		sideImage:"",
+		sideImageAlign:"none",
+		sideImageArtist:"",
+		sideImageDate:"", // YYYY/MM/DD
+		frontImage:"TRAPPIST_1_b-front",
+		frontImageAlign:"none",
+		frontImageArtist:"MasterNeonlight",
+		frontImageDate:"2024/08/20", // YYYY/MM/DD
+		topImage:"",
+		topImageAlign:"none",
+		topImageArtist:"",
+		topImageDate:"", // YYYY/MM/DD
+		width:14220,
+		length:14220,
+		height:14220,
+		category1:"space",
+		category2:"planets",
+		category3:"exoplanets",
+		tags:["terrestrial"], // don't include anything in categories or name
+		dateAdded:"2024/08/20", // YYYY/MM/DD
+		lastModified:"2024/08/20", // YYYY/MM/DD
+	},
+	{
+		name:"TRAPPIST-1 c",
+		defaultAngle:1,
+		sideImage:"",
+		sideImageAlign:"none",
+		sideImageArtist:"",
+		sideImageDate:"", // YYYY/MM/DD
+		frontImage:"TRAPPIST_1_c-front",
+		frontImageAlign:"none",
+		frontImageArtist:"MasterNeonlight",
+		frontImageDate:"2024/08/20", // YYYY/MM/DD
+		topImage:"",
+		topImageAlign:"none",
+		topImageArtist:"",
+		topImageDate:"", // YYYY/MM/DD
+		width:13978,
+		length:13978,
+		height:13978,
+		category1:"space",
+		category2:"planets",
+		category3:"exoplanets",
+		tags:["terrestrial"], // don't include anything in categories or name
+		dateAdded:"2024/08/20", // YYYY/MM/DD
+		lastModified:"2024/08/20", // YYYY/MM/DD
+	},
+	{
+		name:"TRAPPIST-1 d",
+		defaultAngle:1,
+		sideImage:"",
+		sideImageAlign:"none",
+		sideImageArtist:"",
+		sideImageDate:"", // YYYY/MM/DD
+		frontImage:"TRAPPIST_1_d-front",
+		frontImageAlign:"none",
+		frontImageArtist:"MasterNeonlight",
+		frontImageDate:"2024/08/20", // YYYY/MM/DD
+		topImage:"",
+		topImageAlign:"none",
+		topImageArtist:"",
+		topImageDate:"", // YYYY/MM/DD
+		width:10041,
+		length:10041,
+		height:10041,
+		category1:"space",
+		category2:"planets",
+		category3:"exoplanets",
+		tags:["terrestrial"], // don't include anything in categories or name
+		dateAdded:"2024/08/20", // YYYY/MM/DD
+		lastModified:"2024/08/20", // YYYY/MM/DD
+	},
+	{
+		name:"TRAPPIST-1 e",
+		defaultAngle:1,
+		sideImage:"",
+		sideImageAlign:"none",
+		sideImageArtist:"",
+		sideImageDate:"", // YYYY/MM/DD
+		frontImage:"TRAPPIST_1_e-front",
+		frontImageAlign:"none",
+		frontImageArtist:"MasterNeonlight",
+		frontImageDate:"2024/08/20", // YYYY/MM/DD
+		topImage:"",
+		topImageAlign:"none",
+		topImageArtist:"",
+		topImageDate:"", // YYYY/MM/DD
+		width:11723,
+		length:11723,
+		height:11723,
+		category1:"space",
+		category2:"planets",
+		category3:"exoplanets",
+		tags:["terrestrial"], // don't include anything in categories or name
+		dateAdded:"2024/08/20", // YYYY/MM/DD
+		lastModified:"2024/08/20", // YYYY/MM/DD
+	},
+	{
+		name:"TRAPPIST-1 f",
+		defaultAngle:1,
+		sideImage:"",
+		sideImageAlign:"none",
+		sideImageArtist:"",
+		sideImageDate:"", // YYYY/MM/DD
+		frontImage:"TRAPPIST_1_f-front",
+		frontImageAlign:"none",
+		frontImageArtist:"MasterNeonlight",
+		frontImageDate:"2024/08/20", // YYYY/MM/DD
+		topImage:"",
+		topImageAlign:"none",
+		topImageArtist:"",
+		topImageDate:"", // YYYY/MM/DD
+		width:13315,
+		length:13315,
+		height:13315,
+		category1:"space",
+		category2:"planets",
+		category3:"exoplanets",
+		tags:["terrestrial"], // don't include anything in categories or name
+		dateAdded:"2024/08/20", // YYYY/MM/DD
+		lastModified:"2024/08/20", // YYYY/MM/DD
+	},
+	{
+		name:"TRAPPIST-1 g",
+		defaultAngle:1,
+		sideImage:"",
+		sideImageAlign:"none",
+		sideImageArtist:"",
+		sideImageDate:"", // YYYY/MM/DD
+		frontImage:"TRAPPIST_1_g-front",
+		frontImageAlign:"none",
+		frontImageArtist:"MasterNeonlight",
+		frontImageDate:"2024/08/20", // YYYY/MM/DD
+		topImage:"",
+		topImageAlign:"none",
+		topImageArtist:"",
+		topImageDate:"", // YYYY/MM/DD
+		width:14386,
+		length:14386,
+		height:14386,
+		category1:"space",
+		category2:"planets",
+		category3:"exoplanets",
+		tags:["terrestrial"], // don't include anything in categories or name
+		dateAdded:"2024/08/20", // YYYY/MM/DD
+		lastModified:"2024/08/20", // YYYY/MM/DD
+	},
+	{
+		name:"TRAPPIST-1 h",
+		defaultAngle:1,
+		sideImage:"",
+		sideImageAlign:"none",
+		sideImageArtist:"",
+		sideImageDate:"", // YYYY/MM/DD
+		frontImage:"TRAPPIST_1_h-front",
+		frontImageAlign:"none",
+		frontImageArtist:"MasterNeonlight",
+		frontImageDate:"2024/08/20", // YYYY/MM/DD
+		topImage:"",
+		topImageAlign:"none",
+		topImageArtist:"",
+		topImageDate:"", // YYYY/MM/DD
+		width:9620,
+		length:9620,
+		height:9620,
+		category1:"space",
+		category2:"planets",
+		category3:"exoplanets",
+		tags:["terrestrial"], // don't include anything in categories or name
+		dateAdded:"2024/08/20", // YYYY/MM/DD
+		lastModified:"2024/08/20", // YYYY/MM/DD
+	},
+	{
+		name:"TRAPPIST-1",
+		defaultAngle:1,
+		sideImage:"",
+		sideImageAlign:"none",
+		sideImageArtist:"",
+		sideImageDate:"", // YYYY/MM/DD
+		frontImage:"TRAPPIST_1-front",
+		frontImageAlign:"none",
+		frontImageArtist:"MasterNeonlight",
+		frontImageDate:"2024/08/20", // YYYY/MM/DD
+		topImage:"",
+		topImageAlign:"none",
+		topImageArtist:"",
+		topImageDate:"", // YYYY/MM/DD
+		width:82927,
+		length:82927,
+		height:82927,
+		category1:"space",
+		category2:"stars",
+		category3:"main-sequence-stars",
+		tags:["cool","red","dwarf"], // don't include anything in categories or name
+		dateAdded:"2024/08/20", // YYYY/MM/DD
+		lastModified:"2024/08/20", // YYYY/MM/DD
+	},
+	{
+		name:"Baryonyx Walkeri",
+		defaultAngle:0,
+		sideImage:"Baryonyx_Walkeri-side",
+		sideImageAlign:"bottom",
+		sideImageArtist:"MasterNeonlight",
+		sideImageDate:"2024/08/20", // YYYY/MM/DD
+		frontImage:"",
+		frontImageAlign:"none",
+		frontImageArtist:"",
+		frontImageDate:"", // YYYY/MM/DD
+		topImage:"",
+		topImageAlign:"none",
+		topImageArtist:"",
+		topImageDate:"", // YYYY/MM/DD
+		width:0.0013,
+		length:0.009,
+		height:0.0031,
+		category1:"nature",
+		category2:"animals",
+		category3:"reptiles",
+		tags:["dinosaur"], // don't include anything in categories or name
+		dateAdded:"2024/08/20", // YYYY/MM/DD
+		lastModified:"2024/08/20", // YYYY/MM/DD
+	},
+	{
+		name:"Giganotosaurus Carolinii",
+		defaultAngle:0,
+		sideImage:"Giganotosaurus_Carolinii-side",
+		sideImageAlign:"bottom",
+		sideImageArtist:"MasterNeonlight",
+		sideImageDate:"2024/08/20", // YYYY/MM/DD
+		frontImage:"",
+		frontImageAlign:"none",
+		frontImageArtist:"",
+		frontImageDate:"", // YYYY/MM/DD
+		topImage:"",
+		topImageAlign:"none",
+		topImageArtist:"",
+		topImageDate:"", // YYYY/MM/DD
+		width:0.0022,
+		length:0.013,
+		height:0.0041889,
+		category1:"nature",
+		category2:"animals",
+		category3:"reptiles",
+		tags:["dinosaur"], // don't include anything in categories or name
+		dateAdded:"2024/08/20", // YYYY/MM/DD
+		lastModified:"2024/08/20", // YYYY/MM/DD
+	},
+	{
+		name:"Janenschia Robusta",
+		defaultAngle:0,
+		sideImage:"Janenschia_Robusta-side",
+		sideImageAlign:"bottom",
+		sideImageArtist:"MasterNeonlight",
+		sideImageDate:"2024/08/20", // YYYY/MM/DD
+		frontImage:"",
+		frontImageAlign:"none",
+		frontImageArtist:"",
+		frontImageDate:"", // YYYY/MM/DD
+		topImage:"",
+		topImageAlign:"none",
+		topImageArtist:"",
+		topImageDate:"", // YYYY/MM/DD
+		width:0.006,
+		length:0.024,
+		height:0.0106662,
+		category1:"nature",
+		category2:"animals",
+		category3:"reptiles",
+		tags:["dinosaur"], // don't include anything in categories or name
+		dateAdded:"2024/08/20", // YYYY/MM/DD
+		lastModified:"2024/08/20", // YYYY/MM/DD
+	},
+	{
+		name:"Ankylosaurus Magniventris",
+		defaultAngle:0,
+		sideImage:"Ankylosaurus_Magniventris-side",
+		sideImageAlign:"bottom",
+		sideImageArtist:"MasterNeonlight",
+		sideImageDate:"2024/08/20", // YYYY/MM/DD
+		frontImage:"",
+		frontImageAlign:"none",
+		frontImageArtist:"",
+		frontImageDate:"", // YYYY/MM/DD
+		topImage:"",
+		topImageAlign:"none",
+		topImageArtist:"",
+		topImageDate:"", // YYYY/MM/DD
+		width:0.0023,
+		length:0.01,
+		height:0.002889,
+		category1:"nature",
+		category2:"animals",
+		category3:"reptiles",
+		tags:["dinosaur"], // don't include anything in categories or name
+		dateAdded:"2024/08/20", // YYYY/MM/DD
+		lastModified:"2024/08/20", // YYYY/MM/DD
+	},
+	{
+		name:"Sauroposeidon Proteles",
+		defaultAngle:0,
+		sideImage:"Sauroposeidon_Proteles-side",
+		sideImageAlign:"bottom",
+		sideImageArtist:"MasterNeonlight",
+		sideImageDate:"2024/08/20", // YYYY/MM/DD
+		frontImage:"",
+		frontImageAlign:"none",
+		frontImageArtist:"",
+		frontImageDate:"", // YYYY/MM/DD
+		topImage:"",
+		topImageAlign:"none",
+		topImageArtist:"",
+		topImageDate:"", // YYYY/MM/DD
+		width:0.005,
+		length:0.034,
+		height:0.026822,
+		category1:"nature",
+		category2:"animals",
+		category3:"reptiles",
+		tags:["dinosaur"], // don't include anything in categories or name
+		dateAdded:"2024/08/20", // YYYY/MM/DD
+		lastModified:"2024/08/20", // YYYY/MM/DD
+	},
+	{
+		name:"Plateosaurus Trossingensis",
+		defaultAngle:0,
+		sideImage:"Plateosaurus_Trossingensis-side",
+		sideImageAlign:"bottom",
+		sideImageArtist:"MasterNeonlight",
+		sideImageDate:"2024/08/20", // YYYY/MM/DD
+		frontImage:"",
+		frontImageAlign:"none",
+		frontImageArtist:"",
+		frontImageDate:"", // YYYY/MM/DD
+		topImage:"",
+		topImageAlign:"none",
+		topImageArtist:"",
+		topImageDate:"", // YYYY/MM/DD
+		width:0.0012,
+		length:0.01,
+		height:0.003,
+		category1:"nature",
+		category2:"animals",
+		category3:"reptiles",
+		tags:["dinosaur"], // don't include anything in categories or name
+		dateAdded:"2024/08/20", // YYYY/MM/DD
+		lastModified:"2024/08/20", // YYYY/MM/DD
+	},
+	{
+		name:"Leptictidium Auderiense",
+		defaultAngle:0,
+		sideImage:"Leptictidium_Auderiense-side",
+		sideImageAlign:"bottom",
+		sideImageArtist:"MasterNeonlight",
+		sideImageDate:"2024/08/20", // YYYY/MM/DD
+		frontImage:"",
+		frontImageAlign:"none",
+		frontImageArtist:"",
+		frontImageDate:"", // YYYY/MM/DD
+		topImage:"",
+		topImageAlign:"none",
+		topImageArtist:"",
+		topImageDate:"", // YYYY/MM/DD
+		width:0.00015,
+		length:0.0008,
+		height:0.00028445,
+		category1:"nature",
+		category2:"animals",
+		category3:"mammals",
+		tags:["placental"], // don't include anything in categories or name
+		dateAdded:"2024/08/20", // YYYY/MM/DD
+		lastModified:"2024/08/20", // YYYY/MM/DD
+	},
+	{
+		name:"Smilodon Populator",
+		defaultAngle:0,
+		sideImage:"Smilodon_Populator-side",
+		sideImageAlign:"bottom",
+		sideImageArtist:"MasterNeonlight",
+		sideImageDate:"2024/08/20", // YYYY/MM/DD
+		frontImage:"",
+		frontImageAlign:"none",
+		frontImageArtist:"",
+		frontImageDate:"", // YYYY/MM/DD
+		topImage:"",
+		topImageAlign:"none",
+		topImageArtist:"",
+		topImageDate:"", // YYYY/MM/DD
+		width:0.0005,
+		length:0.00225,
+		height:0.0012,
+		category1:"nature",
+		category2:"animals",
+		category3:"mammals",
+		tags:["saber-toothed cat"], // don't include anything in categories or name
+		dateAdded:"2024/08/20", // YYYY/MM/DD
+		lastModified:"2024/08/20", // YYYY/MM/DD
+	},
+	{
+		name:"European Badger",
+		defaultAngle:0,
+		sideImage:"European_Badger-side",
+		sideImageAlign:"bottom",
+		sideImageArtist:"MasterNeonlight",
+		sideImageDate:"2024/08/20", // YYYY/MM/DD
+		frontImage:"",
+		frontImageAlign:"none",
+		frontImageArtist:"",
+		frontImageDate:"", // YYYY/MM/DD
+		topImage:"",
+		topImageAlign:"none",
+		topImageArtist:"",
+		topImageDate:"", // YYYY/MM/DD
+		width:0.00035,
+		length:0.00085,
+		height:0.00041556,
+		category1:"nature",
+		category2:"animals",
+		category3:"mammals",
+		tags:["carnivorous"], // don't include anything in categories or name
+		dateAdded:"2024/08/20", // YYYY/MM/DD
+		lastModified:"2024/08/20", // YYYY/MM/DD
+	},
 ];
 
 //	———————— STEPS FOR UPDATING ————————
