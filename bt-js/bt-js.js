@@ -1,8 +1,8 @@
 // --------------- SCRIPT INFORMATION ---------------
 //
 const btjsAuthor = "Daniel Roberts (BlenderTimer)" //				Author
-const btjsVersion = "0.0.4" //										Version
-const btjsLastUpdated = "March 10, 2024" //							Last Updated
+const btjsVersion = "0.0.5" //										Version
+const btjsLastUpdated = "August 31, 2024" //						Last Updated
 const btjsLicense = "BT-LU" //										License
 const btjsLicenseLink = "https://blendertimer.com/license/bt-lu" //	License Link
 //
@@ -59,6 +59,58 @@ function gcp7316(event) {
 }
 
 // ---------- ARRAY FUNCTIONS ----------
+Array.prototype.moveItem = function(indexFrom, indexTo, method, placeholder) {
+	if (indexFrom < 0) {indexFrom = 0}
+	else if (indexFrom > (this.length-1)) {indexFrom = this.length-1};
+	if (indexTo < 0) {indexTo = 0}
+	else if (indexTo > (this.length-1)) {indexTo = this.length-1};
+	if (!(indexFrom == indexTo)) {
+		if (method == 2 || method == "overwrite") {
+			var newArray = this;
+			newArray.splice(indexTo, 1, this[indexFrom]);
+			if (!(placeholder == undefined)) {
+				newArray.splice(indexFrom, 1, placeholder);
+			}
+			else {
+				newArray.splice(indexFrom, 1);
+			}
+			return newArray;
+		}
+		else if (method == 1 || method == "swap") {
+			var newArray = this;
+			var swapItem = this[indexTo];
+			newArray.splice(indexTo, 1, this[indexFrom]);
+			newArray.splice(indexFrom, 1, swapItem);
+			return newArray;
+		}
+		else {
+			var newArray = this;
+			if (indexFrom > indexTo) {
+				newArray.splice(indexTo, 0, this[indexFrom]);
+				if (!(placeholder == undefined)) {
+					newArray.splice(indexFrom + 1, 1, placeholder);
+				}
+				else {
+					newArray.splice(indexFrom + 1, 1);
+				}
+			}
+			else {
+				newArray.splice(indexTo + 1, 0, this[indexFrom]);
+				if (!(placeholder == undefined)) {
+					newArray.splice(indexFrom, 1, placeholder);
+				}
+				else {
+					newArray.splice(indexFrom, 1);
+				}
+			}
+			return newArray;
+		}
+	}
+	else {
+		return this;
+	}
+}
+
 Array.prototype.selectRandom = function() {
 	return this[parseInt(Math.random() * this.length)];
 }
@@ -242,6 +294,47 @@ Number.prototype.round = function(decimalPlaces) {
 	var n = parseFloat(this);
 	if (decimalPlaces == null) {
 		n = parseFloat(n.toFixed(0))
+	}
+	else if (decimalPlaces == "smart") {
+		if (n > 1000) {
+			n = parseFloat(n.toFixed(0));
+		}
+		else if (n < 100 && n >= 10) {
+			n = parseFloat(n.toFixed(4))
+		}
+		else if (n < 10 && n >= 0.1) {
+			n = parseFloat(n.toFixed(5))
+		}
+		else if (n > 0 && n < 0.1) {
+			var ns = n.toFullNumber().substring(1);
+			var rnd = 0;
+			for (var i=0; i < ns.length; i++) {
+				var c = ns.substr(i, 1);
+				if (c == "0") {
+					rnd += 1;
+				}
+				else if (!(c == ".")) {
+					break;
+				}
+			}
+			if ((rnd + 5) <= 100) {
+				n = parseFloat(n.toFixed(rnd + 5))
+			}
+			else {
+				n = parseFloat(n.toFixed(100))
+			}
+		}
+		else {
+			if (decimalPlaces > 100) {
+				n = parseFloat(n.toFixed(100))
+			}
+			else if (decimalPlaces < 0) {
+				n = parseFloat(n.toFixed(0))
+			}
+			else {
+				n = parseFloat(n.toFixed(3))
+			}
+		}
 	}
 	else if (decimalPlaces > 100) {
 		n = parseFloat(n.toFixed(100))
@@ -958,7 +1051,6 @@ Number.prototype.translateTime = function(format) {
 	while (sec.length < style[5].length && cancel <= 100) {sec = "0" + sec;cancel++};
 	cancel = 0;
 	while (ms.length < style[6].length && cancel <= 100) {ms = "0" + ms;cancel++};
-	console.log(newFormat)
 	return newFormat.replace(/%%yr%%/g, yr).replace(/%%mo%%/g, mo).replace(/%%dy%%/g, dy).replace(/%%hr%%/g, hr).replace(/%%min%%/g, min).replace(/%%sec%%/g, sec).replace(/%%ms%%/g, ms);
 }
 
@@ -1046,6 +1138,44 @@ function sizeCanvas(canvas, widthBias, heightBias) {
 }
 
 // ---------- STRING FUNCTIONS ----------
+String.prototype.extend = function(length, fillChar, appendToBeginning) {
+	if (fillChar == null) {
+		fillChar = " ";
+	}
+	var str = this.toString();
+	var ol = str.length;
+	var t = 1000000
+	if (length < 0) {
+		if (appendToBeginning == true) {
+			while (str.length < ((length*-1)+ol) && t >= 0) {
+				str = fillChar + str;
+				t -= 1;
+			}
+		}
+		else {
+			while (str.length < ((length*-1)+ol) && t >= 0) {
+				str += fillChar;
+				t -= 1;
+			}
+		}
+	}
+	else {
+		if (appendToBeginning == true) {
+			while (str.length < length && t >= 0) {
+				str = fillChar + str;
+				t -= 1;
+			}
+		}
+		else {
+			while (str.length < length && t >= 0) {
+				str += fillChar;
+				t -= 1;
+			}
+		}
+	}
+	return str;
+}
+
 String.prototype.isNumber = function() {
 	var ts = this.split("");
 	var tsNum = 0;

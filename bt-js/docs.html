@@ -69,6 +69,8 @@
 				background: #FA2;
 				border-radius: 5px 5px 0px 0px;
 				height: 30px;
+				box-sizing: border-box;
+				padding: 7px;
 				position: absolute;
 				top: -33px;
 				right: 25px;
@@ -592,7 +594,7 @@
 	<body onload="determineLayout(), baseLoad()" onresize="determineLayout()" onscroll="setMenuHeight(), findViewPosition()">
 		<div id="loader" style="opacity: 1; transition: 0.3s; display: flex; position: fixed; top: 0px; bottom: 0px; left: 0px; right: 0px; background: #1E1E1E; z-index: 10000000; box-shadow: 0px 0px 50px rgba(0,0,0,0.8) inset; align-items: center; justify-content: center;"><img src="../static-0/files/images/loading-general.gif" style="width: 100px; height: 100px; filter: drop-shadow(0px 0px 15px #000000)"></div>
 		<div id="code-tester">
-			<img id="code-tester-hide" src="../static-0/files/images/compare-down.png" onclick="toggleCodeTester()">
+			<img id="code-tester-hide" src="../static-0/files/images/icons/arrow-down2.svg" onclick="toggleCodeTester()">
 			<input type="text" id="code-tester-text" oninput="testCode()" maxLength=100>
 			<div id="code-tester-result-base">
 				<p id="code-tester-result">Test some code using the box above!</p>
@@ -605,6 +607,7 @@
 		<h1 id="title" style="margin-top: 0px">BT-JS Documentation</h1>
 		<div id="menu">
 			<a href="#getting-started" onclick="scrollToID('getting-started')" id="m-gest">Getting Started</a>
+			<a href="#more-help" onclick="scrollToID('more-help')" id="m-mohe">More Help</a>
 			<a href="#btjs-trigger" onclick="scrollToID('btjs-trigger')" id="m-bttr">BT-JS Trigger</a>
 			<div><b>Functions:</b><div class="mspr"></div></div>
 			<a href="#all-functions" onclick="scrollToID('all-functions')" id="m-alfu">All Functions</a>
@@ -631,6 +634,10 @@
 			<p>And that's it! You're all set and ready to start using BT-JS in your scripts!</p>
 			<br>
 			<p>BT-JS functions and variables can be referenced from any javascript which is in (or is referenced in) the same HTML file which references BT-JS.</p>
+			<br>
+			<h1 id="more-help">More Help</h1>
+			<p>Still struggling to figure something out? No worries! Feel free to contact me via any of the methods listed here:</p>
+			<a href="/about#faq-contact">Contact BlenderTimer</a>
 			<br>
 			<br><h1 id="btjs-trigger">BT-JS Trigger</h1>
 			<p>Properly syncing triggers in BT-JS with triggers in your script can be crucial to a clean website experience. Incorrectly ordered event triggers can lead to odd behavior and/or errors. To help prevent this, BT-JS sends a trigger for events which are used in the background.</p>
@@ -668,7 +675,7 @@
 					<div class="value-base">
 						<div class="vc"><p class="c4">'cursor'</p></div>
 						<br>
-						<p>The trigger sent when BT-JS has just collected cursor information (equivalent to </p><div class="c"><p class="c4">'mousemove'</p></div><p>).</p>
+						<p>The trigger sent when BT-JS has just collected cursor information (equivalent to event listener </p><div class="c"><p class="c4">'mousemove'</p></div><p>).</p>
 					</div>
 				</div>
 			</div>
@@ -677,22 +684,24 @@
 			<h1 id="all-functions">List of All Functions</h1>
 			<table class="function-list">
 				<tr><th>Function</th><th>Description</th></tr>
-				<tr onclick="scrollToID('functions-clearCanvas', true)"><td><p>clearCanvas</p></td><td>Clears the entire canvas drawing and path data.</td></tr>
+				<tr onclick="scrollToID('functions-clearcanvas', true)"><td><p>clearCanvas</p></td><td>Clears the entire canvas drawing and path data.</td></tr>
 				<tr onclick="scrollToID('functions-cursorinfo', true)"><td><p>cursorInfo</p></td><td>A compact, multi-function information retrieval function to get information about the cursor such as its position, its speed, etc.</td></tr>
-				<tr onclick="scrollToID('functions-drawRect', true)"><td><p>drawRect</p></td><td>Creates a rectangle in a canvas (with optional border radius).</td></tr>
+				<tr onclick="scrollToID('functions-drawrect', true)"><td><p>drawRect</p></td><td>Creates a rectangle in a canvas (with optional border radius).</td></tr>
+				<tr onclick="scrollToID('functions-extend', true)"><td><p>extend</p></td><td>Takes a string and returns the same string extended to the specified length.</td></tr>
 				<tr onclick="scrollToID('functions-isnumber', true)"><td><p>isNumber</p></td><td>Checks a string to see if it is a number or not.</td></tr>
 				<tr onclick="scrollToID('functions-limit', true)"><td><p>limit</p></td><td>Returns the same number but no greater or less than the specified upper and lower limits.</td></tr>
 				<tr onclick="scrollToID('functions-limitdown', true)"><td><p>limitDown</p></td><td>Returns the same number but no less than the specified limit.</td></tr>
 				<tr onclick="scrollToID('functions-limitup', true)"><td><p>limitUp</p></td><td>Returns the same number but no greater than the specified limit.</td></tr>
-				<tr onclick="scrollToID('functions-pointOnCircle', true)"><td><p>pointOnCircle</p></td><td>Returns an object with the X and Y position of a specific angle on a circle.</td></tr>
+				<tr onclick="scrollToID('functions-moveitem', true)"><td><p>moveItem</p></td><td>Moves an item in an array to a new position.</td></tr>
+				<tr onclick="scrollToID('functions-pointoncircle', true)"><td><p>pointOnCircle</p></td><td>Returns an object with the X and Y position of a specific angle on a circle.</td></tr>
 				<tr onclick="scrollToID('functions-readcookie', true)"><td><p>readCookie</p></td><td>Returns the value of the specified cookie.</td></tr>
 				<tr onclick="scrollToID('functions-randomnumber', true)"><td><p>randomNumber</p></td><td>Returns a random number from a low and high limit and with a specified number of decimal places.</td></tr>
 				<tr onclick="scrollToID('functions-removeafter', true)"><td><p>removeAfter</p></td><td>Returns the string with everything after the specified character removed.</td></tr>
 				<tr onclick="scrollToID('functions-removebefore', true)"><td><p>removeBefore</p></td><td>Returns the string with everything before the specified character removed.</td></tr>
 				<tr onclick="scrollToID('functions-round', true)"><td><p>round</p></td><td>Rounds a number to a certain number of decimal places.</td></tr>
 				<tr onclick="scrollToID('functions-selectrandom', true)"><td><p>selectRandom</p></td><td>Returns a random item from an array/list.</td></tr>
-				<tr onclick="scrollToID('functions-sizeCanvas', true)"><td><p>sizeCanvas</p></td><td>Makes the drawing area of a canvas the size of its element size.</td></tr>
-				<tr onclick="scrollToID('functions-sumValues', true)"><td><p>sumValues</p></td><td>Adds the values of an array and returns the total sum.</td></tr>
+				<tr onclick="scrollToID('functions-sizecanvas', true)"><td><p>sizeCanvas</p></td><td>Makes the drawing area of a canvas the size of its element size.</td></tr>
+				<tr onclick="scrollToID('functions-sumvalues', true)"><td><p>sumValues</p></td><td>Adds the values of an array and returns the total sum.</td></tr>
 				<tr onclick="scrollToID('functions-tofullnumber', true)"><td><p>toFullNumber</p></td><td>Converts an exponent number to a full number string.</td></tr>
 				<tr onclick="scrollToID('functions-translatetime', true)"><td><p>translateTime</p></td><td>Converts a time value (in milliseconds) to a human readable time string.</td></tr>
 				<tr onclick="scrollToID('functions-tonegative', true)"><td><p>toNegative</p></td><td>Takes any number and returns its corresponding negative value (e.g. 3 to -3, -3 to -3).</td></tr>
@@ -704,9 +713,63 @@
 			<br>
 			<br>
 			<h1 id="array-functions">Array/List Functions</h1>
+			<div id="functions-moveitem" class="function-base">
+				<b class="bc">moveItem</b>
+				<img onclick="copyLink(event)" src="../static-0/files/images/icons/copy-link.svg" class="copy-link">
+				<br>
+				<p>Moves an item in an array to a new position.</p>
+				<br>
+				<h2>Syntax:</h2><div class="c"><i class="c0">myArray</i><p class="c2">.</p><p class="c5">moveItem</p><p class="c2">(</p><i class="c7">indexFrom</i><p class="c2">, </p><i class="c7">indexTo</i><p class="c2">, </p><i class="c7">method</i><p class="c2">, </p><i class="c7">placeholder</i><p class="c2">)</p></div>
+				<br>
+				<h2>Parameters:</h2>
+				<div class="parameter-base">
+					<div class="c"><i class="c7">indexFrom</i></div><p> as </p><div class="c"><p class="c6">integer</p></div><p> (required)</p>
+					<br>
+					<p class="parameter-description">The index of the item you wish to move.</p>
+				</div>
+				<div class="parameter-base">
+					<div class="c"><i class="c7">indexTo</i></div><p> as </p><div class="c"><p class="c6">integer</p></div><p> (required)</p>
+					<br>
+					<p class="parameter-description">The index which you wish to move the item to.</p>
+				</div>
+				<div class="parameter-base">
+					<div class="c"><i class="c7">method</i></div><p> as </p><div class="c"><p class="c6">integer</p></div><p> or </p><div class="c"><p class="c6">string</p></div><p> (optional)</p>
+					<br>
+					<p class="parameter-description">The method to use when moving the item.</p>
+					<br>
+					<h2>Valid Values:</h2>
+					<div class="value-base">
+						<div class="vc"><p class="c8">0</p></div><b class="c2"> / </b><div class="vc"><p class="c4">"move"</p></div>
+						<br>
+						<p>Moves the item from </p><div class="c"><i class="c7">indexFrom</i></div><p> to </p><div class="c"><i class="c7">indexTo</i></div><p>.</p>
+					</div>
+					<div class="value-base">
+						<div class="vc"><p class="c8">1</p></div><b class="c2"> / </b><div class="vc"><p class="c4">"swap"</p></div>
+						<br>
+						<p>Swaps the item from </p><div class="c"><i class="c7">indexFrom</i></div><p> with the item from </p><div class="c"><i class="c7">indexTo</i></div><p>.</p>
+					</div>
+					<div class="value-base">
+						<div class="vc"><p class="c8">2</p></div><b class="c2"> / </b><div class="vc"><p class="c4">"overwrite"</p></div>
+						<br>
+						<p>Moves the item but overwrites the item at </p><div class="c"><i class="c7">indexTo</i></div><p> with the item moved from </p><div class="c"><i class="c7">indexFrom</i></div><p>. Note that this will cause the returned array to be 1 item shorter than the original array.</p>
+					</div>
+					<br>
+					<h2>Default:</h2><div class="c"><p class="c8">0</p></div><p> or </p><div class="c"><p class="c4">'move'</p></div>
+				</div>
+				<div class="parameter-base">
+					<div class="c"><i class="c7">placeholder</i></div><p> as </p><div class="c"><i class="c0">any type</i></div><p> (optional)</p>
+					<br>
+					<p class="parameter-description">If present, leaves this placeholder item where the moved item was moved from. This is only valid for the </p><div class="c"><p class="c4">'move'</p></div><p> and </p><div class="c"><p class="c4">'overwrite'</p></div><p> methods. A small trick is to set this placeholder to the item at </p><div class="c"><i class="c7">indexFrom</i></div><p> to copy/duplicate an item.</p>
+				</div>
+				<br>
+				<h2>Returns:</h2><div class="c"><p class="c6">array</p></div>
+				<br>
+				<h2>Example:</h2><div class="c"><p class="c2">[</p><p class="c4">"item1"</p><p class="c2">, </p><p class="c4">"item2"</p><p class="c2">, </p><p class="c4">"item3"</p><p class="c2">]</p><p class="c2">.</p><p class="c5">moveItem</p><p class="c2">(<p class="c8">2</p><p class="c2">, </p><p class="c8">0</p><p class="c2">, </p><p class="c4">'swap'</p><p class="c2">)</p><p class="c0"> //Returns: ["item3", "item2", "item1"]</p></div>
+				<button class="code-try" onclick="tryCode(event)">Try Snippet</button>
+			</div>
 			<div id="functions-selectrandom" class="function-base">
 				<b class="bc">selectRandom</b>
-				<img onclick="copyLink(event)" src="../static-0/files/images/copy-link.png" class="copy-link">
+				<img onclick="copyLink(event)" src="../static-0/files/images/icons/copy-link.svg" class="copy-link">
 				<br>
 				<p>Returns a random item from an array.</p>
 				<br>
@@ -717,9 +780,9 @@
 				<h2>Example:</h2><div class="c"><p class="c2">[</p><p class="c4">"item1"</p><p class="c2">, </p><p class="c4">"item2"</p><p class="c2">, </p><p class="c4">"item3"</p><p class="c2">]</p><p class="c2">.</p><p class="c5">selectRandom</p><p class="c2">()</p><p class="c0"> //Returns: "item2"</p></div>
 				<button class="code-try" onclick="tryCode(event)">Try Snippet</button>
 			</div>
-			<div id="functions-sumValues" class="function-base">
+			<div id="functions-sumvalues" class="function-base">
 				<b class="bc">sumValues</b><i class="bi">NUMBER ARRAY</i>
-				<img onclick="copyLink(event)" src="../static-0/files/images/copy-link.png" class="copy-link">
+				<img onclick="copyLink(event)" src="../static-0/files/images/icons/copy-link.svg" class="copy-link">
 				<br>
 				<p>Adds the values of an array and returns the total sum.</p>
 				<br>
@@ -733,7 +796,7 @@
 			<h1 id="boolean-functions">Boolean Functions</h1>
 			<div id="functions-toyesno" class="function-base">
 				<b class="bc">toYesNo</b>
-				<img onclick="copyLink(event)" src="../static-0/files/images/copy-link.png" class="copy-link">
+				<img onclick="copyLink(event)" src="../static-0/files/images/icons/copy-link.svg" class="copy-link">
 				<br>
 				<p>Converts a boolean which is <div class="c"><p class="c6">true</p></div> to a <div class="c"><p class="c4">"Yes"</p></div> string and a boolean which is <div class="c"><p class="c6">false</p></div> to a <div class="c"><p class="c4">"No"</p></div> string.</p>
 				<br>
@@ -747,7 +810,7 @@
 			<h1 id="misc-functions">Misc Functions</h1>
 			<div id="functions-cursorinfo" class="function-base">
 				<b class="bc">cursorInfo</b>
-				<img onclick="copyLink(event)" src="../static-0/files/images/copy-link.png" class="copy-link">
+				<img onclick="copyLink(event)" src="../static-0/files/images/icons/copy-link.svg" class="copy-link">
 				<br>
 				<p>Retrieves information about the cursor.</p>
 				<br>
@@ -888,7 +951,7 @@
 			</div>
 			<div id="functions-readcookie" class="function-base">
 				<b class="bc">readCookie</b>
-				<img onclick="copyLink(event)" src="../static-0/files/images/copy-link.png" class="copy-link">
+				<img onclick="copyLink(event)" src="../static-0/files/images/icons/copy-link.svg" class="copy-link">
 				<br>
 				<p>Returns the value of the specified cookie.</p>
 				<br>
@@ -910,7 +973,7 @@
 			</div>
 			<div id="functions-writecookie" class="function-base">
 				<b class="bc">writeCookie</b>
-				<img onclick="copyLink(event)" src="../static-0/files/images/copy-link.png" class="copy-link">
+				<img onclick="copyLink(event)" src="../static-0/files/images/icons/copy-link.svg" class="copy-link">
 				<br>
 				<p>Writes or overwrites a value to a cookie.</p>
 				<br>
@@ -941,7 +1004,7 @@
 			<h1 id="number-functions">Number Functions</h1>
 			<div id="functions-limit" class="function-base">
 				<b class="bc">limit</b>
-				<img onclick="copyLink(event)" src="../static-0/files/images/copy-link.png" class="copy-link">
+				<img onclick="copyLink(event)" src="../static-0/files/images/icons/copy-link.svg" class="copy-link">
 				<br>
 				<p>Returns the same number but no greater or less than the specified upper and lower limits.</p>
 				<br>
@@ -973,7 +1036,7 @@
 			</div>
 			<div id="functions-limitdown" class="function-base">
 				<b class="bc">limitDown</b>
-				<img onclick="copyLink(event)" src="../static-0/files/images/copy-link.png" class="copy-link">
+				<img onclick="copyLink(event)" src="../static-0/files/images/icons/copy-link.svg" class="copy-link">
 				<br>
 				<p>Returns the same number but no less than the specified limit.</p>
 				<br>
@@ -998,7 +1061,7 @@
 			</div>
 			<div id="functions-limitup" class="function-base">
 				<b class="bc">limitUp</b>
-				<img onclick="copyLink(event)" src="../static-0/files/images/copy-link.png" class="copy-link">
+				<img onclick="copyLink(event)" src="../static-0/files/images/icons/copy-link.svg" class="copy-link">
 				<br>
 				<p>Returns the same number but no greater than the specified limit.</p>
 				<br>
@@ -1023,7 +1086,7 @@
 			</div>
 			<div id="functions-randomnumber" class="function-base">
 				<b class="bc">randomNumber</b>
-				<img onclick="copyLink(event)" src="../static-0/files/images/copy-link.png" class="copy-link">
+				<img onclick="copyLink(event)" src="../static-0/files/images/icons/copy-link.svg" class="copy-link">
 				<br>
 				<p>Returns a random number between the </p><div class="c"><p class="c7">low</p></div><p> and </p><div class="c"><p class="c7">high</p></div><p> values (including the </p><div class="c"><p class="c7">low</p></div><p> and </p><div class="c"><p class="c7">high</p></div><p> values).</p>
 				<br>
@@ -1061,7 +1124,7 @@
 			</div>
 			<div id="functions-round" class="function-base">
 				<b class="bc">round</b>
-				<img onclick="copyLink(event)" src="../static-0/files/images/copy-link.png" class="copy-link">
+				<img onclick="copyLink(event)" src="../static-0/files/images/icons/copy-link.svg" class="copy-link">
 				<br>
 				<p>Rounds a number to a specified number of decimal places.</p>
 				<br>
@@ -1071,9 +1134,9 @@
 				<br>
 				<h2>Parameters:</h2>
 				<div class="parameter-base">
-					<div class="c"><i class="c7">decimalPlaces</i></div><p> as </p><div class="c"><p class="c6">number</p></div><p> (optional)</p>
+					<div class="c"><i class="c7">decimalPlaces</i></div><p> as </p><div class="c"><p class="c6">number</p></div><p> or </p><div class="c"><p class="c6">string</p></div><p> (optional)</p>
 					<br>
-					<p class="parameter-description">The number of decimal places (Max: 100, however, note that javascript will not return more than 17 decimal places for a number).</p>
+					<p class="parameter-description">The number of decimal places (Max: 100, however, note that javascript will not return more than 17 decimal places for a number).</p><br><p>Using </p><div class="c"><p class="c4">"smart"</p></div><p> will cut all decimal places if the number is over 1000, will keep no more than 5 decimal places for numbers 0.1-10, and will leave up to 5 numbers after the last zero for numbers under 0.1.</p>
 					<br>
 					<h2>Default:</h2><div class="c"><p class="c8">0</p></div>
 				</div>
@@ -1082,7 +1145,7 @@
 			</div>
 			<div id="functions-tofullnumber" class="function-base">
 				<b class="bc">toFullNumber</b>
-				<img onclick="copyLink(event)" src="../static-0/files/images/copy-link.png" class="copy-link">
+				<img onclick="copyLink(event)" src="../static-0/files/images/icons/copy-link.svg" class="copy-link">
 				<br>
 				<p>Converts an exponent number to a full number string (e.g. 1e6 to 1000000).</p>
 				<br>
@@ -1095,7 +1158,7 @@
 			</div>
 			<div id="functions-translatetime" class="function-base">
 				<b class="bc">translateTime</b><i class="bi">TIME/DATE</i>
-				<img onclick="copyLink(event)" src="../static-0/files/images/copy-link.png" class="copy-link">
+				<img onclick="copyLink(event)" src="../static-0/files/images/icons/copy-link.svg" class="copy-link">
 				<br>
 				<p>Converts a time value (in milliseconds) to a human readable time string.</p>
 				<br>
@@ -1157,7 +1220,7 @@
 			</div>
 			<div id="functions-tonegative" class="function-base">
 				<b class="bc">toNegative</b>
-				<img onclick="copyLink(event)" src="../static-0/files/images/copy-link.png" class="copy-link">
+				<img onclick="copyLink(event)" src="../static-0/files/images/icons/copy-link.svg" class="copy-link">
 				<br>
 				<p>Takes any number and returns its corresponding negative value (e.g. 3 returns as -3, -3 returns as -3, 123.45 returns as -123.45, etc.).</p>
 				<br>
@@ -1173,7 +1236,7 @@
 			</div>
 			<div id="functions-topositive" class="function-base">
 				<b class="bc">toPositive</b>
-				<img onclick="copyLink(event)" src="../static-0/files/images/copy-link.png" class="copy-link">
+				<img onclick="copyLink(event)" src="../static-0/files/images/icons/copy-link.svg" class="copy-link">
 				<br>
 				<p>Takes any number and returns its corresponding positive value (e.g. -3 returns as 3, 3 returns as 3, -123.45 returns as 123.45, etc.).</p>
 				<br>
@@ -1188,9 +1251,9 @@
 				<button class="code-try" onclick="tryCode(event)">Try Snippet</button>
 			</div>
 			<h1 id="object-functions">Object Functions</h1>
-			<div id="functions-clearCanvas" class="function-base">
+			<div id="functions-clearcanvas" class="function-base">
 				<b class="bc">clearCanvas</b><i class="bi">CANVAS CONTEXT 2D</i>
-				<img onclick="copyLink(event)" src="../static-0/files/images/copy-link.png" class="copy-link">
+				<img onclick="copyLink(event)" src="../static-0/files/images/icons/copy-link.svg" class="copy-link">
 				<br>
 				<p>Clears/removes the entire canvas drawing and path data.</p>
 				<br>
@@ -1199,9 +1262,9 @@
 				<h2>Example:</h2><div class="c"><p class="c5">clearCanvas</p><p class="c2">(</p><p class="c7">ctx</p><p class="c2">)</p><p class="c0"> //Clears the canvas.</p></div>
 				<button class="code-try" onclick="tryCode(event)">Try Snippet</button>
 			</div>
-			<div id="functions-drawRect" class="function-base">
+			<div id="functions-drawrect" class="function-base">
 				<b class="bc">drawRect</b><i class="bi">CANVAS CONTEXT 2D</i>
-				<img onclick="copyLink(event)" src="../static-0/files/images/copy-link.png" class="copy-link">
+				<img onclick="copyLink(event)" src="../static-0/files/images/icons/copy-link.svg" class="copy-link">
 				<br>
 				<p>Creates a rectangle in a canvas (with optional border radius). Note that you must use the usual </p><div class="c"><p class="c5">fill</p></div><p> or </p><div class="c"><p class="c5">stroke</p></div><p> functions to make the rectangle visible.</p>
 				<br>
@@ -1243,9 +1306,9 @@
 				<h2>Example:</h2><div class="c"><p class="c5">drawRect</p><p class="c2">(</p><p class="c1">ctx</p><p class="c2">, </p><p class="c8">10</p><p class="c2">, </p><p class="c8">10</p><p class="c2">, </p><p class="c8">150</p><p class="c2">, </p><p class="c8">100</p><p class="c2">, </p><p class="c8">5</p><p class="c2">)</p><p class="c0"> //Creates a rectangle with an X of 10px, a Y of 10px, a width of 150px, a height of 100px, and a border radius of 5px.</p></div>
 				<button class="code-try" onclick="tryCode(event)">Try Snippet</button>
 			</div>
-			<div id="functions-pointOnCircle" class="function-base">
+			<div id="functions-pointoncircle" class="function-base">
 				<b class="bc">pointOnCircle</b>
-				<img onclick="copyLink(event)" src="../static-0/files/images/copy-link.png" class="copy-link">
+				<img onclick="copyLink(event)" src="../static-0/files/images/icons/copy-link.svg" class="copy-link">
 				<br>
 				<p>Returns an object with the X and Y position of a specific angle on a circle.</p>
 				<br>
@@ -1280,9 +1343,9 @@
 				<h2>Example:</h2><div class="c"><p class="c5">pointOnCircle</p><p class="c2">(</p><p class="c8">50</p><p class="c2">, </p><p class="c8">-45</p><p class="c2">)</p><p class="c2">.</p><p class="c7">x</p><p class="c0"> //Returns the X position of a point along a -45° angle on the circle.</p></div>
 				<button class="code-try" onclick="tryCode(event)">Try Snippet</button>
 			</div>
-			<div id="functions-pointsOnCircle" class="function-base">
+			<div id="functions-pointsoncircle" class="function-base">
 				<b class="bc">pointsOnCircle</b>
-				<img onclick="copyLink(event)" src="../static-0/files/images/copy-link.png" class="copy-link">
+				<img onclick="copyLink(event)" src="../static-0/files/images/icons/copy-link.svg" class="copy-link">
 				<br>
 				<p>Returns an object array with the X and Y position of points equally spaced along a circle.</p>
 				<br>
@@ -1322,9 +1385,9 @@
 				<h2>Example:</h2><div class="c"><p class="c5">pointsOnCircle</p><p class="c2">(</p><p class="c8">12</p><p class="c2">, </p><p class="c8">50</p><p class="c2">, </p><p class="c8">15</p><p class="c2">)</p><p class="c0"> //Returns an object array with 12 points along the circle offset by 15 degrees.</p></div>
 				<button class="code-try" onclick="tryCode(event)">Try Snippet</button>
 			</div>
-			<div id="functions-sizeCanvas" class="function-base">
+			<div id="functions-sizecanvas" class="function-base">
 				<b class="bc">sizeCanvas</b><i class="bi">CANVAS</i>
-				<img onclick="copyLink(event)" src="../static-0/files/images/copy-link.png" class="copy-link">
+				<img onclick="copyLink(event)" src="../static-0/files/images/icons/copy-link.svg" class="copy-link">
 				<br>
 				<p>Makes the drawing area of a canvas the size of its </p><div class="c"><p class="c1">canvas</p></div><p> element (i.e. eliminates stretching on the canvas).</p><br>
 				<i>Note: This function must be run before anything is drawn on the canvas.</i>
@@ -1355,9 +1418,42 @@
 				<button class="code-try" onclick="tryCode(event)">Try Snippet</button>
 			</div>
 			<h1 id="string-functions">String Functions</h1>
+			<div id="functions-extend" class="function-base">
+				<b class="bc">extend</b>
+				<img onclick="copyLink(event)" src="../static-0/files/images/icons/copy-link.svg" class="copy-link">
+				<br>
+				<p>Takes a string and returns the same string extended to the specified length.</p>
+				<br>
+				<h2>Syntax:</h2><div class="c"><i class="c0">myString</i><p class="c2">.</p><p class="c5">extend</p><p class="c2">(</p><i class="c7">length</i><p class="c2">, </p><i class="c7">fillChar</i><p class="c2">, </p><i class="c7">appendToBeginning</i><p class="c2">)</p></div>
+				<br>
+				<h2>Returns:</h2><div class="c"><p class="c6">string</p></div>
+				<br>
+				<h2>Parameters:</h2>
+				<div class="parameter-base">
+					<div class="c"><i class="c7">length</i></div><p> as </p><div class="c"><p class="c6">number</p></div><p> (required)</p>
+					<br>
+					<p class="parameter-description">The length to extend to (max: 1,000,000). If greater than 0, will include the length of the string and make the string a fixed length (e.g. </p><div class="c"><p class="c4">"123"</p></div><p> extended to </p><div class="c"><p class="c8">4</p></div><p> will return </p><div class="c"><p class="c4">"123."</p></div><p>). If less than 0, will extend from the ending point of the string (e.g. </p><div class="c"><p class="c4">"123"</p></div><p> extended to </p><div class="c"><p class="c8">-4</p></div><p> will return </p><div class="c"><p class="c4">"123...."</p></div><p>).</p>
+				</div>
+				<div class="parameter-base">
+					<div class="c"><i class="c7">fillChar</i></div><p> as </p><div class="c"><p class="c6">string</p></div><p> (optional)</p>
+					<br>
+					<p class="parameter-description">The character to fill extended space with.</p>
+					<br>
+					<h2>Default:</h2><div class="c"><p class="c4">" "</p></div>
+				</div>
+				<div class="parameter-base">
+					<div class="c"><i class="c7">appendToBeginning</i></div><p> as </p><div class="c"><p class="c6">boolean</p></div><p> (optional)</p>
+					<br>
+					<p class="parameter-description">Extend from the beginning of the string instead of the end.</p>
+					<br>
+					<h2>Default:</h2><div class="c"><p class="c6">false</p></div>
+				</div>
+				<h2>Example:</h2><div class="c"><p class="c4">"1"</p><p class="c2">.</p><p class="c5">extend</p><p class="c2">(</p><p class="c8">3</p><p class="c2">, </p><p class="c4">"0"</p><p class="c2">, </p><p class="c6">true</p><p class="c2">)</p><p class="c0"> //Returns: "001"</p></div>
+				<button class="code-try" onclick="tryCode(event)">Try Snippet</button>
+			</div>
 			<div id="functions-isnumber" class="function-base">
 				<b class="bc">isNumber</b>
-				<img onclick="copyLink(event)" src="../static-0/files/images/copy-link.png" class="copy-link">
+				<img onclick="copyLink(event)" src="../static-0/files/images/icons/copy-link.svg" class="copy-link">
 				<br>
 				<p>Checks a string to see if it is a number or not.</p>
 				<br>
@@ -1369,7 +1465,7 @@
 			</div>
 			<div id="functions-removeafter" class="function-base">
 				<b class="bc">removeAfter</b>
-				<img onclick="copyLink(event)" src="../static-0/files/images/copy-link.png" class="copy-link">
+				<img onclick="copyLink(event)" src="../static-0/files/images/icons/copy-link.svg" class="copy-link">
 				<br>
 				<p>Returns the string with everything after the specified character removed.</p>
 				<br>
@@ -1412,7 +1508,7 @@
 			</div>
 			<div id="functions-removebefore" class="function-base">
 				<b class="bc">removeBefore</b>
-				<img onclick="copyLink(event)" src="../static-0/files/images/copy-link.png" class="copy-link">
+				<img onclick="copyLink(event)" src="../static-0/files/images/icons/copy-link.svg" class="copy-link">
 				<br>
 				<p>Returns the string with everything before the specified character removed.</p>
 				<br>
@@ -1455,7 +1551,7 @@
 			</div>
 			<div id="functions-topropercase" class="function-base">
 				<b class="bc">toProperCase</b>
-				<img onclick="copyLink(event)" src="../static-0/files/images/copy-link.png" class="copy-link">
+				<img onclick="copyLink(event)" src="../static-0/files/images/icons/copy-link.svg" class="copy-link">
 				<br>
 				<p>Returns the string converted to Proper Case (first letter capitalized) either for each sentence, each word, or just the first character of the string.</p>
 				<br>
@@ -1494,7 +1590,7 @@
 			<h1 id="active-variables">Active Variables</h1>
 			<div id="variables-cursor" class="function-base">
 				<b class="bcv">cursor</b>
-				<img onclick="copyLink(event)" src="../static-0/files/images/copy-link.png" class="copy-link">
+				<img onclick="copyLink(event)" src="../static-0/files/images/icons/copy-link.svg" class="copy-link">
 				<br>
 				<p>Contains information about the cursor (also available via </p><div class="c ac" onclick="scrollToID('functions-cursorinfo', true)"><p class="c5">cursorInfo</p></div><p>).</p>
 				<br>
@@ -1580,7 +1676,7 @@
 			<h1 id="passive-variables">Passive Variables</h1>
 			<div id="variables-btjsauthor" class="function-base">
 				<b class="bcv">btjsAuthor</b>
-				<img onclick="copyLink(event)" src="../static-0/files/images/copy-link.png" class="copy-link">
+				<img onclick="copyLink(event)" src="../static-0/files/images/icons/copy-link.svg" class="copy-link">
 				<br>
 				<p>The author of this version of BT-JS.</p>
 				<br>
@@ -1591,7 +1687,7 @@
 			</div>
 			<div id="variables-btjsauthorlastupdated" class="function-base">
 				<b class="bcv">btjsLastUpdated</b>
-				<img onclick="copyLink(event)" src="../static-0/files/images/copy-link.png" class="copy-link">
+				<img onclick="copyLink(event)" src="../static-0/files/images/icons/copy-link.svg" class="copy-link">
 				<br>
 				<p>The date this version of BT-JS was last updated.</p>
 				<br>
@@ -1602,7 +1698,7 @@
 			</div>
 			<div id="variables-btjslicense" class="function-base">
 				<b class="bcv">btjsLicense</b>
-				<img onclick="copyLink(event)" src="../static-0/files/images/copy-link.png" class="copy-link">
+				<img onclick="copyLink(event)" src="../static-0/files/images/icons/copy-link.svg" class="copy-link">
 				<br>
 				<p>The license this version of BT-JS is provided under.</p>
 				<br>
@@ -1616,7 +1712,7 @@
 			</div>
 			<div id="variables-btjslicenselink" class="function-base">
 				<b class="bcv">btjsLicenseLink</b>
-				<img onclick="copyLink(event)" src="../static-0/files/images/copy-link.png" class="copy-link">
+				<img onclick="copyLink(event)" src="../static-0/files/images/icons/copy-link.svg" class="copy-link">
 				<br>
 				<p>The link to the license this version of BT-JS is provided under.</p>
 				<br>
@@ -1630,7 +1726,7 @@
 			</div>
 			<div id="variables-btjsversion" class="function-base">
 				<b class="bcv">btjsVersion</b>
-				<img onclick="copyLink(event)" src="../static-0/files/images/copy-link.png" class="copy-link">
+				<img onclick="copyLink(event)" src="../static-0/files/images/icons/copy-link.svg" class="copy-link">
 				<br>
 				<p>The version of BT-JS.</p>
 				<br>
@@ -1830,13 +1926,13 @@
 				if (testerOpen == true) {
 					document.getElementById('code-tester').style.height = "0px";
 					document.getElementById('code-tester').style.padding = "0px 10px";
-					document.getElementById('code-tester-hide').src = "../static-0/files/images/compare-up.png";
+					document.getElementById('code-tester-hide').src = "../static-0/files/images/icons/arrow-up2.svg";
 					testerOpen = false;
 				}
 				else {
 					document.getElementById('code-tester').style.height = "auto";
 					document.getElementById('code-tester').style.padding = "10px";
-					document.getElementById('code-tester-hide').src = "../static-0/files/images/compare-down.png";
+					document.getElementById('code-tester-hide').src = "../static-0/files/images/icons/arrow-down2.svg";
 					testerOpen = true;
 				}
 			}
