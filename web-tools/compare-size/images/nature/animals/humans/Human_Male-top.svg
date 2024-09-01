@@ -103,7 +103,7 @@
      id="layer1"
      transform="translate(-22.818895,-199.44554)">
     <path
-       style="fill:#555555;fill-opacity:1;stroke:none;stroke-width:3.33597732;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       style="fill:#ffffff;fill-opacity:1;stroke:none;stroke:none;stroke-width:3.33597732;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        d="M 111.12891,896.71484 A 75.814972,178.607 0 0 0 38.037109,1028.6699 c -11.827013,10.9143 -20.878075,23.4136 -24.384765,35.7774 -7.7424902,2.5783 -12.93357183,5.5759 -12.933594,10.875 -2.66e-5,5.2991 5.1910925,8.2966 12.933594,10.875 3.499309,12.3381 12.519646,24.8107 24.310547,35.7089 a 75.814972,178.607 0 0 0 73.166019,132.0235 75.814972,178.607 0 0 0 72.10742,-123.752 c 16.71516,-14.3226 26.96289,-33.6217 26.96289,-54.8554 -2e-5,-21.2601 -10.27159,-40.5821 -27.02344,-54.9102 A 75.814972,178.607 0 0 0 111.12891,896.71484 Z"
        transform="matrix(0.26458333,0,0,0.26458333,22.628726,-37.810262)"
        id="path830"
