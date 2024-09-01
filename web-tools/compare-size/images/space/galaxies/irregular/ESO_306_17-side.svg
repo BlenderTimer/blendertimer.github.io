@@ -23,7 +23,7 @@
      id="defs2" />
   <sodipodi:namedview
      id="base"
-     pagecolor="#000720"
+     pagecolor="#505050"
      bordercolor="#666666"
      borderopacity="1.0"
      inkscape:pageopacity="0"
@@ -68,7 +68,7 @@
      id="layer1"
      transform="translate(-1.5167033,84.334884)">
     <path
-       style="opacity:1;fill:#555555;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:932.61578369;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:markers stroke fill"
+       style="opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke:none;stroke-width:932.61578369;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:markers stroke fill"
        d="M 1500,8.734375 A 1494.2676,716.26655 0 0 0 5.7324219,725 1494.2676,716.26655 0 0 0 1500,1441.2656 1494.2676,716.26655 0 0 0 2994.2676,725 1494.2676,716.26655 0 0 0 1500,8.734375 Z m 40.7402,703.730465 A 31.339377,12.53575 0 0 1 1572.0801,725 31.339377,12.53575 0 0 1 1540.7402,737.53516 31.339377,12.53575 0 0 1 1509.4023,725 a 31.339377,12.53575 0 0 1 31.3379,-12.53516 z"
        transform="matrix(0.26458333,0,0,0.26458333,0,-86.645854)"
        id="ellipse853"

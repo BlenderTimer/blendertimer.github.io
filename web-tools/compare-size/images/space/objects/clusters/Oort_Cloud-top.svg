@@ -40,7 +40,7 @@
      id="layer1">
     <path
        id="path1"
-       style="fill:#555555;stroke-width:0.0948228;paint-order:markers stroke fill"
+       style="fill:#ffffff;stroke:none;stroke-width:0.0948228;paint-order:markers stroke fill"
        d="M 100.0001 0 A 100 100 0 0 0 0 100.0001 A 100 100 0 0 0 100.0001 200.0002 A 100 100 0 0 0 200.0002 100.0001 A 100 100 0 0 0 100.0001 0 z M 100.0001 99.000159 A 1 1 0 0 1 101.00004 100.0001 A 1 1 0 0 1 100.0001 101.00004 A 1 1 0 0 1 99.000159 100.0001 A 1 1 0 0 1 100.0001 99.000159 z " />
   </g>
 </svg>
