@@ -23,7 +23,7 @@
      id="defs2" />
   <sodipodi:namedview
      id="base"
-     pagecolor="#000720"
+     pagecolor="#505050"
      bordercolor="#666666"
      borderopacity="1.0"
      inkscape:pageopacity="0"
@@ -66,7 +66,7 @@
      id="layer1"
      transform="translate(-65.663977,491.64207)">
     <path
-       style="opacity:1;fill:#555555;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:19.02670479;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:normal"
+       style="opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke:none;stroke-width:19.02670479;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:normal"
        d="m 72.609134,-483.69475 c 16.456358,-13.24277 246.570796,-6.93238 359.731816,-2.44691 113.16105,4.48548 289.19004,0.78317 302.30941,26.60743 13.11938,25.82427 -11.25175,230.56056 -13.96525,351.79142 -2.71349,121.230867 4.43377,380.77069 -8.13641,388.45999 -12.57018,7.6893 -202.25767,-8.90098 -312.6987,-6.51512 -110.44104,2.38585 -313.902209,23.89678 -327.240866,10.17052 -13.338645,-13.72627 1.120466,-272.207311 1.321784,-400.30649 0.20134,-128.09918 -17.77813,-354.51806 -1.321784,-367.76084 z"
        id="rect817"
        inkscape:connector-curvature="0"

@@ -23,15 +23,16 @@
      inkscape:pagecheckerboard="1"
      inkscape:deskcolor="#505050"
      inkscape:document-units="mm"
-     inkscape:zoom="0.29353606"
-     inkscape:cx="-478.64648"
-     inkscape:cy="107.3122"
+     inkscape:zoom="3.3209814"
+     inkscape:cx="92.442553"
+     inkscape:cy="71.515004"
      inkscape:window-width="1600"
      inkscape:window-height="837"
      inkscape:window-x="-8"
      inkscape:window-y="-8"
      inkscape:window-maximized="1"
-     inkscape:current-layer="layer1" />
+     inkscape:current-layer="layer1"
+     showgrid="false" />
   <defs
      id="defs1" />
   <g
@@ -41,7 +42,7 @@
      transform="translate(-377.8409,-73.786194)">
     <path
        id="path3"
-       style="fill:#555555;stroke-width:0.449073;stroke-linecap:round;stroke-linejoin:round;paint-order:markers stroke fill"
+       style="fill:#ffffff;stroke:none;stroke-width:0.449073;stroke-linecap:round;stroke-linejoin:round;paint-order:markers stroke fill;stroke:none;fill-opacity:1"
        d="m 379.32531,74.813521 h -0.95463 c -0.0716,0 -0.52978,0.01317 -0.52978,0.450102 v 28.761037 c 0,0.43694 0.44909,0.78858 0.84846,0.78858 h 48.30308 c 0.46656,0 0.84846,-0.35164 0.84846,-0.78858 V 75.263623 c 0,-0.436937 -0.45812,-0.450102 -0.52978,-0.450102 h -0.95471 l -23.51555,-1.027327 z"
        sodipodi:nodetypes="cssssssssccc" />
   </g>

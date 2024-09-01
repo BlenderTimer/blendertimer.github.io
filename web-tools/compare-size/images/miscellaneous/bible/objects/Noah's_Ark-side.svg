@@ -41,7 +41,7 @@
      transform="translate(-20.280933,-73.786194)">
     <path
        id="rect1"
-       style="fill:#555555;stroke-width:1.1;stroke-linecap:round;stroke-linejoin:round;paint-order:markers stroke fill"
+       style="fill:#ffffff;stroke:none;stroke-width:1.1;stroke-linecap:round;stroke-linejoin:round;paint-order:markers stroke fill"
        d="m 29.187366,73.786194 v 1.027327 h -8.117851 c -0.436937,0 -0.788582,0.01317 -0.788582,0.450102 v 28.761037 c 0,0.43694 0.351645,0.78858 0.788582,0.78858 H 319.49213 c 0.43694,0 0.78858,-0.35164 0.78858,-0.78858 V 75.263623 c 0,-0.436937 -0.35164,-0.450102 -0.78858,-0.450102 h -8.11837 v -1.027327 z" />
   </g>
 </svg>
