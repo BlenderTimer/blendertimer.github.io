@@ -273,7 +273,7 @@ function popup(popupElement, firstPopup, ignoreLast) {
 	if (popupElement == 'submit-images' && submitImagesFormFirst == true) {
 		var form = document.createElement('script');
 		form.setAttribute("data-key", "ZITzLTGATEuVTYQNX0Ea0w");
-		form.setAttribute("data-form", "4");
+		form.setAttribute("data-form", "8");
 		form.src = "https://www.cognitoforms.com/f/seamless.js";
 		submitImagesFormFirst = false;
 		document.getElementById(popupElement).children[1].appendChild(form);
@@ -281,7 +281,7 @@ function popup(popupElement, firstPopup, ignoreLast) {
 	else if (popupElement == 'recommend-object' && recommendObjectFormFirst == true) {
 		var form = document.createElement('script');
 		form.setAttribute("data-key", "ZITzLTGATEuVTYQNX0Ea0w");
-		form.setAttribute("data-form", "5");
+		form.setAttribute("data-form", "10");
 		form.src = "https://www.cognitoforms.com/f/seamless.js";
 		submitImagesFormFirst = false;
 		document.getElementById(popupElement).children[1].appendChild(form);
