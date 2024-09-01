@@ -10248,15 +10248,15 @@ var objects = [
 		topImageAlign:"none",
 		topImageArtist:"",
 		topImageDate:"", // YYYY/MM/DD
-		width:0.35,
-		length:0.78948,
-		height:0.5,
+		width:0.00045,
+		length:0.00078947,
+		height:0.0005,
 		category1:"nature",
 		category2:"animals",
 		category3:"mammals",
 		tags:["rabbit"], // don't include anything in categories or name
 		dateAdded:"2024/08/31", // YYYY/MM/DD
-		lastModified:"2024/08/31", // YYYY/MM/DD
+		lastModified:"2024/09/01", // YYYY/MM/DD
 	},
 	{
 		name:"Steppe Brown Bear",
