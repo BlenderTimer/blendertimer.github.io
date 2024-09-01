@@ -59,7 +59,7 @@
      id="layer1"
      transform="translate(0,203)">
     <path
-       style="opacity:1;fill:#555555;fill-opacity:1;stroke:none;stroke-width:1.00157475;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:none;stroke:none;stroke-width:1.00157475;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        d="M 944.88281 0 A 944.88189 944.88189 0 0 0 0 944.88281 A 944.88189 944.88189 0 0 0 944.88281 1889.7637 A 944.88189 944.88189 0 0 0 1889.7637 944.88281 A 944.88189 944.88189 0 0 0 944.88281 0 z M 944.88281 823.04297 A 121.8392 121.8392 0 0 1 1066.7207 944.88281 A 121.8392 121.8392 0 0 1 944.88281 1066.7207 A 121.8392 121.8392 0 0 1 823.04297 944.88281 A 121.8392 121.8392 0 0 1 944.88281 823.04297 z "
        transform="matrix(0.26458333,0,0,0.26458333,0,-203)"
        id="path815" />
