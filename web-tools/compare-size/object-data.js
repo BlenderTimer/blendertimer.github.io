@@ -10408,4 +10408,79 @@ var objects = [
 		dateAdded:"2024/08/31", // YYYY/MM/DD
 		lastModified:"2024/08/31", // YYYY/MM/DD
 	},
+	{
+		name:"Suhail",
+		defaultAngle:1,
+		sideImage:"",
+		sideImageAlign:"none",
+		sideImageArtist:"",
+		sideImageDate:"", // YYYY/MM/DD
+		frontImage:"Suhail-front",
+		frontImageAlign:"none",
+		frontImageArtist:"MasterNeonlight",
+		frontImageDate:"2024/09/03", // YYYY/MM/DD
+		topImage:"",
+		topImageAlign:"none",
+		topImageArtist:"",
+		topImageDate:"", // YYYY/MM/DD
+		width:256713300,
+		length:256713300,
+		height:256713300,
+		category1:"space",
+		category2:"stars",
+		category3:"supergiants",
+		tags:["lambda velorum","red"], // don't include anything in categories or name
+		dateAdded:"2024/09/03", // YYYY/MM/DD
+		lastModified:"2024/09/03", // YYYY/MM/DD
+	},
+	{
+		name:"Eta Carinae A",
+		defaultAngle:1,
+		sideImage:"",
+		sideImageAlign:"none",
+		sideImageArtist:"",
+		sideImageDate:"", // YYYY/MM/DD
+		frontImage:"Eta_Carinae_A-front",
+		frontImageAlign:"none",
+		frontImageArtist:"MasterNeonlight",
+		frontImageDate:"2024/09/03", // YYYY/MM/DD
+		topImage:"",
+		topImageAlign:"none",
+		topImageArtist:"",
+		topImageDate:"", // YYYY/MM/DD
+		width:333936000,
+		length:333936000,
+		height:333936000,
+		category1:"space",
+		category2:"stars",
+		category3:"luminous-blue-variable-stars",
+		tags:["lbv"], // don't include anything in categories or name
+		dateAdded:"2024/09/03", // YYYY/MM/DD
+		lastModified:"2024/09/03", // YYYY/MM/DD
+	},
+	{
+		name:"Sagittarius A (Black Hole)",
+		defaultAngle:1,
+		sideImage:"",
+		sideImageAlign:"none",
+		sideImageArtist:"",
+		sideImageDate:"", // YYYY/MM/DD
+		frontImage:"Sagittarius_A_Black_Hole-front",
+		frontImageAlign:"none",
+		frontImageArtist:"MasterNeonlight",
+		frontImageDate:"2024/09/03", // YYYY/MM/DD
+		topImage:"",
+		topImageAlign:"none",
+		topImageArtist:"",
+		topImageDate:"", // YYYY/MM/DD
+		width:14913000,
+		length:14913000,
+		height:14913000,
+		category1:"space",
+		category2:"galaxies",
+		category3:"black_holes",
+		tags:["milky way"], // don't include anything in categories or name
+		dateAdded:"2024/09/03", // YYYY/MM/DD
+		lastModified:"2024/09/03", // YYYY/MM/DD
+	},
 ]
