@@ -335,4 +335,18 @@ const videos = [
 		views1: 715,
 		views24: 8458,
 	},
+	{
+		name:"The REAL Name of the Moon - Fantastic Fact 10",
+		tui:25,
+		sui:10,
+		type:"short",
+		url:"25-the-real-name-of-the-moon",
+		cc:"Most people, when referring to Earth's moon, simply call it \"the moon\". But what is its actual name? Well, according to the IAU, who sets the definitions for all things space, the name of Earth's moon is...\"the Moon\" with a capital \"M\" as a proper noun and may or may not be preceded by a \"the\". The same goes for \"the Earth\" and \"the Solar System\". Uncreative as it may sound, the IAU decided that: \"Calling our Moon the Moon and our Solar System the Solar System reinforces their importance to humanity — they are not just any moon or solar system.\" So I guess it's fine that...",
+		youtubeID: "-o_g0xqxHk4",
+		date: "7-9-2024",
+		views10: 120,
+		views30: 295,
+		views1: 572,
+		views24: 4192,
+	},
 ];
