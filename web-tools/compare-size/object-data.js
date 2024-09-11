@@ -10483,4 +10483,30 @@ var objects = [
 		dateAdded:"2024/09/03", // YYYY/MM/DD
 		lastModified:"2024/09/03", // YYYY/MM/DD
 	},
+	{
+		name:"House (1 Story)",
+		defaultAngle:1,
+		sideImage:"",
+		sideImageAlign:"none",
+		sideImageArtist:"",
+		sideImageDate:"", // YYYY/MM/DD
+		frontImage:"House_1_Story-front",
+		frontImageAlign:"bottom",
+		frontImageArtist:"Daniel Roberts (BlenderTimer)",
+		frontImageDate:"2024/09/10", // YYYY/MM/DD
+		topImage:"",
+		topImageAlign:"none",
+		topImageArtist:"",
+		topImageDate:"", // YYYY/MM/DD
+		width:0.00878,
+		length:0.00615,
+		height:0.004,
+		requestedBy:"MasterVerse",
+		category1:"structures",
+		category2:"buildings",
+		category3:"residential",
+		tags:["home","single"], // don't include anything in categories or name
+		dateAdded:"2024/09/10", // YYYY/MM/DD
+		lastModified:"2024/09/10", // YYYY/MM/DD
+	},
 ]
