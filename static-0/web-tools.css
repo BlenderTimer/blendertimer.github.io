@@ -1,40 +1,94 @@
-#primary-block {
+#tool-list {
 	display: flex;
-	flex: 1;
+	align-items: stretch;
+	align-content: flex-start;
+	width: calc(100% + 10px);
 	flex-wrap: wrap;
+	margin: 0px -5px;
 }
 
-.web-tool-block {
-	width: calc(25% - 20px);
-	margin: 10px !important;
-	border-radius: 10px;
-	background: #252525;
-	box-shadow: 0px 0px 20px rgba(0,0,0,0.3);
-	padding: 20px;
+.tool {
+	display: flex;
+	flex-flow: column;
+	align-items: center;
+	width: calc(16.667% - 10px);
+	background: var(--base-back);
+	border: 2px solid var(--closer-back);
+	border-radius: 5px;
 	box-sizing: border-box;
-	display: block;
-	float: left;
+	padding: 5px 8px;
 	cursor: pointer;
-	height: auto;
+	margin: 5px;
 	transition: 0.2s;
-	border: 2px solid #555555;
 }
 
-.web-tool-block:hover {
-	transform: scaleX(1.05) scaleY(1.05);
-	box-shadow: 0px 0px 15px rgba(0,0,0,0.5), 0px 0px 25px rgba(0,0,0,0.3) inset;
-	background: #353535;
-	text-shadow: none !important;
-	border: 2px solid #808080;
+.tool:hover {
+	background: var(--hover-back1);
+	border: 2px solid var(--hover-back2);
+	transform: scale(1.05);
 }
 
-.web-tool-block h4 {
-	color: #DDDDDD !important;
-	cursor: pointer !important;
+.tool img {
+	display: block;
+	max-width: calc(100% - 16px);
+	border-radius: 3px;
+	border: 2px solid #FFF1;
+	margin: 5px 0px 7px 0px;
+	pointer-events: none;
 }
 
-.web-tool-block p {
-	color: #707070 !important;
-	cursor: pointer !important;
-	font-size: 10pt !important;
+.tool b {
+	display: block !important;
+	color: var(--base-text) !important;
+	font-size: 13pt !important;
+	text-align: center;
+	pointer-events: none;
+}
+
+.tool-description {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	flex: 1 1;
+}
+
+.tool-description i {
+	display: block !important;
+	width: 100%;
+	padding: 4px 6px;
+	box-sizing: border-box;
+	font-size: 12pt !important;
+	color: var(--italic-text) !important;
+	pointer-events: none;
+}
+
+@media screen and (max-width: 1200px) {
+	.tool {
+		width: calc(20% - 10px);
+	}
+}
+
+@media screen and (max-width: 1000px) {
+	.tool {
+		width: calc(25% - 10px);
+	}
+}
+
+@media screen and (max-width: 800px) {
+	.tool {
+		width: calc(33.33% - 10px);
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.tool {
+		width: calc(50% - 10px);
+	}
+}
+
+@media screen and (max-width: 400px) {
+	.tool {
+		width: 100%;
+	}
 }

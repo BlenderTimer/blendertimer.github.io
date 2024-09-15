@@ -167,7 +167,6 @@ function unscramble() {
 		if(typeof dataLayer != 'undefined'){dataLayer.push(dataObject)};
 	}
 	else {
-		v
 		unscrambleBTN.innerHTML = "Language Not Loaded";
 	}
 }

@@ -1,9 +1,13 @@
 //----------Variables
-var bgPlate = document.getElementById('background-plate');
 //----------LOAD----------
 document.getElementById('content-main').style.opacity = "1";
-window.onscroll = function() {
-	if (bgPlate && !(bgPlate == undefined)) {
-		bgPlate.style.backgroundPosition = "0px " + (document.scrollingElement.scrollTop * -0.15) + "px";
+//----------Functions
+function donate(title, service) {
+	if (title == null) {title = document.title};
+	if (service) {
+		//
+	}
+	else {
+		window.open("https://www.paypal.com/donate?business=inquiries@blendertimer.com&no_recurring=0&item_name=" + title.replace(/ /g, "+"), "_blank");
 	}
 }
