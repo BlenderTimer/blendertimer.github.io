@@ -10509,4 +10509,29 @@ var objects = [
 		dateAdded:"2024/09/10", // YYYY/MM/DD
 		lastModified:"2024/09/10", // YYYY/MM/DD
 	},
+	{
+		name:"1943 Anteros",
+		defaultAngle:0,
+		sideImage:"1943_Anteros-side",
+		sideImageAlign:"none",
+		sideImageArtist:"MasterNeonlight",
+		sideImageDate:"2024/09/17", // YYYY/MM/DD
+		frontImage:"",
+		frontImageAlign:"none",
+		frontImageArtist:"",
+		frontImageDate:"", // YYYY/MM/DD
+		topImage:"",
+		topImageAlign:"none",
+		topImageArtist:"",
+		topImageDate:"", // YYYY/MM/DD
+		width:1.9,
+		length:2.3,
+		height:1.789,
+		category1:"space",
+		category2:"objects",
+		category3:"asteroids",
+		tags:["near-earth"], // don't include anything in categories or name
+		dateAdded:"2024/09/17", // YYYY/MM/DD
+		lastModified:"2024/09/17", // YYYY/MM/DD
+	},
 ]
