@@ -604,7 +604,7 @@ function drawCanvas(zoomReset) {
 function setURL() {
 	var url = window.location.toString().removeAfter("?", -1).removeAfter("#", -1);
 	if (compareObjects.length > 0) {
-		url += "?objects:";
+		url += "?objects=";
 	}
 	for (var i=0; i < compareObjects.length; i++) {
 		url += compareObjects[i].id + "&";
@@ -2296,8 +2296,8 @@ function checkInitialURL() {
 			}
 		}
 	}
-	else if (urlEnd.startsWith("?objects:")) {
-		var objList = urlEnd.removeBefore("?objects:", 9, true).split("&");
+	else if (urlEnd.startsWith("?objects=")) {
+		var objList = urlEnd.removeBefore("?objects=", 9, true).split("&");
 		for (var i=0; i < objList.length; i++) {
 			addObject(parseInt(objList[i]));
 		}
