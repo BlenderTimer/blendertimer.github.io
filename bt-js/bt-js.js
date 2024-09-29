@@ -1,8 +1,8 @@
 // --------------- SCRIPT INFORMATION ---------------
 //
 const btjsAuthor = "Daniel Roberts (BlenderTimer)" //				Author
-const btjsVersion = "0.0.5" //										Version
-const btjsLastUpdated = "August 31, 2024" //						Last Updated
+const btjsVersion = "0.0.6" //										Version
+const btjsLastUpdated = "September 29, 2024" //						Last Updated
 const btjsLicense = "BT-LU" //										License
 const btjsLicenseLink = "https://blendertimer.com/license/bt-lu" //	License Link
 //
@@ -1193,21 +1193,22 @@ String.prototype.isNumber = function() {
 }
 
 String.prototype.removeAfter = function(breakChar, offset, last, returnEmptyIfNotFound) {
+	var t = this.toString();
 	if (offset == null) {
-		offset = 0;
+		offset = 1;
 	}
 	else {
 		offset = offset + 1;
 	}
 	if (breakChar == null) {
-		return this.toString();
+		return t;
 	}
 	else {
 		if (last == true) {
-			last = this.toString().lastIndexOf(breakChar)
+			last = t.lastIndexOf(breakChar)
 		}
 		else {
-			last = this.toString().indexOf(breakChar)
+			last = t.indexOf(breakChar)
 		}
 		if (returnEmptyIfNotFound == true) {
 			if (last == -1) {
@@ -1215,32 +1216,33 @@ String.prototype.removeAfter = function(breakChar, offset, last, returnEmptyIfNo
 			}
 		}
 		if (last > -1) {
-			if ((last + offset) < this.toString().length) {
-				return this.toString().substring(0, last + offset);
+			if ((last + offset) < t.length) {
+				return t.slice(0, last + offset);
 			}
 			else {
-				return this.toString()
+				return t;
 			}
 		}
 		else {
-			return this.toString()
+			return t;
 		}
 	}
 }
 
 String.prototype.removeBefore = function(breakChar, offset, last, returnEmptyIfNotFound) {
+	var t = this.toString();
 	if (offset == null) {
 		offset = 0;
 	}
 	if (breakChar == null) {
-		return this.toString();
+		return t;
 	}
 	else {
 		if (last == true) {
-			last = this.toString().lastIndexOf(breakChar)
+			last = t.lastIndexOf(breakChar)
 		}
 		else {
-			last = this.toString().indexOf(breakChar)
+			last = t.indexOf(breakChar)
 		}
 		if (returnEmptyIfNotFound == true) {
 			if (last == -1) {
@@ -1248,15 +1250,15 @@ String.prototype.removeBefore = function(breakChar, offset, last, returnEmptyIfN
 			}
 		}
 		if (last > -1) {
-			if ((last + offset) < this.toString().length) {
-				return this.toString().substring(last + offset, this.toString().length);
+			if ((last + offset) < t.length) {
+				return t.slice(last + offset);
 			}
 			else {
-				return this.toString()
+				return t;
 			}
 		}
 		else {
-			return this.toString()
+			return t;
 		}
 	}
 }
