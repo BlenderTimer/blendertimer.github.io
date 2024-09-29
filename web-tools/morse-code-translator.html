@@ -77,8 +77,8 @@
 					<textarea id="input-box" placeholder="Enter text here!" oninput="easyType()"></textarea>
 					<textarea id="input-box2" style="display: none;" readonly></textarea>
 					<div id="input-menu" class="textarea-menu">
-						<div>
-							<img onclick="morsePlayer('input-box2',1)" src="../static-0/files/images/icons/play.svg" title="Play" alt="Play">
+						<div style="transform: scaleX(0);opacity: 0;">
+							<img onclick="morsePlayer('input-box2',1)" src="../static-0/files/images/icons/pause.svg" title="Play" alt="Play">
 							<img onclick="morsePlayer('input-box2',0)" src="../static-0/files/images/icons/stop.svg" title="Stop" alt="Stop">
 							<img onclick="toggleEasyType(event)" src="../static-0/files/images/icons/easytype-enabled.svg" title="EasyType: Type easier using . and -" alt="EasyType">
 						</div>
