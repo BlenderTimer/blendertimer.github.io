@@ -192,6 +192,79 @@ body {
 	min-height: 70px;
 }
 
+#international-morse-code-rules {
+	display: flex;
+	flex-flow: column;
+	width: 100%;
+	margin-top: 5px;
+}
+
+#international-morse-code-rules span {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	width: 100%;
+}
+
+#international-morse-code-rules span p {
+	color: var(--brighter-italic-text);
+	display: inline-block;
+	white-space-collapse: preserve;
+}
+
+#international-morse-code-rules span b {
+	color: var(--base-text);
+	display: inline-block;
+	white-space-collapse: preserve;
+}
+
+#international-morse-code-rules span div {
+	display: flex;
+	gap: 2px;
+	background: var(--closer-back);
+	border-radius: 3px;
+	padding: 2px;
+	box-sizing: border-box;
+	margin: 2px 10px 2px 0px;
+}
+
+#international-morse-code-rules span div b {
+	background: var(--semi-far-back);
+	border-radius: 3px;
+	text-align: center;
+	width: 12pt;
+	font-family: monospace;
+	cursor: default;
+}
+
+#international-morse-code-key {
+	display: flex;
+	justify-content: space-evenly;
+	width: 100%;
+	margin-top: 5px;
+}
+
+#international-morse-code-key div {
+	display: block;
+}
+
+#international-morse-code-key div span {
+	display: inline-block;
+	white-space-collapse: preserve;
+}
+
+#international-morse-code-key div span i {
+	display: inline-block;
+	font-weight: bold;
+	color: var(--theme3);
+}
+
+#international-morse-code-key div span b {
+	display: inline-block;
+	color: var(--base-text);
+	font-family: monospace;
+}
+
 @media screen and (max-width: 600px) {
 	#main-tool {
 		flex-flow: column;
