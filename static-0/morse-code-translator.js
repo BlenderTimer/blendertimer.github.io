@@ -27,24 +27,7 @@ if (modeSwitch.children[0].classList.length > 0) {
 else {
 	setMode("from");
 }
-for (var i=0; i < 5; i++) {
-	playerDataShort.children[i].volume = 0;
-	playerDataShort.children[i].play();
-	playerDataLong.children[i].volume = 0;
-	playerDataLong.children[i].play();
-}
-for (var i=0; i < 5; i++) {
-	playerDataShort.children[i].volume = 0;
-	playerDataShort.children[i].play();
-	playerDataLong.children[i].volume = 0;
-	playerDataLong.children[i].play();
-}
-setTimeout(function() {
-	for (var i=0; i < 5; i++) {
-		playerDataShort.children[i].volume = 1;
-		playerDataLong.children[i].volume = 1;
-	}
-}, 200);
+setTimeout(function() {inputMenu.children[0].children[0].src = "../static-0/files/images/icons/play.svg"}, 10);
 setInterval(function() {
 	if (morseCodePlaying == true) {
 		if (morseCodePlayerPosition < document.getElementById(morseCodePlayer).value.length) {
@@ -71,9 +54,11 @@ setInterval(function() {
 			if (pause3 == 3) {morseCodePlayerPosition += 1;pause3 = 0};
 		}
 		else {
-			document.getElementById(morseCodePlayer).focus();
-			document.getElementById(morseCodePlayer).setSelectionRange(0, 0);
-			document.getElementById(morseCodePlayer.removeAfter("-")+"menu").children[0].children[0].src = "../static-0/files/images/icons/play.svg";
+			if (!(morseCodePlayer == "")) {
+				document.getElementById(morseCodePlayer).focus();
+				document.getElementById(morseCodePlayer).setSelectionRange(0, 0);
+				document.getElementById(morseCodePlayer.removeAfter("-")+"menu").children[0].children[0].src = "../static-0/files/images/icons/play.svg";
+			}
 			morseCodePlayer = "";
 			morseCodePlaying = false;
 			morseCodePlayerPosition = 0;
