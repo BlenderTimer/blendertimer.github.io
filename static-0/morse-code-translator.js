@@ -10,7 +10,7 @@ var convertBTN = document.getElementById('convert-btn');
 var inputMenu = document.getElementById('input-menu');
 var outputMenu = document.getElementById('output-menu');
 var mode = "to";
-var morseCode = {"A":"• —","B":"— • • •","C":"— • — •","D":"— • •","E":"•","F":"• • — •","G":"— — •","H":"• • • •","I":"• •","J":"• — — —","K":"— • —","L":"• — • •","M":"— —","N":"— •","O":"— — —","P":"• — — •","Q":"— — • —","R":"• — •","S":"• • •","T":"—","U":"• • —","V":"• • • —","W":"• — —","X":"— • • —","Y":"— • — —","Z":"— — • •","0":"— — — — —","1":"• — — — —","2":"• • — — —","3":"• • • — —","4":"• • • • —","5":"• • • • •","6":"— • • • •","7":"— — • • •","8":"— — — • •","9":"— — — — •"," ":"       "};
+var morseCode = {"A":"• —","B":"— • • •","C":"— • — •","D":"— • •","E":"•","F":"• • — •","G":"— — •","H":"• • • •","I":"• •","J":"• — — —","K":"— • —","L":"• — • •","M":"— —","N":"— •","O":"— — —","P":"• — — •","Q":"— — • —","R":"• — •","S":"• • •","T":"—","U":"• • —","V":"• • • —","W":"• — —","X":"— • • —","Y":"— • — —","Z":"— — • •","Á":"• — — • —","Ä":"• — • —","É":"• • — • •","Ñ":"— — • — —","Ö":"— — — •","Ü":"• • — —","0":"— — — — —","1":"• — — — —","2":"• • — — —","3":"• • • — —","4":"• • • • —","5":"• • • • •","6":"— • • • •","7":"— — • • •","8":"— — — • •","9":"— — — — •",",":"— — • • — —",".":"• — • — • —","?":"• • — — • •","\"":"• — • • — •",":":"— — — • • •","'":"• — — — — •","-":"— • • • • —","/":"— • • — •","(":"— • — — •",")":"— • — — • —"," ":"       "};
 var morseCodeList = Object.getOwnPropertyNames(morseCode);
 var morseCodePlaying = false;
 var morseCodePlayer = "";
@@ -160,8 +160,8 @@ function convert() {
 		var t = inputBox.value.split("");
 		var translated = "";
 		for (var i=0; i < t.length; i++) {
-			var c = t[i].toUpperCase();
-			var cid = morseCodeList.indexOf(c);
+			var c = "";
+			var cid = morseCodeList.indexOf(t[i].toUpperCase());
 			if (i > 0 && !(t[i-1] == " ") && !(t[i] == " ") && !(t[i-1] == "\n")) {
 				translated += "   ";
 			}
@@ -170,7 +170,7 @@ function convert() {
 			}
 			translated += c;
 		}
-		outputBox.value = translated;
+		outputBox.value = translated.replace(/          /g, "       ");
 	}
 	convertBTN.innerHTML = "Translate!";
 }
