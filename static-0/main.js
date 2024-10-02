@@ -1,4 +1,6 @@
 //----------Variables
+//----------Event Listeners
+window.addEventListener('resize', function() {determineDisplayMenu()});
 //----------LOAD----------
 document.getElementById('content-main').style.opacity = "1";
 //----------Functions

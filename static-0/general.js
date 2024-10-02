@@ -48,12 +48,12 @@ function determineDisplayMenu() {
   			largeMenuItemDD[i].style.display = "none";
 		}
 		smallMenuMain.style.display = "block";
-		if (window.innerWidth < 700) {
+		if (document.getElementsByClassName('title').length > 0 && window.innerWidth < 700) {
 			contentMain.style.margin = "50px 0px 0px 0px";
 			contentMain.style.borderRadius = "0px";
 			contentMain.style.minHeight = "calc(100vh - 100px)";
 		}
-		else {
+		else if (document.getElementsByClassName('title').length > 0) {
 			contentMain.style.margin = "50px 5vw 50px 5vw";
 			contentMain.style.borderRadius = "10px";
 			contentMain.style.minHeight = "calc(100vh - 150px)";
@@ -69,8 +69,10 @@ function determineDisplayMenu() {
   			largeMenuItemDD[i].style.display = "block";
 		}
 		smallMenuMain.style.display = "none";
-		contentMain.style.margin = "50px 5vw 50px 5vw";
-		contentMain.style.borderRadius = "10px";
+		if (document.getElementsByClassName('title').length > 0) {
+			contentMain.style.margin = "50px 5vw 50px 5vw";
+			contentMain.style.borderRadius = "10px";
+		}
 		revolveButton.style.marginRight = "0px";
 	}
 }
