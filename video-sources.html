@@ -20,13 +20,13 @@
 		<link rel="stylesheet" type="text/css" href="./static-0/video-sources.css">
 		<script src="./bt-js/bt-js.js"></script>
 	</head>
-	<body onresize="determineDisplayMenu()">
+	<body>
 		<div id="background-plate"></div>
 		<div id="banner-menu">
 			<nav>
 				<!--====================  LARGE MENU  ====================-->
 				<ul id="large-menu">
-					<li id="nav-home"><a href="./"><img alt="BlenderTimer" src="./static-0/files/images/nav-logohome.png"></a></li>
+					<li id="nav-home"><a href="/"><img alt="BlenderTimer" src="./static-0/files/images/nav-logohome.png"></a></li>
 				</ul>
 				<div id="revolve-button" title="Current visitors on this site."><script src="https://rf.revolvermaps.com/0/0/3.js?i=5cgjr9bkw1v&b=0&s=40&m=2&cl=555555&co=000000&cd=ffffff&v0=25&v1=100&r=1" async="async"></script></div>
 				<!--====================  SMALL MENU  ====================-->
@@ -40,7 +40,8 @@
 			<img alt="Loading" src="./static-0/files/images/loading-general.gif" style="width: 100px; height: 100px; position: fixed; left: calc(50% - 50px); top: calc(50% - 25px); filter: drop-shadow(0px 0px 15px #000000)">
 		</div>
 		<div id="content-main" style="opacity: 0; transition: 1s ease">
-			<h2>Video Sources</h2>
+			<h1 class="title">Video Sources</h1>
+			<p class="description">View the sources for all official BlenderTimer videos and shorts!</p>
 			<div id="controls">
 				<input placeholder="Search videos" type="text" id="searchbar" onkeydown="search()">
 				<div id="sort-dd" style="overflow:hidden">
