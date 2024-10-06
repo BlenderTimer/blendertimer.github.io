@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en-US">
+	<head>
+		<!-- Google tag (gtag.js) -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-  SYR26MG6YV"></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
+			
+			gtag('config', 'G-SYR26MG6YV');
+		</script>
+		<meta charset="utf-8">
+		<title>The Scale of Energy - BlenderTimer Video Sources</title>
+		<meta name="description" content="The video sources for The Scale of Energy.">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="icon" href="../favicon.png" type="image/x-icon">
+		<link rel="stylesheet" type="text/css" href="../static-0/general.css">
+		<link rel="stylesheet" type="text/css" href="../static-0/main.css">
+		<link rel="stylesheet" type="text/css" href="../static-0/video-sources-pages.css">
+		<script src="../bt-js/bt-js.js"></script>
+		<script src="../static-0/videos.js"></script>
+		<script src="../static-0/jquery-3.6.3.js"></script>
+	</head>
+	<body onresize="determineDisplayMenu()">
+		<div id="background-plate"></div>
+		<div id="banner-menu">
+			<nav>
+				<!--====================  LARGE MENU  ====================-->
+				<ul id="large-menu">
+					<li id="nav-home"><a href="/"><img alt="BlenderTimer" src="../static-0/files/images/nav-logohome.png"></a></li>
+				</ul>
+				<div id="revolve-button" title="Current visitors on this site."><script src="https://rf.revolvermaps.com/0/0/3.js?i=5cgjr9bkw1v&b=0&s=40&m=2&cl=555555&co=000000&cd=ffffff&v0=25&v1=100&r=1" async="async"></script></div>
+				<!--====================  SMALL MENU  ====================-->
+				<div id="small-menu" style="display: none" onclick="smallMenuToggle()"><img alt="Menu" src="../static-0/files/images/menu-bars.png"></div>
+				<div id="small-menu-main"></div>
+			</nav>
+			<script src="../static-0/nav-links.js"></script>
+			<script src="../static-0/load-menus.js"></script>
+		</div>
+		<div id="loader" style="width: 100%; height: calc(100% - 50px); top: 50px; left: 0px; position: fixed; z-index: -99999">
+			<img alt="Loading" src="../static-0/files/images/loading-general.gif" style="width: 100px; height: 100px; position: fixed; left: calc(50% - 50px); top: calc(50% - 25px); filter: drop-shadow(0px 0px 15px #000000)">
+		</div>
+		<div id="content-main" style="opacity: 0; transition: 1s ease">
+			<h1 id="title">The Scale of Energy</h1>
+			<p id="published-date">Published: October 5, 2024 at 8:40 PM (PT)</p>
+			<div id="video-info">
+				<div id="vid-info-left">
+					<b class="vit">Video Information</b>
+					<span><b>Length:</b><p>5:40</p><i>(10212 frames/30fps)</i></span>
+					<span><b>Resolution:</b><p>1920x1080</p><i>(FHD)</i></span>
+					<span><b>Most Rewatched:</b><a>N/A</a></span>
+					<span class="spr"></span>
+					<b class="vit">Realtime Statistics</b>
+					<div id="realtime-stats">
+						<span title="Views"><img src="../static-0/files/images/icons/eye.svg" alt="Views"><b>...</b></span>
+						<span title="Likes"><img src="../static-0/files/images/icons/like.svg" alt="Likes"><b>...</b></span>
+						<span title="Comments"><img src="../static-0/files/images/icons/comment.svg" alt="Comments"><b>...</b></span>
+					</div>
+					<span class="spr"></span>
+					<b class="vit">Views in the First</b>
+					<div id="first-views">
+						<span><b>10 Minutes</b><p>...</p></span>
+						<span><b>30 Minutes</b><p>...</p></span>
+						<span><b>Hour</b><p>...</p></span>
+						<span><b>24 Hours</b><p>...</p></span>
+					</div>
+				</div>
+				<span class="spr" id="info1-spr" style="display: none"></span>
+				<div id="vid-info-right">
+					<a id="thumbnail" href="./thumbnails/26-the_scale_of_energy-1080.png" target="blank"><img src="./thumbnails/26-the_scale_of_energy-180.png" alt="Thumbnail"></a>
+					<div id="video-icons">
+						<span><b>Upload ID</b><p>26</p></span>
+						<span><b>Video ID</b><p>15</p></span>
+						<span><b>Type</b><p>Video</p></span>
+					</div>
+					<span id="yt-link"><a href="https://youtu.be/tOiRmA8hEeE" target="blank">https://youtu.be/tOiRmA8hEeE</a><img src="../static-0/files/images/icons/copy-link.svg" alt="Copy link" onclick="copyVideoLink(event)"></span>
+					<script type="text/javascript">
+						var fv = document.getElementById('first-views');
+						var video = videos[parseInt(document.getElementById('video-icons').children[0].children[1].textContent)-1];
+						if (video.views10 == -1) {fv.children[0].children[1].innerHTML = "NO DATA"}
+						else {fv.children[0].children[1].innerHTML = video.views10};
+						if (video.views10 == -1) {fv.children[1].children[1].innerHTML = "NO DATA"}
+						else {fv.children[1].children[1].innerHTML = video.views30};
+						if (video.views10 == -1) {fv.children[2].children[1].innerHTML = "NO DATA"}
+						else {fv.children[2].children[1].innerHTML = video.views1};
+						if (video.views10 == -1) {fv.children[3].children[1].innerHTML = "NO DATA"}
+						else {fv.children[3].children[1].innerHTML = video.views24};
+						//Realtime Stats
+						var ytid = document.getElementById('yt-link').children[0].textContent.removeBefore("/", 1, true);
+						$.get(
+							"https://www.googleapis.com/youtube/v3/videos",{
+							part: 'statistics',
+							id: ytid,
+							key: 'AIzaSyDsaGX5mhvqCpI3jWMFFGMmmmB5IUEyUrk'},
+							function(data) {
+								var views = 0;
+								var likes = 0;
+								var comments = 0;
+								views = data.items[0].statistics.viewCount;
+								likes = data.items[0].statistics.likeCount;
+								comments = data.items[0].statistics.commentCount;
+								document.getElementById("realtime-stats").children[0].children[1].innerHTML = views.toLocaleString();
+								document.getElementById("realtime-stats").children[1].children[1].innerHTML = likes.toLocaleString();
+								document.getElementById("realtime-stats").children[2].children[1].innerHTML = comments.toLocaleString();
+							}
+						);
+					</script>
+				</div>
+			</div>
+			<h2>Information Sources</h2>
+			<div id="info-sources" class="sources">
+				<a href="https://en.wikipedia.org/wiki/Kinetic_energy" target="blank"><b>Kinetic Energy Formula (Joules)</b><p>(0.5×m×(v²) | m=weight in kg, v=velocity in m/s) https://en.wikipedia.org/wiki/Kinetic_energy</p></a>
+				<a href="https://www.johannes-strommer.com/en/formulas/velocity-acceleration-time-distance" target="blank"><b>Velocity from Acceleration (m/s)</b><p>(√(2×a×d) | a=acceleration in m/s², d=distance traveled) https://www.johannes-strommer.com/en/formulas/velocity-acceleration-time-distance</p></a>
+				<a href="https://blendertimer.com/factsheets/solar-system/planet-factsheet" target="blank"><b>Earth's Gravitational Acceleration</b><p>https://blendertimer.com/factsheets/solar-system/planet-factsheet</p></a>
+				<a><b>Average Pen Weight</b><p>Measured at 10.1g</p></a>
+				<a><b>Pen Drop Height</b><p>Measured at 1.4m</p></a>
+				<a><b>Acceleration of an Arm's Center of Gravity when Clapping</b><p>Measured at ≈18.5m/s²</p></a>
+				<a><b>Distance Traveled of an Arm's Center of Gravity when Clapping</b><p>Measured at 250cm</p></a>
+				<a><b>Average Weight of an Arm</b><p>Measured at 1.2kg</p></a>
+				<a><b>Hammer Speed</b><p>Measured at ≈12m/s</p></a>
+				<a><b>Hammer Weight</b><p>Measured at ≈810g</p></a>
+				<a href="https://medium.com/@zodhyatech/how-much-energy-does-a-firecracker-produce-c25793b0b577" target="blank"><b>Energy of a Firecracker</b><p>https://medium.com/@zodhyatech/how-much-energy-does-a-firecracker-produce-c25793b0b577</p></a>
+				<a href="https://en.wikipedia.org/wiki/Human_body_weight" target="blank"><b>Average Weight of a Human</b><p>https://en.wikipedia.org/wiki/Human_body_weight</p></a>
+				<a href="https://worldmetrics.org/average-human-sprint-speed" target="blank"><b>Average Top Speed of a Human</b><p>https://worldmetrics.org/average-human-sprint-speed</p></a>
+				<a href="https://en.wikipedia.org/wiki/M1857_12-pounder_Napoleon" target="blank"><b>Cannon Muzzle Velocity (12-pounder)</b><p>https://en.wikipedia.org/wiki/M1857_12-pounder_Napoleon</p></a>
+				<a href="https://astrobites.org/2011/07/04/pyrotechnics/" target="blank"><b>Energy of a Firework</b><p>https://astrobites.org/2011/07/04/pyrotechnics/</p></a>
+				<a href="https://www.insurancenavy.com/average-car-weight" target="blank"><b>Average Car and SUV Weights</b><p>https://www.insurancenavy.com/average-car-weight</p></a>
+				<a><b>Standard Highway Speed</b><p>Estimated at 120km/h</p></a>
+				<a href="https://en.wikipedia.org/wiki/TNT_equivalent" target="blank"><b>Energy of TNT</b><p>https://en.wikipedia.org/wiki/TNT_equivalent</p></a>
+				<a href="https://www.onsitetruckaz.com/post/how-much-does-a-semi-truck-weigh-ultimate-guide-2022" target="blank"><b>Weight of a Semi-Truck</b><p>https://www.onsitetruckaz.com/post/how-much-does-a-semi-truck-weigh-ultimate-guide-2022</p></a>
+				<a><b>Average Speed of a Semi-Truck</b><p>Estimated at 100km/h</p></a>
+				<a href="https://www.up.com/customers/track-record/tr030822-12-train-facts-you-might-not-know.htm" target="blank"><b>Weight of a Freight Train Car and Engine</b><p>https://www.up.com/customers/track-record/tr030822-12-train-facts-you-might-not-know.htm</p></a>
+				<a><b>Average Weight of a Freight Train</b><p>Estimated at ≈11,000,000kg (assuming 80 cars and 3 engines)</p></a>
+				<a href="https://www.acwr.com/economic-development/railroads-101/unit-train" target="blank"><b>Average Length of a Train</b><p>https://www.acwr.com/economic-development/railroads-101/unit-train</p></a>
+				<a href="https://www.traingeek.ca/wp/faq/train-speed-limits" target="blank"><b>Freight Train Speed</b><p>https://www.traingeek.ca/wp/faq/train-speed-limits</p></a>
+				<a href="https://en.wikipedia.org/wiki/Harvesting_lightning_energy" target="blank"><b>Energy of Lightning</b><p>https://en.wikipedia.org/wiki/Harvesting_lightning_energy</p></a>
+				<a href="https://www.epj-n.org/articles/epjn/full_html/2021/01/epjn200018/epjn200018.html" target="blank"><b>Energy of the Chernobyl Explosion</b><p>https://www.epj-n.org/articles/epjn/full_html/2021/01/epjn200018/epjn200018.html</p></a>
+				<a href="https://en.wikipedia.org/wiki/Little_Boy" target="blank"><b>Energy of Little Boy</b><p>https://en.wikipedia.org/wiki/Little_Boy</p></a>
+				<a href="https://en.wikipedia.org/wiki/Tunguska_event" target="blank"><b>The Tunguska Event</b><p>https://en.wikipedia.org/wiki/Tunguska_event</p></a>
+				<a href="https://en.wikipedia.org/wiki/Tsar_Bomba" target="blank"><b>Energy of the Tsar Bomba</b><p>https://en.wikipedia.org/wiki/Tsar_Bomba</p></a>
+				<a href="https://www.jstor.org/stable/24964328" target="blank"><b>Energy from the Mt. Saint Helens Eruption</b><p>https://www.jstor.org/stable/24964328</p></a>
+				<a href="https://en.wikipedia.org/wiki/Mount_St._Helens" target="blank"><b>Mt. Saint Helens Eruption</b><p>https://en.wikipedia.org/wiki/Mount_St._Helens</p></a>
+				<a href="https://en.wikipedia.org/wiki/1815_eruption_of_Mount_Tambora" target="blank"><b>Mt. Tambora Eruption</b><p>https://en.wikipedia.org/wiki/1815_eruption_of_Mount_Tambora</p></a>
+				<a href="https://link.springer.com/article/10.1007/s00024-012-0524-2" target="blank"><b>The Valdivia Earthquake (Chile)</b><p>https://link.springer.com/article/10.1007/s00024-012-0524-2</p></a>
+			</div>
+			<h2>Graphic Sources</h2>
+			<div id="graphic-sources" class="sources">
+				<a href="https://pixabay.com/vectors/person-man-stand-hold-holding-9095534" target="blank"><b>Man with arm out (Daniel Roberts)</b><p>https://pixabay.com/vectors/person-man-stand-hold-holding-9095534</p></a>
+				<a href="https://pixabay.com/vectors/pen-writing-clip-click-clipart-9089822" target="blank"><b>Pen (Daniel Roberts)</b><p>https://pixabay.com/vectors/pen-writing-clip-click-clipart-9089822</p></a>
+				<a><b>Clapping hands (Daniel Roberts)</b><p>N/A</p></a>
+				<a href="https://pixabay.com/vectors/board-wood-plank-wooden-leaning-9079456" target="blank"><b>Board (Daniel Roberts)</b><p>https://pixabay.com/vectors/board-wood-plank-wooden-leaning-9079456</p></a>
+				<a><b>Nail (Daniel Roberts)</b><p>N/A</p></a>
+				<a href="https://pixabay.com/vectors/hammer-tool-metal-work-beat-9082606" target="blank"><b>Hammer (Daniel Roberts)</b><p>https://pixabay.com/vectors/hammer-tool-metal-work-beat-9082606</p></a>
+				<a><b>Window (Daniel Roberts)</b><p>N/A</p></a>
+				<a href="https://pixabay.com/vectors/bone-skeleton-anatomy-cutout-9079454" target="blank"><b>Bone (Daniel Roberts)</b><p>https://pixabay.com/vectors/bone-skeleton-anatomy-cutout-9079454</p></a>
+				<a href="https://pixabay.com/vectors/rocks-grass-stone-boulder-nature-8897263" target="blank"><b>Rock (Daniel Roberts)</b><p>https://pixabay.com/vectors/rocks-grass-stone-boulder-nature-8897263</p></a>
+				<a href="https://pixabay.com/vectors/firecracker-firework-explosive-fuse-9079453" target="blank"><b>Firecracker (Daniel Roberts)</b><p>https://pixabay.com/vectors/firecracker-firework-explosive-fuse-9079453</p></a>
+				<a><b>Person running (Daniel Roberts)</b><p>N/A</p></a>
+				<a href="https://pixabay.com/vectors/cannon-weapon-army-war-antique-8649935" target="blank"><b>Cannon (Daniel Roberts)</b><p>https://pixabay.com/vectors/cannon-weapon-army-war-antique-8649935</p></a>
+				<a><b>Cannon muzzle explosion (Daniel Roberts)</b><p>N/A</p></a>
+				<a><b>Firework (Daniel Roberts)</b><p>N/A</p></a>
+				<a href="https://www.alamy.com/just-an-orange-car-image471694088.html" target="blank"><b>Car (Daniel Roberts)</b><p>https://www.alamy.com/just-an-orange-car-image471694088.html</p></a>
+				<a href="https://pixabay.com/vectors/suv-car-vehicle-automobile-7871132" target="blank"><b>SUV (Daniel Roberts)</b><p>https://pixabay.com/vectors/suv-car-vehicle-automobile-7871132</p></a>
+				<a href="https://pixabay.com/vectors/dynamite-tnt-bomb-explosive-sticks-9079455" target="blank"><b>TNT (Daniel Roberts)</b><p>https://pixabay.com/vectors/dynamite-tnt-bomb-explosive-sticks-9079455</p></a>
+				<a><b>TNT explosion (Daniel Roberts)</b><p>N/A</p></a>
+				<a href="https://pixabay.com/vectors/semi-truck-truck-semi-trailer-9089823" target="blank"><b>Semi-truck (Daniel Roberts)</b><p>https://pixabay.com/vectors/semi-truck-truck-semi-trailer-9089823</p></a>
+				<a href="https://pixabay.com/vectors/locomotive-train-freight-engine-9082607" target="blank"><b>Freight train engine (Daniel Roberts)</b><p>https://pixabay.com/vectors/locomotive-train-freight-engine-9082607</p></a>
+				<a href="https://pixabay.com/vectors/train-freight-car-transport-9082604" target="blank"><b>Freight train car (Daniel Roberts)</b><p>https://pixabay.com/vectors/train-freight-car-transport-9082604</p></a>
+				<a><b>Lightning (Daniel Roberts)</b><p>N/A</p></a>
+				<a><b>Chernobyl (Daniel Roberts)</b><p>N/A</p></a>
+				<a href="https://pixabay.com/vectors/bomb-little-boy-atomic-nuclear-9082605" target="blank"><b>Little Boy (Daniel Roberts)</b><p>https://pixabay.com/vectors/bomb-little-boy-atomic-nuclear-9082605</p></a>
+				<a><b>Atomic bomb explosion (Daniel Roberts)</b><p>N/A</p></a>
+				<a href="https://pixabay.com/vectors/person-man-stand-human-arms-legs-9095533" target="blank"><b>Person-side (Daniel Roberts)</b><p>https://pixabay.com/vectors/person-man-stand-human-arms-legs-9095533</p></a>
+				<a><b>World map (Daniel Roberts)</b><p>N/A</p></a>
+				<a href="https://pixabay.com/vectors/tsar-bomba-bomb-explosive-nuclear-9089821" target="blank"><b>Tsar Bomba (Daniel Roberts)</b><p>https://pixabay.com/vectors/tsar-bomba-bomb-explosive-nuclear-9089821</p></a>
+				<a><b>Mt. Saint Helens top (Daniel Roberts)</b><p>N/A</p></a>
+				<a href="https://pixabay.com/vectors/mount-saint-helens-mountain-volcano-8272070" target="blank"><b>Mt. Saint Helens (Daniel Roberts)</b><p>https://pixabay.com/vectors/mount-saint-helens-mountain-volcano-8272070</p></a>
+				<a href="https://pixabay.com/vectors/tambora-mt-mountain-nature-volcano-9089820" target="blank"><b>Mt. Tambora (Daniel Roberts)</b><p>https://pixabay.com/vectors/tambora-mt-mountain-nature-volcano-9089820</p></a>
+				<a href="https://nctr.pmel.noaa.gov/chile20100227/T1960_1.png" target="blank"><b>Valivia/Chilean Earthquake map (NOAA)</b><p>https://nctr.pmel.noaa.gov/chile20100227/T1960_1.png</p></a>
+			</div>
+			<h2>Audio Sources</h2>
+			<div id="audio-sources" class="sources">
+				<a href="https://pixabay.com/sound-effects/pen-drops-245172" target="blank"><b>Pen Drops (Daniel Roberts)</b><p>https://pixabay.com/sound-effects/pen-drops-245172</p></a>				
+				<a><b>Narration (Daniel Roberts)</b><p>N/A</p></a>
+				<a href="https://pixabay.com/music/ambient-deep-space-slow-ambient-loop-93637" target="blank"><b>Deep Space-Slow Ambient Loop (Daniel Roberts)</b><p>https://pixabay.com/music/ambient-deep-space-slow-ambient-loop-93637</p></a>
+				<a href="https://pixabay.com/sound-effects/claps-245170" target="blank"><b>Claps (Daniel Roberts)</b><p>https://pixabay.com/sound-effects/claps-245170</p></a>
+				<a href="https://pixabay.com/sound-effects/hammering-a-nail-245171" target="blank"><b>Hammering a Nail (Daniel Roberts)</b><p>https://pixabay.com/sound-effects/hammering-a-nail-245171</p></a>
+				<a href="https://pixabay.com/sound-effects/glass-bottle-shatter-13847" target="blank"><b>Glass bottle shatter (Daniel Roberts)</b><p>https://pixabay.com/sound-effects/glass-bottle-shatter-13847</p></a>
+				<a><b>Hit-01 (Daniel Roberts)</b><p>N/A</p></a>
+				<a><b>Hit-02 (Daniel Roberts)</b><p>N/A</p></a>
+				<a href="https://www.premiumbeat.com/blog/free-explosion-sfx-vfx-elements" target="blank"><b>0050_explosion_blast_PremiumBeat (Detonate, PremiumBeat)</b><p>https://www.premiumbeat.com/blog/free-explosion-sfx-vfx-elements</p></a>
+				<a href="https://pixabay.com/sound-effects/person-running-loop-245173" target="blank"><b>Person Running (Daniel Roberts)</b><p>https://pixabay.com/sound-effects/person-running-loop-245173</p></a>
+				<a href="https://www.premiumbeat.com/blog/free-explosion-sfx-vfx-elements" target="blank"><b>0017_explo_bomb_09_PremiumBeat (Detonate, PremiumBeat)</b><p>https://www.premiumbeat.com/blog/free-explosion-sfx-vfx-elements</p></a>
+				<a href="https://pixabay.com/sound-effects/firework-single-83058" target="blank"><b>firework_single (Pixabay)</b><p>https://pixabay.com/sound-effects/firework-single-83058</p></a>
+				<a href="https://www.premiumbeat.com/blog/free-explosion-sfx-vfx-elements" target="blank"><b>0017_explo_bomb_04_PremiumBeat (Detonate, PremiumBeat)</b><p>https://www.premiumbeat.com/blog/free-explosion-sfx-vfx-elements</p></a>
+				<a href="https://pixabay.com/music/ambient-deep-space-slow-ambient-loop-93637" target="blank"><b>Deep Space-Slow Ambient Loop (Daniel Roberts)</b><p>https://pixabay.com/music/ambient-deep-space-slow-ambient-loop-93637</p></a>
+				<a href="https://pixabay.com/sound-effects/loud-thunder-7932" target="blank"><b>Loud Thunder (Daniel Roberts)</b><p>https://pixabay.com/sound-effects/loud-thunder-7932</p></a>
+				<a href="https://pixabay.com/music/mystery-deep-sea-exploration-7399" target="blank"><b>Deep Sea Exploration (Daniel Roberts)</b><p>https://pixabay.com/music/mystery-deep-sea-exploration-7399</p></a>
+				<a><b>Powerful Swoosh-01 (Daniel Roberts)</b><p>N/A</p></a>
+				<a href="https://pixabay.com/music/main-title-rise-of-the-enemy-full-14302" target="blank"><b>Rise of the Enemy-FULL (Daniel Roberts)</b><p>https://pixabay.com/music/main-title-rise-of-the-enemy-full-14302</p></a>
+				<a href="https://www.premiumbeat.com/blog/free-explosion-sfx-vfx-elements" target="blank"><b>0017_explo_bomb_01_PremiumBeat (Detonate, PremiumBeat)</b><p>https://www.premiumbeat.com/blog/free-explosion-sfx-vfx-elements</p></a>
+				<a href="https://www.premiumbeat.com/blog/free-explosion-sfx-vfx-elements" target="blank"><b>0017_explo_grenade_08_PremiumBeat (Detonate, PremiumBeat)</b><p>https://www.premiumbeat.com/blog/free-explosion-sfx-vfx-elements</p></a>
+				<a href="https://www.premiumbeat.com/blog/free-explosion-sfx-vfx-elements" target="blank"><b>0017_explo_grenade_02_PremiumBeat (Detonate, PremiumBeat)</b><p>https://www.premiumbeat.com/blog/free-explosion-sfx-vfx-elements</p></a>
+				<a href="https://www.premiumbeat.com/blog/free-explosion-sfx-vfx-elements" target="blank"><b>0017_explo_bomb_07_PremiumBeat (Detonate, PremiumBeat)</b><p>https://www.premiumbeat.com/blog/free-explosion-sfx-vfx-elements</p></a>
+				<a href="https://www.premiumbeat.com/blog/free-explosion-sfx-vfx-elements" target="blank"><b>0050_explosion_blast_5_PremiumBeat (Detonate, PremiumBeat)</b><p>https://www.premiumbeat.com/blog/free-explosion-sfx-vfx-elements</p></a>
+				<a><b>Rumble-01 (Daniel Roberts)</b><p>N/A</p></a>
+			</div>
+			<div id="cc"><h2>Subtitles</h2><a href="./cc/26.txt" download="The Scale of Energy - Subtitles.txt" title="Download subtitles"><img src="../static-0/files/images/icons/download.svg" alt="Download"></a></div>
+			<div id="subtitles">
+				<p>That was a very pathetic 0.14</p>
+				<p>joules of energy. Not anything</p>
+				<p>to be concerned about except maybe</p>
+				<p>if you're a flea. But something</p>
+				<p>that releases much more energy</p>
+				<p>is a clap which is around 11 joules.</p>
+				<p>Still not much to be concerned about.</p>
+				<p>But the blow of a hammer  is much</p>
+				<p>more powerful. At around 60 joules,</p>
+				<p>the blow of a hammer is enough</p>
+				<p>energy to easily fracture glass,</p>
+				<p>bones, and even rocks. A firecracker</p>
+				<p>releases even more energy at around</p>
+				<p>150 joules.  But none of this</p>
+				<p>is nearly as powerful as you.</p>
+				<p>Running full speed, an average</p>
+				<p>person has around 1500 joules</p>
+				<p>of energy. So...probably don't</p>
+				<p>run top speed into a brick wall</p>
+				<p>because...my interpretation of</p>
+				<p>my moderately deplorable comprehension</p>
+				<p>capabilities says...that will hurt.</p>
+				<p>Anyway, it's time to drastically</p>
+				<p>increase in energy...with a bang.</p>
+				<p>The muzzle energy of a cannon</p>
+				<p>is around 560,000 joules, strong</p>
+				<p>enough to destroy almost anything</p>
+				<p>in the cannonball's path.</p>
+				<p>Just a bit higher is a firework</p>
+				<p>with around 600,000 joules.</p>
+				<p>A car, traveling at standard</p>
+				<p>highway speeds, has around 815,</p>
+				<p>000 joules. An SUV traveling at</p>
+				<p>the same speed would have around</p>
+				<p>1 megajoule or 1 million joules.</p>
+				<p>1 kilogram of TNT releases about</p>
+				<p>4.2 megajoules.</p>
+				<p>A fully loaded semi-truck traveling</p>
+				<p>at typical truck speeds has around</p>
+				<p>14 megajoules of energy. So if</p>
+				<p>you were ever wondering if you</p>
+				<p>could brake-check a semi-truck</p>
+				<p>and actually stop it...the answer is no.</p>
+				<p>But don't worry because there</p>
+				<p>is something else that you stand</p>
+				<p>even less chance of stopping.</p>
+				<p>A freight train. When traveling</p>
+				<p>at the standard freight train</p>
+				<p>speed, a train has around 4 gigajoules</p>
+				<p>of energy or around 4 billion</p>
+				<p>joules or about 286 semi-trucks</p>
+				<p>or nearly 1 ton of TNT. 1 ton</p>
+				<p>of TNT being about 4.2 gigajoules.</p>
+				<p>Nature isn't going to be left</p>
+				<p>out though. One of the most powerful</p>
+				<p>events that regularly occurs in</p>
+				<p>nature is lightning at 7 gigajoules</p>
+				<p>or 1.7 tons of TNT. It's no wonder</p>
+				<p>it's so incredibly loud.</p>
+				<p>But, on April 26, 1986, an event</p>
+				<p>much worse than a lightning strike</p>
+				<p>occurred in eastern Europe. The</p>
+				<p>worst nuclear disaster ever, commonly</p>
+				<p>known as the Chernobyl disaster</p>
+				<p>which released the equivalent</p>
+				<p>of around 10 tons of TNT. But,</p>
+				<p>the disaster was more a danger</p>
+				<p>of radiation rather than of the</p>
+				<p>actual explosion itself. Something</p>
+				<p>that did have a very deadly explosion,</p>
+				<p>however, was Little Boy, the</p>
+				<p>atomic bomb which destroyed Hiroshima.</p>
+				<p>This explosion was the equivalent</p>
+				<p>of around 15 kilotons of TNT.</p>
+				<p>Much higher, though less deadly</p>
+				<p>due to it being located deep in</p>
+				<p>mostly uninhabited forest, was</p>
+				<p>the Tunguska Event . On June 30,</p>
+				<p>1908, a flash of light nearly</p>
+				<p>as bright as the Sun was seen</p>
+				<p>in the far distance. Then, around</p>
+				<p>10 minutes later, a huge, distant</p>
+				<p>explosion was heard with an accompanying</p>
+				<p>shock wave so powerful that it</p>
+				<p>shattered windows and even knocked</p>
+				<p>people off their feet hundreds</p>
+				<p>of kilometers away. Due to the</p>
+				<p>remoteness of the event, it has</p>
+				<p>remained largely unstudied. Even</p>
+				<p>today it is unknown what caused</p>
+				<p>the explosion, though it is widely</p>
+				<p>accepted that its probable cause</p>
+				<p>was from an asteroid which exploded midair.</p>
+				<p>Regardless of what caused it,</p>
+				<p>this event is best calculated</p>
+				<p>to be equivalent to 30 megatons of TNT.</p>
+				<p>About as much as 2000 atomic bombs!</p>
+				<p>Well..2000 ordinary atomic bombs.</p>
+				<p>The Tsar Bomba  was the largest</p>
+				<p>atomic bomb ever detonated. The</p>
+				<p>resulting explosion being equivalent</p>
+				<p>to around 50 megatons of TNT,</p>
+				<p>over 3000 times greater than an</p>
+				<p>ordinary atomic bomb. The Tsar</p>
+				<p>Bomba is still the largest explosion</p>
+				<p>ever made by humans.</p>
+				<p>But humans, despite all their</p>
+				<p>disastrous creations, will never</p>
+				<p>be able to come close to the forces</p>
+				<p>of many creations in nature.</p>
+				<p>On May 18, 1980, Mt. Saint Helens</p>
+				<p>erupted releasing the equivalent</p>
+				<p>of around 410 megatons of TNT,</p>
+				<p>more than 8 times that of the</p>
+				<p>Tsar Bomba! This eruption remains,</p>
+				<p>to this day, the deadliest volcanic</p>
+				<p>event in the history of the United States.</p>
+				<p>But it's certainly not the most</p>
+				<p>powerful natural disaster.</p>
+				<p>The eruption of Mt. Tambora,</p>
+				<p>in 1815, was far more powerful</p>
+				<p>releasing the equivalent of around</p>
+				<p>33 gigatons of TNT or about 2.</p>
+				<p>2 million atomic bombs! But, this</p>
+				<p>is still not the most powerful</p>
+				<p>natural disaster.</p>
+				<p>On May 22, 1960, a massive earthquake</p>
+				<p>occurred off the coast of Chile</p>
+				<p>releasing the equivalent of around</p>
+				<p>17.2 thousand gigatons of TNT</p>
+				<p>or about 1.1 billion atomic bombs!</p>
+				<p>This earthquake was so powerful</p>
+				<p>that it sent tsunamis all the</p>
+				<p>way across the entire Pacific</p>
+				<p>Ocean causing hundreds of deaths</p>
+				<p>even as far as Japan! This earthquake</p>
+				<p>was the most powerful ever recorded</p>
+				<p>and is likely the most powerful</p>
+				<p>natural disaster in recorded history.</p>
+			</div>
+			<h2>Thumbnails</h2>
+			<div id="thumbnails">
+				<a href="./thumbnails/26-the_scale_of_energy-1080-1.png" class="tb">
+					<img src="./thumbnails/26-the_scale_of_energy-180-1.png" alt="Thumbnail">
+					<b>October 5, 2024</b>
+				</a>
+				<a href="./thumbnails/26-the_scale_of_energy-1080.png" class="tb">
+					<img src="./thumbnails/26-the_scale_of_energy-180.png" alt="Thumbnail">
+					<b>October 5, 2024</b>
+				</a>
+			</div>
+		</div>
+		<script src="../static-0/main.js"></script>
+		<script src="../static-0/video-sources-pages.js"></script>
+	</body>
+</html>
