@@ -76,7 +76,17 @@ function calculate() {
 		else {
 			k = parseFloat(tempInput.value)+273.15;
 		}
-		var result = speedInput.value / (643.855*Math.pow(k/273.15, 0.5)*(1/1.943844492));
+		var sos = 643.855*Math.pow(k/273.15, 0.5)*(1/1.943844492);
+		var result = parseFloat(speedInput.value) / sos;
+		if (speedUnit == "ft/s") {
+			result = parseFloat(speedInput.value) / (sos/0.3048);
+		}
+		else if (speedUnit == "km/h") {
+			result = parseFloat(speedInput.value) / (sos*3.6);
+		}
+		else if (speedUnit == "mph") {
+			result = parseFloat(speedInput.value) / (sos*(0.62137119223733/1000)*3600);
+		}
 		output.value = "Mach " + result.toFixed(parseInt(precisionInput.value).limit(0, 100));
 	}
 	else {
