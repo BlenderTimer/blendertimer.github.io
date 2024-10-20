@@ -730,21 +730,29 @@ function setObjectAngle(id, angle) {
 		compareObjects[id].angle = 1;
 		objectList.children[id].children[2].children[0].children[0].children[0].src = getImageURL(objID+1, 1);
 		objectList.children[id].children[2].children[0].children[0].children[0].alt = objects[objID].name + "-Front";
-		objectList.children[id].children[2].children[0].children[1].children[0].style.background = null;
-		objectList.children[id].children[2].children[0].children[1].children[0].style.boxShadow = null;
+		if (compareObjects[id].sideImage) {
+			objectList.children[id].children[2].children[0].children[1].children[0].style.background = null;
+			objectList.children[id].children[2].children[0].children[1].children[0].style.boxShadow = null;
+		}
 		objectList.children[id].children[2].children[0].children[1].children[1].style.background = "var(--semi-back)";
 		objectList.children[id].children[2].children[0].children[1].children[1].style.boxShadow = "0px 0px 10px #0005 inset";
-		objectList.children[id].children[2].children[0].children[1].children[2].style.background = null;
-		objectList.children[id].children[2].children[0].children[1].children[2].style.boxShadow = null;
+		if (compareObjects[id].topImage) {
+			objectList.children[id].children[2].children[0].children[1].children[2].style.background = null;
+			objectList.children[id].children[2].children[0].children[1].children[2].style.boxShadow = null;
+		}
 	}
 	else if (angle == "top") {
 		compareObjects[id].angle = 2;
 		objectList.children[id].children[2].children[0].children[0].children[0].src = getImageURL(objID+1, 2);
 		objectList.children[id].children[2].children[0].children[0].children[0].alt = objects[objID].name + "-Top";
-		objectList.children[id].children[2].children[0].children[1].children[0].style.background = null;
-		objectList.children[id].children[2].children[0].children[1].children[0].style.boxShadow = null;
-		objectList.children[id].children[2].children[0].children[1].children[1].style.background = null;
-		objectList.children[id].children[2].children[0].children[1].children[1].style.boxShadow = null;
+		if (compareObjects[id].sideImage) {
+			objectList.children[id].children[2].children[0].children[1].children[0].style.background = null;
+			objectList.children[id].children[2].children[0].children[1].children[0].style.boxShadow = null;
+		}
+		if (compareObjects[id].frontImage) {
+			objectList.children[id].children[2].children[0].children[1].children[1].style.background = null;
+			objectList.children[id].children[2].children[0].children[1].children[1].style.boxShadow = null;
+		}
 		objectList.children[id].children[2].children[0].children[1].children[2].style.background = "var(--semi-back)";
 		objectList.children[id].children[2].children[0].children[1].children[2].style.boxShadow = "0px 0px 10px #0005 inset";
 	}
@@ -754,10 +762,14 @@ function setObjectAngle(id, angle) {
 		objectList.children[id].children[2].children[0].children[0].children[0].alt = objects[objID].name + "-Side";
 		objectList.children[id].children[2].children[0].children[1].children[0].style.background = "var(--semi-back)";
 		objectList.children[id].children[2].children[0].children[1].children[0].style.boxShadow = "0px 0px 10px #0005 inset";
-		objectList.children[id].children[2].children[0].children[1].children[1].style.background = null;
-		objectList.children[id].children[2].children[0].children[1].children[1].style.boxShadow = null;
-		objectList.children[id].children[2].children[0].children[1].children[2].style.background = null;
-		objectList.children[id].children[2].children[0].children[1].children[2].style.boxShadow = null;
+		if (compareObjects[id].frontImage) {
+			objectList.children[id].children[2].children[0].children[1].children[1].style.background = null;
+			objectList.children[id].children[2].children[0].children[1].children[1].style.boxShadow = null;
+		}
+		if (compareObjects[id].topImage) {
+			objectList.children[id].children[2].children[0].children[1].children[2].style.background = null;
+			objectList.children[id].children[2].children[0].children[1].children[2].style.boxShadow = null;
+		}
 	}
 	drawCanvas();
 	addUndoHistory();
@@ -2309,5 +2321,15 @@ function checkInitialURL() {
 	}
 	else {
 		popup('add-object', true);
+	}
+}
+
+function imageAuthorClick(e) {
+	var element = e.target || e.srcElement;
+	for (var i=0; i < contributors.length; i++) {
+		if (contributors[i].name == element.textContent) {
+			viewContributor(i+1, false);
+			break;
+		}
 	}
 }
