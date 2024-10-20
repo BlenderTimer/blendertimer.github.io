@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en-US">
+	<head>
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-  SYR26MG6YV"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            
+            gtag('config', 'G-SYR26MG6YV');
+        </script>
+        <meta charset="utf-8">
+		<title>Our Massively Tiny Solar System - BlenderTimer Fun Demos</title>
+		<meta name="description" content="An accurately scaled, controllable demonstration showing the scale of our Solar System. Jump from one planet to the next or travel the Solar System at the speed of light and beyond!">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="icon" href="../favicon.png" type="image/x-icon">
+		<link rel="stylesheet" type="text/css" href="../static-0/general.css">
+		<link rel="stylesheet" type="text/css" href="../static-0/main.css">
+		<link rel="stylesheet" type="text/css" href="./solar-system.css">
+		<script src="../bt-js/bt-js.js"></script>
+	</head>
+	<body onload="loadDemo()" onresize="determineDisplayMenu(), setCanvasSize()">
+		<div id="background-plate"></div>
+		<div id="banner-menu">
+			<nav>
+				<!--====================  LARGE MENU  ====================-->
+				<ul id="large-menu">
+					<li id="nav-home"><a href="/"><img alt="BlenderTimer" src="../static-0/files/images/nav-logohome.png"></a></li>
+				</ul>
+				<div id="revolve-button" title="Current visitors on this site."><script src="https://rf.revolvermaps.com/0/0/3.js?i=5cgjr9bkw1v&b=0&s=40&m=2&cl=555555&co=000000&cd=ffffff&v0=25&v1=100&r=1" async="async"></script></div>
+				<!--====================  SMALL MENU  ====================-->
+				<div id="small-menu" style="display: none" onclick="smallMenuToggle()"><img alt="Menu" src="../static-0/files/images/menu-bars.png"></div>
+				<div id="small-menu-main"></div>
+			</nav>
+			<script src="../static-0/nav-links.js"></script>
+			<script src="../static-0/load-menus.js"></script>
+		</div>
+		<div id="loader" style="width: 100%; height: calc(100% - 50px); top: 50px; left: 0px; position: fixed; z-index: -99999">
+			<img alt="Loading" src="../static-0/files/images/loading-general.gif" style="width: 100px; height: 100px; position: fixed; left: calc(50% - 50px); top: calc(50% - 25px); filter: drop-shadow(0px 0px 15px #000000)">
+		</div>
+		<div id="content-main" style="opacity: 0; transition: 1s ease">
+			<audio src="./solar-system/audio/beep-object.wav" style="display:none" id="beep-object" preload="auto"></audio>
+			<audio src="./solar-system/audio/beep-30s.wav" style="display:none" id="beep-30s" preload="auto"></audio>
+			<div id="primary-block">
+				<h1 class="title">Our Massively Tiny Solar System</h1>
+				<p class="description">Travel through the Solar System at the speed of light and beyond!</p>
+				<i id="fps-text">FPS: 0</i>
+				<div id="solar-system">
+					<div id="canvas-shadow">
+						<div id="canvas-click" style="cursor:pointer; width: 100%; height: 100%" onmouseenter="startMouseover()" onmouseleave="startMouseleave()" onclick="start()"></div>
+						<div id="controls">
+							<div class="c-control-group-column c-group">
+								<div class="c-control-group-row">
+									<label for="ic-distance">Distance traveled:</label><input type="number" id="ic-distance" value="0" onkeydown="checkKey(event, 'ic-distance')">
+									<select id="ic-distance-unit" oninput="setDistance('unit'), generalDraw()">
+										<option value="m" title="Meters">m</option>
+										<option value="km" title="Kilometers">km</option>
+										<option value="ft" title="Feet">ft</option>
+										<option value="mi" title="Miles">mi</option>
+										<option value="sr" title="Solar Radii">R☉</option>
+										<option value="au" title="Astronimcal Units">au</option>
+										<option value="ly" title="Light years">ly</option>
+									</select>
+									<img class="c-button" id="ic-go-to-distance" src="../static-0/files/images/icons/arrow-right.svg" title="Go to distance" onclick="setDistance('d')">
+								</div>
+								<div class="c-control-group-row">
+									<label for="ic-time">Time (y-m-d h:m:s.ms):</label><input type="text" id="ic-time" value="00-00-00 00:00:00.000" onkeydown="checkKey(event, 'ic-time')">
+									<img class="c-button" id="ic-set-time" src="../static-0/files/images/icons/arrow-right.svg" title="Set time" onclick="setTime('t')">
+								</div>
+								<div class="c-button-group">
+									<img class="c-button" id="c-reset" onclick="reset()" src="../static-0/files/images/icons/reset.svg" title="Reset distance">
+									<img class="c-button" id="c-previous-object" onclick="setDistance('previous')" src="../static-0/files/images/icons/previous-object.svg" title="Previous object">
+									<img class="c-button" id="c-next-object" onclick="setDistance('next')" src="../static-0/files/images/icons/next-object.svg" title="Next object">
+								</div>
+							</div>
+							<div class="c-control-group-column c-group">
+								<div class="c-control-group-row">
+									<label for="c-speed">Speed:</label><input type="number" id="c-speed" value="299792458" oninput="inputSpeed()" onkeydown="checkKey(event, 'c-speed')">
+									<select id="c-speed-unit" oninput="setSpeed('unit')">
+										<option value="m/s" title="Meters per Second">m/s</option>
+										<option value="km/s" title="Kilometers per Second">km/s</option>
+										<option value="km/h" title="Kilometers per Hour">km/h</option>
+										<option value="ft/s" title="Feet per Second">ft/s</option>
+										<option value="mi/s" title="Miles per Second">mi/s</option>
+										<option value="mph" title="Miles per Hour">mph</option>
+									</select>
+									<div class="c-button-group">
+										<img class="c-button" id="c-speed-sol" src="../static-0/files/images/icons/light.svg" title="Speed of Light" onclick="setSpeed('sol')">
+										<img class="c-button" id="c-speed-sos" src="../static-0/files/images/icons/sound.svg" title="Speed of Sound" onclick="setSpeed('sos')">
+									</div>
+								</div>
+								<div class="c-button-group">
+									<label for="c-speed-x" class="label-2">Multiplier:</label><input type="number" oninput="setSpeedMultiplier(-1)" id="c-speed-x" placeholder="x" value="1">
+									<img class="c-button" id="c-speed-x05" onclick="setSpeedMultiplier(0.5)" src="../static-0/files/images/icons/x0.5.svg" title="Travel at half the speed">
+									<img class="c-button" id="c-speed-x1" onclick="setSpeedMultiplier(1)" src="../static-0/files/images/icons/x1.svg" title="Travel at the actual speed">
+									<img class="c-button" id="c-speed-x2" onclick="setSpeedMultiplier(2)" src="../static-0/files/images/icons/x2.svg" title="Travel 2 times faster">
+									<img class="c-button" id="c-speed-x10" onclick="setSpeedMultiplier(10)" src="../static-0/files/images/icons/x10.svg" title="Travel 10 times faster">
+								</div>
+							</div>
+							<div class="c-control-group-column c-group">
+								<div class="c-control-group-row">
+									<label for="c-zoom">Zoom:</label><input type="range" id="c-zoom" min=0.8 max=12 value=3 step=0.01 oninput="setZoom()">
+								</div>
+								<div class="c-button-group">
+									<label for="grid-checkbox">Background grid:</label><div onclick="checkbox(event), setBackgroundGrid(event)" class="checkbox" id="grid-checkbox"></div>
+								</div>
+								<div class="c-button-group">
+									<label for="beep-checkbox">Beep for objects:</label><div onclick="checkbox(event), setBeeps(event)" class="checkbox" id="beep-checkbox"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<canvas id="ss-canvas"></canvas>
+				</div>
+				<i id="beeps-des">2 long beeps: 30 seconds to the next object - 2 short beeps: passing an object</i>
+				<h2 id="journey" style="margin: 20px 0px -5px 0px">Your journey will include:</h2>
+				<div id="journey-list">
+					<div class="object">
+						<img src="./solar-system/images/The-Sun.svg">
+						<div>
+							<h3>The Sun</h3>
+							<i>At:</i>
+							<b class="metric">0 kilometers</b>
+							<b class="imperial">0 miles</b>
+							<i>from the Sun.</i>
+						</div>
+						<div class="parameters">
+							<p>Size: 1750000x1750000</p> <!-- image km -->
+						</div>
+					</div>
+					<div class="object">
+						<img src="./solar-system/images/Mercury.svg">
+						<div>
+							<h3>Mercury</h3>
+							<i>At:</i>
+							<b class="metric">57,909,000 kilometers</b>
+							<b class="imperial">35,982,984 miles</b>
+							<i>from the Sun.</i>
+						</div>
+						<div class="parameters">
+							<p>Size: 4998x4994.9</p> <!-- image km -->
+						</div>
+					</div>
+					<div class="object">
+						<img src="./solar-system/images/Venus.svg">
+						<div>
+							<h3>Venus</h3>
+							<i>At:</i>
+							<b class="metric">108,210,500 kilometers</b>
+							<b class="imperial">67,238,887 miles</b>
+							<i>from the Sun.</i>
+						</div>
+						<div class="parameters">
+							<p>Size: 12355.5x12355.5</p> <!-- image km -->
+						</div>
+					</div>
+					<div class="object">
+						<img src="./solar-system/images/Earth.svg">
+						<div>
+							<h3>Earth</h3>
+							<i>At:</i>
+							<b class="metric">149,597,500 kilometers</b>
+							<b class="imperial">92,955,577 miles</b>
+							<i>from the Sun.</i>
+						</div>
+						<div class="parameters">
+							<p>Size: 13000.6x12957.2</p> <!-- image km -->
+						</div>
+					</div>
+					<div class="object">
+						<img src="./solar-system/images/Mars.svg">
+						<div>
+							<h3>Mars</h3>
+							<i>At:</i>
+							<b class="metric">227,955,500 kilometers</b>
+							<b class="imperial">141,644,981 miles</b>
+							<i>from the Sun.</i>
+						</div>
+						<div class="parameters">
+							<p>Size: 6935.93x6895.22</p> <!-- image km -->
+						</div>
+					</div>
+					<div class="object">
+						<img src="./solar-system/images/Some_random_asteroid.svg">
+						<div>
+							<h3>Some random asteroid</h3>
+							<i>At:</i>
+							<b class="metric">308,171,614 kilometers</b>
+							<b class="imperial">191,488,963 miles</b>
+							<i>from the Sun.</i>
+						</div>
+						<div class="parameters">
+							<p>Size: 1x1</p> <!-- image km -->
+						</div>
+					</div>
+					<div class="object">
+						<img src="./solar-system/images/Ceres.svg">
+						<div>
+							<h3>Ceres</h3>
+							<i>At:</i>
+							<b class="metric">413,975,360 kilometers</b>
+							<b class="imperial">257,232,363 miles</b>
+							<i>from the Sun.</i>
+						</div>
+						<div class="parameters">
+							<p>Size: 982.362x908.325</p> <!-- image km -->
+						</div>
+					</div>
+					<div class="object">
+						<img src="./solar-system/images/Another_random_asteroid.svg">
+						<div>
+							<h3>Another random asteroid</h3>
+							<i>At:</i>
+							<b class="metric">489,185,037 kilometers</b>
+							<b class="imperial">303,965,490 miles</b>
+							<i>from the Sun.</i>
+						</div>
+						<div class="parameters">
+							<p>Size: 2x2</p> <!-- image km -->
+						</div>
+					</div>
+					<div class="object">
+						<img src="./solar-system/images/Jupiter.svg">
+						<div>
+							<h3>Jupiter</h3>
+							<i>At:</i>
+							<b class="metric">778,479,000 kilometers</b>
+							<b class="imperial">483,724,424 miles</b>
+							<i>from the Sun.</i>
+						</div>
+						<div class="parameters">
+							<p>Size: 91092.4x85188.5</p> <!-- image km -->
+						</div>
+					</div>
+					<div class="object">
+						<img src="./solar-system/images/Saturn.svg">
+						<div>
+							<h3>Saturn</h3>
+							<i>At:</i>
+							<b class="metric">1,432,040,500 kilometers</b>
+							<b class="imperial">889,828,713 miles</b>
+							<i>from the Sun.</i>
+						</div>
+						<div class="parameters">
+							<p>Size: 334875x115555</p> <!-- image km -->
+						</div>
+					</div>
+					<div class="object">
+						<img src="./solar-system/images/Uranus.svg">
+						<div>
+							<h3>Uranus</h3>
+							<i>At:</i>
+							<b class="metric">2,867,043,000 kilometers</b>
+							<b class="imperial">1,781,497,927 miles</b>
+							<i>from the Sun.</i>
+						</div>
+						<div class="parameters">
+							<p>Size: 50094.9x109951</p> <!-- image km -->
+						</div>
+					</div>
+					<div class="object">
+						<img src="./solar-system/images/Neptune.svg">
+						<div>
+							<h3>Neptune</h3>
+							<i>At:</i>
+							<b class="metric">4,514,953,500 kilometers</b>
+							<b class="imperial">2,805,462,039 miles</b>
+							<i>from the Sun.</i>
+						</div>
+						<div class="parameters">
+							<p>Size: 31726.6x31191.9</p> <!-- image km -->
+						</div>
+					</div>
+					<div class="object">
+						<img src="./solar-system/images/Pluto.svg">
+						<div>
+							<h3>Pluto</h3>
+							<i>At:</i>
+							<b class="metric">5,900,898,441 kilometers</b>
+							<b class="imperial">3,666,648,299 miles</b>
+							<i>from the Sun.</i>
+						</div>
+						<div class="parameters">
+							<p>Size: 2370x2370</p> <!-- image km -->
+						</div>
+					</div>
+					<div class="object">
+						<img src="./solar-system/images/Haumea.svg">
+						<div>
+							<h3>Haumea</h3>
+							<i>At:</i>
+							<b class="metric">6,416,517,883 kilometers</b>
+							<b class="imperial">3,987,039,367 miles</b>
+							<i>from the Sun.</i>
+						</div>
+						<div class="parameters">
+							<p>Size: 1876.9x1876.9</p> <!-- image km -->
+						</div>
+					</div>
+					<div class="object">
+						<img src="./solar-system/images/Makemake.svg">
+						<div>
+							<h3>Makemake</h3>
+							<i>At:</i>
+							<b class="metric">6,774,627,609 kilometers</b>
+							<b class="imperial">4,209,558,435 miles</b>
+							<i>from the Sun.</i>
+						</div>
+						<div class="parameters">
+							<p>Size: 1446.2x1446.2</p> <!-- image km -->
+						</div>
+					</div>
+					<div class="object">
+						<img src="./solar-system/images/Eris.svg">
+						<div>
+							<h3>Eris</h3>
+							<i>At:</i>
+							<b class="metric">10,195,605,841 kilometers</b>
+							<b class="imperial">6,335,255,757 miles</b>
+							<i>from the Sun.</i>
+						</div>
+						<div class="parameters">
+							<p>Size: 2341x2341</p> <!-- image km -->
+						</div>
+					</div>
+					<div class="object" id="voyager2">
+						<img src="./solar-system/images/Voyager.svg">
+						<div>
+							<h3>Voyager 2</h3>
+							<i>At:</i>
+							<b class="metric">...</b>
+							<b class="imperial">...</b>
+							<i>from the Sun.</i>
+						</div>
+						<div class="parameters">
+							<p>Size: 0.0173736x0.0028956</p> <!-- image km -->
+						</div>
+					</div>
+					<div class="object" id="voyager1">
+						<img src="./solar-system/images/Voyager.svg">
+						<div>
+							<h3>Voyager 1</h3>
+							<i>At:</i>
+							<b class="metric">...</b>
+							<b class="imperial">...</b>
+							<i>from the Sun.</i>
+						</div>
+						<div class="parameters">
+							<p>Size: 0.0173736x0.0028956</p> <!-- image km -->
+						</div>
+					</div>
+					<div class="object">
+						<img src="./solar-system/images/Proxima_Centauri.svg">
+						<div>
+							<h3>Proxima Centauri</h3>
+							<i>At:</i>
+							<b class="metric">40,151,340,125,633 kilometers</b>
+							<b class="imperial">249,48,886,083,791 miles</b>
+							<i>from the Sun (not located in our Solar System).</i>
+						</div>
+						<div class="parameters">
+							<p>Size: 273715x273715</p> <!-- image km -->
+						</div>
+					</div>
+				</div>
+				<br>
+				<p>Check out the video form of this visualization!</p>
+				<a href="https://youtu.be/2uLoNLKvImo">Traveling the Solar System at the Speed of Light</a>
+				<br>
+				<br>
+				<p>A correctly scaled model of our Solar System! Travel at any speed you choose! Whether traveling at the speed of light, 10 times the speed of sound, or 1 thousand times the speed of light, you will discover how incredibly vast our Solar System truly is!</p>
+				<div id="donate-promo">
+					<span></span>
+					<p>Do you enjoy 100% free resources with no ads?</p>
+					<b>Consider donating!</b>
+					<button onclick="donate('Our Massively Tiny Solar System - BlenderTimer')">DONATE</button>
+				</div>
+			</div>
+		</div>
+		<script src="../static-0//main.js"></script>
+		<script src="./solar-system.js"></script>
+	</body>
+</html>
