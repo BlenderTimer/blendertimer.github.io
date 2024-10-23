@@ -30,7 +30,7 @@ var navLinks = [
 	{
 		title:"Resources",
 		url:"",
-		width:140,
+		width:150,
 		date:new Date(2024, 3, 6), //year, month(from 0), day
 		dropdownURLs:[
 			{
@@ -39,8 +39,8 @@ var navLinks = [
 				date:new Date(2022, 11, 25), //year, month(from 0), day
 			},
 			{
-				title:"Fun Demos",
-				url:"/fun-demos",
+				title:"Visualizations",
+				url:"/visualizations",
 				date:new Date(2022, 11, 4), //year, month(from 0), day
 			},
 			{
