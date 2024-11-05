@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en-US">
+	<head>
+		<!-- Google tag (gtag.js) -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-  SYR26MG6YV"></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
+			
+			gtag('config', 'G-SYR26MG6YV');
+		</script>
+		<!-- Google Tag Manager -->
+		<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+		new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+		j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+		'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+		})(window,document,'script','dataLayer','GTM-KSL94KH');</script>
+		<!-- End Google Tag Manager -->
+		<meta charset="utf-8">
+		<title>You - The NowStream by BlenderTimer</title>
+		<meta name="description" content="A live visualization of things which are happening with you right now!">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="icon" href="../favicon.png" type="image/x-icon">
+		<link rel="stylesheet" type="text/css" href="../static-0/general.css">
+		<link rel="stylesheet" type="text/css" href="../static-0/main.css">
+		<link rel="stylesheet" type="text/css" href="./stream-main.css">
+		<script src="../bt-js/bt-js.js"></script>
+	</head>
+	<body>
+		<div id="banner-menu">
+			<nav>
+				<!--====================  LARGE MENU  ====================-->
+				<ul id="large-menu">
+					<li id="nav-home"><a href="/"><img alt="BlenderTimer" src="../static-0/files/images/nav-logohome.png"></a></li>
+				</ul>
+				<div id="revolve-button" title="Current visitors on this site."><script src="https://rf.revolvermaps.com/0/0/3.js?i=5cgjr9bkw1v&b=0&s=40&m=2&cl=555555&co=000000&cd=ffffff&v0=25&v1=100&r=1" async="async"></script></div>
+				<!--====================  SMALL MENU  ====================-->
+				<div id="small-menu" style="display: none" onclick="smallMenuToggle()"><img alt="Menu" src="../static-0/files/images/menu-bars.png"></div>
+				<div id="small-menu-main"></div>
+			</nav>
+			<script src="../static-0/nav-links.js"></script>
+			<script src="../static-0/load-menus.js"></script>
+		</div>
+		<div id="loader" style="width: 100%; height: calc(100% - 50px); top: 50px; left: 0px; position: fixed; z-index: -99999">
+			<img alt="Loading" src="../static-0/files/images/loading-general.gif" style="width: 100px; height: 100px; position: fixed; left: calc(50% - 50px); top: calc(50% - 25px); filter: drop-shadow(0px 0px 15px #000000)">
+		</div>
+		<div id="source-popup-back" onclick="closeSourcePopup()" style="opacity: 0; pointer-events: none;"></div>
+		<div id="source-popup-container" style="opacity: 0">
+			<div id="source-popup-main" style="pointer-events: none; user-select: none; transform: scale(0)">
+				<img id="source-popup-close" alt="Close" src="../static-0/files/images/icons/x.svg" onclick="closeSourcePopup()">
+				<div id="source-popup" style="display: flex">
+					<h1>Sources</h1>
+					<div class="popup-scroll"></div>
+				</div>
+			</div>
+		</div>
+		<div id="content-main" style="opacity: 0; transition: 1s ease">
+			<div id="stream-header">
+				<div>
+					<a href="/nowstream"><img src="../static-0/files/images/nowstream.svg" alt="The NowStream logo"></a>
+					<span><i id="sh-slash">/</i><i>You</i></span>
+				</div>
+			</div>
+			<p class="description">Things which are happening with you right now!</p>
+			<div id="page-load-time">
+				<i></i>
+				<b></b>
+			</div>
+			<div id="stream-container">
+				<div id="red-blood-cells-produced" style="--back: #480a0a;--border: #cf3d3d;" class="stream-box">
+					<div class="stream-visual"><img src="./images/red-blood-cells.svg" alt="Red blood cells"></div>
+					<span><p>Your body has produced </p><b>0</b><p> red blood cells</p></span>
+					<span><i>2,314,815 per second</i><img onclick="viewSource(event)" src="../static-0/files/images/icons/source.svg" title="View source" alt="Source"></span>
+				</div>
+				<div id="fingernails-length" style="--back: #3c3025;--border: #996039;" class="stream-box">
+					<div class="stream-visual"><img src="./images/fingernail.svg" alt="Fingernail"></div>
+					<span><p>Your fingernails have grown </p><b>0</b><p> nanometers</p></span>
+					<span><i>1.339nm per second</i><img onclick="viewSource(event)" src="../static-0/files/images/icons/source.svg" title="View source" alt="Source"></span>
+				</div>
+				<div id="bacteria-inhaled" style="--back: #3a1a24;--border: #9b5a67;" class="stream-box">
+					<div class="stream-visual"><img src="./images/bacteria.png" style="display: none;" alt="Bacteria"><canvas class="random-scale-3 image-1.5x anim-grow"></canvas></div>
+					<span><p>You've inhaled </p><b>0</b><p> potentially harmful bacteria</p></span>
+					<span><i>11 per second</i><img onclick="viewSource(event)" src="../static-0/files/images/icons/source.svg" title="View source" alt="Source"></span>
+				</div>
+				<div id="blink-times" style="--back: #4a3a2d;--border: #b68257;" class="stream-box force-integer">
+					<div class="stream-visual"><img src="./images/eye-open.svg" class="image-flash" alt="Open eye"><img src="./images/eye-closed.svg" style="display: none;" alt="Closed eye"></div>
+					<span><p>You've blinked </p><b>0</b><p> times</p></span>
+					<span><i>15 per minute</i><img onclick="viewSource(event)" src="../static-0/files/images/icons/source.svg" title="View source" alt="Source"></span>
+				</div>
+				<div id="eyes-times-moved" style="--back: #0c142f;--border: #5476d5;" class="stream-box force-integer">
+					<div class="stream-visual"><img src="./images/eye-open.png" style="display: none;" alt="Open eye"><canvas></canvas></div>
+					<span><p>Your eyes have moved </p><b>0</b><p> times</p></span>
+					<span><i>2.74 per second</i><img onclick="viewSource(event)" src="../static-0/files/images/icons/source.svg" title="View source" alt="Source"></span>
+				</div>
+				<div id="hair-length" style="--back: #281100;--border: #a95e35;" class="stream-box">
+					<div class="stream-visual"><img src="./images/hair.svg" alt="Hair"></div>
+					<span><p>Your hair has grown </p><b>0</b><p> nanometers</p></span>
+					<span><i>4nm per second</i><img onclick="viewSource(event)" src="../static-0/files/images/icons/source.svg" title="View source" alt="Source"></span>
+				</div>
+				<div id="heart-pumped-volume" style="--back: #3f0919;--border: #ab4c6f;" class="stream-box">
+					<div class="stream-visual"><img src="./images/heart.svg" alt="Heart"></div>
+					<span><p>Your heart has pumped </p><b>0</b><p> liters of blood</p></span>
+					<i>0 gallons</i>
+					<span><i>5.26l per minute</i><img onclick="viewSource(event)" src="../static-0/files/images/icons/source.svg" title="View source" alt="Source"></span>
+				</div>
+				<div id="brain-processed" style="--back: #13192d;--border: #6876bd;" class="stream-box">
+					<div class="stream-visual"><img src="./images/brain.svg" alt="Brain"></div>
+					<span><p>Your brain has processed up to </p><b>0</b><p> megabytes of data</p></span>
+					<span><i>1.4mb per second</i><img onclick="viewSource(event)" src="../static-0/files/images/icons/source.svg" title="View source" alt="Source"></span>
+				</div>
+				<div id="hair-fallen-out" style="--back: #281100;--border: #a95e35;" class="stream-box force-integer">
+					<div class="stream-visual"><img src="./images/hair.svg" alt="Hair"></div>
+					<span><b>0</b><p> of your hairs have fallen out</p></span>
+					<span><i>3 per hour</i><img onclick="viewSource(event)" src="../static-0/files/images/icons/source.svg" title="View source" alt="Source"></span>
+				</div>
+				<div id="skin-cells-shed" style="--back: #332812;--border: #b08058;" class="stream-box force-integer">
+					<div class="stream-visual"><img src="./images/skin-cells.svg" alt="Skin cells"></div>
+					<span><p>You've shed </p><b>0</b><p> skin cells</p></span>
+					<span><i>55,556 per second</i><img onclick="viewSource(event)" src="../static-0/files/images/icons/source.svg" title="View source" alt="Source"></span>
+				</div>
+				<div id="brain-calculations" style="--back: #13192d;--border: #6876bd;" class="stream-box">
+					<div class="stream-visual"><img src="./images/brain.svg" alt="Brain"></div>
+					<span><p>Your brain has performed up to </p><b>0</b><p> mathematical calculations</p></span>
+					<span><i>1,000,000,000,000,000,000 per second</i><img onclick="viewSource(event)" src="../static-0/files/images/icons/source.svg" title="View source" alt="Source"></span>
+				</div>
+			</div>
+			<i id="disclaimer">All data in this stream is an estimate.</i>
+			<div class="spr"></div>
+			<h1 class="title">More Streams</h1>
+			<div id="more-streams">
+				<a href="/nowstream/aroundtheworld" class="stream">
+					<div class="stream-thumbnail"><img src="../static-0/files/images/nowstream-aroundtheworld.svg" alt="Around the World - The NowStream by BlenderTimer"></div>
+					<b>Around the World</b>
+					<div class="stream-description"><i>Things which are happening all around the world right now!</i></div>
+				</a>
+				<a href="/nowstream/nature" class="stream">
+					<div class="stream-thumbnail"><img src="../static-0/files/images/nowstream-nature.svg" alt="Nature - The NowStream by BlenderTimer"></div>
+					<b>Nature</b>
+					<div class="stream-description"><i>Things which are happening in nature right now!</i></div>
+				</a>
+				<a href="/nowstream/space" class="stream">
+					<div class="stream-thumbnail"><img src="../static-0/files/images/nowstream-space.svg" alt="Space - The NowStream by BlenderTimer"></div>
+					<b>Space</b>
+					<div class="stream-description"><i>Things which are happening in space right now!</i></div>
+				</a>
+				<a href="/nowstream/technology" class="stream">
+					<div class="stream-thumbnail"><img src="../static-0/files/images/nowstream-technology.svg" alt="Technology - The NowStream by BlenderTimer"></div>
+					<b>Technology</b>
+					<div class="stream-description"><i>Things which are happening with technology right now!</i></div>
+				</a>
+			</div>
+			<div id="donate-promo">
+				<span></span>
+				<p>Do you enjoy 100% free visualizations with no ads?</p>
+				<b>Consider donating!</b>
+				<button onclick="donate('You - The NowStream by BlenderTimer')">DONATE</button>
+			</div>
+		</div>
+		<script src="../static-0/main.js"></script>
+		<script src="./stream-main.js"></script>
+		<script type="text/javascript">
+			const sourceData = {
+				"red-blood-cells-produced":"<p>The source gives a production rate of </p><b>200 billion</b><p> per day. This gives a speed of </p><b>2,314,815/s</b><p>.</p><div class='spr'></div><a href='https://pmc.ncbi.nlm.nih.gov/articles/PMC7503180' target='_blank'>https://pmc.ncbi.nlm.nih.gov/articles/PMC7503180</a>",
+				"fingernails-length":"<p>The source gives a speed of </p><b>3.47mm</b><p> per month. Assuming a 30 day month, this gives a speed of </p><b>1.339nm/s</b><p>.</p><div class='spr'></div><a href='https://pubmed.ncbi.nlm.nih.gov/19744178' target='_blank'>https://pubmed.ncbi.nlm.nih.gov/19744178</a>",
+				"bacteria-inhaled":"<p>The first source (fact #92) gives an amount of </p><b>50</b><p> bacteria inhaled per breath. The second source gives an estimate of </p><b>12 to 15</b><p> breaths per minute. Averaging </p><b>13.5</b><p> breaths per minute, this gives an amount of around </p><b>11</b><p> bacteria inhaled per second.</p><div class='spr'></div><a href='https://www.sciencefocus.com/science/fun-facts' target='_blank'>https://www.sciencefocus.com/science/fun-facts</a><a href='https://www.lung.org/blog/how-your-lungs-work' target='_blank'>https://www.lung.org/blog/how-your-lungs-work</a>",
+				"blink-times":"<p>The source gives a blinking rate of </p><b>14 to 17 times</b><p> per minute. Choosing a lower average gives a speed of </p><b>15/m</b><p>.</p><div class='spr'></div><a href='https://my.clevelandclinic.org/health/articles/blinking' target='_blank'>https://my.clevelandclinic.org/health/articles/blinking</a>",
+				"eyes-times-moved":"<p>The source gives a movement rate of </p><b>2.74 fixations</b><p> per minute.</p><div class='spr'></div><a href='https://pmc.ncbi.nlm.nih.gov/articles/PMC6971407' target='_blank'>https://pmc.ncbi.nlm.nih.gov/articles/PMC6971407</a>",
+				"hair-length":"<p>The source gives a speed of </p><b>0.35mm</b><p> per day. This gives a speed of </p><b>4nm/s</b><p>.</p><div class='spr'></div><a href='https://www.sciencefocus.com/the-human-body/how-fast-does-hair-grow' target='_blank'>https://www.sciencefocus.com/the-human-body/how-fast-does-hair-grow</a>",
+				"heart-pumped-volume":"<p>The source gives a speed of </p><b>2000 gallons</b><p> per day. This gives a speed of </p><b>5.26l/m</b><p>.</p><div class='spr'></div><a href='https://newsroom.heart.org/file?fid=59a7145e2cfac2546cae1995' target='_blank'>https://newsroom.heart.org/file?fid=59a7145e2cfac2546cae1995</a>",
+				"brain-processed":"<p>The source gives a speed of </p><b>11 million bits</b><p> per second. This gives a speed of </p><b>1.4mb/s</b><p>.</p><div class='spr'></div><a href='https://online.utpb.edu/about-us/articles/psychology/what-is-cognitive-bias-and-how-does-it-affect-our-lives' target='_blank'>https://online.utpb.edu/about-us/articles/psychology/what-is-cognitive-bias-and-how-does-it-affect-our-lives</a>",
+				"hair-fallen-out":"<p>The source gives a rate </p><b>between 50 and 100 hairs</b><p> per day.</p><div class='spr'></div><a href='https://www.aad.org/public/diseases/hair-loss/insider/shedding' target='_blank'>https://www.aad.org/public/diseases/hair-loss/insider/shedding</a>",
+				"skin-cells-shed":"<p>The source gives a rate of </p><b>200,000,000 skin cells</b><p> per hour.</p><div class='spr'></div><a href='https://www.imperial.ac.uk/news/176229/new-insights-into-skin-cells-could' target='_blank'>https://www.imperial.ac.uk/news/176229/new-insights-into-skin-cells-could</a>",
+				"brain-calculations":"<p>The source states that the brain can perform up to </p><b>a billion-billion (1 followed by 18 zeros) mathematical operations</b><p> per second.</p><div class='spr'></div><a href='https://www.nist.gov/blogs/taking-measure/brain-inspired-computing-can-help-us-create-faster-more-energy-efficient' target='_blank'>https://www.nist.gov/blogs/taking-measure/brain-inspired-computing-can-help-us-create-faster-more-energy-efficient</a>",
+			};
+		</script>
+	</body>
+</html>
