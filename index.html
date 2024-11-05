@@ -50,45 +50,47 @@
 					var limit = 50;
 					for (var i=videos.length-1; i >= 0; i-=1) {
 						if (limit == 0) {break};
-						var vb = document.createElement('a');
-						vb.className = "latest-video-block";
-						vb.id = "video-" + videos[i].id;
-						vb.href = "https://youtube.com/watch?v=" + videos[i].youtubeID;
-						var vType = document.createElement('img');
-						vType.className = "latest-video-type";
-						if (videos[i].type == "short") {
-							vType.alt = "Short";
-							vType.title = "This video is a short.";
-							vType.src = "./static-0/files/images/videotype-short.png";
+						if (!(videos[i].hidden && videos[i].hidden == true)) {
+							var vb = document.createElement('a');
+							vb.className = "latest-video-block";
+							vb.id = "video-" + videos[i].id;
+							vb.href = "https://youtube.com/watch?v=" + videos[i].youtubeID;
+							var vType = document.createElement('img');
+							vType.className = "latest-video-type";
+							if (videos[i].type == "short") {
+								vType.alt = "Short";
+								vType.title = "This video is a short.";
+								vType.src = "./static-0/files/images/videotype-short.png";
+							}
+							else {
+								vType.alt = "Full Video";
+								vType.title = "This is a full video.";
+								vType.src = "./static-0/files/images/videotype-fullvideo.png";
+							}
+							var y = parseInt(videos[i].date.removeBefore("-", 1, true));
+							var m = parseInt(videos[i].date.removeBefore("-", 1).removeAfter("-", -1, true));
+							var d = parseInt(videos[i].date.removeAfter("-", -1));
+							if ((Date.now() - new Date(y, m-1, d).getTime()) <= 604800000) {
+								var vNew = document.createElement('b');
+								vNew.className = "latest-video-new";
+								vNew.textContent = "NEW!";
+								vNew.title = "This video is a recent upload!"
+								vb.appendChild(vNew);
+							}
+							if (new Date(videos[i].date))
+							var vThumb = document.createElement('img');
+							vThumb.className = "latest-video-thumb";
+							vThumb.alt = "Thumbnail";
+							vThumb.src = "./video-sources/thumbnails/" + videos[i].tui + "-" + videos[i].name.toLowerCase().replaceAll(/ /g, "_").replaceAll(/\./g, "").replaceAll(/\!/g, "").replaceAll(/\?/g, "").replaceAll(/\,/g, "").replaceAll(/\'/g, "") + "-180.png";
+							var vTitle = document.createElement('div');
+							vTitle.className = "latest-video-title";
+							vTitle.innerHTML = "<p>" + videos[i].name + "</p>"
+							vb.appendChild(vType);
+							vb.appendChild(vThumb);
+							vb.appendChild(vTitle);
+							document.getElementById('latest-videos').appendChild(vb);
+							limit -= 1;
 						}
-						else {
-							vType.alt = "Full Video";
-							vType.title = "This is a full video.";
-							vType.src = "./static-0/files/images/videotype-fullvideo.png";
-						}
-						var y = parseInt(videos[i].date.removeBefore("-", 1, true));
-						var m = parseInt(videos[i].date.removeBefore("-", 1).removeAfter("-", -1, true));
-						var d = parseInt(videos[i].date.removeAfter("-", -1));
-						if ((Date.now() - new Date(y, m-1, d).getTime()) <= 604800000) {
-							var vNew = document.createElement('b');
-							vNew.className = "latest-video-new";
-							vNew.textContent = "NEW!";
-							vNew.title = "This video is a recent upload!"
-							vb.appendChild(vNew);
-						}
-						if (new Date(videos[i].date))
-						var vThumb = document.createElement('img');
-						vThumb.className = "latest-video-thumb";
-						vThumb.alt = "Thumbnail";
-						vThumb.src = "./video-sources/thumbnails/" + videos[i].tui + "-" + videos[i].name.toLowerCase().replaceAll(/ /g, "_").replaceAll(/\./g, "").replaceAll(/\!/g, "").replaceAll(/\?/g, "").replaceAll(/\,/g, "").replaceAll(/\'/g, "") + "-180.png";
-						var vTitle = document.createElement('div');
-						vTitle.className = "latest-video-title";
-						vTitle.innerHTML = "<p>" + videos[i].name + "</p>"
-						vb.appendChild(vType);
-						vb.appendChild(vThumb);
-						vb.appendChild(vTitle);
-						document.getElementById('latest-videos').appendChild(vb);
-						limit -= 1;
 					}
 				</script>
 			</div>
@@ -117,6 +119,10 @@
 				<a href="./visualizations">
 					<img alt="Visualizations" src="./static-0/files/images/visualizations.svg" class="misc-content-img">
 					<b>Visualizations</b>
+				</a>
+				<a href="./nowstream">
+					<img alt="NowStream" src="./static-0/files/images/nowstream.svg" class="misc-content-img">
+					<b>The NowStream</b>
 				</a>
 			</div>
 			<div id="site-activity-block"><div id="revolver-map"><h3>Site Activity</h3><p>(since November 29, 2022)</p><div id="revolver-map-0" title="Site activity map." style="background: #1E1E1E"><h7>Loading map...</h7><script src="//rf.revolvermaps.com/0/0/7.js?i=5cgjr9bkw1v&amp;m=7&amp;c=ffc000&amp;cr1=fff5a0&amp;crb1=ffffff&amp;br=8&amp;sx=0&amp;cdb=200000&amp;dds=20&amp;rs=50&amp;as=100&amp;rg=100&amp;ds=10" async="async"></script></div></div></div>

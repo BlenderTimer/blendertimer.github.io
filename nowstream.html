@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en-US">
+	<head>
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-  SYR26MG6YV"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            
+            gtag('config', 'G-SYR26MG6YV');
+        </script>
+        <meta charset="utf-8">
+		<title>The NowStream - BlenderTimer</title>
+		<meta name="description" content="Visualizations of things that are happening all around you!">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="icon" href="./favicon.png" type="image/x-icon">
+		<link rel="stylesheet" type="text/css" href="./static-0/general.css">
+		<link rel="stylesheet" type="text/css" href="./static-0/main.css">
+		<link rel="stylesheet" type="text/css" href="./static-0/nowstream.css">
+	</head>
+	<body>
+		<div id="banner-menu">
+			<nav>
+				<!--====================  LARGE MENU  ====================-->
+				<ul id="large-menu">
+					<li id="nav-home"><a href="/"><img alt="BlenderTimer" src="./static-0/files/images/nav-logohome.png"></a></li>
+				</ul>
+				<div id="revolve-button" title="Current visitors on this site."><script src="https://rf.revolvermaps.com/0/0/3.js?i=5cgjr9bkw1v&b=0&s=40&m=2&cl=555555&co=000000&cd=ffffff&v0=25&v1=100&r=1" async="async"></script></div>
+				<!--====================  SMALL MENU  ====================-->
+				<div id="small-menu" style="display: none" onclick="smallMenuToggle()"><img alt="Menu" src="./static-0/files/images/menu-bars.png"></div>
+				<div id="small-menu-main"></div>
+			</nav>
+			<script src="./static-0/nav-links.js"></script>
+			<script src="./static-0/load-menus.js"></script>
+		</div>
+		<div id="loader" style="width: 100%; height: calc(100% - 50px); top: 50px; left: 0px; position: fixed; z-index: -99999">
+			<img alt="Loading" src="./static-0/files/images/loading-general.gif" style="width: 100px; height: 100px; position: fixed; left: calc(50% - 50px); top: calc(50% - 25px); filter: drop-shadow(0px 0px 15px #000000)">
+		</div>
+		<div id="content-main" style="opacity: 0; transition: 1s ease">
+			<img id="ns-logo" src="./static-0/files/images/nowstream.svg" alt="The NowStream logo">
+			<p class="description">Visualizations of things that are happening all around you!</p>
+			<div id="stream-list">
+				<a href="/nowstream/aroundtheworld" class="stream">
+					<div class="stream-thumbnail"><img src="./static-0/files/images/nowstream-aroundtheworld.svg" alt="Around the World - The NowStream by BlenderTimer"></div>
+					<b>Around the World</b>
+					<div class="stream-description"><i>Things which are happening all around the world right now!</i></div>
+				</a>
+				<a href="/nowstream/nature" class="stream">
+					<div class="stream-thumbnail"><img src="./static-0/files/images/nowstream-nature.svg" alt="Nature - The NowStream by BlenderTimer"></div>
+					<b>Nature</b>
+					<div class="stream-description"><i>Things which are happening in nature right now!</i></div>
+				</a>
+				<a href="/nowstream/space" class="stream">
+					<div class="stream-thumbnail"><img src="./static-0/files/images/nowstream-space.svg" alt="Space - The NowStream by BlenderTimer"></div>
+					<b>Space</b>
+					<div class="stream-description"><i>Things which are happening in space right now!</i></div>
+				</a>
+				<a href="/nowstream/technology" class="stream">
+					<div class="stream-thumbnail"><img src="./static-0/files/images/nowstream-technology.svg" alt="Technology - The NowStream by BlenderTimer"></div>
+					<b>Technology</b>
+					<div class="stream-description"><i>Things which are happening with technology right now!</i></div>
+				</a>
+				<a href="/nowstream/you" class="stream">
+					<div class="stream-thumbnail"><img src="./static-0/files/images/nowstream-you.svg" alt="You - The NowStream by BlenderTimer"></div>
+					<b>You</b>
+					<div class="stream-description"><i>Things which are happening with you right now!</i></div>
+				</a>
+			</div>
+			<div id="donate-promo">
+				<span></span>
+				<p>Do you enjoy 100% free visualizations with no ads?</p>
+				<b>Consider donating!</b>
+				<button onclick="donate('The NowStream - BlenderTimer')">DONATE</button>
+			</div>
+		</div>
+		<script src="./static-0/main.js"></script>
+	</body>
+</html>
