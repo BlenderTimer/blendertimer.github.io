@@ -81,6 +81,23 @@
 	transform: scaleX(1.05) scaleY(1.05);
 }
 
+.visualization-ss {
+	display: block;
+	max-width: 100%;
+	box-sizing: border-box;
+	border: 2px solid var(--closer-back);
+	border-radius: 5px;
+	margin: 5px auto;
+}
+
+.imglogo {
+	display: block;
+	max-width: 230px;
+	max-height: 35px;
+	box-sizing: border-box;
+	margin: 5px auto;
+}
+
 #pdt-container, #dpdt-container {
 	width: 100%;
 	box-sizing: border-box;
