@@ -1,6 +1,6 @@
 ***License:*** BT-LU
-***Version:*** 1.3
-***Last updated:*** March 7, 2024
+***Version:*** 1.4
+***Last updated:*** November 8, 2024
 
 **Definitions**
 - ***User*** refers to (and only refers to) the person or entity who is using the content but does not hold/own the copyright to the original content.
@@ -21,7 +21,7 @@ Attribution to the original author of any content provided under this license is
 **Derivatives**
 Content under this license may be modified or compiled into new works. However, the final work must be provided under this license (BT-LU) unless modification is significant enough to constitute a new and different work from the original content.
 
-Creating identical or nearly identical compilations of content (or compilations of content) provided under this license is strictly forbidden.
+Creating identical or nearly identical duplications of content (or compilations of content) provided under this license is strictly forbidden unless the user has obtained explicit permission from the author.
 
 **Liability**
 You alone are liable for any repercussions which may occur from the use or misuse of any content provided under this license. The copyright owner and BlenderTimer may in no way be accounted liable for your use or misuse of any content provided under this license. You are solely responsible for obtaining any additional licenses or permissions which may be required for commercial or non-commercial use.
