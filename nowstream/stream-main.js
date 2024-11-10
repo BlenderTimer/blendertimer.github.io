@@ -137,9 +137,17 @@ function stream() {
 	for (var i=0; i < streamData.length; i++) {
 		var time = Date.now()-loadTime;
 		var lastCount = parseInt(document.getElementById(streamData[i].name).querySelector('b').innerHTML.replace(/,/g, ""));
-		document.getElementById(streamData[i].name).querySelector('b').innerHTML = addCommas((streamData[i].data*time).toFixed(streamData[i].precision));
-		if (streamData[i].imperial) {
-			document.getElementById(streamData[i].name).querySelector('i').innerHTML = addCommas(toImperial(streamData[i].data*time, streamData[i].imperialConversion).toFixed(streamData[i].precision)) + " " + streamData[i].imperialConversion;
+		if (streamData[i].precision == 0) {
+			document.getElementById(streamData[i].name).querySelector('b').innerHTML = addCommas((streamData[i].data*time).round(0).toFullNumber());
+			if (streamData[i].imperial) {
+				document.getElementById(streamData[i].name).querySelector('i').innerHTML = addCommas(toImperial(streamData[i].data*time, streamData[i].imperialConversion).round(0).toFullNumber()) + " " + streamData[i].imperialConversion;
+			}
+		}
+		else {
+			document.getElementById(streamData[i].name).querySelector('b').innerHTML = addCommas((streamData[i].data*time).toFixed(streamData[i].precision));
+			if (streamData[i].imperial) {
+				document.getElementById(streamData[i].name).querySelector('i').innerHTML = addCommas(toImperial(streamData[i].data*time, streamData[i].imperialConversion).toFixed(streamData[i].precision)) + " " + streamData[i].imperialConversion;
+			}
 		}
 		var diff = parseInt(document.getElementById(streamData[i].name).querySelector('b').innerHTML.replace(/,/g, ""))-lastCount;
 		if (streamData[i].c) {
