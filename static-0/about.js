@@ -24,6 +24,9 @@ if (!(btCntctAS == null)) {
 	contactName.value = cnt[3];
 	contactCompany.value = cnt[4];
 }
+if (window.location.href.toLowerCase().indexOf("skills") > -1) {
+	showPopup('skills');
+}
 //----------
 function closePopup() {
 	document.body.style.width = null;

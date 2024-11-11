@@ -372,9 +372,9 @@ const videos = [
 		cc:"Did you know that you're actually very strong? Humans have an average bite force of over 100 kilograms or about the weight of a refrigerator! In their rear most teeth of course. But a human's incisor (or front) teeth still have a bite force of over 40 kilograms or about the weight of 20 bricks! No wonder it hurts so much when I bite my tongue...ow!",
 		youtubeID: "xcLu3lRdPGI",
 		date: "9-11-2024",
-		views10: -1,
-		views30: -1,
-		views1: -1,
-		views24: -1,
+		views10: 71,
+		views30: 171,
+		views1: 342,
+		views24: 3731,
 	},
 ];
