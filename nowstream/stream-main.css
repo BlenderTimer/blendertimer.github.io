@@ -407,6 +407,18 @@ body {
 	text-align: center;
 }
 
+#content-main p {
+	color: var(--base-text);
+}
+
+#content-main i {
+	color: var(--italic-text);
+}
+
+#content-main ul li::marker {
+	color: var(--italic-text);
+}
+
 @media screen and (max-width: 1100px) {
 	.stream-box {
 		width: calc(25% - 4px);
