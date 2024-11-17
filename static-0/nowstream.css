@@ -58,6 +58,14 @@
 	font-size: 14pt !important;
 }
 
+#content-main p {
+	color: var(--base-text);
+}
+
+#content-main i {
+	color: var(--italic-text);
+}
+
 .stream-description {
 	display: flex;
 	justify-content: center;

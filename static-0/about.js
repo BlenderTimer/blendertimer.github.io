@@ -11,6 +11,8 @@ var contactCompany = document.getElementById('contact-company');
 var contactSubject = document.getElementById('contact-subject');
 var contactMessage = document.getElementById('contact-message');
 var contactLimit = document.getElementById('contact-limit');
+var contact = document.getElementById('contact');
+var support = document.getElementById('support');
 var firstContact = true;
 var lastCookie = "";
 //----------Functions
@@ -26,6 +28,22 @@ if (!(btCntctAS == null)) {
 }
 if (window.location.href.toLowerCase().indexOf("skills") > -1) {
 	showPopup('skills');
+}
+if (window.location.href.toLowerCase().indexOf("#contact") > -1) {
+	var le = setInterval(function() {window.scrollTo(0, contact.offsetTop-50)},1);
+	setTimeout(function() {clearInterval(le)}, 1000);
+	contact.style.background = "#A11";
+	setTimeout(function() {contact.style.background = null;contact.style.transition = "4s"}, 1000);
+}
+else if (window.location.href.toLowerCase().indexOf("#support") > -1) {
+	var le = setInterval(function() {window.scrollTo(0, support.offsetTop-50)},1);
+	setTimeout(function() {clearInterval(le)}, 1000);
+	support.style.background = "#A11";
+	setTimeout(function() {support.style.background = null;support.style.transition = "4s"}, 1000);
+}
+else if (window.location.href.toLowerCase().indexOf("#faq") > -1) {
+	var le = setInterval(function() {window.scrollTo(0, document.getElementById('faq').offsetTop-50)},1);
+	setTimeout(function() {clearInterval(le)}, 1000);
 }
 //----------
 function closePopup() {
