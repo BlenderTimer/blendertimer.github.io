@@ -75,7 +75,7 @@ function loadVideos(vl, srch, srt) {
 	else {
 		vlist.sort((a, b) => (a.tui > b.tui) ? 1 : -1);
 	}
-	//console.log(vlist);
+	console.log(vlist);
 	var limit = 50;
 	for (var i=vlist.length-vstart-1; i >= 0; i-=1) {
 		if (limit == 0 || !(vlist[i])) {if (!(vlist[i])) {videoListEnd.style.display = null};break};
@@ -109,7 +109,7 @@ function loadVideos(vl, srch, srt) {
 		var vThumb = document.createElement('img');
 		vThumb.className = "video-thumb";
 		vThumb.alt = "Thumbnail";
-		vThumb.src = "./video-sources/thumbnails/" + videos[i].tui + "-" + videos[i].name.toLowerCase().replaceAll(/ /g, "_").replaceAll(/\./g, "").replaceAll(/\!/g, "").replaceAll(/\?/g, "").replaceAll(/\,/g, "").replaceAll(/\'/g, "") + "-180.png";
+		vThumb.src = "./video-sources/thumbnails/" + vlist[i].tui + "-" + vlist[i].name.toLowerCase().replaceAll(/ /g, "_").replaceAll(/\./g, "").replaceAll(/\!/g, "").replaceAll(/\?/g, "").replaceAll(/\,/g, "").replaceAll(/\'/g, "") + "-180.png";
 		var vTitle = document.createElement('div');
 		vTitle.className = "video-title";
 		vTitle.innerHTML = "<p>" + vlist[i].name + "</p>"
