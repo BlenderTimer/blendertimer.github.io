@@ -34,7 +34,6 @@
 				<ul id="large-menu">
 					<li id="nav-home"><a href="/"><img alt="BlenderTimer" src="../static-0/files/images/nav-logohome.png"></a></li>
 				</ul>
-				<div id="revolve-button" title="Current visitors on this site."><script src="https://rf.revolvermaps.com/0/0/3.js?i=5cgjr9bkw1v&b=0&s=40&m=2&cl=555555&co=000000&cd=ffffff&v0=25&v1=100&r=1" async="async"></script></div>
 				<!--====================  SMALL MENU  ====================-->
 				<div id="small-menu" style="display: none" onclick="smallMenuToggle()"><img alt="Menu" src="../static-0/files/images/menu-bars.png"></div>
 				<div id="small-menu-main"></div>
@@ -154,6 +153,10 @@
 					</div>
 					<button id="find-btn" onclick="findWords()">Find Words!</button>
 					<i id="tool-stats" style="display: none"></i>
+					<div class="spr"></div>
+					<h1>Pattern ID:</h1>
+					<div style="display: flex;"><input type="text" id="pattern-id" oninput="patternWrite()"><button id="pattern-load" onclick="loadPattern()">Load Pattern</button></div>
+					<i style="margin-top: 5px; font-size: 10pt;">This is a unique pattern ID which you can use to save your pattern or share it with your friends! Enter a pattern ID into the box above to load that pattern.</i>
 				</div>
 				<div id="tool-output">
 					<textarea readonly></textarea>
