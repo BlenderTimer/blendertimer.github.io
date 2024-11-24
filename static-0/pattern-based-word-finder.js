@@ -12,6 +12,10 @@ var pattern = [];
 var overlaying = false;
 var overlayingOffset = {x:0,y:0};
 var overlayAddTo = -1;
+var patternLoad = document.getElementById('pattern-load');
+var patternIDContainer = document.getElementById('pattern-id');
+var patternID = "";
+var ptps = ["B","C","D","F","H","I","J","K","M","N","O","P","Q","R","T","V","a","b","c","d","e","f","g","h","i","j","k","m","n","p","q","r","s","t","v","w","x","z"];
 //----------Functions
 //Load
 checkURL()
@@ -51,7 +55,11 @@ document.body.addEventListener('mouseup', function() {
 			patternContainer.children[overlayAddTo].style.outline = null;
 			pattern[overlayAddTo].logic = "none";
 		}
+		updatePattern();
 		resetFindBTN();
+		patternID = encryptPattern();
+		patternIDContainer.value = patternID;
+		patternWrite();
 	}
 	overlaying = false;
 })
@@ -151,7 +159,14 @@ function setLanguage(event) {
 }
 
 function addRule(e) {
-	var o = (e.target || e.srcElement).parentNode;
+	var full = false;
+	if (e.target || e.srcElement) {
+		var o = (e.target || e.srcElement).parentNode;
+	}
+	else {
+		o = document.getElementById("rule-" + e.type);
+		full = true;
+	}
 	var rule = document.createElement('div');
 	rule.style.cssText = "--back: " + getComputedStyle(o).getPropertyValue('--back');
 	rule.classList = "pattern-block outlined-pattern-block";
@@ -162,15 +177,27 @@ function addRule(e) {
 	deleteX.addEventListener('click', function(event) {removeRule(event)})
 	rule.prepend(deleteX);
 	rule.children[1].className = o.id;
+	rule.id = "r-" + patternContainer.children.length;
+	var i = 1;
+	for (const c of rule.children) {
+		if (c.tagName == "INPUT") {
+			c.addEventListener('input', function() {setTimeout(function() {updatePattern();patternID = encryptPattern();patternIDContainer.value = patternID;patternWrite()}, 1)});
+			if (full) {c.value = e["val" + i]};
+			i++;
+		}
+	}
+	if (full && e.logic == "invert") {rule.style.outline = "2px solid #FF1616"};
 	patternContainer.appendChild(rule);
-	updatePattern();
-	patternContainer.scrollTo(0, 100000);
+	if (full == false) {updatePattern();patternContainer.scrollTo(0, 100000)};
 }
 
 function removeRule(e) {
 	var o = (e.target || e.srcElement).parentNode;
 	patternContainer.children[o.id.substring(2, o.id.length)].remove();
 	updatePattern();
+	patternID = encryptPattern();
+	patternIDContainer.value = patternID;
+	patternWrite();
 }
 
 function updatePattern() {
@@ -185,23 +212,46 @@ function updatePattern() {
 			p.logic = "none";
 		}
 		if (p.type == "contains" || p.type == "startswith" || p.type == "endswith" || p.type == "lengthis" || p.type == "lengthislessthan" || p.type == "lengthismorethan" || p.type == "hasnvowels" || p.type == "haslessthannvowels" || p.type == "hasmorethannvowels" || p.type == "hasnconsonants" || p.type == "haslessthannconsonants" || p.type == "hasmorethannconsonants") {
-			p.val1 = patternContainer.children[i].children[3].value.toLowerCase();
-			if (p.val1.isNumber()) {p.val1 = parseInt(p.val1)};
+			if (patternContainer.children[i].children[3].type == "number") {
+				p.val1 = parseInt(patternContainer.children[i].children[3].value);
+			}
+			else {
+				p.val1 = patternContainer.children[i].children[3].value.toLowerCase();
+			}
 		}
 		else if (p.type == "charnis") {
-			p.val1 = patternContainer.children[i].children[2].value.toLowerCase();
-			p.val2 = patternContainer.children[i].children[4].value.toLowerCase();
-			if (p.val1.isNumber()) {p.val1 = parseInt(p.val1)};
-			if (p.val2.isNumber()) {p.val2 = parseInt(p.val2)};
+			if (patternContainer.children[i].children[2].type == "number") {
+				p.val1 = parseInt(patternContainer.children[i].children[2].value);
+			}
+			else {
+				p.val1 = patternContainer.children[i].children[2].value.toLowerCase();
+			}
+			if (patternContainer.children[i].children[4].type == "number") {
+				p.val2 = parseInt(patternContainer.children[i].children[4].value);
+			}
+			else {
+				p.val2 = patternContainer.children[i].children[4].value.toLowerCase();
+			}
 		}
 		else if (p.type == "charisfoundntimes") {
-			p.val1 = patternContainer.children[i].children[1].value.toLowerCase();
-			p.val2 = patternContainer.children[i].children[3].value.toLowerCase();
-			if (p.val1.isNumber()) {p.val1 = parseInt(p.val1)};
-			if (p.val2.isNumber()) {p.val2 = parseInt(p.val2)};
+			if (patternContainer.children[i].children[1].type == "number") {
+				p.val1 = parseInt(patternContainer.children[i].children[1].value);
+			}
+			else {
+				p.val1 = patternContainer.children[i].children[1].value.toLowerCase();
+			}
+			if (patternContainer.children[i].children[3].type == "number") {
+				p.val2 = parseInt(patternContainer.children[i].children[3].value);
+			}
+			else {
+				p.val2 = patternContainer.children[i].children[3].value.toLowerCase();
+			}
 		}
 		pattern.push(p);
 	}
+	patternID = encryptPattern();
+	patternIDContainer.value = patternID;
+	patternWrite();
 	resetFindBTN();
 }
 
@@ -238,7 +288,7 @@ function findWords(fullList) {
 	var cancel = false;
 	for (const e of patternContainer.getElementsByTagName('input')) {
 		if (e.value.length == 0) {
-			window.scrollTo(0, e.getBoundingClientRect().top - (window.innerHeight / 2));
+			window.scrollTo(0, e.getBoundingClientRect().top + (window.innerHeight / 2) - 50);
 			e.style.background = "#B90000";
 			e.style.boxShadow = "0px 0px 10px 1px #F22";
 			cancel = true;
@@ -493,9 +543,14 @@ function findWords(fullList) {
 }
 
 function clearPattern() {
-	if (confirm("Clear all rules? (you cannot undo)")) {
+	if (patternContainer.children.length > 0 && confirm("Clear all rules? (you cannot undo)")) {
+		patternContainer.style.background = "#500000"
 		patternContainer.innerHTML = "";
 		pattern = [];
+		patternID = "";
+		patternID = encryptPattern();
+		patternIDContainer.value = patternID;
+		patternWrite();
 	}
 }
 
@@ -503,4 +558,299 @@ function showAllWords() {
 	if (confirm("WARNING: Showing all words may cause your device to freeze or crash!")) {
 		findWords(true);
 	}
+}
+
+//----------PATTERN ID
+function loadPattern() {
+	if (patternLoad.textContent == "Copy ID") {
+		var cancel = false;
+		for (const e of patternContainer.getElementsByTagName('input')) {
+			if (e.value.length == 0) {
+				window.scrollTo(0, e.getBoundingClientRect().top + (window.innerHeight / 2) - 50);
+				e.style.background = "#B90000";
+				e.style.boxShadow = "0px 0px 10px 1px #F22";
+				cancel = true;
+			}
+			else {
+				e.style.background = null;
+				e.style.boxShadow = null;
+			}
+		}
+		if (cancel == true) {patternContainer.style.background = "#500000"}
+		else {patternContainer.style.background = null;navigator.clipboard.writeText(patternIDContainer.value)};
+	}
+	else {
+		if (patternContainer.children.length > 0 && confirm("This will overwrite your current pattern!") == false) {
+			return;
+		}
+		patternID = patternIDContainer.value;
+		pattern = decryptPattern(patternID);
+		patternContainer.innerHTML = "";
+		for (const p of pattern) {
+			addRule(p);
+		}
+		patternWrite();
+	}
+}
+
+function patternWrite() {
+	if (patternIDContainer.value == patternID) {
+		patternLoad.innerHTML = "Copy ID";
+	}
+	else {
+		patternLoad.innerHTML = "Load Pattern";
+	}
+}
+
+function encryptPattern() {
+	var pt = "";
+	if (pattern.length > 0) {
+		for (const p of pattern) {
+			//Types: BCDFHIJKMNOPQR, FreeUse=TV abcdefghijkmnpqrstvwxz
+			pt += et(p.type);
+			//Logic: Invert=L, FreeUse=l
+			if (p.logic == "invert") {pt += "L"};
+			var l1 = false;
+			var l2 = false;
+			//Values: val1=?, val2=a?, val3=e?
+			//Long Value: Y
+			if (!(p.val1 == undefined)) {
+				if (p.val1.toString().length > 1) {
+					pt += "Y" + p.val1.toString().toLowerCase() + "Y";
+					l1 = true;
+				}
+				else if (p.val1.toString().length == 0) {
+					pt += "U";
+				}
+				else {
+					pt += p.val1.toString().toLowerCase();
+				}
+			}
+			if (!(p.val2 == undefined)) {
+				if (p.val2.toString().length > 1) {
+					if (l1) {
+						pt += p.val2.toString().toLowerCase() + "Y";
+					}
+					else {
+						pt += "Y" + p.val2.toString().toLowerCase() + "Y";
+					}
+					l2 = true;
+				}
+				else if (p.val2.toString().length == 0) {
+					pt += "U";
+				}
+				else {
+					pt += p.val2.toString().toLowerCase();
+				}	
+			}
+			if (!(p.val3 == undefined)) {
+				if (p.val3.toString().length > 1) {
+					if (l2) {
+						pt += p.val3.toString().toLowerCase() + "Y";
+					}
+					else {
+						pt += "Y" + p.val3.toString().toLowerCase() + "Y";
+					}
+				}
+				else if (p.val3.toString().length == 0) {
+					pt += "U";
+				}
+				else {
+					pt += p.val3.toString().toLowerCase();
+				}	
+			}
+		}
+		//Lengthen: GSWXZ 
+		if (pt.endsWith("Y")) {pt = pt.substr(0, pt.length-1)};
+		return pl(pt);
+	}
+	else {
+		return pt;
+	}
+}
+
+function decryptPattern(pt) {
+	pt = pt.replace(/G/g, "").replace(/S/g, "").replace(/W/g, "").replace(/X/g, "").replace(/Z/g, "");
+	var pts = [];
+	var ptn = {logic:"none"};
+	//---------
+	var lasts = "";
+	var inVal = false;
+	var fl = 0;
+	var steps = [];
+	var i = 0;
+	for (const c of pt.split("")) {
+		lasts += c;
+		fl++;
+		if (i == (pt.length-1)) {
+			steps.push(lasts);
+			var v = lasts.substring(1, lasts.length);
+			if (v.isNumber()) {v = parseInt(v)};
+			if (ptn.val1) {ptn.val2 = v}
+			else if (ptn.val2) {ptn.val3 = v}
+			else {ptn.val1 = v;ptn.type = et(lasts.substr(0,1))};
+			pts.push(ptn);
+			ptn = {logic:"none"};
+		}
+		else if (inVal && c == "Y") {
+			steps.push(lasts);
+			var v = lasts.replace(/Y/g,"").substring(1, lasts.length-1);
+			if (v.isNumber()) {v = parseInt(v)};
+			if (ptn.val1) {ptn.val2 = v}
+			else if (ptn.val2) {ptn.val3 = v}
+			else {ptn.val1 = v;ptn.type = et(lasts.substr(0,1))};
+			inVal = false;
+			lasts = "";
+			fl = 0;
+		}
+		else if (c == "Y") {
+			if (fl > 2) {
+				steps.push(lasts);
+				var v = lasts.substring(1, lasts.length-1);
+				if (v.isNumber()) {v = parseInt(v)};
+				if (ptn.val1) {ptn.val2 = v}
+				else if (ptn.val2) {ptn.val3 = v}
+				else {ptn.val1 = v;ptn.type = et(lasts.substr(0,1))};
+				lasts = c;
+			}
+			else {
+				lasts = lasts.replace(/Y/g,"");
+			}
+			fl = 0;
+			inVal = true;
+		}
+		else if (!(inVal) && fl > 2) {
+			steps.push(lasts);
+			var v = lasts.substring(1, lasts.length-1);
+			if (v.isNumber()) {v = parseInt(v)};
+			if (ptn.val1) {ptn.val2 = v}
+			else if (ptn.val2) {ptn.val3 = v}
+			else {ptn.val1 = v;ptn.type = et(lasts.substr(0,1))};
+			fl = 1;
+			lasts = c;
+		}
+		else if (!(i == 0) && !(inVal) && fl > 2 && ptps.includes(c)) {
+			steps.push(lasts);
+			var v = lasts.substring(1, lasts.length-2);
+			if (v.isNumber()) {v = parseInt(v)};
+			if (ptn.val1) {ptn.val2 = v}
+			else if (ptn.val2) {ptn.val3 = v}
+			else {ptn.val1 = v;ptn.type = et(lasts.substr(0,1))};
+			pts.push(ptn);
+			ptn = {logic:"none"};
+			inVal = false;
+			lasts = c;
+		}
+		else if (c == "L") {
+			ptn.logic = "invert";
+			// lasts = lasts.replace("L","");
+			fl = 1;
+		}
+		else if (!(i == 0) && !(inVal) && fl > 2 && ptps.includes(c)) {
+			if (ptn.val1) {pts.push(ptn);ptn = {logic:"none"};fl = 0;lasts = c};
+		}
+		i++;
+	}
+	ptn = {logic:"none"};
+	pts = [];
+	i = 0;
+	for (const s of steps) {
+		if (ptps.includes(s.substr(0,1))) {
+			if (ptps.includes(s.substr(1,1)) && pts.length > 0) {
+				var v = s.substr(0, 1).replace("U","");
+				if (v.isNumber()) {v = parseInt(v)};
+				if (!(ptn.val2 == undefined)) {ptn.val3 = v}
+				else {ptn.val2 = v};
+			}
+			else {
+				if (!(i == 0)) {pts.push(ptn)};
+				var l = "none";
+				if (s.indexOf("L") > -1) {l = "invert"};
+				var v = "";
+				if (!(l == "none")) {
+					v = s.substring(2, s.length-1).replace("U","");
+					if (v.isNumber()) {v = parseInt(v)};
+				}
+				else {
+					v = s.substring(1, s.length-1).replace("U","");
+					if (v.isNumber()) {v = parseInt(v)};
+				}
+				ptn = {type:et(s.substr(0,1)),logic:l,val1:v};
+			}
+		}
+		else if (i == (steps.length-1)) {
+			var l = "none";
+			if (s.indexOf("L") > -1) {l = "invert"};
+			var v = "";
+			if (!(l == "none")) {
+				v = s.substring(2, s.length-1).replace("U","");
+				if (v.isNumber()) {v = parseInt(v)};
+			}
+			else {
+				v = s.substring(1, s.length-1).replace("U","");
+				if (v.isNumber()) {v = parseInt(v)};
+			}
+			ptn = {type:et(s.substr(0,1)),logic:l,val1:v};
+			pts.push(ptn);
+		}
+		else if (s.startsWith("Y")) {
+			var v = s.substring(2, s.length-1).replace("U","");
+			if (v.isNumber()) {v = parseInt(v)};
+			if (!(ptn.val2 == undefined)) {ptn.val3 = v}
+			else {ptn.val2 = v};
+		}
+		i++;
+	}
+	return pts;
+}
+
+function et(t) {
+	//---------- CHARACTER RULES ----------
+	if (t == "contains") {return "B"}
+	else if (t == "startswith") {return "C"}
+	else if (t == "endswith") {return "D"}
+	else if (t == "charnis") {return "F"}
+	else if (t == "charisfoundntimes") {return "H"}
+	else if (t == "hasnvowels") {return "I"}
+	else if (t == "haslessthannvowels") {return "J"}
+	else if (t == "hasmorethannvowels") {return "K"}
+	else if (t == "hasnconsonants") {return "M"}
+	else if (t == "haslessthannconsonants") {return "N"}
+	else if (t == "hasmorethannconsonants") {return "O"}
+	//---------- LENGTH RULES ----------
+	else if (t == "lengthis") {return "P"}
+	else if (t == "lengthislessthan") {return "Q"}
+	else if (t == "lengthismorethan") {return "R"}
+	// REVERSE
+	//---------- CHARACTER RULES ----------
+	else if (t == "B") {return "contains"}
+	else if (t == "C") {return "startswith"}
+	else if (t == "D") {return "endswith"}
+	else if (t == "F") {return "charnis"}
+	else if (t == "H") {return "charisfoundntimes"}
+	else if (t == "I") {return "hasnvowels"}
+	else if (t == "J") {return "haslessthannvowels"}
+	else if (t == "K") {return "hasmorethannvowels"}
+	else if (t == "M") {return "hasnconsonants"}
+	else if (t == "N") {return "haslessthannconsonants"}
+	else if (t == "O") {return "hasmorethannconsonants"}
+	//---------- LENGTH RULES ----------
+	else if (t == "P") {return "lengthis"}
+	else if (t == "Q") {return "lengthislessthan"}
+	else if (t == "R") {return "lengthismorethan"}
+}
+
+function pl(ptrn) {
+	while (ptrn.length < 40) {
+		var r = randomNumber(0, ptrn.length);
+		var r2 = randomNumber(1, 5);
+		var c = "";
+		if (r2 == 1) {c = "G"}
+		else if (r2 == 2) {c = "S"}
+		else if (r2 == 3) {c = "W"}
+		else if (r2 == 4) {c = "X"}
+		else if (r2 == 5) {c = "Z"}
+		ptrn = ptrn.slice(0, r) + c + ptrn.slice(r);
+	}
+	return ptrn;
 }

@@ -443,6 +443,40 @@ body {
 	color: var(--italic-text) !important;
 }
 
+#pattern-id {
+	display: block;
+	background: var(--semi-back);
+	width: 100%;
+	border-radius: 3px;
+	box-shadow: 0px 0px 10px #0003 inset;
+	box-sizing: border-box;
+	padding: 3px 6px;
+	color: var(--italic-text);
+	font-size: 11pt;
+	outline: none;
+	border: none;
+}
+
+#pattern-load {
+	display: block;
+	box-sizing: border-box;
+	background: var(--closer-back);
+	border-radius: 3px;
+	margin-left: 3px;
+	color: var(--base-text);
+	padding: 2px 5px;
+	font-size: 10pt;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	white-space: nowrap;
+	transition: 0.2s;
+}
+
+#pattern-load:hover {
+	background: var(--hover-back2);
+}
+
 #tool-output {
 	display: flex;
 	flex-flow: column;
