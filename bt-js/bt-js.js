@@ -1,11 +1,9 @@
 // --------------- SCRIPT INFORMATION ---------------
-//
 const btjsAuthor = "Daniel Roberts (BlenderTimer)" //				Author
-const btjsVersion = "0.0.6" //										Version
-const btjsLastUpdated = "September 29, 2024" //						Last Updated
+const btjsVersion = "0.0.7" //										Version
+const btjsLastUpdated = "November 26, 2024" //						Last Updated
 const btjsLicense = "BT-LU" //										License
 const btjsLicenseLink = "https://blendertimer.com/license/bt-lu" //	License Link
-//
 // --------------------------------------------------
 
 // ---------- ACTIVE VARIABLES ----------
@@ -68,12 +66,8 @@ Array.prototype.moveItem = function(indexFrom, indexTo, method, placeholder) {
 		if (method == 2 || method == "overwrite") {
 			var newArray = this;
 			newArray.splice(indexTo, 1, this[indexFrom]);
-			if (!(placeholder == undefined)) {
-				newArray.splice(indexFrom, 1, placeholder);
-			}
-			else {
-				newArray.splice(indexFrom, 1);
-			}
+			if (!(placeholder == undefined)) {newArray.splice(indexFrom, 1, placeholder)}
+			else {newArray.splice(indexFrom, 1)};
 			return newArray;
 		}
 		else if (method == 1 || method == "swap") {
@@ -87,49 +81,25 @@ Array.prototype.moveItem = function(indexFrom, indexTo, method, placeholder) {
 			var newArray = this;
 			if (indexFrom > indexTo) {
 				newArray.splice(indexTo, 0, this[indexFrom]);
-				if (!(placeholder == undefined)) {
-					newArray.splice(indexFrom + 1, 1, placeholder);
-				}
-				else {
-					newArray.splice(indexFrom + 1, 1);
-				}
+				if (!(placeholder == undefined)) {newArray.splice(indexFrom + 1, 1, placeholder)}
+				else {newArray.splice(indexFrom + 1, 1)};
 			}
 			else {
 				newArray.splice(indexTo + 1, 0, this[indexFrom]);
-				if (!(placeholder == undefined)) {
-					newArray.splice(indexFrom, 1, placeholder);
-				}
-				else {
-					newArray.splice(indexFrom, 1);
-				}
+				if (!(placeholder == undefined)) {newArray.splice(indexFrom, 1, placeholder)}
+				else {newArray.splice(indexFrom, 1)};
 			}
 			return newArray;
 		}
 	}
-	else {
-		return this;
-	}
+	else {return this};
 }
 
-Array.prototype.selectRandom = function() {
-	return this[parseInt(Math.random() * this.length)];
-}
-
-Array.prototype.sumValues = function() {
-	var sum = 0;
-	for (var i=0; i < this.length; i++) {sum += this[i]};
-	return sum;
-}
+Array.prototype.selectRandom = function() {return this[parseInt(Math.random() * this.length)]};
+Array.prototype.sumValues = function() {var sum = 0;for (var i=0; i < this.length; i++) {sum += this[i]};return sum};
 
 // ---------- BOOLEAN FUNCTIONS ----------
-Boolean.prototype.toYesNo = function() {
-	if (this == true) {
-		return "Yes";
-	}
-	else if (this == false) {
-		return "No";
-	}
-}
+Boolean.prototype.toYesNo = function() {if (this == true) {return "Yes"} else if (this == false) {return "No"}};
 
 // ---------- MISC FUNCTIONS ----------
 
@@ -228,9 +198,7 @@ function readCookie(name) {
 	return null;	
 }
 
-function writeCookie(name, value, lifetime) {
-	document.cookie = name + "=" + value + ";" + ("expires="+(new Date(Date.now()+(lifetime*24*60*60*1000))).toUTCString()) + ";path=/";	
-}
+function writeCookie(name, value, lifetime) {document.cookie = name + "=" + value + ";" + ("expires="+(new Date(Date.now()+(lifetime*24*60*60*1000))).toUTCString()) + ";path=/"};
 
 // ---------- NUMBER FUNCTIONS ----------
 Number.prototype.limit = function(ll, ul) {
@@ -366,39 +334,8 @@ Number.prototype.toFullNumber = function() {
 }
 
 Number.prototype.translateTime = function(format) {
-	if (!(format)) {
-		format = "%yr2%-%mo2%-%dy2% %hr2%:%min2%:%sec2%.%ms3%";
-	}
-	var style = [
-		{
-			available:false,
-			length:0,
-		},
-		{
-			available:false,
-			length:0,
-		},
-		{
-			available:false,
-			length:0,
-		},
-		{
-			available:false,
-			length:0,
-		},
-		{
-			available:false,
-			length:0,
-		},
-		{
-			available:false,
-			length:0,
-		},
-		{
-			available:false,
-			length:0,
-		}
-	]
+	if (!(format)) {format = "%yr2%-%mo2%-%dy2% %hr2%:%min2%:%sec2%.%ms3%"};
+	var style = [{available:false,length:0},{available:false,length:0},{available:false,length:0},{available:false,length:0},{available:false,length:0},{available:false,length:0},{available:false,length:0}];
 	var fSplit = format.split('');
 	var lastChars = [];
 	var lastSet = "";
@@ -1054,17 +991,8 @@ Number.prototype.translateTime = function(format) {
 	return newFormat.replace(/%%yr%%/g, yr).replace(/%%mo%%/g, mo).replace(/%%dy%%/g, dy).replace(/%%hr%%/g, hr).replace(/%%min%%/g, min).replace(/%%sec%%/g, sec).replace(/%%ms%%/g, ms);
 }
 
-Number.prototype.toNegative = function() {
-	var n = parseFloat(this);
-	if (parseFloat(this) > 0) {n = parseFloat(this) * -1};
-	return n;
-}
-
-Number.prototype.toPositive = function() {
-	var n = parseFloat(this);
-	if (parseFloat(this) < 0) {n = parseFloat(this) * -1};
-	return n;
-}
+Number.prototype.toNegative = function() {var n = parseFloat(this);if (parseFloat(this) > 0) {n = parseFloat(this) * -1};return n};
+Number.prototype.toPositive = function() {var n = parseFloat(this);if (parseFloat(this) < 0) {n = parseFloat(this) * -1};return n};
 
 // ---------- Object FUNCTIONS ----------
 function clearCanvas(canvasContext2D) {
@@ -1072,9 +1000,7 @@ function clearCanvas(canvasContext2D) {
 		canvasContext2D.clearRect(0, 0, canvasContext2D.canvas.width, canvasContext2D.canvas.height);
 		canvasContext2D.beginPath();
 	}
-	else {
-		console.error("Failed to draw rectangle!\nError: Invalid canvas context");
-	}
+	else {console.error("Failed to draw rectangle!\nError: Invalid canvas context")};
 }
 
 function drawRect(canvasContext2D, x, y, width, height, borderRadius) {
@@ -1177,14 +1103,26 @@ String.prototype.extend = function(length, fillChar, appendToBeginning) {
 }
 
 String.prototype.isNumber = function() {
+	if (this.length == 0) {return false};
 	var ts = this.split("");
 	var tsNum = 0;
+	var tsNumDec = 0;
+	var tsNumNeg = 0;
 	for (var i=0; i < ts.length; i++) {
-		if (ts[i].toString() == "0" || ts[i].toString() == "1" || ts[i].toString() == "2" || ts[i].toString() == "3" || ts[i].toString() == "4" || ts[i].toString() == "5" || ts[i].toString() == "6" || ts[i].toString() == "7" || ts[i].toString() == "8" || ts[i].toString() == "9" || ts[i].toString() == "." || ts[i].toString() == "-") {
-			tsNum += 1;
+		if (ts[i].toString() == "0" || ts[i].toString() == "1" || ts[i].toString() == "2" || ts[i].toString() == "3" || ts[i].toString() == "4" || ts[i].toString() == "5" || ts[i].toString() == "6" || ts[i].toString() == "7" || ts[i].toString() == "8" || ts[i].toString() == "9") {
+			tsNum++;
+		}
+		else if (ts[i].toString() == ".") {
+			tsNumDec++;
+		}
+		else if (ts[i].toString() == "-") {
+			tsNumNeg++;
 		}
 	}
-	if (tsNum == ts.length) {
+
+	if (tsNumDec > 0 && ts[ts.length-1] == ".") {return false};
+	if (tsNumNeg > 0 && !(ts[0] == "-")) {return false};
+	if (tsNum > 0 && tsNum == this.replace(/\./g,"").replace(/\-/g, "").length && tsNumDec < 2 && tsNumNeg < 2) {
 		return true;
 	}
 	else {
