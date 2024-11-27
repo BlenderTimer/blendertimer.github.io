@@ -182,36 +182,49 @@
 	height: auto;
 }
 
-#revolver-map {
+#stat-map-container {
 	width: 100%;
 	height: auto;
 	min-height: 10vw;
 	margin: 0px;
 	text-align: center;
 	border-radius: 10px;
-	background: #252525;
+	background: var(--close-back);
 	box-shadow: 0px 0px 20px rgba(0,0,0,0.3);
 	padding: 20px;
 	box-sizing: border-box;
 }
 
-#revolver-map-0 {
-	border-radius: 8px;
+#stat-map {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+	border-radius: 5px;
 	overflow: hidden;
 	margin-top: 10px;
 }
 
 
-#revolver-map-0 h7 {
+#stat-map b {
 	font-size: 25pt;
-	color: #2E2E2E;
+	color: #FFF2;
 	font-weight: bold;
-	width: calc(100% - 100px);
 	text-align: center;
 	display: block;
-	margin-top: 26%;
 	position: absolute;
 	z-index: -0;
+}
+
+#stat-map iframe {
+	position: relative;
+	display: block;
+	border: none;
+	outline: none;
+	width: 100%;
+	max-width: 1000px;
+	height: 600px;
+	z-index: 1;
 }
 
 @media screen and (max-width: 2400px) {
