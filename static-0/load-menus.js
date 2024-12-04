@@ -27,7 +27,7 @@ function determineDisplayMenu() {
   			largeMenuItemDD[i].style.display = "none";
 		}
 		smallMenuMain.style.display = "block";
-		revolveButton.style.marginRight = "50px";
+		if (revolveButton) {revolveButton.style.marginRight = "50px"};
 	}
 	else {
 		smallMenu.style.display = "none";
@@ -40,7 +40,7 @@ function determineDisplayMenu() {
   			largeMenuItemDD[i].style.opacity = "1";
 		}
 		smallMenuMain.style.display = "none";
-		revolveButton.style.marginRight = "0px";
+		if (revolveButton) {revolveButton.style.marginRight = "0px"};
 	}
 }
 
