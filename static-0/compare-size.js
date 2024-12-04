@@ -234,9 +234,6 @@ document.addEventListener('keydown', function(event) {
 function closePopup(all) {
 	if (lastPopups.length <= 1 || all == true) {
 		document.body.style.width = null;
-		document.getElementById('revolve-button').style.transition = "0s";
-		document.getElementById('revolve-button').style.right = null;
-		setTimeout(function() {document.getElementById('revolve-button').style.transition = "0.2s"}, 1);
 		document.body.style.overflowY = null;
 		popupBack.style.opacity = 0;
 		popupBack.style.pointerEvents = "none";
@@ -294,9 +291,6 @@ function popup(popupElement, firstPopup, ignoreLast) {
 	popupMain.style.transform = "scale(1)";
 	var scrollPx = window.innerWidth - document.body.offsetWidth;
 	document.body.style.width = "calc(100% - " + scrollPx + "px)";
-	document.getElementById('revolve-button').style.transition = "0s";
-	document.getElementById('revolve-button').style.right = scrollPx + "px";
-	setTimeout(function() {document.getElementById('revolve-button').style.transition = "0.2s"}, 1);
 	document.body.style.overflowY = "hidden";
 	if (popupElement == "add-object") {
 		aosSearch.focus();
