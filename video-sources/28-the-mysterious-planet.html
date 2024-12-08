@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en-US">
+	<head>
+		<!-- Google tag (gtag.js) -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-  SYR26MG6YV"></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
+			
+			gtag('config', 'G-SYR26MG6YV');
+		</script>
+		<meta charset="utf-8">
+		<title>The Mysterious Planet - BlenderTimer Video Sources</title>
+		<meta name="description" content="The video sources for The Mysterious Planet.">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="icon" href="../favicon.png" type="image/x-icon">
+		<link rel="stylesheet" type="text/css" href="../static-0/general.css">
+		<link rel="stylesheet" type="text/css" href="../static-0/main.css">
+		<link rel="stylesheet" type="text/css" href="../static-0/video-sources-pages.css">
+		<script src="../bt-js/bt-js.js"></script>
+		<script src="../static-0/videos.js"></script>
+		<script src="../static-0/jquery-3.6.3.js"></script>
+	</head>
+	<body onresize="determineDisplayMenu()">
+		<div id="background-plate"></div>
+		<div id="banner-menu">
+			<nav>
+				<!--====================  LARGE MENU  ====================-->
+				<ul id="large-menu">
+					<li id="nav-home"><a href="/"><img alt="BlenderTimer" src="../static-0/files/images/nav-logohome.png"></a></li>
+				</ul>
+				<div id="revolve-button" title="Current visitors on this site."><script src="https://rf.revolvermaps.com/0/0/3.js?i=5cgjr9bkw1v&b=0&s=40&m=2&cl=555555&co=000000&cd=ffffff&v0=25&v1=100&r=1" async="async"></script></div>
+				<!--====================  SMALL MENU  ====================-->
+				<div id="small-menu" style="display: none" onclick="smallMenuToggle()"><img alt="Menu" src="../static-0/files/images/menu-bars.png"></div>
+				<div id="small-menu-main"></div>
+			</nav>
+			<script src="../static-0/nav-links.js"></script>
+			<script src="../static-0/load-menus.js"></script>
+		</div>
+		<div id="loader" style="width: 100%; height: calc(100% - 50px); top: 50px; left: 0px; position: fixed; z-index: -99999">
+			<img alt="Loading" src="../static-0/files/images/loading-general.gif" style="width: 100px; height: 100px; position: fixed; left: calc(50% - 50px); top: calc(50% - 25px); filter: drop-shadow(0px 0px 15px #000000)">
+		</div>
+		<div id="content-main" style="opacity: 0; transition: 1s ease">
+			<h1 id="title">The Mysterious Planet</h1>
+			<p id="published-date">Published: December 7, 2024 at 8:28 PM (PT)</p>
+			<div id="video-info">
+				<div id="vid-info-left">
+					<b class="vit">Video Information</b>
+					<span><b>Length:</b><p>7:32</p><i>(13562 frames/30fps)</i></span>
+					<span><b>Resolution:</b><p>1920x1080</p><i>(FHD)</i></span>
+					<span><b>Most Rewatched:</b><a>N/A</a></span>
+					<span class="spr"></span>
+					<b class="vit">Realtime Statistics</b>
+					<div id="realtime-stats">
+						<span title="Views"><img src="../static-0/files/images/icons/eye.svg" alt="Views"><b>...</b></span>
+						<span title="Likes"><img src="../static-0/files/images/icons/like.svg" alt="Likes"><b>...</b></span>
+						<span title="Comments"><img src="../static-0/files/images/icons/comment.svg" alt="Comments"><b>...</b></span>
+					</div>
+					<span class="spr"></span>
+					<b class="vit">Views in the First</b>
+					<div id="first-views">
+						<span><b>10 Minutes</b><p>...</p></span>
+						<span><b>30 Minutes</b><p>...</p></span>
+						<span><b>Hour</b><p>...</p></span>
+						<span><b>24 Hours</b><p>...</p></span>
+					</div>
+				</div>
+				<span class="spr" id="info1-spr" style="display: none"></span>
+				<div id="vid-info-right">
+					<a id="thumbnail" href="./thumbnails/28-the_mysterious_planet-1080.png" target="_blank"><img src="./thumbnails/28-the_mysterious_planet-180.png" alt="Thumbnail"></a>
+					<div id="video-icons">
+						<span><b>Upload ID</b><p>28</p></span>
+						<span><b>Video ID</b><p>17</p></span>
+						<span><b>Type</b><p>Video</p></span>
+					</div>
+					<span id="yt-link"><a href="https://youtu.be/0kv3Rp7zBNc" target="_blank">https://youtu.be/0kv3Rp7zBNc</a><img src="../static-0/files/images/icons/copy-link.svg" alt="Copy link" onclick="copyVideoLink(event)"></span>
+					<script type="text/javascript">
+						var fv = document.getElementById('first-views');
+						var video = videos[parseInt(document.getElementById('video-icons').children[0].children[1].textContent)-1];
+						if (video.views10 == -1) {fv.children[0].children[1].innerHTML = "NO DATA"}
+						else {fv.children[0].children[1].innerHTML = video.views10};
+						if (video.views10 == -1) {fv.children[1].children[1].innerHTML = "NO DATA"}
+						else {fv.children[1].children[1].innerHTML = video.views30};
+						if (video.views10 == -1) {fv.children[2].children[1].innerHTML = "NO DATA"}
+						else {fv.children[2].children[1].innerHTML = video.views1};
+						if (video.views10 == -1) {fv.children[3].children[1].innerHTML = "NO DATA"}
+						else {fv.children[3].children[1].innerHTML = video.views24};
+						//Realtime Stats
+						var ytid = document.getElementById('yt-link').children[0].textContent.removeBefore("/", 1, true);
+						$.get(
+							"https://www.googleapis.com/youtube/v3/videos",{
+							part: 'statistics',
+							id: ytid,
+							key: 'AIzaSyDsaGX5mhvqCpI3jWMFFGMmmmB5IUEyUrk'},
+							function(data) {
+								var views = 0;
+								var likes = 0;
+								var comments = 0;
+								views = data.items[0].statistics.viewCount;
+								likes = data.items[0].statistics.likeCount;
+								comments = data.items[0].statistics.commentCount;
+								document.getElementById("realtime-stats").children[0].children[1].innerHTML = views.toLocaleString();
+								document.getElementById("realtime-stats").children[1].children[1].innerHTML = likes.toLocaleString();
+								document.getElementById("realtime-stats").children[2].children[1].innerHTML = comments.toLocaleString();
+							}
+						);
+					</script>
+				</div>
+			</div>
+			<h2>Information Sources</h2>
+			<div id="info-sources" class="sources">
+				<a href="https://www.reddit.com/r/Mars/comments/18445sm/what_is_the_current_highest_resolution_dem/?rdt=52690" target="_blank"><b>Mars Mapped Resolution (1)</b><p>https://www.reddit.com/r/Mars/comments/18445sm/what_is_the_current_highest_resolution_dem/?rdt=52690</p></a>
+				<a href="https://astrogeology.usgs.gov/search/map/mars_viking_colorized_global_mosaic_232m" target="_blank"><b>Mars Mapped Resolution (2)</b><p>https://astrogeology.usgs.gov/search/map/mars_viking_colorized_global_mosaic_232m</p></a>
+				<a href="https://en.wikipedia.org/wiki/Earth" target="_blank"><b>Earth Data</b><p>https://en.wikipedia.org/wiki/Earth</p></a>
+				<a href="https://oceanexplorer.noaa.gov/world-oceans-day-2015/how-much-of-the-seafloor-is-left-to-explore.html" target="_blank"><b>Resolution of Sea Floor Maps</b><p>https://oceanexplorer.noaa.gov/world-oceans-day-2015/how-much-of-the-seafloor-is-left-to-explore.html</p></a>
+				<a href="https://www.wikidoc.org/index.php/Water_(molecule)" target="_blank"><b>Water is One of the Most Abundant</b><p>https://www.wikidoc.org/index.php/Water_(molecule)</p></a>
+				<a href="https://oceana.org/blog/why-does-so-much-ocean-remain-unexplored-and-unprotected" target="_blank"><b>Over 80% of the Ocean is Unexplored</b><p>https://oceana.org/blog/why-does-so-much-ocean-remain-unexplored-and-unprotected/</p></a>
+				<a href="https://www.worldometers.info/geography/largest-countries-in-the-world" target="_blank"><b>Land Area of Countries</b><p>https://www.worldometers.info/geography/largest-countries-in-the-world</p></a>
+				<a href="https://www.custom-wetsuits.com/blog/how-deep-can-a-human-dive" target="_blank"><b>Diving Depths</b><p>https://www.custom-wetsuits.com/blog/how-deep-can-a-human-dive</p></a>
+				<a href="https://tritonsubs.com/subs" target="_blank"><b>Mid to Deep Diving Submersibles</b><p>https://tritonsubs.com/subs</p></a>
+				<a href="https://oceanservice.noaa.gov/facts/oceandepth.html" target="_blank"><b>Average Depth of the Ocean</b><p>https://oceanservice.noaa.gov/facts/oceandepth.html</p></a>
+				<a href="https://www.researchgate.net/publication/344166318_Walkability_Index_for_Elderly_Health_A_Proposal" target="_blank"><b>Average Walking Pace</b><p>https://www.researchgate.net/publication/344166318_Walkability_Index_for_Elderly_Health_A_Proposal</p></a>
+				<a href="https://tritonsubs.com/media/gallery/#iLightbox[gallery_image_1]/32" target="_blank"><b>Visibility at Depth</b><p>https://tritonsubs.com/media/gallery/#iLightbox[gallery_image_1]/32</p></a>
+				<a><b>Time to Explore the Sea Floor</b><p>Calculated</p></a>
+				<a href="https://tritonsubs.com/wp-content/uploads/Commercial-Brochure-2023-final.pdf" target="_blank"><b>Exploration Submersibles Built</b><p>https://tritonsubs.com/wp-content/uploads/Commercial-Brochure-2023-final.pdf</p></a>
+				<a href="https://www.oilfieldtechnology.com/exploration/21032014/roving_further_every_year" target="_blank"><b>Industrial ROVs</b><p>https://www.oilfieldtechnology.com/exploration/21032014/roving_further_every_year</p></a>
+				<a href="https://en.wikipedia.org/wiki/List_of_space_travelers_by_nationality" target="_blank"><b>Amount of People Who Have Been to Space</b><p>https://en.wikipedia.org/wiki/List_of_space_travelers_by_nationality</p></a>
+				<a href="https://www.history.com/news/you-can-visit-the-titanic-but-only-if-you-act-fast" target="_blank"><b>Number of People Who Have Visited the Titanic</b><p>https://www.history.com/news/you-can-visit-the-titanic-but-only-if-you-act-fast</p></a>
+				<a href="https://en.wikipedia.org/wiki/Challenger_Deep" target="_blank"><b>Number of People Who Have Visited Challenger Deep</b><p>https://en.wikipedia.org/wiki/Challenger_Deep</p></a>
+				<a href="https://www.coastalwiki.org/wiki/Number_of_marine_species" target="_blank"><b>Number of Marine Species Discovered Yearly</b><p>https://www.coastalwiki.org/wiki/Number_of_marine_species</p></a>
+				<a href="https://en.wikipedia.org/wiki/Mid-ocean_ridge" target="_blank"><b>The Ocean Ridge</b><p>https://en.wikipedia.org/wiki/Mid-ocean_ridge</p></a>
+				<a href="https://en.wikipedia.org/wiki/Andes" target="_blank"><b>Andes</b><p>https://en.wikipedia.org/wiki/Andes</p></a>
+				<a href="https://en.wikipedia.org/wiki/Mariana_Trench" target="_blank"><b>The Mariana Trench</b><p>https://en.wikipedia.org/wiki/Mariana_Trench</p></a>
+				<a><b>Size of the Grand Canyon vs the Mariana Trench</b><p>Calculated based on volumes from topography data</p></a>
+				<a href="https://en.wikipedia.org/wiki/Mauna_Kea" target="_blank"><b>Mauna Kea</b><p>https://en.wikipedia.org/wiki/Mauna_Kea</p></a>
+				<a href="https://oceantoday.noaa.gov/deepoceanvolcanoes" target="_blank"><b>Amount of Deep-Ocean Volcanic Activity</b><p>https://oceantoday.noaa.gov/deepoceanvolcanoes</p></a>
+				<a href="https://en.wikipedia.org/wiki/Blue_whale" target="_blank"><b>Blue Whale</b><p>https://en.wikipedia.org/wiki/Blue_whale</p></a>
+				<a href="https://sentientmedia.org/which-animals-are-most-intelligent" target="_blank"><b>Dolphin's are the Second Most Intelligent</b><p>https://sentientmedia.org/which-animals-are-most-intelligent</p></a>
+				<a href="https://en.wikipedia.org/wiki/Colossal_squid" target="_blank"><b>Colossal Squid</b><p>https://en.wikipedia.org/wiki/Colossal_squid</p></a>
+				<a href="https://petapixel.com/2024/05/29/scientists-think-theyve-captured-first-ever-footage-of-a-colossal-squid-baby" target="_blank"><b>Colossal Squid Photos or Videos</b><p>https://petapixel.com/2024/05/29/scientists-think-theyve-captured-first-ever-footage-of-a-colossal-squid-baby</p></a>
+				<a href="https://academic.oup.com/jmammal/article-abstract/99/1/1/4834091?redirectedFrom=fulltext" target="_blank"><b>Species of Mammals</b><p>https://academic.oup.com/jmammal/article-abstract/99/1/1/4834091?redirectedFrom=fulltext</p></a>
+				<a href="https://datazone.birdlife.org/userfiles/file/Species/Taxonomy/Handbook%20of%20the%20Birds%20of%20the%20World%20and%20BirdLife%20International%20Digital%20Checklist%20of%20the%20Birds%20of%20the%20World_Version_9.pdf" target="_blank"><b>Bird Species</b><p>https://datazone.birdlife.org/userfiles/file/Species/Taxonomy/Handbook%20of%20the%20Birds%20of%20the%20World%20and%20BirdLife%20International%20Digital%20Checklist%20of%20the%20Birds%20of%20the%20World_Version_9.pdf</p></a>
+				<a href="http://www.reptile-database.org/db-info/SpeciesStat.html" target="_blank"><b>Reptile Species</b><p>http://www.reptile-database.org/db-info/SpeciesStat.html</p></a>
+				<a href="https://www.amphibianark.org/education/what-are-amphibians" target="_blank"><b>Amphibian Species</b><p>https://www.amphibianark.org/education/what-are-amphibians</p></a>
+				<a href="https://en.wikipedia.org/wiki/Barreleye" target="_blank"><b>Barreleye</b><p>https://en.wikipedia.org/wiki/Barreleye</p></a>
+				<a href="https://en.wikipedia.org/wiki/Oarfish" target="_blank"><b>Oarfish</b><p>https://en.wikipedia.org/wiki/Oarfish</p></a>
+				<a href="https://en.wikipedia.org/wiki/Pufferfish_mating_ritual" target="_blank"><b>White-Spotted Pufferfish Mating Ritual</b><p>https://en.wikipedia.org/wiki/Pufferfish_mating_ritual</p></a>
+				<a href="https://en.wikipedia.org/wiki/Japanese_spider_crab" target="_blank"><b>Japanese Spider Crab</b><p>https://en.wikipedia.org/wiki/Japanese_spider_crab</p></a>
+				<a href="https://en.wikipedia.org/wiki/Giant_isopod" target="_blank"><b>Giant Isopod</b><p>https://en.wikipedia.org/wiki/Giant_isopod</p></a>
+				<a href="https://en.wikipedia.org/wiki/Idiacanthus_atlanticus" target="_blank"><b>Black Dragonfish</b><p>https://en.wikipedia.org/wiki/Idiacanthus_atlanticus</p></a>
+				<a href="https://en.wikipedia.org/wiki/Deepsea_lizardfish" target="_blank"><b>Deepsea Lizardfish</b><p>https://en.wikipedia.org/wiki/Deepsea_lizardfish</p></a>
+				<a href="https://en.wikipedia.org/wiki/Bigfin_squid" target="_blank"><b>Big Fin Squid</b><p>https://en.wikipedia.org/wiki/Bigfin_squid</p></a>
+				<a href="https://en.wikipedia.org/wiki/Bolinopsis_infundibulum" target="_blank"><b>Lobed Combed Jelly</b><p>https://en.wikipedia.org/wiki/Bolinopsis_infundibulum</p></a>
+				<a href="https://www.sci.news/biology/macropinna-microstoma-video-10377.html" target="_blank"><b>Barreleye Discovery Date</b><p>https://www.sci.news/biology/macropinna-microstoma-video-10377.html</p></a>
+				<a href="https://youtu.be/7HwEw-p-Yow?list=PL_rC1cWgkGvMv8o-FTMF3hS37gOzfCSOQ&t=81" target="_blank"><b>"Nature had it first" Quote by Dr. Irwin Moon</b><p>https://youtu.be/7HwEw-p-Yow?list=PL_rC1cWgkGvMv8o-FTMF3hS37gOzfCSOQ&t=81</p></a>
+			</div>
+			<h2>Graphic Sources</h2>
+			<div id="graphic-sources" class="sources">
+				<a href="https://pixabay.com/vectors/submersible-submarine-ocean-9219925" target="_blank"><b>Submersible (Daniel Roberts)</b><p>https://pixabay.com/vectors/submersible-submarine-ocean-9219925</p></a>
+				<a href="https://pixabay.com/vectors/mercury-planet-space-terrestrial-8233227" target="_blank"><b>Mercury (Daniel Roberts)</b><p>https://pixabay.com/vectors/mercury-planet-space-terrestrial-8233227</p></a>
+				<a href="https://pixabay.com/vectors/earth-planet-space-terrestrial-8233221" target="_blank"><b>Earth (Daniel Roberts)</b><p>https://pixabay.com/vectors/earth-planet-space-terrestrial-8233221</p></a>
+				<a href="https://pixabay.com/vectors/magnifying-glass-magnification-lens-9219927" target="_blank"><b>Magnifying Glass (Daniel Roberts)</b><p>https://pixabay.com/vectors/magnifying-glass-magnification-lens-9219927</p></a>
+				<a href="https://pixabay.com/vectors/water-drop-liquid-fluid-nature-8904702" target="_blank"><b>Water Drop (Daniel Roberts)</b><p>https://pixabay.com/vectors/water-drop-liquid-fluid-nature-8904702</p></a>
+				<a><b>Dirt Bank (Daniel Roberts)</b><p>N/A</p></a>
+				<a href="https://pixabay.com/vectors/man-stand-human-person-arms-legs-9095533" target="_blank"><b>Man Standing (Daniel Roberts)</b><p>https://pixabay.com/vectors/man-stand-human-person-arms-legs-9095533</p></a>
+				<a href="https://pixabay.com/vectors/scuba-tanks-oxygen-diving-gear-9219926" target="_blank"><b>Scuba Tanks (Daniel Roberts)</b><p>https://pixabay.com/vectors/scuba-tanks-oxygen-diving-gear-9219926</p></a>
+				<a href="https://pixabay.com/vectors/ship-boat-research-vessel-sea-9219924" target="_blank"><b>Research Ship (Daniel Roberts)</b><p>https://pixabay.com/vectors/ship-boat-research-vessel-sea-9219924</p></a>
+				<a href="https://pixabay.com/vectors/rov-robotic-underwater-vehicle-9243166" target="_blank"><b>Robotic Underwater Vehicle (Daniel Roberts)</b><p>https://pixabay.com/vectors/rov-robotic-underwater-vehicle-9243166</p></a>
+				<a href="https://pixabay.com/vectors/space-shuttle-rocket-challenger-8297058" target="_blank"><b>Space Shuttle (Daniel Roberts)</b><p>https://pixabay.com/vectors/space-shuttle-rocket-challenger-8297058</p></a>
+				<a href="https://pixabay.com/vectors/shipwreck-titanic-wreck-ship-sink-9243165" target="_blank"><b>Titanic Wreck (Daniel Roberts)</b><p>https://pixabay.com/vectors/shipwreck-titanic-wreck-ship-sink-9243165</p></a>
+				<a href="https://www.shutterstock.com/image-vector/illustration-deepsea-challenger-dcv-1-submarine-2264582799" target="_blank"><b>Deepsea Challenger (Daniel Roberts)</b><p>https://www.shutterstock.com/image-vector/illustration-deepsea-challenger-dcv-1-submarine-2264582799</p></a>
+				<a href="https://pixabay.com/vectors/jellyfish-marine-animal-nature-7747031" target="_blank"><b>Jellyfish (Daniel Roberts)</b><p>https://pixabay.com/vectors/jellyfish-marine-animal-nature-7747031</p></a>
+				<a><b>World Depth and Elevation Map (Daniel Roberts) (composite of NASA Visible Earth Bathymetry and Topography Maps)</b><p>N/A</p></a>
+				<a href="https://visibleearth.nasa.gov/images/73963/bathymetry" target="_blank"><b>World Depth Map (NASA Visible Earth)</b><p>https://visibleearth.nasa.gov/images/73963/bathymetry</p></a>
+				<a href="https://visibleearth.nasa.gov/images/73934/topography" target="_blank"><b>World Elevation Map (NASA Visible Earth)</b><p>https://visibleearth.nasa.gov/images/73934/topography</p></a>
+				<a><b>Mauna Kea (Daniel Roberts)</b><p>N/A</p></a>
+				<a href="https://pixabay.com/vectors/mount-everest-mountain-nature-8297059" target="_blank"><b>Mt. Everest (Daniel Roberts)</b><p>https://pixabay.com/vectors/mount-everest-mountain-nature-8297059</p></a>
+				<a><b>Volcano (Daniel Roberts)</b><p>N/A</p></a>
+				<a href="https://pixabay.com/vectors/whale-blue-nature-animal-wild-7728288" target="_blank"><b>Blue Whale (Daniel Roberts)</b><p>https://pixabay.com/vectors/whale-blue-nature-animal-wild-7728288</p></a>
+				<a href="https://pixabay.com/vectors/dolphin-animal-baby-mammal-cartoon-7036679" target="_blank"><b>Bottlenose Dolphin (Daniel Roberts)</b><p>https://pixabay.com/vectors/dolphin-animal-baby-mammal-cartoon-7036679</p></a>
+				<a href="https://pixabay.com/vectors/colossal-squid-animal-nature-9245445" target="_blank"><b>Colossal Squid (Daniel Roberts)</b><p>https://pixabay.com/vectors/colossal-squid-animal-nature-9245445</p></a>
+				<a href="https://pixabay.com/vectors/person-man-stand-human-arms-legs-8238232" target="_blank"><b>Man Standing (Daniel Roberts)</b><p>https://pixabay.com/vectors/person-man-stand-human-arms-legs-8238232</p></a>
+				<a href="https://pixabay.com/vectors/shark-great-white-sea-creature-fish-7871133" target="_blank"><b>Great White Shark (Daniel Roberts)</b><p>https://pixabay.com/vectors/shark-great-white-sea-creature-fish-7871133</p></a>
+				<a href="https://pixabay.com/vectors/giraffe-animal-nature-wild-8204924/" target="_blank"><b>Giraffe (Daniel Roberts)</b><p>https://pixabay.com/vectors/giraffe-animal-nature-wild-8204924</p></a>
+				<a href="https://pixabay.com/vectors/swift-bird-nature-animal-wild-7871134" target="_blank"><b>Swift (Daniel Roberts)</b><p>https://pixabay.com/vectors/swift-bird-nature-animal-wild-7871134</p></a>
+				<a href="https://pixabay.com/vectors/chameleon-lizard-animal-reptile-8204925" target="_blank"><b>Chameleon (Daniel Roberts)</b><p>https://pixabay.com/vectors/chameleon-lizard-animal-reptile-8204925</p></a>
+				<a href="https://pixabay.com/vectors/frog-tree-frog-amphibian-animal-8207551" target="_blank"><b>Tree Frog (Daniel Roberts)</b><p>https://pixabay.com/vectors/frog-tree-frog-amphibian-animal-8207551</p></a>
+				<a href="https://pixabay.com/vectors/barreleye-fish-animal-nature-9245447" target="_blank"><b>Barreleye (Daniel Roberts)</b><p>https://pixabay.com/vectors/barreleye-fish-animal-nature-9245447</p></a>
+				<a href="https://pixabay.com/vectors/oarfish-fish-animal-nature-9245446" target="_blank"><b>Oarfish (Daniel Roberts)</b><p>https://pixabay.com/vectors/oarfish-fish-animal-nature-9245446</p></a>
+				<a href="https://www.flickr.com/photos/140071736@N03/25025697481/in/photostream" target="_blank"><b>White-Spotted Pufferfish Circle (Hiroshi Kawase) (edited)</b><p>https://www.flickr.com/photos/140071736@N03/25025697481/in/photostream</p></a>
+				<a href="https://www.flickr.com/photos/140071736@N03/25092651286/in/photostream" target="_blank"><b>White-Spotted Pufferfish (Hiroshi Kawase) (edited)</b><p>https://www.flickr.com/photos/140071736@N03/25092651286/in/photostream</p></a>
+				<a href="https://www.youtube.com/watch?v=5aze8Sz0lRw" target="_blank"><b>Japanese Spider Crab (The Nature Box) (edited)</b><p>https://www.youtube.com/watch?v=5aze8Sz0lRw</p></a>
+				<a href="https://blendertimer.com/web-tools/compare-size/images/nature/animals/crustaceans/Japanese_Spider_Crab-front.svg" target="_blank"><b>Japanese Spider Crab Silhouette (Daniel Roberts) (edited)</b><p>https://blendertimer.com/web-tools/compare-size/images/nature/animals/crustaceans/Japanese_Spider_Crab-front.svg</p></a>
+				<a href="https://oceanexplorer.noaa.gov/video_playlist/ex1711-giant-isopod.html" target="_blank"><b>Giant Isopod (NOAA Ocean Exploration)</b><p>https://oceanexplorer.noaa.gov/video_playlist/ex1711-giant-isopod.html</p></a>
+				<a><b>Giant Isopod Silhouette (Daniel Roberts)</b><p>N/A</p></a>
+				<a href="https://pixabay.com/vectors/black-dragonfish-fish-animal-nature-9245448" target="_blank"><b>Black Dragonfish (Daniel Roberts)</b><p>https://pixabay.com/vectors/black-dragonfish-fish-animal-nature-9245448</p></a>
+				<a href="https://www.flickr.com/photos/oceanexplorergov/42477157585" target="_blank"><b>Deepsea Lizardfish (NOAA Ocean Exploration)</b><p>https://www.flickr.com/photos/oceanexplorergov/42477157585</p></a>
+				<a href="https://oceanexplorer.noaa.gov/video_playlist/ex2107-bigfinsquid.html" target="_blank"><b>Big Fin Squid (NOAA Ocean Exploration)</b><p>https://oceanexplorer.noaa.gov/video_playlist/ex2107-bigfinsquid.html</p></a>
+				<a><b>Big Fin Squid Silhouette (Daniel Roberts)</b><p>N/A</p></a>
+				<a href="https://www.youtube.com/watch?v=s9BD7yxRec4" target="_blank"><b>Lobed Comb Jelly (David Young)</b><p>https://www.youtube.com/watch?v=s9BD7yxRec4</p></a>
+				<a href="https://oceanexplorer.noaa.gov/okeanos/explorations/ex1304/logs/photolog/welcome.html" target="_blank"><b>Other Marine Creatures 1 (NOAA Ocean Exploration)</b><p>https://oceanexplorer.noaa.gov/okeanos/explorations/ex1304/logs/photolog/welcome.html</p></a>
+				<a href="https://oceanexplorer.noaa.gov/image-gallery" target="_blank"><b>Other Marine Creatures 2 (NOAA Ocean Exploration)</b><p>https://oceanexplorer.noaa.gov/image-gallery</p></a>
+				<a><b>Ancient Pot (felax)</b><p>N/A</p></a>
+				<a href="https://pixabay.com/vectors/milky-way-galaxy-abstract-space-8282020" target="_blank"><b>Milky Way Galaxy (Daniel Roberts)</b><p>https://pixabay.com/vectors/milky-way-galaxy-abstract-space-8282020</p></a>
+				<a href="https://pixabay.com/vectors/pond-nature-lake-water-trees-7866335" target="_blank"><b>Pond (Daniel Roberts)</b><p>https://pixabay.com/vectors/pond-nature-lake-water-trees-7866335</p></a>
+				<a><b>Lightning (Daniel Roberts)</b><p>N/A</p></a>
+				<a href="https://pixabay.com/vectors/burj-khalifa-building-skyscraper-8207549" target="_blank"><b>Burj Khalifa (Daniel Roberts)</b><p>https://pixabay.com/vectors/burj-khalifa-building-skyscraper-8207549</p></a>
+				<a href="https://pixabay.com/vectors/locomotive-train-freight-engine-9082607" target="_blank"><b>Train Engine (Daniel Roberts)</b><p>https://pixabay.com/vectors/locomotive-train-freight-engine-9082607</p></a>
+				<a href="https://pixabay.com/vectors/supercomputer-futuristic-computer-7884574" target="_blank"><b>Supercomputer (Daniel Roberts)</b><p>https://pixabay.com/vectors/supercomputer-futuristic-computer-7884574</p></a>
+				<a href="https://pixabay.com/vectors/international-space-station-iss-9219928" target="_blank"><b>International Space Station (Daniel Roberts)</b><p>https://pixabay.com/vectors/international-space-station-iss-9219928</p></a>
+				<a href="https://pixabay.com/vectors/space-shuttle-rocket-challenger-8297058" target="_blank"><b>Space Shuttle (Daniel Roberts)</b><p>https://pixabay.com/vectors/space-shuttle-rocket-challenger-8297058</p></a>
+				<a href="https://pixabay.com/vectors/airliner-airplane-landing-gear-8886818" target="_blank"><b>Airliner (Daniel Roberts)</b><p>https://pixabay.com/vectors/airliner-airplane-landing-gear-8886818</p></a>
+				<a href="https://pixabay.com/vectors/space-needle-seattle-skyscraper-8652302" target="_blank"><b>Space Needle (Daniel Roberts)</b><p>https://pixabay.com/vectors/space-needle-seattle-skyscraper-8652302</p></a>
+			</div>
+			<h2>Audio Sources</h2>
+			<div id="audio-sources" class="sources">
+				<a><b>Narration (Daniel Roberts)</b><p>N/A</p></a>
+				<a href="https://pixabay.com/music/main-title-rise-of-the-enemy-30-seconds-14303" target="_blank"><b>Rise of the Enemy-30 seconds (Daniel Roberts)</b><p>https://pixabay.com/music/main-title-rise-of-the-enemy-30-seconds-14303</p></a>
+				<a href="https://pixabay.com/sound-effects/thunder-245174" target="_blank"><b>Thunder (Daniel Roberts)</b><p>https://pixabay.com/sound-effects/thunder-245174</p></a>
+				<a href="https://pixabay.com/music/ambient-to-the-galaxy-10734" target="_blank"><b>To the Galaxy (Daniel Roberts)</b><p>https://pixabay.com/music/ambient-to-the-galaxy-10734</p></a>
+				<a><b>Hit-02 (Daniel Roberts)</b><p>N/A</p></a>
+				<a href="https://pixabay.com/sound-effects/object-flyby-8115" target="_blank"><b>Object Flyby (Daniel Roberts)</b><p>https://pixabay.com/sound-effects/object-flyby-8115</p></a>
+				<a href="https://pixabay.com/music/adventure-journey-through-nothing-ambient-background-loop-232364" target="_blank"><b>Journey Through Nothing-Ambient Background Loop (Daniel Roberts) (edited)</b><p>https://pixabay.com/music/adventure-journey-through-nothing-ambient-background-loop-232364</p></a>
+				<a href="https://www.premiumbeat.com/blog/free-explosion-sfx-vfx-elements" target="_blank"><b>0017_explo_grenade_06_PremiumBeat (Detonate, PremiumBeat)</b><p>https://www.premiumbeat.com/blog/free-explosion-sfx-vfx-elements</p></a>
+				<a><b>Metal Hit-01 (Daniel Roberts)</b><p>N/A</p></a>
+				<a><b>Powerful Swoosh-01 (Daniel Roberts)</b><p>N/A</p></a>
+				<a href="https://pixabay.com/music/main-title-rescuer-inspiring-cinematic-229615" target="_blank"><b>Rescuer (Daniel Roberts)</b><p>https://pixabay.com/music/main-title-rescuer-inspiring-cinematic-229615</p></a>
+			</div>
+			<div id="cc"><h2>Subtitles</h2><a href="./cc/28.txt" download="The Mysterious Planet - Subtitles.txt" title="Download subtitles"><img src="../static-0/files/images/icons/download.svg" alt="Download"></a></div>
+			<div id="subtitles">
+				<p>There is a planet very close to</p>
+				<p>us that is still mysterious to us.</p>
+				<p>A planet which has areas so hostile</p>
+				<p>that missions to those areas have</p>
+				<p>resulted in some of the most horrific</p>
+				<p>disasters humans have witnessed.</p>
+				<p>Despite mapping the entire surface</p>
+				<p>of Mars with a resolution of just</p>
+				<p>200 meters per pixel, most of</p>
+				<p>this mysterious planet has only</p>
+				<p>been mapped at a resolution of</p>
+				<p>1.5 kilometers per pixel. This</p>
+				<p>mysterious planet, is Earth. Despite</p>
+				<p>centuries of exploration and research</p>
+				<p>by billions of people, we still</p>
+				<p>know very little about our own planet.</p>
+				<p>In fact, one of the most mysterious</p>
+				<p>things about Earth, is one of</p>
+				<p>the most abundant.</p>
+				<p>The ocean is huge! And by huge,</p>
+				<p>I mean HUGE! Over 80% of the</p>
+				<p>ocean is completely unexplored</p>
+				<p>by humans. To put that into perspective,</p>
+				<p>if that 80% were the land, every</p>
+				<p>country except Russia and China</p>
+				<p>would be completely unexplored,</p>
+				<p>even the entirety of North America,</p>
+				<p>South America, Europe, Australia,</p>
+				<p>and even Africa!</p>
+				<p>But why is water so hostile?</p>
+				<p>Isn't it required for life?</p>
+				<p>Water is great until you have</p>
+				<p>too much, and while there isn't</p>
+				<p>too much water on Earth, there</p>
+				<p>can certainly be too much water</p>
+				<p>above you. This makes it incredibly</p>
+				<p>difficult to explore the ocean.</p>
+				<p>You see, while you can just walk</p>
+				<p>outside and explore the land,</p>
+				<p>you can't just go jump in the</p>
+				<p>ocean and swim around. Sure, you</p>
+				<p>can swim around near the surface,</p>
+				<p>but if you want to go any deeper</p>
+				<p>than a few meters, you're going</p>
+				<p>to need something to breath because,</p>
+				<p>fun fact, you can't really breath water.</p>
+				<p>But, even with some sort of breathing</p>
+				<p>apparatus to help you breath,</p>
+				<p>you still can't go deeper than</p>
+				<p>a few dozen meters. Fortunately,</p>
+				<p>submarines, or rather submersibles,</p>
+				<p>were specifically designed to</p>
+				<p>be submersed in water, making</p>
+				<p>them a great tool for exploring</p>
+				<p>the ocean. But...there's a problem.</p>
+				<p>Actually...there's far more than one.</p>
+				<p>Submersibles are incredibly</p>
+				<p>not good for exploring the ocean.</p>
+				<p>They require a significant amount</p>
+				<p>of knowledge and skill to operate</p>
+				<p>and maintain, so you're probably</p>
+				<p>not going to be building one yourself.</p>
+				<p>And, not only are they extremely</p>
+				<p>expensive themselves, they often</p>
+				<p>require an entire ship for deployment as well.</p>
+				<p>And, even if you can get past</p>
+				<p>all the first obstacles, most</p>
+				<p>submersibles can only go a few</p>
+				<p>hundred or maybe a couple thousand</p>
+				<p>meters which leaves nearly 70</p>
+				<p>percent of the ocean beyond reach.</p>
+				<p>But there's an even bigger problem.</p>
+				<p>Most submersibles, designed for</p>
+				<p>research and exploration, can</p>
+				<p>only travel a mere 3 knots which,</p>
+				<p>to be clear, is about the average</p>
+				<p>walking pace. This isn't a huge</p>
+				<p>issue since, only being able to</p>
+				<p>see a few meters in front of you,</p>
+				<p>you'll probably not want to go</p>
+				<p>any faster. Except...with such</p>
+				<p>a slow speed and low visibility,</p>
+				<p>even if you had a fleet of a</p>
+				<p>thousand submarines, it would</p>
+				<p>take a year just to glance over</p>
+				<p>everything. Well...to glance over</p>
+				<p>the floor of the ocean, not even</p>
+				<p>counting all the space between</p>
+				<p>the surface and the ocean floor.</p>
+				<p>To properly study everything would</p>
+				<p>take far longer. Not to mention</p>
+				<p>the troublesome fact that only</p>
+				<p>a few dozen exploration submersibles</p>
+				<p>have even been built, and many</p>
+				<p>are no longer in service. Granted,</p>
+				<p>there are a lot of robotic underwater</p>
+				<p>vehicles, but most of them are</p>
+				<p>used for industrial purposes,</p>
+				<p>not exploration, and many designed</p>
+				<p>for exploration still can't go</p>
+				<p>much deeper than a human.</p>
+				<p>To put into perspective just</p>
+				<p>how unexplored the ocean is, more</p>
+				<p>people have been to space than</p>
+				<p>have visited the Titanic wreck</p>
+				<p>site, and even fewer have been</p>
+				<p>to the deepest part of the ocean.</p>
+				<p>We know so little about our own</p>
+				<p>ocean that around 2 thousand new</p>
+				<p>marine species are discovered</p>
+				<p>every year or more than 5 every</p>
+				<p>single day.</p>
+				<p>But, despite how much we still</p>
+				<p>don't know about our own planet,</p>
+				<p>there are still some incredible</p>
+				<p>things which we do know.</p>
+				<p>The ocean is home to the longest</p>
+				<p>mountain range on Earth, the Ocean</p>
+				<p>Ridge which has a total length</p>
+				<p>of 80,000 kilometers, about 9</p>
+				<p>times longer than the Andes.</p>
+				<p>The ocean is also home to the</p>
+				<p>largest canyon, the Mariana Trench,</p>
+				<p>which is about 70 times larger</p>
+				<p>than the Grand Canyon.</p>
+				<p>The ocean is home to Mauna Kea</p>
+				<p>, the tallest mountain from base</p>
+				<p>to peak, being about 5% taller than Mt.</p>
+				<p>Everest's height above sea level.</p>
+				<p>The ocean is home to about 80%</p>
+				<p>of Earth's volcanic eruptions.</p>
+				<p>And as far as animals are concerned,</p>
+				<p>the ocean is home to the largest</p>
+				<p>and heaviest animal, the most</p>
+				<p>intelligent animal apart from</p>
+				<p>humans, the largest invertebrate</p>
+				<p>and the animal with the largest</p>
+				<p>eyes (which we currently have</p>
+				<p>no confirmed videos or photos</p>
+				<p>of), and tons of other animals</p>
+				<p>which are amazing! There are over</p>
+				<p>240,000 known marine species which</p>
+				<p>is more than 6 times the number</p>
+				<p>of species of mammals, birds,</p>
+				<p>reptiles, and amphibians combined!</p>
+				<p>Not to mention the possible 2</p>
+				<p>million others which have yet</p>
+				<p>to be discovered. So I think it's</p>
+				<p>safe to say that the ocean is</p>
+				<p>home to some of the most diverse</p>
+				<p>and strangely designed creatures</p>
+				<p>on Earth. Just a few of these</p>
+				<p>being the barreleye fish which</p>
+				<p>has a literal transparent head.</p>
+				<p>Talk about "I can see right through you"...</p>
+				<p>The oarfish which looks like</p>
+				<p>some sort of metallic robot and</p>
+				<p>is the longest bony fish.</p>
+				<p>This is not the creation of</p>
+				<p>some ancient civilization, it's</p>
+				<p>the creation of the white-spotted</p>
+				<p>pufferfish.</p>
+				<p>The Japanese spider crab which</p>
+				<p>is enough to give me nightmares.</p>
+				<p>The giant isopod which...</p>
+				<p>The black dragonfish which is</p>
+				<p>uh...uh...</p>
+				<p>This thing which looks like</p>
+				<p>some sort of deep sea lizard fish</p>
+				<p>something. Oh wait...that's what</p>
+				<p>it's called, well minus the something part.</p>
+				<p>This thing which also seems</p>
+				<p>to struggle eating spaghetti or...</p>
+				<p>wait that's not spaghetti.</p>
+				<p>This guy who somehow has RGB</p>
+				<p>lighting on himself.</p>
+				<p>And thousands of other insane</p>
+				<p>looking creatures which unfortunately</p>
+				<p>just didn't make the list, mainly</p>
+				<p>because...there are thousands.</p>
+				<p>I think it goes without saying,</p>
+				<p>but the mere fact that only 20%</p>
+				<p>or less of the ocean has been</p>
+				<p>explored, and most of this being</p>
+				<p>the deep ocean, there is no telling</p>
+				<p>what amazing creatures, ancient</p>
+				<p>artifacts, geological features,</p>
+				<p>and other stuff is down there.</p>
+				<p>I mean, the black dragonfish wasn't</p>
+				<p>discovered until 1906 and the</p>
+				<p>barreleye fish wasn't discovered</p>
+				<p>until 1939 with many other odd</p>
+				<p>looking marine creatures discovered</p>
+				<p>just within the past couple decades.</p>
+				<p>As fascinating as space is,</p>
+				<p>there is an arguably more diverse</p>
+				<p>and surprising world far closer to us.</p>
+				<p>Although, it feels like anything</p>
+				<p>I look at in the natural world</p>
+				<p>just keeps getting more amazing</p>
+				<p>the more I read or even discover</p>
+				<p>on my own. As impressive as some</p>
+				<p>of the creations of humans are,</p>
+				<p>I always seem to find that it</p>
+				<p>completely fades into nothingness</p>
+				<p>when compared to the creations</p>
+				<p>that came far before them. Even</p>
+				<p>as niche and unnatural as RGB</p>
+				<p>lighting, "Nature had it first."</p>
+			</div>
+			<h2>Thumbnails</h2>
+			<div id="thumbnails">
+				<a href="./thumbnails/28-the_mysterious_planet-1-1080.png" class="tb">
+					<img src="./thumbnails/28-the_mysterious_planet-1-180.png" alt="Thumbnail">
+					<b>December 7, 2024</b>
+				</a>
+				<a href="./thumbnails/28-the_mysterious_planet-2-1080.png" class="tb">
+					<img src="./thumbnails/28-the_mysterious_planet-2-180.png" alt="Thumbnail">
+					<b>December 7, 2024</b>
+				</a>
+				<a href="./thumbnails/28-the_mysterious_planet-1080.png" class="tb">
+					<img src="./thumbnails/28-the_mysterious_planet-180.png" alt="Thumbnail">
+					<b>December 7, 2024</b>
+				</a>
+			</div>
+		</div>
+		<script src="../static-0/main.js"></script>
+		<script src="../static-0/video-sources-pages.js"></script>
+	</body>
+</html>
