@@ -17,18 +17,16 @@
 		<link rel="icon" href="../favicon.png" type="image/x-icon">
 		<link rel="stylesheet" type="text/css" href="../static-0/general.css">
 		<link rel="stylesheet" type="text/css" href="../static-0/main.css">
-		<link rel="stylesheet" type="text/css" href="./solar-system.css">
+		<link rel="stylesheet" type="text/css" href="../static-0/solar-system.css">
 		<script src="../bt-js/bt-js.js"></script>
 	</head>
-	<body onload="loadDemo()" onresize="determineDisplayMenu(), setCanvasSize()">
-		<div id="background-plate"></div>
+	<body onresize="setCanvasSize()">
 		<div id="banner-menu">
 			<nav>
 				<!--====================  LARGE MENU  ====================-->
 				<ul id="large-menu">
 					<li id="nav-home"><a href="/"><img alt="BlenderTimer" src="../static-0/files/images/nav-logohome.png"></a></li>
 				</ul>
-				<div id="revolve-button" title="Current visitors on this site."><script src="https://rf.revolvermaps.com/0/0/3.js?i=5cgjr9bkw1v&b=0&s=40&m=2&cl=555555&co=000000&cd=ffffff&v0=25&v1=100&r=1" async="async"></script></div>
 				<!--====================  SMALL MENU  ====================-->
 				<div id="small-menu" style="display: none" onclick="smallMenuToggle()"><img alt="Menu" src="../static-0/files/images/menu-bars.png"></div>
 				<div id="small-menu-main"></div>
@@ -379,6 +377,6 @@
 			</div>
 		</div>
 		<script src="../static-0//main.js"></script>
-		<script src="./solar-system.js"></script>
+		<script src="../static-0//solar-system.js"></script>
 	</body>
 </html>

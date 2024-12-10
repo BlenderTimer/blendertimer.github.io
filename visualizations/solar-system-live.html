@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en-US">
+	<head>
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-  SYR26MG6YV"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            
+            gtag('config', 'G-SYR26MG6YV');
+        </script>
+        <meta charset="utf-8">
+		<title>Solar System LIVE - BlenderTimer</title>
+		<meta name="description" content="How far the planets in our Solar System have traveled since you loaded this page!">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="icon" href="../favicon.png" type="image/x-icon">
+		<link rel="stylesheet" type="text/css" href="../static-0/general.css">
+		<link rel="stylesheet" type="text/css" href="../static-0/main.css">
+		<link rel="stylesheet" type="text/css" href="../static-0/solar-system-live.css">
+	</head>
+	<body>
+		<div id="banner-menu">
+			<nav>
+				<!--====================  LARGE MENU  ====================-->
+				<ul id="large-menu">
+					<li id="nav-home"><a href="/"><img alt="BlenderTimer" src="../static-0/files/images/nav-logohome.png"></a></li>
+				</ul>
+				<!--====================  SMALL MENU  ====================-->
+				<div id="small-menu" style="display: none" onclick="smallMenuToggle()"><img alt="Menu" src="../static-0/files/images/menu-bars.png"></div>
+				<div id="small-menu-main"></div>
+			</nav>
+			<script src="../static-0/nav-links.js"></script>
+			<script src="../static-0/load-menus.js"></script>
+		</div>
+		<div id="loader" style="width: 100%; height: calc(100% - 50px); top: 50px; left: 0px; position: fixed; z-index: -99999">
+			<img alt="Loading" src="../static-0/files/images/loading-general.gif" style="width: 100px; height: 100px; position: fixed; left: calc(50% - 50px); top: calc(50% - 25px); filter: drop-shadow(0px 0px 15px #000000)">
+		</div>
+		<div id="content-main" style="opacity: 0; transition: 1s ease">
+			<h1 class="title">Solar System LIVE</h1>
+			<p class="description">How far the planets in our Solar System have traveled since you loaded this page!</p>
+			<div id="pdt-container">
+				<!--==========MERCURY==========-->
+				<div class="pdt-planet-block" style="background: #3D342D">
+					<img alt="Mercury" src="../static-0/files/images/planet-mercury-256.png">
+					<b>Mercury</b>
+					<h1>0 km</h1>
+					<h2>0 mi</h2>
+					<div>
+						<b>Orbit Speed:</b>
+						<p>48.9 km/s</p>
+						<i>(30.4 mi/s)</i>
+					</div>
+					<div>
+						<b>Orbital Period:</b>
+						<p>88.0 days</p>
+						<i>(0.2 years)</i>
+					</div>
+				</div>
+				<!--==========VENUS==========-->
+				<div class="pdt-planet-block" style="background: #3F311F">
+					<img alt="Venus" src="../static-0/files/images/planet-venus-256.png">
+					<b>Venus</b>
+					<h1>0 km</h1>
+					<h2>0 mi</h2>
+					<div>
+						<b>Orbit Speed:</b>
+						<p>35.0 km/s</p>
+						<i>(21.8 mi/s)</i>
+					</div>
+					<div>
+						<b>Orbital Period:</b>
+						<p>224.7 days</p>
+						<i>(0.6 years)</i>
+					</div>
+				</div>
+				<!--==========EARTH==========-->
+				<div class="pdt-planet-block" style="background: #0F1E32">
+					<img alt="Earth" src="../static-0/files/images/planet-earth-256.png">
+					<b>Earth</b>
+					<h1>0 km</h1>
+					<h2>0 mi</h2>
+					<div>
+						<b>Orbit Speed:</b>
+						<p>29.8 km/s</p>
+						<i>(18.5 mi/s)</i>
+					</div>
+					<div>
+						<b>Orbital Period:</b>
+						<p>365.3 days</p>
+						<i>(1.0 years)</i>
+					</div>
+				</div>
+				<!--==========MARS==========-->
+				<div class="pdt-planet-block" style="background: #4D1A0D">
+					<img alt="Mars" src="../static-0/files/images/planet-mars-256.png">
+					<b>Mars</b>
+					<h1>0 km</h1>
+					<h2>0 mi</h2>
+					<div>
+						<b>Orbit Speed:</b>
+						<p>24.2 km/s</p>
+						<i>(15.1 mi/s)</i>
+					</div>
+					<div>
+						<b>Orbital Period:</b>
+						<p>687.0 days</p>
+						<i>(1.9 years)</i>
+					</div>
+				</div>
+				<!--==========JUPITER==========-->
+				<div class="pdt-planet-block" style="background: #4B3D2F">
+					<img alt="Jupiter" src="../static-0/files/images/planet-jupiter-256.png">
+					<b>Jupiter</b>
+					<h1>0 km</h1>
+					<h2>0 mi</h2>
+					<div>
+						<b>Orbit Speed:</b>
+						<p>13.1 km/s</p>
+						<i>(8.1 mi/s)</i>
+					</div>
+					<div>
+						<b>Orbital Period:</b>
+						<p>4,332.6 days</p>
+						<i>(11.9 years)</i>
+					</div>
+				</div>
+				<!--==========SATURN==========-->
+				<div class="pdt-planet-block" style="background: #594F43">
+					<img alt="Saturn" src="../static-0/files/images/planet-saturn-256.png">
+					<b>Saturn</b>
+					<h1>0 km</h1>
+					<h2>0 mi</h2>
+					<div>
+						<b>Orbit Speed:</b>
+						<p>9.6 km/s</p>
+						<i>(6.0 mi/s)</i>
+					</div>
+					<div>
+						<b>Orbital Period:</b>
+						<p>10,759.2 days</p>
+						<i>(29.5 years)</i>
+					</div>
+				</div>
+				<!--==========URANUS==========-->
+				<div class="pdt-planet-block" style="background: #2C525E">
+					<img alt="Uranus" src="../static-0/files/images/planet-uranus-256.png">
+					<b>Uranus</b>
+					<h1>0 km</h1>
+					<h2>0 mi</h2>
+					<div>
+						<b>Orbit Speed:</b>
+						<p>6.8 km/s</p>
+						<i>(4.2 mi/s)</i>
+					</div>
+					<div>
+						<b>Orbital Period:</b>
+						<p>30,685.4 days</p>
+						<i>(84.1 years)</i>
+					</div>
+				</div>
+				<!--==========NEPTUNE==========-->
+				<div class="pdt-planet-block" style="background: #11305E">
+					<img alt="Neptune" src="../static-0/files/images/planet-neptune-256.png">
+					<b>Neptune</b>
+					<h1>0 km</h1>
+					<h2>0 mi</h2>
+					<div>
+						<b>Orbit Speed:</b>
+						<p>5.4 km/s</p>
+						<i>(3.4 mi/s)</i>
+					</div>
+					<div>
+						<b>Orbital Period:</b>
+						<p>60,189 days</p>
+						<i>(164.9 years)</i>
+					</div>
+				</div>
+			</div>
+			<div id="dpdt-container">
+				<!--==========CERES==========-->
+				<div class="dpdt-planet-block" style="background: #555555">
+					<img alt="Ceres" src="../static-0/files/images/dwarfplanet-ceres-256.png">
+					<b>Ceres</b>
+					<h1>0 km</h1>
+					<h2>0 mi</h2>
+					<div>
+						<b>Orbit Speed:</b>
+						<p>17.9 km/s</p>
+						<i>(11.1 mi/s)</i>
+					</div>
+					<div>
+						<b>Orbital Period:</b>
+						<p>1,680.3 days</p>
+						<i>(4.6 years)</i>
+					</div>
+				</div>
+				<!--==========PLUTO==========-->
+				<div class="dpdt-planet-block" style="background: #4D3B30">
+					<img alt="Pluto" src="../static-0/files/images/dwarfplanet-pluto-256.png">
+					<b>Pluto</b>
+					<h1>0 km</h1>
+					<h2>0 mi</h2>
+					<div>
+						<b>Orbit Speed:</b>
+						<p>4.6 km/s</p>
+						<i>(2.9 mi/s)</i>
+					</div>
+					<div>
+						<b>Orbital Period:</b>
+						<p>90,425.3 days</p>
+						<i>(247.7 years)</i>
+					</div>
+				</div>
+				<!--==========HAUMEA==========-->
+				<div class="dpdt-planet-block" style="background: #383838">
+					<img alt="Haumea" src="../static-0/files/images/dwarfplanet-haumea-256.png">
+					<b>Haumea</b>
+					<h1>0 km</h1>
+					<h2>0 mi</h2>
+					<div>
+						<b>Orbit Speed:</b>
+						<p>4.5 km/s</p>
+						<i>(2.8 mi/s)</i>
+					</div>
+					<div>
+						<b>Orbital Period:</b>
+						<p>102,532.6 days</p>
+						<i>(280.9 years)</i>
+					</div>
+				</div>
+				<!--==========MAKEMAKE==========-->
+				<div class="dpdt-planet-block" style="background: #40281F">
+					<img alt="Makemake" src="../static-0/files/images/dwarfplanet-makemake-256.png">
+					<b>Makemake</b>
+					<h1>0 km</h1>
+					<h2>0 mi</h2>
+					<div>
+						<b>Orbit Speed:</b>
+						<p>4.4 km/s</p>
+						<i>(2.8 mi/s)</i>
+					</div>
+					<div>
+						<b>Orbital Period:</b>
+						<p>111,234.9 days</p>
+						<i>(304.8 years)</i>
+					</div>
+				</div>
+				<!--==========ERIS==========-->
+				<div class="dpdt-planet-block" style="background: #35312D">
+					<img alt="Eris" src="../static-0/files/images/dwarfplanet-eris-256.png">
+					<b>Eris</b>
+					<h1>0 km</h1>
+					<h2>0 mi</h2>
+					<div>
+						<b>Orbit Speed:</b>
+						<p>3.4 km/s</p>
+						<i>(2.1 mi/s)</i>
+					</div>
+					<div>
+						<b>Orbital Period:</b>
+						<p>205,367.9 days</p>
+						<i>(562.7 years)</i>
+					</div>
+				</div>
+			</div>
+			<div id="sdt-container">
+				<!--==========SUN==========-->
+				<div class="sdt-star-block" style="background: var(--base-back)">
+					<div id="sun-main">
+						<img alt="The Sun" src="../static-0/files/images/star-sun-256.png">
+						<b id="sun-title">The Sun</b>
+					</div>
+					<div>
+						<h1>0 km</h1>
+						<h2>0 mi</h2>
+					</div>
+					<div id="sun-info">
+						<div>
+							<b>Orbit Speed:</b>
+							<p>230.0 km/s</p>
+							<i>(142.9 mi/s)</i>
+						</div>
+						<div>
+							<b>Orbital Period:</b>
+							<p>82,490,000,000 days</p>
+							<i>(226,000,000 years)</i>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="extra-pages-container">
+				<h1 class="title">Some other pages you might enjoy:</h1>
+				<div id="extra-pages">
+					<a href="/nowstream">
+						<img alt="NowStream" src="../static-0/files/images/nowstream.svg" class="misc-content-img">
+						<b>The NowStream</b>
+					</a>
+					<a href="/factsheets">
+						<img alt="Factsheets" src="../static-0/files/images/factsheet.svg" class="misc-content-img">
+						<b>Factsheets</b>
+					</a>
+					<a href="/web-tools">
+						<img alt="Web Tools" src="../static-0/files/images/webtools.svg" class="misc-content-img">
+						<b>Web Tools</b>
+					</a>
+					<a href="/visualizations">
+						<img alt="Visualizations" src="../static-0/files/images/visualizations.svg" class="misc-content-img">
+						<b>Visualizations</b>
+					</a>
+				</div>
+			</div>
+			<div id="donate-promo">
+				<span></span>
+				<p>Do you enjoy 100% free visualizations with no ads?</p>
+				<b>Consider donating!</b>
+				<button onclick="donate('Solar System Live - BlenderTimer')">DONATE</button>
+			</div>
+		</div>
+		<script src="../static-0/main.js"></script>
+		<script src="../static-0/solar-system-live.js"></script>
+	</body>
+</html>

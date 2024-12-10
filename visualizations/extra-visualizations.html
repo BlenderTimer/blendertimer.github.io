@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en-US">
+	<head>
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-  SYR26MG6YV"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            
+            gtag('config', 'G-SYR26MG6YV');
+        </script>
+        <meta charset="utf-8">
+		<title>Extra Visualizations - BlenderTimer</title>
+		<meta name="description" content="Some extra fun, interesting visualizations of various things!">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="icon" href="../favicon.png" type="image/x-icon">
+		<link rel="stylesheet" type="text/css" href="../static-0/general.css">
+		<link rel="stylesheet" type="text/css" href="../static-0/main.css">
+		<link rel="stylesheet" type="text/css" href="../static-0/extra-visualizations.css">
+		<script src="../bt-js/bt-js.js"></script>
+	</head>
+	<body>
+		<div id="banner-menu">
+			<nav>
+				<!--====================  LARGE MENU  ====================-->
+				<ul id="large-menu">
+					<li id="nav-home"><a href="/"><img alt="BlenderTimer" src="../static-0/files/images/nav-logohome.png"></a></li>
+				</ul>
+				<!--====================  SMALL MENU  ====================-->
+				<div id="small-menu" style="display: none" onclick="smallMenuToggle()"><img alt="Menu" src="../static-0/files/images/menu-bars.png"></div>
+				<div id="small-menu-main"></div>
+			</nav>
+			<script src="../static-0/nav-links.js"></script>
+			<script src="../static-0/load-menus.js"></script>
+		</div>
+		<div id="loader" style="width: 100%; height: calc(100% - 50px); top: 50px; left: 0px; position: fixed; z-index: -99999">
+			<img alt="Loading" src="../static-0/files/images/loading-general.gif" style="width: 100px; height: 100px; position: fixed; left: calc(50% - 50px); top: calc(50% - 25px); filter: drop-shadow(0px 0px 15px #000000)">
+		</div>
+		<div id="content-main" style="opacity: 0; transition: 1s ease">
+				<h1 class="title">Extra Visualizations</h1>
+				<p class="description">Some extra interesting visualizations and demonstrations of various things!</p>
+				<div id="how-much-you-weigh-on-each-planet" class="vb">
+					<img onclick="copyVLink(event)" src="../static-0/files/images/icons/copy-link.svg" class="copy-vlink" data-toggle="tooltip" title="Copy Link" alt="Copy Link">
+					<h1 class="title" style="margin: 0px !important;">How much you weigh on each planet</h1>
+					<p class="description">See how much you would weigh on each planet!</p>
+					<div id="hmywoep-container">
+						<div id="hmywoep-input">
+							<input type="number" id="hmywoep-weight-kg" value="" placeholder="Your weight in kilograms">
+							<b>OR</b>
+							<input type="number" id="hmywoep-weight-lb" value="" placeholder="Your weight in pounds">
+						</div>
+						<div id="hmywoep-result">
+							<h1>You would weigh:</h1>
+							<p id="hmywoep-mercury">... on Mercury</p>
+							<p id="hmywoep-venus">... on Venus</p>
+							<p id="hmywoep-mars">... on Mars</p>
+							<p id="hmywoep-jupiter">... on Jupiter</p>
+							<p id="hmywoep-saturn">... on Saturn</p>
+							<p id="hmywoep-uranus">... on Uranus</p>
+							<p id="hmywoep-neptune">... on Neptune</p>
+						</div>
+					</div>
+				</div>
+				<div id="extra-pages-container">
+				<h1 class="title">Some other pages you might enjoy:</h1>
+				<div id="extra-pages">
+					<a href="/nowstream">
+						<img alt="Solar System LIVE" src="../static-0/files/images/solar-system-live.svg" class="misc-content-img">
+						<b>Solar System LIVE</b>
+					</a>
+					<a href="/factsheets">
+						<img alt="Factsheets" src="../static-0/files/images/factsheet.svg" class="misc-content-img">
+						<b>Factsheets</b>
+					</a>
+					<a href="/web-tools">
+						<img alt="Web Tools" src="../static-0/files/images/webtools.svg" class="misc-content-img">
+						<b>Web Tools</b>
+					</a>
+					<a href="/visualizations">
+						<img alt="Visualizations" src="../static-0/files/images/visualizations.svg" class="misc-content-img">
+						<b>Visualizations</b>
+					</a>
+				</div>
+			</div>
+				<div id="donate-promo">
+					<span></span>
+					<p>Do you enjoy 100% free visualizations with no ads?</p>
+					<b>Consider donating!</b>
+					<button onclick="donate('Extra Visualizations - BlenderTimer')">DONATE</button>
+				</div>
+			</div>
+		</div>
+		<script src="../static-0/main.js"></script>
+		<script src="../static-0/extra-visualizations.js"></script>
+	</body>
+</html>
