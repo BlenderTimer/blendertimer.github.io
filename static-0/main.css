@@ -34,6 +34,56 @@
 	font-family: sans-serif;
 }
 
+#extra-pages-container {
+	display: block;
+	margin: 30px 0px 10px 0px;
+	width: 100%;
+}
+
+#extra-pages {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	position: relative;
+	padding: 10px 10px 0px 10px;
+	margin: 0px -10px 0px -10px;
+}
+
+#extra-pages a {
+	display: flex !important;
+	flex-flow: column;
+	align-items: center;
+	justify-content: space-around;
+	position: relative;
+	width: calc((100% / 6) - 10px);
+	margin: 5px !important;
+	border-radius: 5px;
+	overflow: hidden;
+	box-shadow: 0px 0px 10px #0005;
+	background: var(--base-back);
+	border: 2px solid var(--closer-back);
+	padding: 10px;
+	box-sizing: border-box;
+	cursor: pointer !important;
+	text-align: center;
+	transition: 0.2s !important;
+}
+
+#extra-pages a:hover {
+	transform: scaleX(1.05) scaleY(1.05);
+	box-shadow: 0px 0px 10px #000A;
+	text-shadow: none;
+}
+
+#extra-pages a img {
+	max-height: 80px;
+	max-width: 100%;
+}
+
+#extra-pages a b {
+	padding: 5px;
+}
+
 #donate-promo {
 	display: flex;
 	flex-flow: column;
@@ -111,4 +161,34 @@
 	background-size: cover;
 	filter: blur(0.3vw);
 	opacity: 0.2;
+}
+
+@media screen and (max-width: 1900px) {
+	#extra-pages a {
+		width: calc((100% / 5) - 10px);
+	}
+}
+
+@media screen and (max-width: 1200px) {
+	#extra-pages a {
+		width: calc((100% / 4) - 10px);
+	}
+}
+
+@media screen and (max-width: 850px) {
+	#extra-pages a {
+		width: calc((100% / 3) - 10px);
+	}
+}
+
+@media screen and (max-width: 650px) {
+	#extra-pages a {
+		width: calc((100% / 2) - 10px);
+	}
+}
+
+@media screen and (max-width: 400px) {
+	#extra-pages a {
+		width: calc(100% - 10px);
+	}
 }
