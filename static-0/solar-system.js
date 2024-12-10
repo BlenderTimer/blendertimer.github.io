@@ -79,6 +79,7 @@ function loadJourney() {
 function loadDemo() {
 	icDistanceUnit.value = "km";
 	loadJourney();
+	dataInit();
 	setSpeedMultiplier(1);
 	checkbox('grid-checkbox');
 	checkbox('beep-checkbox');
