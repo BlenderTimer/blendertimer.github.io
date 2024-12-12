@@ -346,7 +346,7 @@ const worldEvents = [
 	},
 	{
 		date:"1996-9",
-		title:"<p>The first</p><b>White LED</b><p> by Nichia is released.</p>",
+		title:"<p>The first </p><b>White LED</b><p> by Nichia is released.</p>",
 		description:"The revolution of LED lighting would not have been possible without white LEDs.",
 		major:true,
 		type:"product-launched",
