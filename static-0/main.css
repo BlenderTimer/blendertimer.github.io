@@ -84,6 +84,52 @@
 	padding: 5px;
 }
 
+#extra-pages a i {
+	color: var(--italic-text);
+	font-size: 10pt;
+}
+
+.extra-pages-video img {
+	position: absolute;
+	min-height: 100%;
+	max-height: none !important;
+	width: 100%;
+	border-radius: 3px;
+	opacity: 1;
+	z-index: 0;
+	transition: 0.2s;
+}
+
+.extra-pages-video b {
+	opacity: 0;
+	text-shadow: 0px 0px 7px #000;
+	z-index: 10;
+	transition: 0.2s;
+}
+
+.extra-pages-video i {
+	opacity: 0;
+	z-index: 10;
+	transition: 0.2s;
+}
+
+.extra-pages-video:hover {
+	background: #000 !important;
+}
+
+.extra-pages-video:hover img {
+	opacity: 0.4;
+	filter: blur(6px);
+}
+
+.extra-pages-video:hover b {
+	opacity: 1;
+}
+
+.extra-pages-video:hover i {
+	opacity: 1;
+}
+
 #donate-promo {
 	display: flex;
 	flex-flow: column;
