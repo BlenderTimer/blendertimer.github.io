@@ -63,6 +63,12 @@ const worldEvents = [
 		deaths:40000000,
 	},
 	{
+		date:"1919-1-15",
+		title:"<b>The Great Molasses Flood</b><p> occurs.</p>",
+		description:"A disaster that occurred in Boston's North End, when a molasses tank ruptured and released over 2 million gallons of molasses.",
+		type:"incident",
+	},
+	{
 		date:"1927",
 		title:"<p>The </p><b>world population surpasses 2 billion</b><p>.</p>",
 		description:"",
