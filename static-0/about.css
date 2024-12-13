@@ -554,6 +554,12 @@
 	color: var(--italic-text);
 }
 
+@media screen and (max-width: 1100px) {
+	#logo-timeline {
+		flex-wrap: wrap;
+	}
+}
+
 @media screen and (max-width: 1000px) {
 	#popup-main {
 		width: 70%;
@@ -574,12 +580,6 @@
 	#popup-main {
 		width: calc(100% - 20px);
 		height: calc(100% - 20px);
-	}
-}
-
-@media screen and (max-width: 850px) {
-	#logo-timeline {
-		flex-wrap: wrap;
 	}
 }
 
