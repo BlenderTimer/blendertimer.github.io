@@ -48,9 +48,6 @@ else if (window.location.href.toLowerCase().indexOf("#faq") > -1) {
 //----------
 function closePopup() {
 	document.body.style.width = null;
-	document.getElementById('revolve-button').style.transition = "0s";
-	document.getElementById('revolve-button').style.right = null;
-	setTimeout(function() {document.getElementById('revolve-button').style.transition = "0.2s"}, 1);
 	document.body.style.overflowY = null;
 	popupBack.style.opacity = 0;
 	popupBack.style.pointerEvents = "none";
@@ -75,9 +72,6 @@ function showPopup(popup) {
 	popupMain.style.transform = "scale(1)";
 	var scrollPx = window.innerWidth - document.body.offsetWidth;
 	document.body.style.width = "calc(100% - " + scrollPx + "px)";
-	document.getElementById('revolve-button').style.transition = "0s";
-	document.getElementById('revolve-button').style.right = scrollPx + "px";
-	setTimeout(function() {document.getElementById('revolve-button').style.transition = "0.2s"}, 1);
 	document.body.style.overflowY = "hidden";
 }
 
