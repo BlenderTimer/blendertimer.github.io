@@ -305,6 +305,13 @@ const worldEvents = [
 		type:"product-launched",
 	},
 	{
+		date:"1986-1-28",
+		title:"<p>The</p><b>Space Shuttle Challenger explodes</b><p> after launch.</p>",
+		description:"The Space Shuttle Challenger broke apart 73 seconds into its flight, killing all seven crew members aboard. The spacecraft disintegrated 46,000 feet (14 km) above the Atlantic Ocean, off the coast of Cape Canaveral, Florida. This was the first fatal accident involving an American spacecraft while in flight.",
+		major:true,
+		type:"incident",
+	},
+	{
 		date:"1986-4-26",
 		title:"<p>The </p><b>Chernobyl</b><p> nuclear disaster occurs.</p>",
 		description:"The explosion of reactor number 4 caused the accident, resulting in around 30 deaths.",
