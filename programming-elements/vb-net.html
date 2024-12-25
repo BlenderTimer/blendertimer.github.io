@@ -10,43 +10,42 @@
             
             gtag('config', 'G-SYR26MG6YV');
         </script>
-        <meta charset="UTF-8">
+        <meta charset="utf-8">
 		<title>VB.NET Programming Elements - BlenderTimer</title>
 		<meta name="description" content="Various VB.NET programming elements and examples.">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="icon" href="../favicon.png" type="image/x-icon">
 		<link rel="stylesheet" type="text/css" href="../static-0/general.css">
+		<link rel="stylesheet" type="text/css" href="../static-0/main.css">
 		<link rel="stylesheet" type="text/css" href="./programming-elements.css">
 	</head>
-	<body onload="baseLoad(), determineLayout()" onresize="determineDisplayMenu(), determineLayout()">
-		<div id="warning-banner" onclick="hideWarningBanner()" style="margin: 0px 0px -100px 0px; opacity: 0; display: none"><div id="warning-banner-main"><img alt="Close" id="wb-close" src="./static-0/files/images/close-x.png"><p>UNDER CONSTRUCTION</p></div></div>
-		<div id="background-plate"></div>
+	<body>
 		<div id="banner-menu">
 			<nav>
 				<!--====================  LARGE MENU  ====================-->
 				<ul id="large-menu">
-					<li id="nav-home"><a href="../"><img alt="BlenderTimer" src="../static-0/files/images/nav-logohome.png"></a></li>
+					<li id="nav-home"><a href="/"><img alt="BlenderTimer" src="../static-0/files/images/nav-logohome.png"></a></li>
 				</ul>
-				<div id="revolve-button" title="Current visitors on this site."><script src="https://rf.revolvermaps.com/0/0/3.js?i=5cgjr9bkw1v&b=0&s=40&m=2&cl=555555&co=000000&cd=ffffff&v0=25&v1=100&r=1" async="async"></script></div>
 				<!--====================  SMALL MENU  ====================-->
 				<div id="small-menu" style="display: none" onclick="smallMenuToggle()"><img alt="Menu" src="../static-0/files/images/menu-bars.png"></div>
 				<div id="small-menu-main"></div>
 			</nav>
+			<script src="../static-0/nav-links.js"></script>
+			<script src="../static-0/load-menus.js"></script>
 		</div>
 		<div id="loader" style="width: 100%; height: calc(100% - 50px); top: 50px; left: 0px; position: fixed; z-index: -99999">
 			<img alt="Loading" src="../static-0/files/images/loading-general.gif" style="width: 100px; height: 100px; position: fixed; left: calc(50% - 50px); top: calc(50% - 25px); filter: drop-shadow(0px 0px 15px #000000)">
 		</div>
 		<div id="content-main" style="opacity: 0; transition: 1s ease">
-			<h3>VB.NET Programming Elements</h3>
+			<h1 class="title">VB.NET Programming Elements</h1>
+			<p class="description">Various VB.NET programming elements and examples.</p>
 			<div id="primary-block">
 				<a class="element-block" href="./vb-net/calculate-math-formula-from-a-string">
-					<h4>Calculate Math Formula from a String</h4>
+					<b>Calculate Math Formula from a String</b>
 					<p>How to calculate a math formula from a string (i.e. "1+2").</p>
 				</a>
 			</div>
 		</div>
-		<script src="../static-0/nav-links.js"></script>
-		<script src="../static-0/general.js"></script>
-		<script src="./programming-elements.js"></script>
+		<script src="../static-0/main.js"></script>
 	</body>
 </html>
