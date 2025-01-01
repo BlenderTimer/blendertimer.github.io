@@ -1,6 +1,7 @@
 //----------Constants
 const now = new Date();
 const currentYear = now.getFullYear();
+const worldPopulationByAge = [1.573, 1.561, 1.555, 1.560, 1.569, 1.597, 1.626, 1.651, 1.675, 1.676, 1.675, 1.677, 1.681, 1.672, 1.650, 1.639, 1.626, 1.604, 1.580, 1.558, 1.541, 1.526, 1.512, 1.503, 1.500, 1.485, 1.466, 1.458, 1.455, 1.453, 1.450, 1.446, 1.446, 1.454, 1.486, 1.500, 1.475, 1.461, 1.444, 1.409, 1.374, 1.340, 1.325, 1.304, 1.265, 1.232, 1.192, 1.160, 1.145, 1.136, 1.133, 1.135, 1.129, 1.121, 1.114, 1.096, 1.070, 1.029, 0.991, 0.983, 0.971, 0.965, 0.925, 0.824, 0.759, 0.740, 0.729, 0.729, 0.704, 0.672, 0.646, 0.608, 0.576, 0.539, 0.499, 0.464, 0.421, 0.385, 0.349, 0.303, 0.266, 0.243, 0.221, 0.202, 0.184, 0.163, 0.142, 0.123, 0.105, 0.089, 0.073, 0.058, 0.046, 0.036, 0.028, 0.021, 0.015, 0.010, 0.007, 0.005, 0.008];
 //----------Variables
 var birthYear = document.getElementById('birth-year');
 var birthMonth = document.getElementById('birth-month');
@@ -53,13 +54,20 @@ function limitInput(e, t) {
 		else {
 			element.style.background = null;
 			element.style.boxShadow = null;
-			//if (ns.length == 4) {birthDay.focus()};
 		}
 		element.value = ns;
 		element.selectionStart = ss;
 		element.selectionEnd = se;
 		selectedYear = parseInt(element.value);
-		if (birthDay.value.length > 0 && parseInt(birthDay.value) > daysInMonth(selectedYear, selectedMonth)) {birthDay.value = daysInMonth(selectedYear, selectedMonth);birthDay.style.background = null;birthDay.style.boxShadow = null};
+		if (birthDay.value.length > 0 && parseInt(birthDay.value) > daysInMonth(selectedYear, selectedMonth)) {
+			birthDay.value = daysInMonth(selectedYear, selectedMonth);
+			birthDay.style.background = null;
+			birthDay.style.boxShadow = null;
+		}
+		else {
+			birthDay.style.background = null;
+			birthDay.style.boxShadow = null;
+		}
 		birthDay.placeholder = "1-" + daysInMonth(selectedYear, selectedMonth);
 	}
 	else if (t == "m") {
@@ -172,6 +180,10 @@ function loadTimeline(scrollView) {
 	}
 	//Data section
 	document.getElementById('data-people').children[1].children[1].innerHTML = getShortNumber(getPopulationChange(selectedDate.getTime()));
+	document.getElementById('data-olderthan').children[1].children[1].innerHTML = getOlderThan(Math.floor((now.getTime()-selectedDate.getTime())/31558118400));
+	var bd = getBirthdayPopularity(getBirthday(selectedDate));
+	document.getElementById('data-birthday').children[1].children[1].innerHTML = bd.b;
+	document.getElementById('data-birthday').children[1].children[2].innerHTML = bd.p;
 	document.getElementById('data-wars').children[1].children[1].innerHTML = wars.toLocaleString();
 	document.getElementById('data-inventions').children[1].children[1].innerHTML = inventions.toLocaleString();
 	if (warDeaths == 0 && majorWars > 0) {warDeaths = majorWars*100000}; 
@@ -420,4 +432,64 @@ function filter(e) {
 		element.className = "";
 		loadTimeline(false);
 	}
+}
+
+function getOlderThan(age) {
+	age = age.limit(0, 100);
+	var totalPercentages = 0;
+	for (var i=0; i < age; i++) {
+		totalPercentages += worldPopulationByAge[i];
+	}
+	var result = "%";
+	if (totalPercentages <= 99) {result = totalPercentages.round(0) + "%"}
+	else {result = totalPercentages.round(1) + "%"};
+	return result;
+}
+
+function getBirthdayPopularity(bd) {
+	var pop = 0;
+	for (var i=0; i < popularBirthdays.length; i++) {
+		if (popularBirthdays[i] == bd) {
+			pop = i + 1;
+			break;
+		}
+	}
+	if (pop == 366) {
+		return {b:"",p:"most uncommon birthday!"};
+	}
+	else if (pop >= 266) {
+		return {b:numst(366-pop),p:"most uncommon birthday!"};
+	}
+	else if (pop == 1) {
+		return {b:"",p:"most common birthday!"};
+	}
+	else {
+		return {b:numst(pop),p:"most common birthday!"};
+	}
+}
+
+function numst(num) {
+	if (num.toString().endsWith("0") || num.toString().endsWith("4") || num.toString().endsWith("5") || num.toString().endsWith("6") || num.toString().endsWith("7") || num.toString().endsWith("8") || num.toString().endsWith("9") || num.toString().endsWith("11") || num.toString().endsWith("12") || num.toString().endsWith("13")) {return num.toString() + "th"}
+	else if (num.toString().endsWith("1")) {return num.toString() + "st"}
+	else if (num.toString().endsWith("2")) {return num.toString() + "nd"}
+	else if (num.toString().endsWith("3")) {return num.toString() + "rd"}
+}
+
+function getBirthday(bd) {
+	return getMonth(bd.getMonth()) + " " + bd.getDate();
+}
+
+function getMonth(m) {
+	if (m == 0) {return "January"}
+	else if (m == 1) {return "February"}
+	else if (m == 2) {return "March"}
+	else if (m == 3) {return "April"}
+	else if (m == 4) {return "May"}
+	else if (m == 5) {return "June"}
+	else if (m == 6) {return "July"}
+	else if (m == 7) {return "August"}
+	else if (m == 8) {return "September"}
+	else if (m == 9) {return "October"}
+	else if (m == 10) {return "November"}
+	else if (m == 11) {return "December"}
 }
