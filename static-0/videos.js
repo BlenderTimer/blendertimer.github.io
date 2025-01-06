@@ -400,9 +400,9 @@ const videos = [
 		cc:"1 thousand has 0 sets of 3 zeros succeeding the thousand...obviously. 1 million has 1 set of 3 zeros succeeding the thousand. And continuing up the list we have billion, trillion, quadrillion, quintillion, sextillion, septillion, octillion, nonillion, decillion, undecillion, duodecillion, tredecillion, quattuordecillion, quindecillion, sexdecillion, septendecillion, octodecillion, novemdecillion, vigintillion, unvigintillion, duovigintillion, trevigintillion, quattuorvigintillion, quinvigintillion, sexvigintillion, septenvigintillion, octovigintillion, novemvigintillion, trigintillion, untrigintillion, duotrigintillion, googol, and finally googolplex. This isn't even a googolplex, it's just a white rectangle because a googolplex literally exceeds the number of atoms in the Observable Universe.",
 		youtubeID: "hoYLF1GGEcA",
 		date: "4-1-2025",
-		views10: -1,
-		views30: -1,
-		views1: -1,
-		views24: -1,
+		views10: 21,
+		views30: 69,
+		views1: 143,
+		views24: 1561,
 	},
 ];
