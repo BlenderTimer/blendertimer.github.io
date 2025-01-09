@@ -120,6 +120,7 @@ for (var i=0; i < streamContainerChildren.length; i++) {
 		streamData[streamData.length-1].image = streamContainerChildren[i].children[0].children[0];
 		streamData[streamData.length-1].aspect = streamContainerChildren[i].children[0].children[0].width/streamContainerChildren[i].children[0].children[0].height;
 		streamData[streamData.length-1].particles = [];
+		streamData[streamData.length-1].errors = 0;
 		if (Array.from(streamContainerChildren[i].children[0].children[1].classList).indexOf("anim-in") > -1) {
 			streamData[streamData.length-1].animation = "in";
 		}
@@ -149,7 +150,7 @@ function stream() {
 				document.getElementById(streamData[i].name).querySelector('i').innerHTML = addCommas(toImperial(streamData[i].data*time, streamData[i].imperialConversion).toFixed(streamData[i].precision)) + " " + streamData[i].imperialConversion;
 			}
 		}
-		if (streamData[i].aspect == NaN) {streamData[i].aspect = streamData[i].image.width/streamData[i].image.height};
+		if (streamData[i].aspect == NaN) {streamData[i].errors++;streamData[i].aspect = streamData[i].image.width/streamData[i].image.height};
 		var diff = parseInt(document.getElementById(streamData[i].name).querySelector('b').innerHTML.replace(/,/g, ""))-lastCount;
 		if (streamData[i].c) {
 			var canvas = document.getElementById(streamData[i].name).children[0].children[1];
