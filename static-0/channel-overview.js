@@ -2,19 +2,6 @@ var totalViews = document.getElementById("total-views");
 var totalSubscribers = document.getElementById("total-subscribers");
 var totalVideos = document.getElementById("total-videos");
 
-function determineLayout() {
-    if (window.innerWidth < 700) {
-        totalViews.style.fontSize = ((window.innerWidth / 30) + 16.5).toString() + "pt";
-        totalSubscribers.style.fontSize = ((window.innerWidth / 30) + 16.5).toString() + "pt";
-        totalVideos.style.fontSize = ((window.innerWidth / 30) + 16.5).toString() + "pt";
-    }
-	else {
-		totalViews.style.fontSize = "40pt";
-		totalSubscribers.style.fontSize = "40pt";
-		totalVideos.style.fontSize = "40pt";
-	}
-}
-
 $.get(
     "https://www.googleapis.com/youtube/v3/channels",{
     part: 'statistics',
