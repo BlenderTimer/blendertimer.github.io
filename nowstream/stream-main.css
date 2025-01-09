@@ -286,7 +286,7 @@ body {
 
 .hidden {
 	position: absolute;
-	opacity: 0;
+	opacity: 1;
 }
 
 .stream-visual canvas {
