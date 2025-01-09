@@ -284,6 +284,11 @@ body {
 	max-width: 100%;
 }
 
+.hidden {
+	position: absolute;
+	opacity: 0;
+}
+
 .stream-visual canvas {
 	display: block;
 	max-height: 128px;
