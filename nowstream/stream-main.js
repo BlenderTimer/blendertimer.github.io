@@ -149,6 +149,7 @@ function stream() {
 				document.getElementById(streamData[i].name).querySelector('i').innerHTML = addCommas(toImperial(streamData[i].data*time, streamData[i].imperialConversion).toFixed(streamData[i].precision)) + " " + streamData[i].imperialConversion;
 			}
 		}
+		if (streamData[i].aspect == NaN) {streamData[i].aspect = streamData[i].image.width/streamData[i].image.height};
 		var diff = parseInt(document.getElementById(streamData[i].name).querySelector('b').innerHTML.replace(/,/g, ""))-lastCount;
 		if (streamData[i].c) {
 			var canvas = document.getElementById(streamData[i].name).children[0].children[1];
