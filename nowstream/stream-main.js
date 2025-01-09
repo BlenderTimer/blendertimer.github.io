@@ -65,6 +65,7 @@ for (var i=0; i < streamContainerChildren.length; i++) {
 		streamData[streamData.length-1].imperial = true;
 		streamData[streamData.length-1].imperialConversion = streamContainerChildren[i].querySelector('i').innerHTML.removeBefore(" ", 1).toLowerCase();
 	}
+	streamData[streamData.length-1].aspect = 1;
 	if (canvas) {
 		streamData[streamData.length-1].blank = false;
 		if (streamContainerChildren[i].children[0].children[0].alt == "Blank") {streamData[streamData.length-1].blank = true};
@@ -150,7 +151,7 @@ function stream() {
 				document.getElementById(streamData[i].name).querySelector('i').innerHTML = addCommas(toImperial(streamData[i].data*time, streamData[i].imperialConversion).toFixed(streamData[i].precision)) + " " + streamData[i].imperialConversion;
 			}
 		}
-		if (streamData[i].aspect && isNaN(streamData[i].aspect)) {streamData[i].errors++;streamData[i].aspect = streamData[i].image.width/streamData[i].image.height};
+		if (isNaN(streamData[i].aspect)) {streamData[i].errors++;streamData[i].aspect = streamData[i].image.width/streamData[i].image.height};
 		var diff = parseInt(document.getElementById(streamData[i].name).querySelector('b').innerHTML.replace(/,/g, ""))-lastCount;
 		if (streamData[i].c) {
 			var canvas = document.getElementById(streamData[i].name).children[0].children[1];
