@@ -263,9 +263,6 @@ function addCommas(n) {
 
 function closeSourcePopup() {
 	document.body.style.width = null;
-	document.getElementById('revolve-button').style.transition = "0s";
-	document.getElementById('revolve-button').style.right = null;
-	setTimeout(function() {document.getElementById('revolve-button').style.transition = "0.2s"}, 1);
 	document.body.style.overflowY = null;
 	sourcePopupBack.style.opacity = 0;
 	sourcePopupBack.style.pointerEvents = "none";
@@ -284,9 +281,6 @@ function viewSource(e) {
 	sourcePopupMain.style.transform = "scale(1)";
 	var scrollPx = window.innerWidth - document.body.offsetWidth;
 	document.body.style.width = "calc(100% - " + scrollPx + "px)";
-	document.getElementById('revolve-button').style.transition = "0s";
-	document.getElementById('revolve-button').style.right = scrollPx + "px";
-	setTimeout(function() {document.getElementById('revolve-button').style.transition = "0.2s"}, 1);
 	document.body.style.overflowY = "hidden";
 }
 
