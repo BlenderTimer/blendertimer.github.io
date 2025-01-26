@@ -1,19 +1,75 @@
-#welcome-title {
-	margin-top: 20px;
+#welcome-banner {
+	display: flex;
+	flex-flow: column;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	width: calc(100% + 40px);
+	height: 25vh;
+	min-height: 120px;
+	max-height: 300px;
+	margin: 0px -20px 20px -20px;
+	overflow: hidden;
+}
+
+#welcome-banner-back {
+	display: block;
+	position: absolute;
+	top: -10px;
+	left: -10px;
+	bottom: -10px;
+	right: -10px;
+	background-position: 50% 50%;
+	background-size: cover;
+	filter: blur(4px);
+	z-index: -5;
+}
+
+#welcome-banner-text {
+	display: flex;
+	flex-flow: column;
+	justify-content: center;
+	align-items: center;
+	background: #0003;
+	padding: 0px 25px;
+	border-radius: 100px;
+	box-shadow: 0px 0px 30px 30px #0003;
+}
+
+#welcome-banner-text h1 {
+	display: block;
+	text-align: center;
+	font-size: 30pt;
+	color: #FFF;
+	text-shadow: 0px 0px 10px #000F;
+	font-family: monospace;
+	font-weight: 100;
+	letter-spacing: 3pt;
+	margin: 0px;
+}
+
+#welcome-banner-text p {
+	display: block;
+	text-align: center;
+	font-size: 16.2pt;
+	color: #FFFC;
+	text-shadow: 0px 0px 10px #000F;
+	font-family: sans-serif;
 }
 
 #welcome-text {
-	margin-bottom: 20px;
+	max-width: 2000px;
+	margin: 0px auto 20px auto;
 }
 
 #latest-videos {
 	display: flex;
 	flex-wrap: wrap;
 	position: relative;
-	max-height: 80vh;
+	max-height: min(80vh, 900px);
 	overflow: hidden;
-	padding: 10px 10px 0px 10px;
-	margin: 0px -15px 30px -15px;
+	margin: 10px auto 30px auto;
+	max-width: 2000px;
 }
 
 #latest-videos-end {
@@ -137,8 +193,8 @@
 	display: flex;
 	flex-wrap: wrap;
 	position: relative;
-	padding: 10px 10px 0px 10px;
-	margin: 0px -10px 0px -10px;
+	margin: 10px auto 0px auto;
+	max-width: 2000px;
 }
 
 #main-links a {
@@ -186,13 +242,14 @@
 	width: 100%;
 	height: auto;
 	min-height: 10vw;
-	margin: 0px;
 	text-align: center;
 	border-radius: 10px;
 	background: var(--close-back);
 	box-shadow: 0px 0px 20px rgba(0,0,0,0.3);
 	padding: 20px;
 	box-sizing: border-box;
+	margin: 0px auto;
+	max-width: 2000px;
 }
 
 #stat-map {
