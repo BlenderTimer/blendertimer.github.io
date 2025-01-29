@@ -151,6 +151,13 @@ const worldEvents = [
 		type:"war-begins",
 	},
 	{
+		date:"1958",
+		title:"<b>Super Glue</b><p> is invented</p>",
+		description:"Originally called Eastman 910, super glue was first sold commercially in 1958 (though the chemical was invented in 1942).",
+		major:true,
+		type:"invention",
+	},
+	{
 		date:"1958-7-27",
 		title:"<b>NASA is founded</b><p>.</p>",
 		description:"NASA, previously NACA, is founded.",
