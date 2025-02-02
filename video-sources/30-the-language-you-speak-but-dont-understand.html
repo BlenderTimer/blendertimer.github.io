@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en-US">
+	<head>
+		<!-- Google tag (gtag.js) -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-  SYR26MG6YV"></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
+			
+			gtag('config', 'G-SYR26MG6YV');
+		</script>
+		<meta charset="utf-8">
+		<title>The Language YOU Speak But Don't UNDERSTAND - BlenderTimer Video Sources</title>
+		<meta name="description" content="The video sources for The Language YOU Speak But Don't UNDERSTAND.">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="icon" href="../favicon.png" type="image/x-icon">
+		<link rel="stylesheet" type="text/css" href="../static-0/general.css">
+		<link rel="stylesheet" type="text/css" href="../static-0/main.css">
+		<link rel="stylesheet" type="text/css" href="../static-0/video-sources-pages.css">
+		<script src="../bt-js/bt-js.js"></script>
+		<script src="../static-0/videos.js"></script>
+		<script src="../static-0/jquery-3.6.3.js"></script>
+	</head>
+	<body>
+		<div id="background-plate"></div>
+		<div id="banner-menu">
+			<nav>
+				<!--====================  LARGE MENU  ====================-->
+				<ul id="large-menu">
+					<li id="nav-home"><a href="/"><img alt="BlenderTimer" src="../static-0/files/images/nav-logohome.png"></a></li>
+				</ul>
+				<div id="revolve-button" title="Current visitors on this site."><script src="https://rf.revolvermaps.com/0/0/3.js?i=5cgjr9bkw1v&b=0&s=40&m=2&cl=555555&co=000000&cd=ffffff&v0=25&v1=100&r=1" async="async"></script></div>
+				<!--====================  SMALL MENU  ====================-->
+				<div id="small-menu" style="display: none" onclick="smallMenuToggle()"><img alt="Menu" src="../static-0/files/images/menu-bars.png"></div>
+				<div id="small-menu-main"></div>
+			</nav>
+			<script src="../static-0/nav-links.js"></script>
+			<script src="../static-0/load-menus.js"></script>
+		</div>
+		<div id="loader" style="width: 100%; height: calc(100% - 50px); top: 50px; left: 0px; position: fixed; z-index: -99999">
+			<img alt="Loading" src="../static-0/files/images/loading-general.gif" style="width: 100px; height: 100px; position: fixed; left: calc(50% - 50px); top: calc(50% - 25px); filter: drop-shadow(0px 0px 15px #000000)">
+		</div>
+		<div id="content-main" style="opacity: 0; transition: 1s ease">
+			<h1 id="title">The Language YOU Speak But Don't UNDERSTAND</h1>
+			<p id="published-date">Published: February 1, 2025 at 7:28 PM (PT)</p>
+			<div id="video-info">
+				<div id="vid-info-left">
+					<b class="vit">Video Information</b>
+					<span><b>Length:</b><p>8:01</p><i>(14450 frames/30fps)</i></span>
+					<span><b>Resolution:</b><p>3840x2160</p><i>(4K/UHD)</i></span>
+					<span><b>Most Rewatched:</b><a>N/A</a></span>
+					<span class="spr"></span>
+					<b class="vit">Realtime Statistics</b>
+					<div id="realtime-stats">
+						<span title="Views"><img src="../static-0/files/images/icons/eye.svg" alt="Views"><b>...</b></span>
+						<span title="Likes"><img src="../static-0/files/images/icons/like.svg" alt="Likes"><b>...</b></span>
+						<span title="Comments"><img src="../static-0/files/images/icons/comment.svg" alt="Comments"><b>...</b></span>
+					</div>
+					<span class="spr"></span>
+					<b class="vit">Views in the First</b>
+					<div id="first-views">
+						<span><b>10 Minutes</b><p>...</p></span>
+						<span><b>30 Minutes</b><p>...</p></span>
+						<span><b>Hour</b><p>...</p></span>
+						<span><b>24 Hours</b><p>...</p></span>
+					</div>
+				</div>
+				<span class="spr" id="info1-spr" style="display: none"></span>
+				<div id="vid-info-right">
+					<a id="thumbnail" href="./thumbnails/30-the_language_you_speak_but_dont_understand-1080.png" target="_blank"><img src="./thumbnails/30-the_language_you_speak_but_dont_understand-180.png" alt="Thumbnail"></a>
+					<div id="video-icons">
+						<span><b>Upload ID</b><p>30</p></span>
+						<span><b>Video ID</b><p>18</p></span>
+						<span><b>Type</b><p>Video</p></span>
+					</div>
+					<span id="yt-link"><a href="https://youtu.be/9azR4UaKrDk" target="_blank">https://youtu.be/9azR4UaKrDk</a><img src="../static-0/files/images/icons/copy-link.svg" alt="Copy link" onclick="copyVideoLink(event)"></span>
+					<script type="text/javascript">
+						var fv = document.getElementById('first-views');
+						var video = videos[parseInt(document.getElementById('video-icons').children[0].children[1].textContent)-1];
+						if (video.views10 == -1) {fv.children[0].children[1].innerHTML = "NO DATA"}
+						else {fv.children[0].children[1].innerHTML = video.views10};
+						if (video.views10 == -1) {fv.children[1].children[1].innerHTML = "NO DATA"}
+						else {fv.children[1].children[1].innerHTML = video.views30};
+						if (video.views10 == -1) {fv.children[2].children[1].innerHTML = "NO DATA"}
+						else {fv.children[2].children[1].innerHTML = video.views1};
+						if (video.views10 == -1) {fv.children[3].children[1].innerHTML = "NO DATA"}
+						else {fv.children[3].children[1].innerHTML = video.views24};
+						//Realtime Stats
+						var ytid = document.getElementById('yt-link').children[0].textContent.removeBefore("/", 1, true);
+						$.get(
+							"https://www.googleapis.com/youtube/v3/videos",{
+							part: 'statistics',
+							id: ytid,
+							key: 'AIzaSyDsaGX5mhvqCpI3jWMFFGMmmmB5IUEyUrk'},
+							function(data) {
+								var views = 0;
+								var likes = 0;
+								var comments = 0;
+								views = data.items[0].statistics.viewCount;
+								likes = data.items[0].statistics.likeCount;
+								comments = data.items[0].statistics.commentCount;
+								document.getElementById("realtime-stats").children[0].children[1].innerHTML = views.toLocaleString();
+								document.getElementById("realtime-stats").children[1].children[1].innerHTML = likes.toLocaleString();
+								document.getElementById("realtime-stats").children[2].children[1].innerHTML = comments.toLocaleString();
+							}
+						);
+					</script>
+				</div>
+			</div>
+			<h2>Information Sources</h2>
+			<div id="info-sources" class="sources">
+				<a href="https://www.freshpet.com/blog/can-dogs-sense-human-emotions" target="_blank"><b>Dogs Can Smell Human Emotions</b><p>https://www.freshpet.com/blog/can-dogs-sense-human-emotions</p></a>
+				<a href="https://en.wikipedia.org/wiki/Odor" target="_blank"><b>Odor</b><p>https://en.wikipedia.org/wiki/Odor</p></a>
+				<a href="https://www.nylabone.com/dog101/facts-about-dogs-sense-of-smell" target="_blank"><b>How Far a Dog Can Smell</b><p>https://www.nylabone.com/dog101/facts-about-dogs-sense-of-smell</p></a>
+				<a href="https://phoenixvetcenter.com/blog/214731-how-powerful-is-a-dogs-nose" target="_blank"><b>Dogs Smelling Sensitivity</b><p>https://phoenixvetcenter.com/blog/214731-how-powerful-is-a-dogs-nose</p></a>
+				<a href="https://en.wikipedia.org/wiki/Sphere_(venue)" target="_blank"><b>Las Vegas Sphere</b><p>https://en.wikipedia.org/wiki/Sphere_(venue)</p></a>
+				<a href="https://www.discoverwildlife.com/animal-facts/which-animal-has-the-best-sense-of-smell" target="_blank"><b>Silkmoth Sense of Smell</b><p>https://www.discoverwildlife.com/animal-facts/which-animal-has-the-best-sense-of-smell</p></a>
+				<a><b>Needle Size (calculated)</b><p>Measured at 41mm x 0.7mm x 0.7mm, volume of 20mm³, area of 28.7mm²</p></a>
+				<a href="https://www.machinefinder.com/ww/en-US/faq/hay-bale-dimensions" target="_blank"><b>Size of a Hay Bale</b><p>https://www.machinefinder.com/ww/en-US/faq/hay-bale-dimensions</p></a>
+				<a href="https://en.wikipedia.org/wiki/Sahara" target="_blank"><b>Size of the Sahara Desert</b><p>https://en.wikipedia.org/wiki/Sahara</p></a>
+				<a href="https://libraries.colorado.edu/2020/05/01/science-behind-smell-books-explained-preservation" target="_blank"><b>How Something Emits a Smell</b><p>https://libraries.colorado.edu/2020/05/01/science-behind-smell-books-explained-preservation</p></a>
+				<a href="https://en.wikipedia.org/wiki/Trail_pheromone" target="_blank"><b>Trail Pheromones</b><p>https://en.wikipedia.org/wiki/Trail_pheromone</p></a>
+				<a href="https://en.wikipedia.org/wiki/Channel_catfish" target="_blank"><b>Channel Catfish Pheromones</b><p>https://en.wikipedia.org/wiki/Channel_catfish</p></a>
+				<a href="https://www.timescolonist.com/opinion/monique-keiran-silk-moths-scentsibility-is-off-the-charts-4691060" target="_blank"><b>Silkmoths Smelling Distance</b><p>https://www.timescolonist.com/opinion/monique-keiran-silk-moths-scentsibility-is-off-the-charts-4691060</p></a>
+				<a href="https://www.livescience.com/43673-weird-facts-about-polar-bears.html" target="_blank"><b>Polar Bears Smelling Distance</b><p>https://www.livescience.com/43673-weird-facts-about-polar-bears.html</p></a>
+				<a href="https://www.science.org/doi/10.1126/science.1249168" target="_blank"><b>Humans Can Detect 1 Trillion Scents</b><p>https://www.science.org/doi/10.1126/science.1249168</p></a>
+			</div>
+			<h2>Graphic Sources</h2>
+			<div id="graphic-sources" class="sources">
+				<a href="https://pixabay.com/vectors/person-man-stand-human-arms-legs-8238232" target="_blank"><b>Man Standing (Daniel Roberts)</b><p>https://pixabay.com/vectors/person-man-stand-human-arms-legs-8238232</p></a>
+				<a><b>Fetus (Daniel Roberts)</b><p>N/A</p></a>
+				<a><b>Grave Stone (Daniel Roberts)</b><p>N/A</p></a>
+				<a><b>Human Nose (Daniel Roberts)</b><p>N/A</p></a>
+				<a><b>German Shepherd (Daniel Roberts)</b><p>N/A</p></a>
+				<a href="https://pixabay.com/vectors/man-stand-human-person-arms-legs-9095533" target="_blank"><b>Man Standing-Side (Daniel Roberts)</b><p>https://pixabay.com/vectors/man-stand-human-person-arms-legs-9095533</p></a>
+				<a><b>Deaed Pixel (Daniel Roberts)</b><p>N/A</p></a>
+				<a><b>Las Vegas Sphere (Daniel Roberts)</b><p>N/A</p></a>
+				<a><b>Silkmoth (Daniel Roberts)</b><p>N/A</p></a>
+				<a><b>Needle (Daniel Roberts)</b><p>N/A</p></a>
+				<a><b>Hay Bale (Daniel Roberts)</b><p>N/A</p></a>
+				<a href="https://visibleearth.nasa.gov/images/74092/july-blue-marble-next-generation" target="_blank"><b>World Map (NASA-Visible Earth)</b><p>https://visibleearth.nasa.gov/images/74092/july-blue-marble-next-generation</p></a>
+				<a><b>Stupid Website (Daniel Roberts)</b><p>N/A</p></a>
+				<a><b>Donut (Daniel Roberts)</b><p>N/A</p></a>
+				<a href="https://pixabay.com/vectors/water-drop-liquid-fluid-nature-8904702" target="_blank"><b>Water Drop (Daniel Roberts)</b><p>https://pixabay.com/vectors/water-drop-liquid-fluid-nature-8904702</p></a>
+				<a><b>Human Head Cross-section (Daniel Roberts)</b><p>N/A</p></a>
+				<a href="https://pixabay.com/vectors/brain-human-anatomy-organ-body-7822205" target="_blank"><b>Human Brain (Daniel Roberts)</b><p>https://pixabay.com/vectors/brain-human-anatomy-organ-body-7822205</p></a>
+				<a><b>Crying Face (Daniel Roberts)</b><p>N/A</p></a>
+				<a href="https://pixabay.com/vectors/thumbs-up-emoji-smiley-icon-7648171" target="_blank"><b>Thumbs Up Face (Daniel Roberts)</b><p>https://pixabay.com/vectors/thumbs-up-emoji-smiley-icon-7648171</p></a>
+				<a><b>Thumbs Down Face (Daniel Roberts)</b><p>N/A</p></a>
+				<a href="https://pixabay.com/vectors/tomato-food-vegetable-fruit-fresh-8655799" target="_blank"><b>Tomato (Daniel Roberts)</b><p>https://pixabay.com/vectors/tomato-food-vegetable-fruit-fresh-8655799</p></a>
+				<a><b>Honeybee (Daniel Roberts)</b><p>N/A</p></a>
+				<a href="https://pixabay.com/vectors/ant-insect-animal-nature-wildlife-8648911" target="_blank"><b>Ant (Daniel Roberts)</b><p>https://pixabay.com/vectors/ant-insect-animal-nature-wildlife-8648911</p></a>
+				<a><b>Catfish (Daniel Roberts)</b><p>N/A</p></a>
+				<a><b>Side-eye Face (Daniel Roberts)</b><p>N/A</p></a>
+				<a><b>Polar Bear (Daniel Roberts)</b><p>N/A</p></a>
+				<a href="https://blendertimer.com/nowstream" target="_blank"><b>NowStream (Daniel Roberts)</b><p>https://blendertimer.com/nowstream</p></a>
+			</div>
+			<h2>Audio Sources</h2>
+			<div id="audio-sources" class="sources">
+				<a><b>Narration (Daniel Roberts)</b><p>N/A</p></a>
+				<a href="https://pixabay.com/music/main-title-rise-of-the-enemy-full-14302" target="_blank"><b>Rise of the Enemy (Daniel Roberts)</b><p>https://pixabay.com/music/main-title-rise-of-the-enemy-full-14302</p></a>
+				<a href="https://pixabay.com/sound-effects/helicopter-flyby-8114" target="_blank"><b>Helicopter Flyby (Daniel Roberts)</b><p>https://pixabay.com/sound-effects/helicopter-flyby-8114</p></a>
+				<a><b>Hit Bang-3 (Daniel Roberts)</b><p>N/A</p></a>
+				<a><b>Fast-Hit-2 (Daniel Roberts)</b><p>N/A</p></a>
+				<a href="https://pixabay.com/music/ambient-to-the-galaxy-10734" target="_blank"><b>To the Galaxy (Daniel Roberts)</b><p>https://pixabay.com/music/ambient-to-the-galaxy-10734</p></a>
+				<a href="https://pixabay.com/music/suspense-escape-of-triumph-epic-cinematic-127029" target="_blank"><b>Escape of Triumph-Epic Cinematic (Daniel Roberts)</b><p>https://pixabay.com/music/suspense-escape-of-triumph-epic-cinematic-127029</p></a>
+				<a><b>Rumble-1 (Daniel Roberts)</b><p>N/A</p></a>
+				<a href="https://www.youtube.com/watch?v=rIPq9Fl5r44" target="_blank"><b>Discord Chime/Notification (L Y)</b><p>https://www.youtube.com/watch?v=rIPq9Fl5r44</p></a>
+				<a href="https://pixabay.com/sound-effects/typing-274133" target="_blank"><b>Typing (dawid3292)</b><p>https://pixabay.com/sound-effects/typing-274133</p></a>
+				<a><b>01-Glass Bottle hit (Daniel Roberts)</b><p>N/A</p></a>
+				<a href="https://pixabay.com/music/main-title-revolution-epic-cinematic-111025" target="_blank"><b>Revolution-Epic Cinematic (Daniel Roberts)</b><p>https://pixabay.com/music/main-title-revolution-epic-cinematic-111025</p></a>
+				<a><b>Hit-3 (Daniel Roberts)</b><p>N/A</p></a>
+				<a href="https://pixabay.com/sound-effects/object-flyby-8115" target="_blank"><b>Object Flyby (Daniel Roberts)</b><p>https://pixabay.com/sound-effects/object-flyby-8115</p></a>
+				<a href="https://pixabay.com/music/main-title-fallen-comrade-20788" target="_blank"><b>Fallen Comrade (Daniel Roberts)</b><p>https://pixabay.com/music/main-title-fallen-comrade-20788</p></a>
+			</div>
+			<div id="cc"><h2>Subtitles</h2><a href="./cc/30.txt" download="The Language YOU Speak But Don't UNDERSTAND - Subtitles.txt" title="Download subtitles"><img src="../static-0/files/images/icons/download.svg" alt="Download"></a></div>
+			<div id="subtitles">
+				<p>You're currently speaking a language,</p>
+				<p>a language which you don't even</p>
+				<p>understand. In fact, you might</p>
+				<p>not even be able to detect it.</p>
+				<p>But despite this, you speak this</p>
+				<p>language 24/7. You speak this</p>
+				<p>language before you're born and</p>
+				<p>even after you're dead. You never</p>
+				<p>stop speaking this language until</p>
+				<p>you cease to exist. This language</p>
+				<p>is scent. We normally think of</p>
+				<p>something's scent as smelling</p>
+				<p>good or bad, or if you have an</p>
+				<p>even better nose, you may be able</p>
+				<p>to tell the difference between</p>
+				<p>things which stink,  smell sweet,</p>
+				<p>sour, minty and other slightly</p>
+				<p>more complex smells. But there</p>
+				<p>is so much more to scents than</p>
+				<p>just these, so much more in fact,</p>
+				<p>that you can almost consider</p>
+				<p>it an entire language. You, whether</p>
+				<p>dead or alive, are constantly</p>
+				<p>emitting a certain scent, no matter</p>
+				<p>how much deodorant you put on</p>
+				<p>this morning. But did you know</p>
+				<p>that you actually have relatively</p>
+				<p>fast control over how you smell?</p>
+				<p>Well, not like whether are not</p>
+				<p>you stink, but the other scents</p>
+				<p>you emit. Mainly, your emotional scents.</p>
+				<p>Compared to most other mammals,</p>
+				<p>humans have pretty poor olfaction</p>
+				<p>(or sense of smell), so we never</p>
+				<p>notice that someone smells different</p>
+				<p>when they're scared or angry.</p>
+				<p>Dogs, on the other hand, can</p>
+				<p>smell these differences because</p>
+				<p>they have an incredible sense</p>
+				<p>of smell. Their sense of smell</p>
+				<p>is so good, in fact, that they</p>
+				<p>can smell a person from up to</p>
+				<p>20 kilometers away or detect substances</p>
+				<p>at concentrations as low as 1</p>
+				<p>part per trillion. In human terms,</p>
+				<p>that's like being able to immediately</p>
+				<p>spot the one dead pixel on the</p>
+				<p>Las Vegas Sphere's interior screen.</p>
+				<p>*clears throat* Sorry, in human</p>
+				<p>terms, that's like being able</p>
+				<p>to immediately spot the one dead</p>
+				<p>pixel on one of 3906 Las Vegas</p>
+				<p>Sphere interior screens. But if</p>
+				<p>you think that's crazy, just wait</p>
+				<p>to you hear about silkmoths. Actually,</p>
+				<p>no need to wait, 'cause I'm gonna</p>
+				<p>tell you right now. A male silkmoth</p>
+				<p>can detect certain smells at concentrations</p>
+				<p>as low as 1 part per 100 quadrillion.</p>
+				<p>In human terms, that's like being</p>
+				<p>able to find a needle in a literal</p>
+				<p>haystack...*clears throat* a haystack</p>
+				<p>of 14 billion bales or about like</p>
+				<p>finding the 3 needles I put in</p>
+				<p>random places somewhere in the</p>
+				<p>Sahara Desert or like finding</p>
+				<p>the actual content on this webpage</p>
+				<p>that I can't even...</p>
+				<p>But how does smelling even work?</p>
+				<p>How does something emit a smell</p>
+				<p>and what is in my nose that allows</p>
+				<p>me to somehow detect and generally</p>
+				<p>identify that smell? Well, that</p>
+				<p>is about as complex a question</p>
+				<p>as asking me what I'm doing.</p>
+				<p>To explain it in a somewhat</p>
+				<p>basic way, an object emits a smell</p>
+				<p>or odor because it has volatile</p>
+				<p>organic compounds, or VOCs. These</p>
+				<p>compounds easily evaporate at</p>
+				<p>room temperature, hence the term</p>
+				<p>volatile. Kind of how water evaporates,</p>
+				<p>except, unlike water, these compounds</p>
+				<p>are composed of odorous molecules,</p>
+				<p>causing the compound to smell.</p>
+				<p>As the compound evaporates, it</p>
+				<p>releases these odorous molecules</p>
+				<p>into the air. Then these molecules</p>
+				<p>bind to receptor proteins extending</p>
+				<p>from cilia in your nose which</p>
+				<p>are connected to olfactory receptor neurons.</p>
+				<p>This causes electrical signals</p>
+				<p>to travel from the olfactory nerves</p>
+				<p>to the olfactory bulb which is</p>
+				<p>part of the olfactory cortex.</p>
+				<p>The olfactory cortex is the part</p>
+				<p>of the brain which processes and</p>
+				<p>interprets smells. The smells</p>
+				<p>are largely interpreted by associating</p>
+				<p>them with memories or emotions</p>
+				<p>which is why some odors can smell</p>
+				<p>good to one person and bad to another.</p>
+				<p>It simply depends on what memory</p>
+				<p>your brain connects the smell to.</p>
+				<p>We can tell the difference between</p>
+				<p>smells because of the signals</p>
+				<p>sent from the olfactory receptors,</p>
+				<p>such as what combination of signals</p>
+				<p>were sent. For example, if I showed</p>
+				<p>you this sequence of red and white</p>
+				<p>squares, you'd have no idea what it was.</p>
+				<p>But if we arrange those squares</p>
+				<p>like this, you can pretty easily</p>
+				<p>tell what the squares mean. As</p>
+				<p>you learn more and more sequences</p>
+				<p>of squares, you will be able to</p>
+				<p>quickly identify any number or</p>
+				<p>shape simply by the sequence of squares.</p>
+				<p>This is basically the same with smell.</p>
+				<p>At the beginning of your life</p>
+				<p>you associate certain signals</p>
+				<p>with certain objects, such as</p>
+				<p>food, and then you remember these</p>
+				<p>connections for years, thus allowing</p>
+				<p>you to determine what a smell is from.</p>
+				<p>This is really a gross oversimplification</p>
+				<p>because there is so much more</p>
+				<p>that this whole smelling process</p>
+				<p>involves, but I think if I were</p>
+				<p>to fully explain it, both you</p>
+				<p>and I would look something like this.</p>
+				<p>Anyway, smells can be used as</p>
+				<p>a way of communicating silently</p>
+				<p>and invisibly. These types of</p>
+				<p>odors are called pheromones. Many</p>
+				<p>animals use pheromones to communicate</p>
+				<p>between each other. Honeybees</p>
+				<p>release a pheromone when the hive</p>
+				<p>is in danger, silently summoning</p>
+				<p>more bees to their aid. Ants release</p>
+				<p>pheromones to mark paths to food</p>
+				<p>sources, thus giving a fast, accurate,</p>
+				<p>and completely invisible message</p>
+				<p>to the other ants. Even some aquatic</p>
+				<p>animals use pheromones. Some catfish,</p>
+				<p>for example, release a pheromone,</p>
+				<p>when in danger, which alerts</p>
+				<p>other nearby catfish. It has been</p>
+				<p>found that humans also release</p>
+				<p>pheromones or rather emotion and</p>
+				<p>mood related scents, the question</p>
+				<p>is, can we detect them? While</p>
+				<p>we're pretty certain that humans</p>
+				<p>can't detect them consciously,</p>
+				<p>it is still unknown if we can</p>
+				<p>detect them subconsciously. Have</p>
+				<p>you ever had that feeling that</p>
+				<p>someone was watching you, but</p>
+				<p>you couldn't see anyone, and then</p>
+				<p>later on you find out that there</p>
+				<p>was in fact someone watching you?</p>
+				<p>Pheromones and other smells can</p>
+				<p>travel insane distances. Some</p>
+				<p>moths release pheromones which</p>
+				<p>can travel hundreds of meters</p>
+				<p>possibly even several kilometers</p>
+				<p>and polar bears can smell seals</p>
+				<p>from over 30 kilometers away!</p>
+				<p>What if humans emit odors which</p>
+				<p>basically send an invisible message</p>
+				<p>that tells everything going on</p>
+				<p>in their mind, such as what they're</p>
+				<p>looking at, and then you subconsciously</p>
+				<p>detect those odors so that you</p>
+				<p>can tell that someone is watching you.</p>
+				<p>Humans can detect around 1 trillion</p>
+				<p>different smells, more than enough</p>
+				<p>smells to get a pretty good idea</p>
+				<p>of what someone is thinking if</p>
+				<p>thoughts do indeed produce pheromones.</p>
+				<p>It sounds completely outrageous,</p>
+				<p>and for the most part it is,</p>
+				<p>but we technically haven't proven</p>
+				<p>that this isn't true. Although,</p>
+				<p>since animals generally can't</p>
+				<p>tell if you're looking at them,</p>
+				<p>and they have much better noses</p>
+				<p>than humans, it's unlikely that</p>
+				<p>this is the case. That being said,</p>
+				<p>maybe they just can't interpret</p>
+				<p>our odors to know what they mean.</p>
+				<p>I, personally, feel like there</p>
+				<p>is something that allows you to</p>
+				<p>subconsciously detect someone's</p>
+				<p>presence even at a significant</p>
+				<p>distance, whether that be the</p>
+				<p>faintest air currents from their</p>
+				<p>breath, the faintest temperature</p>
+				<p>change from their body heat, the</p>
+				<p>faintest electromagnetic wave</p>
+				<p>from their brain, or the faintest</p>
+				<p>scents they're releasing.</p>
+				<p>Whatever the case, the extremely</p>
+				<p>complex design of our nose and</p>
+				<p>brain, and really the whole smelling</p>
+				<p>process, really demonstrates just</p>
+				<p>how much stuff is happening all</p>
+				<p>around us and inside us that we</p>
+				<p>so easily take for granted. From</p>
+				<p>the polar bear smelling 30 kilometers</p>
+				<p>away to the silkmoth with its</p>
+				<p>3 needles in the Sahara Desert</p>
+				<p>like odor detection, I feel like</p>
+				<p>my olfactory acuity is very much lacking.</p>
+				<p>But at least I'm not stuck in</p>
+				<p>the arctic being seally or stuck</p>
+				<p>trying to find a moth in the dark</p>
+				<p>some hundred meters away by smell.</p>
+			</div>
+			<h2>Thumbnails</h2>
+			<div id="thumbnails">
+				<a href="./thumbnails/30-the_language_you_speak_but_dont_understand-1-1080.png" class="tb">
+					<img src="./thumbnails/30-the_language_you_speak_but_dont_understand-1-180.png" alt="Thumbnail">
+					<b>February 1, 2025</b>
+				</a>
+				<a href="./thumbnails/30-the_language_you_speak_but_dont_understand-2-1080.png" class="tb">
+					<img src="./thumbnails/30-the_language_you_speak_but_dont_understand-2-180.png" alt="Thumbnail">
+					<b>February 1, 2025</b>
+				</a>
+				<a href="./thumbnails/30-the_language_you_speak_but_dont_understand-1080.png" class="tb">
+					<img src="./thumbnails/30-the_language_you_speak_but_dont_understand-180.png" alt="Thumbnail">
+					<b>February 1, 2025</b>
+				</a>
+			</div>
+		</div>
+		<script src="../static-0/main.js"></script>
+		<script src="../static-0/video-sources-pages.js"></script>
+	</body>
+</html>
