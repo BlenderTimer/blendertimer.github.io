@@ -775,6 +775,13 @@ const worldEvents = [
 		type:"product-launched",
 	},
 	{
+		date:"2019-4-10",
+		title:"<p>The </p><b>first picture of a black hole</b><p> is taken.</p>",
+		description:"Using the Event Horizon Telescope, scientists obtained an image of the black hole at the center of the galaxy M87.",
+		major:false,
+		type:"human-accomplishment",
+	},
+	{
 		date:"2020-3-11",
 		title:"<p>A </p><b>COVID-19 pandemic</b><p> is declared by the World Health Organization.</p>",
 		description:"The World Health Organization (WHO) declares the outbreak of COVID-19 a global pandemic. The following months and years see a major rise in global restrictions as well as major changes in the work force and overall society. The origin and cause of the pandemic is one of the most controversial in history.",
