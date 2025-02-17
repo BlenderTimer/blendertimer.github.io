@@ -14,7 +14,7 @@
 		<title>You Can't Touch Anything - BlenderTimer Video Sources</title>
 		<meta name="description" content="The video sources for You Can't Touch Anything.">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<link rel="icon" href="../favicon.png" type="image/x-icon">
+		<link rel="icon" href="../favicon.png">
 		<link rel="stylesheet" type="text/css" href="../static-0/general.css">
 		<link rel="stylesheet" type="text/css" href="../static-0/main.css">
 		<link rel="stylesheet" type="text/css" href="../static-0/video-sources-pages.css">
@@ -22,15 +22,13 @@
 		<script src="../static-0/videos.js"></script>
 		<script src="../static-0/jquery-3.6.3.js"></script>
 	</head>
-	<body onresize="determineDisplayMenu()">
-		<div id="background-plate"></div>
+	<body>
 		<div id="banner-menu">
 			<nav>
 				<!--====================  LARGE MENU  ====================-->
 				<ul id="large-menu">
 					<li id="nav-home"><a href="/"><img alt="BlenderTimer" src="../static-0/files/images/nav-logohome.png"></a></li>
 				</ul>
-				<div id="revolve-button" title="Current visitors on this site."><script src="https://rf.revolvermaps.com/0/0/3.js?i=5cgjr9bkw1v&b=0&s=40&m=2&cl=555555&co=000000&cd=ffffff&v0=25&v1=100&r=1" async="async"></script></div>
 				<!--====================  SMALL MENU  ====================-->
 				<div id="small-menu" style="display: none" onclick="smallMenuToggle()"><img alt="Menu" src="../static-0/files/images/menu-bars.png"></div>
 				<div id="small-menu-main"></div>
@@ -49,7 +47,7 @@
 					<b class="vit">Video Information</b>
 					<span><b>Length:</b><p>4:56</p><i>(8882 frames/30fps)</i></span>
 					<span><b>Resolution:</b><p>1920x1080</p><i>(FHD)</i></span>
-					<span><b>Most Rewatched:</b><a href="https://youtu.be/KVa0i_etXck?t=45">0:45 to 0:54</a></span>
+					<span><b>Most Rewatched:</b><a href="https://youtu.be/KVa0i_etXck?t=45" target="_blank">0:45 to 0:54</a></span>
 					<span class="spr"></span>
 					<b class="vit">Realtime Statistics</b>
 					<div id="realtime-stats">
@@ -68,13 +66,13 @@
 				</div>
 				<span class="spr" id="info1-spr" style="display: none"></span>
 				<div id="vid-info-right">
-					<a id="thumbnail" href="./thumbnails/3-you_cant_touch_anything-1080.png" target="blank"><img src="./thumbnails/3-you_cant_touch_anything-180.png" alt="Thumbnail"></a>
+					<a id="thumbnail" href="./thumbnails/3-you_cant_touch_anything-1080.png" target="_blank"><img src="./thumbnails/3-you_cant_touch_anything-180.png" alt="Thumbnail"></a>
 					<div id="video-icons">
 						<span><b>Upload ID</b><p>3</p></span>
 						<span><b>Video ID</b><p>3</p></span>
 						<span><b>Type</b><p>Video</p></span>
 					</div>
-					<span id="yt-link"><a href="https://youtu.be/KVa0i_etXck" target="blank">https://youtu.be/KVa0i_etXck</a><img src="../static-0/files/images/icons/copy-link.svg" alt="Copy link" onclick="copyVideoLink(event)"></span>
+					<span id="yt-link"><a href="https://youtu.be/KVa0i_etXck" target="_blank">https://youtu.be/KVa0i_etXck</a><img src="../static-0/files/images/icons/copy-link.svg" alt="Copy link" onclick="copyVideoLink(event)"></span>
 					<script type="text/javascript">
 						var fv = document.getElementById('first-views');
 						var video = videos[parseInt(document.getElementById('video-icons').children[0].children[1].textContent)-1];
@@ -110,51 +108,48 @@
 			</div>
 			<h2>Information Sources</h2>
 			<div id="info-sources" class="sources">
-				<a href="https://education.jlab.org/qa/atomicstructure_11.html" target="blank"><b>All Objects are made up of Atoms</b><p>https://education.jlab.org/qa/atomicstructure_11.html</p></a>
-				<a href="https://alexaanswers.amazon.com/question/6IzRZ9358VKz9iImkO4Rih/ref=cbqa_pqd_sim_q" target="blank"><b>Atoms in the Human Body</b><p>https://alexaanswers.amazon.com/question/6IzRZ9358VKz9iImkO4Rih/ref=cbqa_pqd_sim_q</p></a>
-				<a href="https://simple.wikipedia.org/wiki/Nuclear_physics" target="blank"><b>Atom Facts</b><p>https://simple.wikipedia.org/wiki/Nuclear_physics</p></a>
-				<a href="http://astronomy.nmsu.edu/tharriso/ast110/Ast105week07.html" target="blank"><b>Electrons orbit like solar system (outdated)</b><p>http://astronomy.nmsu.edu/tharriso/ast110/Ast105week07.html</p></a>
-				<a href="https://en.wikipedia.org/wiki/Lithium_atom" target="blank"><b>Lithium Atom</b><p>https://en.wikipedia.org/wiki/Lithium_atom</p></a>
-				<a href="https://sciencenotes.org/list-words-made-periodic-table-element-symbols" target="blank"><b>Words made from the Periodic Table</b><p>https://sciencenotes.org/list-words-made-periodic-table-element-symbols</p></a>
-				<a href="https://www.amnh.org/explore/ology/physics/how-to-read-the-periodic-table" target="blank"><b>How the Periodic Table Works</b><p>https://www.amnh.org/explore/ology/physics/how-to-read-the-periodic-table</p></a>
-				<a href="http://chemed.chem.purdue.edu/genchem/topicreview/bp/ch6/atom_emrframe.html" target="blank"><b>Atom Structure</b><p>http://chemed.chem.purdue.edu/genchem/topicreview/bp/ch6/atom_emrframe.html</p></a>
-				<a href="https://en.wikipedia.org/wiki/Hydrogen_atom" target="blank"><b>Hydrogen Atom</b><p>https://en.wikipedia.org/wiki/Hydrogen_atom</p></a>
-				<a href="https://en.wikipedia.org/wiki/Oganesson" target="blank"><b>Oganesson Atom</b><p>https://en.wikipedia.org/wiki/Oganesson</p></a>
-				<a href="http://www.chem.uiuc.edu/rogers/Text4/Tx42/tx42.html" target="blank"><b>Isotopes</b><p>http://www.chem.uiuc.edu/rogers/Text4/Tx42/tx42.html</p></a>
-				<a href="https://homework.study.com/explanation/when-is-an-isotope-considered-stable-a-the-isotope-does-not-emit-a-form-of-radiation-b-the-isotope-s-half-life-is-longer-than-the-average-human-life-c-the-isotope-emits-some-form-of-radiation.html" target="blank"><b>Half Life</b><p>https://homework.study.com/explanation/when-is-an-isotope-considered-stable-a-the-isotope-does-not-emit-a-form-of-radiation-b-the-isotope-s-half-life-is-longer-than-the-average-human-life-c-the-isotope-emits-some-form-of-radiation.html</p></a>
-				<a href="https://en.wikipedia.org/wiki/Atomic_radii_of_the_elements_(data_page)" target="blank"><b>Size of Helium</b><p>https://en.wikipedia.org/wiki/Atomic_radii_of_the_elements_(data_page)</p></a>
-				<a href="https://en.wikipedia.org/wiki/Atomic_radii_of_the_elements_(data_page)" target="blank"><b>Size of Caesium</b><p>https://en.wikipedia.org/wiki/Atomic_radii_of_the_elements_(data_page)</p></a>
-				<a href="https://www.businessinsider.in/science/you-could-fit-the-entire-human-race-into-a-sugar-cube-and-13-other-facts-to-put-the-universe-into-perspective/slidelist/53831581.cms" target="blank"><b>Everyone Can Fit in a Sugar Cube</b><p>https://www.businessinsider.in/science/you-could-fit-the-entire-human-race-into-a-sugar-cube-and-13-other-facts-to-put-the-universe-into-perspective/slidelist/53831581.cms</p></a>
-				<a href="https://www.futurescienceleaders.com/blog/2020/02/touching-is-impossible" target="blank"><b>Touching is Impossible</b><p>https://www.futurescienceleaders.com/blog/2020/02/touching-is-impossible</p></a>
+				<a id="IDYRYG3E" href="https://education.jlab.org/qa/atomicstructure_11.html" target="_blank"><b>All Objects are Made of Atoms</b><p>https://education.jlab.org/qa/atomicstructure_11.html</p></a>
+				<a id="IDGOA59LARW" href="https://alexaanswers.amazon.com/question/6IzRZ9358VKz9iImkO4Rih/ref=cbqa_pqd_sim_q" target="_blank"><b>Number of Atoms in the Human Body</b><p>https://alexaanswers.amazon.com/question/6IzRZ9358VKz9iImkO4Rih/ref=cbqa_pqd_sim_q</p></a>
+				<a id="IDL3W1K" href="https://simple.wikipedia.org/wiki/Nuclear_physics" target="_blank"><b>Atom Facts</b><p>https://simple.wikipedia.org/wiki/Nuclear_physics</p></a>
+				<a id="ID3JGLA7O" href="http://astronomy.nmsu.edu/tharriso/ast110/Ast105week07.html" target="_blank"><b>Electrons Orbit Like a Solar System (outdated)</b><p>http://astronomy.nmsu.edu/tharriso/ast110/Ast105week07.html</p></a>
+				<a id="IDNBP8KI" href="https://en.wikipedia.org/wiki/Lithium_atom" target="_blank"><b>Lithium Atom</b><p>https://en.wikipedia.org/wiki/Lithium_atom</p></a>
+				<a id="IDRI9CTM" href="https://sciencenotes.org/list-words-made-periodic-table-element-symbols" target="_blank"><b>Words Made from the Periodic Table</b><p>https://sciencenotes.org/list-words-made-periodic-table-element-symbols</p></a>
+				<a id="IDKVRIG4" href="https://www.amnh.org/explore/ology/physics/how-to-read-the-periodic-table" target="_blank"><b>How the Periodic Table Works</b><p>https://www.amnh.org/explore/ology/physics/how-to-read-the-periodic-table</p></a>
+				<a id="IDDMUNQ6" href="http://chemed.chem.purdue.edu/genchem/topicreview/bp/ch6/atom_emrframe.html" target="_blank"><b>Atom Structure</b><p>http://chemed.chem.purdue.edu/genchem/topicreview/bp/ch6/atom_emrframe.html</p></a>
+				<a id="IDE1M7TG" href="https://en.wikipedia.org/wiki/Hydrogen_atom" target="_blank"><b>Hydrogen Atom</b><p>https://en.wikipedia.org/wiki/Hydrogen_atom</p></a>
+				<a id="IDGCO5TM9UQ" href="https://en.wikipedia.org/wiki/Oganesson" target="_blank"><b>Oganesson Atom</b><p>https://en.wikipedia.org/wiki/Oganesson</p></a>
+				<a id="ID434L6V1" href="http://www.chem.uiuc.edu/rogers/Text4/Tx42/tx42.html" target="_blank"><b>Isotopes</b><p>http://www.chem.uiuc.edu/rogers/Text4/Tx42/tx42.html</p></a>
+				<a id="ID6DNBAKG" href="https://homework.study.com/explanation/when-is-an-isotope-considered-stable-a-the-isotope-does-not-emit-a-form-of-radiation-b-the-isotope-s-half-life-is-longer-than-the-average-human-life-c-the-isotope-emits-some-form-of-radiation.html" target="_blank"><b>Half Life</b><p>https://homework.study.com/explanation/when-is-an-isotope-considered-stable-a-the-isotope-does-not-emit-a-form-of-radiation-b-the-isotope-s-half-life-is-longer-than-the-average-human-life-c-the-isotope-emits-some-form-of-radiation.html</p></a>
+				<a id="ID7P6F48" href="https://en.wikipedia.org/wiki/Atomic_radii_of_the_elements_(data_page)" target="_blank"><b>Size of Helium</b><p>https://en.wikipedia.org/wiki/Atomic_radii_of_the_elements_(data_page)</p></a>
+				<a id="ID9RP6VC" href="https://www.businessinsider.in/science/you-could-fit-the-entire-human-race-into-a-sugar-cube-and-13-other-facts-to-put-the-universe-into-perspective/slidelist/53831581.cms" target="_blank"><b>Everyone Can Fit in a Sugar Cube</b><p>https://www.businessinsider.in/science/you-could-fit-the-entire-human-race-into-a-sugar-cube-and-13-other-facts-to-put-the-universe-into-perspective/slidelist/53831581.cms</p></a>
+				<a id="IDZFRNVEE5" href="https://www.futurescienceleaders.com/blog/2020/02/touching-is-impossible" target="_blank"><b>Touching is Impossible</b><p>https://www.futurescienceleaders.com/blog/2020/02/touching-is-impossible</p></a>
 			</div>
 			<h2>Graphic Sources</h2>
 			<div id="graphic-sources" class="sources">
-				<a><b>Airplane (Daniel Roberts)</b><p>N/A</p></a>
-				<a><b>Desk Fan (Daniel Roberts)</b><p>N/A</p></a>
-				<a href="https://pixabay.com/vectors/bulb-light-electricity-energy-lamp-6602798" target="blank"><b>Light Bulb (kinggodarts) (edited)</b><p>https://pixabay.com/vectors/bulb-light-electricity-energy-lamp-6602798</p></a>
-				<a href="https://www.alamy.com/just-an-orange-car-image471694088.html" target="blank"><b>Car (slightly edited) (Daniel Roberts)</b><p>https://www.alamy.com/just-an-orange-car-image471694088.html</p></a>
-				<a><b>Man (Daniel Roberts)</b><p>N/A</p></a>
-				<a href="https://www.edumple.com/cbse-class-9/science/chapter-4structure-of-atom/notes" target="blank"><b>Atom 01</b></b><p>https://www.edumple.com/cbse-class-9/science/chapter-4structure-of-atom/notes</p></a>
-				<a href="https://atomicarchive.com/science/index.html" target="blank"><b>Atom 02</b></b><p>https://atomicarchive.com/science/index.html</p></a>
-				<a href="https://benradler.com/blog/2016/06/09/how-to-set-up-ctags-go-to-definition-in-atom-text-editor" target="blank"><b>Atom 03</b></b><p>https://benradler.com/blog/2016/06/09/how-to-set-up-ctags-go-to-definition-in-atom-text-editor</p></a>
-				<a><b>Atom 04</b></b><p>N/A</p></a>
-				<a href="https://pixabay.com/illustrations/atom-logo-science-1472657" target="blank"><b>Atom 05</b></b><p>https://pixabay.com/illustrations/atom-logo-science-1472657/</p></a>
-				<a href="https://www.electrical4u.com/concept-of-atom" target="blank"><b>Atom 06</b></b><p>https://www.electrical4u.com/concept-of-atom</p></a>
-				<a href="https://commons.wikimedia.org/wiki/File:Atom_Diagram.svg" target="blank"><b>Atom 07</b></b><p>https://commons.wikimedia.org/wiki/File:Atom_Diagram.svg</p></a>
-				<a href="https://iheartcraftythings.com/atom-drawing.html" target="blank"><b>Atom 08</b></b><p>https://iheartcraftythings.com/atom-drawing.html</p></a>
-				<a href="https://letstalkscience.ca/educational-resources/backgrounders/introduction-static-electricity" target="blank"><b>Atom 09</b></b><p>https://letstalkscience.ca/educational-resources/backgrounders/introduction-static-electricity</p></a>
-				<a href="https://energywavetheory.com/atoms" target="blank"><b>Atom 10</b></b><p>https://energywavetheory.com/atoms</p></a>
-				<a href="https://www.pngwing.com/en/free-png-amnii" target="blank"><b>Atom 11</b></b><p>https://www.pngwing.com/en/free-png-amnii</p></a>
-				<a><b>Periodic Table (Daniel Roberts)</b><p>N/A</p></a>
-				<a href="https://pixabay.com/vectors/bulb-light-electricity-energy-lamp-6602798/" target="blank"><b>Light Bulb (kinggodarts) (edited)</b><p>https://pixabay.com/vectors/bulb-light-electricity-energy-lamp-6602798/</p></a>
-				<a href="https://www.alamy.com/just-an-orange-car-image471694088.html" target="blank"><b>Car (slightly edited) (Daniel Roberts)</b><p>https://www.alamy.com/just-an-orange-car-image471694088.html</p></a>
+				<a id="IDT19SY7IT"><b>Small Plane (Daniel Roberts)</b><p>N/A</p></a>
+				<a id="IDMTN1F20J0"><b>Desk Fan (Daniel Roberts)</b><p>N/A</p></a>
+				<a id="ID0DTEK" href="https://pixabay.com/vectors/bulb-light-electricity-energy-lamp-6602798" target="_blank"><b>Light Bulb (kinggodarts)</b><p>https://pixabay.com/vectors/bulb-light-electricity-energy-lamp-6602798</p></a>
+				<a id="IDAHFRWW" href="https://www.alamy.com/just-an-orange-car-image471694088.html" target="_blank"><b>Yellow Car (Daniel Roberts)</b><p>https://www.alamy.com/just-an-orange-car-image471694088.html</p></a>
+				<a id="IDXRQT96IQ"><b>Man Silhouette (Daniel Roberts)</b><p>N/A</p></a>
+				<a id="IDII9K44G" href="https://www.edumple.com/cbse-class-9/science/chapter-4structure-of-atom/notes" target="_blank"><b>Lithium Atom 01 (N/A)</b><p>https://www.edumple.com/cbse-class-9/science/chapter-4structure-of-atom/notes</p></a>
+				<a id="IDOBDMQ" href="https://atomicarchive.com/science/index.html" target="_blank"><b>Lithium Atom 02 (Atomic Archive)</b><p>https://atomicarchive.com/science/index.html</p></a>
+				<a id="IDD8X1C0" href="https://benradler.com/blog/2016/06/09/how-to-set-up-ctags-go-to-definition-in-atom-text-editor" target="_blank"><b>Lithium Atom 03 (Ben Radler)</b><p>https://benradler.com/blog/2016/06/09/how-to-set-up-ctags-go-to-definition-in-atom-text-editor</p></a>
+				<a id="ID29RT30"><b>Lithium Atom 04 (N/A)</b><p>N/A</p></a>
+				<a id="ID0UYPP" href="https://pixabay.com/illustrations/atom-logo-science-1472657" target="_blank"><b>Atom 05 (Gorkhs)</b><p>https://pixabay.com/illustrations/atom-logo-science-1472657</p></a>
+				<a id="IDXC3ZC" href="https://www.electrical4u.com/concept-of-atom" target="_blank"><b>Lithium Atom 06 (Electrical4U)</b><p>https://www.electrical4u.com/concept-of-atom</p></a>
+				<a id="IDQS2IE2AH2" href="https://commons.wikimedia.org/wiki/File:Atom_Diagram.svg" target="_blank"><b>Lithium Atom 07 (AG Caesar)</b><p>https://commons.wikimedia.org/wiki/File:Atom_Diagram.svg</p></a>
+				<a id="IDQAY3OHVOF" href="https://iheartcraftythings.com/atom-drawing.html" target="_blank"><b>Lithium Atom 08 (Caroline)</b><p>https://iheartcraftythings.com/atom-drawing.html</p></a>
+				<a id="ID1A6XVOU0" href="https://letstalkscience.ca/educational-resources/backgrounders/introduction-static-electricity" target="_blank"><b>Lithium Atom 09 (VectorMine)</b><p>https://letstalkscience.ca/educational-resources/backgrounders/introduction-static-electricity</p></a>
+				<a id="IDVLX8DW" href="https://energywavetheory.com/atoms" target="_blank"><b>Lithium Atom 10 (EWT)</b><p>https://energywavetheory.com/atoms</p></a>
+				<a id="IDC6YY6" href="https://www.pngwing.com/en/free-png-amnii" target="_blank"><b>Lithium Atom 11 (PNGWing)</b><p>https://www.pngwing.com/en/free-png-amnii</p></a>
+				<a id="IDRO1DSM"><b>Periodic Table (Daniel Roberts)</b><p>N/A</p></a>
 			</div>
 			<h2>Audio Sources</h2>
 			<div id="audio-sources" class="sources">
-				<a><b>Narration (Daniel Roberts)</b><p>N/A</p></a>
-				<a href="https://pixabay.com/music/ambient-to-the-galaxy-10734" target="blank"><b>To the Galaxy (Daniel Roberts) (heavily edited)</b><p>https://pixabay.com/music/ambient-to-the-galaxy-10734</p></a>
-				<a><b>Chart Ballad-with strings (Daniel Roberts) (heavily edited)</b><p>N/A</p></a>
-				<a><b>Pop2 (Daniel Roberts)</b><p>N/A</p></a>
+				<a id="ID2GEHOFS"><b>Narration (Daniel Roberts)</b><p>N/A</p></a>
+				<a id="IDFHYGOL7" href="https://pixabay.com/music/ambient-to-the-galaxy-10734" target="_blank"><b>To the Galaxy (Daniel Roberts)</b><p>https://pixabay.com/music/ambient-to-the-galaxy-10734</p></a>
+				<a id="IDXWCBB"><b>Chart Ballad-with strings (Daniel Roberts)</b><p>N/A</p></a>
+				<a id="IDEQ6T93AE"><b>Pop2 (Daniel Roberts)</b><p>N/A</p></a>
 			</div>
 			<div id="cc"><h2>Subtitles</h2><a href="./cc/3.txt" download="You Can't Touch Anything - Subtitles.txt" title="Download subtitles"><img src="../static-0/files/images/icons/download.svg" alt="Download"></a></div>
 			<div id="subtitles">
@@ -266,10 +261,7 @@
 			</div>
 			<h2>Thumbnails</h2>
 			<div id="thumbnails">
-					<a href="./thumbnails/3-you_cant_touch_anything-1080.png" class="tb">
-					<img src="./thumbnails/3-you_cant_touch_anything-180.png" alt="Thumbnail">
-					<b>August 9, 2022</b>
-				</a>
+				<a href="./thumbnails/3-you_cant_touch_anything-1080.png" class="tb"><img src="./thumbnails/3-you_cant_touch_anything-180.png" alt="Thumbnail"><b>August 9, 2022</b></a>
 			</div>
 		</div>
 		<script src="../static-0/main.js"></script>

@@ -14,7 +14,7 @@
 		<title>The Solar System is BIGGER - BlenderTimer Video Sources</title>
 		<meta name="description" content="The video sources for The Solar System is BIGGER.">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<link rel="icon" href="../favicon.png" type="image/x-icon">
+		<link rel="icon" href="../favicon.png">
 		<link rel="stylesheet" type="text/css" href="../static-0/general.css">
 		<link rel="stylesheet" type="text/css" href="../static-0/main.css">
 		<link rel="stylesheet" type="text/css" href="../static-0/video-sources-pages.css">
@@ -22,15 +22,13 @@
 		<script src="../static-0/videos.js"></script>
 		<script src="../static-0/jquery-3.6.3.js"></script>
 	</head>
-	<body onresize="determineDisplayMenu()">
-		<div id="background-plate"></div>
+	<body>
 		<div id="banner-menu">
 			<nav>
 				<!--====================  LARGE MENU  ====================-->
 				<ul id="large-menu">
 					<li id="nav-home"><a href="/"><img alt="BlenderTimer" src="../static-0/files/images/nav-logohome.png"></a></li>
 				</ul>
-				<div id="revolve-button" title="Current visitors on this site."><script src="https://rf.revolvermaps.com/0/0/3.js?i=5cgjr9bkw1v&b=0&s=40&m=2&cl=555555&co=000000&cd=ffffff&v0=25&v1=100&r=1" async="async"></script></div>
 				<!--====================  SMALL MENU  ====================-->
 				<div id="small-menu" style="display: none" onclick="smallMenuToggle()"><img alt="Menu" src="../static-0/files/images/menu-bars.png"></div>
 				<div id="small-menu-main"></div>
@@ -47,9 +45,9 @@
 			<div id="video-info">
 				<div id="vid-info-left">
 					<b class="vit">Video Information</b>
-					<span><b>Length:</b><p>6:43</p><i>(12088 frames/30fps)</i></span>
+					<span><b>Length:</b><p>6:42</p><i>(12088 frames/30fps)</i></span>
 					<span><b>Resolution:</b><p>1920x1080</p><i>(FHD)</i></span>
-					<span><b>Most Rewatched:</b><a href="https://youtu.be/W7UXKAgxCqU?t=56">0:56 to 1:13</a></span>
+					<span><b>Most Rewatched:</b><a href="https://youtu.be/W7UXKAgxCqU?t=56" target="_blank">0:56 to 1:13</a></span>
 					<span class="spr"></span>
 					<b class="vit">Realtime Statistics</b>
 					<div id="realtime-stats">
@@ -68,13 +66,13 @@
 				</div>
 				<span class="spr" id="info1-spr" style="display: none"></span>
 				<div id="vid-info-right">
-					<a id="thumbnail" href="./thumbnails/15-the_solar_system_is_bigger-1080.png" target="blank"><img src="./thumbnails/15-the_solar_system_is_bigger-180.png" alt="Thumbnail"></a>
+					<a id="thumbnail" href="./thumbnails/15-the_solar_system_is_bigger-1080.png" target="_blank"><img src="./thumbnails/15-the_solar_system_is_bigger-180.png" alt="Thumbnail"></a>
 					<div id="video-icons">
 						<span><b>Upload ID</b><p>15</p></span>
 						<span><b>Video ID</b><p>10</p></span>
 						<span><b>Type</b><p>Video</p></span>
 					</div>
-					<span id="yt-link"><a href="https://youtu.be/W7UXKAgxCqU" target="blank">https://youtu.be/W7UXKAgxCqU</a><img src="../static-0/files/images/icons/copy-link.svg" alt="Copy link" onclick="copyVideoLink(event)"></span>
+					<span id="yt-link"><a href="https://youtu.be/W7UXKAgxCqU" target="_blank">https://youtu.be/W7UXKAgxCqU</a><img src="../static-0/files/images/icons/copy-link.svg" alt="Copy link" onclick="copyVideoLink(event)"></span>
 					<script type="text/javascript">
 						var fv = document.getElementById('first-views');
 						var video = videos[parseInt(document.getElementById('video-icons').children[0].children[1].textContent)-1];
@@ -110,87 +108,86 @@
 			</div>
 			<h2>Information Sources</h2>
 			<div id="info-sources" class="sources">
-					<a href="https://www.wtamu.edu/~cbaird/sq/2012/12/20/why-did-so-many-people-believe-the-world-is-flat-when-it-is-obviously-a-sphere" target="blank"><b>Shape of the Earth</b><p>https://www.wtamu.edu/~cbaird/sq/2012/12/20/why-did-so-many-people-believe-the-world-is-flat-when-it-is-obviously-a-sphere</p></a>
-				<a href="https://nssdc.gsfc.nasa.gov/planetary/factsheet/moonfact.html" target="blank"><b>Moon Factsheet</b><p>https://nssdc.gsfc.nasa.gov/planetary/factsheet/moonfact.html</p></a>
-				<a href="https://moon.nasa.gov/moon-in-motion/phases-eclipses-supermoons/overview" target="blank"><b>Moon Overview</b><p>https://moon.nasa.gov/moon-in-motion/phases-eclipses-supermoons/overview</p></a>
-				<a href="https://blendertimer.com/factsheets/solar-system/planet-factsheet" target="blank"><b>Planet Factsheet</b><p>https://blendertimer.com/factsheets/solar-system/planet-factsheet</p></a>
-				<a href="https://blendertimer.com/factsheets/solar-system/dwarf-planet-factsheet" target="blank"><b>Dwarf Planet Factsheet</b><p>https://blendertimer.com/factsheets/solar-system/dwarf-planet-factsheet</p></a>
-				<a href="https://nssdc.gsfc.nasa.gov/planetary/factsheet/sunfact.html" target="blank"><b>Sun Factsheet</b><p>https://nssdc.gsfc.nasa.gov/planetary/factsheet/sunfact.html</p></a>
-				<a href="https://www.iau.org/static/resolutions/IAU1976_French.pdf#page=9" target="blank"><b>Length of a Light-Year</b><p>https://www.iau.org/static/resolutions/IAU1976_French.pdf#page=9</p></a>
-				<a href="https://www.iau.org/static/resolutions/IAU1976_French.pdf#page=9" target="blank"><b>Speed of Light</b><p>https://www.iau.org/static/resolutions/IAU1976_French.pdf#page=9</p></a>
-				<a href="https://njseagrant.org/wp-content/uploads/2014/03/Grain_Size_How_Big.pdf" target="blank"><b>Size of a Grain of Sand (1)</b><p>https://njseagrant.org/wp-content/uploads/2014/03/Grain_Size_How_Big.pdf</p></a>
-				<a><b>Size of a Grain of Sand (2)</b><p>N/A (real world measurement of ~0.5 millimeters)</p></a>
-				<a><b>Armspan of a Human</b><p>N/A (real world measurement of ~170 centimeters)</p></a>
-				<a href="https://en.wikipedia.org/wiki/Tomato" target="blank"><b>Size of a Tomato</b><p>https://en.wikipedia.org/wiki/Tomato</p></a>
-				<a><b>Size of a Pea</b><p>N/A (real world measurement of ~5 millimeters)</p></a>
-				<a><b>Average Maximum Human Throwing Distance</b><p>N/A (real world measurement of ~31 meters)</p></a>
-				<a href="https://www.quora.com/How-many-feet-is-a-10-story-building" target="blank"><b>Height of a 10 Story Building</b><p>https://www.quora.com/How-many-feet-is-a-10-story-building</p></a>
-				<a href="https://science.nasa.gov/saturn/facts" target="blank"><b>Saturn's Rings (1)</b><p>https://science.nasa.gov/saturn/facts/</p></a>
-				<a href="https://en.wikipedia.org/wiki/Rings_of_Saturn" target="blank"><b>Saturn's Rings (2)</b><p>https://en.wikipedia.org/wiki/Rings_of_Saturn</p></a>
-				<a href="https://senecalearning.com/en-GB/definitions/atom-size-number" target="blank"><b>Size of an Atom</b><p>https://senecalearning.com/en-GB/definitions/atom-size-number</p></a>
-				<a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8586184" target="blank"><b>Size of a Coronavirus</b><p>https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8586184</p></a>
-				<a href="https://www.dryukselyurttas.com/post/average-height-men-and-women" target="blank"><b>Height of a Human</b><p>https://www.dryukselyurttas.com/post/average-height-men-and-women</p></a>
-				<a href="https://sci-hub.se/10.1063/1.1712084" target="blank"><b>Size of a Helium Atom</b><p>https://sci-hub.se/10.1063/1.1712084</p></a>
-				<a href="https://www.skyscrapercenter.com/building/wd/9603" target="blank"><b>Height of the Space Needle</b><p>https://www.skyscrapercenter.com/building/wd/9603</p></a>
-				<a href="https://www.esbnyc.com/about/facts-figures" target="blank"><b>Height of the Empire State Building</b><p>https://www.esbnyc.com/about/facts-figures</p></a>
-				<a href="https://science.nasa.gov/solar-system/kuiper-belt/facts/" target="blank"><b>Kuiper Belt Facts</b><p>https://science.nasa.gov/solar-system/kuiper-belt/facts/</p></a>
-				<a href="https://www.burjkhalifa.ae/en/the-tower/facts-figures" target="blank"><b>Height of the Burj Khalifa</b><p>https://www.burjkhalifa.ae/en/the-tower/facts-figures</p></a>
-				<a href="https://science.nasa.gov/solar-system/oort-cloud/facts" target="blank"><b>Edge of the Solar System</b><p>https://science.nasa.gov/solar-system/oort-cloud/facts</p></a>
-				<a href="https://www.google.com/maps" target="blank"><b>Distance from Berlin to Amsterdam</b><p>https://www.google.com/maps</p></a>
-				<a href="https://en.wikipedia.org/wiki/Observable_universe" target="blank"><b>Size of the Observable Universe</b><p>https://en.wikipedia.org/wiki/Observable_universe</p></a>
-				<a href="https://www.britannica.com/story/how-do-we-know-how-far-away-the-stars-are" target="blank"><b>Proxima Centauri Distance</b><p>https://www.britannica.com/story/how-do-we-know-how-far-away-the-stars-are</p></a>
+				<a id="IDN7V56GT" href="https://www.wtamu.edu/~cbaird/sq/2012/12/20/why-did-so-many-people-believe-the-world-is-flat-when-it-is-obviously-a-sphere" target="_blank"><b>Shape of the Earth</b><p>https://www.wtamu.edu/~cbaird/sq/2012/12/20/why-did-so-many-people-believe-the-world-is-flat-when-it-is-obviously-a-sphere</p></a>
+				<a id="IDQ34IY8" href="https://nssdc.gsfc.nasa.gov/planetary/factsheet/moonfact.html" target="_blank"><b>Moon Factsheet</b><p>https://nssdc.gsfc.nasa.gov/planetary/factsheet/moonfact.html</p></a>
+				<a id="IDXE44V" href="https://science.nasa.gov/moon/moon-phases/" target="_blank"><b>Moon Phases</b><p>https://science.nasa.gov/moon/moon-phases/</p></a>
+				<a id="IDMVMMB" href="https://blendertimer.com/factsheets/solar-system/planet-factsheet" target="_blank"><b>8 Planets Factsheet</b><p>https://blendertimer.com/factsheets/solar-system/planet-factsheet</p></a>
+				<a id="IDDJ73KV" href="https://blendertimer.com/factsheets/solar-system/dwarf-planet-factsheet" target="_blank"><b>5 Dwarf Planets Factsheet</b><p>https://blendertimer.com/factsheets/solar-system/dwarf-planet-factsheet</p></a>
+				<a id="IDVS2KSP" href="https://nssdc.gsfc.nasa.gov/planetary/factsheet/sunfact.html" target="_blank"><b>NASA Sun Factsheet</b><p>https://nssdc.gsfc.nasa.gov/planetary/factsheet/sunfact.html</p></a>
+				<a id="IDNL1TYP7" href="https://www.iau.org/static/resolutions/IAU1976_French.pdf#page=9" target="_blank"><b>Length of a Light-Year</b><p>https://www.iau.org/static/resolutions/IAU1976_French.pdf#page=9</p></a>
+				<a id="IDN2EI2EJ" href="https://njseagrant.org/wp-content/uploads/2014/03/Grain_Size_How_Big.pdf" target="_blank"><b>Size of a Grain of Sand</b><p>https://njseagrant.org/wp-content/uploads/2014/03/Grain_Size_How_Big.pdf</p></a>
+				<a id="IDIIUQOVEE9"><b>Size of a Grain of Sand (2)</b><p>N/A (real world measurement of ~0.5 millimeters)</p></a>
+				<a id="IDGG1PGUB"><b>Armspan of a Human</b><p>N/A (real world measurement of ~170 centimeters)</p></a>
+				<a id="ID2BAJM13" href="https://en.wikipedia.org/wiki/Tomato" target="_blank"><b>Tomato Facts</b><p>https://en.wikipedia.org/wiki/Tomato</p></a>
+				<a id="IDJ2EVC9R"><b>Size of a Pea</b><p>N/A (real world measurement of ~5 millimeters)</p></a>
+				<a id="IDLEYG1NC"><b>Average Maximum Human Throwing Distance</b><p>N/A (real world measurement of ~31 meters)</p></a>
+				<a id="IDHVNUL6KF" href="https://www.quora.com/How-many-feet-is-a-10-story-building" target="_blank"><b>Height of a 10 Story Building</b><p>https://www.quora.com/How-many-feet-is-a-10-story-building</p></a>
+				<a id="ID6ROFZW5" href="https://science.nasa.gov/saturn/facts" target="_blank"><b>NASA - Saturn Facts</b><p>https://science.nasa.gov/saturn/facts</p></a>
+				<a id="IDBREF8" href="https://en.wikipedia.org/wiki/Rings_of_Saturn" target="_blank"><b>Rings of Saturn</b><p>https://en.wikipedia.org/wiki/Rings_of_Saturn</p></a>
+				<a id="IDQQES8FO" href="https://senecalearning.com/en-GB/definitions/atom-size-number" target="_blank"><b>Size of an Atom</b><p>https://senecalearning.com/en-GB/definitions/atom-size-number</p></a>
+				<a id="IDY8UOZ" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8586184" target="_blank"><b>Size of a Coronavirus</b><p>https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8586184</p></a>
+				<a id="IDMWNBJN" href="https://www.dryukselyurttas.com/post/average-height-men-and-women" target="_blank"><b>Size of a Human</b><p>https://www.dryukselyurttas.com/post/average-height-men-and-women</p></a>
+				<a id="IDGQ3WP4I" href="https://sci-hub.se/10.1063/1.1712084" target="_blank"><b>Size of a Helium Atom</b><p>https://sci-hub.se/10.1063/1.1712084</p></a>
+				<a id="IDC91CU1" href="https://www.skyscrapercenter.com/building/wd/9603" target="_blank"><b>Height of the Space Needle</b><p>https://www.skyscrapercenter.com/building/wd/9603</p></a>
+				<a id="IDD1EYT6" href="https://www.esbnyc.com/about/facts-figures" target="_blank"><b>Empire State Building Facts</b><p>https://www.esbnyc.com/about/facts-figures</p></a>
+				<a id="IDUMLC5IGJ" href="https://science.nasa.gov/solar-system/kuiper-belt/facts" target="_blank"><b>Kuiper Belt Facts</b><p>https://science.nasa.gov/solar-system/kuiper-belt/facts</p></a>
+				<a id="IDWUC67" href="https://www.burjkhalifa.ae/en/the-tower/facts-figures" target="_blank"><b>Burj Khalifa Facts</b><p>https://www.burjkhalifa.ae/en/the-tower/facts-figures</p></a>
+				<a id="IDY02PTUA2Y" href="https://science.nasa.gov/solar-system/oort-cloud/facts" target="_blank"><b>Oort Cloud Facts</b><p>https://science.nasa.gov/solar-system/oort-cloud/facts</p></a>
+				<a id="ID5RSE3" href="https://www.google.com/maps" target="_blank"><b>Distance from Berlin to Amsterdam</b><p>https://www.google.com/maps</p></a>
+				<a id="IDDYO45478" href="https://en.wikipedia.org/wiki/Observable_universe" target="_blank"><b>Observable Universe Facts</b><p>https://en.wikipedia.org/wiki/Observable_universe</p></a>
+				<a id="IDSQXV447W" href="https://www.britannica.com/story/how-do-we-know-how-far-away-the-stars-are" target="_blank"><b>Proxima Centauri Distance</b><p>https://www.britannica.com/story/how-do-we-know-how-far-away-the-stars-are</p></a>
 			</div>
 			<h2>Graphic Sources</h2>
 			<div id="graphic-sources" class="sources">
-					<a href="https://pixabay.com/vectors/earth-planet-space-terrestrial-8233221" target="blank"><b>Earth (Daniel Roberts)</b><p>https://pixabay.com/vectors/earth-planet-space-terrestrial-8233221</p></a>
-				<a href="https://pixabay.com/vectors/moon-earth-space-natural-satellite-8236211" target="blank"><b>Earth's Moon (Daniel Roberts)</b><p>https://pixabay.com/vectors/moon-earth-space-natural-satellite-8236211</p></a>
-				<a href="https://pixabay.com/photos/mountain-valley-night-nature-3807667" target="blank"><b>Full Moon over Mountain (aronvisuals) (modified)</b><p>https://pixabay.com/photos/mountain-valley-night-nature-3807667</p></a>
-				<a href="https://pixabay.com/vectors/mercury-planet-space-terrestrial-8233227" target="blank"><b>Mercury (Daniel Roberts)</b><p>https://pixabay.com/vectors/mercury-planet-space-terrestrial-8233227</p></a>
-				<a href="https://pixabay.com/vectors/venus-planet-space-terrestrial-8233225" target="blank"><b>Venus (Daniel Roberts)</b><p>https://pixabay.com/vectors/venus-planet-space-terrestrial-8233225</p></a>
-				<a href="https://pixabay.com/vectors/mars-planet-space-terrestrial-8233226" target="blank"><b>Mars (Daniel Roberts)</b><p>https://pixabay.com/vectors/mars-planet-space-terrestrial-8233226</p></a>
-				<a href="https://pixabay.com/vectors/jupiter-planet-space-terrestrial-8233223" target="blank"><b>Jupiter (Daniel Roberts)</b><p>https://pixabay.com/vectors/jupiter-planet-space-terrestrial-8233223</p></a>
-				<a href="https://pixabay.com/vectors/saturn-planet-space-terrestrial-8233220" target="blank"><b>Saturn (Daniel Roberts)</b><p>https://pixabay.com/vectors/saturn-planet-space-terrestrial-8233220</p></a>
-				<a href="https://pixabay.com/vectors/uranus-planet-space-terrestrial-8233222" target="blank"><b>Uranus (Daniel Roberts)</b><p>https://pixabay.com/vectors/uranus-planet-space-terrestrial-8233222</p></a>
-				<a href="https://pixabay.com/vectors/neptune-planet-space-terrestrial-8233219" target="blank"><b>Neptune (Daniel Roberts)</b><p>https://pixabay.com/vectors/neptune-planet-space-terrestrial-8233219</p></a>
-				<a href="https://pixabay.com/vectors/ceres-planet-terrestrial-satellite-8236207" target="blank"><b>Ceres (Daniel Roberts)</b><p>https://pixabay.com/vectors/ceres-planet-terrestrial-satellite-8236207</p></a>
-				<a href="https://pixabay.com/vectors/pluto-planet-terrestrial-satellite-8236209" target="blank"><b>Pluto (Daniel Roberts)</b><p>https://pixabay.com/vectors/pluto-planet-terrestrial-satellite-8236209</p></a>
-				<a href="https://pixabay.com/vectors/haumea-dwarf-planet-terrestrial-8236206" target="blank"><b>Haumea (Daniel Roberts)</b><p>https://pixabay.com/vectors/haumea-dwarf-planet-terrestrial-8236206</p></a>
-				<a href="https://pixabay.com/vectors/makemake-planet-terrestrial-ball-8236208" target="blank"><b>Makemake (Daniel Roberts)</b><p>https://pixabay.com/vectors/makemake-planet-terrestrial-ball-8236208</p></a>
-				<a href="https://pixabay.com/vectors/eris-planet-terrestrial-satellite-8236210" target="blank"><b>Eris (Daniel Roberts)</b><p>https://pixabay.com/vectors/eris-planet-terrestrial-satellite-8236210</p></a>
-				<a href="https://pixabay.com/vectors/sun-star-space-solar-light-bright-8328084" target="blank"><b>The Sun (Daniel Roberts)</b><p>https://pixabay.com/vectors/sun-star-space-solar-light-bright-8328084</p></a>
-				<a href="https://pixabay.com/vectors/sand-grain-particle-nature-small-8316168" target="blank"><b>Grain of Sand (Daniel Roberts)</b><p>https://pixabay.com/vectors/sand-grain-particle-nature-small-8316168</p></a>
-				<a><b>Man With Arms Out (Daniel Roberts)</b><p>N/A</p></a>
-				<a><b>Tomato (Daniel Roberts)</b><p>N/A</p></a>
-				<a><b>Pea (Daniel Roberts)</b><p>N/A</p></a>
-				<a><b>10-Story Building (Daniel Roberts)</b><p>N/A</p></a>
-				<a><b>18-Story Building (Daniel Roberts)</b><p>N/A</p></a>
-				<a href="https://pixabay.com/vectors/burj-khalifa-dubai-building-tall-8207549" target="blank"><b>Burj Khalifa (Daniel Roberts)</b><p>https://pixabay.com/vectors/burj-khalifa-dubai-building-tall-8207549</p></a>
-				<a><b>Atom (Daniel Roberts)</b><p>N/A</p></a>
-				<a><b>Coronavirus (Daniel Roberts)</b><p>N/A</p></a>
-				<a href="https://pixabay.com/vectors/person-man-stand-human-arms-legs-8238232" target="blank"><b>Man (Daniel Roberts)</b><p>https://pixabay.com/vectors/person-man-stand-human-arms-legs-8238232</p></a>
-				<a><b>Snail (Daniel Roberts)</b><p>N/A</p></a>
-				<a><b>Space Needle (Daniel Roberts)</b><p>N/A</p></a>
-				<a href="https://pixabay.com/vectors/empire-state-building-building-city-7845819" target="blank"><b>Empire State Building (Daniel Roberts)</b><p>https://pixabay.com/vectors/empire-state-building-building-city-7845819</p></a>
-				<a><b>Berlin-Amsterdam Map (Daniel Roberts)</b><p>N/A</p></a>
-				<a><b>Observable Universe (Daniel Roberts)</b><p>N/A</p></a>
-				<a><b>Proxima Centauri (Daniel Roberts)</b><p>N/A</p></a>
+				<a id="IDRJN8IUZBE" href="https://pixabay.com/vectors/earth-planet-space-terrestrial-8233221" target="_blank"><b>Earth (Daniel Roberts)</b><p>https://pixabay.com/vectors/earth-planet-space-terrestrial-8233221</p></a>
+				<a id="IDNIIXUV" href="https://pixabay.com/vectors/moon-earth-space-natural-satellite-8236211" target="_blank"><b>The Moon (Daniel Roberts)</b><p>https://pixabay.com/vectors/moon-earth-space-natural-satellite-8236211</p></a>
+				<a id="IDV686C1UC" href="https://pixabay.com/photos/mountain-valley-night-nature-3807667" target="_blank"><b>Full Moon Over Mountain (aronvisuals)</b><p>https://pixabay.com/photos/mountain-valley-night-nature-3807667</p></a>
+				<a id="ID8AWKYXV" href="https://pixabay.com/vectors/mercury-planet-space-terrestrial-8233227" target="_blank"><b>Mercury (Daniel Roberts)</b><p>https://pixabay.com/vectors/mercury-planet-space-terrestrial-8233227</p></a>
+				<a id="IDPPU27QHT" href="https://pixabay.com/vectors/venus-planet-space-terrestrial-8233225" target="_blank"><b>Venus (Daniel Roberts)</b><p>https://pixabay.com/vectors/venus-planet-space-terrestrial-8233225</p></a>
+				<a id="IDHD25J" href="https://pixabay.com/vectors/mars-planet-space-terrestrial-8233226" target="_blank"><b>Mars (Daniel Roberts)</b><p>https://pixabay.com/vectors/mars-planet-space-terrestrial-8233226</p></a>
+				<a id="IDMT435QQK" href="https://pixabay.com/vectors/jupiter-planet-space-terrestrial-8233223" target="_blank"><b>Jupiter (Daniel Roberts)</b><p>https://pixabay.com/vectors/jupiter-planet-space-terrestrial-8233223</p></a>
+				<a id="ID8H4IYU" href="https://pixabay.com/vectors/saturn-planet-space-terrestrial-8233220" target="_blank"><b>Saturn (Daniel Roberts)</b><p>https://pixabay.com/vectors/saturn-planet-space-terrestrial-8233220</p></a>
+				<a id="ID242Q8R" href="https://pixabay.com/vectors/uranus-planet-space-terrestrial-8233222" target="_blank"><b>Uranus (Daniel Roberts)</b><p>https://pixabay.com/vectors/uranus-planet-space-terrestrial-8233222</p></a>
+				<a id="IDL9KLY1Y" href="https://pixabay.com/vectors/neptune-planet-space-terrestrial-8233219" target="_blank"><b>Neptune (Daniel Roberts)</b><p>https://pixabay.com/vectors/neptune-planet-space-terrestrial-8233219</p></a>
+				<a id="IDN6O0HN" href="https://pixabay.com/vectors/ceres-planet-asteroid-terrestrial-8236207" target="_blank"><b>Ceres (Daniel Roberts)</b><p>https://pixabay.com/vectors/ceres-planet-asteroid-terrestrial-8236207</p></a>
+				<a id="IDPBF8Z814" href="https://pixabay.com/vectors/pluto-asteroid-planet-terrestrial-8236209" target="_blank"><b>Pluto (Daniel Roberts)</b><p>https://pixabay.com/vectors/pluto-asteroid-planet-terrestrial-8236209</p></a>
+				<a id="IDCUF0Z" href="https://pixabay.com/vectors/haumea-dwarf-planet-terrestrial-8236206" target="_blank"><b>Haumea (Daniel Roberts)</b><p>https://pixabay.com/vectors/haumea-dwarf-planet-terrestrial-8236206</p></a>
+				<a id="IDN4VU7J83G" href="https://pixabay.com/vectors/makemake-planet-terrestrial-ball-8236208" target="_blank"><b>Makemake (Daniel Roberts)</b><p>https://pixabay.com/vectors/makemake-planet-terrestrial-ball-8236208</p></a>
+				<a id="IDAS2M35HH7" href="https://pixabay.com/vectors/eris-planet-terrestrial-satellite-8236210" target="_blank"><b>Eris (Daniel Roberts)</b><p>https://pixabay.com/vectors/eris-planet-terrestrial-satellite-8236210</p></a>
+				<a id="ID1KTTG3I" href="https://pixabay.com/vectors/sun-star-space-solar-light-bright-8328084" target="_blank"><b>The Sun (Daniel Roberts)</b><p>https://pixabay.com/vectors/sun-star-space-solar-light-bright-8328084</p></a>
+				<a id="IDBSXUAD" href="https://pixabay.com/vectors/sand-grain-particle-nature-small-8316168" target="_blank"><b>Grain of Sand (Daniel Roberts)</b><p>https://pixabay.com/vectors/sand-grain-particle-nature-small-8316168</p></a>
+				<a id="ID2UE1WI7HQ" href="https://pixabay.com/vectors/man-t-pose-person-stand-human-9095535" target="_blank"><b>Man Standing With Arms Out-Front (Daniel Roberts)</b><p>https://pixabay.com/vectors/man-t-pose-person-stand-human-9095535</p></a>
+				<a id="IDRO0B50HNA" href="https://pixabay.com/vectors/tomato-food-vegetable-fruit-fresh-8655799" target="_blank"><b>Tomato (Daniel Roberts)</b><p>https://pixabay.com/vectors/tomato-food-vegetable-fruit-fresh-8655799</p></a>
+				<a id="IDIMTKK9HP7"><b>Pea (Daniel Roberts)</b><p>N/A</p></a>
+				<a id="IDC5514MYN"><b>10-Story Building (Daniel Roberts)</b><p>N/A</p></a>
+				<a id="ID6IMGNQ8"><b>18-Story Building (Daniel Roberts)</b><p>N/A</p></a>
+				<a id="IDH13IK1TXK" href="https://pixabay.com/vectors/burj-khalifa-dubai-building-tall-8207549" target="_blank"><b>Burj Khalifa (Daniel Roberts)</b><p>https://pixabay.com/vectors/burj-khalifa-dubai-building-tall-8207549</p></a>
+				<a id="ID29OW6W"><b>Atom (Daniel Roberts)</b><p>N/A</p></a>
+				<a id="IDC0TZ3MR2F"><b>Coronavirus (Daniel Roberts)</b><p>N/A</p></a>
+				<a id="IDVNPU5WMD" href="https://pixabay.com/vectors/person-man-stand-human-arms-legs-8238232" target="_blank"><b>Man Standing-Front (Daniel Roberts)</b><p>https://pixabay.com/vectors/person-man-stand-human-arms-legs-8238232</p></a>
+				<a id="IDUYMLW"><b>Snail (Daniel Roberts)</b><p>N/A</p></a>
+				<a id="ID8HNK0B" href="https://pixabay.com/vectors/space-needle-seattle-skyscraper-8652302" target="_blank"><b>Space Needle (Daniel Roberts)</b><p>https://pixabay.com/vectors/space-needle-seattle-skyscraper-8652302</p></a>
+				<a id="ID10R82O" href="https://pixabay.com/vectors/empire-state-building-building-city-7845819" target="_blank"><b>Empire State Building (Daniel Roberts)</b><p>https://pixabay.com/vectors/empire-state-building-building-city-7845819</p></a>
+				<a id="IDVG7756"><b>Berlin-Amsterdam Map (Daniel Roberts)</b><p>N/A</p></a>
+				<a id="IDJQUXRA6"><b>Observable Universe (Daniel Roberts)</b><p>N/A</p></a>
+				<a id="IDTKOZ2CZ"><b>Proxima Centauri (Daniel Roberts)</b><p>N/A</p></a>
 			</div>
 			<h2>Audio Sources</h2>
 			<div id="audio-sources" class="sources">
-					<a><b>Narration (Daniel Roberts)</b><p>N/A</p></a>
-				<a href="https://pixabay.com/music/main-title-forest-intro-128904" target="blank"><b>Forest Intro (heavily edited) (Daniel Roberts)</b><p>https://pixabay.com/music/main-title-forest-intro-128904</p></a>
-				<a href="https://pixabay.com/music/main-title-revolution-epic-cinematic-111025" target="blank"><b>Revolution-Epic Cinematic (heavily edited) (Daniel Roberts)</b><p>https://pixabay.com/music/main-title-revolution-epic-cinematic-111025</p></a>
-				<a><b>Spinning2 (Daniel Roberts)</b><p>N/A</p></a>
-				<a><b>Bounce-4 (Daniel Roberts)</b><p>N/A</p></a>
-				<a><b>Text Crash1 (Daniel Roberts)</b><p>N/A</p></a>
-				<a href="https://pixabay.com/music/suspense-escape-of-triumph-epic-cinematic-127029" target="blank"><b>Escape of Triumph (Daniel Roberts) (heavily edited)</b><p>https://pixabay.com/music/suspense-escape-of-triumph-epic-cinematic-127029</p></a>
-				<a><b>Spinning5 (Daniel Roberts)</b><p>N/A</p></a>
-				<a href="https://pixabay.com/sound-effects/object-flyby-8115" target="blank"><b>Object Flyby (Daniel Roberts)</b><p>https://pixabay.com/sound-effects/object-flyby-8115</p></a>
-				<a><b>Spinning4 (Daniel Roberts)</b><p>N/A</p></a>
+				<a id="ID2GEHOFS"><b>Narration (Daniel Roberts)</b><p>N/A</p></a>
+				<a id="ID1LENDRQ" href="https://pixabay.com/music/main-title-forest-intro-128904" target="_blank"><b>Forest Intro (Daniel Roberts)</b><p>https://pixabay.com/music/main-title-forest-intro-128904</p></a>
+				<a id="IDDEM15" href="https://pixabay.com/music/main-title-revolution-epic-cinematic-111025" target="_blank"><b>Revolution-Epic Cinematic (Daniel Roberts)</b><p>https://pixabay.com/music/main-title-revolution-epic-cinematic-111025</p></a>
+				<a id="IDUOJOTAV"><b>Spinning2 (Daniel Roberts)</b><p>N/A</p></a>
+				<a id="IDUDVBNTO"><b>Bounce-4 (Daniel Roberts)</b><p>N/A</p></a>
+				<a id="IDQUMXW"><b>Text Crash1 (Daniel Roberts)</b><p>N/A</p></a>
+				<a id="IDDTKW91PY4" href="https://pixabay.com/music/suspense-escape-of-triumph-epic-cinematic-127029" target="_blank"><b>Escape of Triumph-Epic Cinematic (Daniel Roberts)</b><p>https://pixabay.com/music/suspense-escape-of-triumph-epic-cinematic-127029</p></a>
+				<a id="IDH1X6U"><b>Spinning5 (Daniel Roberts)</b><p>N/A</p></a>
+				<a id="ID1C6VXL0LN" href="https://pixabay.com/sound-effects/object-flyby-8115" target="_blank"><b>Object Flyby (Daniel Roberts)</b><p>https://pixabay.com/sound-effects/object-flyby-8115</p></a>
+				<a id="ID6QX2GA0T"><b>Spinning4 (Daniel Roberts)</b><p>N/A</p></a>
 			</div>
 			<div id="cc"><h2>Subtitles</h2><a href="./cc/15.txt" download="The Solar System is BIGGER - Subtitles.txt" title="Download subtitles"><img src="../static-0/files/images/icons/download.svg" alt="Download"></a></div>
 			<div id="subtitles">
-					<p>You live right here. Or here. Or here.</p>
+				<p>You live right here. Or here. Or here.</p>
 				<p>Or somewhere on this sphere. Or</p>
 				<p>well actually somewhere on this</p>
 				<p>oblate spheroid. Earth technically</p>
@@ -390,10 +387,7 @@
 			</div>
 			<h2>Thumbnails</h2>
 			<div id="thumbnails">
-						<a href="./thumbnails/15-the_solar_system_is_bigger-1080.png" class="tb">
-					<img src="./thumbnails/15-the_solar_system_is_bigger-180.png" alt="Thumbnail">
-					<b>October 22, 2023</b>
-				</a>
+				<a href="./thumbnails/15-the_solar_system_is_bigger-1080.png" class="tb"><img src="./thumbnails/15-the_solar_system_is_bigger-180.png" alt="Thumbnail"><b>October 22, 2023</b></a>
 			</div>
 		</div>
 		<script src="../static-0/main.js"></script>
