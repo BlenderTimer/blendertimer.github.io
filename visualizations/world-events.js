@@ -82,6 +82,13 @@ const worldEvents = [
 		type:"crisis-begins",
 	},
 	{
+		date:"1930-2-18",
+		title:"<b>Pluto</b><p> is discovered.</p>",
+		description:"Discovered in 1930 by Clyde W. Tombaugh, Pluto was the first known object in the Kuiper belt. It was immediately hailed as the ninth planet but was later deemed a \"dwarf-planet\".",
+		major:true,
+		type:"celestial-discovery",
+	},
+	{
 		date:"1939",
 		title:"<b>The Great Depression</b><p> ends.</p>",
 		description:"The Great Depression was a severe global economic downturn which led to high rates of unemployment and poverty.",
