@@ -31,12 +31,17 @@ var navLinks = [
 		title:"Resources",
 		url:"",
 		width:160,
-		date:new Date(2024, 11, 12), //year, month(from 0), day
+		date:new Date(2025, 2, 3), //year, month(from 0), day
 		dropdownURLs:[
 			{
 				title:"Factsheets",
 				url:"/factsheets",
 				date:new Date(2022, 11, 25), //year, month(from 0), day
+			},
+			{
+				title:"Stock Media",
+				url:"/media",
+				date:new Date(2025, 2, 3), //year, month(from 0), day
 			},
 			{
 				title:"Visualizations",
