@@ -65,6 +65,28 @@
 							<b>German</b>
 							<p>Deutsch</p>
 						</div>
+						<div onclick="setLanguage(event)" class="language" id="lang-custom">
+							<b>Custom</b>
+						</div>
+					</div>
+					<div id="custom-list-base" style="display: none;">
+						<b class="custom-list-title" id="custom-list-count">Word List (0):</b>
+						<textarea id="custom-list" oninput="customListInput()"></textarea>
+						<b class="custom-list-title">Word Separator:</b>
+						<div id="custom-list-separators">
+							<div onclick="setCustomSeparator(event)" style="background: var(--hover-back2);" class="custom-list-separator">
+								<b>Lines</b>
+							</div>
+							<div onclick="setCustomSeparator(event)" class="custom-list-separator">
+								<b>Spaces</b>
+							</div>
+							<div onclick="setCustomSeparator(event)" class="custom-list-separator">
+								<b>Commas</b>
+							</div>
+							<div onclick="setCustomSeparator(event)" class="custom-list-separator">
+								<input type="text" maxlength="10" placeholder="Custom" oninput="customSeparatorInput(event)">
+							</div>
+						</div>
 					</div>
 					<h1>Pattern Builder:</h1>
 					<div id="pattern-builder">
@@ -153,10 +175,10 @@
 					</div>
 					<button id="find-btn" onclick="findWords()">Find Words!</button>
 					<i id="tool-stats" style="display: none"></i>
-					<div class="spr"></div>
-					<h1>Pattern ID:</h1>
-					<div style="display: flex;"><input type="text" id="pattern-id" oninput="patternWrite()"><button id="pattern-load" onclick="loadPattern()">Load Pattern</button></div>
-					<i style="margin-top: 5px; font-size: 10pt;">This is a unique pattern ID which you can use to save your pattern or share it with your friends! Enter a pattern ID into the box above to load that pattern.</i>
+					<div class="spr" style="display: none;"></div>
+					<h1 style="display: none;">Pattern ID:</h1>
+					<div style="display: none;"><input type="text" id="pattern-id" oninput="patternWrite()"><button id="pattern-load" onclick="loadPattern()">Load Pattern</button></div>
+					<i style="margin-top: 5px; font-size: 10pt; display: none;">This is a unique pattern ID which you can use to save your pattern or share it with your friends! Enter a pattern ID into the box above to load that pattern. (Note: This ID does not hold information about the chosen language, such data must be shared separately.)</i>
 				</div>
 				<div id="tool-output">
 					<textarea readonly></textarea>
