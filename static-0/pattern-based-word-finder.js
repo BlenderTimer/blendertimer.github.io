@@ -16,6 +16,10 @@ var patternLoad = document.getElementById('pattern-load');
 var patternIDContainer = document.getElementById('pattern-id');
 var patternID = "";
 var ptps = ["B","C","D","F","H","I","J","K","M","N","O","P","Q","R","T","V","a","b","c","d","e","f","g","h","i","j","k","m","n","p","q","r","s","t","v","w","x","z"];
+var customDictionary = [];
+var customListCount = document.getElementById("custom-list-count");
+var customList = document.getElementById("custom-list");
+var customListSeparator = "\n";
 //----------Functions
 //Load
 checkURL()
@@ -82,6 +86,9 @@ function checkURL() {
 			document.getElementById("lang-german").style.background = "var(--hover-back2)";
 			germanLoad = true;
 		}
+		else if (url.removeBefore("?", 1, true).startsWith("custom")) {
+			importLanguageDictionary("custom");
+		}
 		else {
 			importLanguageDictionary("english");
 			document.getElementById("lang-english").style.background = "var(--hover-back2)";
@@ -96,13 +103,19 @@ function checkURL() {
 }
 
 function importLanguageDictionary(lang) {
-	var ld = document.createElement('i');
-	ld.innerHTML = "Loading...";
-	document.getElementById("lang-" + lang).appendChild(ld);
-	var dict = document.createElement('script');
-	dict.src = "./word-dictionaries/" + lang + "-words.js";
-	dict.onload = function() {document.getElementById("lang-" + lang).lastChild.remove()};
-	document.body.appendChild(dict);
+	if (lang == "custom") {
+		document.getElementById("custom-list-base").style.display = null;
+		document.getElementById("lang-custom").style.background = "var(--hover-back2)";
+	}
+	else {
+		var ld = document.createElement('i');
+		ld.innerHTML = "Loading...";
+		document.getElementById("lang-" + lang).appendChild(ld);
+		var dict = document.createElement('script');
+		dict.src = "./word-dictionaries/" + lang + "-words.js";
+		dict.onload = function() {document.getElementById("lang-" + lang).lastChild.remove()};
+		document.body.appendChild(dict);
+	}
 }
 
 function setLanguage(event) {
@@ -111,6 +124,7 @@ function setLanguage(event) {
 	for (var i=0; i < element.parentNode.children.length; i++) {
 		element.parentNode.children[i].style.background = null;
 	}
+	document.getElementById("custom-list-base").style.display = "none";
 	if (lang == "english") {
 		if (englishLoad == false) {
 			importLanguageDictionary(lang);
@@ -155,6 +169,9 @@ function setLanguage(event) {
 			germanLoad = true;
 		}
 	}
+	else if (lang == "custom") {
+		importLanguageDictionary(lang);
+	}
 	resetFindBTN();
 }
 
@@ -168,6 +185,7 @@ function addRule(e) {
 		full = true;
 	}
 	var rule = document.createElement('div');
+	console.log(e);
 	rule.style.cssText = "--back: " + getComputedStyle(o).getPropertyValue('--back');
 	rule.classList = "pattern-block outlined-pattern-block";
 	rule.innerHTML = o.innerHTML.replace("<div class=\"add-pattern\" onclick=\"addRule(event)\" style=\"opacity: 0;\"><img src=\"../static-0/files/images/icons/add.svg\"></div>", "");
@@ -317,7 +335,8 @@ function findWords(fullList) {
 		if (lang == "english") {dict = englishDictionary}
 		else if (lang == "spanish") {dict = spanishDictionary}
 		else if (lang == "french") {dict = frenchDictionary}
-		else if (lang == "german") {dict = germanDictionary};
+		else if (lang == "german") {dict = germanDictionary}
+		else if (lang == "custom") {dict = customDictionary};
 		toolOutput.children[0].value = "";
 		toolOutput.children[1].value = "...";
 		var words = [];
@@ -544,7 +563,7 @@ function findWords(fullList) {
 
 function clearPattern() {
 	if (patternContainer.children.length > 0 && confirm("Clear all rules? (you cannot undo)")) {
-		patternContainer.style.background = "#500000"
+		//patternContainer.style.background = "#500000"
 		patternContainer.innerHTML = "";
 		pattern = [];
 		patternID = "";
@@ -853,4 +872,46 @@ function pl(ptrn) {
 		ptrn = ptrn.slice(0, r) + c + ptrn.slice(r);
 	}
 	return ptrn;
+}
+
+function customListInput() {
+	var cd = customList.value.split(customListSeparator);
+	customDictionary = [];
+	for (const word of cd) {if (word.length > 0) {customDictionary.push(word.trim())}};
+	customListCount.innerHTML = "Word List (" + customDictionary.length.toLocaleString() + "):";
+}
+
+function setCustomSeparator(e) {
+	var element = e.target || e.srcElement;
+	if (element.innerHTML.indexOf("<input") > -1) {
+		customListSeparator = element.children[0].value;
+	}
+	else if (element.tagName == "INPUT") {
+		customListSeparator = element.value;
+	}
+	else if (element.textContent.trim() == "Spaces") {
+		customListSeparator = " ";
+	}
+	else if (element.textContent.trim() == "Commas") {
+		customListSeparator = ",";
+	}
+	else {
+		customListSeparator = "\n";
+	}
+	customListInput();
+	for (const s of document.getElementById("custom-list-separators").children) {
+		s.style.background = null;
+	}
+	if (element.tagName == "INPUT") {
+		element.parentNode.style.background = "var(--hover-back2)";
+	}
+	else {
+		element.style.background = "var(--hover-back2)";
+	}
+}
+
+function customSeparatorInput(e) {
+	var element = e.target || e.srcElement;
+	customListSeparator = element.value;
+	customListInput();
 }

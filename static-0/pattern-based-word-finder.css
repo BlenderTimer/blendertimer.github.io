@@ -93,6 +93,111 @@ body {
 	pointer-events: none;
 }
 
+.custom-list-title {
+	display: block !important;
+	font-size: 12pt !important;
+	width: 100% !important;
+}
+
+#custom-list {
+	display: block;
+	width: 100%;
+	resize: none;
+	background: var(--far-back);
+	box-sizing: border-box;
+	padding: 3px 6px;
+	border-radius: 3px;
+	border: none;
+	outline: none;
+	height: 30vh;
+	min-height: 150px;
+	box-shadow: 0px 0px 10px #0005 inset;
+	margin: 1px 0px 5px 0px;
+	font-family: monospace;
+	color: var(--base-text);
+	overflow-y: scroll;
+	overflow-x: hidden;
+}
+
+#custom-list::-webkit-scrollbar {
+	background: var(--semi-back);
+	width: 10px;
+	border-radius: 0px 3px 3px 0px
+}
+
+#custom-list::-webkit-scrollbar-thumb {
+	background: var(--close-back);
+	border-radius: 5px;
+	height: 50px;
+	border: 3px solid var(--semi-back);
+}
+
+#custom-list::-webkit-scrollbar-thumb:hover {
+	background: var(--hover-back2);
+}
+
+#custom-list-separators {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+	width: 100%;
+	gap: 5px;
+	margin: 3px 0px 10px 0px;
+}
+
+.custom-list-separator {
+	display: flex;
+	flex-flow: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	flex: 1 1;
+	flex-basis: calc(25% - 5px);
+	background: var(--closer-back);
+	box-sizing: border-box;
+	border-radius: 3px;
+	cursor: pointer;
+	border: 2px solid var(--hover-back1);
+	padding: 5px;
+	transition: 0.2s;
+}
+
+.custom-list-separator:hover {
+	background: var(--hover-back2);
+}
+
+.custom-list-separator b {
+	font-size: 11pt !important;
+	color: var(--base-text) !important;
+	pointer-events: none;
+}
+
+.custom-list-separator p {
+	font-size: 10pt !important;
+	color: var(--brighter-italic-text) !important;
+	pointer-events: none;
+}
+
+.custom-list-separator i {
+	font-size: 8pt !important;
+	color: var(--italic-text) !important;
+	pointer-events: none;
+}
+
+.custom-list-separator input {
+	display: block;
+	max-width: 80px;
+	padding: 3px 6px;
+	box-sizing: border-box;
+	background: var(--semi-far-back);
+	border-radius: 3px;
+	border: none;
+	outline: none;
+	text-align: center;
+	font-size: 10pt !important;
+	color: var(--brighter-italic-text) !important;
+}
+
 #tool-input label {
 	display: block;
 	width: 100%;
