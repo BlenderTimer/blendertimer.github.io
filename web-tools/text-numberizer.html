@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en-US">
+	<head>
+		<!-- Google tag (gtag.js) -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-  SYR26MG6YV"></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
+			
+			gtag('config', 'G-SYR26MG6YV');
+		</script>
+		<!-- Google Tag Manager -->
+		<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+		new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+		j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+		'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+		})(window,document,'script','dataLayer','GTM-KSL94KH');</script>
+		<!-- End Google Tag Manager -->
+		<meta charset="utf-8">
+		<title>Text Numberizer - BlenderTimer Web Tools</title>
+		<meta name="description" content="Quickly replace certain letters with similar looking numbers!">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="icon" href="../favicon.png" type="image/x-icon">
+		<link rel="stylesheet" type="text/css" href="../static-0/general.css">
+		<link rel="stylesheet" type="text/css" href="../static-0/main.css">
+		<link rel="stylesheet" type="text/css" href="../static-0/text-numberizer.css">
+		<script src="../bt-js/bt-js.js"></script>
+	</head>
+	<body>
+		<div id="banner-menu">
+			<nav>
+				<!--====================  LARGE MENU  ====================-->
+				<ul id="large-menu">
+					<li id="nav-home"><a href="/"><img alt="BlenderTimer" src="../static-0/files/images/nav-logohome.png"></a></li>
+				</ul>
+				<!--====================  SMALL MENU  ====================-->
+				<div id="small-menu" style="display: none" onclick="smallMenuToggle()"><img alt="Menu" src="../static-0/files/images/menu-bars.png"></div>
+				<div id="small-menu-main"></div>
+			</nav>
+			<script src="../static-0/nav-links.js"></script>
+			<script src="../static-0/load-menus.js"></script>
+		</div>
+		<div id="loader" style="width: 100%; height: calc(100% - 50px); top: 50px; left: 0px; position: fixed; z-index: -99999">
+			<img alt="Loading" src="../static-0/files/images/loading-general.gif" style="width: 100px; height: 100px; position: fixed; left: calc(50% - 50px); top: calc(50% - 25px); filter: drop-shadow(0px 0px 15px #000000)">
+		</div>
+		<div id="content-main" style="opacity: 0; transition: 1s ease">
+			<h1 class="title">Text Numberizer</h1>
+			<p class="description">Quickly replace certain letters with similar looking numbers!</p>
+			<div id="main-tool">
+				<div id="tool-input">
+					<label for="text-input">Text to numberize:</label>
+					<textarea id="text-input" placeholder="Type your text here!" oninput="numberize()"></textarea>
+				</div>
+				<div id="tool-output">
+					<label for="text-output">Numberized text:</label>
+					<textarea id="text-output" readonly></textarea>
+				</div>
+			</div>
+			<p>This tool converts certain numbers (such as A) into similar looking numbers (such as 4)! A very basic version of leet/leetspeak.</p>
+			<div id="donate-promo">
+				<span></span>
+				<p>Do you enjoy 100% free tools with no ads?</p>
+				<b>Consider donating!</b>
+				<button onclick="donate('Text Numberizer - BlenderTimer')">DONATE</button>
+			</div>
+		</div>
+		<script src="../static-0/main.js"></script>
+		<script src="../static-0/text-numberizer.js"></script>
+	</body>
+</html>
