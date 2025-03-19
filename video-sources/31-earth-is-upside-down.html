@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en-US">
+	<head>
+		<!-- Google tag (gtag.js) -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-  SYR26MG6YV"></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
+			
+			gtag('config', 'G-SYR26MG6YV');
+		</script>
+		<meta charset="utf-8">
+		<title>Earth is UPSIDE-DOWN - BlenderTimer Video Sources</title>
+		<meta name="description" content="The video sources for Earth is UPSIDE-DOWN.">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="icon" href="../favicon.png">
+		<link rel="stylesheet" type="text/css" href="../static-0/general.css">
+		<link rel="stylesheet" type="text/css" href="../static-0/main.css">
+		<link rel="stylesheet" type="text/css" href="../static-0/video-sources-pages.css">
+		<script src="../bt-js/bt-js.js"></script>
+		<script src="../static-0/videos.js"></script>
+		<script src="../static-0/jquery-3.6.3.js"></script>
+	</head>
+	<body>
+		<div id="banner-menu">
+			<nav>
+				<!--====================  LARGE MENU  ====================-->
+				<ul id="large-menu">
+					<li id="nav-home"><a href="/"><img alt="BlenderTimer" src="../static-0/files/images/nav-logohome.png"></a></li>
+				</ul>
+				<!--====================  SMALL MENU  ====================-->
+				<div id="small-menu" style="display: none" onclick="smallMenuToggle()"><img alt="Menu" src="../static-0/files/images/menu-bars.png"></div>
+				<div id="small-menu-main"></div>
+			</nav>
+			<script src="../static-0/nav-links.js"></script>
+			<script src="../static-0/load-menus.js"></script>
+		</div>
+		<div id="loader" style="width: 100%; height: calc(100% - 50px); top: 50px; left: 0px; position: fixed; z-index: -99999">
+			<img alt="Loading" src="../static-0/files/images/loading-general.gif" style="width: 100px; height: 100px; position: fixed; left: calc(50% - 50px); top: calc(50% - 25px); filter: drop-shadow(0px 0px 15px #000000)">
+		</div>
+		<div id="content-main" style="opacity: 0; transition: 1s ease">
+			<h1 id="title">Earth is UPSIDE-DOWN - Fantastic Fact 13</h1>
+			<p id="published-date">Published: March 19, 2025 at 9:53 AM (PT)</p>
+			<div id="video-info">
+				<div id="vid-info-left">
+					<b class="vit">Video Information</b>
+					<span><b>Length:</b><p>0:46</p><i>(1395 frames/30fps)</i></span>
+					<span><b>Resolution:</b><p>1080x1920</p><i>(FHD)</i></span>
+					<span><b>Most Rewatched:</b><a>N/A</a></span>
+					<span class="spr"></span>
+					<b class="vit">Realtime Statistics</b>
+					<div id="realtime-stats">
+						<span title="Views"><img src="../static-0/files/images/icons/eye.svg" alt="Views"><b>...</b></span>
+						<span title="Likes"><img src="../static-0/files/images/icons/like.svg" alt="Likes"><b>...</b></span>
+						<span title="Comments"><img src="../static-0/files/images/icons/comment.svg" alt="Comments"><b>...</b></span>
+					</div>
+					<span class="spr"></span>
+					<b class="vit">Views in the First</b>
+					<div id="first-views">
+						<span><b>10 Minutes</b><p>...</p></span>
+						<span><b>30 Minutes</b><p>...</p></span>
+						<span><b>Hour</b><p>...</p></span>
+						<span><b>24 Hours</b><p>...</p></span>
+					</div>
+				</div>
+				<span class="spr" id="info1-spr" style="display: none"></span>
+				<div id="vid-info-right">
+					<a id="thumbnail" href="./thumbnails/31-earth_is_upside-down_-_fantastic_fact_13-1080.png" target="_blank"><img src="./thumbnails/31-earth_is_upside-down_-_fantastic_fact_13-180.png" alt="Thumbnail"></a>
+					<div id="video-icons">
+						<span><b>Upload ID</b><p>31</p></span>
+						<span><b>Short ID</b><p>13</p></span>
+						<span><b>Type</b><p>Short</p></span>
+					</div>
+					<span id="yt-link"><a href="https://youtu.be/04lni8ZHfUw" target="_blank">https://youtu.be/04lni8ZHfUw</a><img src="../static-0/files/images/icons/copy-link.svg" alt="Copy link" onclick="copyVideoLink(event)"></span>
+					<script type="text/javascript">
+						var fv = document.getElementById('first-views');
+						var video = videos[parseInt(document.getElementById('video-icons').children[0].children[1].textContent)-1];
+						if (video.views10 == -1) {fv.children[0].children[1].innerHTML = "NO DATA"}
+						else {fv.children[0].children[1].innerHTML = video.views10};
+						if (video.views10 == -1) {fv.children[1].children[1].innerHTML = "NO DATA"}
+						else {fv.children[1].children[1].innerHTML = video.views30};
+						if (video.views10 == -1) {fv.children[2].children[1].innerHTML = "NO DATA"}
+						else {fv.children[2].children[1].innerHTML = video.views1};
+						if (video.views10 == -1) {fv.children[3].children[1].innerHTML = "NO DATA"}
+						else {fv.children[3].children[1].innerHTML = video.views24};
+						//Realtime Stats
+						var ytid = document.getElementById('yt-link').children[0].textContent.removeBefore("/", 1, true);
+						$.get(
+							"https://www.googleapis.com/youtube/v3/videos",{
+							part: 'statistics',
+							id: ytid,
+							key: 'AIzaSyDsaGX5mhvqCpI3jWMFFGMmmmB5IUEyUrk'},
+							function(data) {
+								var views = 0;
+								var likes = 0;
+								var comments = 0;
+								views = data.items[0].statistics.viewCount;
+								likes = data.items[0].statistics.likeCount;
+								comments = data.items[0].statistics.commentCount;
+								document.getElementById("realtime-stats").children[0].children[1].innerHTML = parseInt(views).toLocaleString();
+								document.getElementById("realtime-stats").children[1].children[1].innerHTML = parseInt(likes).toLocaleString();
+								document.getElementById("realtime-stats").children[2].children[1].innerHTML = parseInt(comments).toLocaleString();
+							}
+						);
+					</script>
+				</div>
+			</div>
+			<h2>Information Sources</h2>
+			<div id="info-sources" class="sources">
+				<a id="IDTMR4MY" href="https://en.wikipedia.org/wiki/North_magnetic_pole" target="_blank"><b>Earth's North Magnetic Pole</b><p>https://en.wikipedia.org/wiki/North_magnetic_pole</p></a>
+			</div>
+			<h2>Graphic Sources</h2>
+			<div id="graphic-sources" class="sources">
+				<a id="IDRJN8IUZBE" href="https://pixabay.com/vectors/earth-planet-space-terrestrial-8233221" target="_blank"><b>Earth (Daniel Roberts)</b><p>https://pixabay.com/vectors/earth-planet-space-terrestrial-8233221</p></a>
+			</div>
+			<h2>Audio Sources</h2>
+			<div id="audio-sources" class="sources">
+				<a id="ID2GEHOFS"><b>Narration (Daniel Roberts)</b><p>N/A</p></a>
+				<a id="ID0P48O"><b>Swoosh-01 (Daniel Roberts)</b><p>N/A</p></a>
+				<a id="IDBAEXXGCRD"><b>Rumble-1 (Daniel Roberts)</b><p>N/A</p></a>
+				<a id="IDOZG3DM8"><b>Hit-02 (Daniel Roberts)</b><p>N/A</p></a>
+				<a id="IDB2MI4"><b>Hit-01 (Daniel Roberts)</b><p>N/A</p></a>
+				<a id="IDE4V65"><b>Metal Hit-01 (Daniel Roberts)</b><p>N/A</p></a>
+			</div>
+			<div id="cc"><h2>Subtitles</h2><a href="./cc/31.txt" download="Earth is UPSIDE-DOWN - Subtitles.txt" title="Download subtitles"><img src="../static-0/files/images/icons/download.svg" alt="Download"></a></div>
+			<div id="subtitles">
+				<p>Did you know that the Earth is</p>
+				<p>upside-down? Earth has a north</p>
+				<p>pole and a south pole, just like</p>
+				<p>a giant magnet. Except...it's</p>
+				<p>not actually the way most people</p>
+				<p>think it is. What we call the</p>
+				<p>"North Pole" is actually the south</p>
+				<p>pole, and what we call the "South</p>
+				<p>Pole" is actually the north pole.</p>
+				<p>If you know anything about magnets</p>
+				<p>you'll know that the north pole</p>
+				<p>of a magnet will not face the</p>
+				<p>north pole of another magnet (at</p>
+				<p>least not without significant force).</p>
+				<p>This is why we call the Earth's</p>
+				<p>south pole the "North Pole". Because</p>
+				<p>the north pole of a compass faces</p>
+				<p>the south pole of the Earth. But</p>
+				<p>the "North Pole" is in fact Earth's</p>
+				<p>south pole.</p>
+				<p>But it'd be really confusing</p>
+				<p>if you started reversing the names</p>
+				<p>of the poles so it's probably</p>
+				<p>best to call the North and South</p>
+				<p>Pole by their normal but definitely</p>
+				<p>inaccurate names.</p>
+			</div>
+			<h2>Thumbnails</h2>
+			<div id="thumbnails">
+				<a href="./thumbnails/31-earth_is_upside-down_-_fantastic_fact_13-1080.png" class="tb"><img src="./thumbnails/31-earth_is_upside-down_-_fantastic_fact_13-180.png" alt="Thumbnail"><b>March 19, 2025</b></a>
+			</div>
+		</div>
+		<script src="../static-0/main.js"></script>
+		<script src="../static-0/video-sources-pages.js"></script>
+	</body>
+</html>
