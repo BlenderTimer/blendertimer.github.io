@@ -424,7 +424,7 @@ const videos = [
 		tui:31,
 		sui:13,
 		type:"short",
-		url:"earth-is-upside-down",
+		url:"31-earth-is-upside-down",
 		cc:"Did you know that the Earth is upside-down? Earth has a north pole and a south pole, just like a giant magnet. Except...it's not actually the way most people think it is. What we call the \"North Pole\" is actually the south pole, and what we call the \"South Pole\" is actually the north pole. If you know anything about magnets you'll know that the north pole of a magnet will not face the north pole of another magnet (at least not without significant force). This is why we call the Earth's south pole the \"North Pole\". Because the north pole of a compass faces the south pole of the Earth. But the \"North Pole\" is in fact Earth's south pole. But it'd be really confusing if you started reversing the names of the poles so it's probably best to call the North and South Pole by their normal but definitely inaccurate names.",
 		youtubeID:"04lni8ZHfUw",
 		date:"19-3-2025",
