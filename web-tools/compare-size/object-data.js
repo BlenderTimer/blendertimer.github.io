@@ -7907,7 +7907,7 @@ var objects = [
 		lastModified:"2025/04/09",
 	},
 	{
-		name:"Camarasaurus",
+		name:"Camarasaurus Supremus",
 		defaultAngle:0,
 		sideImage:"Camarasaurus-side",
 		sideImageAlign:"bottom",
@@ -7921,10 +7921,10 @@ var objects = [
 		category3:"reptiles",
 		tags:["dinosaur"],
 		dateAdded:"2025/04/29",
-		lastModified:"2025/04/29",
+		lastModified:"2025/04/30",
 	},
 	{
-		name:"Titanohierax",
+		name:"Titanohierax Gloveralleni",
 		defaultAngle:0,
 		sideImage:"Titanohierax-side",
 		sideImageAlign:"bottom",
@@ -7938,7 +7938,7 @@ var objects = [
 		category3:"birds",
 		tags:["hawk"],
 		dateAdded:"2025/04/29",
-		lastModified:"2025/04/29",
+		lastModified:"2025/04/30",
 	},
 	{
 		name:"Cave Hyena",
