@@ -456,9 +456,9 @@ const videos = [
 		cc:"Your brain processes the equivalent of around 1.6 megabytes per second. That might not sound like much until you realize that in just one minute your brain will have processed the equivalent of 96 million letters or about 300 books. In one hour your brain will have processed the equivalent of over 40 thousand webpages. And in a day you'll have processed the equivalent of 3 and a half days of full HD video or 23 years of audio! Oh and as a side note, around 3.8 terabytes of data is created per second. But all humans on the planet combined process the equivalent of 12.8 thousand terabytes per second.",
 		youtubeID:"MqRaYZJ6mnY",
 		date:"29-5-2025",
-		views10:-1,
-		views30:-1,
-		views1:-1,
-		views24:-1,
+		views10:158,
+		views30:517,
+		views1:901,
+		views24:6937,
 	},
 ];
