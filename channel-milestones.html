@@ -10,36 +10,36 @@
             
             gtag('config', 'G-SYR26MG6YV');
         </script>
-        <meta charset="UTF-8">
+        <meta charset="utf-8">
 		<title>Channel Milestones - BlenderTimer</title>
 		<meta name="description" content="This is the full milestone timeline of the BlenderTimer YouTube channel!">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="icon" href="./favicon.png" type="image/x-icon">
 		<link rel="stylesheet" type="text/css" href="./static-0/general.css">
+		<link rel="stylesheet" type="text/css" href="./static-0/main.css">
 		<link rel="stylesheet" type="text/css" href="./static-0/channel-milestones.css">
 	</head>
-	<body onload="baseLoad(), loadMilestones()" onresize="determineDisplayMenu()">
-		<div id="warning-banner" onclick="hideWarningBanner()" style="margin: 0px 0px -100px 0px; opacity: 0; display: none"><div id="warning-banner-main"><img alt="Close" id="wb-close" src="./static-0/files/images/close-x.png"><p>UNDER CONSTRUCTION</p></div></div>
-		<div id="background-plate"></div>
+	<body>
 		<div id="banner-menu">
 			<nav>
 				<!--====================  LARGE MENU  ====================-->
 				<ul id="large-menu">
-					<li id="nav-home"><a href="./"><img alt="BlenderTimer" src="./static-0/files/images/nav-logohome.png"></a></li>
+					<li id="nav-home"><a href="/"><img alt="BlenderTimer" src="./static-0/files/images/nav-logohome.png"></a></li>
 				</ul>
-				<div id="revolve-button" title="Current visitors on this site."><script src="https://rf.revolvermaps.com/0/0/3.js?i=5cgjr9bkw1v&b=0&s=40&m=2&cl=555555&co=000000&cd=ffffff&v0=25&v1=100&r=1" async="async"></script></div>
 				<!--====================  SMALL MENU  ====================-->
 				<div id="small-menu" style="display: none" onclick="smallMenuToggle()"><img alt="Menu" src="./static-0/files/images/menu-bars.png"></div>
 				<div id="small-menu-main"></div>
 			</nav>
+			<script src="./static-0/nav-links.js"></script>
+			<script src="./static-0/load-menus.js"></script>
 		</div>
 		<div id="loader" style="width: 100%; height: calc(100% - 50px); top: 50px; left: 0px; position: fixed; z-index: -99999">
 			<img alt="Loading" src="./static-0/files/images/loading-general.gif" style="width: 100px; height: 100px; position: fixed; left: calc(50% - 50px); top: calc(50% - 25px); filter: drop-shadow(0px 0px 15px #000000)">
 		</div>
 		<div id="content-main" style="opacity: 0; transition: 1s ease">
 			<div id="primary-block">
-				<h3>Channel Milestones</h3>
-				<div id="title-text2">
+				<h1 class="title">Channel Milestones</h1>
+				<div class="description">
 					<p>This is the full milestone timeline of the </p><a href="https://www.youtube.com/BlenderTimer" target="_blank">BlenderTimer</a><p> YouTube channel.</p>
 				</div>
 				<div id="timeline-block">
@@ -51,11 +51,16 @@
 				<h3 id="milestones" style="margin: 20px 0px -5px 0px"></h3>
 				<div id="milestone-list">
 					<!-- Vertical Offset (higher = lower), Title Offset (no, after, center), Skip Drawing Flag Poll (no, yes)  -->
-					<p class="70 after">(2025-04-25) 90,000 Subscribers!</p>
-					<p class="6 after">(2025-04-20) 100 Years of Watch Time!</p>
-					<p class="-55 after">(2025-04-18) First YouTube Member!</p>
+					<p class="90 after">(2025-04-26) 900,000 Watch Hours!</p>
+					<p class="35 after">(2025-04-25) 90,000 Subscribers!</p>
+					<p class="-10 after">(2025-04-20) 100 Years of Watch Time!</p>
+					<p class="-65 after">(2025-04-18) First YouTube Member!</p>
+					<p class="6 after">(2025-03-18) 800,000 Watch Hours!</p>
+					<p class="-55 after">(2025-03-16) 3 Years on YouTube!</p>
 					<p class="0">(2025-02-22) Second Channel Started!</p>
 					<p class="0">(2025-01-23) 80,000 Subscribers!</p>
+					<p class="0">(2024-11-07) 700,000 Watch Hours!</p>
+					<p class="70 after">(2024-09-09) 600,000 Watch Hours!</p>
 					<p class="6 after">(2024-09-01) 70,000 Subscribers!</p>
 					<p class="-55 after">(2024-08-29) 10,000,000 Views!</p>
 					<p class="0">(2024-07-17) 9,000,000 Views!</p>
@@ -97,8 +102,7 @@
 				</div>
 			</div>
 		</div>
-		<script src="./static-0/nav-links.js"></script>
-		<script src="./static-0/general.js"></script>
+		<script src="./static-0/main.js"></script>
 		<script src="./static-0/channel-milestones.js"></script>
 	</body>
 </html>
