@@ -20,6 +20,8 @@ var yearTag = {top:30};
 var milestoneOffset = 0;
 //——————————————————————————————————————————
 
+loadMilestones()
+
 function loadMilestones() {
 	for (var i=0; i < milestoneList.children.length; i++) {
 		var ih = milestoneList.children[i].innerHTML.toString();
