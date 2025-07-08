@@ -27,7 +27,6 @@
 				<ul id="large-menu">
 					<li id="nav-home"><a href="/"><img alt="BlenderTimer" src="../static-0/files/images/nav-logohome.png"></a></li>
 				</ul>
-				<div id="revolve-button" title="Current visitors on this site."><script src="https://rf.revolvermaps.com/0/0/3.js?i=5cgjr9bkw1v&b=0&s=40&m=2&cl=555555&co=000000&cd=ffffff&v0=25&v1=100&r=1" async="async"></script></div>
 				<!--====================  SMALL MENU  ====================-->
 				<div id="small-menu" style="display: none" onclick="smallMenuToggle()"><img alt="Menu" src="../static-0/files/images/menu-bars.png"></div>
 				<div id="small-menu-main"></div>
@@ -40,7 +39,7 @@
 		</div>
 		<div id="content-main" style="opacity: 0; transition: 1s ease">
 			<h1 class="title">Morse Code Translator</h1>
-			<p class="description">Translate from English to Morse Code, or from Morse Code to English!</p>
+			<p class="description">Translate from English to Morse Code or from Morse Code to English!</p>
 			<div id="main-tool">
 				<div id="player-data" style="display: none;">
 					<div id="player-data-short">
@@ -74,7 +73,7 @@
 						}
 					</script>
 					<label for="input-box" id="input-box-title">English text:</label>
-					<textarea id="input-box" placeholder="Enter text here!" oninput="easyType()"></textarea>
+					<textarea id="input-box" placeholder="Enter text here!" oninput="easyType(), autoTranslate()"></textarea>
 					<textarea id="input-box2" style="display: none;" readonly></textarea>
 					<div id="input-menu" class="textarea-menu">
 						<div style="transform: scaleX(0);opacity: 0;">
@@ -172,6 +171,34 @@
 				</div>
 			</article>
 			<p>This translator allows you to convert Morse Code to English or English to Morse Code! Featuring an EasyType feature to make it easier and faster to type Morse Code! Play the Morse Code to see how it sounds (based on real world Morse Code recordings)! It's all completely free!</p>
+			<div id="extra-pages-container">
+				<div class="spr"></div>
+				<h1 class="title">Some other pages you might enjoy:</h1>
+				<div id="extra-pages">
+					<a href="https://youtu.be/EUggVZ8tTOA" class="extra-pages-video">
+						<img alt="A Superior Language - Thumbnail" src="../video-sources/thumbnails/7-a_superior_language-180.png" class="misc-content-img">
+						<b>A Superior Language</b>
+						<i>(YouTube video)</i>
+					</a>
+					<a href="/web-tools/periodic-table-word-finder" class="extra-pages-video">
+						<img alt="Periodic Table Word Finder" src="../static-0/files/images/webtoolpreview-periodictablewordfinder.png" class="misc-content-img">
+						<b>Periodic Table Word Finder</b>
+					</a>
+					<a href="/web-tools">
+						<img alt="Web Tools" src="../static-0/files/images/webtools.svg" class="misc-content-img">
+						<b>Web Tools</b>
+					</a>
+					<a href="https://youtu.be/TzKivkomsJM" class="extra-pages-video">
+						<img alt="What You Didn't Know About Roman Numerals - Thumbnail" src="../video-sources/thumbnails/4-what_you_didnt_know_about_roman_numerals-180.png" class="misc-content-img">
+						<b>What You Didn't Know About Roman Numerals</b>
+						<i>(YouTube video)</i>
+					</a>
+					<a href="/web-tools/word-unscrambler" class="extra-pages-video">
+						<img alt="Word Unscrambler" src="../static-0/files/images/webtoolpreview-wordunscrambler.png" class="misc-content-img">
+						<b>Word Unscrambler</b>
+					</a>
+				</div>
+			</div>
 			<div id="donate-promo">
 				<span></span>
 				<p>Do you enjoy 100% free tools with no ads?</p>
