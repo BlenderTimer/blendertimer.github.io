@@ -30,7 +30,7 @@ body {
 	display: flex;
 	width: 100%;
 	justify-content: space-between;
-	align-items: flex-start;
+	align-items: stretch;
 	margin: 10px 0px;
 }
 
@@ -101,7 +101,8 @@ body {
 #main-tool textarea {
 	display: block;
 	width: 100%;
-	height: 200px;
+	min-height: 200px;
+	height: -webkit-fill-available;
 	background: var(--far-back);
 	border-radius: 3px 3px 0px 0px;
 	border: none;
@@ -196,7 +197,8 @@ body {
 	display: flex;
 	flex-flow: column;
 	width: 100%;
-	margin-top: 5px;
+	max-width: 700px;
+	margin: 5px auto 0px auto;
 }
 
 #international-morse-code-rules span {
@@ -239,11 +241,12 @@ body {
 
 #international-morse-code-key {
 	display: flex;
-	justify-content: space-evenly;
+	justify-content: space-between;
 	flex-wrap: wrap;
 	gap: 20px;
 	width: 100%;
-	margin-top: 5px;
+	max-width: 700px;
+	margin: 5px auto 0px auto;
 }
 
 #international-morse-code-key div {

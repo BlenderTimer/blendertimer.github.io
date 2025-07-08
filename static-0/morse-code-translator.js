@@ -305,3 +305,7 @@ function easyType() {
 		}, 1);
 	}
 }
+
+function autoTranslate() {
+	setTimeout(function() {convert()}, 1);
+}
