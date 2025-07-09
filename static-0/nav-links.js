@@ -31,7 +31,7 @@ var navLinks = [
 		title:"Resources",
 		url:"",
 		width:160,
-		date:new Date(2025, 2, 3), //year, month(from 0), day
+		date:new Date(2025, 6, 7), //year, month(from 0), day
 		dropdownURLs:[
 			{
 				title:"Factsheets",
@@ -52,6 +52,11 @@ var navLinks = [
 				title:"Web Tools",
 				url:"/web-tools",
 				date:new Date(2024, 3, 6), //year, month(from 0), day
+			},
+			{
+				title:"Software",
+				url:"/software",
+				date:new Date(2025, 6, 7), //year, month(from 0), day
 			},
 			{
 				title:"Programming Elements",
