@@ -475,4 +475,18 @@ const videos = [
 		views1:300,
 		views24:1894,
 	},
+	{
+		name:"I'm NOT Lazy - Fantastic Fact 15",
+		tui:35,
+		sui:15,
+		type:"short",
+		url:"35-im-not-lazy",
+		cc:"I'm not lazy. I'm currently very busy traveling Mach 1 around the center of the Earth, over 100, 000 kilometers per hour around the Sun, 828,000 kilometers per hour around the Milky Way, 2.1 million kilometers per hour through the Universe, producing over 2000 red blood cells every millisecond, shedding 56,000 skin cells every second, pumping 5 liters of blood every minute, inhaling 315 liters of air every hour, growing my hair a collective 35 meters every day, processing the equivalent of 2.6 million books every week, moving my eyes 7.2 million times every month, and digesting 600 kilograms of food every year, just to list a few things. So basically, in short...",
+		youtubeID:"N3YC7PHtGvw",
+		date:"15-7-2025",
+		views10:-1,
+		views30:-1,
+		views1:-1,
+		views24:-1,
+	},
 ];
