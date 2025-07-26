@@ -7,6 +7,11 @@
 	padding: 0px 20px 20px 20px;
 }
 
+.limwidth {
+	max-width: 1500px;
+	margin: 0px auto !important;
+}
+
 .title {
 	margin-top: 12px !important;
 	margin-bottom: 0px !important;
@@ -74,6 +79,7 @@
 	justify-content: space-around;
 	position: relative;
 	width: calc((100% / 6) - 10px);
+	max-width: 300px;
 	margin: 5px !important;
 	border-radius: 5px;
 	overflow: hidden;
@@ -84,6 +90,7 @@
 	box-sizing: border-box;
 	cursor: pointer !important;
 	text-align: center;
+	aspect-ratio: 16 / 9;
 	transition: 0.2s !important;
 }
 
