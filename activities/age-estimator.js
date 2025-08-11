@@ -89,13 +89,13 @@ function getResult() {
 		maxAge = 28;
 		if (estAge > 30) {
 			estAge = (((estAge*2)+(18+yrfrcal))/3).round(0);
-			estAge = estAge / 1.25;
+			estAge = (estAge / 1.25).round(0);
 		}
 		else if (estAge > 40) {
-			estAge = estAge / 1.3;
+			estAge = (estAge / 1.3).round(0);
 		}
 		else if (estAge > 20) {
-			estAge = estAge / 1.2;
+			estAge = (estAge / 1.2).round(0);
 		}
 	}
 	else {error = true};
@@ -110,9 +110,36 @@ function getResult() {
 		estAge = (((estAge*2)+(40+yrfrcal))/3).round(0);
 	}
 	else {error = true};
+	// Have you ever owned a landline phone?
+	var a2 = getQuestionAnswer(q[8].id, "str");
+	if (a2 == "yes") {
+		if (estAge < 35) {
+			estAge = (estAge * 1.1).round(0);
+		}
+	}
+	else if (a2 == "no") {
+		if (estAge > 35) {
+			estAge = (estAge / 1.25).round(0);
+		}
+		else if (estAge > 25) {
+			estAge = (estAge / 1.1).round(0);
+		}
+	}
+	else {error = true};
+	// Were/are you homeschooled
+	var a2 = getQuestionAnswer(q[9].id, "str");
+	if (a2 == "yes") {
+		if (estAge >= 20 && estAge <= 45) {
+			estAge = (estAge / 1.2).round(0);
+		}
+	}
+	else if (a2 == "no") {
+		//
+	}
+	else {error = true};
 	//----------
-	console.log(estAges);
-	console.log(minAge + " - " + maxAge)
+	// console.log(estAges);
+	// console.log(minAge + " - " + maxAge)
 	if (estAge < (minAge+yrfrcal)) {
 		estAge = (minAge - Math.pow((minAge-estAge)/estAge, 3)).round(0);
 	}
@@ -125,9 +152,10 @@ function getResult() {
 	else if (estAge > 110) {
 		estAge = 110;
 	}
-	result.children[1].innerHTML = estAge.toString();
 	if (error == true) {
-		result.style.transform = "scaleY(0)";
+		result.style.background = "var(--base-back)";
+		result.style.border = "3px solid var(--close-back)";
+		result.style.boxShadow = "0px 0px 20px #0005";
 		document.getElementById("finish").style.background = "#F44";
 		document.getElementById("finish").style.borderColor = "#F88";
 		document.getElementById("finish").textContent = "All Questions Must Be Answered"
@@ -140,8 +168,15 @@ function getResult() {
 		}, 3000);
 	}
 	else {
-		result.style.transform = "scaleY(1)";
+		result.style.background = "var(--theme1)";
+		result.style.border = "3px solid var(--theme4)";
+		result.style.boxShadow = "0px 0px 20px var(--theme1)";
 		document.getElementById("finish").style.background = null;
 		document.getElementById("finish").style.borderColor = null;
+		result.style.transform = "scaleY(0)";
+		setTimeout(function() {
+			result.style.transform = null;
+			result.children[1].innerHTML = estAge.toString();
+		}, 200);
 	}
 }

@@ -12,7 +12,7 @@
 		</script>
 		<meta charset="utf-8">
 		<title>Age Estimator - BlenderTimer Activities</title>
-		<meta name="description" content="Answer these 8 questions and I'll try to guess your age!">
+		<meta name="description" content="Answer these 10 questions and I'll try to guess your age!">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="icon" href="../favicon.png" type="image/x-icon">
 		<link rel="stylesheet" type="text/css" href="../static-0/general.css">
@@ -39,7 +39,7 @@
 		</div>
 		<div id="content-main" style="opacity: 0; transition: 1s ease">
 			<h1 class="a-title">Age Estimator</h1>
-			<p class="a-description">Answer these 8 questions and I'll try to guess your age!</p>
+			<p class="a-description">Answer these 10 questions and I'll try to guess your age!</p>
 			<div id="quiz-base">
 				<div class="question">
 					<p>I've used a smartphone most of my life.</p>
@@ -62,7 +62,7 @@
 					<div class="agree-responder"><b class="disagree">DISAGREE</b><button class="agree-responder-selector ars1" onclick="setAgree(event)" title="Strongly Disagree"></button><button class="agree-responder-selector ars2" onclick="setAgree(event)" title="Disagree"></button><button class="agree-responder-selector ars3" onclick="setAgree(event)" title="Slightly Disagree"></button><button class="agree-responder-selector ars4" onclick="setAgree(event)" title="Neutral"></button><button class="agree-responder-selector ars5" onclick="setAgree(event)" title="Slightly Agree"></button><button class="agree-responder-selector ars6" onclick="setAgree(event)" title="Agree"></button><button class="agree-responder-selector ars7" onclick="setAgree(event)" title="Strongly Agree"></button><b class="agree">AGREE</b></div>
 				</div>
 				<div class="question">
-					<p>I often use abbreviations (e.g. LOL, SMH, etc.) in real-world conversations.</p>
+					<p>I often use texting abbreviations (e.g. LOL, SMH, etc.) in real-world conversations.</p>
 					<div class="agree-responder"><b class="disagree">DISAGREE</b><button class="agree-responder-selector ars1" onclick="setAgree(event)" title="Strongly Disagree"></button><button class="agree-responder-selector ars2" onclick="setAgree(event)" title="Disagree"></button><button class="agree-responder-selector ars3" onclick="setAgree(event)" title="Slightly Disagree"></button><button class="agree-responder-selector ars4" onclick="setAgree(event)" title="Neutral"></button><button class="agree-responder-selector ars5" onclick="setAgree(event)" title="Slightly Agree"></button><button class="agree-responder-selector ars6" onclick="setAgree(event)" title="Agree"></button><button class="agree-responder-selector ars7" onclick="setAgree(event)" title="Strongly Agree"></button><b class="agree">AGREE</b></div>
 				</div>
 				<div class="question">
@@ -73,8 +73,16 @@
 					<p>Do you know what "sus" means?</p>
 					<div class="yesno-responder"><button class="yesno-responder-no" onclick="setYesNo(event)">NO</button><button class="yesno-responder-yes" onclick="setYesNo(event)">YES</button></div>
 				</div>
+				<div class="question">
+					<p>Have you ever owned a landline phone?</p>
+					<div class="yesno-responder"><button class="yesno-responder-no" onclick="setYesNo(event)">NO</button><button class="yesno-responder-yes" onclick="setYesNo(event)">YES</button></div>
+				</div>
+				<div class="question">
+					<p>Were/are you homeschooled?</p>
+					<div class="yesno-responder"><button class="yesno-responder-no" onclick="setYesNo(event)">NO</button><button class="yesno-responder-yes" onclick="setYesNo(event)">YES</button></div>
+				</div>
 				<button id="finish" onclick="getResult()">Estimate My Age!</button>
-				<div id="result" style="transform: scaleY(0)">
+				<div id="result" style="background: var(--base-back); border: 3px solid var(--close-back); box-shadow: 0px 0px 20px #0005;">
 					<p>You are</p>
 					<b>...</b>
 				</div>

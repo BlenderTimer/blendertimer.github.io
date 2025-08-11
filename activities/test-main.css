@@ -277,6 +277,7 @@ body {
 
 #finish:hover {
 	background: var(--theme2);
+	transform: scale(1.05);
 }
 
 #result {
@@ -287,14 +288,11 @@ body {
 	gap: 0px;
 	width: 100%;
 	max-width: 500px;
-	margin: 50px auto 70px auto;
-	background: var(--theme1);
+	margin: 30px auto 70px auto;
 	border-radius: 10px;
 	box-sizing: border-box;
-	padding: 20px 40px;
-	box-shadow: 0px 0px 20px var(--theme1);
-	border: 3px solid var(--theme4);
-	transition: 0.2s cubic-bezier(0.21, 0.54, 0.61, 1.38);
+	padding: 30px 40px;
+	transition: 0.2s ease;
 }
 
 #result p {
