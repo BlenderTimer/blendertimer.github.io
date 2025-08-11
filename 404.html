@@ -131,9 +131,9 @@
 				if (url.indexOf("#") > -1) {
 					ids = url.substring(url.indexOf("#"), url.length);
 				}
-				if (url.endsWith("/") || url.indexOf("/#") > -1) {
-					window.location = url.substring(0, url.lastIndexOf("/")) + ids;
-				}
+				// if (url.endsWith("/") || url.indexOf("/#") > -1) {
+				// 	window.location = url.substring(0, url.lastIndexOf("/")) + ids;
+				// }
 				else if (url.indexOf("/video-sources/") > -1) {
 					var newURL = url.substring(0, url.indexOf("/video-sources/") + 15);
 					var endURL = url.substring(url.indexOf("/video-sources/") + 15, url.length);
@@ -235,7 +235,7 @@
 					else {
 						return 404;
 					}
-					//window.location = newURL + ids;
+					window.location = newURL + ids;
 					loader.style.display = "block";
 					return 1;
 				}
