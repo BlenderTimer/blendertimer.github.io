@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en-US">
+	<head>
+		<!-- Google tag (gtag.js) -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-  SYR26MG6YV"></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
+			
+			gtag('config', 'G-SYR26MG6YV');
+		</script>
+		<meta charset="utf-8">
+		<title>Age Estimator - BlenderTimer Activities</title>
+		<meta name="description" content="Answer these 5 questions and I'll try to guess your age!">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="icon" href="../favicon.png" type="image/x-icon">
+		<link rel="stylesheet" type="text/css" href="../static-0/general.css">
+		<link rel="stylesheet" type="text/css" href="../static-0/main.css">
+		<link rel="stylesheet" type="text/css" href="./test-main.css">
+		<script src="../bt-js/bt-js.js"></script>
+	</head>
+	<body>
+		<div id="banner-menu">
+			<nav>
+				<!--====================  LARGE MENU  ====================-->
+				<ul id="large-menu">
+					<li id="nav-home"><a href="/"><img alt="BlenderTimer" src="../static-0/files/images/nav-logohome.png"></a></li>
+				</ul>
+				<!--====================  SMALL MENU  ====================-->
+				<div id="small-menu" style="display: none" onclick="smallMenuToggle()"><img alt="Menu" src="../static-0/files/images/menu-bars.png"></div>
+				<div id="small-menu-main"></div>
+			</nav>
+			<script src="../static-0/nav-links.js"></script>
+			<script src="../static-0/load-menus.js"></script>
+		</div>
+		<div id="loader" style="width: 100%; height: calc(100% - 50px); top: 50px; left: 0px; position: fixed; z-index: -99999">
+			<img alt="Loading" src="../static-0/files/images/loading-general.gif" style="width: 100px; height: 100px; position: fixed; left: calc(50% - 50px); top: calc(50% - 25px); filter: drop-shadow(0px 0px 15px #000000)">
+		</div>
+		<div id="content-main" style="opacity: 0; transition: 1s ease">
+			<h1 class="a-title">Age Estimator</h1>
+			<p class="a-description">Answer these 5 questions and I'll try to guess your age!</p>
+			<div id="quiz-base">
+				<div class="question">
+					<p>I've used a smartphone most of my life.</p>
+					<div class="agree-responder"><b class="disagree">DISAGREE</b><button class="agree-responder-selector ars1" onclick="setAgree(event)" title="Strongly Disagree"></button><button class="agree-responder-selector ars2" onclick="setAgree(event)" title="Disagree"></button><button class="agree-responder-selector ars3" onclick="setAgree(event)" title="Slightly Disagree"></button><button class="agree-responder-selector ars4" onclick="setAgree(event)" title="Neutral"></button><button class="agree-responder-selector ars5" onclick="setAgree(event)" title="Slightly Agree"></button><button class="agree-responder-selector ars6" onclick="setAgree(event)" title="Agree"></button><button class="agree-responder-selector ars7" onclick="setAgree(event)" title="Strongly Agree"></button><b class="agree">AGREE</b></div>
+				</div>
+				<div class="question">
+					<p>I often use a physical dictionary to look up a word.</p>
+					<div class="agree-responder"><b class="disagree">DISAGREE</b><button class="agree-responder-selector ars1" onclick="setAgree(event)" title="Strongly Disagree"></button><button class="agree-responder-selector ars2" onclick="setAgree(event)" title="Disagree"></button><button class="agree-responder-selector ars3" onclick="setAgree(event)" title="Slightly Disagree"></button><button class="agree-responder-selector ars4" onclick="setAgree(event)" title="Neutral"></button><button class="agree-responder-selector ars5" onclick="setAgree(event)" title="Slightly Agree"></button><button class="agree-responder-selector ars6" onclick="setAgree(event)" title="Agree"></button><button class="agree-responder-selector ars7" onclick="setAgree(event)" title="Strongly Agree"></button><b class="agree">AGREE</b></div>
+				</div>
+				<div class="question">
+					<p>For special occasions, I prefer handwritten letters rather than email or text.</p>
+					<div class="agree-responder"><b class="disagree">DISAGREE</b><button class="agree-responder-selector ars1" onclick="setAgree(event)" title="Strongly Disagree"></button><button class="agree-responder-selector ars2" onclick="setAgree(event)" title="Disagree"></button><button class="agree-responder-selector ars3" onclick="setAgree(event)" title="Slightly Disagree"></button><button class="agree-responder-selector ars4" onclick="setAgree(event)" title="Neutral"></button><button class="agree-responder-selector ars5" onclick="setAgree(event)" title="Slightly Agree"></button><button class="agree-responder-selector ars6" onclick="setAgree(event)" title="Agree"></button><button class="agree-responder-selector ars7" onclick="setAgree(event)" title="Strongly Agree"></button><b class="agree">AGREE</b></div>
+				</div>
+				<div class="question">
+					<p>I primarily used the internet for research in school.</p>
+					<div class="agree-responder"><b class="disagree">DISAGREE</b><button class="agree-responder-selector ars1" onclick="setAgree(event)" title="Strongly Disagree"></button><button class="agree-responder-selector ars2" onclick="setAgree(event)" title="Disagree"></button><button class="agree-responder-selector ars3" onclick="setAgree(event)" title="Slightly Disagree"></button><button class="agree-responder-selector ars4" onclick="setAgree(event)" title="Neutral"></button><button class="agree-responder-selector ars5" onclick="setAgree(event)" title="Slightly Agree"></button><button class="agree-responder-selector ars6" onclick="setAgree(event)" title="Agree"></button><button class="agree-responder-selector ars7" onclick="setAgree(event)" title="Strongly Agree"></button><b class="agree">AGREE</b></div>
+				</div>
+				<div class="question">
+					<p>I grew up watching YouTube.</p>
+					<div class="agree-responder"><b class="disagree">DISAGREE</b><button class="agree-responder-selector ars1" onclick="setAgree(event)" title="Strongly Disagree"></button><button class="agree-responder-selector ars2" onclick="setAgree(event)" title="Disagree"></button><button class="agree-responder-selector ars3" onclick="setAgree(event)" title="Slightly Disagree"></button><button class="agree-responder-selector ars4" onclick="setAgree(event)" title="Neutral"></button><button class="agree-responder-selector ars5" onclick="setAgree(event)" title="Slightly Agree"></button><button class="agree-responder-selector ars6" onclick="setAgree(event)" title="Agree"></button><button class="agree-responder-selector ars7" onclick="setAgree(event)" title="Strongly Agree"></button><b class="agree">AGREE</b></div>
+				</div>
+				<div class="question">
+					<p>I often use abbreviations (e.g. LOL, SMH, etc.) in real-world conversations.</p>
+					<div class="agree-responder"><b class="disagree">DISAGREE</b><button class="agree-responder-selector ars1" onclick="setAgree(event)" title="Strongly Disagree"></button><button class="agree-responder-selector ars2" onclick="setAgree(event)" title="Disagree"></button><button class="agree-responder-selector ars3" onclick="setAgree(event)" title="Slightly Disagree"></button><button class="agree-responder-selector ars4" onclick="setAgree(event)" title="Neutral"></button><button class="agree-responder-selector ars5" onclick="setAgree(event)" title="Slightly Agree"></button><button class="agree-responder-selector ars6" onclick="setAgree(event)" title="Agree"></button><button class="agree-responder-selector ars7" onclick="setAgree(event)" title="Strongly Agree"></button><b class="agree">AGREE</b></div>
+				</div>
+				<div class="question">
+					<p>Have you ever regularly used a VHS player?</p>
+					<div class="yesno-responder"><button class="yesno-responder-no" onclick="setYesNo(event)">NO</button><button class="yesno-responder-yes" onclick="setYesNo(event)">YES</button></div>
+				</div>
+				<div class="question">
+					<p>Do you know what "sus" means?</p>
+					<div class="yesno-responder"><button class="yesno-responder-no" onclick="setYesNo(event)">NO</button><button class="yesno-responder-yes" onclick="setYesNo(event)">YES</button></div>
+				</div>
+				<button id="finish" onclick="getResult()">Estimate My Age!</button>
+				<div id="result" style="transform: scaleY(0)">
+					<p>You are</p>
+					<b>...</b>
+				</div>
+			</div>
+			<div id="extra-pages-container">
+				<div class="spr"></div>
+				<h1 class="title">Some other pages you might enjoy:</h1>
+				<div id="extra-pages">
+					<a href="/activities">
+						<img alt="Activities" src="../static-0/files/images/activities.svg" class="misc-content-img">
+						<b>Other Activities</b>
+					</a>
+				</div>
+			</div>
+			<div id="donate-promo">
+				<span></span>
+				<p>Do you enjoy 100% free activities with no ads?</p>
+				<b>Consider donating!</b>
+				<button onclick="donate('Age Estimator - BlenderTimer')">DONATE</button>
+			</div>
+		</div>
+		<script src="../static-0/main.js"></script>
+		<script src="./test-main.js"></script>
+		<script src="./age-estimator.js"></script>
+	</body>
+</html>
