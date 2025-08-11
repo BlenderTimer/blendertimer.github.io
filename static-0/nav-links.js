@@ -44,6 +44,11 @@ var navLinks = [
 				date:new Date(2025, 2, 3), //year, month(from 0), day
 			},
 			{
+				title:"Activities",
+				url:"/activities",
+				date:new Date(2025, 7, 11), //year, month(from 0), day
+			},
+			{
 				title:"Visualizations",
 				url:"/visualizations",
 				date:new Date(2024, 11, 12), //year, month(from 0), day
