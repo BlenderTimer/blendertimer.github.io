@@ -43,3 +43,19 @@ function getQuestionAnswer(q, returnAs) {
 		return parseInt(q.substr(q.indexOf("_") + 1));
 	}
 }
+
+function closePopup() {
+	var base = document.getElementById("popup-base");
+	var popup = document.getElementById("popup");
+	base.style.opacity = "0";
+	base.style.pointerEvents = "none";
+	popup.style.transform = "scale(0)"
+}
+
+function explainQuestion() {
+	var base = document.getElementById("popup-base");
+	var popup = document.getElementById("popup");
+	base.style.opacity = null;
+	base.style.pointerEvents = null;
+	popup.style.transform = null;
+}

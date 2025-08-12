@@ -44,7 +44,7 @@ function getResult() {
 	else if (answer == 6) {estAges.push(55)}
 	else if (answer == 7) {estAges.push(70)}
 	else {error = true};
-	// I primarily used the internet for research in school.
+	// I did most of my school research with the internet.
 	answer = getQuestionAnswer(q[3].id);
 	if (answer == 1) {estAges.push(78)}
 	else if (answer == 2) {estAges.push(67)}
@@ -178,5 +178,41 @@ function getResult() {
 			result.style.transform = null;
 			result.children[1].innerHTML = estAge.toString();
 		}, 200);
+	}
+}
+
+function setQuestionExplain(event) {
+	var element = event.target || event.srcElement;
+	var q = element.parentNode.innerHTML;
+	var explain = document.getElementById("popup-text");
+	if (q.indexOf("I've used a smartphone most of my life.") > -1) {
+		explain.innerHTML = "This question refers to how long YOU have been using a smartphone (even if you didn't own or pay for it). Also keep in mind this is only smartphones, not cellphones in general.";
+	}
+	else if (q.indexOf("I often use a physical dictionary to look up a word.") > -1) {
+		explain.innerHTML = "This questions refers to how often YOU use a PHYSICAL dictionary when looking up words.";
+	}
+	else if (q.indexOf("For special occasions, I prefer handwritten letters rather than email or text.") > -1) {
+		explain.innerHTML = "This questions refers to YOUR preference when it comes to physical letters vs emails or texts. Even if your family commonly uses physical letters, this may not be your preference.";
+	}
+	else if (q.indexOf("I did most of my school research with the internet.") > -1) {
+		explain.innerHTML = "This question refers to how much of YOUR school research was done using the internet.";
+	}
+	else if (q.indexOf("I grew up watching YouTube.") > -1) {
+		explain.innerHTML = "This question refers to how much of the stuff YOU watched growing up was on YouTube.";
+	}
+	else if (q.indexOf("I often use texting abbreviations in real-world conversations.") > -1) {
+		explain.innerHTML = "Texting abbreviations would be things like LOL, SMH, IDK, etc.";
+	}
+	else if (q.indexOf("Have you ever regularly used a VHS player?") > -1) {
+		explain.innerHTML = "This question refers to if YOU have ever REGULARLY used a VHS player, not just once or twice.";
+	}
+	else if (q.indexOf("Do you know what \"sus\" means?") > -1) {
+		explain.innerHTML = "This question refers to whether YOU know what the word \"sus\" means.";
+	}
+	else if (q.indexOf("Have you ever owned a landline phone?") > -1) {
+		explain.innerHTML = "This question specifically refers to YOU OWNING a landline phone. This question does not refer to you using a landline phone that you do not personally own.";
+	}
+	else if (q.indexOf("Were/are you homeschooled?") > -1) {
+		explain.innerHTML = "This question refers to whether YOU were schooled at home rather than a public or private school.";
 	}
 }
