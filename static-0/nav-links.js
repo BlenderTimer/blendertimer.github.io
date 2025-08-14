@@ -103,8 +103,8 @@ var navLinks = [
 				date:new Date(2024, 5, 13), //year, month(from 0), day
 			},
 			{
-				title:"Privacy Policy",
-				url:"/terms/privacy-policy",
+				title:"Terms of Service",
+				url:"/terms-of-service",
 				date:new Date(2024, 0, 7), //year, month(from 0), day
 			},
 		],
