@@ -66,13 +66,13 @@ var sunVelocity = 230;
 setInterval(function() {
 	timeElapsed = Date.now()-initialTime;
 	for (var i=0; i < pdtPlanetBlocks.length; i++) {
-		pdtPlanetBlocks[i].children[2].innerHTML = Math.floor(planetData[i].velocity*(timeElapsed/1000)) + " km";
-		pdtPlanetBlocks[i].children[3].innerHTML = Math.floor((planetData[i].velocity*0.62137119223733)*(timeElapsed/1000)) + " mi";
+		pdtPlanetBlocks[i].children[2].innerHTML = Math.floor(planetData[i].velocity*(timeElapsed/1000)).toLocaleString() + " km";
+		pdtPlanetBlocks[i].children[3].innerHTML = Math.floor((planetData[i].velocity*0.62137119223733)*(timeElapsed/1000)).toLocaleString() + " mi";
 	}
 	for (var i=0; i < dpdtPlanetBlocks.length; i++) {
-		dpdtPlanetBlocks[i].children[2].innerHTML = Math.floor(dwarfPlanetData[i].velocity*(timeElapsed/1000)) + " km";
-		dpdtPlanetBlocks[i].children[3].innerHTML = Math.floor((dwarfPlanetData[i].velocity*0.62137119223733)*(timeElapsed/1000)) + " mi";
+		dpdtPlanetBlocks[i].children[2].innerHTML = Math.floor(dwarfPlanetData[i].velocity*(timeElapsed/1000)).toLocaleString() + " km";
+		dpdtPlanetBlocks[i].children[3].innerHTML = Math.floor((dwarfPlanetData[i].velocity*0.62137119223733)*(timeElapsed/1000)).toLocaleString() + " mi";
 	}
-	sunBlock.children[1].children[0].innerHTML = Math.floor(sunVelocity*(timeElapsed/1000)) + " km";
-	sunBlock.children[1].children[1].innerHTML = Math.floor((sunVelocity*0.62137119223733)*(timeElapsed/1000)) + " mi";
+	sunBlock.children[1].children[0].innerHTML = Math.floor(sunVelocity*(timeElapsed/1000)).toLocaleString() + " km";
+	sunBlock.children[1].children[1].innerHTML = Math.floor((sunVelocity*0.62137119223733)*(timeElapsed/1000)).toLocaleString() + " mi";
 }, 10);
