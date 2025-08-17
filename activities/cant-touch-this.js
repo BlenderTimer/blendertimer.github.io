@@ -138,7 +138,7 @@ function moveButton() {
 	var buttonMoved = false;
 	if (button.type == 0) {
 		var dist = distanceToRect(cur.x, cur.y, button.x, button.y, button.width, button.height);
-		if (dist <= 20) {
+		if (dist <= 100) {
 			var dx = (button.x+button.width/2) - cur.x;
 			var dy = (button.y+button.height/2) - cur.y;
 			var len = Math.sqrt(dx*dx + dy*dy)
@@ -146,8 +146,12 @@ function moveButton() {
 				dx /= len;
 				dy /= len;
 			}
-			button.x += dx * ((20-dist)*4);
-			button.y += dy * ((20-dist)*4);
+			var esc = 0;
+			while (esc < 1000 && ((cur.x+20) > button.x && (cur.x-20) < (button.x + button.width) && (cur.y+20) > button.y && (cur.y-20) < (button.y + button.height))) {
+				button.x += dx * ((1-Math.pow(dx,2))+1);
+				button.y += dy * ((1-Math.pow(dy,2))+1);
+				esc++;
+			}
 			buttonMoves++;
 			buttonMoved = true;
 		}
