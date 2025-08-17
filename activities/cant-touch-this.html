@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en-US">
+	<head>
+		<!-- Google tag (gtag.js) -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-  SYR26MG6YV"></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
+			
+			gtag('config', 'G-SYR26MG6YV');
+		</script>
+		<meta charset="utf-8">
+		<title>Can't Touch This - BlenderTimer Activities</title>
+		<meta name="description" content="You literally CANNOT touch this! Infinite points if you get it!">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="icon" href="../favicon.png" type="image/x-icon">
+		<link rel="stylesheet" type="text/css" href="../static-0/general.css">
+		<link rel="stylesheet" type="text/css" href="../static-0/main.css">
+		<link rel="stylesheet" type="text/css" href="./cant-touch-this.css">
+		<script src="../bt-js/bt-js.js"></script>
+	</head>
+	<body>
+		<div id="banner-menu">
+			<nav>
+				<!--====================  LARGE MENU  ====================-->
+				<ul id="large-menu">
+					<li id="nav-home"><a href="/"><img alt="BlenderTimer" src="../static-0/files/images/nav-logohome.png"></a></li>
+				</ul>
+				<!--====================  SMALL MENU  ====================-->
+				<div id="small-menu" style="display: none" onclick="smallMenuToggle()"><img alt="Menu" src="../static-0/files/images/menu-bars.png"></div>
+				<div id="small-menu-main"></div>
+			</nav>
+			<script src="../static-0/nav-links.js"></script>
+			<script src="../static-0/load-menus.js"></script>
+		</div>
+		<div id="loader" style="width: 100%; height: calc(100% - 50px); top: 50px; left: 0px; position: fixed; z-index: -99999">
+			<img alt="Loading" src="../static-0/files/images/loading-general.gif" style="width: 100px; height: 100px; position: fixed; left: calc(50% - 50px); top: calc(50% - 25px); filter: drop-shadow(0px 0px 15px #000000)">
+		</div>
+		<div id="content-main" style="opacity: 0; transition: 1s ease">
+			<h1 class="a-title">Can't Touch This</h1>
+			<p class="a-description">You literally CANNOT touch this! Infinite points if you get it!</p>
+			<div id="activity-base">
+				<canvas id="ctt-canvas"></canvas>
+			</div>
+			<br>
+			<br>
+			<p>I'm just a button...a button that will do EVERYTHING in my power to prevent you from clicking me! Go ahead! Try! Just try! You're not touching this! I will NOT let you click me! I'll dodge you EVERY, SINGLE, TIME! You're too slow, too clumsy. The more you chase me, the more I fight back! I'll tease you. I'll mock you. And if you keep pushing me...I'LL GET ANGRY. REALLY ANGRY.<br>Click me if you can, although you won't... But if you do break the laws of physics and manage to click me...let's just say you WILL regret it. This is your final warning! DON'T CLICK ME!<br>Oh, and cheating is NOT an option!</p>
+			<div id="extra-pages-container">
+				<div class="spr"></div>
+				<h1 class="title">Some other pages you might enjoy:</h1>
+				<div id="extra-pages">
+					<a href="/activities">
+						<img alt="Activities" src="../static-0/files/images/activities.svg" class="misc-content-img">
+						<b>Other Activities</b>
+					</a>
+				</div>
+			</div>
+			<div id="donate-promo">
+				<span></span>
+				<p>Do you enjoy 100% free activities with no ads?</p>
+				<b>Consider donating!</b>
+				<button onclick="donate('Can\'t Touch This - BlenderTimer')">DONATE</button>
+			</div>
+		</div>
+		<script src="../static-0/main.js"></script>
+		<script src="./cant-touch-this.js"></script>
+	</body>
+</html>

@@ -1,0 +1,45 @@
+body {
+	background: var(--semi-back);
+	user-select: none;
+}
+
+#content-main {
+	box-shadow: none;
+	background: var(--semi-back);
+	margin: 0px 0px 0px 0px;
+	border-radius: 0px;
+	min-height: calc(100vh - 50px);
+	padding: 0px 20px 20px 20px;
+}
+
+.a-title {
+	margin-top: 20px !important;
+	margin-bottom: 5px !important;
+	font-size: 20pt !important;
+}
+
+.a-description {
+	font-size: 14pt !important;
+	color: var(--italic-text) !important;
+	text-align: center;
+	width: 100% !important;
+	margin: 0px 0px 20px 0px;
+	display: block !important;
+}
+
+#activity-base {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	margin: 10px auto;
+	max-width: 1200px;
+}
+
+#ctt-canvas {
+	display: block;
+	background: var(--far-back);
+	border-radius: 10px;
+	box-shadow: 0px 0px 30px #0004 inset;
+}
