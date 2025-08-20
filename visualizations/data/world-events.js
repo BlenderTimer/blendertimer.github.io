@@ -159,7 +159,7 @@ const worldEvents = [
 	},
 	{
 		date:"1958",
-		title:"<b>Super Glue</b><p> is invented</p>",
+		title:"<b>Super Glue</b><p> is invented.</p>",
 		description:"Originally called Eastman 910, super glue was first sold commercially in 1958 (though the chemical was invented in 1942).",
 		major:true,
 		type:"invention",
@@ -169,6 +169,14 @@ const worldEvents = [
 		title:"<b>NASA is founded</b><p>.</p>",
 		description:"NASA, previously NACA, is founded.",
 		type:"company-founded",
+	},
+	{
+		date:"1959-8-21",
+		title:"<b>Hawaii becomes the 50th US state</b><p>.</p>",
+		description:"Hawaii becomes the 50th state to join the United States of America.",
+		major:true,
+		type:"state-or-country-founded",
+		recommended:"Will",
 	},
 	{
 		date:"1960-5-22",
