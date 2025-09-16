@@ -75,12 +75,12 @@ var navLinks = [
 			},
 		],
 	},
-	{
-		title:"Shop",
-		url:"https://shop.blendertimer.com",
-		width:90,
-		date:new Date(2023, 7, 21), //year, month(from 0), day
-	},
+	// {
+	// 	title:"Shop",
+	// 	url:"https://shop.blendertimer.com",
+	// 	width:90,
+	// 	date:new Date(2023, 7, 21), //year, month(from 0), day
+	// },
 	{
 		title:"About",
 		url:"/about",
