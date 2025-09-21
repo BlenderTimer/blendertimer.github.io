@@ -503,4 +503,18 @@ const videos = [
 		views1:172,
 		views24:1470,
 	},
+	{
+		name:"Triangles are INCREDIBLE! - Fantastic Fact 16",
+		tui:37,
+		sui:16,
+		type:"short",
+		url:"37-triangles-are-incredible",
+		cc:"Triangles are incredible! Hexagons are cool and all (and it's clear I love them) but triangles are arguably even more fascinating and important. You see, triangles are the only shape which cannot be bent. It doesn't matter how much you move the 3 points around, you can never bend a triangle, only rotate, scale, distort and otherwise move it around. Lines and points are the same, but they have no surface area. The line is infinitely thin and the point is infinitely small. If you keep all sides of a triangle the exact same length, the triangle cannot be distorted at all. A square can be deformed even if all sides stay the same length. Same with any other polygon, except triangles. But hexagons still look better.",
+		youtubeID:"GeS-QcmiJAQ",
+		date:"20-9-2025",
+		views10:-1,
+		views30:-1,
+		views1:-1,
+		views24:-1,
+	},
 ];
