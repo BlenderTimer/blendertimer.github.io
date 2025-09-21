@@ -7992,9 +7992,9 @@ var objects = [
 		lastModified:"2025/09/20",
 	},
 	{
-		name:"Shonisaurus",
+		name:"Shonisaurus Popularis",
 		defaultAngle:0,
-		sideImage:"Shonisaurus-side",
+		sideImage:"Shonisaurus_Popularis-side",
 		sideImageAlign:"none",
 		sideImageArtist:"MasterNeonlight",
 		sideImageDate:"2025/09/20",
