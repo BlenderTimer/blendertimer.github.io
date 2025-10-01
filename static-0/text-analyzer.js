@@ -50,7 +50,7 @@ function analyze() {
 	wordList = text.split(/[ —\n]/).filter(function (i) {return i != ""});
 	words = wordList.length;
 	if (/[A-Z]/.test(text)) {
-		sentList = text.split(/(?<=[.?!])\s+(?=[A-Z])/);
+		sentList = text.split(/(?<=[.?!])\s+(?=[A-Z])|\n/);
 	}
 	else {
 		sentList = text.split(/(?<=[.?!])\s+|\n+/).filter(function (i) {return i != ""});
