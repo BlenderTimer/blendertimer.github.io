@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en-US">
+	<head>
+		<!-- Google tag (gtag.js) -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-  SYR26MG6YV"></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
+			
+			gtag('config', 'G-SYR26MG6YV');
+		</script>
+		<meta charset="utf-8">
+		<title>Text Analyzer - BlenderTimer Web Tools</title>
+		<meta name="description" content="Check the density of specific words, the number of characters, and more!">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="icon" href="../favicon.png" type="image/x-icon">
+		<link rel="stylesheet" type="text/css" href="../static-0/general.css">
+		<link rel="stylesheet" type="text/css" href="../static-0/main.css">
+		<link rel="stylesheet" type="text/css" href="../static-0/text-analyzer.css">
+		<script src="../bt-js/bt-js.js"></script>
+	</head>
+	<body>
+		<div id="banner-menu">
+			<nav>
+				<!--====================  LARGE MENU  ====================-->
+				<ul id="large-menu">
+					<li id="nav-home"><a href="/"><img alt="BlenderTimer" src="../static-0/files/images/nav-logohome.png"></a></li>
+				</ul>
+				<!--====================  SMALL MENU  ====================-->
+				<div id="small-menu" style="display: none" onclick="smallMenuToggle()"><img alt="Menu" src="../static-0/files/images/menu-bars.png"></div>
+				<div id="small-menu-main"></div>
+			</nav>
+			<script src="../static-0/nav-links.js"></script>
+			<script src="../static-0/load-menus.js"></script>
+		</div>
+		<div id="loader" style="width: 100%; height: calc(100% - 50px); top: 50px; left: 0px; position: fixed; z-index: -99999">
+			<img alt="Loading" src="../static-0/files/images/loading-general.gif" style="width: 100px; height: 100px; position: fixed; left: calc(50% - 50px); top: calc(50% - 25px); filter: drop-shadow(0px 0px 15px #000000)">
+		</div>
+		<div id="content-main" class="limwidth" style="opacity: 0; transition: 1s ease">
+			<h1 class="title">Text Analyzer</h1>
+			<p class="description">Check the density of specific words, the number of characters, and more!</p>
+			<div id="main-tool">
+				<div id="tool-input">
+					<textarea id="input-box" placeholder="Enter text here!" oninput="analyzeAuto()"></textarea>
+				</div>
+				<div id="tool-output">
+					<div class="stat-container">
+						<div class="stat" id="chars"><p>CHARACTERS</p><b>0</b></div>
+						<div class="stat" id="letters"><p>LETTERS</p><b>0</b></div>
+						<div class="stat" id="words"><p>WORDS</p><b>0</b></div>
+						<div class="stat" id="sents"><p>SENTENCES</p><b>0</b></div>
+						<div class="stat" id="paras"><p>PARAGRAPHS</p><b>0</b></div>
+						<div class="stat" id="lines"><p>LINES</p><b>0</b></div>
+						<div class="stat" id="readtime"><p>READING TIME</p><b>0<i> sec</i></b></div>
+						<div class="stat" id="readlevel"><p>READING LEVEL</p><b><1st<i> grade</i></b></div>
+					</div>
+				</div>
+			</div>
+			<div id="frequencies">
+				<div id="character-frequency" class="frequency">
+					<b>Character Frequency</b>
+					<input type="text" placeholder="Search..." id="charsearch" oninput="searchChars()">
+					<div class="frequency-header"><b>Character</b><b>Count</b><b>Percentage</b></div>
+					<div id="cf-container" class="frequency-container"></div>
+					<div class="frequency-footer" id="cf-footer"><button onclick="downloadCSV('chars')">Download CSV</button><i>Showing 0/0</i></div>
+				</div>
+				<div id="word-frequency" class="frequency">
+					<b>Word Frequency</b>
+					<input type="text" placeholder="Search..." id="wordsearch" oninput="searchWords()">
+					<div class="frequency-header"><b>Word</b><b>Count</b><b>Percentage</b></div>
+					<div id="wf-container" class="frequency-container"></div>
+					<div class="frequency-footer" id="wf-footer"><button onclick="downloadCSV('words')">Download CSV</button><i>Showing 0/0</i></div>
+				</div>
+			</div>
+			<p>This text analyzer retrieves the number of characters, letters, words, sentences, paragraphs, and lines! It also gives estimates of the reading time and the reading level of your text (such as 5th grade, University level, etc.). In addition to all that, it returns two frequency/density lists. One list for the frequency of each character and the other list for the frequency of each word. Both lists can be downloaded as separate CSV files! It's simple, fast, intuitive, and completely ad-free!</p>
+			<div id="extra-pages-container">
+				<div class="spr"></div>
+				<h1 class="title">Some other pages you might enjoy:</h1>
+				<div id="extra-pages">
+					<a href="/web-tools/pattern-based-word-finder" class="extra-pages-video">
+						<img alt="Pattern-Based Word Finder" src="../static-0/files/images/webtoolpreview-patternbasedwordfinder.png" class="misc-content-img">
+						<b>Pattern-Based Word Finder</b>
+					</a>
+					<a href="/web-tools/periodic-table-word-finder" class="extra-pages-video">
+						<img alt="Periodic Table Word Finder" src="../static-0/files/images/webtoolpreview-periodictablewordfinder.png" class="misc-content-img">
+						<b>Periodic Table Word Finder</b>
+					</a>
+					<a href="/web-tools">
+						<img alt="Web Tools" src="../static-0/files/images/webtools.svg" class="misc-content-img">
+						<b>Other Web Tools</b>
+					</a>
+					<a href="/web-tools/word-unscrambler" class="extra-pages-video">
+						<img alt="Word Unscrambler" src="../static-0/files/images/webtoolpreview-wordunscrambler.png" class="misc-content-img">
+						<b>Word Unscrambler</b>
+					</a>
+				</div>
+			</div>
+			<div id="donate-promo">
+				<span></span>
+				<p>Do you enjoy 100% free tools with no ads?</p>
+				<b>Consider donating!</b>
+				<button onclick="donate('Morse Code Translator - BlenderTimer')">DONATE</button>
+			</div>
+		</div>
+		<script src="../static-0/main.js"></script>
+		<script src="../static-0/text-analyzer.js"></script>
+	</body>
+</html>
