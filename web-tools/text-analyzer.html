@@ -53,8 +53,31 @@
 						<div class="stat" id="paras"><p>PARAGRAPHS</p><b>0</b></div>
 						<div class="stat" id="lines"><p>LINES</p><b>0</b></div>
 						<div class="stat" id="readtime"><p>READING TIME</p><b>0<i> sec</i></b></div>
-						<div class="stat" id="readlevel"><p>READING LEVEL</p><b><1st<i> grade</i></b></div>
+						<div class="stat" id="speaktime"><p>SPEAKING TIME</p><b>0<i> sec</i></b></div>
 					</div>
+				</div>
+			</div>
+			<div id="reading-score">
+				<div id="fleschreadingease">
+					<b>Flesch Reading Ease Score</b>
+					<canvas id="fre-gauge"></canvas>
+					<table id="fre-table">
+						<tbody>
+							<tr><th>Score</th><th>Description</th></tr>
+							<tr><td><p>>90</p></td><td>5th grade: Extremely easy to read.</td></tr>
+							<tr><td><p>80-90</p></td><td>6th grade: Very easy to read.</td></tr>
+							<tr><td><p>70-80</p></td><td>7th grade: Easy to read.</td></tr>
+							<tr><td><p>60-70</p></td><td>8th and 9th grade: Basic English, fairly easy to read.</td></tr>
+							<tr><td><p>50-60</p></td><td>10th to 12th grade: Slightly difficult to read.</td></tr>
+							<tr><td><p>30-50</p></td><td>University level: Difficult to read.</td></tr>
+							<tr><td><p>10-30</p></td><td>University graduate level: Very difficult to read.</td></tr>
+							<tr><td><p><10</p></td><td>Professional level: Extremely difficult to read.</td></tr>
+						</tbody>
+					</table>
+					<br>
+					<b>How it's calculated</b>
+					<span class="formula"><p class="f">206.835</p><p class="f-op"> - </p><p class="f">1.015</p><p class="f-op"> × (</p><b class="f-bold">words</b><p class="f-op"> ÷ </p><b class="f-bold">sentences</b><p class="f-op">) -  </p><p class="f">84.6</p><p class="f-op"> × (</p><b class="f-bold">syllables</b><p class="f-op"> ÷ </p><b class="f-bold">words</b><p class="f-op">) = </p><b class="f-bold">SCORE</b></span>
+					<span class="formula" id="formula"><p class="f">206.835</p><p class="f-op"> - </p><p class="f">1.015</p><p class="f-op"> × (</p><b class="f-bold">0</b><p class="f-op"> ÷ </p><b class="f-bold">0</b><p class="f-op">) -  </p><p class="f">84.6</p><p class="f-op"> × (</p><b class="f-bold">0</b><p class="f-op"> ÷ </p><b class="f-bold">0</b><p class="f-op">) = </p><b class="f-bold">0</b></span>
 				</div>
 			</div>
 			<div id="frequencies">
@@ -73,7 +96,7 @@
 					<div class="frequency-footer" id="wf-footer"><button onclick="downloadCSV('words')">Download CSV</button><i>Showing 0/0</i></div>
 				</div>
 			</div>
-			<p>This text analyzer retrieves the number of characters, letters, words, sentences, paragraphs, and lines! It also gives estimates of the reading time and the reading level of your text (such as 5th grade, University level, etc.). In addition to all that, it returns two frequency/density lists. One list for the frequency of each character and the other list for the frequency of each word. Both lists can be downloaded as separate CSV files! It's simple, fast, intuitive, and completely ad-free!</p>
+			<p>This text analyzer retrieves the number of characters, letters, words, sentences, paragraphs, and lines! It also gives estimates of the reading time and the Flesch reading ease score of your text. In addition to all that, it returns two frequency/density lists. One list for the frequency of each character and the other list for the frequency of each word. Both lists can be downloaded as separate CSV files! It's simple, fast, intuitive, and completely ad-free!</p>
 			<div id="extra-pages-container">
 				<div class="spr"></div>
 				<h1 class="title">Some other pages you might enjoy:</h1>
