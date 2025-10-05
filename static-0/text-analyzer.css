@@ -129,6 +129,11 @@ body {
 	color: var(--italic-text) !important;
 	font-family: sans-serif !important;
 	font-size: 10pt !important;
+	text-align: center;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	max-width: 100%;
+	text-wrap-mode: nowrap;
 }
 
 .stat b {
@@ -139,6 +144,7 @@ body {
 	max-width: 100%;
 	overflow: hidden;
 	text-overflow: ellipsis;
+	text-align: center;
 }
 
 .stat i {
@@ -147,6 +153,139 @@ body {
 	font-size: 12pt !important;
 	font-weight: normal !important;
 	line-height: 1;
+}
+
+#reading-score {
+	display: flex;
+	flex-flow: column;
+	background: var(--close-back);
+	box-sizing: border-box;
+	position: relative;
+	box-shadow: 0px 0px 10px #0005;
+	border-radius: 5px;
+	padding: 10px;
+	width: 100%;
+}
+
+#reading-score b {
+	display: block !important;
+	width: 100%;
+	text-align: center;
+	font-size: 12pt;
+	font-family: sans-serif;
+	margin: 0px 0px 7px 0px;
+}
+
+#fleschreadingease {
+	display: block;
+	width: 100%;
+	max-width: 800px;
+	margin: 0px auto;
+}
+
+#fre-gauge {
+	display: block;
+}
+
+#fre-table {
+	border-radius: 3px;
+	padding: 0px;
+	border: 1px solid #333;
+	box-sizing: border-box;
+	border-collapse: collapse;
+	width: 100%;
+	overflow: hidden;
+	margin-top: 5px;
+	box-shadow: 0px 0px 10px #0003;
+}
+
+#fre-table tr {
+	margin: 0px;
+	padding: 0px;
+}
+
+#fre-table tr:nth-child(even) {
+	background-color: var(--semi-far-back);
+}
+
+#fre-table tr:nth-child(odd) {
+	background-color: var(--far-back);
+}
+
+#fre-table th {
+	border: 1px solid var(--close-back);
+	margin: 0px;
+	padding: 6px 12px;
+	text-align: center;
+	vertical-align: middle;
+	cursor: default;
+	background: var(--theme1);
+	text-shadow: 0px 0px 10px var(--theme3);
+	font-size: 13pt;
+	font-family: sans-serif;
+}
+
+#fre-table td {
+	border: 1px solid var(--close-back);
+	margin: 0px;
+	padding: 5px 10px;
+	text-align: left;
+	vertical-align: middle;
+	color: var(--brighter-italic-text);
+	font-size: 12pt;
+	font-family: sans-serif;
+}
+
+#fre-table td p {
+	display: block;
+	color: var(--base-text) !important;
+	padding: 0px 1vw;
+	text-wrap-mode: nowrap;
+	text-align: center;
+}
+
+.formula {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: fit-content;
+	margin: 0px auto 10px auto;
+	flex-wrap: wrap;
+	background: var(--far-back);
+	box-shadow: 0px 0px 10px #0005 inset;
+	border-radius: 3px;
+	padding: 5px 10px;
+}
+
+.f {
+	display: block !important;
+	text-wrap-mode: nowrap;
+	color: var(--brighter-italic-text) !important;
+	white-space-collapse: preserve;
+	font-family: sans-serif !important;
+	font-size: 13pt !important;
+	margin: 0px !important;
+}
+
+.f-op {
+	display: block !important;
+	text-wrap-mode: nowrap;
+	color: var(--italic-text) !important;
+	white-space-collapse: preserve;
+	font-family: sans-serif !important;
+	font-size: 13pt !important;
+	margin: 0px !important;
+}
+
+.f-bold {
+	display: block !important;
+	text-wrap-mode: nowrap;
+	width: auto !important;
+	color: var(--theme3) !important;
+	white-space-collapse: preserve;
+	font-family: sans-serif !important;
+	font-size: 13pt !important;
+	margin: 0px !important;
 }
 
 #frequencies {
