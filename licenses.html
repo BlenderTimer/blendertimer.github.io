@@ -10,128 +10,50 @@
             
             gtag('config', 'G-SYR26MG6YV');
         </script>
-        <meta charset="UTF-8">
+        <meta charset="utf-8">
 		<title>Licenses - BlenderTimer</title>
 		<meta name="description" content="The home of all the BlenderTimer licenses.">
-		<meta name="viewport" content="width=device-width, initial-scale=0.8">
-		<link rel="icon" href="./favicon.png" type="image/x-icon">
-		<style>
-			body, html {
-				height: auto;
-				min-height: 100%;
-				margin: 0px;
-				box-sizing: border-box;
-				padding: 20px;
-				box-shadow: 0px 0px 50px rgba(0,0,0,0.8) inset;
-			}
-
-			body {
-				background: #1E1E1E;
-				color: #F5F5F5;
-				font-family: monospace;
-				font-size: 12pt;
-				box-shadow: none;
-			}
-
-			::selection {
-				background: #EEEEEE;
-				color: #404040;
-			}
-
-			#nav-home {
-				background: rgba(30,30,30,0);
-				width: 150px;
-				position: absolute;
-				transition: 0.5s;
-				margin: 0px 0px 0px 0px;
-				padding: 7px 15px;
-				border-radius: 30px;
-			}
-
-			#nav-home:hover {
-				background: #2E2E2E;
-				width: 170px;
-				margin: -3px 0px 0px -10px;
-				box-shadow: 0px 0px 15px rgba(0,0,0,0.2);
-			}
-
-			#title {
-				text-align: center;
-				font-size: 25pt;
-				font-weight: bold;
-				text-shadow: 0px 0px 15px rgba(0,0,0,1);
-				cursor: default;
-				margin: 0px 0px 30px 0px;
-			}
-
-			#licenses {
-				width: 100%;
-				margin: 0px 0px 30px 0px;
-				border-radius: 10px;
-				background: #252525;
-				box-shadow: 0px 0px 20px rgba(0,0,0,0.3);
-				padding: 50px 50px 50px 50px;
-				box-sizing: border-box;
-				float: left;
-				display: block;
-			}
-
-			#licenses a {
-				font-size: 12pt;
-				cursor: pointer;
-				color: #AAAAAA;
-				text-decoration: none;
-				font-weight: normal;
-				background: #25252500;
-				width: 100%;
-				display: block;
-				height: auto;
-				border-radius: 20px;
-				padding: 5px 0px 5px 0px;
-				box-sizing: border-box;
-			}
-
-			#licenses a p {
-				font-size: 12pt;
-				cursor: pointer;
-				color: #AAAAAA;
-				text-decoration: none;
-				font-weight: normal;
-				margin: 0px;
-				background: #25252500;
-				width: calc(100% - 15px);
-				display: block;
-				height: auto;
-				border-radius: 20px;
-				padding: 8px 20px 8px 20px;
-				box-sizing: border-box;
-				transition: 0.3s;
-			}
-
-			#licenses a:hover p {
-				background: #353535FF;
-				box-shadow: 0px 0px 10px rgba(0,0,0,0.3);
-			}
-		</style>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="icon" href="/favicon.png" type="image/x-icon">
+		<link rel="stylesheet" type="text/css" href="/static/main.css">
+		<link rel="stylesheet" type="text/css" href="/static/factsheets.css">
+		<script src="/bt-js/bt-js.js"></script>
 	</head>
-	<body onload="determineLayout()" onresize="determineLayout()">
-		<div id="revolve-button" style="display:none"><script src="https://rf.revolvermaps.com/0/0/3.js?i=5cgjr9bkw1v&b=0&s=40&m=2&cl=555555&co=000000&cd=ffffff&v0=25&v1=100&r=1" async="async"></script></div>
-		<a href="https://www.blendertimer.com"><img alt="Back to BlenderTimer" src="./static-0/files/images/nav-logohome.png" id="nav-home"></a>
-		<h1 id="title" style="margin-top: 0px">BlenderTimer Licenses</h1>
-		<div id="licenses" style="display: block">
-			<a href="./licenses/bt-sc"><p>BT-SC</p></a>
-			<a href="./licenses/bt-lu"><p>BT-LU</p></a>
-		</div>
-		<script type="text/javascript">
-			var title = document.getElementById('title');
-			function determineLayout() {
-				if (window.innerWidth < 550) {
-					title.style.marginTop = "50px";
-				}
-				else {
-					title.style.marginTop = "0px";
-				}
-			}
+	<body>
+		<header></header>
+		<script>
+			fetch('/noindex/header.html')
+				.then(response => response.text())
+				.then(data => {document.querySelector('header').innerHTML = data});
 		</script>
+		<script src="/noindex/pages.js"></script>
+		<noscript>
+			<div id="nojs" style="position: fixed; top: 0px; bottom: 0px; left: 0px; right: 0px; display: flex; flex-flow: column; justify-content: center; align-items: center; background: var(--semi-back); padding: 15px 20px; z-index: 1000000; cursor: default;">
+				<b style="font-family: sans-serif; font-size: 16pt; color: #FFF; text-align: center;">Page Failed to Load</b>
+				<p style="font-family: sans-serif; font-size: 14pt; color: #FFF6; text-align: center;">This website requires Javascript to operate.</p>
+			</div>
+		</noscript>
+		<div id="loader" style="width: 100%; height: calc(100% - 50px); top: 50px; left: 0px; position: fixed; z-index: -100000;">
+			<img alt="Loading" src="/static/images/loader.gif" style="width: 100px; height: 100px; position: fixed; left: calc(50% - 50px); top: calc(50% - 25px); filter: drop-shadow(0px 0px 15px #000000);">
+		</div>
+		<div id="content-main" style="opacity: 0; transition: 0.5s">
+			<h1 class="title">BlenderTimer Licenses</h1>
+			<div class="spr"></div>
+			<div class="factsheet-list">
+				<a class="factsheet-list-item" href="/licenses/bt-sc">
+					<b>BT-SC</b>
+				</a>
+				<a class="factsheet-list-item" href="/licenses/bt-lu">
+					<b>BT-LU</b>
+				</a>
+			</div>
+		</div>
+		<footer></footer>
+		<script>
+			fetch('/noindex/footer.html')
+				.then(response => response.text())
+				.then(data => {document.querySelector('footer').innerHTML = data});
+		</script>
+		<script src="/static/main.js"></script>
 	</body>
 </html>
