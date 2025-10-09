@@ -14,32 +14,31 @@
 		<title>This Animal is as LOUD as an ATOMIC BOMB! - BlenderTimer Video Sources</title>
 		<meta name="description" content="The video sources for This Animal is as LOUD as an ATOMIC BOMB!.">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<link rel="icon" href="../favicon.png">
-		<link rel="stylesheet" type="text/css" href="../static-0/general.css">
-		<link rel="stylesheet" type="text/css" href="../static-0/main.css">
-		<link rel="stylesheet" type="text/css" href="../static-0/video-sources-pages.css">
-		<script src="../bt-js/bt-js.js"></script>
-		<script src="../static-0/videos.js"></script>
-		<script src="../static-0/jquery-3.6.3.js"></script>
+		<link rel="icon" href="/favicon.png">
+		<link rel="stylesheet" type="text/css" href="/static/main.css">
+		<link rel="stylesheet" type="text/css" href="/static/video-sources-pages.css">
+		<script src="/bt-js/bt-js.js"></script>
+		<script src="/static/videos.js"></script>
+		<script src="/static/jquery-3.6.3.js"></script>
 	</head>
 	<body>
-		<div id="banner-menu">
-			<nav>
-				<!--====================  LARGE MENU  ====================-->
-				<ul id="large-menu">
-					<li id="nav-home"><a href="/"><img alt="BlenderTimer" src="../static-0/files/images/nav-logohome.png"></a></li>
-				</ul>
-				<!--====================  SMALL MENU  ====================-->
-				<div id="small-menu" style="display: none" onclick="smallMenuToggle()"><img alt="Menu" src="../static-0/files/images/menu-bars.png"></div>
-				<div id="small-menu-main"></div>
-			</nav>
-			<script src="../static-0/nav-links.js"></script>
-			<script src="../static-0/load-menus.js"></script>
+		<header></header>
+		<script>
+			fetch('/noindex/header.html')
+				.then(response => response.text())
+				.then(data => {document.querySelector('header').innerHTML = data});
+		</script>
+		<script src="/noindex/pages.js"></script>
+		<noscript>
+			<div id="nojs" style="position: fixed; top: 0px; bottom: 0px; left: 0px; right: 0px; display: flex; flex-flow: column; justify-content: center; align-items: center; background: var(--semi-back); padding: 15px 20px; z-index: 1000000; cursor: default;">
+				<b style="font-family: sans-serif; font-size: 16pt; color: #FFF; text-align: center;">Page Failed to Load</b>
+				<p style="font-family: sans-serif; font-size: 14pt; color: #FFF6; text-align: center;">This website requires Javascript to operate.</p>
+			</div>
+		</noscript>
+		<div id="loader" style="width: 100%; height: calc(100% - 50px); top: 50px; left: 0px; position: fixed; z-index: -100000;">
+			<img alt="Loading" src="/static/images/loader.gif" style="width: 100px; height: 100px; position: fixed; left: calc(50% - 50px); top: calc(50% - 25px); filter: drop-shadow(0px 0px 15px #000000);">
 		</div>
-		<div id="loader" style="width: 100%; height: calc(100% - 50px); top: 50px; left: 0px; position: fixed; z-index: -99999">
-			<img alt="Loading" src="../static-0/files/images/loading-general.gif" style="width: 100px; height: 100px; position: fixed; left: calc(50% - 50px); top: calc(50% - 25px); filter: drop-shadow(0px 0px 15px #000000)">
-		</div>
-		<div id="content-main" style="opacity: 0; transition: 1s ease">
+		<div id="content-main" style="opacity: 0; transition: 0.5s">
 			<h1 id="title">This Animal is as LOUD as an ATOMIC BOMB! - Fantastic Fact 02</h1>
 			<p id="published-date">Published: January 28, 2023 at 8:29 PM (PT)</p>
 			<div id="video-info">
@@ -154,7 +153,13 @@
 				<a href="./thumbnails/8-this_animal_is_as_loud_as_an_atomic_bomb_-_fantastic_fact_02-1080.png" class="tb"><img src="./thumbnails/8-this_animal_is_as_loud_as_an_atomic_bomb_-_fantastic_fact_02-180.png" alt="Thumbnail"><b>January 28, 2023</b></a>
 			</div>
 		</div>
-		<script src="../static-0/main.js"></script>
-		<script src="../static-0/video-sources-pages.js"></script>
+		<footer></footer>
+		<script>
+			fetch('/noindex/footer.html')
+				.then(response => response.text())
+				.then(data => {document.querySelector('footer').innerHTML = data});
+		</script>
+		<script src="/static/main.js"></script>
+		<script src="/static/video-sources-pages.js"></script>
 	</body>
 </html>

@@ -14,32 +14,31 @@
 		<title>The Speed of Light is EXTREMELY Slow - BlenderTimer Video Sources</title>
 		<meta name="description" content="The video sources for The Speed of Light is EXTREMELY Slow.">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<link rel="icon" href="../favicon.png">
-		<link rel="stylesheet" type="text/css" href="../static-0/general.css">
-		<link rel="stylesheet" type="text/css" href="../static-0/main.css">
-		<link rel="stylesheet" type="text/css" href="../static-0/video-sources-pages.css">
-		<script src="../bt-js/bt-js.js"></script>
-		<script src="../static-0/videos.js"></script>
-		<script src="../static-0/jquery-3.6.3.js"></script>
+		<link rel="icon" href="/favicon.png">
+		<link rel="stylesheet" type="text/css" href="/static/main.css">
+		<link rel="stylesheet" type="text/css" href="/static/video-sources-pages.css">
+		<script src="/bt-js/bt-js.js"></script>
+		<script src="/static/videos.js"></script>
+		<script src="/static/jquery-3.6.3.js"></script>
 	</head>
 	<body>
-		<div id="banner-menu">
-			<nav>
-				<!--====================  LARGE MENU  ====================-->
-				<ul id="large-menu">
-					<li id="nav-home"><a href="/"><img alt="BlenderTimer" src="../static-0/files/images/nav-logohome.png"></a></li>
-				</ul>
-				<!--====================  SMALL MENU  ====================-->
-				<div id="small-menu" style="display: none" onclick="smallMenuToggle()"><img alt="Menu" src="../static-0/files/images/menu-bars.png"></div>
-				<div id="small-menu-main"></div>
-			</nav>
-			<script src="../static-0/nav-links.js"></script>
-			<script src="../static-0/load-menus.js"></script>
+		<header></header>
+		<script>
+			fetch('/noindex/header.html')
+				.then(response => response.text())
+				.then(data => {document.querySelector('header').innerHTML = data});
+		</script>
+		<script src="/noindex/pages.js"></script>
+		<noscript>
+			<div id="nojs" style="position: fixed; top: 0px; bottom: 0px; left: 0px; right: 0px; display: flex; flex-flow: column; justify-content: center; align-items: center; background: var(--semi-back); padding: 15px 20px; z-index: 1000000; cursor: default;">
+				<b style="font-family: sans-serif; font-size: 16pt; color: #FFF; text-align: center;">Page Failed to Load</b>
+				<p style="font-family: sans-serif; font-size: 14pt; color: #FFF6; text-align: center;">This website requires Javascript to operate.</p>
+			</div>
+		</noscript>
+		<div id="loader" style="width: 100%; height: calc(100% - 50px); top: 50px; left: 0px; position: fixed; z-index: -100000;">
+			<img alt="Loading" src="/static/images/loader.gif" style="width: 100px; height: 100px; position: fixed; left: calc(50% - 50px); top: calc(50% - 25px); filter: drop-shadow(0px 0px 15px #000000);">
 		</div>
-		<div id="loader" style="width: 100%; height: calc(100% - 50px); top: 50px; left: 0px; position: fixed; z-index: -99999">
-			<img alt="Loading" src="../static-0/files/images/loading-general.gif" style="width: 100px; height: 100px; position: fixed; left: calc(50% - 50px); top: calc(50% - 25px); filter: drop-shadow(0px 0px 15px #000000)">
-		</div>
-		<div id="content-main" style="opacity: 0; transition: 1s ease">
+		<div id="content-main" style="opacity: 0; transition: 0.5s">
 			<h1 id="title">The Speed of Light is EXTREMELY Slow</h1>
 			<p id="published-date">Published: June 20, 2022 at 8:48 PM (PT)</p>
 			<div id="video-info">
@@ -114,12 +113,6 @@
 					<p>...less than one seventh of a second!</p></span>
 					<a>One eighth of a second is 0.125 seconds which is less than the time it takes for light to travel around the Earth (0.1334518 seconds). So this should be "less than one seventh of a second", one seventh of a second being about 0.1429 seconds.</a>
 				</div>
-				<div class="correction">
-					<a class="correction-time" href="https://youtu.be/js_6UeLx-_c?t=395">6:35</a>
-					<span><i>"...over 186 trillion miles per hour!"</i>
-					<p>...over 186 trillion miles per second!".</p></span>
-				</div>
-			</div>
 			<h2>Information Sources</h2>
 			<div id="info-sources" class="sources">
 				<a id="ID7QVNER8A" href="https://en.wikipedia.org/wiki/Light" target="_blank"><b>Light Facts</b><p>https://en.wikipedia.org/wiki/Light</p></a>
@@ -135,7 +128,7 @@
 				<a id="IDKLFOGOS5" href="https://scholarblogs.emory.edu/artsbrain/2020/12/02/magenta-doesnt-exist" target="_blank"><b>Magenta Doesn't Exist</b><p>https://scholarblogs.emory.edu/artsbrain/2020/12/02/magenta-doesnt-exist</p></a>
 				<a id="ID7XJ5V6" href="https://en.wikipedia.org/wiki/Speed_of_sound" target="_blank"><b>Speed of Sound</b><p>https://en.wikipedia.org/wiki/Speed_of_sound</p></a>
 				<a id="IDNVHRN9Z3" href="https://www.visualcapitalist.com/the-44-closest-stars-and-how-they-compare-to-our-sun" target="_blank"><b>Closest Stars Distances</b><p>https://www.visualcapitalist.com/the-44-closest-stars-and-how-they-compare-to-our-sun</p></a>
-				<a id="IDA0F3N" href="https://en.wikipedia.org/wiki/Rigel" target="_blank"><b>Distance to Rigel</b><p>https://en.wikipedia.org/wiki/Rigel</p></a>
+				<a id="IDA0F3N" href="https://en.wikipedia.org/wiki/Rigel" target="_blank"><b>Rigel Facts</b><p>https://en.wikipedia.org/wiki/Rigel</p></a>
 				<a id="IDAH9IY5TMA" href="https://imagine.gsfc.nasa.gov/features/cosmic/milkyway_info.html" target="_blank"><b>Milky Way Facts</b><p>https://imagine.gsfc.nasa.gov/features/cosmic/milkyway_info.html</p></a>
 				<a id="IDDYO45478" href="https://en.wikipedia.org/wiki/Observable_universe" target="_blank"><b>Observable Universe Facts</b><p>https://en.wikipedia.org/wiki/Observable_universe</p></a>
 			</div>
@@ -412,7 +405,13 @@
 				<a href="./thumbnails/2-the_speed_of_light_is_extremely_slow-1080.png" class="tb"><img src="./thumbnails/2-the_speed_of_light_is_extremely_slow-180.png" alt="Thumbnail"><b>June 30, 2022</b></a>
 			</div>
 		</div>
-		<script src="../static-0/main.js"></script>
-		<script src="../static-0/video-sources-pages.js"></script>
+		<footer></footer>
+		<script>
+			fetch('/noindex/footer.html')
+				.then(response => response.text())
+				.then(data => {document.querySelector('footer').innerHTML = data});
+		</script>
+		<script src="/static/main.js"></script>
+		<script src="/static/video-sources-pages.js"></script>
 	</body>
 </html>
