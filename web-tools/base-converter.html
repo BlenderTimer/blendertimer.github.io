@@ -14,31 +14,29 @@
 		<title>Base Converter - BlenderTimer Web Tools</title>
 		<meta name="description" content="A free, fast, and easy to use numeral base converter! Convert base 10 (decimal) to base 2 (binary) or base 16 (hexidecimal) and more!">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<link rel="icon" href="../favicon.png" type="image/x-icon">
-		<link rel="stylesheet" type="text/css" href="../static-0/general.css">
-		<link rel="stylesheet" type="text/css" href="../static-0/main.css">
-		<link rel="stylesheet" type="text/css" href="../static-0/base-converter.css">
-		<script src="../bt-js/bt-js.js"></script>
+		<link rel="icon" href="/favicon.png" type="image/x-icon">
+		<link rel="stylesheet" type="text/css" href="/static/main.css">
+		<link rel="stylesheet" type="text/css" href="/static/base-converter.css">
+		<script src="/bt-js/bt-js.js"></script>
 	</head>
 	<body>
-		<div id="banner-menu">
-			<nav>
-				<!--====================  LARGE MENU  ====================-->
-				<ul id="large-menu">
-					<li id="nav-home"><a href="/"><img alt="BlenderTimer" src="../static-0/files/images/nav-logohome.png"></a></li>
-				</ul>
-				<div id="revolve-button" title="Current visitors on this site."><script src="https://rf.revolvermaps.com/0/0/3.js?i=5cgjr9bkw1v&b=0&s=40&m=2&cl=555555&co=000000&cd=ffffff&v0=25&v1=100&r=1" async="async"></script></div>
-				<!--====================  SMALL MENU  ====================-->
-				<div id="small-menu" style="display: none" onclick="smallMenuToggle()"><img alt="Menu" src="../static-0/files/images/menu-bars.png"></div>
-				<div id="small-menu-main"></div>
-			</nav>
-			<script src="../static-0/nav-links.js"></script>
-			<script src="../static-0/load-menus.js"></script>
+		<header></header>
+		<script>
+			fetch('/noindex/header.html')
+				.then(response => response.text())
+				.then(data => {document.querySelector('header').innerHTML = data});
+		</script>
+		<script src="/noindex/pages.js"></script>
+		<noscript>
+			<div id="nojs" style="position: fixed; top: 0px; bottom: 0px; left: 0px; right: 0px; display: flex; flex-flow: column; justify-content: center; align-items: center; background: var(--semi-back); padding: 15px 20px; z-index: 1000000; cursor: default;">
+				<b style="font-family: sans-serif; font-size: 16pt; color: #FFF; text-align: center;">Page Failed to Load</b>
+				<p style="font-family: sans-serif; font-size: 14pt; color: #FFF6; text-align: center;">This website requires Javascript to operate.</p>
+			</div>
+		</noscript>
+		<div id="loader" style="width: 100%; height: calc(100% - 50px); top: 50px; left: 0px; position: fixed; z-index: -100000;">
+			<img alt="Loading" src="/static/images/loader.gif" style="width: 100px; height: 100px; position: fixed; left: calc(50% - 50px); top: calc(50% - 25px); filter: drop-shadow(0px 0px 15px #000000);">
 		</div>
-		<div id="loader" style="width: 100%; height: calc(100% - 50px); top: 50px; left: 0px; position: fixed; z-index: -99999">
-			<img alt="Loading" src="../static-0/files/images/loading-general.gif" style="width: 100px; height: 100px; position: fixed; left: calc(50% - 50px); top: calc(50% - 25px); filter: drop-shadow(0px 0px 15px #000000)">
-		</div>
-		<div id="content-main" style="opacity: 0; transition: 1s ease">
+		<div id="content-main" style="opacity: 0; transition: 0.5s">
 			<h1 class="title">Base Converter</h1>
 			<p class="description">Convert base 10 (decimal) to base 2 (binary) or base 16 (hexidecimal) and more!</p>
 			<div id="main-tool">
@@ -190,15 +188,15 @@
 					</a>
 				</div>
 			</div>
-			<div id="donate-promo">
-				<span></span>
-				<p>Do you enjoy 100% free tools with no ads?</p>
-				<b>Consider donating!</b>
-				<button onclick="donate('Base Converter - BlenderTimer')">DONATE</button>
-			</div>
 			<i id="supported-bases" style="line-height: 1.2; display: block; margin-top: 20px;">This tool's default numeral list supports conversions to and from base 1 (unary), base 2 (binary), base 3 (ternary), base 4 (quaternary), base 5 (quinary), base 6 (senary/seximal), base 7 (septenary/septimal), base 8 (octal), base 9 (nonary/nonal), base 10 (decimal/denary), base 11 (undecimal/unodecimal/undenary), base 12 (duodecimal/dozenal), base 13 (tredecimal/tridecimal), base 14 (quattuordecimal/quadrodecimal), base 15 (quindecimal/pentadecimal), base 16 (hexadecimal/sexadecimal/sedecimal), base 17 (septendecimal/heptadecimal), base 18 (octodecimal), base 19 (undevicesimal/nonadecimal), base 20 (vigesimal), base 21 (unvigesimal), base 22 (duovigesimal), base 23 (trivigesimal), base 24 (quadravigesimal), base 25 (pentavigesimal), base 26 (hexavigesimal), base 27 (septemvigesimal), base 28 (octovigesimal), base 29 (nonavigesimal), base 30 (trigesimal), base 31, base 32, base 33, base 34, base 35, base 36, base 37, base 38, base 39, base 40, base 41, base 42, base 43, base 44, base 45, base 46, base 47, base 48, base 49, base 50, base 51, base 52, base 53, base 54, base 55, base 56, base 57, base 58, base 59, base 60 (sexagesimal), base 61, base 62, base 63, base 64, base 65, base 67, base 68, base 69, base 70, base 71, base 72, base 73, base 74, base 75, base 76, base 77, base 78, base 79, base 80, base 81, base 82, base 83, base 84, base 85, base 86, base 87, base 88, base 89, base 90, base 91, base 92, base 93, base 94, base 95, base 96, base 97, base 98, base 99, base 100, base 101, base 102, base 103, base 104, base 105, base 106, base 107, base 108, base 109, and base 110.</i>
 		</div>
-		<script src="../static-0/main.js"></script>
-		<script src="../static-0/base-converter.js"></script>
+		<footer></footer>
+		<script>
+			fetch('/noindex/footer.html')
+				.then(response => response.text())
+				.then(data => {document.querySelector('footer').innerHTML = data});
+		</script>
+		<script src="/static/main.js"></script>
+		<script src="/static/base-converter.js"></script>
 	</body>
 </html>

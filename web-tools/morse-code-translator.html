@@ -14,30 +14,29 @@
 		<title>Morse Code Translator - BlenderTimer Web Tools</title>
 		<meta name="description" content="A free, fast, and easy to use Morse Code translator! Translate Morse code to English or translate English to Morse Code!">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<link rel="icon" href="../favicon.png" type="image/x-icon">
-		<link rel="stylesheet" type="text/css" href="../static-0/general.css">
-		<link rel="stylesheet" type="text/css" href="../static-0/main.css">
-		<link rel="stylesheet" type="text/css" href="../static-0/morse-code-translator.css">
-		<script src="../bt-js/bt-js.js"></script>
+		<link rel="icon" href="/favicon.png" type="image/x-icon">
+		<link rel="stylesheet" type="text/css" href="/static/main.css">
+		<link rel="stylesheet" type="text/css" href="/static/morse-code-translator.css">
+		<script src="/bt-js/bt-js.js"></script>
 	</head>
 	<body>
-		<div id="banner-menu">
-			<nav>
-				<!--====================  LARGE MENU  ====================-->
-				<ul id="large-menu">
-					<li id="nav-home"><a href="/"><img alt="BlenderTimer" src="../static-0/files/images/nav-logohome.png"></a></li>
-				</ul>
-				<!--====================  SMALL MENU  ====================-->
-				<div id="small-menu" style="display: none" onclick="smallMenuToggle()"><img alt="Menu" src="../static-0/files/images/menu-bars.png"></div>
-				<div id="small-menu-main"></div>
-			</nav>
-			<script src="../static-0/nav-links.js"></script>
-			<script src="../static-0/load-menus.js"></script>
+		<header></header>
+		<script>
+			fetch('/noindex/header.html')
+				.then(response => response.text())
+				.then(data => {document.querySelector('header').innerHTML = data});
+		</script>
+		<script src="/noindex/pages.js"></script>
+		<noscript>
+			<div id="nojs" style="position: fixed; top: 0px; bottom: 0px; left: 0px; right: 0px; display: flex; flex-flow: column; justify-content: center; align-items: center; background: var(--semi-back); padding: 15px 20px; z-index: 1000000; cursor: default;">
+				<b style="font-family: sans-serif; font-size: 16pt; color: #FFF; text-align: center;">Page Failed to Load</b>
+				<p style="font-family: sans-serif; font-size: 14pt; color: #FFF6; text-align: center;">This website requires Javascript to operate.</p>
+			</div>
+		</noscript>
+		<div id="loader" style="width: 100%; height: calc(100% - 50px); top: 50px; left: 0px; position: fixed; z-index: -100000;">
+			<img alt="Loading" src="/static/images/loader.gif" style="width: 100px; height: 100px; position: fixed; left: calc(50% - 50px); top: calc(50% - 25px); filter: drop-shadow(0px 0px 15px #000000);">
 		</div>
-		<div id="loader" style="width: 100%; height: calc(100% - 50px); top: 50px; left: 0px; position: fixed; z-index: -99999">
-			<img alt="Loading" src="../static-0/files/images/loading-general.gif" style="width: 100px; height: 100px; position: fixed; left: calc(50% - 50px); top: calc(50% - 25px); filter: drop-shadow(0px 0px 15px #000000)">
-		</div>
-		<div id="content-main" class="limwidth" style="opacity: 0; transition: 1s ease">
+		<div id="content-main" class="limwidth" style="opacity: 0; transition: 0.5s">
 			<h1 class="title">Morse Code Translator</h1>
 			<p class="description">Translate from English to Morse Code or from Morse Code to English!</p>
 			<div id="main-tool">
@@ -199,14 +198,14 @@
 					</a>
 				</div>
 			</div>
-			<div id="donate-promo">
-				<span></span>
-				<p>Do you enjoy 100% free tools with no ads?</p>
-				<b>Consider donating!</b>
-				<button onclick="donate('Morse Code Translator - BlenderTimer')">DONATE</button>
-			</div>
 		</div>
-		<script src="../static-0/main.js"></script>
-		<script src="../static-0/morse-code-translator.js"></script>
+		<footer></footer>
+		<script>
+			fetch('/noindex/footer.html')
+				.then(response => response.text())
+				.then(data => {document.querySelector('footer').innerHTML = data});
+		</script>
+		<script src="/static/main.js"></script>
+		<script src="/static/morse-code-translator.js"></script>
 	</body>
 </html>

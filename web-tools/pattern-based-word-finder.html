@@ -21,30 +21,29 @@
 		<title>Pattern-Based Word Finder - BlenderTimer Web Tools</title>
 		<meta name="description" content="A free, fast, and easy to use pattern-based word finder with multiple languages!">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<link rel="icon" href="../favicon.png" type="image/x-icon">
-		<link rel="stylesheet" type="text/css" href="../static-0/general.css">
-		<link rel="stylesheet" type="text/css" href="../static-0/main.css">
-		<link rel="stylesheet" type="text/css" href="../static-0/pattern-based-word-finder.css">
-		<script src="../bt-js/bt-js.js"></script>
+		<link rel="icon" href="/favicon.png" type="image/x-icon">
+		<link rel="stylesheet" type="text/css" href="/static/main.css">
+		<link rel="stylesheet" type="text/css" href="/static/pattern-based-word-finder.css">
+		<script src="/bt-js/bt-js.js"></script>
 	</head>
 	<body>
-		<div id="banner-menu">
-			<nav>
-				<!--====================  LARGE MENU  ====================-->
-				<ul id="large-menu">
-					<li id="nav-home"><a href="/"><img alt="BlenderTimer" src="../static-0/files/images/nav-logohome.png"></a></li>
-				</ul>
-				<!--====================  SMALL MENU  ====================-->
-				<div id="small-menu" style="display: none" onclick="smallMenuToggle()"><img alt="Menu" src="../static-0/files/images/menu-bars.png"></div>
-				<div id="small-menu-main"></div>
-			</nav>
-			<script src="../static-0/nav-links.js"></script>
-			<script src="../static-0/load-menus.js"></script>
+		<header></header>
+		<script>
+			fetch('/noindex/header.html')
+				.then(response => response.text())
+				.then(data => {document.querySelector('header').innerHTML = data});
+		</script>
+		<script src="/noindex/pages.js"></script>
+		<noscript>
+			<div id="nojs" style="position: fixed; top: 0px; bottom: 0px; left: 0px; right: 0px; display: flex; flex-flow: column; justify-content: center; align-items: center; background: var(--semi-back); padding: 15px 20px; z-index: 1000000; cursor: default;">
+				<b style="font-family: sans-serif; font-size: 16pt; color: #FFF; text-align: center;">Page Failed to Load</b>
+				<p style="font-family: sans-serif; font-size: 14pt; color: #FFF6; text-align: center;">This website requires Javascript to operate.</p>
+			</div>
+		</noscript>
+		<div id="loader" style="width: 100%; height: calc(100% - 50px); top: 50px; left: 0px; position: fixed; z-index: -100000;">
+			<img alt="Loading" src="/static/images/loader.gif" style="width: 100px; height: 100px; position: fixed; left: calc(50% - 50px); top: calc(50% - 25px); filter: drop-shadow(0px 0px 15px #000000);">
 		</div>
-		<div id="loader" style="width: 100%; height: calc(100% - 50px); top: 50px; left: 0px; position: fixed; z-index: -99999">
-			<img alt="Loading" src="../static-0/files/images/loading-general.gif" style="width: 100px; height: 100px; position: fixed; left: calc(50% - 50px); top: calc(50% - 25px); filter: drop-shadow(0px 0px 15px #000000)">
-		</div>
-		<div id="content-main" style="opacity: 0; transition: 1s ease">
+		<div id="content-main" style="opacity: 0; transition: 0.5s">
 			<h1 class="title">Pattern-Based Word Finder</h1>
 			<p class="description">Find words based on a pattern or specified set of rules!</p>
 			<div id="main-tool">
@@ -94,62 +93,70 @@
 							<h1>Character rules:</h1>
 							<div class="pattern-block-list">
 								<div id="rule-contains" style="--back: #00AF12;" class="pattern-block no-interface">
-									<div class="add-pattern" onclick="addRule(event)" style="opacity: 0;"><img src="../static-0/files/images/icons/add.svg"></div>
+									<div class="add-pattern" onclick="addRule(event)" style="opacity: 0;"><img src="../static-0/files/images/icons/add.svg"><p>Click to add rule</p></div>
 									<i>word</i><b>contains</b><input type="text" placeholder="this">
 								</div>
+								<div id="rule-containsany" style="--back: #00AF12;" class="pattern-block no-interface">
+									<div class="add-pattern" onclick="addRule(event)" style="opacity: 0;"><img src="../static-0/files/images/icons/add.svg"><p>Click to add rule</p></div>
+									<i>word</i><b>contains any</b><input type="text" placeholder="abcde">
+								</div>
 								<div id="rule-startswith" style="--back: #00AF12;" class="pattern-block no-interface">
-									<div class="add-pattern" onclick="addRule(event)" style="opacity: 0;"><img src="../static-0/files/images/icons/add.svg"></div>
+									<div class="add-pattern" onclick="addRule(event)" style="opacity: 0;"><img src="../static-0/files/images/icons/add.svg"><p>Click to add rule</p></div>
 									<i>word</i><b>starts with</b><input type="text" placeholder="this">
 								</div>
 								<div id="rule-endswith" style="--back: #00AF12;" class="pattern-block no-interface">
-									<div class="add-pattern" onclick="addRule(event)" style="opacity: 0;"><img src="../static-0/files/images/icons/add.svg"></div>
+									<div class="add-pattern" onclick="addRule(event)" style="opacity: 0;"><img src="../static-0/files/images/icons/add.svg"><p>Click to add rule</p></div>
 									<i>word</i><b>ends with</b><input type="text" placeholder="this">
 								</div>
 								<div id="rule-charnis" style="--back: #256AD4;" class="pattern-block no-interface">
-									<div class="add-pattern" onclick="addRule(event)" style="opacity: 0;"><img src="../static-0/files/images/icons/add.svg"></div>
+									<div class="add-pattern" onclick="addRule(event)" style="opacity: 0;"><img src="../static-0/files/images/icons/add.svg"><p>Click to add rule</p></div>
 									<i>character</i><input type="number" placeholder="2" min="1" max="1000"><b>is</b><input type="text" placeholder="x">
 								</div>
 								<div id="rule-charisfoundntimes" style="--back: #256AD4;" class="pattern-block no-interface">
-									<div class="add-pattern" onclick="addRule(event)" style="opacity: 0;"><img src="../static-0/files/images/icons/add.svg"></div>
+									<div class="add-pattern" onclick="addRule(event)" style="opacity: 0;"><img src="../static-0/files/images/icons/add.svg"><p>Click to add rule</p></div>
 									<input type="text" placeholder="x"><b>is found</b><input type="number" placeholder="2" min="0" max="1000"><i>times</i>
 								</div>
 								<div id="rule-hasnvowels" style="--back: #00B189;" class="pattern-block no-interface">
-									<div class="add-pattern" onclick="addRule(event)" style="opacity: 0;"><img src="../static-0/files/images/icons/add.svg"></div>
+									<div class="add-pattern" onclick="addRule(event)" style="opacity: 0;"><img src="../static-0/files/images/icons/add.svg"><p>Click to add rule</p></div>
 									<i>word</i><b>has exactly</b><input type="number" placeholder="2" min="0" max="1000"><i>vowels</i>
 								</div>
 								<div id="rule-haslessthannvowels" style="--back: #00B189;" class="pattern-block no-interface">
-									<div class="add-pattern" onclick="addRule(event)" style="opacity: 0;"><img src="../static-0/files/images/icons/add.svg"></div>
+									<div class="add-pattern" onclick="addRule(event)" style="opacity: 0;"><img src="../static-0/files/images/icons/add.svg"><p>Click to add rule</p></div>
 									<i>word</i><b style="font-size: 8pt !important;">has less than</b><input type="number" placeholder="2" min="1" max="1000"><i>vowels</i>
 								</div>
 								<div id="rule-hasmorethannvowels" style="--back: #00B189;" class="pattern-block no-interface">
-									<div class="add-pattern" onclick="addRule(event)" style="opacity: 0;"><img src="../static-0/files/images/icons/add.svg"></div>
+									<div class="add-pattern" onclick="addRule(event)" style="opacity: 0;"><img src="../static-0/files/images/icons/add.svg"><p>Click to add rule</p></div>
 									<i>word</i><b style="font-size: 8pt !important;">has more than</b><input type="number" placeholder="2" min="0" max="1000"><i>vowels</i>
 								</div>
 								<div id="rule-hasnconsonants" style="--back: #468580;" class="pattern-block no-interface">
-									<div class="add-pattern" onclick="addRule(event)" style="opacity: 0;"><img src="../static-0/files/images/icons/add.svg"></div>
+									<div class="add-pattern" onclick="addRule(event)" style="opacity: 0;"><img src="../static-0/files/images/icons/add.svg"><p>Click to add rule</p></div>
 									<i>word</i><b>has exactly</b><input type="number" placeholder="2" min="0" max="1000"><i>consonants</i>
 								</div>
 								<div id="rule-haslessthannconsonants" style="--back: #468580;" class="pattern-block no-interface">
-									<div class="add-pattern" onclick="addRule(event)" style="opacity: 0;"><img src="../static-0/files/images/icons/add.svg"></div>
+									<div class="add-pattern" onclick="addRule(event)" style="opacity: 0;"><img src="../static-0/files/images/icons/add.svg"><p>Click to add rule</p></div>
 									<i>word</i><b style="font-size: 8pt !important;">has less than</b><input type="number" placeholder="2" min="1" max="1000"><i>consonants</i>
 								</div>
 								<div id="rule-hasmorethannconsonants" style="--back: #468580;" class="pattern-block no-interface">
-									<div class="add-pattern" onclick="addRule(event)" style="opacity: 0;"><img src="../static-0/files/images/icons/add.svg"></div>
+									<div class="add-pattern" onclick="addRule(event)" style="opacity: 0;"><img src="../static-0/files/images/icons/add.svg"><p>Click to add rule</p></div>
 									<i>word</i><b style="font-size: 8pt !important;">has more than</b><input type="number" placeholder="2" min="0" max="1000"><i>consonants</i>
+								</div>
+								<div id="rule-doesnothavepunctuation" style="--back: #F93449;" class="pattern-block no-interface">
+									<div class="add-pattern" onclick="addRule(event)" style="opacity: 0;"><img src="../static-0/files/images/icons/add.svg"><p>Click to add rule</p></div>
+									<i>word</i><b>does not have punctuation</b>
 								</div>
 							</div>
 							<h1>Length rules:</h1>
 							<div class="pattern-block-list">
 								<div id="rule-lengthis" style="--back: #FF6419;" class="pattern-block no-interface">
-									<div class="add-pattern" onclick="addRule(event)" style="opacity: 0;"><img src="../static-0/files/images/icons/add.svg"></div>
+									<div class="add-pattern" onclick="addRule(event)" style="opacity: 0;"><img src="../static-0/files/images/icons/add.svg"><p>Click to add rule</p></div>
 									<i>word length</i><b>is exactly</b><input type="number" placeholder="5" min="1" max="1000"><i>characters</i>
 								</div>
 								<div id="rule-lengthislessthan" style="--back: #FF6419;" class="pattern-block no-interface">
-									<div class="add-pattern" onclick="addRule(event)" style="opacity: 0;"><img src="../static-0/files/images/icons/add.svg"></div>
+									<div class="add-pattern" onclick="addRule(event)" style="opacity: 0;"><img src="../static-0/files/images/icons/add.svg"><p>Click to add rule</p></div>
 									<i>word length</i><b>is less than</b><input type="number" placeholder="8" min="1" max="1000"><i>characters</i>
 								</div>
 								<div id="rule-lengthismorethan" style="--back: #FF6419;" class="pattern-block no-interface">
-									<div class="add-pattern" onclick="addRule(event)" style="opacity: 0;"><img src="../static-0/files/images/icons/add.svg"></div>
+									<div class="add-pattern" onclick="addRule(event)" style="opacity: 0;"><img src="../static-0/files/images/icons/add.svg"><p>Click to add rule</p></div>
 									<i>word length</i><b>is more than</b><input type="number" placeholder="2" min="1" max="1000"><i>characters</i>
 								</div>
 							</div>
@@ -182,7 +189,7 @@
 				</div>
 				<div id="tool-output">
 					<textarea readonly></textarea>
-					<div id="tool-output-info"><button id="show-all" onclick="showAllWords()" style="opacity: 0; pointer-events: none;">Show All</button><i>Showing 0/0 words</i></div>
+					<div id="tool-output-info"><button id="show-all" onclick="showAllWords()" style="opacity: 0; pointer-events: none;">Show All</button><i>Showing 0/0 matching words</i></div>
 				</div>
 			</div>
 			<p>This amazing, pattern-based word finder has a full dictionary database of 4 languages consisting of over 2.7 million words! Yet the tool searches the entire language's dictionary in less than a second for any words which match the given pattern! (usually)<br>With options for English, Spanish, French, and German languages, this tool is power-packed! And best of all...it's completely cost and ad free! Use pre-built rules to build your pattern and find your words!</p>
@@ -204,14 +211,14 @@
 					</a>
 				</div>
 			</div>
-			<div id="donate-promo">
-				<span></span>
-				<p>Do you enjoy 100% free tools with no ads?</p>
-				<b>Consider donating!</b>
-				<button onclick="donate('Pattern-Based Word Finder - BlenderTimer')">DONATE</button>
-			</div>
 		</div>
-		<script src="../static-0/main.js"></script>
-		<script src="../static-0/pattern-based-word-finder.js"></script>
+		<footer></footer>
+		<script>
+			fetch('/noindex/footer.html')
+				.then(response => response.text())
+				.then(data => {document.querySelector('footer').innerHTML = data});
+		</script>
+		<script src="/static/main.js"></script>
+		<script src="/static/pattern-based-word-finder.js"></script>
 	</body>
 </html>
