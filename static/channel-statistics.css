@@ -1,0 +1,71 @@
+#timeline-block {
+	width: 100%;
+	margin: 15px 0px 0px 0px;
+	border-radius: 10px;
+	background: #252525;
+	box-shadow: 0px 0px 20px rgba(0,0,0,0.3);
+	padding: 20px;
+	box-sizing: border-box;
+	display: block;
+}
+
+#timeline {
+	background: var(--far-back);
+	height: 315px;
+	border-radius: 10px;
+	box-shadow: 0px 0px 30px #0005 inset, 0px 0px 15px #FFFFFF0A;
+	overflow-x: scroll;
+	overflow-y: hidden;
+}
+
+#timeline::-webkit-scrollbar {
+	background: #202020;
+	height: 15px;
+	border-radius: 0px 0px 10px 10px;
+}
+
+#timeline::-webkit-scrollbar-thumb {
+	background: #353535;
+	border: none;
+	border-radius: 0px 0px 10px 10px;
+	width: 100px;
+}
+
+#timeline::-webkit-scrollbar-thumb:hover {
+	background: #3A3A3A;
+}
+
+#milestone-list {
+	width: 100%;
+	margin: 15px 0px 0px 0px;
+	padding: 0px;
+	box-sizing: border-box;
+	padding: 5px 10px;
+	display: block;
+	border-radius: 10px;
+	background: var(--far-back);
+	box-shadow: 0px 0px 30px #0005 inset;
+}
+
+#milestone-list p {
+	display: block;
+	margin: 5px 0px;
+	text-align: left;
+}
+
+#stats {
+	display: flex;
+	justify-content: center;
+	align-content: center;
+	width: 100%;
+}
+
+#stats iframe {
+	display: block;
+	width: 100%;
+	max-width: 1500px;
+	aspect-ratio: 1 / 2;
+	margin: 15px 0px;
+	border: none;
+	outline: none;
+}
