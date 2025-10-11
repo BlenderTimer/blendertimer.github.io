@@ -70,6 +70,7 @@ function headerSearch(e) {
 				var result = document.createElement('a');
 				result.className = "header-search-result";
 				result.innerHTML = "<div><b>" + r.title.removeAfter("-", -2, true) + "</b><p>" + r.description + "</p><i>" + r.url + "</i></div>";
+				result.href = r.url;
 				document.getElementById("header-search-output").appendChild(result);
 			}
 			document.getElementById("header-search-output").style.display = "flex";
