@@ -107,7 +107,7 @@ window.pages = [
 	{
 		title:"Bible Data - BlenderTimer Factsheets",
 		description:"A collection of data about the Bible!",
-		url:"/factsheets/solar-system/dwarf-planet-factsheet",
+		url:"/factsheets/bible-data",
 		keywords:["kjv", "words", "verses", "chapters", "books", "center", "flesch", "testament"]
 	},
 	{
