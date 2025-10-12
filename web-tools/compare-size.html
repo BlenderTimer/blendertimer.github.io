@@ -50,17 +50,17 @@
 				<div id="add-object" class="popup" style="display: none">
 					<h1 class="popup-title">Chose an object!</h1>
 					<div id="add-object-search">
-						<input id="aos-search" type="text" oninput="searchType(event)" placeholder="Search objects">
+						<input id="aos-search" type="text" onkeydown="searchType(event)" placeholder="Search objects">
 						<div id="aos-search-settings">
 							<div id="aos-search-left">
 								<div id="aos-sort" style="--width: 150px">
 									<div id="aos-sort-main" onclick="toggleDropdown(event)"><b>Sort</b><p>Name</p></div>
-									<div id="aos-sort-selector" style="transform: scaleY(0); opacity: 0">
-										<p onclick="dropdownSelect(event), sortSearchObjects(true)">Name</p>
-										<p onclick="dropdownSelect(event), sortSearchObjects(true)">Largest</p>
-										<p onclick="dropdownSelect(event), sortSearchObjects(true)">Smallest</p>
-										<p onclick="dropdownSelect(event), sortSearchObjects(true)">Newest</p>
-										<p onclick="dropdownSelect(event), sortSearchObjects(true)">Oldest</p>
+									<div id="aos-sort-selector" style="transform: scaleY(0); opacity: 0;">
+										<p onclick="dds(event)">Name</p>
+										<p onclick="dds(event)">Largest</p>
+										<p onclick="dds(event)">Smallest</p>
+										<p onclick="dds(event)">Newest</p>
+										<p onclick="dds(event)">Oldest</p>
 									</div>
 								</div>
 							</div>
@@ -377,12 +377,14 @@
 					<img onclick="selectAll(-1)" src="../static-0/files/images/icons/deselect-all.svg" title="Deselect all">
 					<img onclick="selectAll()" src="../static-0/files/images/icons/select-all.svg" title="Select all">
 					<span class="menu-spr"></span>
+					<img onclick="toggleDBrightness()" id="drawing-brightness-btn" src="../static-0/files/images/icons/drawing-brightness.svg" title="Change drawing brightness">
+					<img onclick="toggleBBrightness()" id="background-brightness-btn" src="../static-0/files/images/icons/background-brightness.svg" title="Change background brightness">
+					<span class="menu-spr"></span>
 					<img onclick="setZoom(0)" src="../static-0/files/images/icons/zoom-out.svg" title="Zoom out">
 					<img onclick="setZoom(1)" src="../static-0/files/images/icons/zoom-in.svg" title="Zoom in">
 					<img onclick="setZoom(-1)" src="../static-0/files/images/icons/zoom-reset.svg" title="Reset zoom">
 					<span class="menu-spr"></span>
-					<img onclick="toggleDBrightness()" id="drawing-brightness-btn" src="../static-0/files/images/icons/drawing-brightness.svg" title="Change drawing brightness">
-					<img onclick="toggleBBrightness()" id="background-brightness-btn" src="../static-0/files/images/icons/background-brightness.svg" title="Change background brightness">
+					<img onclick="toggleLabels()" src="../static-0/files/images/icons/labels.svg" title="Toggle labels">
 				</div>
 				<div id="menu-right">
 					<img onclick="copyImage()" src="../static-0/files/images/icons/copy.svg" title="Copy image">
@@ -405,7 +407,7 @@
 			<div id="contribute">
 				<div onclick="popup('submit-images', true)"><img src="../static-0/files/images/compare-submit-images.svg" alt="Submit images"><b>Submit object images!</b></div>
 				<div onclick="popup('recommend-object', true)"><img src="../static-0/files/images/compare-recommend-object.svg" alt="Recommend object"><b>Recommend a new object!</b></div>
-				<div onclick="donate()"><img src="../static-0/files/images/compare-donate.svg" alt="Donate"><b>Donate!</b></div>
+				<div onclick="donate2()"><img src="../static-0/files/images/compare-donate.svg" alt="Donate"><b>Donate!</b></div>
 			</div>
 			<h1 class="title">Image Contributors</h1>
 			<p class="description" id="ic-des">HUGE thanks to the ... contributors who have collectively contributed ... graphics to make this free web tool possible!</p>
@@ -451,10 +453,11 @@
 				<p>[object compared to] vs Airbus A330-300 (or Airliner) with a width of 60.05 meters (197 feet), a length of 63.65 meters (208.83 feet), and a height of 16.76 meters (55 feet) - images created by these artists: Daniel Roberts (BlenderTimer), Daniel Roberts (BlenderTimer), Daniel Roberts (BlenderTimer)</p>
 				<p>[object compared to] vs Airbus A380-800 (or Airliner) with a width of 79.8 meters (261.81 feet), a length of 72.72 meters (238.58 feet), and a height of 24.1 meters (79.07 feet) - images created by these artists: Daniel Roberts (BlenderTimer), Daniel Roberts (BlenderTimer), Daniel Roberts (BlenderTimer)</p>
 				<p>[object compared to] vs Airfish 8 (or Af8, Effect, Ground, Wig, Wigetworks) with a width of 15 meters (49.21 feet), a length of 11.2 meters (36.75 feet), and a height of 3.5 meters (11.48 feet) - images created by these artists: Daniel Roberts (BlenderTimer), Daniel Roberts (BlenderTimer), Daniel Roberts (BlenderTimer)</p>
-				<p>[object compared to] vs Alcyoneus (or Stars) with a width of 16,300,000.03 light-years, a length of 16,300,000.03 light-years, and a height of 7,896,911.85 light-years - images created by these artists: Daniel Roberts (BlenderTimer)</p>
+				<p>[object compared to] vs Alcyoneus (or Galaxy, Stars) with a width of 16,300,000.03 light-years, a length of 16,300,000.03 light-years, and a height of 7,896,911.85 light-years - images created by these artists: Daniel Roberts (BlenderTimer)</p>
 				<p>[object compared to] vs Aldebaran (or Ball, Heat, Hot, K5+, K5+ iii, Orange, Red, Red-orange, Sphere) with a width of 61,277,920 kilometers (38,076,334.21 miles), a length of 61,277,920 kilometers (38,076,334.21 miles), and a height of 61,277,920 kilometers (38,076,334.21 miles) - images created by these artists: Daniel Roberts (BlenderTimer), Daniel Roberts (BlenderTimer), Daniel Roberts (BlenderTimer)</p>
 				<p>[object compared to] vs Alpha Centauri A (or Ball, G-type, G2, G2-v, Gtype, Heat, Hot, Rigil kentaurus, Sphere) with a width of 1,702,235.34 kilometers (1,057,720 miles), a length of 1,702,235.34 kilometers (1,057,720 miles), and a height of 1,702,235.34 kilometers (1,057,720 miles) - images created by these artists: Daniel Roberts (BlenderTimer), Daniel Roberts (BlenderTimer), Daniel Roberts (BlenderTimer)</p>
 				<p>[object compared to] vs Alpha Centauri B (or Ball, Heat, Hot, K1, K1-v, Sphere, Toliman) with a width of 1,400,000 kilometers (869,919.67 miles), a length of 1,400,000 kilometers (869,919.67 miles), and a height of 1,400,000 kilometers (869,919.67 miles) - images created by these artists: Daniel Roberts (BlenderTimer), Daniel Roberts (BlenderTimer), Daniel Roberts (BlenderTimer)</p>
+				<p>[object compared to] vs American Bison (or Buffalo) with a width of 90 centimeters (35.43 inches), a length of 3.11 meters (10.2 feet), and a height of 1.93 meters (6.35 feet) - images created by these artists: Daniel Roberts (BlenderTimer)</p>
 				<p>[object compared to] vs American Penny (one cent piece) (or ¢) with a width of 1.9 centimeters (0.75 inches), a length of 1.9 centimeters (0.75 inches), and a height of 1.52 millimeters (0.06 inches) - images created by these artists: Daniel Roberts (BlenderTimer), Daniel Roberts (BlenderTimer), Daniel Roberts (BlenderTimer)</p>
 				<p>[object compared to] vs American Robin (or Thrush, Turdus migratorius) with a width of 10 centimeters (3.94 inches), a length of 22 centimeters (8.66 inches), and a height of 20.07 centimeters (7.9 inches) - images created by these artists: Daniel Roberts (BlenderTimer)</p>
 				<p>[object compared to] vs Amphicoelias Fragillimus (or Dinosaur, Maraapunisaurus) with a width of 5 meters (16.4 feet), a length of 57 meters (187.01 feet), and a height of 10.13 meters (33.25 feet) - images created by these artists: MasterNeonlight</p>
@@ -519,6 +522,7 @@
 				<p>[object compared to] vs CoRoT-6 b (or Gas giant) with a width of 163,032 kilometers (101,303.39 miles), a length of 163,032 kilometers (101,303.39 miles), and a height of 163,032 kilometers (101,303.39 miles) - images created by these artists: MasterNeonlight</p>
 				<p>[object compared to] vs CoRoT-7b (or Terrestrial) with a width of 10,709.65 kilometers (6,654.67 miles), a length of 10,709.65 kilometers (6,654.67 miles), and a height of 10,709.65 kilometers (6,654.67 miles) - images created by these artists: MasterNeonlight</p>
 				<p>[object compared to] vs Colossal Squid (or Mesonychoteuthis hamiltoni) with a width of 1.7 meters (5.58 feet), a length of 10 meters (32.81 feet), and a height of 1.56 meters (5.1 feet) - images created by these artists: Daniel Roberts (BlenderTimer)</p>
+				<p>[object compared to] vs Common Octopus (or Vulgaris) with a width of 1.8 meters (5.91 feet), a length of 1.38 meters (4.53 feet), and a height of 50 centimeters (19.69 inches) - images created by these artists: Daniel Roberts (BlenderTimer)</p>
 				<p>[object compared to] vs Compsognathus Longipes (or Dinosaur) with a width of 10 centimeters (3.94 inches), a length of 80 centimeters (31.5 inches), and a height of 25.78 centimeters (10.15 inches) - images created by these artists: MasterNeonlight</p>
 				<p>[object compared to] vs Concorde (or Aerospatiale, Aérospatiale- bac concorde supersonic transport) with a width of 25.6 meters (84 feet), a length of 61.57 meters (202 feet), and a height of 12.5 meters (41.01 feet) - images created by these artists: Daniel Roberts (BlenderTimer), Daniel Roberts (BlenderTimer), Daniel Roberts (BlenderTimer)</p>
 				<p>[object compared to] vs Continental United States (or America, Conterminous, Country, North, U.S.A., Usa) with a width of 3,094 kilometers (1,922.52 miles), a length of 4,912 kilometers (3,052.18 miles), and a height of 4.42 kilometers (2.75 miles) - images created by these artists: Daniel Roberts (BlenderTimer)</p>
@@ -535,7 +539,7 @@
 				<p>[object compared to] vs Domestic Cat (Generic) (or Adult) with a width of 10 centimeters (3.94 inches), a length of 48.26 centimeters (19 inches), and a height of 39.17 centimeters (15.42 inches) - images created by these artists: Daniel Roberts (BlenderTimer)</p>
 				<p>[object compared to] vs Double Bass (or Modern) with a width of 70.78 centimeters (27.87 inches), a length of 20 centimeters (7.87 inches), and a height of 1.82 meters (5.97 feet) - images created by these artists: MasterNeonlight</p>
 				<p>[object compared to] vs EBLM J0555-57Ab (Smallest Star) (or Ball, Dwarf, Heat, Hot, M-dwarf, Red, Sphere, Ultracool) with a width of 118,000 kilometers (73,321.8 miles), a length of 118,000 kilometers (73,321.8 miles), and a height of 118,000 kilometers (73,321.8 miles) - images created by these artists: Daniel Roberts (BlenderTimer), Daniel Roberts (BlenderTimer), Daniel Roberts (BlenderTimer)</p>
-				<p>[object compared to] vs ESO 306-17 (or Stars) with a width of 999,999.95 light-years, a length of 999,999.95 light-years, and a height of 484,473.09 light-years - images created by these artists: Daniel Roberts (BlenderTimer)</p>
+				<p>[object compared to] vs ESO 306-17 (or Galaxy, Stars) with a width of 999,999.95 light-years, a length of 999,999.95 light-years, and a height of 484,473.09 light-years - images created by these artists: Daniel Roberts (BlenderTimer)</p>
 				<p>[object compared to] vs Earth (or Africa, America, Antarctica, Arctic, Asia, Australia, Ball, Continent, Ocean, Planet, Sea, Solar system, Sphere, Us, Usa) with a width of 12,756 kilometers (7,926.21 miles), a length of 12,756 kilometers (7,926.21 miles), and a height of 12,714 kilometers (7,900.11 miles) - images created by these artists: Daniel Roberts (BlenderTimer), Daniel Roberts (BlenderTimer), Daniel Roberts (BlenderTimer)</p>
 				<p>[object compared to] vs Earth's Moon (or Ball, Natural satellite, Solar system, Sphere, Terrain) with a width of 3,476.2 kilometers (2,160.01 miles), a length of 3,476.2 kilometers (2,160.01 miles), and a height of 3,472 kilometers (2,157.4 miles) - images created by these artists: Daniel Roberts (BlenderTimer), Daniel Roberts (BlenderTimer), Daniel Roberts (BlenderTimer)</p>
 				<p>[object compared to] vs Eiffel Tower (or France, Paris) with a width of 125 meters (410.1 feet), a length of 125 meters (410.1 feet), and a height of 330 meters (1,082.68 feet) - images created by these artists: Daniel Roberts (BlenderTimer)</p>
@@ -596,7 +600,7 @@
 				<p>[object compared to] vs Hummingbird (Generic) (or Trochilidae) with a width of 3 centimeters (1.18 inches), a length of 7.2 centimeters (2.83 inches), and a height of 11 centimeters (4.33 inches) - images created by these artists: Daniel Roberts (BlenderTimer)</p>
 				<p>[object compared to] vs Hydrogen Atom (or Simplest) with a width of 100 picometers, a length of 100 picometers, and a height of 100 picometers - images created by these artists: Daniel Roberts (BlenderTimer)</p>
 				<p>[object compared to] vs Hyperion (Tallest Tree) (or California, Coast, Redwood, Sequoia sempervirens) with a width of 48 meters (157.47 feet), a length of 48 meters (157.47 feet), and a height of 115.92 meters (380.3 feet) - images created by these artists: Daniel Roberts (BlenderTimer)</p>
-				<p>[object compared to] vs IC 1101 (or Type o) with a width of 550,000 light-years, a length of 550,000 light-years, and a height of 226,111.11 light-years - images created by these artists: User49258</p>
+				<p>[object compared to] vs IC 1101 (or Galaxy, Type o) with a width of 550,000 light-years, a length of 550,000 light-years, and a height of 226,111.11 light-years - images created by these artists: User49258</p>
 				<p>[object compared to] vs IC 1101 (Black Hole) (or Overmassive, Supermassive) with a width of 1,644.41 astronomical units, a length of 1,644.41 astronomical units, and a height of 1,644.41 astronomical units - images created by these artists: User49258</p>
 				<p>[object compared to] vs Inch (measurement) (or Imperial) with a width of 1.83 millimeters (0.07 inches), a length of 2.54 centimeters (1 inche), and a height of 2.54 centimeters (1 inche) - images created by these artists: Daniel Roberts (BlenderTimer), Daniel Roberts (BlenderTimer)</p>
 				<p>[object compared to] vs Indian Ocean (or Earth, Water) with a width of 10,088 kilometers (6,268.39 miles), a length of 12,833 kilometers (7,974.06 miles), and a height of 7.72 kilometers (4.8 miles) - images created by these artists: Daniel Roberts (BlenderTimer)</p>
@@ -670,6 +674,7 @@
 				<p>[object compared to] vs LHS 1140 c (or Terrestrial) with a width of 16,208 kilometers (10,071.18 miles), a length of 16,208 kilometers (10,071.18 miles), and a height of 16,208 kilometers (10,071.18 miles) - images created by these artists: MasterNeonlight</p>
 				<p>[object compared to] vs Lacrymaria Olor (or Ciliate protozoan, Swan tear) with a width of 8 micrometers (0 inches), a length of 100 micrometers (0 inches), and a height of 8 micrometers (0 inches) - images created by these artists: Daniel Roberts (BlenderTimer)</p>
 				<p>[object compared to] vs Ladybug (or Adult, Beetle, Coccinellidae, Ladybeetle, Ladybird) with a width of 5 millimeters (0.2 inches), a length of 6 millimeters (0.24 inches), and a height of 4 millimeters (0.16 inches) - images created by these artists: Daniel Roberts (BlenderTimer)</p>
+				<p>[object compared to] vs Leatherback Sea Turtle (or Lute, Luth) with a width of 3.33 meters (10.92 feet), a length of 2.7 meters (8.86 feet), and a height of 90 centimeters (35.43 inches) - images created by these artists: Daniel Roberts (BlenderTimer)</p>
 				<p>[object compared to] vs Lego Car 01 (or Vehicle) with a width of 4.7 centimeters (1.85 inches), a length of 10.9 centimeters (4.29 inches), and a height of 3.9 centimeters (1.54 inches) - images created by these artists: Daniel Roberts (BlenderTimer), Daniel Roberts (BlenderTimer), Daniel Roberts (BlenderTimer)</p>
 				<p>[object compared to] vs Lego Minifigure (or Man, Person) with a width of 2.5 centimeters (0.98 inches), a length of 1.15 centimeters (0.45 inches), and a height of 4.1 centimeters (1.61 inches) - images created by these artists: Daniel Roberts (BlenderTimer)</p>
 				<p>[object compared to] vs Lego Stud (or Brick, Bump) with a width of 4.8 millimeters (0.19 inches), a length of 4.8 millimeters (0.19 inches), and a height of 1.6 millimeters (0.06 inches) - images created by these artists: Daniel Roberts (BlenderTimer)</p>
@@ -706,6 +711,7 @@
 				<p>[object compared to] vs Millimeter (measurement) (or Metric) with a width of 71.88 micrometers (0 inches), a length of 1 millimeter (0.04 inches), and a height of 1 millimeter (0.04 inches) - images created by these artists: Daniel Roberts (BlenderTimer), Daniel Roberts (BlenderTimer)</p>
 				<p>[object compared to] vs Mimivirus (or Dna, Giant) with a width of 665 nanometers, a length of 665 nanometers, and a height of 700 nanometers - images created by these artists: Daniel Roberts (BlenderTimer)</p>
 				<p>[object compared to] vs Mosasaurus Hoffmanni (or Mosasaur) with a width of 2 meters (6.56 feet), a length of 12.8 meters (42 feet), and a height of 2.13 meters (7 feet) - images created by these artists: MasterNeonlight</p>
+				<p>[object compared to] vs Mosquito (or Common, Culicidae, House) with a width of 3.5 millimeters (0.14 inches), a length of 6.8 millimeters (0.27 inches), and a height of 4.08 millimeters (0.16 inches) - images created by these artists: Daniel Roberts (BlenderTimer)</p>
 				<p>[object compared to] vs Mount Kilimanjaro (Tanzania) (or 7 summits, Africa, Climb, Seven summits) with a width of 30.87 kilometers (19.18 miles), a length of 30.87 kilometers (19.18 miles), and a height of 5.89 kilometers (3.66 miles) - images created by these artists: Daniel Roberts (BlenderTimer)</p>
 				<p>[object compared to] vs Mt. Everest (Nepal) (or 7 summits, Climb, Himalayas, Seven summits) with a width of 34.84 kilometers (21.65 miles), a length of 34.84 kilometers (21.65 miles), and a height of 8.85 kilometers (5.5 miles) - images created by these artists: Daniel Roberts (BlenderTimer)</p>
 				<p>[object compared to] vs Mt. Rainier (Washington) (or Climb, Hill, Summit, Volcano) with a width of 28.82 kilometers (17.91 miles), a length of 28.82 kilometers (17.91 miles), and a height of 4.39 kilometers (2.73 miles) - images created by these artists: Daniel Roberts (BlenderTimer)</p>
@@ -821,7 +827,7 @@
 				<p>[object compared to] vs Tecopa Pupfish (or Amargosa) with a width of 1.5 centimeters (0.59 inches), a length of 5.08 centimeters (2 inches), and a height of 2.2 centimeters (0.87 inches) - images created by these artists: MasterNeonlight</p>
 				<p>[object compared to] vs The Andromeda Galaxy with a width of 152,000 light-years, a length of 162,857.14 light-years, and a height of 162,857.14 light-years - images created by these artists: Daniel Roberts (BlenderTimer)</p>
 				<p>[object compared to] vs The Discobolus (or Greek) with a width of 97.64 centimeters (38.44 inches), a length of 63 centimeters (24.8 inches), and a height of 1.69 meters (5.54 feet) - images created by these artists: MasterNeonlight</p>
-				<p>[object compared to] vs The Milky Way (or Our) with a width of 65,678.93 light-years, a length of 65,678.93 light-years, and a height of 65,678.93 light-years - images created by these artists: Daniel Roberts (BlenderTimer)</p>
+				<p>[object compared to] vs The Milky Way (or Galaxy, Our) with a width of 65,678.93 light-years, a length of 65,678.93 light-years, and a height of 65,678.93 light-years - images created by these artists: Daniel Roberts (BlenderTimer)</p>
 				<p>[object compared to] vs The Sun (or Ball, Dwarf, Fire, G type, G-type, G2-v, G2v, Gtype, Heat, Hot, Sol, Solar, Solar system, Sphere, Yellow) with a width of 1,391,982.78 kilometers (864,938 miles), a length of 1,391,982.78 kilometers (864,938 miles), and a height of 1,391,982.78 kilometers (864,938 miles) - images created by these artists: Daniel Roberts (BlenderTimer), Daniel Roberts (BlenderTimer), Daniel Roberts (BlenderTimer)</p>
 				<p>[object compared to] vs Thecodontosaurus Antiquus (or Basal sauropodomorph, Dinosaur) with a width of 30 centimeters (11.81 inches), a length of 2 meters (6.56 feet), and a height of 66.7 centimeters (26.26 inches) - images created by these artists: MasterNeonlight</p>
 				<p>[object compared to] vs Thou (measurement) (or Imperial, Mil, Thousandth) with a width of 1.83 micrometers (0 inches), a length of 25.4 micrometers (0 inches), and a height of 25.4 micrometers (0 inches) - images created by these artists: Daniel Roberts (BlenderTimer), Daniel Roberts (BlenderTimer)</p>
@@ -872,6 +878,7 @@
 				<p>[object compared to] vs Whale Shark (or Largest) with a width of 5 meters (16.4 feet), a length of 18.8 meters (61.68 feet), and a height of 6.48 meters (21.25 feet) - images created by these artists: MasterNeonlight</p>
 				<p>[object compared to] vs White Blood Cell (or Immune system, Wbc) with a width of 14 micrometers (0 inches), a length of 14 micrometers (0 inches), and a height of 14 micrometers (0 inches) - images created by these artists: Daniel Roberts (BlenderTimer)</p>
 				<p>[object compared to] vs Willis Tower (or Sears) with a width of 73.8 meters (242.13 feet), a length of 73.8 meters (242.13 feet), and a height of 527 meters (1,729 feet) - images created by these artists: Daniel Roberts (BlenderTimer)</p>
+				<p>[object compared to] vs Wood Pigeon (or Common, European) with a width of 8.8 centimeters (3.46 inches), a length of 36.93 centimeters (14.54 inches), and a height of 23.8 centimeters (9.37 inches) - images created by these artists: Daniel Roberts (BlenderTimer)</p>
 				<p>[object compared to] vs Woolly Mammoth (or Mammuthus primigenius, Trunk, Tusks) with a width of 1.6 meters (5.25 feet), a length of 5.89 meters (19.32 feet), and a height of 3.45 meters (11.32 feet) - images created by these artists: Daniel Roberts (BlenderTimer)</p>
 				<p>[object compared to] vs X-15 (or Fastest, Hypersonic, Manned, Nasa, Supersonic, Supersonic, Test, X15) with a width of 6.71 meters (22.01 feet), a length of 15.24 meters (50 feet), and a height of 3.96 meters (12.99 feet) - images created by these artists: Daniel Roberts (BlenderTimer)</p>
 				<p>[object compared to] vs X-Seed 4000 (Concept) (or Megatall) with a width of 6 kilometers (3.73 miles), a length of 6 kilometers (3.73 miles), and a height of 4 kilometers (2.49 miles) - images created by these artists: MasterNeonlight</p>
