@@ -58,6 +58,8 @@ var contributorViewing = "";
 var contributors = [];
 var contNames = [];
 var visibleContributors = [];
+var canvasLabels = false;
+var popularsAtTopBias = 800;
 //----------Functions
 //Load
 windowResize();
@@ -70,16 +72,18 @@ if (readCookie("aos-dsply") == "list") {
 else {
 	toggleAosDisplay(0);
 }
+var boot = true;
 search();
 loadContributors();
 searchContributors();
 checkInitialURL();
+setInterval(function() {drawCanvas()}, 1000);
 //----------
 document.addEventListener('mousedown', function() {
 	for (var i=0; i < dropdownMenus.length; i++) {
 		var ddmm = document.getElementById(dropdownMenus[i] + "-main");
 		var ddms = document.getElementById(dropdownMenus[i] + "-selector");
-		if (cursorInfo('ex', ddms) < -10 || cursorInfo('ex', ddms) > (ddms.offsetWidth+10) || cursorInfo('ey', ddmm) < -11 || cursorInfo('ey', ddms) > (ddms.offsetHeight+10)) {
+		if ((cursor.x - ddms.getBoundingClientRect().x) < -10 || (cursor.x - ddms.getBoundingClientRect().x) > (ddms.getBoundingClientRect().width+10) || (cursor.y - ddms.getBoundingClientRect().y - window.scrollY) < -25 || (cursor.y - ddms.getBoundingClientRect().y - window.scrollY) > (ddms.getBoundingClientRect().height+10)) {
 			toggleDropdown(ddmm, 0);
 		}
 	}
@@ -108,7 +112,7 @@ document.addEventListener('mouseup', function() {
 	document.body.style.pointerEvents = null;
 	if (doUndo == true) {addUndoHistory()};
 });
-window.addEventListener('resize', function() {windowResize();determineDisplayMenu();drawCanvas()});
+window.addEventListener('resize', function() {windowResize();drawCanvas()});
 document.addEventListener('mousemove', function() {
 	if (movingObjects.length > 0) {
 		for (var i=0; i < movingObjects.length; i++) {
@@ -240,6 +244,7 @@ function closePopup(all) {
 		popupContainer.style.opacity = 0;
 		popupMain.style.pointerEvents = "none";
 		popupMain.style.transform = "scale(0)";
+		aosSearch.disabled = true;
 	}
 	else {
 		popup(lastPopups[lastPopups.length-2], false, true);
@@ -293,6 +298,7 @@ function popup(popupElement, firstPopup, ignoreLast) {
 	document.body.style.width = "calc(100% - " + scrollPx + "px)";
 	document.body.style.overflowY = "hidden";
 	if (popupElement == "add-object") {
+		aosSearch.disabled = false;
 		aosSearch.focus();
 	}
 }
@@ -456,7 +462,7 @@ function drawCanvas(zoomReset) {
 		displayCanvas.width = displayCanvas.offsetWidth;
 		displayCanvas.height = displayCanvas.offsetHeight;
 		var c = displayCanvas.getContext('2d');
-		var padding = 0;
+		var padding = {x:0,y:20};
 		var align = "check";
 		var firstPosition = {x:0,y:0};
 		var lineObjects = 0;
@@ -464,8 +470,10 @@ function drawCanvas(zoomReset) {
 		var addWidths = [];
 		var maxHeight = 0;
 		var lockZoom = false;
-		c.scale(zoom*0.95, zoom*0.95);
-		c.translate(((displayCanvas.width-(displayCanvas.width*(zoom*0.95)))/2)/(zoom*0.95), ((displayCanvas.height-(displayCanvas.height*(zoom*0.95)))/2)/(zoom*0.95));
+		var effzoom = zoom*0.95;
+		var zoffset = {x:((displayCanvas.width-(displayCanvas.width*(effzoom)))/2)/(effzoom), y:((displayCanvas.height-(displayCanvas.height*(effzoom)))/2)/(effzoom)};
+		c.scale(effzoom, effzoom);
+		c.translate(zoffset.x, zoffset.y);
 		for (var i=0; i < compareObjects.length; i++) {
 			var obj = compareObjects[i];
 			if (obj.manualPos == false) {
@@ -498,11 +506,11 @@ function drawCanvas(zoomReset) {
 				lockZoom = true;
 			}
 		}
-		var widthRatio = widths.sumValues() / (displayCanvas.width - (padding*2));
-		var heightRatio = maxHeight / (displayCanvas.height - (padding*2));
+		var widthRatio = widths.sumValues() / (displayCanvas.width - (padding.x*2));
+		var heightRatio = maxHeight / (displayCanvas.height - (padding.y*2));
 		var center = 0;
 		if (heightRatio > widthRatio) {
-			center = ((displayCanvas.width/2)-padding) - ((widths.sumValues()/zoomOffset)/2);
+			center = ((displayCanvas.width/2)-padding.x) - ((widths.sumValues()/zoomOffset)/2);
 		}
 		if (zoomAuto == true && lockZoom == false) {
 			if (heightRatio > widthRatio) {
@@ -512,8 +520,8 @@ function drawCanvas(zoomReset) {
 				zoomOffset = widthRatio;
 			}
 			if (canvasMoved == false) {
-				canvasPosition.x = padding;
-				canvasPosition.y = padding;
+				canvasPosition.x = padding.x;
+				canvasPosition.y = padding.y;
 			}
 		}
 		if (zoomOffset == 0) {
@@ -553,13 +561,13 @@ function drawCanvas(zoomReset) {
 					obj.x = (width/2) + center;
 				}
 				if (align == "bottom") {
-					obj.y = (displayCanvas.height-(padding*2)) - (height/2);
+					obj.y = (displayCanvas.height-(padding.y*2)) - (height/2);
 				}
 				else if (align == "top") {
 					obj.y = height/2;
 				}
 				else {
-					obj.y = (displayCanvas.height/2)-padding;
+					obj.y = (displayCanvas.height/2)-padding.y;
 				}
 				mi += 1;
 			}
@@ -568,6 +576,72 @@ function drawCanvas(zoomReset) {
 			x = canvasPosition.x + obj.x - (width/2);
 			y = canvasPosition.y + obj.y - (height/2);
 			c.drawImage(img, x, y, width, height);
+		}
+		for (var i=0; i < compareObjects.length; i++) {
+			var obj = compareObjects[i];
+			var img = objectList.children[i].children[2].children[0].children[0].children[0];
+			var pos = objectList.children[i].children[2].children[1].children[0];
+			var width = 0;
+			var height = 0;
+			var x = 0;
+			var y = 0;
+			if (obj.angle == 1) {
+				width = obj.width/zoomOffset;
+				height = obj.height/zoomOffset;
+			}
+			else if (obj.angle == 2) {
+				width = obj.length/zoomOffset;
+				height = obj.width/zoomOffset;
+			}
+			else {
+				width = obj.length/zoomOffset;
+				height = obj.height/zoomOffset;
+			}
+			x = canvasPosition.x + obj.x - (width/2);
+			y = canvasPosition.y + obj.y - (height/2);
+			if (canvasLabels == true) {
+				c.textAlign = "center";
+				c.textBaseline = "top";
+				c.font = "bold " + (Math.min(Math.max(((width/200)+12).round(1), 5), 20) / (effzoom)) + "pt sans-serif";
+				c.lineWidth = 10 / (effzoom);
+				c.lineCap = "round";
+				c.lineJoin = "round";
+				c.strokeStyle = "rgb(" + backgroundBrightnessValue*255 + ", " + backgroundBrightnessValue*255 + ", " + backgroundBrightnessValue*255 + ")";
+				c.fillStyle = "#FFF";
+				var mtwidth = c.measureText(obj.name).width;
+				var lcutoff = 20;
+				var tpos = {
+					x:Math.min(Math.max(x+(width/2), (7/effzoom)+(mtwidth/2)-zoffset.x), ((displayCanvas.width-7)/effzoom)-(mtwidth/2)-zoffset.x),
+					y:Math.max(Math.min(y+height+(10 / (effzoom)), ((displayCanvas.height-25)/effzoom)-zoffset.y), (7/effzoom)-zoffset.y)
+				};
+				if (!((x+zoffset.x) > ((displayCanvas.width-lcutoff)/effzoom)) && !(((x+width)+zoffset.x-(lcutoff/effzoom)) < 0) && !((y+zoffset.y) > ((displayCanvas.height-lcutoff)/effzoom)) && !(((y+height)+zoffset.y-(lcutoff/effzoom)) < 0)) {
+					c.strokeText(obj.name, tpos.x, tpos.y);
+					c.fillText(obj.name, tpos.x, tpos.y);
+				}
+			}
+		}
+		for (var i=0; i < compareObjects.length; i++) {
+			var obj = compareObjects[i];
+			var img = objectList.children[i].children[2].children[0].children[0].children[0];
+			var pos = objectList.children[i].children[2].children[1].children[0];
+			var width = 0;
+			var height = 0;
+			var x = 0;
+			var y = 0;
+			if (obj.angle == 1) {
+				width = obj.width/zoomOffset;
+				height = obj.height/zoomOffset;
+			}
+			else if (obj.angle == 2) {
+				width = obj.length/zoomOffset;
+				height = obj.width/zoomOffset;
+			}
+			else {
+				width = obj.length/zoomOffset;
+				height = obj.height/zoomOffset;
+			}
+			x = canvasPosition.x + obj.x - (width/2);
+			y = canvasPosition.y + obj.y - (height/2);
 			if (obj.selected == true) {
 				drawRect(c, x, y, width, height, 3);
 				c.fillStyle = "#3377EE20";
@@ -1065,11 +1139,11 @@ function drawCompareObject(obj) {
 	var objItemSize = document.createElement('div');
 	objItemSize.className = "oli-size";
 	var objItemWidth = document.createElement('span');
-	objItemWidth.innerHTML = "<b>Width:</b><p>" + writeSize(obj.width, 2, true) + "</p>";
+	objItemWidth.innerHTML = "<b>Width:</b><p>" + writeSize(obj.width, 2, true, true) + "</p>";
 	var objItemLength = document.createElement('span');
-	objItemLength.innerHTML = "<b>Length:</b><p>" + writeSize(obj.length, 2, true) + "</p>";
+	objItemLength.innerHTML = "<b>Length:</b><p>" + writeSize(obj.length, 2, true, true) + "</p>";
 	var objItemHeight = document.createElement('span');
-	objItemHeight.innerHTML = "<b>Height:</b><p>" + writeSize(obj.height, 2, true) + "</p>";
+	objItemHeight.innerHTML = "<b>Height:</b><p>" + writeSize(obj.height, 2, true, true) + "</p>";
 	objItemSize.appendChild(objItemWidth);
 	objItemSize.appendChild(objItemLength);
 	objItemSize.appendChild(objItemHeight);
@@ -1144,7 +1218,7 @@ function drawSearchObject(obj) {
 		else if (obj.topImage && obj.topImage.length > 0 && !(obj.topImageArtist == "Daniel Roberts (BlenderTimer)")) {
 			cont = true;
 		}
-		if (oNew == true || cont == true) {
+		if (oNew == true || cont == true || obj.popular) {
 			var objItemAdditions = document.createElement('div');
 			objItemAdditions.className = "aod-object-li-additions";
 			if (oNew == true) {
@@ -1152,6 +1226,12 @@ function drawSearchObject(obj) {
 				objItemNew.className = "aod-object-li-new";
 				objItemNew.innerHTML = "NEW!";
 				objItemAdditions.appendChild(objItemNew);
+			}
+			else if (obj.popular) {
+				var objItemPopular = document.createElement('b');
+				objItemPopular.className = "aod-object-li-popular";
+				objItemPopular.innerHTML = "POPULAR";
+				objItemAdditions.appendChild(objItemPopular);
 			}
 			if (cont == true) {
 				var objItemCont = document.createElement('img');
@@ -1188,7 +1268,7 @@ function drawSearchObject(obj) {
 		else if (obj.topImage && obj.topImage.length > 0 && !(obj.topImageArtist == "Daniel Roberts (BlenderTimer)")) {
 			cont = true;
 		}
-		if (oNew == true || cont == true) {
+		if (oNew == true || cont == true || obj.popular) {
 			var objItemAdditions = document.createElement('div');
 			objItemAdditions.className = "aod-object-additions";
 			if (oNew == true) {
@@ -1197,11 +1277,17 @@ function drawSearchObject(obj) {
 				objItemNew.innerHTML = "NEW!";
 				objItemAdditions.appendChild(objItemNew);
 			}
+			else if (obj.popular) {
+				var objItemPopular = document.createElement('b');
+				objItemPopular.className = "aod-object-popular";
+				objItemPopular.innerHTML = "POPULAR";
+				objItemAdditions.appendChild(objItemPopular);
+			}
 			if (cont == true) {
 				var objItemCont = document.createElement('img');
 				objItemCont.className = "aod-object-user";
 				objItemCont.src = "../static-0/files/images/icons/user.svg";
-				if (oNew == false) {
+				if (oNew == false && !(obj.popular)) {
 					objItemAdditions.style.justifyContent = "flex-end";
 				}
 				objItemAdditions.appendChild(objItemCont);
@@ -1238,7 +1324,12 @@ function drawSearchObject(obj) {
 
 function searchType(event) {
 	var object = event.target || event.srcElement;
-	setTimeout(function() {search(object.value)}, 1);
+	if (popupMain.style.pointerEvents == "visible") {
+		if (event.key == "Enter") {
+			if (addObjectDisplay.children.length > 0) {addObjectDisplay.children[0].click()}
+		}
+		else {setTimeout(function() {search(object.value)}, 1)};
+	}
 }
 
 function search(query, cancelRelevance) {
@@ -1265,9 +1356,14 @@ function search(query, cancelRelevance) {
 		}
 	}
 	for (var i=0; i < objects.length; i++) {
+		var o = objects[i];
+		if (o.popular && boot == true) {
+			var rnd = Math.round(Math.random()*1000);
+			if (rnd > popularsAtTopBias) {objects[i].poptop = true};
+		}
 		var relevance = 0;
 		if (!(query) || query.length == "") {
-			relevance = 1;
+			if (o.poptop) {relevance = 2} else {relevance = 1};
 			initSearch = true;
 			if (aosSortMain.parentNode.children[1].children[0].innerHTML == "Relevance") {
 				aosSortMain.parentNode.children[1].children[0].remove();
@@ -1276,7 +1372,6 @@ function search(query, cancelRelevance) {
 			removedRelevance = true;
 		}
 		else {
-			var o = objects[i];
 			if (query.startsWith("category:")) {
 				var query2 = query.removeBefore(":", 1);
 				if (o.category1.toLowerCase() == query2 || o.category2.toLowerCase() == query2 || o.category3.toLowerCase() == query2) {
@@ -1482,6 +1577,9 @@ function search(query, cancelRelevance) {
 						}
 					}
 				}
+				if (excluded == false && o.popular == true && relevance > 0) {
+					relevance += 400;
+				}
 			}
 		}
 		if (relevance > 0) {
@@ -1490,18 +1588,20 @@ function search(query, cancelRelevance) {
 			searchObjects[searchObjects.length-1].relevance = relevance;
 		}
 	}
+	boot = false;
 	if (searchObjects.length > 0) {
 		if (initSearch == true && removedRelevance == false && !(cancelRelevance == true)) {
 			aosSortMain.children[1].innerHTML = "Relevance";
 			var rel = document.createElement('p');
-			rel.addEventListener('click', function(event) {dropdownSelect(event); sortSearchObjects(true)})
 			rel.innerHTML = "Relevance";
+			rel.addEventListener('click', function(event) {dds(event)});
 			aosSortMain.parentNode.children[1].prepend(rel);
 		}
 		if (searchObjects.length < objects.length) {
 			initSearch = false;
 		}
-		sortSearchObjects();
+		if (!(query) || query.length == "") {sortSearchObjects(false, true)}
+		else {sortSearchObjects()};
 		setAodText();
 		aosObjectCount.innerHTML = searchObjects.length.toLocaleString() + " of " + objects.length.toLocaleString() + " objects";
 		redrawSearchObjects();
@@ -1511,7 +1611,7 @@ function search(query, cancelRelevance) {
 	}
 }
 
-function sortSearchObjects(redraw) {
+function sortSearchObjects(redraw, blank) {
 	if (aosSortMain.children[1].textContent == "Relevance") {
 		searchObjects.sort((a, b) => (a.relevance < b.relevance) ? 1 : (a.relevance === b.relevance) ? ((a.name > b.name) ? 1 : -1) : -1);
 	}
@@ -1528,14 +1628,19 @@ function sortSearchObjects(redraw) {
 		searchObjects.sort((a, b) => (a.id > b.id) ? 1 : -1);
 	}
 	else {
-		searchObjects.sort((a, b) => (a.name > b.name) ? 1 : (a.name === b.name) ? ((a.id < b.id) ? 1 : -1) : -1);
+		if (blank == true) {
+			searchObjects.sort((a, b) => (a.relevance < b.relevance) ? 1 : (a.relevance === b.relevance) ? ((a.name > b.name) ? 1 : -1) : -1);
+		}
+		else {
+			searchObjects.sort((a, b) => (a.name > b.name) ? 1 : (a.name === b.name) ? ((a.relevance < b.relevance) ? 1 : -1) : -1);
+		}
 	}
 	if (redraw == true && !(addObjectDisplay.children[0].innerHTML == "NO OBJECTS")) {
 		redrawSearchObjects(true);
 	}
 }
 
-function redrawSearchObjects(clear) {
+function redrawSearchObjects(clear, query) {
 	if (clear == true) {
 		while (addObjectDisplay.lastChild) {addObjectDisplay.lastChild.remove()};
 	}
@@ -1599,15 +1704,20 @@ function toggleDropdown(event, mode) {
 		object = event.target || event.srcElement;
 	}
 	if (object.parentNode.children[1].style.transform && !(mode == 0)) {
-		object.parentNode.children[1].style.transform = null;
-		object.parentNode.children[1].style.opacity = null;
+		object.parentNode.children[1].removeAttribute('style');
 		object.style.borderRadius = "5px 5px 0px 0px";
 	}
 	else {
 		object.parentNode.children[1].style.transform = "scaleY(0)";
 		object.parentNode.children[1].style.opacity = "0";
-		object.style.borderRadius = null;
+		object.removeAttribute('style');
 	}
+}
+
+
+function dds(e) {
+	dropdownSelect(e);
+	sortSearchObjects(true);
 }
 
 function dropdownSelect(event) {
@@ -1712,6 +1822,7 @@ function writeSize(size, decimals, abbreviate, imperial) {
 	var convertI = 0;
 	var methodI = "div";
 	var includeI = false;
+	var imperialString;
 	if (size >= 946073047258.08) {
 		if (abbreviate && abbreviate == true) {unit = "ly"}
 		else {unit = " light-years"};
@@ -1728,6 +1839,20 @@ function writeSize(size, decimals, abbreviate, imperial) {
 	}
 	else if (size >= 1) {
 		if (imperial && imperial == true) {
+			var u1 = Math.floor(size * 0.62137119223733);
+			var u2 = Math.round(((size * 0.62137119223733) - u1) * 5280);
+			var uns = ["mile", "miles", "mi", "foot", "feet", "ft"];
+			if (abbreviate && abbreviate == true) {
+				u1 = u1.toLocaleString() + uns[2];
+				u2 = u2.toLocaleString() + uns[5];
+			}
+			else {
+				if (u1 == 1) {u1 = u1.toLocaleString() + " " + uns[0]}
+				else {u1 = u1.toLocaleString() + " " + uns[1]};
+				if (u2 == 1) {u2 = u2.toLocaleString() + " " + uns[3]}
+				else {u2 = u2.toLocaleString() + " " + uns[4]};
+			}
+			imperialString = u1 + " " + u2;
 			if (abbreviate && abbreviate == true) {unitI = "mi"}
 			else {unitI = " miles"};
 			convertI = 0.62137119223733;
@@ -1741,6 +1866,20 @@ function writeSize(size, decimals, abbreviate, imperial) {
 	}
 	else if (size >= 0.001) {
 		if (imperial && imperial == true) {
+			var u1 = Math.floor(size / 0.0003048);
+			var u2 = Math.round(((size / 0.0003048) - u1) * 12);
+			var uns = ["foot", "feet", "ft", "inch", "inches", "in"];
+			if (abbreviate && abbreviate == true) {
+				u1 = u1.toLocaleString() + uns[2];
+				u2 = u2.toLocaleString() + uns[5];
+			}
+			else {
+				if (u1 == 1) {u1 = u1.toLocaleString() + " " + uns[0]}
+				else {u1 = u1.toLocaleString() + " " + uns[1]};
+				if (u2 == 1) {u2 = u2.toLocaleString() + " " + uns[3]}
+				else {u2 = u2.toLocaleString() + " " + uns[4]};
+			}
+			imperialString = u1 + " " + u2;
 			if (abbreviate && abbreviate == true) {unitI = "ft"}
 			else {unitI = " feet"};
 			convertI = 0.0003048;
@@ -1756,6 +1895,16 @@ function writeSize(size, decimals, abbreviate, imperial) {
 		if (imperial && imperial == true) {
 			if (abbreviate && abbreviate == true) {unitI = "in"}
 			else {unitI = " inches"};
+			var u1 = (size / 0.0000254).round(3);
+			var uns = ["inch", "inches", "in"];
+			if (abbreviate && abbreviate == true) {
+				u1 = u1.toLocaleString() + uns[2];
+			}
+			else {
+				if (u1 == 1) {u1 = u1.toLocaleString() + " " + uns[0]}
+				else {u1 = u1.toLocaleString() + " " + uns[1]};
+			}
+			imperialString = u1;
 			convertI = 0.0000254;
 			methodI = "div";
 			includeI = true;
@@ -1769,6 +1918,16 @@ function writeSize(size, decimals, abbreviate, imperial) {
 		if (imperial && imperial == true) {
 			if (abbreviate && abbreviate == true) {unitI = "in"}
 			else {unitI = " inches"};
+			var u1 = (size / 0.0000254).round(4);
+			var uns = ["inch", "inches", "in"];
+			if (abbreviate && abbreviate == true) {
+				u1 = u1.toLocaleString() + uns[2];
+			}
+			else {
+				if (u1 == 1) {u1 = u1.toLocaleString() + " " + uns[0]}
+				else {u1 = u1.toLocaleString() + " " + uns[1]};
+			}
+			imperialString = u1;
 			convertI = 0.0000254;
 			methodI = "div";
 			includeI = true;
@@ -1782,6 +1941,16 @@ function writeSize(size, decimals, abbreviate, imperial) {
 		if (imperial && imperial == true) {
 			if (abbreviate && abbreviate == true) {unitI = "in"}
 			else {unitI = " inches"};
+			var u1 = (size / 0.0000254).round(5);
+			var uns = ["inch", "inches", "in"];
+			if (abbreviate && abbreviate == true) {
+				u1 = u1.toLocaleString() + uns[2];
+			}
+			else {
+				if (u1 == 1) {u1 = u1.toLocaleString() + " " + uns[0]}
+				else {u1 = u1.toLocaleString() + " " + uns[1]};
+			}
+			imperialString = u1;
 			convertI = 0.0000254;
 			methodI = "div";
 			includeI = true;
@@ -1835,7 +2004,6 @@ function writeSize(size, decimals, abbreviate, imperial) {
 		}
 	}
 	var imperialSize;
-	var imperialString;
 	if (imperial && imperial == true && includeI) {
 		if (methodI == "div") {
 			imperialSize = (size / convertI).round(decimals);
@@ -1848,7 +2016,9 @@ function writeSize(size, decimals, abbreviate, imperial) {
 				unitI = unitI.substring(0, unitI.length-1);
 			}
 		}
-		return metricSize.toLocaleString() + unit + " (" + imperialSize.toLocaleString() + unitI + ")";
+		else {unitI = " feet"};
+		return metricSize.toLocaleString() + unit + " (" + imperialString + ")";
+		// return metricSize.toLocaleString() + unit + " (" + imperialSize.toLocaleString() + unitI + ")";
 	}
 	else {
 		return metricSize.toLocaleString() + unit;
@@ -1946,7 +2116,7 @@ function makeCanvasImage() {
 	c.putImageData(cdata, 0, 0);
 }
 
-function donate() {
+function donate2() {
 	var l = document.createElement('a');
 	l.href = "https://www.paypal.com/donate?business=inquiries@blendertimer.com&no_recurring=0&item_name=BlenderTimer+Compare+Tool+Donation";
 	l.target = "blank";
@@ -2325,5 +2495,16 @@ function imageAuthorClick(e) {
 			viewContributor(i+1, false);
 			break;
 		}
+	}
+}
+
+function toggleLabels() {
+	if (canvasLabels == true) {
+		canvasLabels = false;
+		drawCanvas();
+	}
+	else {
+		canvasLabels = true;
+		drawCanvas();
 	}
 }

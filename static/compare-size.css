@@ -323,6 +323,17 @@ body {
 
 .aod-object-new {
 	display: block;
+	background: #F11;
+	box-shadow: 0px 0px 5px #F04;
+	border-radius: 3px;
+	color: #F5F5F5;
+	box-sizing: border-box;
+	padding: 1px 2px 0px 3px;
+	font-size: 9pt;
+}
+
+.aod-object-popular {
+	display: block;
 	background: var(--theme2);
 	box-shadow: 0px 0px 5px var(--theme1);
 	border-radius: 3px;
@@ -425,6 +436,17 @@ body {
 }
 
 .aod-object-li-new {
+	display: block;
+	background: #F11;
+	box-shadow: 0px 0px 5px #F04;
+	border-radius: 3px;
+	color: #F5F5F5;
+	box-sizing: border-box;
+	padding: 1px 2px 0px 3px;
+	font-size: 9pt;
+}
+
+.aod-object-li-popular {
 	display: block;
 	background: var(--theme2);
 	box-shadow: 0px 0px 5px var(--theme1);
@@ -1418,6 +1440,9 @@ body {
 	justify-content: left;
 	flex-flow: column;
 	justify-content: space-between;
+	text-wrap-mode: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
 }
 
 .oli-size span {
@@ -1429,14 +1454,14 @@ body {
 
 .oli-size span b {
 	color: var(--base-text) !important;
-	margin-right: 5px !important;
-	font-size: 11pt !important;
+	margin-right: 2pt !important;
+	font-size: 10.5pt !important;
 	cursor: default;
 }
 
 .oli-size span p {
 	color: var(--brighter-italic-text) !important;
-	font-size: 11pt !important;
+	font-size: 10.5pt !important;
 	overflow: hidden;
 	text-overflow: ellipsis;
 	cursor: default;
