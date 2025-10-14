@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="2392.0408"
+   height="838.65814"
+   viewBox="0 0 632.89411 221.89498"
+   version="1.1"
+   id="svg8"
+   inkscape:version="0.92.4 (5da689c313, 2019-01-14)"
+   sodipodi:docname="Toyota_Tacoma_2022-side.svg">
+  <defs
+     id="defs2">
+    <inkscape:path-effect
+       effect="mirror_symmetry"
+       start_point="1500,0"
+       end_point="1500,3000"
+       center_point="1500,1500"
+       id="path-effect865"
+       is_visible="true"
+       mode="vertical"
+       discard_orig_path="false"
+       fuse_paths="false"
+       oposite_fuse="false" />
+    <inkscape:path-effect
+       effect="mirror_symmetry"
+       start_point="396.875,-496.75002"
+       end_point="396.875,296.99998"
+       center_point="396.875,-99.87502"
+       id="path-effect854"
+       is_visible="true"
+       mode="vertical"
+       discard_orig_path="false"
+       fuse_paths="false"
+       oposite_fuse="false" />
+    <inkscape:path-effect
+       effect="mirror_symmetry"
+       start_point="396.875,-496.75002"
+       end_point="396.875,296.99998"
+       center_point="396.875,-99.87502"
+       id="path-effect843"
+       is_visible="true"
+       mode="vertical"
+       discard_orig_path="false"
+       fuse_paths="false"
+       oposite_fuse="false" />
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.18319866"
+     inkscape:cx="756.05447"
+     inkscape:cy="1713.4986"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:pagecheckerboard="true"
+     inkscape:showpageshadow="false"
+     borderlayer="true"
+     units="px"
+     showguides="true"
+     inkscape:guide-bbox="true"
+     inkscape:snap-page="true"
+     inkscape:snap-object-midpoints="true"
+     inkscape:snap-global="false"
+     inkscape:window-width="1600"
+     inkscape:window-height="837"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0" />
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-8.6415078,-73.862575)">
+    <path
+       style="opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke:none;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:normal"
+       d="m 404.95216,73.862575 c -3.6332,0 -9.7247,3.48828 -13.6973,7.37061 h -84.9545 c -65.555,0 -89.6076,19.365145 -131.9134,58.208355 -68.03167,-0.22913 -157.238472,1.51793 -157.238472,23.43471 v 29.86019 l -4.15737,5.66944 4.15737,6.80371 5.29166,0.75602 3.02411,4.53564 -1.88981,2.64584 -1.56942,-2.91558 -13.3635202,5.87973 2.6727102,12.29434 14.96704,10.15651 h 11.75949 l 9.0873,22.45029 11.76001,-11.75948 v -21.9165 l 7.20059,1.25264 a 49.177593,49.177593 0 0 0 -3.45871,17.99117 49.177593,49.177593 0 0 0 49.177362,49.17733 49.177593,49.177593 0 0 0 49.17788,-49.17733 49.177593,49.177593 0 0 0 -0.0207,-0.57775 h 61.11778 l 1.4438,5.3883 h 18.1741 v -4.27623 h 212.2315 a 49.177593,49.177593 0 0 0 49.1582,48.64301 49.177593,49.177593 0 0 0 49.1779,-49.17733 49.177593,49.177593 0 0 0 -0.3499,-5.34543 h 6.2296 v 4.03489 h 37.5347 l 2.0211,-3.50054 h 22.9851 v -16.03624 l 20.8473,-4.27622 v -27.2614 h -8.0181 c 1.6966,-2.32455 3.414,-5.74542 3.5228,-9.05785 0.4056,-12.34842 1.8356,-32.55134 -3.1817,-35.50221 l 3.5491,-3.54862 v -7.02283 h -203.3514 c 0,-12.77146 -2.2468,-31.3853 -4.3465,-45.546055 -1.0697,-7.21441 -4.1831,-12.28452 -14.5521,-12.28452 h -1.1343 v -7.37061 z"
+       id="path826"
+       inkscape:connector-curvature="0" />
+  </g>
+</svg>
