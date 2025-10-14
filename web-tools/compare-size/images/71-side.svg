@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="118.20002mm"
+   height="30.292725mm"
+   viewBox="0 0 118.20002 30.292724"
+   version="1.1"
+   id="svg8"
+   inkscape:version="0.92.4 (5da689c313, 2019-01-14)"
+   sodipodi:docname="Airbus_A330_300-side.svg">
+  <defs
+     id="defs2" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.98994949"
+     inkscape:cx="183.97727"
+     inkscape:cy="-84.131843"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:pagecheckerboard="true"
+     inkscape:showpageshadow="false"
+     borderlayer="true"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:snap-global="false"
+     inkscape:window-width="1600"
+     inkscape:window-height="837"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(8.055248,-62.646631)">
+    <path
+       style="opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke:none;stroke-width:15.36378002;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:markers stroke fill"
+       d="m 423.00195,0 c 0,0 -21.97213,21.970179 -37.37695,37.375 -15.40483,15.404829 -23.23364,21.71875 -35.35547,21.71875 H 61.367188 c -18.18275,0 -27.02269,2.272859 -36.619141,5.050781 C 15.151598,66.92245 11.868546,71.46856 9.5957031,73.236328 7.3228593,75.004089 0,78.539468 0,82.580078 c 0,4.04061 10.101213,7.828329 21.212891,11.111328 5.317304,1.571021 11.695284,2.783421 18.707031,3.632813 l 4.552734,9.439451 a 4.2857142,4.2857142 0 0 0 -1.742187,3.44336 4.2857142,4.2857142 0 0 0 4.285156,4.28516 4.2857142,4.2857142 0 0 0 4.287109,-4.28516 4.2857142,4.2857142 0 0 0 -3.853515,-4.26562 l 0.666015,-7.822269 c 5.307514,0.400937 10.852717,0.623047 16.535157,0.623047 H 136.875 c 3.283,2.272842 8.58634,2.777342 12.62695,2.777342 h 6.56641 v 3.03125 c 0,2.77792 1.76838,4.54492 4.79883,4.54492 h 22.22265 c 6.06093,0 7.82813,-5.05078 7.82813,-5.05078 h 9.3457 v -2.52539 h 15.90821 v 5.48242 l -0.15821,-0.0117 a 4.2857142,4.2857142 0 0 0 -2.82617,-1.07031 4.2857142,4.2857142 0 0 0 -4.28711,4.28711 4.2857142,4.2857142 0 0 0 4.28711,4.28516 4.2857142,4.2857142 0 0 0 3.58008,-1.93555 h 6.98047 a 4.2857142,4.2857142 0 0 0 3.58007,1.93555 4.2857142,4.2857142 0 0 0 4.28711,-4.28516 4.2857142,4.2857142 0 0 0 -4.28711,-4.28711 4.2857142,4.2857142 0 0 0 -3.39453,1.67969 l -4.22461,-0.32422 v -5.75586 h 15.90821 c 14.64721,0 28.79101,-3.029296 28.79101,-3.029296 h 23.23242 c 12.62691,0 25.25441,1.514446 52.02344,-3.03125 26.76905,-4.545679 67.68052,-18.687521 83.33789,-23.738281 15.65734,-5.05076 27.36575,-12.626953 17.46289,-12.626953 H 420.47656 L 446.74023,0 Z"
+       transform="matrix(0.26458333,0,0,0.26458333,-8.055248,62.646631)"
+       id="path837"
+       inkscape:connector-curvature="0" />
+  </g>
+</svg>

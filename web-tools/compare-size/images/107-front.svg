@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="130.77975mm"
+   height="14.17411mm"
+   viewBox="0 0 130.77975 14.17411"
+   version="1.1"
+   id="svg8"
+   inkscape:version="0.92.4 (5da689c313, 2019-01-14)"
+   sodipodi:docname="Valles_Marineris_Mars-front.svg">
+  <defs
+     id="defs2" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.98994949"
+     inkscape:cx="365.86174"
+     inkscape:cy="-49.816118"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:window-width="1366"
+     inkscape:window-height="713"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-44.60119,-147.41592)">
+    <path
+       style="fill:#ffffff;fill-opacity:1;stroke:none;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 172.35714,151.85714 c -0.56696,0.0945 -2.45684,1.22842 -2.74033,2.17336 -0.28348,0.94494 -1.88988,2.74033 -3.02381,3.2128 -1.13393,0.47247 -3.21279,1.5119 -3.59077,2.17336 -0.37798,0.66146 -1.03943,1.88989 -2.83482,1.88989 -1.79539,0 -13.04018,0 -14.3631,0.18898 -1.32291,0.18899 -3.87425,-0.47247 -5.19717,-0.37797 -1.32292,0.0945 -4.25223,-0.66146 -4.91369,-0.28348 -0.66146,0.37797 -2.55134,-1.13393 -4.15774,-0.37798 -1.6064,0.75595 -6.80357,0.75595 -8.40997,0.75595 -1.60639,0 -5.57515,0.37798 -6.99256,0.37798 -1.41741,0 -9.63839,-0.37798 -12.00074,-0.18899 -2.36235,0.18899 -9.5439,-1.13393 -10.48884,-0.75595 -0.944941,0.37797 -8.315476,0.66146 -10.961309,0.75595 -2.645834,0.0945 -10.299851,-1.03944 -11.433781,-0.56696 -1.133928,0.47247 -10.299851,1.03943 -12.284226,0.18898 -1.984375,-0.85044 -3.401785,-1.79538 -4.252232,-2.07887 -0.850445,-0.28348 -3.496278,-2.07886 -4.819195,-3.68526 -1.322917,-1.6064 -2.173364,-3.30729 -3.401785,-4.15774 -1.228423,-0.85045 -1.889882,-3.68527 -1.889882,-3.68527 h 130.77976 c -1.03944,3.40179 -2.45684,4.34673 -3.02381,4.44122 z"
+       id="path826"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="ccssscscsssscccccssccc" />
+  </g>
+</svg>

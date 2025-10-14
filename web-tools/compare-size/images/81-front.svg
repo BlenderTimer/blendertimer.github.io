@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="153.94362mm"
+   height="212.10403mm"
+   viewBox="0 0 153.94362 212.10403"
+   version="1.1"
+   id="svg8"
+   inkscape:version="0.92.4 (5da689c313, 2019-01-14)"
+   sodipodi:docname="Human_Kidney-front.svg">
+  <defs
+     id="defs2" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.49497475"
+     inkscape:cx="408.91111"
+     inkscape:cy="386.19283"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:pagecheckerboard="true"
+     inkscape:showpageshadow="false"
+     borderlayer="true"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:window-width="1366"
+     inkscape:window-height="713"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-18.592299,-47.762681)">
+    <path
+       style="fill:#ffffff;fill-opacity:1;stroke:none;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 106.02059,47.765979 c 11.32153,-0.125045 22.50464,3.304042 31.19809,10.639144 32.48371,27.408134 44.97872,90.714427 27.21384,144.387047 -17.76488,53.67262 -85.422166,68.03598 -106.588835,42.7116 -15.747925,-18.84126 -5.553186,-35.17051 3.656624,-49.45744 -22.962399,11.49269 -19.374945,37.07203 -16.130283,62.30834 l -5.291667,1.51205 c -17.577577,-56.35818 -9.419068,-74.84724 15.044044,-89.23951 -2.049018,-0.60197 -4.282096,-0.97352 -6.815087,-0.8878 -9.915742,0.33556 -27.082067,3.12074 -27.082067,3.12074 -3.467862,0.53174 -3.510801,-13.39288 -0.124542,-13.46688 0,0 13.869607,-0.16621 22.074105,-0.8506 4.373044,-0.36478 8.549434,-1.03123 12.473657,-2.20193 -2.046724,-0.89857 -4.316447,-1.5797 -6.974768,-1.79524 -9.888969,-0.80181 -27.261383,0 -27.261383,0 -3.505941,0.13125 -2.838128,-14.21254 0.534334,-13.89837 l 22.450824,2.6727 c 10.866112,1.29358 15.471584,0.33291 25.694555,-9.42681 C 64.565081,121.85542 47.924456,105.95997 57.465413,80.327815 65.215726,59.506293 85.838708,47.988882 106.02059,47.765979 Z M 71.118326,142.13231 c -8.99323,4.21116 -8.306774,7.4028 -5.503024,9.6485 1.614654,-1.06371 3.160985,-2.28296 4.633825,-3.67729 0.347816,-2.03828 0.689473,-4.05074 0.869199,-5.97121 z m -9.746176,17.37516 c -7.224099,3.93449 -5.568775,6.33006 1.006142,7.17528 2.180346,-1.10701 4.46455,-2.20927 6.83524,-3.32125 -2.818164,-0.70621 -5.26782,-2.25152 -7.841382,-3.85403 z"
+       id="path826"
+       inkscape:connector-curvature="0" />
+  </g>
+</svg>
