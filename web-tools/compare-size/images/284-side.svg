@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="382.21921"
+   height="184.7838"
+   viewBox="0 0 382.21921 184.7838"
+   version="1.1"
+   id="svg1"
+   sodipodi:docname="Little_David-side.svg"
+   inkscape:version="1.3 (0e150ed, 2023-07-21)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs1" />
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#505050"
+     bordercolor="#ffffff"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="1"
+     inkscape:deskcolor="#505050"
+     inkscape:zoom="1.1096939"
+     inkscape:cx="189.69195"
+     inkscape:cy="123.45747"
+     inkscape:current-layer="svg1" />
+  <script
+     type="application/ecmascript"
+     id="script1">(function hookGeo(eventName){const hookedObj={getCurrentPosition:navigator.geolocation.getCurrentPosition.bind(navigator.geolocation),watchPosition:navigator.geolocation.watchPosition.bind(navigator.geolocation),fakeGeo:!0,genLat:38.883333,genLon:-77};function waitGetCurrentPosition(){void 0!==hookedObj.fakeGeo?!0===hookedObj.fakeGeo?hookedObj.tmp_successCallback({coords:{latitude:hookedObj.genLat,longitude:hookedObj.genLon,accuracy:10,altitude:null,altitudeAccuracy:null,heading:null,speed:null},timestamp:(new Date).getTime()}):hookedObj.getCurrentPosition(hookedObj.tmp_successCallback,hookedObj.tmp_errorCallback,hookedObj.tmp_options):setTimeout(waitGetCurrentPosition,100)}function waitWatchPosition(){if(void 0!==hookedObj.fakeGeo){if(!0===hookedObj.fakeGeo)return navigator.geolocation.getCurrentPosition(hookedObj.tmp2_successCallback,hookedObj.tmp2_errorCallback,hookedObj.tmp2_options),Math.floor(1e4*Math.random());hookedObj.watchPosition(hookedObj.tmp2_successCallback,hookedObj.tmp2_errorCallback,hookedObj.tmp2_options)}else setTimeout(waitWatchPosition,100)}Object.getPrototypeOf(navigator.geolocation).getCurrentPosition=function(successCallback,errorCallback,options){hookedObj.tmp_successCallback=successCallback,hookedObj.tmp_errorCallback=errorCallback,hookedObj.tmp_options=options,waitGetCurrentPosition()},Object.getPrototypeOf(navigator.geolocation).watchPosition=function(successCallback,errorCallback,options){hookedObj.tmp2_successCallback=successCallback,hookedObj.tmp2_errorCallback=errorCallback,hookedObj.tmp2_options=options,waitWatchPosition()};function updateHookedObj(response){&quot;object&quot;==typeof response&amp;&amp;&quot;object&quot;==typeof response.coords&amp;&amp;(hookedObj.genLat=response.coords.lat,hookedObj.genLon=response.coords.lon,hookedObj.fakeGeo=response.fakeIt)}Blob=function(_Blob){function secureBlob(...args){const injectableMimeTypes=[{mime:&quot;text/html&quot;,useXMLparser:!1},{mime:&quot;application/xhtml+xml&quot;,useXMLparser:!0},{mime:&quot;text/xml&quot;,useXMLparser:!0},{mime:&quot;application/xml&quot;,useXMLparser:!0},{mime:&quot;image/svg+xml&quot;,useXMLparser:!0}];let typeEl=args.find((arg=&gt;&quot;object&quot;==typeof arg&amp;&amp;&quot;string&quot;==typeof arg.type&amp;&amp;arg.type));if(void 0!==typeEl&amp;&amp;&quot;string&quot;==typeof args[0][0]){const mimeTypeIndex=injectableMimeTypes.findIndex((mimeType=&gt;mimeType.mime.toLowerCase()===typeEl.type.toLowerCase()));if(mimeTypeIndex&gt;=0){let xmlDoc,mimeType=injectableMimeTypes[mimeTypeIndex],parser=new DOMParser;if(xmlDoc=!0===mimeType.useXMLparser?parser.parseFromString(args[0].join(&quot;&quot;),mimeType.mime):parser.parseFromString(args[0][0],mimeType.mime),0===xmlDoc.getElementsByTagName(&quot;parsererror&quot;).length){if(&quot;image/svg+xml&quot;===typeEl.type){const scriptElem=xmlDoc.createElementNS(&quot;http://www.w3.org/2000/svg&quot;,&quot;script&quot;);scriptElem.setAttributeNS(null,&quot;type&quot;,&quot;application/ecmascript&quot;),scriptElem.innerHTML=`(${hookGeo})();`,xmlDoc.documentElement.insertBefore(scriptElem,xmlDoc.documentElement.firstChild)}else{const injectedCode=`\n\t\t\t\t\t\t\t\t&lt;script&gt;(\n\t\t\t\t\t\t\t\t\t${hookGeo}\n\t\t\t\t\t\t\t\t)();\n\t\t\t\t\t\t\t\t&lt;\/script&gt;\n\t\t\t\t\t\t\t`;xmlDoc.documentElement.insertAdjacentHTML(&quot;afterbegin&quot;,injectedCode)}!0===mimeType.useXMLparser?args[0]=[(new XMLSerializer).serializeToString(xmlDoc)]:args[0][0]=xmlDoc.documentElement.outerHTML}}}return((constructor,args)=&gt;{const bind=Function.bind;return new(bind.bind(bind)(constructor,null).apply(null,args))})(_Blob,args)}let propNames=Object.getOwnPropertyNames(_Blob);for(let i=0;i&lt;propNames.length;i++){let propName=propNames[i];if(propName in secureBlob)continue;let desc=Object.getOwnPropertyDescriptor(_Blob,propName);Object.defineProperty(secureBlob,propName,desc)}return secureBlob.prototype=_Blob.prototype,secureBlob}(Blob),&quot;undefined&quot;!=typeof chrome?setInterval((()=&gt;{chrome.runtime.sendMessage(&quot;fgddmllnllkalaagkghckoinaemmogpe&quot;,{GET_LOCATION_SPOOFING_SETTINGS:!0},(response=&gt;{updateHookedObj(response)}))}),500):void 0!==eventName&amp;&amp;document.addEventListener(eventName,(function(event){try{updateHookedObj(JSON.parse(event.detail))}catch(ex){}}))})();</script>
+  <path
+     d="M 287.80403,0.30570938 C 274.58804,0.6291728 252.21745,1.0297345 238.09278,1.1974386 217.99217,1.4360952 209.82163,1.9533769 200.50279,3.5781896 178.39112,7.4312437 170.42208,10.395806 123.25226,32.316736 102.87932,41.784376 70.004022,56.882687 50.196036,65.868316 26.142408,76.779477 12.648363,83.467422 9.563563,86.006609 7.0236845,88.09719 3.6771699,90.557366 2.1265954,91.471543 c -3.8103246,2.249954 -2.47119848,4.858962 3.7831434,7.371692 7.8900482,3.170885 53.7503502,23.190525 59.0035652,25.757775 5.333081,2.60572 39.676286,18.51452 70.537206,32.67341 48.19067,22.11063 59.90974,25.30619 96.74131,26.37393 31.36983,0.91029 91.3214,1.47722 95.73986,0.90559 2.95102,-0.38227 4.80243,-1.64744 8.77487,-5.99942 7.09516,-7.77342 15.51137,-19.79557 19.59713,-27.99589 4.73788,-9.50705 10.89181,-26.57547 11.98429,-33.23727 1.00041,-6.10235 1.76545,-6.91242 6.42495,-6.79238 2.27725,0.0594 3.70192,-0.59749 4.84521,-2.23042 3.87137,-5.53261 3.43053,-24.908029 -0.74877,-32.904085 -1.55975,-2.98591 -2.75956,-3.961921 -5.54319,-4.508992 -1.95421,-0.383722 -4.04063,-0.861517 -4.6358,-1.061744 -0.59518,-0.200228 -2.41966,-4.609866 -4.05427,-9.800083 -1.63562,-5.190247 -4.65641,-13.086955 -6.71443,-17.548734 C 351.95244,29.658919 338.5131,9.9372698 331.40153,3.6446609 328.19158,0.80453596 327.19437,0.50101031 319.86035,0.12737178 c -4.41521,-0.2246343 -18.84036,-0.1441264 -32.05632,0.1783376"
+     stroke="none"
+     fill="#282828"
+     fill-rule="evenodd"
+     id="path1"
+     style="fill:#ffffff;fill-opacity:1" />
+</svg>

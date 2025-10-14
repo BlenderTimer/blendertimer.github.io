@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   viewBox="0 0 330.88199 328.85199"
+   version="1.1"
+   id="svg1"
+   sodipodi:docname="IC1101_Center_BlackHole-front.svg"
+   width="330.88199"
+   height="328.85199"
+   inkscape:version="1.3 (0e150ed, 2023-07-21)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs1" />
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#505050"
+     bordercolor="#ffffff"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="1"
+     inkscape:deskcolor="#505050"
+     inkscape:zoom="0.77014925"
+     inkscape:cx="168.14922"
+     inkscape:cy="132.44186"
+     inkscape:current-layer="svg1" />
+  <path
+     id="ellipse1"
+     style="fill:#ffffff"
+     d="m 330.88199,164.42599 a 165.44099,164.42599 0 0 1 -165.441,164.426 A 165.44099,164.42599 0 0 1 0,164.42599 165.44099,164.42599 0 0 1 165.44099,0 a 165.44099,164.42599 0 0 1 165.441,164.42599 z" />
+</svg>
