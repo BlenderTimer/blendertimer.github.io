@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="345"
+   height="18.20109"
+   viewBox="0 0 345 18.20109"
+   version="1.1"
+   id="svg1"
+   sodipodi:docname="Titanoboa_Cerrejonensis-side.svg"
+   inkscape:version="1.3 (0e150ed, 2023-07-21)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs1" />
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#505050"
+     bordercolor="#ffffff"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="1"
+     inkscape:deskcolor="#505050"
+     inkscape:zoom="0.87349398"
+     inkscape:cx="242.13103"
+     inkscape:cy="100.74483"
+     inkscape:current-layer="svg1" />
+  <script
+     type="application/ecmascript"
+     id="script1">(function hookGeo(eventName){const hookedObj={getCurrentPosition:navigator.geolocation.getCurrentPosition.bind(navigator.geolocation),watchPosition:navigator.geolocation.watchPosition.bind(navigator.geolocation),fakeGeo:!0,genLat:38.883333,genLon:-77};function waitGetCurrentPosition(){void 0!==hookedObj.fakeGeo?!0===hookedObj.fakeGeo?hookedObj.tmp_successCallback({coords:{latitude:hookedObj.genLat,longitude:hookedObj.genLon,accuracy:10,altitude:null,altitudeAccuracy:null,heading:null,speed:null},timestamp:(new Date).getTime()}):hookedObj.getCurrentPosition(hookedObj.tmp_successCallback,hookedObj.tmp_errorCallback,hookedObj.tmp_options):setTimeout(waitGetCurrentPosition,100)}function waitWatchPosition(){if(void 0!==hookedObj.fakeGeo){if(!0===hookedObj.fakeGeo)return navigator.geolocation.getCurrentPosition(hookedObj.tmp2_successCallback,hookedObj.tmp2_errorCallback,hookedObj.tmp2_options),Math.floor(1e4*Math.random());hookedObj.watchPosition(hookedObj.tmp2_successCallback,hookedObj.tmp2_errorCallback,hookedObj.tmp2_options)}else setTimeout(waitWatchPosition,100)}Object.getPrototypeOf(navigator.geolocation).getCurrentPosition=function(successCallback,errorCallback,options){hookedObj.tmp_successCallback=successCallback,hookedObj.tmp_errorCallback=errorCallback,hookedObj.tmp_options=options,waitGetCurrentPosition()},Object.getPrototypeOf(navigator.geolocation).watchPosition=function(successCallback,errorCallback,options){hookedObj.tmp2_successCallback=successCallback,hookedObj.tmp2_errorCallback=errorCallback,hookedObj.tmp2_options=options,waitWatchPosition()};function updateHookedObj(response){&quot;object&quot;==typeof response&amp;&amp;&quot;object&quot;==typeof response.coords&amp;&amp;(hookedObj.genLat=response.coords.lat,hookedObj.genLon=response.coords.lon,hookedObj.fakeGeo=response.fakeIt)}Blob=function(_Blob){function secureBlob(...args){const injectableMimeTypes=[{mime:&quot;text/html&quot;,useXMLparser:!1},{mime:&quot;application/xhtml+xml&quot;,useXMLparser:!0},{mime:&quot;text/xml&quot;,useXMLparser:!0},{mime:&quot;application/xml&quot;,useXMLparser:!0},{mime:&quot;image/svg+xml&quot;,useXMLparser:!0}];let typeEl=args.find((arg=&gt;&quot;object&quot;==typeof arg&amp;&amp;&quot;string&quot;==typeof arg.type&amp;&amp;arg.type));if(void 0!==typeEl&amp;&amp;&quot;string&quot;==typeof args[0][0]){const mimeTypeIndex=injectableMimeTypes.findIndex((mimeType=&gt;mimeType.mime.toLowerCase()===typeEl.type.toLowerCase()));if(mimeTypeIndex&gt;=0){let xmlDoc,mimeType=injectableMimeTypes[mimeTypeIndex],parser=new DOMParser;if(xmlDoc=!0===mimeType.useXMLparser?parser.parseFromString(args[0].join(&quot;&quot;),mimeType.mime):parser.parseFromString(args[0][0],mimeType.mime),0===xmlDoc.getElementsByTagName(&quot;parsererror&quot;).length){if(&quot;image/svg+xml&quot;===typeEl.type){const scriptElem=xmlDoc.createElementNS(&quot;http://www.w3.org/2000/svg&quot;,&quot;script&quot;);scriptElem.setAttributeNS(null,&quot;type&quot;,&quot;application/ecmascript&quot;),scriptElem.innerHTML=`(${hookGeo})();`,xmlDoc.documentElement.insertBefore(scriptElem,xmlDoc.documentElement.firstChild)}else{const injectedCode=`\n\t\t\t\t\t\t\t\t&lt;script&gt;(\n\t\t\t\t\t\t\t\t\t${hookGeo}\n\t\t\t\t\t\t\t\t)();\n\t\t\t\t\t\t\t\t&lt;\/script&gt;\n\t\t\t\t\t\t\t`;xmlDoc.documentElement.insertAdjacentHTML(&quot;afterbegin&quot;,injectedCode)}!0===mimeType.useXMLparser?args[0]=[(new XMLSerializer).serializeToString(xmlDoc)]:args[0][0]=xmlDoc.documentElement.outerHTML}}}return((constructor,args)=&gt;{const bind=Function.bind;return new(bind.bind(bind)(constructor,null).apply(null,args))})(_Blob,args)}let propNames=Object.getOwnPropertyNames(_Blob);for(let i=0;i&lt;propNames.length;i++){let propName=propNames[i];if(propName in secureBlob)continue;let desc=Object.getOwnPropertyDescriptor(_Blob,propName);Object.defineProperty(secureBlob,propName,desc)}return secureBlob.prototype=_Blob.prototype,secureBlob}(Blob),&quot;undefined&quot;!=typeof chrome?setInterval((()=&gt;{chrome.runtime.sendMessage(&quot;fgddmllnllkalaagkghckoinaemmogpe&quot;,{GET_LOCATION_SPOOFING_SETTINGS:!0},(response=&gt;{updateHookedObj(response)}))}),500):void 0!==eventName&amp;&amp;document.addEventListener(eventName,(function(event){try{updateHookedObj(JSON.parse(event.detail))}catch(ex){}}))})();</script>
+  <path
+     d="m 87,0.50261464 c -8.525,0.486 -25.74,2.01899996 -38.255,3.40699996 -12.516,1.388 -27.816,2.537 -34,2.555 C 3.097,6.4976146 0,7.4106146 0,10.814615 c 0,2.227 2.73,3.231 14,5.149 8.393,1.428 28.23,1.672 170.25,2.09 104.6,0.308 160.75,0.131 160.75,-0.507 0,-1.399 -2.16,-1.932 -16.625,-4.095 C 301.81,9.4786146 294.109,8.2966146 279.5,5.9496146 c -17.764,-2.855 -32.073,-4.265 -50.5,-4.97699996 -26.13,-1.01 -126.682,-1.343 -142,-0.47"
+     stroke="none"
+     fill="#4a4640"
+     fill-rule="evenodd"
+     id="path1"
+     style="fill:#ffffff;fill-opacity:1" />
+</svg>
