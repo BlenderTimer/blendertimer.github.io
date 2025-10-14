@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="299.99979mm"
+   height="31.027046mm"
+   viewBox="0 0 299.99979 31.027046"
+   version="1.1"
+   id="svg1"
+   inkscape:version="1.3 (0e150ed6c4, 2023-07-21)"
+   sodipodi:docname="Noah's_Ark-side.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#505050"
+     bordercolor="#ffffff"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="1"
+     inkscape:deskcolor="#505050"
+     inkscape:document-units="mm"
+     inkscape:zoom="0.29353606"
+     inkscape:cx="873.82792"
+     inkscape:cy="107.3122"
+     inkscape:window-width="1600"
+     inkscape:window-height="837"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs1" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-20.280933,-73.786194)">
+    <path
+       id="rect1"
+       style="fill:#ffffff;stroke:none;stroke-width:1.1;stroke-linecap:round;stroke-linejoin:round;paint-order:markers stroke fill"
+       d="m 29.187366,73.786194 v 1.027327 h -8.117851 c -0.436937,0 -0.788582,0.01317 -0.788582,0.450102 v 28.761037 c 0,0.43694 0.351645,0.78858 0.788582,0.78858 H 319.49213 c 0.43694,0 0.78858,-0.35164 0.78858,-0.78858 V 75.263623 c 0,-0.436937 -0.35164,-0.450102 -0.78858,-0.450102 h -8.11837 v -1.027327 z" />
+  </g>
+</svg>
