@@ -1284,16 +1284,25 @@ body {
 }
 
 .oli-title img {
-	height: 26px;
-	width: 26px;
 	box-sizing: border-box;
 	display: block;
-	padding: 7px;
 	transition: 0.2s;
 }
 
 .oli-title img:hover {
 	background: var(--theme3);
+}
+
+.oli-title-vis {
+	width: 30px;
+	height: 26px;
+	padding: 4px 6px;
+}
+
+.oli-title-delete {
+	width: 26px;
+	height: 26px;
+	padding: 7px;
 }
 
 .oli-select {

@@ -425,8 +425,8 @@ function undo() {
 		compareObjects = JSON.parse(JSON.stringify(objectUndoList[undoPosition]));
 		canvasPosition.x = extraUndoList[undoPosition].canvasPosition.x;
 		canvasPosition.y = extraUndoList[undoPosition].canvasPosition.y;
-		drawingBrightnessValue = extraUndoList[undoPosition].drawingBrightnessValue;
-		backgroundBrightnessValue = extraUndoList[undoPosition].backgroundBrightnessValue;
+		drawingBrightnessValue = extraUndoList[undoPosition].drawingBrightness;
+		backgroundBrightnessValue = extraUndoList[undoPosition].backgroundBrightness;
 		zoom = extraUndoList[undoPosition].zoom;
 		zoomAuto = extraUndoList[undoPosition].zoomAuto;
 		drawingBrightness.children[0].children[0].style.top = (((1-drawingBrightnessValue)*(backgroundBrightness.children[0].offsetHeight-18))+2)+"px";
@@ -444,8 +444,8 @@ function redo() {
 		compareObjects = JSON.parse(JSON.stringify(objectUndoList[undoPosition]));
 		canvasPosition.x = extraUndoList[undoPosition].canvasPosition.x;
 		canvasPosition.y = extraUndoList[undoPosition].canvasPosition.y;
-		drawingBrightnessValue = extraUndoList[undoPosition].drawingBrightnessValue;
-		backgroundBrightnessValue = extraUndoList[undoPosition].backgroundBrightnessValue;
+		drawingBrightnessValue = extraUndoList[undoPosition].drawingBrightness;
+		backgroundBrightnessValue = extraUndoList[undoPosition].backgroundBrightness;
 		zoom = extraUndoList[undoPosition].zoom;
 		zoomAuto = extraUndoList[undoPosition].zoomAuto;
 		drawingBrightness.children[0].children[0].style.top = (((1-drawingBrightnessValue)*(backgroundBrightness.children[0].offsetHeight-18))+2)+"px";
@@ -476,6 +476,7 @@ function drawCanvas(zoomReset) {
 		c.translate(zoffset.x, zoffset.y);
 		for (var i=0; i < compareObjects.length; i++) {
 			var obj = compareObjects[i];
+			if (obj.visible == false) {continue};
 			if (obj.manualPos == false) {
 				if (obj.angle == 1) {
 					widths.push(obj.width);
@@ -531,8 +532,10 @@ function drawCanvas(zoomReset) {
 			lastAutoZoomOffset = zoomOffset;
 		}
 		var mi = 0;
+		var anySelected = false;
 		for (var i=0; i < compareObjects.length; i++) {
 			var obj = compareObjects[i];
+			if (obj.visible == false) {continue};
 			var img = objectList.children[i].children[2].children[0].children[0].children[0];
 			var pos = objectList.children[i].children[2].children[1].children[0];
 			var width = 0;
@@ -576,30 +579,32 @@ function drawCanvas(zoomReset) {
 			x = canvasPosition.x + obj.x - (width/2);
 			y = canvasPosition.y + obj.y - (height/2);
 			c.drawImage(img, x, y, width, height);
+			if (anySelected == false && obj.selected == true) {anySelected = true};
 		}
-		for (var i=0; i < compareObjects.length; i++) {
-			var obj = compareObjects[i];
-			var img = objectList.children[i].children[2].children[0].children[0].children[0];
-			var pos = objectList.children[i].children[2].children[1].children[0];
-			var width = 0;
-			var height = 0;
-			var x = 0;
-			var y = 0;
-			if (obj.angle == 1) {
-				width = obj.width/zoomOffset;
-				height = obj.height/zoomOffset;
-			}
-			else if (obj.angle == 2) {
-				width = obj.length/zoomOffset;
-				height = obj.width/zoomOffset;
-			}
-			else {
-				width = obj.length/zoomOffset;
-				height = obj.height/zoomOffset;
-			}
-			x = canvasPosition.x + obj.x - (width/2);
-			y = canvasPosition.y + obj.y - (height/2);
-			if (canvasLabels == true) {
+		if (canvasLabels == true) {
+			for (var i=0; i < compareObjects.length; i++) {
+				var obj = compareObjects[i];
+				if (obj.visible == false) {continue};
+				var img = objectList.children[i].children[2].children[0].children[0].children[0];
+				var pos = objectList.children[i].children[2].children[1].children[0];
+				var width = 0;
+				var height = 0;
+				var x = 0;
+				var y = 0;
+				if (obj.angle == 1) {
+					width = obj.width/zoomOffset;
+					height = obj.height/zoomOffset;
+				}
+				else if (obj.angle == 2) {
+					width = obj.length/zoomOffset;
+					height = obj.width/zoomOffset;
+				}
+				else {
+					width = obj.length/zoomOffset;
+					height = obj.height/zoomOffset;
+				}
+				x = canvasPosition.x + obj.x - (width/2);
+				y = canvasPosition.y + obj.y - (height/2);
 				c.textAlign = "center";
 				c.textBaseline = "top";
 				c.font = "bold " + (Math.min(Math.max(((width/200)+12).round(1), 5), 20) / (effzoom)) + "pt sans-serif";
@@ -620,50 +625,53 @@ function drawCanvas(zoomReset) {
 				}
 			}
 		}
-		for (var i=0; i < compareObjects.length; i++) {
-			var obj = compareObjects[i];
-			var img = objectList.children[i].children[2].children[0].children[0].children[0];
-			var pos = objectList.children[i].children[2].children[1].children[0];
-			var width = 0;
-			var height = 0;
-			var x = 0;
-			var y = 0;
-			if (obj.angle == 1) {
-				width = obj.width/zoomOffset;
-				height = obj.height/zoomOffset;
-			}
-			else if (obj.angle == 2) {
-				width = obj.length/zoomOffset;
-				height = obj.width/zoomOffset;
-			}
-			else {
-				width = obj.length/zoomOffset;
-				height = obj.height/zoomOffset;
-			}
-			x = canvasPosition.x + obj.x - (width/2);
-			y = canvasPosition.y + obj.y - (height/2);
-			if (obj.selected == true) {
-				drawRect(c, x, y, width, height, 3);
-				c.fillStyle = "#3377EE20";
-				c.fill();
-				c.beginPath();
-				drawRect(c, x-1, y-1, width+2, height+2, 3);
-				c.strokeStyle = "#77AAFF";
-				c.lineWidth = 2;
-				c.lineCap = "round";
-				c.lineJoin = "round";
-				c.stroke();
-				c.beginPath();
-				c.arc(x+(width/2), y+(height/2), 8, 0, Math.PI*2);
-				c.stroke();
-				c.beginPath();
-				c.moveTo(x+(width/2), y+(height/2)-5);
-				c.lineTo(x+(width/2), y+(height/2)+5);
-				c.stroke();
-				c.beginPath();
-				c.moveTo(x+(width/2)-5, y+(height/2));
-				c.lineTo(x+(width/2)+5, y+(height/2));
-				c.stroke();
+		if (anySelected == true) {
+			for (var i=0; i < compareObjects.length; i++) {
+				var obj = compareObjects[i];
+				if (obj.visible == false) {continue};
+				var img = objectList.children[i].children[2].children[0].children[0].children[0];
+				var pos = objectList.children[i].children[2].children[1].children[0];
+				var width = 0;
+				var height = 0;
+				var x = 0;
+				var y = 0;
+				if (obj.angle == 1) {
+					width = obj.width/zoomOffset;
+					height = obj.height/zoomOffset;
+				}
+				else if (obj.angle == 2) {
+					width = obj.length/zoomOffset;
+					height = obj.width/zoomOffset;
+				}
+				else {
+					width = obj.length/zoomOffset;
+					height = obj.height/zoomOffset;
+				}
+				x = canvasPosition.x + obj.x - (width/2);
+				y = canvasPosition.y + obj.y - (height/2);
+				if (obj.selected == true) {
+					drawRect(c, x, y, width, height, 3);
+					c.fillStyle = "#3377EE20";
+					c.fill();
+					c.beginPath();
+					drawRect(c, x-1, y-1, width+2, height+2, 3);
+					c.strokeStyle = "#77AAFF";
+					c.lineWidth = 2;
+					c.lineCap = "round";
+					c.lineJoin = "round";
+					c.stroke();
+					c.beginPath();
+					c.arc(x+(width/2), y+(height/2), 8, 0, Math.PI*2);
+					c.stroke();
+					c.beginPath();
+					c.moveTo(x+(width/2), y+(height/2)-5);
+					c.lineTo(x+(width/2), y+(height/2)+5);
+					c.stroke();
+					c.beginPath();
+					c.moveTo(x+(width/2)-5, y+(height/2));
+					c.lineTo(x+(width/2)+5, y+(height/2));
+					c.stroke();
+				}
 			}
 		}
 	}, 1);
@@ -687,6 +695,7 @@ function addObject(id) {
 	compareObjects.push(objects[id-1]);
 	compareObjects[compareObjects.length-1].angle = objects[id-1].defaultAngle;
 	compareObjects[compareObjects.length-1].selected = false;
+	compareObjects[compareObjects.length-1].visible = true;
 	compareObjects[compareObjects.length-1].manualPos = false;
 	compareObjects[compareObjects.length-1].drawnWidth = 0;
 	compareObjects[compareObjects.length-1].drawnHeight = 0;
@@ -973,6 +982,29 @@ function drawCompareObject(obj) {
 	//Title ----------
 	var objItemTitle = document.createElement('div');
 	objItemTitle.className = "oli-title";
+	var objItemTitleVis = document.createElement('img');
+	if (obj.visible == false) {
+		objItemTitleVis.src = "/static/images/icons/eye-closed.svg";
+	}
+	else {
+		objItemTitleVis.src = "/static/images/icons/eye-open.svg";
+	}
+	objItemTitleVis.alt = "Toggle visibility";
+	objItemTitleVis.className = "oli-title-vis";
+	objItemTitleVis.addEventListener('click', function(event) {
+		var element = event.target || event.srcElement;
+		var objID = parseInt(element.parentNode.parentNode.id.removeBefore("-", 1, true));
+		if (compareObjects[objID].visible == true) {
+			compareObjects[objID].visible = false;
+			element.src = "/static/images/icons/eye-closed.svg";
+		}
+		else {
+			compareObjects[objID].visible = true;
+			element.src = "/static/images/icons/eye-open.svg";
+		}
+		addUndoHistory();
+		drawCanvas();
+	});
 	var objItemTitleH1 = document.createElement('h1');
 	objItemTitleH1.innerHTML = obj.name;
 	objItemTitleH1.addEventListener('click', function(event) {
@@ -981,13 +1013,15 @@ function drawCompareObject(obj) {
 		selectObject(objID, event.shiftKey);
 	});
 	var objItemTitleDelete = document.createElement('img');
-	objItemTitleDelete.src = "../static-0/files/images/icons/x.svg";
+	objItemTitleDelete.src = "/static/images/icons/x.svg";
 	objItemTitleDelete.alt = "Delete";
+	objItemTitleDelete.className = "oli-title-delete";
 	objItemTitleDelete.addEventListener('click', function(event) {
 		var element = event.target || event.srcElement;
 		var objID = parseInt(element.parentNode.parentNode.id.removeBefore("-", 1, true));
 		deleteObject(objID);
 	});
+	objItemTitle.appendChild(objItemTitleVis);
 	objItemTitle.appendChild(objItemTitleH1);
 	objItemTitle.appendChild(objItemTitleDelete);
 	objItem.appendChild(objItemTitle);
@@ -2051,13 +2085,7 @@ function getAlignment(align) {
 }
 
 function  getImageURL(id, angle) {
-	var url = "./compare-size/images/" + objects[id-1].category1;
-	if (objects[id-1].category2) {
-		url += "/" + objects[id-1].category2;
-	}
-	if (objects[id-1].category3) {
-		url += "/" + objects[id-1].category3;
-	}
+	var url = "./compare-size/images/";
 	if (angle == 1) {
 		url += "/" + objects[id-1].frontImage + ".svg";
 	}
