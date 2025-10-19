@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>https://blendertimer.com/</loc>
-<lastmod>2025-10-09T13:36:49-07:00</lastmod>
+<lastmod>2025-10-18T17:51:39-07:00</lastmod>
 </url>
 <url>
 <loc>https://blendertimer.com/08a2e399-e7bb-4994-8195-109b1c364407</loc>
@@ -46,11 +46,15 @@
 </url>
 <url>
 <loc>https://blendertimer.com/media</loc>
-<lastmod>2025-10-12T23:43:17-07:00</lastmod>
+<lastmod>2025-10-18T17:51:39-07:00</lastmod>
 </url>
 <url>
 <loc>https://blendertimer.com/nowstream</loc>
 <lastmod>2025-10-09T13:36:49-07:00</lastmod>
+</url>
+<url>
+<loc>https://blendertimer.com/privacy-policy</loc>
+<lastmod>2025-10-18T17:51:39-07:00</lastmod>
 </url>
 <url>
 <loc>https://blendertimer.com/programming-elements</loc>
@@ -66,7 +70,7 @@
 </url>
 <url>
 <loc>https://blendertimer.com/terms-of-service</loc>
-<lastmod>2025-08-13T22:43:28-07:00</lastmod>
+<lastmod>2025-10-18T17:51:39-07:00</lastmod>
 </url>
 <url>
 <loc>https://blendertimer.com/the-world-since-you</loc>
@@ -86,7 +90,7 @@
 </url>
 <url>
 <loc>https://blendertimer.com/activities/age-estimator</loc>
-<lastmod>2025-10-09T13:34:13-07:00</lastmod>
+<lastmod>2025-10-18T17:51:39-07:00</lastmod>
 </url>
 <url>
 <loc>https://blendertimer.com/activities/cant-touch-this</loc>
@@ -110,7 +114,7 @@
 </url>
 <url>
 <loc>https://blendertimer.com/factsheets/bible-data</loc>
-<lastmod>2025-10-09T13:34:13-07:00</lastmod>
+<lastmod>2025-10-18T17:51:39-07:00</lastmod>
 </url>
 <url>
 <loc>https://blendertimer.com/factsheets/report-inaccuracy</loc>
@@ -130,11 +134,11 @@
 </url>
 <url>
 <loc>https://blendertimer.com/noindex/footer</loc>
-<lastmod>2025-10-17T18:22:29-07:00</lastmod>
+<lastmod>2025-10-18T17:51:39-07:00</lastmod>
 </url>
 <url>
 <loc>https://blendertimer.com/noindex/header</loc>
-<lastmod>2025-10-17T18:22:29-07:00</lastmod>
+<lastmod>2025-10-18T17:51:39-07:00</lastmod>
 </url>
 <url>
 <loc>https://blendertimer.com/nowstream/aroundtheworld</loc>
