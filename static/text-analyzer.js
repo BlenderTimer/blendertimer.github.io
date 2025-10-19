@@ -466,3 +466,41 @@ function eachLine(spt) {
 	}
 	inputBox.value = str;
 }
+
+// function chapters() {
+// 	var allchapters = [];
+// 	var chapter = "";
+// 	var book = "[Gen";
+// 	var chap = 1;
+// 	var chaps = 0;
+// 	for (var i=0; i < lineList.length; i++) {
+// 		var line = lineList[i];
+// 		if (!(line.startsWith(book) && parseInt(line.removeBefore("|", 1).removeAfter("|", -1)) == chap) || i == (lineList.length-1)) {
+// 			if (i == (lineList.length-1)) {
+// 				line = line.substr(line.indexOf("]") + 2);
+// 				chapter = chapter + line + "\n";
+// 			}
+// 			chapter = chapter.substring(0, chapter.length-1);
+// 			chaps++;
+// 			var w = chapter.split(/[ —\n]/).filter(function (i) {return i != ""});
+// 			var s = chapter.split(/(?<=[.?!])\s+(?=[A-Z])|\n/);
+// 			var syl = 0;
+// 			for (const ws of w) {syl += countSyllables(ws)};
+// 			var es = 206.835 - 1.015 * (w.length / s.length) - 84.6 * (syl / w.length) || 0;
+// 			allchapters.push({text:chapter,ease:es,id:chaps,ref:book.removeBefore("[", 1)+" "+chap});
+// 			chapter = "";
+// 			chap = parseInt(line.removeBefore("|", 1).removeAfter("|", -1));
+// 			book = line.removeAfter("|", -1);
+// 		}
+// 		line = line.substr(line.indexOf("]") + 2);
+// 		chapter = chapter + line + "\n";
+// 	}
+// 	allchapters.sort((a, b) => a.ease - b.ease || a.id - b.id);
+// 	chaps = 0;
+// 	var str = "";
+// 	for (const item of allchapters) {
+// 		chaps++;
+// 		str += "-----[ id:" + chaps.toLocaleString() + " | EASE: " + item.ease.round(1) + " | CHAPTER: " + item.ref + " ]-----\n" + item.text + "\n\n";
+// 	}
+// 	inputBox.value = str;
+// }

@@ -18,10 +18,16 @@ window.pages = [
 		keywords:["membership"]
 	},
 	{
-		title:"Terms of Service and Privacy Policy - BlenderTimer",
-		description:"The BlenderTimer terms of service and privacy policy.",
+		title:"Terms of Service - BlenderTimer",
+		description:"The terms of service of BlenderTimer.",
 		url:"/terms-of-service",
-		keywords:["tos"]
+		keywords:["tos", "privacy", "policy"]
+	},
+	{
+		title:"Privacy Policy - BlenderTimer",
+		description:"The privacy policy of BlenderTimer.",
+		url:"/privacy-policy",
+		keywords:["tos", "terms", "service"]
 	},
 	{
 		title:"Bounce - BlenderTimer",
@@ -106,7 +112,7 @@ window.pages = [
 	},
 	{
 		title:"Bible Data - BlenderTimer Factsheets",
-		description:"A collection of data about the Bible!",
+		description:"A collection of thousands of facts and data about the Bible!",
 		url:"/factsheets/bible-data",
 		keywords:["kjv", "words", "verses", "chapters", "books", "center", "flesch", "testament"]
 	},

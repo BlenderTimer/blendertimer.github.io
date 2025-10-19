@@ -80,3 +80,8 @@ function headerSearch(e) {
 		}
 	}, 1)
 }
+
+function copyIDURL(event) {
+	var element = event.target || event.srcElement;
+	navigator.clipboard.writeText(window.location.toString().removeAfter("#", -1) + "#" + element.id);
+}

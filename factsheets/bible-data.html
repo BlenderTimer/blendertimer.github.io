@@ -12,7 +12,7 @@
         </script>
         <meta charset="utf-8">
 		<title>Bible Data - BlenderTimer Factsheets</title>
-		<meta name="description" content="A collection of data about the Bible!">
+		<meta name="description" content="A collection of thousands of facts and data about the Bible!">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="icon" href="/favicon.png" type="image/x-icon">
 		<link rel="stylesheet" type="text/css" href="/static/main.css">
@@ -38,7 +38,7 @@
 		</div>
 		<div id="content-main" class="limwidth" style="opacity: 0; transition: 0.5s">
 				<h1 class="title">Bible Data</h1>
-				<p class="description">A collection of data about the Bible!</p>
+				<p class="description">A collection of thousands of facts and data about the Bible!</p>
 				<div class="spr"></div>
 				<div id="primary-block">
 					<div id="navigator-container">
@@ -78,6 +78,8 @@
 							<b class="nav-cat">Flesch Reading Ease Scores</b>
 							<button class="nav-sec" onclick="navigateTo(event)">Easiest Verses to Read</button>
 							<button class="nav-sec" onclick="navigateTo(event)">Hardest Verses to Read</button>
+							<button class="nav-sec" onclick="navigateTo(event)">Easiest Chapters to Read</button>
+							<button class="nav-sec" onclick="navigateTo(event)">Hardest Chapters to Read</button>
 							<button class="nav-sec" onclick="navigateTo(event)">Books by Reading Difficulty</button>
 							<button class="nav-sec" onclick="navigateTo(event)">Overall Flesch Reading Ease</button>
 							<b class="nav-cat">Extras</b>
@@ -92,9 +94,9 @@
 							</div>
 							<i id="disclaimer">All data on this page is based on the KJV (King James Version) Bible.</i>
 						</div>
-						<h1 class="title">General Data:</h1>
+						<h1 class="title" id="general-data">General Data:</h1>
 						<p class="description">Generic data of the Bible.</p>
-						<div id="general-data" class="split-data-container">
+						<div class="split-data-container">
 							<div class="split-data-container-hold">
 								<h2 class="title2">Old Testament</h2>
 								<div class="data-container">
@@ -601,10 +603,10 @@
 							</div>
 						</div>
 						<span class="note"><i>Note: These graphs are only to give an idea of the layout. Smaller screens may not perfectly display the sizes of sections.</i></span>
-						<div class="spr"></div>
-						<h1 class="title">Center Character(s):</h1>
+						<div class="spr" id="characters"></div>
+						<h1 class="title" id="center-characters">Center Character(s):</h1>
 						<p class="description">The center characters of the Bible.</p>
-						<div id="center-characters" class="split-data-container">
+						<div class="split-data-container">
 							<div class="split-data-container-hold">
 								<h2 class="title2">Old Testament</h2>
 								<div class="data-container">
@@ -637,9 +639,9 @@
 						</div>
 						<span class="note"><i>Note: There are several dozen ways to calculate the "center" of the Bible which can fluctuate as much as 35%! Due to this, we have highlighted what would be the physical center of a regular printed Bible. </i><a onclick="scrollToNote('the-true-center-of-the-bible')">read more</a></span>
 						<div class="spr"></div>
-						<h1 class="title">Letter Uses:</h1>
+						<h1 class="title" id="letter-uses">Letter Uses:</h1>
 						<p class="description">The amount of times letters are used in the Bible.</p>
-						<div id="letter-uses" class="split-data-container">
+						<div class="split-data-container">
 							<div class="split-data-container-hold">
 								<h2 class="title2">Old Testament</h2>
 								<div class="data-container">
@@ -967,10 +969,10 @@
 								<span><b>2,966</b><i> (0.1%)</i><p> times</p></span>
 							</div>
 						</div>
-						<div class="spr"></div>
-						<h1 class="title">Center Word(s):</h1>
+						<div class="spr" id="words"></div>
+						<h1 class="title" id="center-words">Center Word(s):</h1>
 						<p class="description">The center words of the Bible.</p>
-						<div id="center-words" class="split-data-container">
+						<div class="split-data-container">
 							<div class="split-data-container-hold">
 								<h2 class="title2">Old Testament</h2>
 								<div class="data-container">
@@ -1018,9 +1020,9 @@
 						</div>
 						<span class="note"><i>Note: There are several dozen ways to calculate the "center" of the Bible which can fluctuate as much as 35%! Due to this, we have highlighted what would be the physical center of a regular printed Bible. </i><a onclick="scrollToNote('the-true-center-of-the-bible')">read more</a></span>
 						<div class="spr"></div>
-						<h1 class="title">Lengths of Words:</h1>
+						<h1 class="title" id="lengths-of-words">Lengths of Words:</h1>
 						<p class="description">Counts of the lengths of all the words in the Bible.</p>
-						<div id="lengths-of-words" class="split-data-container">
+						<div class="split-data-container">
 							<div class="split-data-container-hold">
 								<h2 class="title2">Old Testament</h2>
 								<div class="data-container">
@@ -1253,9 +1255,9 @@
 							</div>
 						</div>
 						<div class="spr"></div>
-						<h1 class="title">Lengths of Unique Words:</h1>
+						<h1 class="title" id="lengths-of-unique-words">Lengths of Unique Words:</h1>
 						<p class="description">Counts of the lengths of all unique (no duplicates) words in the Bible.</p>
-						<div id="lengths-of-unique-words" class="split-data-container">
+						<div class="split-data-container">
 							<div class="split-data-container-hold">
 								<h2 class="title2">Old Testament</h2>
 								<div class="data-container">
@@ -1488,9 +1490,9 @@
 							</div>
 						</div>
 						<div class="spr"></div>
-						<h1 class="title">Longest Words:</h1>
+						<h1 class="title" id="longest-words">Longest Words:</h1>
 						<p class="description">The longest words of the Bible.</p>
-						<div id="longest-words" class="split-data-container">
+						<div class="split-data-container">
 							<div class="split-data-container-hold">
 								<h2 class="title2">Old Testament</h2>
 								<div class="data-container">
@@ -1615,9 +1617,9 @@
 							</div>
 						</div>
 						<div class="spr"></div>
-						<h1 class="title">Shortest Words:</h1>
+						<h1 class="title" id="shortest-words">Shortest Words:</h1>
 						<p class="description">The shortest words of the Bible.</p>
-						<div id="shortest-words" class="split-data-container">
+						<div class="split-data-container">
 							<div class="split-data-container-hold">
 								<h2 class="title2">Old Testament</h2>
 								<div class="data-container">
@@ -1723,9 +1725,9 @@
 							</div>
 						</div>
 						<div class="spr"></div>
-						<h1 class="title">Word Uses by First Letter:</h1>
+						<h1 class="title" id="word-uses-by-first-letter">Word Uses by First Letter:</h1>
 						<p class="description">The amount of words in the Bible that start with the specified letter.</p>
-						<div id="word-uses-by-first-letter" class="split-data-container">
+						<div class="split-data-container">
 							<div class="split-data-container-hold">
 								<h2 class="title2">Old Testament</h2>
 								<div class="data-container">
@@ -2054,9 +2056,9 @@
 							</div>
 						</div>
 						<div class="spr"></div>
-						<h1 class="title">Unique Word Uses by First Letter:</h1>
+						<h1 class="title" id="unique-word-uses-by-first-letter">Unique Word Uses by First Letter:</h1>
 						<p class="description">The amount of unique (no duplicates) words in the Bible that start with the specified letter.</p>
-						<div id="unique-word-uses-by-first-letter" class="split-data-container">
+						<div class="split-data-container">
 							<div class="split-data-container-hold">
 								<h2 class="title2">Old Testament</h2>
 								<div class="data-container">
@@ -2384,10 +2386,10 @@
 								<span><p>words start with </p><b>Z</b></span>
 							</div>
 						</div>
-						<div class="spr"></div>
-						<h1 class="title">Center Verse(s):</h1>
+						<div class="spr" id="verses"></div>
+						<h1 class="title" id="center-verses">Center Verse(s):</h1>
 						<p class="description">The center verses of the Bible.</p>
-						<div id="center-verses" class="split-data-container">
+						<div class="split-data-container">
 							<div class="split-data-container-hold">
 								<h2 class="title2">Old Testament</h2>
 								<div class="data-container">
@@ -2450,9 +2452,9 @@
 						</div>
 						<span class="note"><i>Note: There are several dozen ways to calculate the "center" of the Bible which can fluctuate as much as 35%! Due to this, we have highlighted what would be the physical center of a regular printed Bible. </i><a onclick="scrollToNote('the-true-center-of-the-bible')">read more</a></span>
 						<div class="spr"></div>
-						<h1 class="title">Longest Verses:</h1>
+						<h1 class="title" id="longest-verses">Longest Verses:</h1>
 						<p class="description">The longest verses of the Bible.</p>
-						<div id="longest-verses" class="split-data-container">
+						<div class="split-data-container">
 							<div class="split-data-container-hold">
 								<h2 class="title2">Old Testament</h2>
 								<div class="data-container">
@@ -2554,9 +2556,9 @@
 							</div>
 						</div>
 						<div class="spr"></div>
-						<h1 class="title">Shortest Verses:</h1>
+						<h1 class="title" id="shortest-verses">Shortest Verses:</h1>
 						<p class="description">The shortest verses of the Bible.</p>
-						<div id="shortest-verses" class="split-data-container">
+						<div class="split-data-container">
 							<div class="split-data-container-hold">
 								<h2 class="title2">Old Testament</h2>
 								<div class="data-container">
@@ -2678,9 +2680,9 @@
 							</div>
 						</div>
 						<div class="spr"></div>
-						<h1 class="title">Verses Which Contain All But One Letter:</h1>
+						<h1 class="title" id="verses-which-contain-all-but-one-letter">Verses Which Contain All But One Letter:</h1>
 						<p class="description">Verses that have every letter of the alphabet except one.</p>
-						<div id="verses-which-contain-all-but-one-letter" class="split-data-container">
+						<div class="split-data-container">
 							<div class="split-data-container-hold">
 								<h2 class="title2">Old Testament</h2>
 								<div class="data-container">
@@ -3310,10 +3312,10 @@
 								<span><b class="boldened">(occurs 2 times) </b><i>2 Kings 19:8, Isaiah 37:8</i>
 							</div>
 						</div>
-						<div class="spr"></div>
-						<h1 class="title">Center Chapter(s):</h1>
+						<div class="spr" id="chapters"></div>
+						<h1 class="title" id="center-chapters">Center Chapter(s):</h1>
 						<p class="description">The center chapters of the Bible.</p>
-						<div id="center-chapters" class="split-data-container">
+						<div class="split-data-container">
 							<div class="split-data-container-hold">
 								<h2 class="title2">Old Testament</h2>
 								<div class="data-container">
@@ -3379,9 +3381,9 @@
 						</div>
 						<span class="note"><i>Note: There are several dozen ways to calculate the "center" of the Bible which can fluctuate as much as 35%! Due to this, we have highlighted what would be the physical center of a regular printed Bible. </i><a onclick="scrollToNote('the-true-center-of-the-bible')">read more</a></span>
 						<div class="spr"></div>
-						<h1 class="title">Longest Chapters:</h1>
+						<h1 class="title" id="longest-chapters">Longest Chapters:</h1>
 						<p class="description">The longest chapters of the Bible.</p>
-						<div id="longest-chapters" class="split-data-container">
+						<div class="split-data-container">
 							<div class="split-data-container-hold">
 								<h2 class="title2">Old Testament</h2>
 								<div class="data-container">
@@ -3458,9 +3460,9 @@
 							</div>
 						</div>
 						<div class="spr"></div>
-						<h1 class="title">Shortest Chapters:</h1>
+						<h1 class="title" id="shortest-chapters">Shortest Chapters:</h1>
 						<p class="description">The shortest chapters of the Bible.</p>
-						<div id="shortest-chapters" class="split-data-container">
+						<div class="split-data-container">
 							<div class="split-data-container-hold">
 								<h2 class="title2">Old Testament</h2>
 								<div class="data-container">
@@ -3536,10 +3538,10 @@
 								<span><p>Job 25</p><i> (433 characters)</i></span>
 							</div>
 						</div>
-						<div class="spr"></div>
-						<h1 class="title">Center Book(s):</h1>
+						<div class="spr" id="books"></div>
+						<h1 class="title" id="center-books">Center Book(s):</h1>
 						<p class="description">The center books of the Bible.</p>
-						<div id="center-books" class="split-data-container">
+						<div class="split-data-container">
 							<div class="split-data-container-hold">
 								<h2 class="title2">Old Testament</h2>
 								<div class="data-container">
@@ -3617,9 +3619,9 @@
 						</div>
 						<span class="note"><i>Note: There are several dozen ways to calculate the "center" of the Bible which can fluctuate as much as 35%! Due to this, we have highlighted what would be the physical center of a regular printed Bible. </i><a onclick="scrollToNote('the-true-center-of-the-bible')">read more</a></span>
 						<div class="spr"></div>
-						<h1 class="title">Longest Books:</h1>
+						<h1 class="title" id="longest-books">Longest Books:</h1>
 						<p class="description">The longest books of the Bible.</p>
-						<div id="longest-books" class="split-data-container">
+						<div class="split-data-container">
 							<div class="split-data-container-hold">
 								<h2 class="title2">Old Testament</h2>
 								<div class="data-container">
@@ -3696,9 +3698,9 @@
 							</div>
 						</div>
 						<div class="spr"></div>
-						<h1 class="title">Shortest Books:</h1>
+						<h1 class="title" id="shortst-books">Shortest Books:</h1>
 						<p class="description">The shortest books of the Bible.</p>
-						<div id="longest-books" class="split-data-container">
+						<div class="split-data-container">
 							<div class="split-data-container-hold">
 								<h2 class="title2">Old Testament</h2>
 								<div class="data-container">
@@ -3775,9 +3777,9 @@
 							</div>
 						</div>
 						<div class="spr"></div>
-						<h1 class="title">Punctuation:</h1>
+						<h1 class="title" id="punctuation">Punctuation:</h1>
 						<p class="description">General punctuation data.</p>
-						<div id="punctuation" class="split-data-container">
+						<div class="split-data-container">
 							<div class="split-data-container-hold">
 								<h2 class="title2">Old Testament</h2>
 								<div class="data-container">
@@ -3997,14 +3999,14 @@
 								<b>12</b>
 							</div>
 						</div>
-						<div class="spr"></div>
-						<h1 id="flesch-scores" class="title">Easiest Verses to Read:</h1>
+						<div class="spr" id="flesch-scores"></div>
+						<h1 id="easies-verses-to-read" class="title">Easiest Verses to Read:</h1>
 						<p class="description">The easiest verses of the Bible to read.</p>
-						<div id="center-verses" class="split-data-container">
+						<div class="split-data-container">
 							<div class="split-data-container-hold">
 								<h2 class="title2">Old Testament</h2>
 								<div class="data-container">
-									<div class="data-block max-width-block">
+									<div class="data-block pop-block max-width-block">
 										<b>Exodus 20:13</b>
 										<p>Score: 118.2 (<5th grade)</p>
 										<i>"Thou shalt not kill."</i>
@@ -4065,7 +4067,7 @@
 						</div>
 						<h2 class="title2">Whole Bible</h2>
 						<div class="data-container">
-							<div class="data-block half-width-block">
+							<div class="data-block pop-block half-width-block">
 								<b>Exodus 20:13</b>
 								<p>Score: 118.2 (<5th grade)</p>
 								<i>"Thou shalt not kill."</i>
@@ -4093,9 +4095,9 @@
 						</div>
 						<span class="note"><i>Note: Extra Flesch reading ease data located in </i><a onclick="scrollToNote('misc-flesch-scores')">Miscellaneous Facts</a><i>.</i></span>
 						<div class="spr"></div>
-						<h1 class="title">Hardest Verses to Read:</h1>
+						<h1 class="title" id="hardest-verses-to-read">Hardest Verses to Read:</h1>
 						<p class="description">The most difficult verses of the Bible to read.</p>
-						<div id="center-verses" class="split-data-container">
+						<div class="split-data-container">
 							<div class="split-data-container-hold">
 								<h2 class="title2">Old Testament</h2>
 								<div class="data-container">
@@ -4163,9 +4165,349 @@
 						</div>
 						<span class="note"><i>Note: Extra Flesch reading ease data located in </i><a onclick="scrollToNote('misc-flesch-scores')">Miscellaneous Facts</a><i>.</i></span>
 						<div class="spr"></div>
-						<h1 class="title">Overall Flesch Reading Ease:</h1>
+						<h1 class="title" id="easiest-chapters-to-read">Easiest Chapters to Read:</h1>
+						<p class="description">The top 10 easiest chapters of the Bible to read.</p>
+						<div class="split-data-container">
+							<div class="split-data-container-hold">
+								<h2 class="title2">Old Testament</h2>
+								<div class="data-container">
+									<div class="data-block pop-block max-width-block">
+										<b>Psalm 115</b>
+										<p>Score: 95.9 (5th grade)</p>
+										<i>"Not unto us, O LORD, not unto us, but unto thy name give glory, for thy mercy, and for thy truth's sake...."</i>
+									</div>
+									<div class="data-block max-width-block">
+										<b>Psalm 134</b>
+										<p>Score: 95.8 (5th grade)</p>
+										<i>"Behold, bless ye the LORD, all ye servants of the LORD, which by night stand in the house of the LORD...."</i>
+									</div>
+									<div class="data-block max-width-block">
+										<b>Psalm 124</b>
+										<p>Score: 95.7 (5th grade)</p>
+										<i>"If it had not been the LORD who was on our side, now may Israel say;..."</i>
+									</div>
+									<div class="data-block max-width-block">
+										<b>Psalm 120</b>
+										<p>Score: 93.1 (5th grade)</p>
+										<i>"In my distress I cried unto the LORD, and he heard me...."</i>
+									</div>
+									<div class="data-block max-width-block">
+										<b>Psalm 148</b>
+										<p>Score: 92.7 (5th grade)</p>
+										<i>"Praise ye the LORD. Praise ye the LORD from the heavens: praise him in the heights...."</i>
+									</div>
+									<div class="data-block max-width-block">
+										<b>Job 29</b>
+										<p>Score: 92.2 (5th grade)</p>
+										<i>"Moreover Job continued his parable, and said,..."</i>
+									</div>
+									<div class="data-block max-width-block">
+										<b>Psalm 113</b>
+										<p>Score: 91.9 (5th grade)</p>
+										<i>"Praise ye the LORD. Praise, O ye servants of the LORD, praise the name of the LORD...."</i>
+									</div>
+									<div class="data-block max-width-block">
+										<b>Psalm 121</b>
+										<p>Score: 91.4 (5th grade)</p>
+										<i>"I will lift up mine eyes unto the hills, from whence cometh my help...."</i>
+									</div>
+									<div class="data-block max-width-block">
+										<b>Psalm 84</b>
+										<p>Score: 90.5 (5th grade)</p>
+										<i>"How amiable are thy tabernacles, O LORD of hosts!..."</i>
+									</div>
+									<div class="data-block max-width-block">
+										<b>Job 25</b>
+										<p>Score: 90.1 (5th grade)</p>
+										<i>"Then answered Bildad the Shuhite, and said,..."</i>
+									</div>
+								</div>
+							</div>
+							<div class="col-spr"></div>
+							<div class="split-data-container-hold">
+								<h2 class="title2">New Testament</h2>
+								<div class="data-container">
+									<div class="data-block pop-block max-width-block">
+										<b>Revelation 7</b>
+										<p>Score: 84.3 (6th grade)</p>
+										<i>"And after these things I saw four angels standing on the four corners of the earth, holding the four winds of the earth, that the wind should not blow on the earth, nor on the sea, nor on any tree...."</i>
+									</div>
+									<div class="data-block max-width-block">
+										<b>Luke 22</b>
+										<p>Score: 83.7 (6th grade)</p>
+										<i>"Now the feast of unleavened bread drew nigh, which is called the Passover...."</i>
+									</div>
+									<div class="data-block max-width-block">
+										<b>John 15</b>
+										<p>Score: 83.7 (6th grade)</p>
+										<i>"I am the true vine, and my Father is the husbandman...."</i>
+									</div>
+									<div class="data-block max-width-block">
+										<b>James 4</b>
+										<p>Score: 83.3 (6th grade)</p>
+										<i>"From whence come wars and fightings among you? come they not hence, even of your lusts that war in your members?..."</i>
+									</div>
+									<div class="data-block max-width-block">
+										<b>John 7</b>
+										<p>Score: 83.1 (6th grade)</p>
+										<i>"After these things Jesus walked in Galilee: for he would not walk in Jewry, because the Jews sought to kill him...."</i>
+									</div>
+									<div class="data-block max-width-block">
+										<b>John 8</b>
+										<p>Score: 83.1 (6th grade)</p>
+										<i>"Jesus went unto the mount of Olives...."</i>
+									</div>
+									<div class="data-block max-width-block">
+										<b>John 1</b>
+										<p>Score: 82.9 (6th grade)</p>
+										<i>"In the beginning was the Word, and the Word was with God, and the Word was God...."</i>
+									</div>
+									<div class="data-block max-width-block">
+										<b>Matthew 7</b>
+										<p>Score: 82.8 (6th grade)</p>
+										<i>"Judge not, that ye be not judged...."</i>
+									</div>
+									<div class="data-block max-width-block">
+										<b>John 14</b>
+										<p>Score: 82.6 (6th grade)</p>
+										<i>"Let not your heart be troubled: ye believe in God, believe also in me...."</i>
+									</div>
+									<div class="data-block max-width-block">
+										<b>2nd Corinthians 13</b>
+										<p>Score: 82.6 (6th grade)</p>
+										<i>"This is the third time I am coming to you. In the mouth of two or three witnesses shall every word be established...."</i>
+									</div>
+								</div>
+							</div>
+						</div>
+						<h2 class="title2">Whole Bible</h2>
+						<div class="data-container">
+							<div class="data-block pop-block half-width-block">
+								<b>Psalm 115</b>
+								<p>Score: 95.9 (5th grade)</p>
+								<i>"Not unto us, O LORD, not unto us, but unto thy name give glory, for thy mercy, and for thy truth's sake...."</i>
+							</div>
+							<div class="data-block half-width-block">
+								<b>Psalm 134</b>
+								<p>Score: 95.8 (5th grade)</p>
+								<i>"Behold, bless ye the LORD, all ye servants of the LORD, which by night stand in the house of the LORD...."</i>
+							</div>
+							<div class="data-block half-width-block">
+								<b>Psalm 124</b>
+								<p>Score: 95.7 (5th grade)</p>
+								<i>"If it had not been the LORD who was on our side, now may Israel say;..."</i>
+							</div>
+							<div class="data-block half-width-block">
+								<b>Psalm 120</b>
+								<p>Score: 93.1 (5th grade)</p>
+								<i>"In my distress I cried unto the LORD, and he heard me...."</i>
+							</div>
+							<div class="data-block half-width-block">
+								<b>Psalm 148</b>
+								<p>Score: 92.7 (5th grade)</p>
+								<i>"Praise ye the LORD. Praise ye the LORD from the heavens: praise him in the heights...."</i>
+							</div>
+							<div class="data-block half-width-block">
+								<b>Job 29</b>
+								<p>Score: 92.2 (5th grade)</p>
+								<i>"Moreover Job continued his parable, and said,..."</i>
+							</div>
+							<div class="data-block half-width-block">
+								<b>Psalm 113</b>
+								<p>Score: 91.9 (5th grade)</p>
+								<i>"Praise ye the LORD. Praise, O ye servants of the LORD, praise the name of the LORD...."</i>
+							</div>
+							<div class="data-block half-width-block">
+								<b>Psalm 121</b>
+								<p>Score: 91.4 (5th grade)</p>
+								<i>"I will lift up mine eyes unto the hills, from whence cometh my help...."</i>
+							</div>
+							<div class="data-block half-width-block">
+								<b>Psalm 84</b>
+								<p>Score: 90.5 (5th grade)</p>
+								<i>"How amiable are thy tabernacles, O LORD of hosts!..."</i>
+							</div>
+							<div class="data-block half-width-block">
+								<b>Job 25</b>
+								<p>Score: 90.1 (5th grade)</p>
+								<i>"Then answered Bildad the Shuhite, and said,..."</i>
+							</div>
+						</div>
+						<span class="note"><i>Note: Extra Flesch reading ease data located in </i><a onclick="scrollToNote('misc-flesch-scores')">Miscellaneous Facts</a><i>.</i></span>
+						<div class="spr"></div>
+						<h1 class="title" id="hardest-chapters-to-read">Hardest Chapters to Read:</h1>
+						<p class="description">The top 10 hardest chapters of the Bible to read.</p>
+						<div class="split-data-container">
+							<div class="split-data-container-hold">
+								<h2 class="title2">Old Testament</h2>
+								<div class="data-container">
+									<div class="data-block pop-block max-width-block">
+										<b>Numbers 36</b>
+										<p>Score: 50.8 (12th grade)</p>
+										<i>"And the chief fathers of the families of the children of Gilead, the son of Machir, the son of Manasseh, of the families of the sons of Joseph, came near, and spake before Moses, and before the princes, the chief fathers of the children of Israel:..."</i>
+									</div>
+									<div class="data-block max-width-block">
+										<b>1st Chronicles 3</b>
+										<p>Score: 51.7 (12th grade)</p>
+										<i>"Now these were the sons of David, which were born unto him in Hebron; the firstborn Amnon, of Ahinoam the Jezreelitess; the second Daniel, of Abigail the Carmelitess:..."</i>
+									</div>
+									<div class="data-block max-width-block">
+										<b>Ezra 9</b>
+										<p>Score: 52.7 (12th grade)</p>
+										<i>"Now when these things were done, the princes came to me, saying, The people of Israel, and the priests, and the Levites, have not separated themselves from the people of the lands, doing according to their abominations, even of the Canaanites, the Hittites, the Perizzites, the Jebusites, the Ammonites, the Moabites, the Egyptians, and the Amorites...."</i>
+									</div>
+									<div class="data-block max-width-block">
+										<b>Daniel 9</b>
+										<p>Score: 53.8 (11th grade)</p>
+										<i>"In the first year of Darius the son of Ahasuerus, of the seed of the Medes, which was made king over the realm of the Chaldeans;..."</i>
+									</div>
+									<div class="data-block max-width-block">
+										<b>Jeremiah 40</b>
+										<p>Score: 54.2 (11th grade)</p>
+										<i>"The word that came to Jeremiah from the LORD, after that Nebuzaradan the captain of the guard had let him go from Ramah, when he had taken him being bound in chains among all that were carried away captive of Jerusalem and Judah, which were carried away captive unto Babylon...."</i>
+									</div>
+									<div class="data-block max-width-block">
+										<b>Ezra 3</b>
+										<p>Score: 54.8 (11th grade)</p>
+										<i>"And when the seventh month was come, and the children of Israel were in the cities, the people gathered themselves together as one man to Jerusalem...."</i>
+									</div>
+									<div class="data-block max-width-block">
+										<b>Joshua 17</b>
+										<p>Score: 55.1 (11th grade)</p>
+										<i>"There was also a lot for the tribe of Manasseh; for he was the firstborn of Joseph; to wit, for Machir the firstborn of Manasseh, the father of Gilead: because he was a man of war, therefore he had Gilead and Bashan...."</i>
+									</div>
+									<div class="data-block max-width-block">
+										<b>2nd Chronicles 31</b>
+										<p>Score: 55.1 (11th grade)</p>
+										<i>"Now when all this was finished, all Israel that were present went out to the cities of Judah, and brake the images in pieces, and cut down the groves, and threw down the high places and the altars out of all Judah and Benjamin, in Ephraim also and Manasseh, until they had utterly destroyed them all. Then all the children of Israel returned, every man to his possession, into their own cities...."</i>
+									</div>
+									<div class="data-block max-width-block">
+										<b>Joshua 20</b>
+										<p>Score: 55.4 (11th grade)</p>
+										<i>"The LORD also spake unto Joshua, saying,..."</i>
+									</div>
+									<div class="data-block max-width-block">
+										<b>2nd Chronicles 30</b>
+										<p>Score: 55.6 (11th grade)</p>
+										<i>"And Hezekiah sent to all Israel and Judah, and wrote letters also to Ephraim and Manasseh, that they should come to the house of the LORD at Jerusalem, to keep the passover unto the LORD God of Israel...."</i>
+									</div>
+								</div>
+							</div>
+							<div class="col-spr"></div>
+							<div class="split-data-container-hold">
+								<h2 class="title2">New Testament</h2>
+								<div class="data-container">
+									<div class="data-block pop-block max-width-block">
+										<b>Matthew 1</b>
+										<p>Score: 58.1 (10th grade)</p>
+										<i>"The book of the generation of Jesus Christ, the son of David, the son of Abraham...."</i>
+									</div>
+									<div class="data-block max-width-block">
+										<b>2nd Corinthians 9</b>
+										<p>Score: 58.2 (10th grade)</p>
+										<i>"For as touching the ministering to the saints, it is superfluous for me to write to you:..."</i>
+									</div>
+									<div class="data-block max-width-block">
+										<b>Jude 1</b>
+										<p>Score: 61.3 (9th grade)</p>
+										<i>"Jude, the servant of Jesus Christ, and brother of James, to them that are sanctified by God the Father, and preserved in Jesus Christ, and called:..."</i>
+									</div>
+									<div class="data-block max-width-block">
+										<b>2nd Timothy 3</b>
+										<p>Score: 61.8 (9th grade)</p>
+										<i>"This know also, that in the last days perilous times shall come...."</i>
+									</div>
+									<div class="data-block max-width-block">
+										<b>1st Peter 1</b>
+										<p>Score: 61.8 (9th grade)</p>
+										<i>"Peter, an apostle of Jesus Christ, to the strangers scattered throughout Pontus, Galatia, Cappadocia, Asia, and Bithynia,..."</i>
+									</div>
+									<div class="data-block max-width-block">
+										<b>2nd Peter 2</b>
+										<p>Score: 61.8 (9th grade)</p>
+										<i>"But there were false prophets also among the people, even as there shall be false teachers among you, who privily shall bring in damnable heresies, even denying the Lord that bought them, and bring upon themselves swift destruction...."</i>
+									</div>
+									<div class="data-block max-width-block">
+										<b>1st Timothy 1</b>
+										<p>Score: 63.0 (9th grade)</p>
+										<i>"Paul, an apostle of Jesus Christ by the commandment of God our Saviour, and Lord Jesus Christ, which is our hope;..."</i>
+									</div>
+									<div class="data-block max-width-block">
+										<b>Hebrews 9</b>
+										<p>Score: 63.6 (9th grade)</p>
+										<i>"Then verily the first covenant had also ordinances of divine service, and a worldly sanctuary...."</i>
+									</div>
+									<div class="data-block max-width-block">
+										<b>Revelation 15</b>
+										<p>Score: 64.4 (9th grade)</p>
+										<i>"And I saw another sign in heaven, great and marvellous, seven angels having the seven last plagues; for in them is filled up the wrath of God...."</i>
+									</div>
+									<div class="data-block max-width-block">
+										<b>Titus 3</b>
+										<p>Score: 64.5 (9th grade)</p>
+										<i>"Put them in mind to be subject to principalities and powers, to obey magistrates, to be ready to every good work,..."</i>
+									</div>
+								</div>
+							</div>
+						</div>
+						<h2 class="title2">Whole Bible</h2>
+						<div class="data-container">
+							<div class="data-block pop-block half-width-block">
+								<b>Numbers 36</b>
+								<p>Score: 50.8 (12th grade)</p>
+								<i>"And the chief fathers of the families of the children of Gilead, the son of Machir, the son of Manasseh, of the families of the sons of Joseph, came near, and spake before Moses, and before the princes, the chief fathers of the children of Israel:..."</i>
+							</div>
+							<div class="data-block half-width-block">
+								<b>1st Chronicles 3</b>
+								<p>Score: 51.7 (12th grade)</p>
+								<i>"Now these were the sons of David, which were born unto him in Hebron; the firstborn Amnon, of Ahinoam the Jezreelitess; the second Daniel, of Abigail the Carmelitess:..."</i>
+							</div>
+							<div class="data-block half-width-block">
+								<b>Ezra 9</b>
+								<p>Score: 52.7 (12th grade)</p>
+								<i>"Now when these things were done, the princes came to me, saying, The people of Israel, and the priests, and the Levites, have not separated themselves from the people of the lands, doing according to their abominations, even of the Canaanites, the Hittites, the Perizzites, the Jebusites, the Ammonites, the Moabites, the Egyptians, and the Amorites...."</i>
+							</div>
+							<div class="data-block half-width-block">
+								<b>Daniel 9</b>
+								<p>Score: 53.8 (11th grade)</p>
+								<i>"In the first year of Darius the son of Ahasuerus, of the seed of the Medes, which was made king over the realm of the Chaldeans;..."</i>
+							</div>
+							<div class="data-block half-width-block">
+								<b>Jeremiah 40</b>
+								<p>Score: 54.2 (11th grade)</p>
+								<i>"The word that came to Jeremiah from the LORD, after that Nebuzaradan the captain of the guard had let him go from Ramah, when he had taken him being bound in chains among all that were carried away captive of Jerusalem and Judah, which were carried away captive unto Babylon...."</i>
+							</div>
+							<div class="data-block half-width-block">
+								<b>Ezra 3</b>
+								<p>Score: 54.8 (11th grade)</p>
+								<i>"And when the seventh month was come, and the children of Israel were in the cities, the people gathered themselves together as one man to Jerusalem...."</i>
+							</div>
+							<div class="data-block half-width-block">
+								<b>Joshua 17</b>
+								<p>Score: 55.1 (11th grade)</p>
+								<i>"There was also a lot for the tribe of Manasseh; for he was the firstborn of Joseph; to wit, for Machir the firstborn of Manasseh, the father of Gilead: because he was a man of war, therefore he had Gilead and Bashan...."</i>
+							</div>
+							<div class="data-block half-width-block">
+								<b>2nd Chronicles 31</b>
+								<p>Score: 55.1 (11th grade)</p>
+								<i>"Now when all this was finished, all Israel that were present went out to the cities of Judah, and brake the images in pieces, and cut down the groves, and threw down the high places and the altars out of all Judah and Benjamin, in Ephraim also and Manasseh, until they had utterly destroyed them all. Then all the children of Israel returned, every man to his possession, into their own cities...."</i>
+							</div>
+							<div class="data-block half-width-block">
+								<b>Joshua 20</b>
+								<p>Score: 55.4 (11th grade)</p>
+								<i>"The LORD also spake unto Joshua, saying,..."</i>
+							</div>
+							<div class="data-block half-width-block">
+								<b>2nd Chronicles 30</b>
+								<p>Score: 55.6 (11th grade)</p>
+								<i>"And Hezekiah sent to all Israel and Judah, and wrote letters also to Ephraim and Manasseh, that they should come to the house of the LORD at Jerusalem, to keep the passover unto the LORD God of Israel...."</i>
+							</div>
+						</div>
+						<span class="note"><i>Note: Extra Flesch reading ease data located in </i><a onclick="scrollToNote('misc-flesch-scores')">Miscellaneous Facts</a><i>.</i></span>
+						<div class="spr"></div>
+						<h1 class="title" id="overall-flesch-reading-ease">Overall Flesch Reading Ease:</h1>
 						<p class="description">The overall Flesch reading ease score of the Bible and testaments.</p>
-						<div id="center-verses" class="split-data-container">
+						<div class="split-data-container">
 							<div class="split-data-container-hold">
 								<h2 class="title2">Old Testament</h2>
 								<div class="data-container">
@@ -4195,31 +4537,31 @@
 						</div>
 						<span class="note"><i>Note: Extra Flesch reading ease data located in </i><a onclick="scrollToNote('misc-flesch-scores')">Miscellaneous Facts</a><i>.</i></span>
 						<div class="spr"></div>
-						<h1 class="title">Books by Reading Difficulty:</h1>
-						<p class="description">The books of the Bible sorted by reading difficulty.</p>
+						<h1 class="title" id="books-by-reading-difficulty">Books by Reading Difficulty:</h1>
+						<p class="description">All the books of the Bible ranked by reading difficulty.</p>
 						<table id="data-table" style="max-width: 800px">
 							<tbody>
 								<tr><th style="width: 25pt">ID</th><th>Book</th><th style="width: 50pt">Score</th><th style="width: 15vw">Grade</th></tr>
-								<tr><td><i class="table-id">1.</i></td><td>Jude</td><td><p>61.3</p></td><td><i>(8th to 9th grade)</i></td></tr>
-								<tr><td><i class="table-id">2.</i></td><td>Obadiah</td><td><p>64.4</p></td><td><i>(8th to 9th grade)</i></td></tr>
-								<tr><td><i class="table-id">3.</i></td><td>Ezra</td><td><p>64.9</p></td><td><i>(8th to 9th grade)</i></td></tr>
-								<tr><td><i class="table-id">4.</i></td><td>Daniel</td><td><p>65.1</p></td><td><i>(8th to 9th grade)</i></td></tr>
-								<tr><td><i class="table-id">5.</i></td><td>2nd Peter</td><td><p>65.1</p></td><td><i>(8th to 9th grade)</i></td></tr>
-								<tr><td><i class="table-id">6.</i></td><td>2nd Chronicles</td><td><p>65.6</p></td><td><i>(8th to 9th grade)</i></td></tr>
-								<tr><td><i class="table-id">7.</i></td><td>Esther</td><td><p>65.6</p></td><td><i>(8th to 9th grade)</i></td></tr>
-								<tr><td><i class="table-id">8.</i></td><td>Titus</td><td><p>66.0</p></td><td><i>(8th to 9th grade)</i></td></tr>
-								<tr><td><i class="table-id">9.</i></td><td>Zephaniah</td><td><p>66.6</p></td><td><i>(8th to 9th grade)</i></td></tr>
-								<tr><td><i class="table-id">10.</i></td><td>Jeremiah</td><td><p>66.9</p></td><td><i>(8th to 9th grade)</i></td></tr>
-								<tr><td><i class="table-id">11.</i></td><td>1st Timothy</td><td><p>66.9</p></td><td><i>(8th to 9th grade)</i></td></tr>
-								<tr><td><i class="table-id">12.</i></td><td>1st Peter</td><td><p>66.9</p></td><td><i>(8th to 9th grade)</i></td></tr>
-								<tr><td><i class="table-id">13.</i></td><td>Joshua</td><td><p>67.7</p></td><td><i>(8th to 9th grade)</i></td></tr>
-								<tr><td><i class="table-id">14.</i></td><td>Micah</td><td><p>68.0</p></td><td><i>(8th to 9th grade)</i></td></tr>
-								<tr><td><i class="table-id">15.</i></td><td>Nehemiah</td><td><p>68.3</p></td><td><i>(8th to 9th grade)</i></td></tr>
-								<tr><td><i class="table-id">16.</i></td><td>Numbers</td><td><p>68.5</p></td><td><i>(8th to 9th grade)</i></td></tr>
-								<tr><td><i class="table-id">17.</i></td><td>Leviticus</td><td><p>68.8</p></td><td><i>(8th to 9th grade)</i></td></tr>
-								<tr><td><i class="table-id">18.</i></td><td>1st Chronicles</td><td><p>69.5</p></td><td><i>(8th to 9th grade)</i></td></tr>
-								<tr><td><i class="table-id">19.</i></td><td>Ezekiel</td><td><p>69.6</p></td><td><i>(8th to 9th grade)</i></td></tr>
-								<tr><td><i class="table-id">20.</i></td><td>Joel</td><td><p>69.8</p></td><td><i>(8th to 9th grade)</i></td></tr>
+								<tr><td><i class="table-id">1.</i></td><td>Jude</td><td><p>61.3</p></td><td><i>(9th grade)</i></td></tr>
+								<tr><td><i class="table-id">2.</i></td><td>Obadiah</td><td><p>64.4</p></td><td><i>(9th grade)</i></td></tr>
+								<tr><td><i class="table-id">3.</i></td><td>Ezra</td><td><p>64.9</p></td><td><i>(9th grade)</i></td></tr>
+								<tr><td><i class="table-id">4.</i></td><td>Daniel</td><td><p>65.1</p></td><td><i>(8th grade)</i></td></tr>
+								<tr><td><i class="table-id">5.</i></td><td>2nd Peter</td><td><p>65.1</p></td><td><i>(8th grade)</i></td></tr>
+								<tr><td><i class="table-id">6.</i></td><td>2nd Chronicles</td><td><p>65.6</p></td><td><i>(8th grade)</i></td></tr>
+								<tr><td><i class="table-id">7.</i></td><td>Esther</td><td><p>65.6</p></td><td><i>(8th grade)</i></td></tr>
+								<tr><td><i class="table-id">8.</i></td><td>Titus</td><td><p>66.0</p></td><td><i>(8th grade)</i></td></tr>
+								<tr><td><i class="table-id">9.</i></td><td>Zephaniah</td><td><p>66.6</p></td><td><i>(8th grade)</i></td></tr>
+								<tr><td><i class="table-id">10.</i></td><td>Jeremiah</td><td><p>66.9</p></td><td><i>(8th grade)</i></td></tr>
+								<tr><td><i class="table-id">11.</i></td><td>1st Timothy</td><td><p>66.9</p></td><td><i>(8th grade)</i></td></tr>
+								<tr><td><i class="table-id">12.</i></td><td>1st Peter</td><td><p>66.9</p></td><td><i>(8th grade)</i></td></tr>
+								<tr><td><i class="table-id">13.</i></td><td>Joshua</td><td><p>67.7</p></td><td><i>(8th grade)</i></td></tr>
+								<tr><td><i class="table-id">14.</i></td><td>Micah</td><td><p>68.0</p></td><td><i>(8th grade)</i></td></tr>
+								<tr><td><i class="table-id">15.</i></td><td>Nehemiah</td><td><p>68.3</p></td><td><i>(8th grade)</i></td></tr>
+								<tr><td><i class="table-id">16.</i></td><td>Numbers</td><td><p>68.5</p></td><td><i>(8th grade)</i></td></tr>
+								<tr><td><i class="table-id">17.</i></td><td>Leviticus</td><td><p>68.8</p></td><td><i>(8th grade)</i></td></tr>
+								<tr><td><i class="table-id">18.</i></td><td>1st Chronicles</td><td><p>69.5</p></td><td><i>(8th grade)</i></td></tr>
+								<tr><td><i class="table-id">19.</i></td><td>Ezekiel</td><td><p>69.6</p></td><td><i>(8th grade)</i></td></tr>
+								<tr><td><i class="table-id">20.</i></td><td>Joel</td><td><p>69.8</p></td><td><i>(8th grade)</i></td></tr>
 								<tr><td><i class="table-id">21.</i></td><td>2nd Timothy</td><td><p>70.4</p></td><td><i>(7th grade)</i></td></tr>
 								<tr><td><i class="table-id">22.</i></td><td>2nd Corinthians</td><td><p>70.7</p></td><td><i>(7th grade)</i></td></tr>
 								<tr><td><i class="table-id">23.</i></td><td>Judges</td><td><p>70.8</p></td><td><i>(7th grade)</i></td></tr>
@@ -4273,16 +4615,16 @@
 						<h1 class="title" id="miscellaneous-facts">Miscellaneous Facts:</h1>
 						<p class="description">Some extra, miscellaneous facts about the Bible.</p>
 						<br>
-						<h2 class="title2">Extreme Opposites</h2>
+						<h2 id="extreme-opposites" class="title2">Extreme Opposites</h2>
 						<div class="data-container">
 							<div class="data-block half-width-block">
-								<span><p>The longest word in the Bible </p><i>(Mahershalalhashbaz)</i><p> is 7 characters longer than the shortest verse </p><i>(John 11:35)</i><p>!</p></span>
+								<span><p>The longest word in the Bible <i>(Mahershalalhashbaz)</i> is 7 characters longer than the shortest verse <i>(John 11:35)</i>!</p></span>
 							</div>
 							<div class="data-block half-width-block">
-								<span><p>The longest verse in the Bible </p><i>(Esther 8:9)</i><p> is 3 times longer than the shortest chapter </p><i>(Psalm 117)</i><p>!</p></span>
+								<span><p>The longest verse in the Bible <i>(Esther 8:9)</i> is 3 times longer than the shortest chapter <i>(Psalm 117)</i>!</p></span>
 							</div>
 							<div class="data-block half-width-block">
-								<span><p>The longest chapter in the Bible </p><i>(Psalm 119)</i><p> is more than 8 times the length of the shortest book </p><i>(2 John)</i><p>!</p></span>
+								<span><p>The longest chapter in the Bible <i>(Psalm 119)</i> is more than 8 times the length of the shortest book <i>(2 John)</i>!</p></span>
 							</div>
 							<div class="data-block half-width-block">
 								<span><p>Psalms, the longest book, is nearly one quarter the length of the entire New Testament!</p></span>
@@ -4291,13 +4633,22 @@
 						<h2 id="misc-flesch-scores" class="title2">Flesch Reading Ease Scores</h2>
 						<div class="data-container">
 							<div class="data-block half-width-block">
-								<span><p>There are 3,800 verses in the Bible </p><i>(12.2%)</i><p> with a Flesch reading ease rating of more than 90 </p><i>(5th grade, the easiest Flesch rating)</i><p>.</p></span>
+								<span><p>There are 3,800 verses in the Bible <i>(12.2%)</i> with a Flesch reading ease rating of more than 90 <i>(5th grade, the easiest Flesch rating)</i>.</p></span>
 							</div>
 							<div class="data-block half-width-block">
-								<span><p>There are 80 verses in the Bible </p><i>(0.26%)</i><p> with a Flesch reading ease rating of less than 10 </p><i>(professional, the most difficult Flesch rating)</i><p>.</p></span>
+								<span><p>There are 80 verses in the Bible <i>(0.26%)</i> with a Flesch reading ease rating of less than 10 <i>(professional, the most difficult Flesch rating)</i>.</p></span>
 							</div>
 							<div class="data-block half-width-block">
-								<span><p>There are 24,476 verses in the Bible </p><i>(78.7%)</i><p> with a Flesch reading ease rating of more than 60 </p><i>(9th grade or less)</i><p>.</p></span>
+								<span><p>There are 24,476 verses in the Bible <i>(78.7%)</i> with a Flesch reading ease rating of more than 60 <i>(9th grade or less)</i>.</p></span>
+							</div>
+							<div class="data-block half-width-block">
+								<span><p>There are 10 chapters in the Bible <i>(0.84%)</i> with a Flesch reading ease rating of more than 90 <i>(5th grade, the easiest Flesch rating)</i>.</p></span>
+							</div>
+							<div class="data-block half-width-block">
+								<span><p>All chapters in the Bible have a Flesch reading ease rating above 50 <i>(12th grade or less)</i>.</p></span>
+							</div>
+							<div class="data-block half-width-block">
+								<span><p>There are 1150 chapters in the Bible <i>(96.7%)</i> with a Flesch reading ease rating of more than 60 <i>(9th grade or less)</i>.</p></span>
 							</div>
 						</div>
 						<span class="note"><i>Note: Main Flesch reading ease data located in </i><a onclick="scrollToNote('flesch-scores')">Flesch Reading Ease Scores</a><i>.</i></span>
@@ -4312,7 +4663,7 @@
 							<br>
 							<b>"I am the one who made this extensive compilation of information."</b>
 							<br>
-							<p>A super quick glance and you will be able to tell that the center of the sentence is somewhere in the word </p><i>"extensive"</i><p>. But, if we determine the center of the sentence by the number of words, the </p><i>"center"</i><p> is the word </p><i>"made"</i><p> because one side of the sentence has much sorter words than the other. This method (though technically correct in it's own way) is very unintuitive (and this type of offset also affects counting by verses and chapters). It makes much more sense to take the number of characters and use that to determine the center of the sentence, which in this case would be the </p><i>"ns"</i><p> in </p><i>"extensive"</i><p>.</p>
+							<p>A super quick glance and you will be able to tell that the center of the sentence is somewhere in the word </p><i>"extensive"</i><p>. But, if we determine the center of the sentence by the number of words, the </p><i>"center"</i><p> is the word </p><i>"made"</i><p> because one side of the sentence has much shorter words than the other. This method (though technically correct in it's own way) is very unintuitive (and this type of offset also affects counting by verses and chapters). It makes much more sense to take the number of characters and use that to determine the center of the sentence, which in this case would be the </p><i>"ns"</i><p> in </p><i>"extensive"</i><p>.</p>
 							<br>
 							<p>You might think that the shear volume of text in the Bible would help even this out some, but, though it does help some, it still doesn't completely resolve the issue, especially because of the significant difference between the old and new testaments. The average verse length of the Old Testament is 137 characters, while the average verse length of the New Testament is 118 characters. So, if you calculate the center of the Bible by the number of verses, you will be about 1.6% off from the true center of the Bible which might not sound like much but that's more than the entirety of Hosea, Joel, Amos, and Obadiah! Most people say the center verse of the Bible is Psalm 118:8 or some even say Psalm 118:9 but I can find no basis for either claim whether counting by character, word, verse, chapter, book or some convoluted combination of them. Some say the center of the Bible is Psalm 103:1, 2. This is correct if you count by the number of verses but, as already stated, this method will leave you 1.6% off from the true center of the real, physical Bible.</p>
 							<br>

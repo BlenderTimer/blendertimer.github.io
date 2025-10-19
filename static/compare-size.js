@@ -77,7 +77,7 @@ search();
 loadContributors();
 searchContributors();
 checkInitialURL();
-setInterval(function() {drawCanvas()}, 1000);
+setInterval(function() {drawCanvas()}, 250);
 //----------
 document.addEventListener('mousedown', function() {
 	for (var i=0; i < dropdownMenus.length; i++) {
@@ -1357,6 +1357,7 @@ function drawSearchObject(obj) {
 }
 
 function searchType(event) {
+	if (event.key.length > 1) {if (!(event.key == "Enter") && !(event.key == "Backspace")) {return}};
 	var object = event.target || event.srcElement;
 	if (popupMain.style.pointerEvents == "visible") {
 		if (event.key == "Enter") {
@@ -2085,7 +2086,7 @@ function getAlignment(align) {
 }
 
 function  getImageURL(id, angle) {
-	var url = "./compare-size/images/";
+	var url = "./compare-size/images";
 	if (angle == 1) {
 		url += "/" + objects[id-1].frontImage + ".svg";
 	}

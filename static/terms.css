@@ -1,0 +1,60 @@
+.title {
+	font-size: 20pt !important;
+}
+
+#policy {
+	display: block;
+}
+
+#policy h2 {
+	display: block;
+	margin: 30pt 0px 5pt 0px;
+	text-align: left;
+	color: var(--base-text);
+	font-size: 13.5pt;
+}
+
+#policy h3 {
+	display: block;
+	margin: 10pt 0px 0px 0px;
+	text-align: left;
+	color: var(--base-text);
+	font-size: 12pt;
+}
+
+#policy b {
+	color: var(--base-text);
+	font-size: 12pt;
+}
+
+#policy p {
+	color: var(--brighter-italic-text);
+	font-size: 12pt;
+}
+
+#policy i {
+	color: var(--italic-text);
+	font-size: 12pt;
+}
+
+.indent1 {
+	display: block;
+	margin: 0px 0px 0px 20px;
+}
+
+#lastupdated {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	margin: 0px auto 20px auto;
+	white-space-collapse: preserve;
+}
+
+#lastupdated b {
+	color: var(--brighter-italic-text);
+}
+
+#lastupdated p {
+	color: var(--italic-text);
+}
