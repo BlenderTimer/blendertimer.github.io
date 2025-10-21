@@ -12,6 +12,12 @@ window.pages = [
 		keywords:["who", "daniel", "roberts", "youtube", "social"]
 	},
 	{
+		title:"Brand Kit - BlenderTimer",
+		description:"Download the official BlenderTimer logo and additional brand elements!",
+		url:"/brand-kit",
+		keywords:["text"]
+	},
+	{
 		title:"Donate - BlenderTimer",
 		description:"Support free tools, resources, and content by supporting BlenderTimer!",
 		url:"/donate",
