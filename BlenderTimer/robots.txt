@@ -1,6 +1,0 @@
-﻿User-agent: *
-Disallow: /08a2e399-e7bb-4994-8195-109b1c364407
-Disallow: /noindex
-Allow: /
-
-Sitemap: https://blendertimer.com/sitemap.xml
