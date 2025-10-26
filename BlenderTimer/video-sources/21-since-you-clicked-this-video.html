@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en-US">
+	<head>
+		<!-- Google tag (gtag.js) -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-  SYR26MG6YV"></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
+			
+			gtag('config', 'G-SYR26MG6YV');
+		</script>
+		<meta charset="utf-8">
+		<title>Since You Clicked This Video - BlenderTimer Video Sources</title>
+		<meta name="description" content="The video sources for Since You Clicked This Video.">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="icon" href="/favicon.png">
+		<link rel="stylesheet" type="text/css" href="/static/main.css">
+		<link rel="stylesheet" type="text/css" href="/static/video-sources-pages.css">
+		<script src="/bt-js/bt-js.js"></script>
+		<script src="/static/videos.js"></script>
+		<script src="/static/jquery-3.6.3.js"></script>
+	</head>
+	<body>
+		<header></header>
+		<script>
+			fetch('/noindex/header.html')
+				.then(response => response.text())
+				.then(data => {document.querySelector('header').innerHTML = data});
+		</script>
+		<script src="/noindex/pages.js"></script>
+		<noscript>
+			<div id="nojs" style="position: fixed; top: 0px; bottom: 0px; left: 0px; right: 0px; display: flex; flex-flow: column; justify-content: center; align-items: center; background: var(--semi-back); padding: 15px 20px; z-index: 1000000; cursor: default;">
+				<b style="font-family: sans-serif; font-size: 16pt; color: #FFF; text-align: center;">Page Failed to Load</b>
+				<p style="font-family: sans-serif; font-size: 14pt; color: #FFF6; text-align: center;">This website requires Javascript to operate.</p>
+			</div>
+		</noscript>
+		<div id="loader" style="width: 100%; height: calc(100% - 50px); top: 50px; left: 0px; position: fixed; z-index: -100000;">
+			<img alt="Loading" src="/static/images/loader.gif" style="width: 100px; height: 100px; position: fixed; left: calc(50% - 50px); top: calc(50% - 25px); filter: drop-shadow(0px 0px 15px #000000);">
+		</div>
+		<div id="content-main" style="opacity: 0; transition: 0.5s">
+			<h1 id="title">Since You Clicked This Video</h1>
+			<p id="published-date">Published: May 8, 2024 at 11:35 PM (PT)</p>
+			<div id="video-info">
+				<div id="vid-info-left">
+					<b class="vit">Video Information</b>
+					<span><b>Length:</b><p>3:45</p><i>(6761 frames/30fps)</i></span>
+					<span><b>Resolution:</b><p>1920x1080</p><i>(FHD)</i></span>
+					<span><b>Most Rewatched:</b><a href="https://youtu.be/ETmGkEPpEmw?t=200" target="_blank">3:20 to 3:36</a></span>
+					<span class="spr"></span>
+					<b class="vit">Realtime Statistics</b>
+					<div id="realtime-stats">
+						<span title="Views"><img src="../static-0/files/images/icons/eye.svg" alt="Views"><b>...</b></span>
+						<span title="Likes"><img src="../static-0/files/images/icons/like.svg" alt="Likes"><b>...</b></span>
+						<span title="Comments"><img src="../static-0/files/images/icons/comment.svg" alt="Comments"><b>...</b></span>
+					</div>
+					<span class="spr"></span>
+					<b class="vit">Views in the First</b>
+					<div id="first-views">
+						<span><b>10 Minutes</b><p>...</p></span>
+						<span><b>30 Minutes</b><p>...</p></span>
+						<span><b>Hour</b><p>...</p></span>
+						<span><b>24 Hours</b><p>...</p></span>
+					</div>
+				</div>
+				<span class="spr" id="info1-spr" style="display: none"></span>
+				<div id="vid-info-right">
+					<a id="thumbnail" href="./thumbnails/21-since_you_clicked_this_video-1080.png" target="_blank"><img src="./thumbnails/21-since_you_clicked_this_video-180.png" alt="Thumbnail"></a>
+					<div id="video-icons">
+						<span><b>Upload ID</b><p>21</p></span>
+						<span><b>Video ID</b><p>13</p></span>
+						<span><b>Type</b><p>Video</p></span>
+					</div>
+					<span id="yt-link"><a href="https://youtu.be/ETmGkEPpEmw" target="_blank">https://youtu.be/ETmGkEPpEmw</a><img src="../static-0/files/images/icons/copy-link.svg" alt="Copy link" onclick="copyVideoLink(event)"></span>
+					<script type="text/javascript">
+						var fv = document.getElementById('first-views');
+						var video = videos[parseInt(document.getElementById('video-icons').children[0].children[1].textContent)-1];
+						if (video.views10 == -1) {fv.children[0].children[1].innerHTML = "NO DATA"}
+						else {fv.children[0].children[1].innerHTML = video.views10};
+						if (video.views10 == -1) {fv.children[1].children[1].innerHTML = "NO DATA"}
+						else {fv.children[1].children[1].innerHTML = video.views30};
+						if (video.views10 == -1) {fv.children[2].children[1].innerHTML = "NO DATA"}
+						else {fv.children[2].children[1].innerHTML = video.views1};
+						if (video.views10 == -1) {fv.children[3].children[1].innerHTML = "NO DATA"}
+						else {fv.children[3].children[1].innerHTML = video.views24};
+						//Realtime Stats
+						var ytid = document.getElementById('yt-link').children[0].textContent.removeBefore("/", 1, true);
+						$.get(
+							"https://www.googleapis.com/youtube/v3/videos",{
+							part: 'statistics',
+							id: ytid,
+							key: 'AIzaSyDsaGX5mhvqCpI3jWMFFGMmmmB5IUEyUrk'},
+							function(data) {
+								var views = 0;
+								var likes = 0;
+								var comments = 0;
+								views = data.items[0].statistics.viewCount;
+								likes = data.items[0].statistics.likeCount;
+								comments = data.items[0].statistics.commentCount;
+								document.getElementById("realtime-stats").children[0].children[1].innerHTML = parseInt(views).toLocaleString();
+								document.getElementById("realtime-stats").children[1].children[1].innerHTML = parseInt(likes).toLocaleString();
+								document.getElementById("realtime-stats").children[2].children[1].innerHTML = parseInt(comments).toLocaleString();
+							}
+						);
+					</script>
+				</div>
+			</div>
+			<h2>Corrections</h2>
+			<div id="corrections">
+				<div class="correction">
+					<a class="correction-time" href="https://youtu.be/ETmGkEPpEmw?t=135">2:15</a>
+					<span><i>"Earth has traveled 240 thousand kilometers along its orbit around the Sun."</i>
+					<p>Earth has traveled 4 thousand [4049] kilometers along its orbit around the Sun.</p></span>
+					<a href="https://blendertimer.com/factsheets/solar-system/planet-factsheet">https://blendertimer.com/factsheets/solar-system/planet-factsheet</a>
+				</div>
+			<h2>Information Sources</h2>
+			<div id="info-sources" class="sources">
+				<a id="IDXPTBU2" href="https://privateexterminator.com/are-all-the-ants-as-heavy-as-all-the-humans" target="_blank"><b>Ants Born</b><p>https://privateexterminator.com/are-all-the-ants-as-heavy-as-all-the-humans</p></a>
+				<a id="IDVZ8NINS" href="https://www.theworldcounts.com/challenges/toxic-exposures/polluted-bodies/how-many-babies-are-born-a-day" target="_blank"><b>World Population</b><p>https://www.theworldcounts.com/challenges/toxic-exposures/polluted-bodies/how-many-babies-are-born-a-day</p></a>
+				<a id="ID813AE8" href="https://wordsrated.com/how-many-words-does-the-average-person-say-a-day" target="_blank"><b>Words Spoken</b><p>https://wordsrated.com/how-many-words-does-the-average-person-say-a-day</p></a>
+				<a id="IDPD1LG6KM6" href="https://www.sellcell.com/blog/how-many-phone-calls-are-made-a-day-2023-statistics" target="_blank"><b>Phone Calls</b><p>https://www.sellcell.com/blog/how-many-phone-calls-are-made-a-day-2023-statistics</p></a>
+				<a id="IDZX9JTN" href="https://www.nasa.gov/international-space-station/space-station-facts-and-figures" target="_blank"><b>International Space Station Facts</b><p>https://www.nasa.gov/international-space-station/space-station-facts-and-figures</p></a>
+				<a id="IDDBSAO2Z" href="https://www.youtube.com/post/UgkxhsDaeoK-BhznsP3toH4FtkmuAT2qwneP" target="_blank"><b>People Stubbed Their Toe (rough calculation)</b><p>https://www.youtube.com/post/UgkxhsDaeoK-BhznsP3toH4FtkmuAT2qwneP</p></a>
+				<a id="IDKEXHXOL1" href="https://explodingtopics.com/blog/data-generated-per-day" target="_blank"><b>Data Created</b><p>https://explodingtopics.com/blog/data-generated-per-day</p></a>
+				<a id="IDRHSUS" href="https://www.weather.gov/fgz/Lightning" target="_blank"><b>Lightning Strikes</b><p>https://www.weather.gov/fgz/Lightning</p></a>
+				<a id="ID9FR3UFV43" href="https://photutorial.com/photos-statistics" target="_blank"><b>Photos Captured</b><p>https://photutorial.com/photos-statistics</p></a>
+				<a id="ID5KCECS" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7503180" target="_blank"><b>Red Blood Cells Produced</b><p>https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7503180</p></a>
+				<a id="IDDO585K88" href="https://www.yaguara.co/how-many-emails-are-sent-per-day" target="_blank"><b>Emails Sent</b><p>https://www.yaguara.co/how-many-emails-are-sent-per-day</p></a>
+				<a id="IDEV4FW" href="https://www.sellcell.com/blog/how-many-text-messages-are-sent-a-day-2023-statistics" target="_blank"><b>Mobile Messages Sent</b><p>https://www.sellcell.com/blog/how-many-text-messages-are-sent-a-day-2023-statistics</p></a>
+				<a id="ID24GN25" href="https://earthsky.org/space/voyager-spacecraft-getting-closer-to-earth" target="_blank"><b>Voyager 1 and 2 Speeds</b><p>https://earthsky.org/space/voyager-spacecraft-getting-closer-to-earth</p></a>
+				<a id="IDZQKWLX6" href="https://seo.ai/blog/how-many-people-use-google" target="_blank"><b>Google Searches</b><p>https://seo.ai/blog/how-many-people-use-google</p></a>
+				<a id="IDETC24EI" href="https://starchild.gsfc.nasa.gov/docs/StarChild/questions/question18.html" target="_blank"><b>Sun Orbit Facts</b><p>https://starchild.gsfc.nasa.gov/docs/StarChild/questions/question18.html</p></a>
+				<a id="IDMQANN5" href="https://en.wikipedia.org/wiki/History_of_supernova_observation" target="_blank"><b>Supernovas Observed in the Milky Way</b><p>https://en.wikipedia.org/wiki/History_of_supernova_observation</p></a>
+				<a id="IDWS65H6H0K" href="https://en.wikipedia.org/wiki/Galaxy" target="_blank"><b>Galaxies in the Universe</b><p>https://en.wikipedia.org/wiki/Galaxy</p></a>
+				<a id="IDBUEO4L"><b>Cell Deaths</b><p>www.ncbi.nlm.nih.gov/books/NBK10103</p></a>
+				<a id="IDONTY5D" href="https://my.clevelandclinic.org/health/articles/blinking" target="_blank"><b>Blinks</b><p>https://my.clevelandclinic.org/health/articles/blinking</p></a>
+				<a id="IDLTQ2UYWE" href="https://www.smithsonianmag.com/smithsonian-institution/oldest-material-smithsonian-institution-came-outer-space-180971017" target="_blank"><b>Meteors</b><p>https://www.smithsonianmag.com/smithsonian-institution/oldest-material-smithsonian-institution-came-outer-space-180971017</p></a>
+				<a id="IDPD6KWRK" href="https://www.wyzowl.com/youtube-stats" target="_blank"><b>Videos Uploaded to YouTube</b><p>https://www.wyzowl.com/youtube-stats</p></a>
+				<a id="ID9NKSM8Z" href="https://en.wikipedia.org/wiki/Electric_energy_consumption" target="_blank"><b>Electricity Used</b><p>https://en.wikipedia.org/wiki/Electric_energy_consumption</p></a>
+				<a id="IDS7BSYJX8V" href="https://www.nationalgeographic.com/culture/article/100-million-sharks-killed-every-year-study-shows-on-eve-of-international-conference-on-shark-protection" target="_blank"><b>Number of Sharks Killed per Year</b><p>https://www.nationalgeographic.com/culture/article/100-million-sharks-killed-every-year-study-shows-on-eve-of-international-conference-on-shark-protection</p></a>
+				<a id="IDBREI15N0O" href="https://www.aicr.org/news/globally-the-average-person-walks-about-5000-steps-per-day" target="_blank"><b>Distance Each Person Walks</b><p>https://www.aicr.org/news/globally-the-average-person-walks-about-5000-steps-per-day</p></a>
+				<a id="IDNCAHMZZ" href="https://www.chparks.com/411/How-To-Measure-Steps" target="_blank"><b>Average Stride</b><p>https://www.chparks.com/411/How-To-Measure-Steps</p></a>
+				<a id="IDMVMMB" href="https://blendertimer.com/factsheets/solar-system/planet-factsheet" target="_blank"><b>8 Planets Factsheet</b><p>https://blendertimer.com/factsheets/solar-system/planet-factsheet</p></a>
+				<a id="IDWN0P8" href="https://www.theworldcounts.com/stories/average-daily-water-usage" target="_blank"><b>Water Usage</b><p>https://www.theworldcounts.com/stories/average-daily-water-usage</p></a>
+				<a id="IDIYAX9X9" href="https://www.sellcell.com/how-many-mobile-phones-are-sold-each-year" target="_blank"><b>Phones Sold</b><p>https://www.sellcell.com/how-many-mobile-phones-are-sold-each-year</p></a>
+				<a id="IDNL1TYP7" href="https://www.iau.org/static/resolutions/IAU1976_French.pdf#page=9" target="_blank"><b>Astronomical and Light Data</b><p>https://www.iau.org/static/resolutions/IAU1976_French.pdf#page=9</p></a>
+				<a id="ID7XJ5V6" href="https://en.wikipedia.org/wiki/Speed_of_sound" target="_blank"><b>Speed of Sound</b><p>https://en.wikipedia.org/wiki/Speed_of_sound</p></a>
+				<a id="IDUIJDW" href="https://www.flightradar24.com/data/statistics" target="_blank"><b>Flights (calculated)</b><p>https://www.flightradar24.com/data/statistics</p></a>
+				<a id="IDFUB41VD5" href="https://www.bricksmcgee.com/blog/international-lego-day-lego-facts" target="_blank"><b>LEGO Minifigures Manufactured</b><p>https://www.bricksmcgee.com/blog/international-lego-day-lego-facts</p></a>
+				<a id="IDI73QCVC6J" href="https://www.usgs.gov/programs/earthquake-hazards/cool-earthquake-facts" target="_blank"><b>Earthquakes</b><p>https://www.usgs.gov/programs/earthquake-hazards/cool-earthquake-facts</p></a>
+				<a id="IDWFPF0CJGO" href="https://pubmed.ncbi.nlm.nih.gov/19744178" target="_blank"><b>Fingernail Growth</b><p>https://pubmed.ncbi.nlm.nih.gov/19744178</p></a>
+				<a id="IDKVBELY" href="https://stationx.net/ddos-statistics" target="_blank"><b>DDoS Attacks</b><p>https://stationx.net/ddos-statistics</p></a>
+				<a id="ID30QZ5PYE" href="https://www.sciencefocus.com/science/fun-facts" target="_blank"><b>Bacteria Inhaled (amount inhaled per breath)</b><p>https://www.sciencefocus.com/science/fun-facts</p></a>
+				<a id="IDQHY9QA7RR" href="https://www.lung.org/blog/how-your-lungs-work" target="_blank"><b>Breaths per Minute</b><p>https://www.lung.org/blog/how-your-lungs-work</p></a>
+				<a id="IDGUDQ2PG" href="https://www.transportation.gov/briefing-room/2023-numbers-more-flights-fewer-cancellations-more-consumer-protections" target="_blank"><b>Flights Canceled</b><p>https://www.transportation.gov/briefing-room/2023-numbers-more-flights-fewer-cancellations-more-consumer-protections</p></a>
+				<a id="IDREGJFB" href="https://www.depts.ttu.edu/housing/documents/sustainabilityToday/SustainabilityVolume1Issue3.pdf" target="_blank"><b>Newspapers Thrown Away</b><p>https://www.depts.ttu.edu/housing/documents/sustainabilityToday/SustainabilityVolume1Issue3.pdf</p></a>
+				<a id="IDVWW3I7IH" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6971407" target="_blank"><b>Eye Movements</b><p>https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6971407</p></a>
+				<a id="IDHG0FZ6" href="https://www.sciencefocus.com/the-human-body/how-fast-does-hair-grow" target="_blank"><b>Hair Growth</b><p>https://www.sciencefocus.com/the-human-body/how-fast-does-hair-grow</p></a>
+				<a id="IDQBYPHYSD" href="https://newsroom.heart.org/file?fid=59a7145e2cfac2546cae1995" target="_blank"><b>Blood Pumped</b><p>https://newsroom.heart.org/file?fid=59a7145e2cfac2546cae1995</p></a>
+				<a id="IDKUZU6H" href="https://www.smithsonianmag.com/science-nature/how-roads-have-transformed-the-natural-world-180982809" target="_blank"><b>Road Built</b><p>https://www.smithsonianmag.com/science-nature/how-roads-have-transformed-the-natural-world-180982809</p></a>
+				<a id="IDZPWNBK" href="https://www.sciencefocus.com/science/how-much-does-earths-atmosphere-weigh" target="_blank"><b>Weight of Air</b><p>https://www.sciencefocus.com/science/how-much-does-earths-atmosphere-weigh</p></a>
+				<a id="ID2UBFIDR" href="https://online.utpb.edu/about-us/articles/psychology/what-is-cognitive-bias-and-how-does-it-affect-our-lives" target="_blank"><b>Data Processed by the Brain</b><p>https://online.utpb.edu/about-us/articles/psychology/what-is-cognitive-bias-and-how-does-it-affect-our-lives</p></a>
+				<a id="IDGTTXQV"><b>Size of a Pixel</b><p>(calculated: ~200kb)</p></a>
+				<a id="IDP1TEXVP44" href="https://www.theworldcounts.com/challenges/people-and-poverty/hunger-and-obesity/food-waste-statistics" target="_blank"><b>Food Wasted</b><p>https://www.theworldcounts.com/challenges/people-and-poverty/hunger-and-obesity/food-waste-statistics</p></a>
+				<a id="IDLBJFZ7F3" href="https://isbndb.com/blog/how-many-books-are-in-the-world" target="_blank"><b>Books Published</b><p>https://isbndb.com/blog/how-many-books-are-in-the-world</p></a>
+				<a id="IDMIYLL"><b>Neurons Fired</b><p>(calculated)</p></a>
+				<a id="IDGJG7U"><b>Digital Cameras Manufactured</b><p>www.statista.com/statistics/264336/world-production-of-digital-cameras-since-1999</p></a>
+				<a id="IDJA39F0" href="https://everysecond.io/earth" target="_blank"><b>Rainfall</b><p>https://everysecond.io/earth</p></a>
+				<a id="IDNY5EWH4" href="https://www.nist.gov/blogs/taking-measure/brain-inspired-computing-can-help-us-create-faster-more-energy-efficient" target="_blank"><b>Math Calculations Performed by the Brain (max estimate)</b><p>https://www.nist.gov/blogs/taking-measure/brain-inspired-computing-can-help-us-create-faster-more-energy-efficient</p></a>
+				<a id="IDGUX4FT"><b>Statistics Forgotten by You</b><p>(it's literally an estimate, lol)</p></a>
+			</div>
+			<h2>Graphic Sources</h2>
+			<div id="graphic-sources" class="sources">
+				<a id="IDT6RO56" href="https://pixabay.com/vectors/ant-insect-animal-nature-wildlife-8648911" target="_blank"><b>Ant (Daniel Roberts)</b><p>https://pixabay.com/vectors/ant-insect-animal-nature-wildlife-8648911</p></a>
+				<a id="IDUDKCUI1T4" href="https://pixabay.com/vectors/smartphone-phone-device-iphone-8649934" target="_blank"><b>Smartphone (Daniel Roberts)</b><p>https://pixabay.com/vectors/smartphone-phone-device-iphone-8649934</p></a>
+				<a id="IDPY3TR51F5" href="https://blendertimer.com/web-tools/compare-size/images/transportation/spacecraft/satellites/International_Space_Station_ISS-top.svg" target="_blank"><b>International Space Station Silhouette (Daniel Roberts)</b><p>https://blendertimer.com/web-tools/compare-size/images/transportation/spacecraft/satellites/International_Space_Station_ISS-top.svg</p></a>
+				<a id="IDZOG3JH2C" href="https://pixabay.com/vectors/foot-human-side-person-man-woman-8238234/" target="_blank"><b>Human Foot (Daniel Roberts)</b><p>https://pixabay.com/vectors/foot-human-side-person-man-woman-8238234/</p></a>
+				<a id="ID0UF48KS" href="https://pixabay.com/vectors/supercomputer-futuristic-computer-7884574" target="_blank"><b>Supercomputer (Daniel Roberts)</b><p>https://pixabay.com/vectors/supercomputer-futuristic-computer-7884574</p></a>
+				<a id="IDD19LCSO"><b>Lightning (Daniel Roberts)</b><p>N/A</p></a>
+				<a id="IDGYS2JSQNQ"><b>DSLR Camera (Daniel Roberts)</b><p>N/A</p></a>
+				<a id="IDPMG32D" href="https://pixabay.com/vectors/blood-cell-red-human-anatomy-8307724" target="_blank"><b>Red Blood Cell (Daniel Roberts)</b><p>https://pixabay.com/vectors/blood-cell-red-human-anatomy-8307724</p></a>
+				<a id="IDR2Z0NHGB" href="https://pixabay.com/vectors/laptop-computer-technology-business-7884573" target="_blank"><b>Laptop (Daniel Roberts)</b><p>https://pixabay.com/vectors/laptop-computer-technology-business-7884573</p></a>
+				<a id="IDNX5CT5W"><b>Mail Icon (Daniel Roberts)</b><p>N/A</p></a>
+				<a id="IDEZWC20" href="https://pixabay.com/vectors/voyager-voyager-1-voyager-2-nasa-8652303" target="_blank"><b>Voyager (1 and 2) (Daniel Roberts)</b><p>https://pixabay.com/vectors/voyager-voyager-1-voyager-2-nasa-8652303</p></a>
+				<a id="ID1KTTG3I" href="https://pixabay.com/vectors/sun-star-space-solar-light-bright-8328084" target="_blank"><b>The Sun (Daniel Roberts)</b><p>https://pixabay.com/vectors/sun-star-space-solar-light-bright-8328084</p></a>
+				<a id="IDB0RRC10" href="https://pixabay.com/vectors/eso-306-17-galaxy-space-abstract-8282015" target="_blank"><b>ESO 306-17 (Daniel Roberts)</b><p>https://pixabay.com/vectors/eso-306-17-galaxy-space-abstract-8282015</p></a>
+				<a id="ID0TD3EF166"><b>Cell (Daniel Roberts)</b><p>N/A</p></a>
+				<a id="ID0AB741" href="https://pixabay.com/vectors/eye-human-blue-organ-look-view-7884585" target="_blank"><b>Human Eye (Daniel Roberts)</b><p>https://pixabay.com/vectors/eye-human-blue-organ-look-view-7884585</p></a>
+				<a id="IDVR8UXQ" href="https://pixabay.com/vectors/asteroid-meteor-space-meteorite-8648912" target="_blank"><b>Meteor (Daniel Roberts)</b><p>https://pixabay.com/vectors/asteroid-meteor-space-meteorite-8648912</p></a>
+				<a id="IDJIHBCRXE"><b>YouTube Logo (Daniel Roberts)</b><p>N/A</p></a>
+				<a id="ID8Y6JG"><b>Electric Icon (Daniel Roberts)</b><p>N/A</p></a>
+				<a id="IDC8UHDP" href="https://pixabay.com/vectors/shark-great-white-sea-creature-fish-7871133" target="_blank"><b>Great White Shark (Daniel Roberts)</b><p>https://pixabay.com/vectors/shark-great-white-sea-creature-fish-7871133</p></a>
+				<a id="IDMOMW4EQJ1"><b>Pixels (Daniel Roberts)</b><p>N/A</p></a>
+				<a id="IDRJN8IUZBE" href="https://pixabay.com/vectors/earth-planet-space-terrestrial-8233221" target="_blank"><b>Earth (Daniel Roberts)</b><p>https://pixabay.com/vectors/earth-planet-space-terrestrial-8233221</p></a>
+				<a id="IDL208RY" href="https://pixabay.com/vectors/water-drop-liquid-fluid-nature-8904702" target="_blank"><b>Water Drop (Daniel Roberts)</b><p>https://pixabay.com/vectors/water-drop-liquid-fluid-nature-8904702</p></a>
+				<a id="IDR7HD6KFS"><b>RGB Color Model ()</b><p>ttps://pixabay.com/vectors/color-rgb-red-green-blue-model-8318324</p></a>
+				<a id="ID33IBN6GN" href="https://pixabay.com/vectors/airplane-plane-aircraft-airliner-7719425" target="_blank"><b>Cartoon Airliner (Daniel Roberts)</b><p>https://pixabay.com/vectors/airplane-plane-aircraft-airliner-7719425</p></a>
+				<a id="IDT19SY7IT"><b>Small Plane (Daniel Roberts)</b><p>N/A</p></a>
+				<a id="IDF2OBT1" href="https://blendertimer.com/web-tools/compare-size/images/miscellaneous/toys/lego/Lego_Minifigure-front.svg" target="_blank"><b>LEGO Minifigure Silhouette (Daniel Roberts)</b><p>https://blendertimer.com/web-tools/compare-size/images/miscellaneous/toys/lego/Lego_Minifigure-front.svg</p></a>
+				<a id="IDVNPU5WMD" href="https://pixabay.com/vectors/person-man-stand-human-arms-legs-8238232" target="_blank"><b>Man Standing-Front (Daniel Roberts)</b><p>https://pixabay.com/vectors/person-man-stand-human-arms-legs-8238232</p></a>
+				<a id="IDANPANN8VB" href="https://pixabay.com/vectors/computer-desktop-screen-monitor-7884572" target="_blank"><b>Desktop Computer (Daniel Roberts)</b><p>https://pixabay.com/vectors/computer-desktop-screen-monitor-7884572</p></a>
+				<a id="IDRM4GY4R"><b>Newspaper (Daniel Roberts)</b><p>N/A</p></a>
+				<a id="IDGFT2A7R1E" href="https://pixabay.com/vectors/heart-anatomy-human-organ-veins-7735546" target="_blank"><b>Human Heart (Daniel Roberts)</b><p>https://pixabay.com/vectors/heart-anatomy-human-organ-veins-7735546</p></a>
+				<a id="IDQAWM8VMFW"><b>Highway (Daniel Roberts)</b><p>N/A</p></a>
+				<a id="IDEGPLFW" href="https://pixabay.com/vectors/brain-human-anatomy-organ-body-7822205" target="_blank"><b>Human Brain (Daniel Roberts)</b><p>https://pixabay.com/vectors/brain-human-anatomy-organ-body-7822205</p></a>
+				<a id="IDZYASICNR" href="https://pixabay.com/vectors/mountains-night-moon-landscape-5559099" target="_blank"><b>Moonscape (Daniel Roberts)</b><p>https://pixabay.com/vectors/mountains-night-moon-landscape-5559099</p></a>
+				<a id="IDRO0B50HNA" href="https://pixabay.com/vectors/tomato-food-vegetable-fruit-fresh-8655799" target="_blank"><b>Tomato (Daniel Roberts)</b><p>https://pixabay.com/vectors/tomato-food-vegetable-fruit-fresh-8655799</p></a>
+				<a id="IDKBV19"><b>Donut (Daniel Roberts)</b><p>N/A</p></a>
+				<a id="ID6MUHR7G0" href="https://pixabay.com/vectors/book-textbook-reading-clip-art-7735547" target="_blank"><b>Open Book (Daniel Roberts)</b><p>https://pixabay.com/vectors/book-textbook-reading-clip-art-7735547</p></a>
+			</div>
+			<h2>Audio Sources</h2>
+			<div id="audio-sources" class="sources">
+				<a id="ID2GEHOFS"><b>Narration (Daniel Roberts)</b><p>N/A</p></a>
+				<a id="ID0UGKEA0Q0" href="https://pixabay.com/music/pulses-beyond-infinity-159345" target="_blank"><b>Beyond Infinity (Daniel Roberts)</b><p>https://pixabay.com/music/pulses-beyond-infinity-159345</p></a>
+				<a id="ID8ULEJ3"><b>Hit-3 (Daniel Roberts)</b><p>N/A</p></a>
+			</div>
+			<div id="cc"><h2>Subtitles</h2><a href="./cc/21.txt" download="Since You Clicked This Video - Subtitles.txt" title="Download subtitles"><img src="../static-0/files/images/icons/download.svg" alt="Download"></a></div>
+			<div id="subtitles">
+				<p>Everything in this video is an</p>
+				<p>estimate and may not be 100% accurate.</p>
+				<p>Since you clicked this video:</p>
+				<p>Around 130 billion ants have hatched,</p>
+				<p>humans have collectively spoken</p>
+				<p>12 billion words,</p>
+				<p>10 billion nanoseconds have past,</p>
+				<p>2 million phone calls have been made,</p>
+				<p>the International Space Station</p>
+				<p>has traveled 131 kilometers ,</p>
+				<p>287 thousand people have stubbed their toe,</p>
+				<p>86 million gigabytes of data</p>
+				<p>has been created,</p>
+				<p>2.6 thousand lightning strikes</p>
+				<p>have occurred,</p>
+				<p>1.7 million photos have been captured,</p>
+				<p>your body has produced 78 million</p>
+				<p>red blood cells,</p>
+				<p>146 million emails have been sent,</p>
+				<p>56 million mobile messages</p>
+				<p>have been sent,</p>
+				<p>Voyager 1 has traveled 748 kilometers,</p>
+				<p>Voyager 2 has traveled 716 kilometers,</p>
+				<p>5 million Google searches have</p>
+				<p>been performed,</p>
+				<p>the Sun has traveled 12.3 thousand</p>
+				<p>kilometers along its orbit around</p>
+				<p>the Milky Way,</p>
+				<p>36.7 thousand supernovas have occurred,</p>
+				<p>71.3 million of the cells in</p>
+				<p>your body have died,</p>
+				<p>you've blinked 16 times,</p>
+				<p>54 meteors have entered and</p>
+				<p>been incinerated in the Earth's</p>
+				<p>atmosphere,</p>
+				<p>over 3 thousand videos have</p>
+				<p>been uploaded to YouTube,</p>
+				<p>59 billion watts of electricity</p>
+				<p>has been used worldwide,</p>
+				<p>humans have killed 484 sharks,</p>
+				<p>you've seen over 5 billion</p>
+				<p>pixels of this video (assuming</p>
+				<p>you're watching in full resolution,</p>
+				<p>which you probably aren't),</p>
+				<p>humans have collectively walked</p>
+				<p>or run 27.5 million kilometers</p>
+				<p>(equivalent to the distance around</p>
+				<p>the Earth 686 times),</p>
+				<p>11 billion liters of water</p>
+				<p>has been used,</p>
+				<p>6.1 thousand mobile phones</p>
+				<p>have been sold,</p>
+				<p>light has traveled 32 million</p>
+				<p>kilometers (equivalent to the</p>
+				<p>distance around the Earth 807 times),</p>
+				<p>sound has traveled a mere 39 kilometers,</p>
+				<p>300 aircraft have taken off,</p>
+				<p>1.3 thousand LEGO minifigures</p>
+				<p>have been produced,</p>
+				<p>551 people have been born,</p>
+				<p>2 earthquakes have occurred,</p>
+				<p>your fingernails have grown</p>
+				<p>173 nanometers,</p>
+				<p>there have been 65 DDoS attacks,</p>
+				<p>Earth has traveled 243 thousand</p>
+				<p>kilometers along its orbit around the Sun,</p>
+				<p>you have inhaled 2.1 thousand</p>
+				<p>potentially harmful bacteria,</p>
+				<p>3 commercial flights have been canceled,</p>
+				<p>113 thousand newspapers have</p>
+				<p>been thrown away,</p>
+				<p>your eyes have moved 420 times,</p>
+				<p>your hair has grown 626 nanometers,</p>
+				<p>your heart has pumped over</p>
+				<p>14 liters of blood,</p>
+				<p>5 kilometers of road has been built,</p>
+				<p>humans have collectively inhaled</p>
+				<p>153 thousand tonnes of air,</p>
+				<p>your amazingly designed brain</p>
+				<p>has processed the equivalent of</p>
+				<p>240 megabytes of data (or about</p>
+				<p>the equivalent of a 1.2 thousand</p>
+				<p>megapixel photo),</p>
+				<p>6.8 thousand tonnes of food</p>
+				<p>has been wasted,</p>
+				<p>13 books have been published,</p>
+				<p>the neurons in your brain have</p>
+				<p>fired 5 and a half trillion times,</p>
+				<p>49 digital cameras have</p>
+				<p>been manufactured,</p>
+				<p>3.4 trillion liters of rain</p>
+				<p>has fallen worldwide,</p>
+				<p>your brain has performed up</p>
+				<p>to 200 quintillion math calculations,</p>
+				<p>the Earth has rotated 0.868 degrees,</p>
+				<p>and you have forgotten around</p>
+				<p>94% of the statistics you just saw.</p>
+			</div>
+			<h2>Thumbnails</h2>
+			<div id="thumbnails">
+				<a href="./thumbnails/21-since_you_clicked_this_video-2-1080.png" class="tb"><img src="./thumbnails/21-since_you_clicked_this_video-2-180.png" alt="Thumbnail"><b>May 8, 2024</b></a>
+				<a href="./thumbnails/21-since_you_clicked_this_video-1-1080.png" class="tb"><img src="./thumbnails/21-since_you_clicked_this_video-1-180.png" alt="Thumbnail"><b>July 18, 2024</b></a>
+				<a href="./thumbnails/21-since_you_clicked_this_video-1080.png" class="tb"><img src="./thumbnails/21-since_you_clicked_this_video-180.png" alt="Thumbnail"><b>July 18, 2024</b></a>
+			</div>
+		</div>
+		<footer></footer>
+		<script>
+			fetch('/noindex/footer.html')
+				.then(response => response.text())
+				.then(data => {document.querySelector('footer').innerHTML = data});
+		</script>
+		<script src="/static/main.js"></script>
+		<script src="/static/video-sources-pages.js"></script>
+	</body>
+</html>

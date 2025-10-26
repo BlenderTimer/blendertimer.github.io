@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en-US">
+	<head>
+		<!-- Google tag (gtag.js) -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-  SYR26MG6YV"></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
+			
+			gtag('config', 'G-SYR26MG6YV');
+		</script>
+		<meta charset="utf-8">
+		<title>About - BlenderTimer</title>
+		<meta name="description" content="Everything you need to know about BlenderTimer! Check out the history of the logo (with a helpful timeline), check out the FAQs (frequently asked questions), or contact BlenderTimer via email or our contact form!">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="icon" href="/favicon.png" type="image/x-icon">
+		<link rel="stylesheet" type="text/css" href="/static/main.css">
+		<link rel="stylesheet" type="text/css" href="/static/about.css">
+	</head>
+	<body>
+		<header></header>
+		<script>
+			fetch('/noindex/header.html')
+				.then(response => response.text())
+				.then(data => {document.querySelector('header').innerHTML = data});
+		</script>
+		<script src="/noindex/pages.js"></script>
+		<noscript>
+			<div id="nojs" style="position: fixed; top: 0px; bottom: 0px; left: 0px; right: 0px; display: flex; flex-flow: column; justify-content: center; align-items: center; background: var(--semi-back); padding: 15px 20px; z-index: 1000000; cursor: default;">
+				<b style="font-family: sans-serif; font-size: 16pt; color: #FFF; text-align: center;">Page Failed to Load</b>
+				<p style="font-family: sans-serif; font-size: 14pt; color: #FFF6; text-align: center;">This website requires Javascript to operate.</p>
+			</div>
+		</noscript>
+		<div id="loader" style="width: 100%; height: calc(100% - 50px); top: 50px; left: 0px; position: fixed; z-index: -100000;">
+			<img alt="Loading" src="/static/images/loader.gif" style="width: 100px; height: 100px; position: fixed; left: calc(50% - 50px); top: calc(50% - 25px); filter: drop-shadow(0px 0px 15px #000000);">
+		</div>
+		<div id="popup-back" onclick="closePopup()" style="opacity: 0; pointer-events: none;"></div>
+		<div id="popup-container" style="opacity: 0;">
+			<div id="popup-main" style="pointer-events: none; user-select: none; transform: scale(0);">
+				<img id="popup-close" alt="Close" src="./static-0/files/images/icons/x.svg" onclick="closePopup()">
+				<div id="contact-popup" class="popup" style="display: none;">
+					<h1>Contact</h1>
+					<div class="popup-scroll">
+						<form action="https://formspree.io/f/mgejanbv" method="POST" id="contact-form">
+							<span><label>Your email:</label> <b>*</b><br><input type="email" name="email" id="contact-email" maxlength=75 required placeholder="thisguy@email.com"></span>
+							<span><label>Your name:</label><br><input type="text" name="name" id="contact-name" maxlength=50 placeholder="Some Person"></span>
+							<span><label>Company:</label><br><input type="text" name="company" id="contact-company" maxlength=50 placeholder="Havoc Generators Inc."></span>
+							<span><label>Subject:</label> <b>*</b><br><input type="text" name="subject" id="contact-subject" maxlength=100 required placeholder="Why am I contacting you"></span>
+							<span style="min-width: 100%"><label>Message:</label> <b>*</b><br><textarea name="message" id="contact-message" maxlength=10000 required placeholder="Hello! I'm someone!" oninput="contactInput(event)"></textarea><p id="contact-limit" style="display: block; position: absolute; bottom: -13pt; right: 0px; font-size: 10pt; color: var(--italic-text); user-select: none; pointer-events: none;">0/10,000</p></span>
+							<button type="submit">Send Message</button>
+						</form>
+					</div>
+				</div>
+				<div id="skills-popup" class="popup" style="display: none;">
+					<h1>Skills</h1>
+					<div class="popup-scroll">
+						<div id="live-skills">
+							<div class="live-skill">
+								<b class="title">Photographer</b>
+								<p>for</p>
+								<b title="Since 2011/01/01">0 years and 0 months</b>
+							</div>
+							<div class="live-skill">
+								<b class="title">3D Artist</b>
+								<p>for</p>
+								<b title="Since 2013/02/17">0 years and 0 months</b>
+							</div>
+							<div class="live-skill">
+								<b class="title">Videography</b>
+								<p>for</p>
+								<b title="Since 2013/02/28">0 years and 0 months</b>
+							</div>
+							<div class="live-skill">
+								<b class="title">Programmer</b>
+								<p>for</p>
+								<b title="Since 2014/07/29">0 years and 0 months</b>
+							</div>
+							<div class="live-skill">
+								<b class="title">YouTube</b>
+								<p>for</p>
+								<b title="Since 2022/03/16">0 years and 0 months</b>
+							</div>
+							<div class="live-skill">
+								<b class="title">Vector Designer</b>
+								<p>for</p>
+								<b title="Since 2020/09/04">0 years and 0 months</b>
+							</div>
+						</div>
+						<script type="text/javascript">
+							var lss = document.getElementById('live-skills').children;
+							for (var i=0; i < lss.length; i++) {
+								var y = parseInt(lss[i].children[2].title.substring(6, 10));
+								var m = parseInt(lss[i].children[2].title.substring(11, 13));
+								var d = parseInt(lss[i].children[2].title.substring(14, 16));
+								var t = (Date.now()-new Date(y, m-1, d).getTime())/31536000000;
+								lss[i].children[2].innerHTML = (Math.floor(t).toString() + " years and " + Math.floor(((t-Math.floor(t))*12)).toString() + " months").replace("11 years", "11 yrs").replace("1 years", "1 year").replace("11 yrs", "11 years").replace(" 1 months", " 1 month");
+							}
+						</script>
+						<h1 class="title">Skill List</h1>
+						<p class="description">A list of skills which I have used at some point and most likely still am.</p>
+						<div id="skill-list">
+							<ul>
+								<li><p>Photography</p><i> (wildlife, landscape, astro, macro, architecture, vehicles, portrait, food)</i><b> paid</b></li>
+								<li><p>Videography</p><i> (wildlife, landscape, astro, macro, architecture, vehicles)</i></li>
+								<li><p>YouTuber/EduTuber</p></li>
+								<li><p>3D Artist</p><i> (modelling, animating, product design, product visualization, 3D printing)</i><b> paid</b></li>
+								<li><p>2D Artist</p><i> (vector, abstract, blueprints/diagrams, posters)</i><b> paid</b></li>
+								<li><p>Logo Design</p><b> paid</b></li>
+								<li><p>Traditional Artist</p><i> (regular graphite)</i></li>
+								<li><p>Programming</p><i> (HTML, CSS, JS, VB.NET, Python, Custom Command Bot)</i></li>
+								<li><p>UI/UX Design</p></li>
+								<li><p>Generic DIY</p></li>
+								<li><p>Color Grading</p></li>
+								<li><p>Image Manipulation</p></li>
+								<li><p>Music Composition and Enhancement</p></li>
+								<li><p>Pixabay Ambassador</p></li>
+								<li><p>Transcription</p><i> (including forensic)</i><b> paid</b></li>
+								<li><p>Audio Analysis</p></li>
+								<li><p>Audio Enhancement</p><b> paid</b></li>
+								<li><p>House Building</p><i> (framing, sheetrock, painting, roofing/sheeting/metal, trusses)</i><b> paid</b></li>
+								<li><p>Road Maintenance</p></li>
+								<li><p>Chef/Cook</p></li>
+								<li><p>Welding</p><i> (steel)</i></li>
+								<li><p>Driving</p><i> (manual, automatic, tractor)</i></li>
+								<li><p>Snow removal</p><i> (snow shoveling, snow blowing)</i><b> paid</b></li>
+								<li><p>Carpentry</p><b> paid</b></li>
+								<li><p>Soldering</p></li>
+								<li><p>Public Speaking</p></li>
+								<li><p>Bookkeeping</p></li>
+								<li><p>Data Analysis</p></li>
+								<li><p>Tech Support</p><i> (international)</i></li>
+								<li><p>Community Management</p></li>
+								<li><p>Script-writing</p></li>
+								<li><p>Proofreading</p></li>
+								<li><p>Narration/Voiceover</p></li>
+								<li><p>Poetry</p></li>
+								<li><p>Firewood Processing</p><i> (gathering, cutting, splitting, stacking)</i><b> paid</b></li>
+								<li><p>Bookbinding</p></li>
+								<li><p>Sewing</p></li>
+								<li><p>Automobile Mechanics</p><i> (oil changing, wheel changing, caliper rebuilding, lighting replacement/enhancement)</i></li>
+								<li><p>Business Management</p></li>
+								<li><p>Wax Carving</p></li>
+								<li><p>Wood Carving</p></li>
+								<li><p>Metalworking</p></li>
+								<li><p>Laptop and Desktop Repair</p></li>
+							</ul>
+							<span style="margin: 10px 0px; display: block"><b>paid</b><i> means I have done it professionally/paid (outside of my own business) but I may also do it as a hobby</i></span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="content-main" class="limwidth" style="opacity: 0; transition: 0.5s;">
+			<h1 class="title">About BlenderTimer</h1>
+			<p class="description">Everything you need to know about BlenderTimer!</p>
+			<div id="about-block">
+				<div id="about-main">
+					<div id="about-left">
+						<div id="logo-section">
+							<div id="logo"><img src="./static-0/files/images/bt-logo.svg" alt="Offical BlenderTimer logo"></div>
+						</div>
+						<div id="socials" class="side-link-container">
+							<b>Socials</b>
+							<div class="side-links">
+								<a href="https://youtube.com/BlenderTimer" target="_blank"><img src="./static-0/files/images/Logo-YT-32.png" alt="YouTube logo"><b>YouTube</b></a>
+								<a href="https://discord.gg/EBYeZ3E58c"><img src="./static-0/files/images/Logo-Discord-32.png" alt="Discord Logo"><b class="social-text">Discord</b></a>
+								<a href="https://instagram.com/blendertimer"><img src="./static-0/files/images/Logo-Ig-32.png" alt="Instagram logo"><b class="social-text">Instagram</b></a>
+								<a href="https://pixabay.com/users/blendertimer-9538909"><img src="./static-0/files/images/Logo-Pix-32.png" alt="Pixabay logo"><b class="social-text">Pixabay</b></a>
+								<a href="https://blenderartists.org/u/blendertimer/activity/portfolio"><img src="./static-0/files/images/Logo-BA-32.png" alt="BlenderArtists logo"><b class="social-text">Blender Artists</b></a>
+							</div>
+						</div>
+						<div id="contact" class="side-link-container">
+							<b>Contact</b>
+							<div class="side-links">
+								<a onclick="showPopup('contact')"><img src="./static-0/files/images/Logo-Mail-32.png" alt="Mail icon"><b id="contact-form-text">Contact</b></a>
+								<a onclick="contactEmailClick(event)"><img src="./static-0/files/images/Logo-Mail-32.png" alt="Mail icon"><b id="contact-text">Email</b></a>
+							</div>
+						</div>
+						<div id="support" class="side-link-container">
+							<b>Support</b>
+							<div class="side-links">
+								<a href="https://www.paypal.com/donate?business=inquiries@blendertimer.com&no_recurring=0&item_name=BlenderTimer+Donation" target="_blank"><img src="./static-0/files/images/Logo-PayPal-32.png" alt="PayPal logo"><b>PayPal</b></a>
+								<a href="https://www.youtube.com/channel/UCFMTkXP-dTa3cBh8XxVKBGQ/join" target="_blank"><img src="./static-0/files/images/Logo-YT-32.png" alt="YouTube logo"><b>YouTube Member</b></a>
+							</div>
+						</div>
+					</div>
+					<div id="about-right">
+						<article>
+							<h1 class="title">Who is BlenderTimer</h1>
+							<img src="/static/images/daniel-roberts.jpg" id="face-image" alt="Daniel Roberts, founder of BlenderTimer">
+							<p>Hi! I'm Daniel Roberts, founder of BlenderTimer! I started BlenderTimer back in May of 2015 with the dream of providing people with free stock media as well as educational resources. I'm a self-taught photographer, videographer, digital artist (3D and 2D), YouTube creator, Pixabay Ambassador, programmer/developer (mainly in HTML, CSS, JavaScript, .NET, and Python), DIYer, and musician to name the most common ones, however, I do have experience in (or am currently working in) </p><p class="popup-button-text" onclick="showPopup('skills')" style="color: #85C5F5; cursor: pointer;">some other areas</p><p id="age-line">. I'm [age] and currently based in Idaho, USA.</p>
+							<script type="text/javascript">document.getElementById('age-line').innerHTML = document.getElementById('age-line').innerHTML.replace("[age]", Math.floor((Date.now()-new Date(2005, 1, 7).getTime())/31536000000))</script>
+							<br><br>
+							<h1 class="title">The BlenderTimer <a href="https://youtube.com/BlenderTimer" target="_blank">YouTube Channel</a></h1>
+							<p>I started making educational YouTube videos in late November, 2021, though I uploaded the first video on March 16, 2022. I animate all the videos myself in </p><a href="https://www.blender.org" target="_blank">Blender</a><p>. I write and narrate them myself as well. My primary goal is to increase interest and knowledge in science, history, and other important topics while doing so in an interesting way. Important things don't have to be boring! I love interacting with the community as well!</p>
+							<br><br>
+							<h1 class="title">Behind the Logo</h1>
+							<p>The logo you see today is actually my 6th logo. I started BlenderTimer way back when I was only 10, so my first logos looked pretty bad. Here's a timeline of the logo progression.</p>
+							<div id="logo-timeline">
+								<div class="logo-box"><img src="./static-0/files/images/Logo-BT0-512.png" alt="First BlenderTimer logo"><b>July 9</b><b>2015</b></div>
+								<div class="logo-box"><img src="./static-0/files/images/Logo-BT00-512.png" alt="BlenderTimer logo from May 13, 2016"><b>May 13</b><b>2016</b></div>
+								<div class="logo-box"><img src="./static-0/files/images/Logo-BT000-512.png" alt="BlenderTimer logo from October 25, 2017"><b>October 25</b><b>2017</b></div>
+								<div class="logo-box"><img src="./static-0/files/images/Logo-BT0000-512.png" alt="BlenderTimer logo from November 1, 2019"><b>November 1</b><b>2019</b></div>
+								<div class="logo-box"><img src="./static-0/files/images/Logo-BT00000-512.png" alt="BlenderTimer logo from October 31, 2020"><b>October 31</b><b>2020</b></div>
+								<div class="logo-box"><img src="./static-0/files/images/Logo-BT000000-512.png" alt="BlenderTimer logo from December 29, 2020 (before the color revamp)"><b>December 29</b><b>2020*</b></div>
+							</div>
+							<i>*This logo went through a color revamp on April 20, 2022, hence the difference between this last logo and the current logo.</i>
+							<br>
+							<p>I finally settled on the current logo as it represents many things I love including photography (the iris), color theory (the color wheel making the iris), 3D art (the cube), hexagons (pretty obvious I like those LOL), and much more. I also settled on it as it's easily visible on basically almost any background.</p>
+						</article>
+					</div>
+				</div>
+				<h1 class="title" id="faq">FAQs</h1>
+				<p class="description">Some more info about BlenderTimer!</p>
+				<div id="faqs">
+					<article>
+						<h1>What software do you use to create your animations?</h1>
+						<p>I create all the animations in </p><a href="https://www.blender.org" target="_blank">Blender</a><p>, create the music in </p><a href="https://lmms.io" target="_blank">LMMS</a><p>, edit any audio (such as narration and SFX) in </p><a href="https://www.audacityteam.org" target="_blank">Audacity</a><p>, create vector graphics in </p><a href="https://inkscape.org" target="_blank">Inkscape</a><p>, edit other types of images in </p><a href="https://www.gimp.org" target="_blank">GIMP</a><p>, and compile the videos in </p><a href="https://www.blackmagicdesign.com/products/davinciresolve" target="_blank">Davinci Resolve</a><p>.</p>
+					</article>
+					<article>
+						<h1>Is that your voice narrating your videos?</h1>
+						<p>Yes, I narrate my videos. The microphone I use is the </p><a href="https://amzn.to/3E8IXoV" target="_blank">Stellar X3</a><p>. The quality it produces is incredible!</p>
+						<br>
+						<i>The above link is an affiliate link.</i>
+					</article>
+					<article>
+						<h1>How did you learn to use Blender?</h1>
+						<p>My brother was the first one who introduced me to Blender. After that, I learned mostly from experimenting and trial-and-error, however I also learned quite bit from YouTube tutorials as well.</p>
+					</article>
+					<article>
+						<h1>How long does it take to make a video?</h1>
+						<p>This question really requires quite a complex answer. For example, some videos take significantly longer to make than others. I'll give my best estimate though.</p>
+						<br>
+						<p>Full length videos take, on average, 2 months to make. However, not all this time is spent actually making the video. The compiled time (i.e. if I worked on a video 24/7 till it was done) a video takes to make is around 50 hours, although around 25% of this is simply render times so, excluding render times, it's only about 36 hours. In making a video, around:</p>
+						<ul>
+							<li>17% is spent on research and writing the script</li>
+							<li>4% is spent recording the script (and editing the recording)</li>
+							<li>39% is spend animating the visuals</li>
+							<li>28% is spent rendering the video</li>
+							<li>6% is spent combining all the music, narration, SFX, etc.</li>
+							<li>2% is spent gathering all the video sources</li>
+							<li>2% is spent trying to come up with a good title</li>
+							<li>1% is spent making the thumbnail</li>
+							<li>and 1% is spent uploading the video</li>
+						</ul>
+						<p>This time is also not accounting for the time required to actually come up with an idea in the first place. Finding a good idea is usually what actually takes the longest time (generally a few weeks at least).</p><br>
+						<p>It's also worth noting that shorts take significantly less time. Usually they only take a few days to make (and only about a day to animate).</p>
+					</article>
+					<article>
+						<h1>Do you have any tips for becoming successful on YouTube?</h1>
+						<p>The main advice I can give is quality over quantity. Over </p><a href="https://blendertimer.com/nowstream/technology" target="_blank">200 videos are uploaded to YouTube every single second</a><p> so, it goes without saying, your video is just a drop in a bucket (or maybe even an ocean). But the vast majority of those 200 videos are pathetic quality, so when you have good quality, it WILL get noticed. Also, don't get discouraged if your video doesn't start out strong. My most popular videos took a while to shoot off.</p>
+					</article>
+					<article>
+						<h1>How can I contact you?</h1>
+						<p>You can contact me on multiple platforms, however, I'm more likely to see your messages on some platforms over others. Here's a list of ways to contact me (in order of how likely and soon I am to get your message):</p>
+						<ul>
+							<li>Discord: <a href="https://discord.gg/EBYeZ3E58c">https://discord.gg/EBYeZ3E58c</a></li>
+							<li>Pixabay: <a href="https://pixabay.com/users/blendertimer">https://pixabay.com/users/blendertimer</a></li>
+							<li><b>Email: inquiries@blendertimer.com</b></li>
+							<li>BlenderTimer: The <a onclick="showPopup('contact')">contact form</a> on this page</li>
+							<li>Blender Artists: <a href="https://blenderartists.org/u/blendertimer/activity/portfolio">https://blenderartists.org/u/blendertimer/activity/portfolio</a></li>
+							<li>Instagram: <a href="https://instagram.com/blendertimer">https://instagram.com/blendertimer</a> (I am unlikely to get your message)</li>
+						</ul>
+					</article>
+				</div>
+				<br>
+				<h1 class="title" id="stats">BlenderTimer Stats</h1>
+				<p class="description">Here are some stats just for fun!</p>
+				<div id="fun-stats">
+					<span><b>First YouTube Video: </b><a href="https://www.youtube.com/watch?v=yaPhKc31zPs" target="_blank">The Basics of the Solar System in 10 Minutes!</a><i> (uploaded March 16, 2022)</i></span>
+					<span><b>Most Viewed YouTube Video: </b><a href="https://youtu.be/cJOHvciuHj8" target="_blank">When MASSIVE Becomes TINY</a></span>
+					<span><b>First YouTube Short: </b><a href="https://www.youtube.com/shorts/CdNAMQ408QI" target="_blank">The INTERROBANG - Fantastic Fact 01</a><i> (uploaded November 29, 2022)</i></span>
+					<span><b>Most Viewed YouTube Short: </b><a href="https://youtube.com/shorts/N3YC7PHtGvw" target="_blank">I'm NOT Lazy - Fantastic Fact 15</a></span>
+					<span><b>"BlenderTimer" in binary: </b><p>01000010 01101100 01100101 01101110 01100100 01100101 01110010 01010100 01101001 01101101 01100101 01110010</p></span>
+					<span><b>"BlenderTimer" in braille: </b><p>⠃⠇⠑⠝⠙⠑⠗⠞⠊⠍⠑⠗</p></span>
+					<span style="display: flex; justify-content: center;"><a href="/channel-statistics">More Stats!</a></span>
+				</div>
+			</div>
+		</div>
+		<footer></footer>
+		<script>
+			fetch('/noindex/footer.html')
+				.then(response => response.text())
+				.then(data => {document.querySelector('footer').innerHTML = data});
+		</script>
+		<script src="/bt-js/bt-js.js"></script>
+		<script src="/static/main.js"></script>
+		<script src="/static/about.js"></script>
+	</body>
+</html>

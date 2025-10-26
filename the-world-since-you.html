@@ -61,12 +61,12 @@
 			</div>
 			<br>
 			<h1 class="title">The Data of Your Lifetime:</h1>
-			<div id="life-data" style="display: none;">
+			<div id="life-data">
 				<div class="data-block" id="data-people">
 					<div class="data-block-image"><img src="./static-0/files/images/people.svg" alt="Group of people icon"></div>
 					<div class="data-block-text">
 						<p>There are around</p>
-						<b></b>
+						<b>...</b>
 						<p>more people on Earth than when you were born.</p>
 					</div>
 				</div>
@@ -74,7 +74,7 @@
 					<div class="data-block-image"><img src="./static-0/files/images/people-ages.svg" alt="Group of people of different ages icon"></div>
 					<div class="data-block-text">
 						<p>You're older than</p>
-						<b></b>
+						<b>...</b>
 						<p>of people on Earth!</p>
 					</div>
 				</div>
@@ -82,7 +82,7 @@
 					<div class="data-block-image"><img src="./static-0/files/images/birthday.svg" alt="Birthday icon"></div>
 					<div class="data-block-text">
 						<p>You have the</p>
-						<b></b>
+						<b>...</b>
 						<p>most common birthday!</p>
 					</div>
 				</div>
@@ -90,7 +90,7 @@
 					<div class="data-block-image"><img src="./static-0/files/images/inventions.svg" alt="Inventions icon"></div>
 					<div class="data-block-text">
 						<p>There have been at least</p>
-						<b></b>
+						<b>...</b>
 						<p>world changing inventions/products in your lifetime.</p>
 					</div>
 				</div>
@@ -98,7 +98,7 @@
 					<div class="data-block-image"><img src="./static-0/files/images/war.svg" alt="Battle/war icon"></div>
 					<div class="data-block-text">
 						<p>There have been at least</p>
-						<b></b>
+						<b>...</b>
 						<p>wars in your lifetime.</p>
 					</div>
 				</div>
@@ -106,7 +106,7 @@
 					<div class="data-block-image"><img src="./static-0/files/images/war-death.svg" alt="Battle/war death icon"></div>
 					<div class="data-block-text">
 						<p>Around</p>
-						<b></b>
+						<b>...</b>
 						<p>people have died in wars since you were born.</p>
 					</div>
 				</div>
@@ -114,12 +114,10 @@
 			<h1 class="title" id="timeline-title">The Events of Your Lifetime:</h1>
 			<div id="timeline-legend" style="display: none;"><div style="background: var(--close-back);"><i>Regular Events</i></div><div style="background: #005CFF;"><i>Major Events</i></div></div>
 			<div id="timeline-filters" style="display: none;">
-				<button onclick="filter(event)">Hide Wars</button>
-				<button onclick="filter(event)">Hide Regular Events</button>
+				<button onclick="filter(event)"><img src="/static/images/icons/checkmark.svg" alt="Checkmark"><span><p>Hide Wars</p></span></button>
+				<button onclick="filter(event)"><img src="/static/images/icons/checkmark.svg" alt="Checkmark"><span><p>Hide Regular Events</p></span></button>
 			</div>
-			<div id="timeline">
-				<div class="event-start"><i>Specify your date of birth to view events.</i></div>
-			</div>
+			<div id="timeline"></div>
 			<button id="event-suggestion-button" onclick="showPopup('event-suggestion')">Suggest an Event</button>
 			<div class="spr"></div>
 			<p>We often read old books or hear stories from our grandparents of incredible events which happened in their life, but we often forget just how much as happened in our own lifetime! This fascinating tool shows you many events which have occurred in YOUR lifetime!</p>

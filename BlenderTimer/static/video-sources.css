@@ -1,0 +1,252 @@
+#content-main {
+	min-height: calc(100vh - 50px) !important;
+}
+
+#controls {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	position: relative;
+	z-index: 1;
+	height: auto;
+	width: 100%;
+	margin: 10px 0px 0px 0px;
+}
+
+#searchbar {
+	max-width: 300px;
+	width: 100%;
+	text-align: left;
+	padding: 5px 10px 5px 10px;
+	height: 30px;
+	margin: 0px;
+	outline: none;
+	border: 2px solid var(--base-back);
+	background: var(--far-back);
+	box-sizing: border-box;
+	border-radius: 5px;
+	color: var(--base-text);
+	font-weight: bold;
+	transition: 0.3s;
+}
+
+#searchbar:focus {
+	background: var(--farther-back);
+	border: 2px solid var(--close-back);
+}
+
+#sort-dd {
+	display: block;
+	position: relative;
+	width: 100%;
+	max-width: 300px;
+	border-radius: 5px;
+	box-sizing: border-box;
+	height: 30px;
+}
+
+#sort-dd span {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+	cursor: pointer;
+	font-weight: bold;
+	color: var(--base-text);
+	z-index: 1;
+	height: 30px;
+	width: 100%;
+	text-align: center;
+	background: var(--close-back);
+	border-radius: 5px;
+	box-sizing: border-box;
+	font-size: 12pt;
+	transition: 0.2s;
+}
+
+#sort-dd span:hover {
+	background: var(--hover-back1);
+}
+
+#sort-ddm {
+	display: flex;
+	flex-flow: column;
+	position: absolute;
+	width: 100%;
+	padding-top: 30px;
+	background: var(--base-back);
+	border-radius: 5px;
+	box-sizing: border-box;
+	box-shadow: 0px 0px 15px #0005;
+	overflow: hidden;
+}
+
+#sort-ddm button {
+	display: block;
+	background: #0000;
+	padding: 7px;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	color: var(--base-text);
+	font-size: 12pt;
+	transition: 0.2s;
+}
+
+#sort-ddm button:hover {
+	background: var(--hover-back1);
+}
+
+#video-list {
+	display: flex;
+	flex-wrap: wrap;
+	position: relative;
+	overflow: hidden;
+	padding: 10px 10px 0px 10px;
+	margin: 0px -15px 0px -15px;
+}
+
+#video-list-end {
+	position: absolute;
+	display: block;
+	bottom: 0px;
+	width: 100%;
+	height: 15vh;
+	background: linear-gradient(#0000 0%, var(--semi-far-back) 100%);
+	z-index: 1;
+	pointer-events: none;
+}
+
+.video-block {
+	display: block !important;
+	position: relative;
+	width: calc((100% / 6) - 10px);
+	margin: 5px !important;
+	border-radius: 5px;
+	overflow: hidden;
+	box-shadow: 0px 0px 10px #0005;
+	border: 2px solid var(--base-back);
+	padding: 0px;
+	box-sizing: border-box;
+	cursor: pointer !important;
+	transition: 0.2s !important;
+}
+
+.video-block:hover {
+	transform: scaleX(1.05) scaleY(1.05);
+	box-shadow: 0px 0px 10px #000A;
+}
+
+.video-type {
+	height: 25px;
+	width: 25px;
+	position: absolute;
+	right: 10px;
+	top: 10px;
+	border-radius: 15px;
+	box-shadow: 0px 0px 10px #0005;
+}
+
+.video-new {
+	position: absolute;
+	left: 10px;
+	top: 10px;
+	font-size: 11pt !important;
+	background: #C20;
+	padding: 2px 3px 2px 4px;
+	border-radius: 3px;
+	box-shadow: 0px 0px 10px #F11;
+}
+
+.video-thumb {
+	display: block;
+	width: 100%;
+	margin: 0px;
+}
+
+.video-title {
+	position: absolute;
+	bottom: 0px;
+	max-width: 100%;
+	min-width: 100%;
+	box-sizing: border-box;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	padding: 15px 5px 5px 5px;
+	color: #F5F5F5 !important;
+	background: linear-gradient(#0000, #000A);
+}
+
+.video-title p {
+	color: #F5F5F5 !important;
+	font-size: 10pt !important;
+	cursor: pointer;
+	text-shadow: 0px 0px 10px #000A;
+}
+
+#no-results {
+	color: var(--closer-back) !important;
+	padding: 0px 0px 5px 0px;
+	margin: 15px 0px 0px 20px;
+}
+
+@media screen and (max-width: 2400px) {
+	.video-block {
+		width: calc((100% / 5) - 10px);
+	}
+
+	#main-links a {
+		width: calc((100% / 5) - 10px);
+	}
+}
+
+@media screen and (max-width: 1900px) {
+	.video-block {
+		width: calc((100% / 4) - 10px);
+	}
+
+	#main-links a {
+		width: calc((100% / 4) - 10px);
+	}
+}
+
+@media screen and (max-width: 1300px) {
+	.video-block {
+		width: calc((100% / 3) - 10px);
+	}
+
+	#main-links a {
+		width: calc((100% / 3) - 10px);
+	}
+}
+
+@media screen and (max-width: 800px) {
+	.video-block {
+		width: calc((100% / 2) - 10px);
+	}
+
+	#main-links a {
+		width: calc((100% / 2) - 10px);
+	}
+
+	#controls {
+		flex-flow: column;
+		justify-content: center;
+		align-items: center;
+	}
+
+	#sort-dd {
+		margin-top: 10px;
+	}
+}
+
+@media screen and (max-width: 450px) {
+	.video-block {
+		width: calc(100% - 10px);
+	}
+
+	#main-links a {
+		width: calc(100% - 10px);
+	}
+}

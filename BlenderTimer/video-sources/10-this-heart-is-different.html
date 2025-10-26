@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en-US">
+	<head>
+		<!-- Google tag (gtag.js) -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-  SYR26MG6YV"></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
+			
+			gtag('config', 'G-SYR26MG6YV');
+		</script>
+		<meta charset="utf-8">
+		<title>This Heart is Different - BlenderTimer Video Sources</title>
+		<meta name="description" content="The video sources for This Heart is Different.">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="icon" href="/favicon.png">
+		<link rel="stylesheet" type="text/css" href="/static/main.css">
+		<link rel="stylesheet" type="text/css" href="/static/video-sources-pages.css">
+		<script src="/bt-js/bt-js.js"></script>
+		<script src="/static/videos.js"></script>
+		<script src="/static/jquery-3.6.3.js"></script>
+	</head>
+	<body>
+		<header></header>
+		<script>
+			fetch('/noindex/header.html')
+				.then(response => response.text())
+				.then(data => {document.querySelector('header').innerHTML = data});
+		</script>
+		<script src="/noindex/pages.js"></script>
+		<noscript>
+			<div id="nojs" style="position: fixed; top: 0px; bottom: 0px; left: 0px; right: 0px; display: flex; flex-flow: column; justify-content: center; align-items: center; background: var(--semi-back); padding: 15px 20px; z-index: 1000000; cursor: default;">
+				<b style="font-family: sans-serif; font-size: 16pt; color: #FFF; text-align: center;">Page Failed to Load</b>
+				<p style="font-family: sans-serif; font-size: 14pt; color: #FFF6; text-align: center;">This website requires Javascript to operate.</p>
+			</div>
+		</noscript>
+		<div id="loader" style="width: 100%; height: calc(100% - 50px); top: 50px; left: 0px; position: fixed; z-index: -100000;">
+			<img alt="Loading" src="/static/images/loader.gif" style="width: 100px; height: 100px; position: fixed; left: calc(50% - 50px); top: calc(50% - 25px); filter: drop-shadow(0px 0px 15px #000000);">
+		</div>
+		<div id="content-main" style="opacity: 0; transition: 0.5s">
+			<h1 id="title">This Heart is Different - Fantastic Fact 03</h1>
+			<p id="published-date">Published: March 29, 2023 at 10:23 PM (PT)</p>
+			<div id="video-info">
+				<div id="vid-info-left">
+					<b class="vit">Video Information</b>
+					<span><b>Length:</b><p>0:17</p><i>(520 frames/30fps)</i></span>
+					<span><b>Resolution:</b><p>1080x1920</p><i>(FHD)</i></span>
+					<span><b>Most Rewatched:</b><a>N/A</a></span>
+					<span class="spr"></span>
+					<b class="vit">Realtime Statistics</b>
+					<div id="realtime-stats">
+						<span title="Views"><img src="../static-0/files/images/icons/eye.svg" alt="Views"><b>...</b></span>
+						<span title="Likes"><img src="../static-0/files/images/icons/like.svg" alt="Likes"><b>...</b></span>
+						<span title="Comments"><img src="../static-0/files/images/icons/comment.svg" alt="Comments"><b>...</b></span>
+					</div>
+					<span class="spr"></span>
+					<b class="vit">Views in the First</b>
+					<div id="first-views">
+						<span><b>10 Minutes</b><p>...</p></span>
+						<span><b>30 Minutes</b><p>...</p></span>
+						<span><b>Hour</b><p>...</p></span>
+						<span><b>24 Hours</b><p>...</p></span>
+					</div>
+				</div>
+				<span class="spr" id="info1-spr" style="display: none"></span>
+				<div id="vid-info-right">
+					<a id="thumbnail" href="./thumbnails/10-this_heart_is_different_-_fantastic_fact_03-1080.png" target="_blank"><img src="./thumbnails/10-this_heart_is_different_-_fantastic_fact_03-180.png" alt="Thumbnail"></a>
+					<div id="video-icons">
+						<span><b>Upload ID</b><p>10</p></span>
+						<span><b>Short ID</b><p>3</p></span>
+						<span><b>Type</b><p>Short</p></span>
+					</div>
+					<span id="yt-link"><a href="https://youtu.be/vNIWfY383M8" target="_blank">https://youtu.be/vNIWfY383M8</a><img src="../static-0/files/images/icons/copy-link.svg" alt="Copy link" onclick="copyVideoLink(event)"></span>
+					<script type="text/javascript">
+						var fv = document.getElementById('first-views');
+						var video = videos[parseInt(document.getElementById('video-icons').children[0].children[1].textContent)-1];
+						if (video.views10 == -1) {fv.children[0].children[1].innerHTML = "NO DATA"}
+						else {fv.children[0].children[1].innerHTML = video.views10};
+						if (video.views10 == -1) {fv.children[1].children[1].innerHTML = "NO DATA"}
+						else {fv.children[1].children[1].innerHTML = video.views30};
+						if (video.views10 == -1) {fv.children[2].children[1].innerHTML = "NO DATA"}
+						else {fv.children[2].children[1].innerHTML = video.views1};
+						if (video.views10 == -1) {fv.children[3].children[1].innerHTML = "NO DATA"}
+						else {fv.children[3].children[1].innerHTML = video.views24};
+						//Realtime Stats
+						var ytid = document.getElementById('yt-link').children[0].textContent.removeBefore("/", 1, true);
+						$.get(
+							"https://www.googleapis.com/youtube/v3/videos",{
+							part: 'statistics',
+							id: ytid,
+							key: 'AIzaSyDsaGX5mhvqCpI3jWMFFGMmmmB5IUEyUrk'},
+							function(data) {
+								var views = 0;
+								var likes = 0;
+								var comments = 0;
+								views = data.items[0].statistics.viewCount;
+								likes = data.items[0].statistics.likeCount;
+								comments = data.items[0].statistics.commentCount;
+								document.getElementById("realtime-stats").children[0].children[1].innerHTML = parseInt(views).toLocaleString();
+								document.getElementById("realtime-stats").children[1].children[1].innerHTML = parseInt(likes).toLocaleString();
+								document.getElementById("realtime-stats").children[2].children[1].innerHTML = parseInt(comments).toLocaleString();
+							}
+						);
+					</script>
+				</div>
+			</div>
+			<h2>Information Sources</h2>
+			<div id="info-sources" class="sources">
+				<a id="ID5ZEJVT8S5" href="https://www.mayoclinic.org/healthy-lifestyle/fitness/expert-answers/heart-rate/faq-20057979" target="_blank"><b>Average Heart Rate of a Human</b><p>https://www.mayoclinic.org/healthy-lifestyle/fitness/expert-answers/heart-rate/faq-20057979</p></a>
+				<a id="IDFXGUBV" href="https://www.nps.gov/cham/learn/nature/upload/Hummingbirds-of-Chamizal_english.pdf" target="_blank"><b>Heart Rate of a Hummingbird</b><p>https://www.nps.gov/cham/learn/nature/upload/Hummingbirds-of-Chamizal_english.pdf</p></a>
+				<a id="ID8F80UAZCJ" href="https://www.theatlantic.com/science/archive/2019/11/diving-blue-whales-heart-beats-very-very-slowly/602557" target="_blank"><b>Heart Rate of a Blue Whale</b><p>https://www.theatlantic.com/science/archive/2019/11/diving-blue-whales-heart-beats-very-very-slowly/602557</p></a>
+				<a id="IDPT8NSXSQ" href="https://www.fisheries.noaa.gov/feature-story/big-hearted-blue-whale" target="_blank"><b>Blue Whale Heart Weight</b><p>https://www.fisheries.noaa.gov/feature-story/big-hearted-blue-whale</p></a>
+				<a id="IDU0Y74" href="https://oceanservice.noaa.gov/facts/jellyfish.html" target="_blank"><b>Jellyfish Don't Have Hearts</b><p>https://oceanservice.noaa.gov/facts/jellyfish.html</p></a>
+			</div>
+			<h2>Graphic Sources</h2>
+			<div id="graphic-sources" class="sources">
+				<a id="IDGFT2A7R1E" href="https://pixabay.com/vectors/heart-anatomy-human-organ-veins-7735546" target="_blank"><b>Human Heart (Daniel Roberts)</b><p>https://pixabay.com/vectors/heart-anatomy-human-organ-veins-7735546</p></a>
+				<a id="IDOT31TZR"><b>Hummingbird (Daniel Roberts)</b><p>N/A</p></a>
+				<a id="ID6VWCC" href="https://pixabay.com/vectors/whale-blue-nature-animal-wild-7728288" target="_blank"><b>Blue Whale (Daniel Roberts)</b><p>https://pixabay.com/vectors/whale-blue-nature-animal-wild-7728288</p></a>
+				<a id="IDW2DB0" href="https://pixabay.com/vectors/jellyfish-marine-animal-nature-7747031" target="_blank"><b>Jellyfish (Daniel Roberts)</b><p>https://pixabay.com/vectors/jellyfish-marine-animal-nature-7747031</p></a>
+			</div>
+			<h2>Audio Sources</h2>
+			<div id="audio-sources" class="sources">
+				<a id="ID2GEHOFS"><b>Narration (Daniel Roberts)</b><p>N/A</p></a>
+			</div>
+			<div id="cc"><h2>Subtitles</h2><a href="./cc/10.txt" download="This Heart is Different - Subtitles.txt" title="Download subtitles"><img src="../static-0/files/images/icons/download.svg" alt="Download"></a></div>
+			<div id="subtitles">
+				<p>Your heart beats at about 80 beats per minute</p>
+				<p>but a hummingbird's heart can beat at up to</p>
+				<p>1260 beats per minute.</p>
+				<p>That's 21 beats per second!</p>
+				<p>On the flip side,</p>
+				<p>a blue whale's heart beats at about</p>
+				<p>6 beats per minute.</p>
+				<p>And their hearts weigh nearly a ton.</p>
+				<p>And, fun fact,</p>
+				<p>jellyfish don't even have hearts!</p>
+			</div>
+			<h2>Thumbnails</h2>
+			<div id="thumbnails">
+				<a href="./thumbnails/10-this_heart_is_different_-_fantastic_fact_03-1080.png" class="tb"><img src="./thumbnails/10-this_heart_is_different_-_fantastic_fact_03-180.png" alt="Thumbnail"><b>March 29, 2023</b></a>
+			</div>
+		</div>
+		<footer></footer>
+		<script>
+			fetch('/noindex/footer.html')
+				.then(response => response.text())
+				.then(data => {document.querySelector('footer').innerHTML = data});
+		</script>
+		<script src="/static/main.js"></script>
+		<script src="/static/video-sources-pages.js"></script>
+	</body>
+</html>

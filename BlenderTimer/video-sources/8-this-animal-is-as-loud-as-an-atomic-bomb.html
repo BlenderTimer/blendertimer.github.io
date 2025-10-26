@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en-US">
+	<head>
+		<!-- Google tag (gtag.js) -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-  SYR26MG6YV"></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
+			
+			gtag('config', 'G-SYR26MG6YV');
+		</script>
+		<meta charset="utf-8">
+		<title>This Animal is as LOUD as an ATOMIC BOMB! - BlenderTimer Video Sources</title>
+		<meta name="description" content="The video sources for This Animal is as LOUD as an ATOMIC BOMB!.">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="icon" href="/favicon.png">
+		<link rel="stylesheet" type="text/css" href="/static/main.css">
+		<link rel="stylesheet" type="text/css" href="/static/video-sources-pages.css">
+		<script src="/bt-js/bt-js.js"></script>
+		<script src="/static/videos.js"></script>
+		<script src="/static/jquery-3.6.3.js"></script>
+	</head>
+	<body>
+		<header></header>
+		<script>
+			fetch('/noindex/header.html')
+				.then(response => response.text())
+				.then(data => {document.querySelector('header').innerHTML = data});
+		</script>
+		<script src="/noindex/pages.js"></script>
+		<noscript>
+			<div id="nojs" style="position: fixed; top: 0px; bottom: 0px; left: 0px; right: 0px; display: flex; flex-flow: column; justify-content: center; align-items: center; background: var(--semi-back); padding: 15px 20px; z-index: 1000000; cursor: default;">
+				<b style="font-family: sans-serif; font-size: 16pt; color: #FFF; text-align: center;">Page Failed to Load</b>
+				<p style="font-family: sans-serif; font-size: 14pt; color: #FFF6; text-align: center;">This website requires Javascript to operate.</p>
+			</div>
+		</noscript>
+		<div id="loader" style="width: 100%; height: calc(100% - 50px); top: 50px; left: 0px; position: fixed; z-index: -100000;">
+			<img alt="Loading" src="/static/images/loader.gif" style="width: 100px; height: 100px; position: fixed; left: calc(50% - 50px); top: calc(50% - 25px); filter: drop-shadow(0px 0px 15px #000000);">
+		</div>
+		<div id="content-main" style="opacity: 0; transition: 0.5s">
+			<h1 id="title">This Animal is as LOUD as an ATOMIC BOMB! - Fantastic Fact 02</h1>
+			<p id="published-date">Published: January 28, 2023 at 8:29 PM (PT)</p>
+			<div id="video-info">
+				<div id="vid-info-left">
+					<b class="vit">Video Information</b>
+					<span><b>Length:</b><p>0:39</p><i>(1189 frames/30fps)</i></span>
+					<span><b>Resolution:</b><p>1080x1920</p><i>(FHD)</i></span>
+					<span><b>Most Rewatched:</b><a>N/A</a></span>
+					<span class="spr"></span>
+					<b class="vit">Realtime Statistics</b>
+					<div id="realtime-stats">
+						<span title="Views"><img src="../static-0/files/images/icons/eye.svg" alt="Views"><b>...</b></span>
+						<span title="Likes"><img src="../static-0/files/images/icons/like.svg" alt="Likes"><b>...</b></span>
+						<span title="Comments"><img src="../static-0/files/images/icons/comment.svg" alt="Comments"><b>...</b></span>
+					</div>
+					<span class="spr"></span>
+					<b class="vit">Views in the First</b>
+					<div id="first-views">
+						<span><b>10 Minutes</b><p>...</p></span>
+						<span><b>30 Minutes</b><p>...</p></span>
+						<span><b>Hour</b><p>...</p></span>
+						<span><b>24 Hours</b><p>...</p></span>
+					</div>
+				</div>
+				<span class="spr" id="info1-spr" style="display: none"></span>
+				<div id="vid-info-right">
+					<a id="thumbnail" href="./thumbnails/8-this_animal_is_as_loud_as_an_atomic_bomb_-_fantastic_fact_02-1080.png" target="_blank"><img src="./thumbnails/8-this_animal_is_as_loud_as_an_atomic_bomb_-_fantastic_fact_02-180.png" alt="Thumbnail"></a>
+					<div id="video-icons">
+						<span><b>Upload ID</b><p>8</p></span>
+						<span><b>Short ID</b><p>2</p></span>
+						<span><b>Type</b><p>Short</p></span>
+					</div>
+					<span id="yt-link"><a href="https://youtu.be/X5JBD44a1QU" target="_blank">https://youtu.be/X5JBD44a1QU</a><img src="../static-0/files/images/icons/copy-link.svg" alt="Copy link" onclick="copyVideoLink(event)"></span>
+					<script type="text/javascript">
+						var fv = document.getElementById('first-views');
+						var video = videos[parseInt(document.getElementById('video-icons').children[0].children[1].textContent)-1];
+						if (video.views10 == -1) {fv.children[0].children[1].innerHTML = "NO DATA"}
+						else {fv.children[0].children[1].innerHTML = video.views10};
+						if (video.views10 == -1) {fv.children[1].children[1].innerHTML = "NO DATA"}
+						else {fv.children[1].children[1].innerHTML = video.views30};
+						if (video.views10 == -1) {fv.children[2].children[1].innerHTML = "NO DATA"}
+						else {fv.children[2].children[1].innerHTML = video.views1};
+						if (video.views10 == -1) {fv.children[3].children[1].innerHTML = "NO DATA"}
+						else {fv.children[3].children[1].innerHTML = video.views24};
+						//Realtime Stats
+						var ytid = document.getElementById('yt-link').children[0].textContent.removeBefore("/", 1, true);
+						$.get(
+							"https://www.googleapis.com/youtube/v3/videos",{
+							part: 'statistics',
+							id: ytid,
+							key: 'AIzaSyDsaGX5mhvqCpI3jWMFFGMmmmB5IUEyUrk'},
+							function(data) {
+								var views = 0;
+								var likes = 0;
+								var comments = 0;
+								views = data.items[0].statistics.viewCount;
+								likes = data.items[0].statistics.likeCount;
+								comments = data.items[0].statistics.commentCount;
+								document.getElementById("realtime-stats").children[0].children[1].innerHTML = parseInt(views).toLocaleString();
+								document.getElementById("realtime-stats").children[1].children[1].innerHTML = parseInt(likes).toLocaleString();
+								document.getElementById("realtime-stats").children[2].children[1].innerHTML = parseInt(comments).toLocaleString();
+							}
+						);
+					</script>
+				</div>
+			</div>
+			<h2>Information Sources</h2>
+			<div id="info-sources" class="sources">
+				<a id="IDNDB4GY1" href="https://storyteller.travel/what-is-the-loudest-animal-in-the-world" target="_blank"><b>Decibel Level of Sperm Whale Clicks</b><p>https://storyteller.travel/what-is-the-loudest-animal-in-the-world</p></a>
+				<a id="IDSTN7B" href="https://www.youtube.com/watch?v=zsDwFGz0Okg" target="_blank"><b>Sperm Whales Clicking You Inside Out</b><p>https://www.youtube.com/watch?v=zsDwFGz0Okg</p></a>
+				<a id="IDS3EI13D" href="https://oceanconservancy.org/blog/2019/06/05/biggest-animals-ocean" target="_blank"><b>4th Largest Animal</b><p>https://oceanconservancy.org/blog/2019/06/05/biggest-animals-ocean</p></a>
+				<a id="IDJ2POGNZ2Z" href="https://www.chem.purdue.edu/chemsafety/Training/PPETrain/dblevels.htm" target="_blank"><b>Decibel Level of an Airplane</b><p>https://www.chem.purdue.edu/chemsafety/Training/PPETrain/dblevels.htm</p></a>
+				<a id="IDD4491E7I" href="https://www.bbc.com/future/article/20230306-just-how-loud-is-a-rocket-launch" target="_blank"><b>Decibel Level of a Rocket</b><p>https://www.bbc.com/future/article/20230306-just-how-loud-is-a-rocket-launch</p></a>
+				<a id="IDNNNUAZ9EB" href="https://www.calendar-canada.ca/faq/how-loud-is-a-nuclear-explosion" target="_blank"><b>Decibel Level of an Atomic Bomb (220-280)</b><p>https://www.calendar-canada.ca/faq/how-loud-is-a-nuclear-explosion</p></a>
+			</div>
+			<h2>Graphic Sources</h2>
+			<div id="graphic-sources" class="sources">
+				<a id="IDGZHXE" href="https://pixabay.com/vectors/sperm-whale-marine-ocean-animal-7695848" target="_blank"><b>Sperm Whale (Daniel Roberts)</b><p>https://pixabay.com/vectors/sperm-whale-marine-ocean-animal-7695848</p></a>
+				<a id="ID33IBN6GN" href="https://pixabay.com/vectors/airplane-plane-aircraft-airliner-7719425" target="_blank"><b>Cartoon Airliner (Daniel Roberts)</b><p>https://pixabay.com/vectors/airplane-plane-aircraft-airliner-7719425</p></a>
+				<a id="IDE4A175CWJ" href="https://pixabay.com/vectors/rocket-spaceship-launch-fire-stars-7757105" target="_blank"><b>Rocket (Daniel Roberts)</b><p>https://pixabay.com/vectors/rocket-spaceship-launch-fire-stars-7757105</p></a>
+				<a id="IDQI08B4IX"><b>Atomic Bomb (Daniel Roberts)</b><p>N/A</p></a>
+				<a id="IDXRQT96IQ"><b>Man Silhouette (Daniel Roberts)</b><p>N/A</p></a>
+			</div>
+			<h2>Audio Sources</h2>
+			<div id="audio-sources" class="sources">
+				<a id="ID2GEHOFS"><b>Narration (Daniel Roberts)</b><p>N/A</p></a>
+			</div>
+			<div id="cc"><h2>Subtitles</h2><a href="./cc/8.txt" download="This Animal is as LOUD as an ATOMIC BOMB! - Subtitles.txt" title="Download subtitles"><img src="../static-0/files/images/icons/download.svg" alt="Download"></a></div>
+			<div id="subtitles">
+				<p>The loudest animal on Earth is the sperm whale.</p>
+				<p>It's the fourth largest animal on Earth</p>
+				<p>and they produce a variety of clicks used for</p>
+				<p>echolocation and communication.</p>
+				<p>These clicks can exceed 230 decibels.</p>
+				<p>For comparison an airplane is generally</p>
+				<p>150 decibels at takeoff,</p>
+				<p>a rocket is around 200 decibels,</p>
+				<p>and an atomic bomb is anywhere from</p>
+				<p>220 to 280 decibels!</p>
+				<p>These clicks produced by the sperm whale</p>
+				<p>are so loud that they vibrate a human body</p>
+				<p>which in turn heats the human body and</p>
+				<p>can even cause temporary paralysis.</p>
+				<p>The sounds can travel hundreds</p>
+				<p>to possibly thousands of miles.</p>
+				<p>In fact, some researchers believe that</p>
+				<p>individuals can communicate with other</p>
+				<p>sperm whales on the other side of the planet.</p>
+			</div>
+			<h2>Thumbnails</h2>
+			<div id="thumbnails">
+				<a href="./thumbnails/8-this_animal_is_as_loud_as_an_atomic_bomb_-_fantastic_fact_02-1080.png" class="tb"><img src="./thumbnails/8-this_animal_is_as_loud_as_an_atomic_bomb_-_fantastic_fact_02-180.png" alt="Thumbnail"><b>January 28, 2023</b></a>
+			</div>
+		</div>
+		<footer></footer>
+		<script>
+			fetch('/noindex/footer.html')
+				.then(response => response.text())
+				.then(data => {document.querySelector('footer').innerHTML = data});
+		</script>
+		<script src="/static/main.js"></script>
+		<script src="/static/video-sources-pages.js"></script>
+	</body>
+</html>

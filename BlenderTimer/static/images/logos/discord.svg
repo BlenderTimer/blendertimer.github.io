@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   viewBox="0 0 255.99999 256"
+   version="1.1"
+   id="svg8"
+   sodipodi:docname="discord.svg"
+   inkscape:export-filename="discord-logo-blue.png"
+   inkscape:export-xdpi="566.18237"
+   inkscape:export-ydpi="566.18237"
+   inkscape:version="1.4 (86a8ad7, 2024-10-11)"
+   width="256"
+   height="256"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs8" />
+  <sodipodi:namedview
+     id="namedview8"
+     pagecolor="#505050"
+     bordercolor="#ffffff"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="1"
+     inkscape:deskcolor="#505050"
+     inkscape:zoom="3.1926395"
+     inkscape:cx="184.95668"
+     inkscape:cy="124.81835"
+     inkscape:window-width="3440"
+     inkscape:window-height="1377"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg8" />
+  <rect
+     style="opacity:1;fill:#5865f2;fill-opacity:1;stroke-width:3.02362;stroke-linecap:round;stroke-linejoin:round;paint-order:markers fill stroke"
+     id="rect1"
+     width="254.02179"
+     height="254.02179"
+     x="0.98910522"
+     y="0.98910522"
+     ry="39.778999" />
+  <path
+     d="m 192.68441,69.207683 a 154.12646,154.12646 0 0 0 -38.44733,-11.828821 105.62389,105.62389 0 0 0 -4.92501,10.011258 143.1771,143.1771 0 0 0 -42.66877,0 106.07828,106.07828 0 0 0 -4.92501,-10.011258 155.21113,155.21113 0 0 0 -38.476646,11.858136 C 38.909746,105.23648 32.313749,140.34184 35.611748,174.94884 v 0 a 154.9766,154.9766 0 0 0 47.154046,23.6723 113.89088,113.89088 0 0 0 10.099204,-16.28479 100.28846,100.28846 0 0 1 -15.903681,-7.59272 c 1.333857,-0.96742 2.638398,-1.96414 3.898967,-2.93156 a 110.76877,110.76877 0 0 0 94.278776,0 c 1.27522,1.04071 2.57976,2.03744 3.89896,2.93156 a 100.66957,100.66957 0 0 1 -15.93299,7.60738 112.86483,112.86483 0 0 0 10.0992,16.27013 154.27303,154.27303 0 0 0 47.18336,-23.65764 v 0 c 3.86966,-40.13298 -6.61065,-74.91587 -27.70318,-105.755817 z M 97.042462,153.66576 c -9.190422,0 -16.783147,-8.34027 -16.783147,-18.60071 0,-10.26045 7.328885,-18.67401 16.753831,-18.67401 9.424944,0 16.959044,8.41356 16.797804,18.67401 -0.16123,10.26044 -7.40217,18.60071 -16.768488,18.60071 z m 61.914418,0 c -9.20508,0 -16.76849,-8.34027 -16.76849,-18.60071 0,-10.26045 7.32889,-18.67401 16.76849,-18.67401 9.4396,0 16.91507,8.41356 16.75384,18.67401 -0.16124,10.26044 -7.38752,18.60071 -16.75384,18.60071 z"
+     id="path7"
+     style="fill:#ffffff;fill-opacity:1;stroke-width:1.46578" />
+</svg>

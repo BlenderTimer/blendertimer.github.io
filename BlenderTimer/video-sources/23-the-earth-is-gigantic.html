@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en-US">
+	<head>
+		<!-- Google tag (gtag.js) -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-  SYR26MG6YV"></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
+			
+			gtag('config', 'G-SYR26MG6YV');
+		</script>
+		<meta charset="utf-8">
+		<title>The Earth is GIGANTIC - BlenderTimer Video Sources</title>
+		<meta name="description" content="The video sources for The Earth is GIGANTIC.">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="icon" href="/favicon.png">
+		<link rel="stylesheet" type="text/css" href="/static/main.css">
+		<link rel="stylesheet" type="text/css" href="/static/video-sources-pages.css">
+		<script src="/bt-js/bt-js.js"></script>
+		<script src="/static/videos.js"></script>
+		<script src="/static/jquery-3.6.3.js"></script>
+	</head>
+	<body>
+		<header></header>
+		<script>
+			fetch('/noindex/header.html')
+				.then(response => response.text())
+				.then(data => {document.querySelector('header').innerHTML = data});
+		</script>
+		<script src="/noindex/pages.js"></script>
+		<noscript>
+			<div id="nojs" style="position: fixed; top: 0px; bottom: 0px; left: 0px; right: 0px; display: flex; flex-flow: column; justify-content: center; align-items: center; background: var(--semi-back); padding: 15px 20px; z-index: 1000000; cursor: default;">
+				<b style="font-family: sans-serif; font-size: 16pt; color: #FFF; text-align: center;">Page Failed to Load</b>
+				<p style="font-family: sans-serif; font-size: 14pt; color: #FFF6; text-align: center;">This website requires Javascript to operate.</p>
+			</div>
+		</noscript>
+		<div id="loader" style="width: 100%; height: calc(100% - 50px); top: 50px; left: 0px; position: fixed; z-index: -100000;">
+			<img alt="Loading" src="/static/images/loader.gif" style="width: 100px; height: 100px; position: fixed; left: calc(50% - 50px); top: calc(50% - 25px); filter: drop-shadow(0px 0px 15px #000000);">
+		</div>
+		<div id="content-main" style="opacity: 0; transition: 0.5s">
+			<h1 id="title">The Earth is GIGANTIC</h1>
+			<p id="published-date">Published: July 30, 2024 at 12:07 PM (PT)</p>
+			<div id="video-info">
+				<div id="vid-info-left">
+					<b class="vit">Video Information</b>
+					<span><b>Length:</b><p>5:56</p><i>(10680 frames/30fps)</i></span>
+					<span><b>Resolution:</b><p>1920x1080</p><i>(FHD)</i></span>
+					<span><b>Most Rewatched:</b><a href="https://youtu.be/I5p2ocOXALQ?t=165" target="_blank">2:45 to 3:10</a></span>
+					<span class="spr"></span>
+					<b class="vit">Realtime Statistics</b>
+					<div id="realtime-stats">
+						<span title="Views"><img src="../static-0/files/images/icons/eye.svg" alt="Views"><b>...</b></span>
+						<span title="Likes"><img src="../static-0/files/images/icons/like.svg" alt="Likes"><b>...</b></span>
+						<span title="Comments"><img src="../static-0/files/images/icons/comment.svg" alt="Comments"><b>...</b></span>
+					</div>
+					<span class="spr"></span>
+					<b class="vit">Views in the First</b>
+					<div id="first-views">
+						<span><b>10 Minutes</b><p>...</p></span>
+						<span><b>30 Minutes</b><p>...</p></span>
+						<span><b>Hour</b><p>...</p></span>
+						<span><b>24 Hours</b><p>...</p></span>
+					</div>
+				</div>
+				<span class="spr" id="info1-spr" style="display: none"></span>
+				<div id="vid-info-right">
+					<a id="thumbnail" href="./thumbnails/23-the_earth_is_gigantic-1080.png" target="_blank"><img src="./thumbnails/23-the_earth_is_gigantic-180.png" alt="Thumbnail"></a>
+					<div id="video-icons">
+						<span><b>Upload ID</b><p>23</p></span>
+						<span><b>Video ID</b><p>14</p></span>
+						<span><b>Type</b><p>Video</p></span>
+					</div>
+					<span id="yt-link"><a href="https://youtu.be/I5p2ocOXALQ" target="_blank">https://youtu.be/I5p2ocOXALQ</a><img src="../static-0/files/images/icons/copy-link.svg" alt="Copy link" onclick="copyVideoLink(event)"></span>
+					<script type="text/javascript">
+						var fv = document.getElementById('first-views');
+						var video = videos[parseInt(document.getElementById('video-icons').children[0].children[1].textContent)-1];
+						if (video.views10 == -1) {fv.children[0].children[1].innerHTML = "NO DATA"}
+						else {fv.children[0].children[1].innerHTML = video.views10};
+						if (video.views10 == -1) {fv.children[1].children[1].innerHTML = "NO DATA"}
+						else {fv.children[1].children[1].innerHTML = video.views30};
+						if (video.views10 == -1) {fv.children[2].children[1].innerHTML = "NO DATA"}
+						else {fv.children[2].children[1].innerHTML = video.views1};
+						if (video.views10 == -1) {fv.children[3].children[1].innerHTML = "NO DATA"}
+						else {fv.children[3].children[1].innerHTML = video.views24};
+						//Realtime Stats
+						var ytid = document.getElementById('yt-link').children[0].textContent.removeBefore("/", 1, true);
+						$.get(
+							"https://www.googleapis.com/youtube/v3/videos",{
+							part: 'statistics',
+							id: ytid,
+							key: 'AIzaSyDsaGX5mhvqCpI3jWMFFGMmmmB5IUEyUrk'},
+							function(data) {
+								var views = 0;
+								var likes = 0;
+								var comments = 0;
+								views = data.items[0].statistics.viewCount;
+								likes = data.items[0].statistics.likeCount;
+								comments = data.items[0].statistics.commentCount;
+								document.getElementById("realtime-stats").children[0].children[1].innerHTML = parseInt(views).toLocaleString();
+								document.getElementById("realtime-stats").children[1].children[1].innerHTML = parseInt(likes).toLocaleString();
+								document.getElementById("realtime-stats").children[2].children[1].innerHTML = parseInt(comments).toLocaleString();
+							}
+						);
+					</script>
+				</div>
+			</div>
+			<h2>Information Sources</h2>
+			<div id="info-sources" class="sources">
+				<a id="IDMVMMB" href="https://blendertimer.com/factsheets/solar-system/planet-factsheet" target="_blank"><b>8 Planets Factsheet</b><p>https://blendertimer.com/factsheets/solar-system/planet-factsheet</p></a>
+				<a id="IDWUC67" href="https://www.burjkhalifa.ae/en/the-tower/facts-figures" target="_blank"><b>Burj Khalifa Facts</b><p>https://www.burjkhalifa.ae/en/the-tower/facts-figures</p></a>
+				<a id="ID4GSLRH" href="https://en.wikipedia.org/wiki/Cruise_(aeronautics)" target="_blank"><b>Cruising Altitude of Airliners</b><p>https://en.wikipedia.org/wiki/Cruise_(aeronautics)</p></a>
+				<a id="ID1MH0HX2" href="https://en.wikipedia.org/wiki/K%C3%A1rm%C3%A1n_line" target="_blank"><b>Kármán Line</b><p>https://en.wikipedia.org/wiki/K%C3%A1rm%C3%A1n_line</p></a>
+				<a id="IDUQ1VOL" href="https://www.nasa.gov/reference/international-space-station" target="_blank"><b>ISS Information</b><p>https://www.nasa.gov/reference/international-space-station</p></a>
+				<a id="IDRJIOUT" href="https://en.wikipedia.org/wiki/Mount_Everest" target="_blank"><b>Mount Everest Facts</b><p>https://en.wikipedia.org/wiki/Mount_Everest</p></a>
+				<a id="IDDH25DJ" href="https://blendertimer.com/web-tools/speed-of-sound-calculator" target="_blank"><b>Speed of Sound</b><p>https://blendertimer.com/web-tools/speed-of-sound-calculator</p></a>
+				<a id="IDU8Y49Z" href="https://www.wtamu.edu/~cbaird/sq/2014/01/07/do-i-weigh-less-on-the-equator-than-at-the-north-pole" target="_blank"><b>Your Weight is Less at the Equator</b><p>https://www.wtamu.edu/~cbaird/sq/2014/01/07/do-i-weigh-less-on-the-equator-than-at-the-north-pole</p></a>
+				<a id="ID28YRNHVH" href="https://en.wikipedia.org/wiki/Earth" target="_blank"><b>Earth Facts</b><p>https://en.wikipedia.org/wiki/Earth</p></a>
+				<a id="IDYLHFFSJO" href="https://www.worldometers.info/world-population" target="_blank"><b>World Population</b><p>https://www.worldometers.info/world-population</p></a>
+				<a id="IDIIUQOVEE9"><b>Size of a Grain of Sand (2)</b><p>N/A (real world measurement of ~0.5 millimeters)</p></a>
+				<a id="IDM27M2NIAP" href="https://www.gigacalculator.com/articles/how-tall-is-a-normal-house-inside-outside" target="_blank"><b>Single Story House Height</b><p>https://www.gigacalculator.com/articles/how-tall-is-a-normal-house-inside-outside</p></a>
+				<a id="IDZU36P" href="https://en.wikipedia.org/wiki/Grand_Canyon" target="_blank"><b>Grand Canyon Facts</b><p>https://en.wikipedia.org/wiki/Grand_Canyon</p></a>
+				<a id="IDKOKVMYJ" href="https://blendertimer.com/web-tools/compare-size?186" target="_blank"><b>Height of a Lightbulb</b><p>https://blendertimer.com/web-tools/compare-size?186</p></a>
+				<a id="IDWNXX5MRU5" href="https://www.wm.com/location/arizona/az/_documents/Recycling-Containers.pdf" target="_blank"><b>Trash Bin Height</b><p>https://www.wm.com/location/arizona/az/_documents/Recycling-Containers.pdf</p></a>
+				<a id="IDQ34IY8" href="https://nssdc.gsfc.nasa.gov/planetary/factsheet/moonfact.html" target="_blank"><b>Moon Factsheet</b><p>https://nssdc.gsfc.nasa.gov/planetary/factsheet/moonfact.html</p></a>
+				<a id="IDD1EYT6" href="https://www.esbnyc.com/about/facts-figures" target="_blank"><b>Empire State Building Facts</b><p>https://www.esbnyc.com/about/facts-figures</p></a>
+				<a id="IDVS2KSP" href="https://nssdc.gsfc.nasa.gov/planetary/factsheet/sunfact.html" target="_blank"><b>NASA Sun Factsheet</b><p>https://nssdc.gsfc.nasa.gov/planetary/factsheet/sunfact.html</p></a>
+			</div>
+			<h2>Graphic Sources</h2>
+			<div id="graphic-sources" class="sources">
+				<a id="IDRJN8IUZBE" href="https://pixabay.com/vectors/earth-planet-space-terrestrial-8233221" target="_blank"><b>Earth (Daniel Roberts)</b><p>https://pixabay.com/vectors/earth-planet-space-terrestrial-8233221</p></a>
+				<a id="IDBDKV1VE" href="https://pixabay.com/vectors/mount-everest-mountain-nature-8297059" target="_blank"><b>Mount Everest (Daniel Roberts)</b><p>https://pixabay.com/vectors/mount-everest-mountain-nature-8297059</p></a>
+				<a id="IDC8VKL00Y"><b>Man Walking-Side (Daniel Roberts)</b><p>N/A</p></a>
+				<a id="IDAHFRWW" href="https://www.alamy.com/just-an-orange-car-image471694088.html" target="_blank"><b>Yellow Car (Daniel Roberts)</b><p>https://www.alamy.com/just-an-orange-car-image471694088.html</p></a>
+				<a id="IDJ0H7Y" href="https://pixabay.com/vectors/airliner-airplane-flying-plane-8886817" target="_blank"><b>Airliner (Daniel Roberts)</b><p>https://pixabay.com/vectors/airliner-airplane-flying-plane-8886817</p></a>
+				<a id="ID8JUJQ299C"><b>Sound Icon (Daniel Roberts)</b><p>N/A</p></a>
+				<a id="IDVNPU5WMD" href="https://pixabay.com/vectors/person-man-stand-human-arms-legs-8238232" target="_blank"><b>Man Standing-Front (Daniel Roberts)</b><p>https://pixabay.com/vectors/person-man-stand-human-arms-legs-8238232</p></a>
+				<a id="IDJVOEJZYDA" href="https://pixabay.com/vectors/giraffe-animal-nature-wild-8204924" target="_blank"><b>Giraffe (Daniel Roberts)</b><p>https://pixabay.com/vectors/giraffe-animal-nature-wild-8204924</p></a>
+				<a id="IDPRQ4HEK" href="https://pixabay.com/vectors/pond-nature-lake-water-trees-7866335" target="_blank"><b>Pond (Daniel Roberts)</b><p>https://pixabay.com/vectors/pond-nature-lake-water-trees-7866335</p></a>
+				<a id="IDFWAKIH" href="https://pixabay.com/vectors/rocks-grass-stone-boulder-nature-8897263" target="_blank"><b>Rocks (Daniel Roberts)</b><p>https://pixabay.com/vectors/rocks-grass-stone-boulder-nature-8897263</p></a>
+				<a id="IDL208RY" href="https://pixabay.com/vectors/water-drop-liquid-fluid-nature-8904702" target="_blank"><b>Water Drop (Daniel Roberts)</b><p>https://pixabay.com/vectors/water-drop-liquid-fluid-nature-8904702</p></a>
+				<a id="IDUYMLW"><b>Snail (Daniel Roberts)</b><p>N/A</p></a>
+				<a id="ID3UT9G" href="https://pixabay.com/vectors/building-deserted-brick-fallen-7695849" target="_blank"><b>Deserted Building (Daniel Roberts)</b><p>https://pixabay.com/vectors/building-deserted-brick-fallen-7695849</p></a>
+				<a id="IDC0TZ3MR2F"><b>Coronavirus (Daniel Roberts)</b><p>N/A</p></a>
+				<a id="IDBSXUAD" href="https://pixabay.com/vectors/sand-grain-particle-nature-small-8316168" target="_blank"><b>Grain of Sand (Daniel Roberts)</b><p>https://pixabay.com/vectors/sand-grain-particle-nature-small-8316168</p></a>
+				<a id="IDNGTVSGL" href="https://pixabay.com/vectors/house-building-architecture-modern-8886816" target="_blank"><b>House (Daniel Roberts)</b><p>https://pixabay.com/vectors/house-building-architecture-modern-8886816</p></a>
+				<a id="IDRG7SAB" href="https://pixabay.com/vectors/grand-canyon-valley-mountains-8886819" target="_blank"><b>Grand Canyon (Daniel Roberts)</b><p>https://pixabay.com/vectors/grand-canyon-valley-mountains-8886819</p></a>
+				<a id="IDH13IK1TXK" href="https://pixabay.com/vectors/burj-khalifa-dubai-building-tall-8207549" target="_blank"><b>Burj Khalifa (Daniel Roberts)</b><p>https://pixabay.com/vectors/burj-khalifa-dubai-building-tall-8207549</p></a>
+				<a id="ID5MVEVGLK7" href="https://pixabay.com/vectors/lightbulb-light-bulb-electric-8897265" target="_blank"><b>Lightbulb (Daniel Roberts)</b><p>https://pixabay.com/vectors/lightbulb-light-bulb-electric-8897265</p></a>
+				<a id="IDCTDR28" href="https://pixabay.com/vectors/recycle-bin-trash-can-garbage-8897264" target="_blank"><b>Trash Bin (Daniel Roberts)</b><p>https://pixabay.com/vectors/recycle-bin-trash-can-garbage-8897264</p></a>
+				<a id="IDNIIXUV" href="https://pixabay.com/vectors/moon-earth-space-natural-satellite-8236211" target="_blank"><b>The Moon (Daniel Roberts)</b><p>https://pixabay.com/vectors/moon-earth-space-natural-satellite-8236211</p></a>
+				<a id="ID10R82O" href="https://pixabay.com/vectors/empire-state-building-building-city-7845819" target="_blank"><b>Empire State Building (Daniel Roberts)</b><p>https://pixabay.com/vectors/empire-state-building-building-city-7845819</p></a>
+				<a id="ID1KTTG3I" href="https://pixabay.com/vectors/sun-star-space-solar-light-bright-8328084" target="_blank"><b>The Sun (Daniel Roberts)</b><p>https://pixabay.com/vectors/sun-star-space-solar-light-bright-8328084</p></a>
+			</div>
+			<h2>Audio Sources</h2>
+			<div id="audio-sources" class="sources">
+				<a id="ID2GEHOFS"><b>Narration (Daniel Roberts)</b><p>N/A</p></a>
+				<a id="IDFHYGOL7" href="https://pixabay.com/music/ambient-to-the-galaxy-10734" target="_blank"><b>To the Galaxy (Daniel Roberts)</b><p>https://pixabay.com/music/ambient-to-the-galaxy-10734</p></a>
+				<a id="ID8ULEJ3"><b>Hit-3 (Daniel Roberts)</b><p>N/A</p></a>
+				<a id="ID1C6VXL0LN" href="https://pixabay.com/sound-effects/object-flyby-8115" target="_blank"><b>Object Flyby (Daniel Roberts)</b><p>https://pixabay.com/sound-effects/object-flyby-8115</p></a>
+				<a id="IDTYOKO1ZE" href="https://pixabay.com/sound-effects/cyber-space-synthesized-108865" target="_blank"><b>Cyber Space-Synthesized (Daniel Roberts)</b><p>https://pixabay.com/sound-effects/cyber-space-synthesized-108865</p></a>
+				<a id="ID6WEWOGPCN"><b>Electric Iris (Daniel Roberts)</b><p>N/A</p></a>
+				<a id="ID7DVA5Y39C"><b>Retract1 (Daniel Roberts)</b><p>N/A</p></a>
+				<a id="IDDTKW91PY4" href="https://pixabay.com/music/suspense-escape-of-triumph-epic-cinematic-127029" target="_blank"><b>Escape of Triumph-Epic Cinematic (Daniel Roberts)</b><p>https://pixabay.com/music/suspense-escape-of-triumph-epic-cinematic-127029</p></a>
+				<a id="IDBAEXXGCRD"><b>Rumble-1 (Daniel Roberts)</b><p>N/A</p></a>
+				<a id="IDEQ6T93AE"><b>Pop2 (Daniel Roberts)</b><p>N/A</p></a>
+				<a id="IDT4YRJ"><b>Wind-2 (Daniel Roberts)</b><p>N/A</p></a>
+				<a id="IDRF6ND" href="https://pixabay.com/sound-effects/match-ignite-165316" target="_blank"><b>Match Ignite (Daniel Roberts)</b><p>https://pixabay.com/sound-effects/match-ignite-165316</p></a>
+				<a id="IDL0G65ZO18"><b>Airplane (Daniel Roberts)</b><p>N/A</p></a>
+				<a id="ID0KBF68"><b>Fast-Hit-2 (Daniel Roberts)</b><p>N/A</p></a>
+				<a id="IDWLZ7UT775" href="https://pixabay.com/sound-effects/wind-13850" target="_blank"><b>Wind (Daniel Roberts)</b><p>https://pixabay.com/sound-effects/wind-13850</p></a>
+				<a id="IDDEM15" href="https://pixabay.com/music/main-title-revolution-epic-cinematic-111025" target="_blank"><b>Revolution-Epic Cinematic (Daniel Roberts)</b><p>https://pixabay.com/music/main-title-revolution-epic-cinematic-111025</p></a>
+				<a id="IDD5OR5"><b>Hit Bang-3 (Daniel Roberts)</b><p>N/A</p></a>
+				<a id="IDW39XXG5"><b>Hit Bang-4 (Daniel Roberts)</b><p>N/A</p></a>
+				<a id="IDFTH9R"><b>Hit and drag-10 (Daniel Roberts)</b><p>N/A</p></a>
+				<a id="IDML440" href="https://pixabay.com/music/main-title-rise-of-the-enemy-full-2-09-14302" target="_blank"><b>Rise of the Enemy (Daniel Roberts)</b><p>https://pixabay.com/music/main-title-rise-of-the-enemy-full-2-09-14302</p></a>
+			</div>
+			<div id="cc"><h2>Subtitles</h2><a href="./cc/23.txt" download="The Earth is GIGANTIC - Subtitles.txt" title="Download subtitles"><img src="../static-0/files/images/icons/download.svg" alt="Download"></a></div>
+			<div id="subtitles">
+				<p>The Earth is gigantic. But no</p>
+				<p>one really seems to understand</p>
+				<p>just how gigantic it really is.</p>
+				<p>This often leads to all sorts</p>
+				<p>of strange convoluted ideas about</p>
+				<p>what the Earth looks like and</p>
+				<p>how it works.</p>
+				<p>The diameter of Earth is around</p>
+				<p>12,742 kilometers or 7,918 miles</p>
+				<p>making a circumference of 40,030</p>
+				<p>kilometers or 24,874 miles. But</p>
+				<p>there's a big problem...what does</p>
+				<p>this even mean? Who even knows</p>
+				<p>what 40 thousand kilometers is?</p>
+				<p>It's a large number...and that's</p>
+				<p>about where it ends.</p>
+				<p>But, fortunately, the video</p>
+				<p>does not end here because the</p>
+				<p>Earth is gigantic more than you</p>
+				<p>can believe.</p>
+				<p>But in order to get a better</p>
+				<p>idea about the scale of the Earth,</p>
+				<p>we're going to need to increase</p>
+				<p>our dimensions.</p>
+				<p>This is any average person standing</p>
+				<p>on the Earth near sea level. Looking</p>
+				<p>across the Earth at eye level</p>
+				<p>you'll see something like this.</p>
+				<p>From this perspective it is impossible</p>
+				<p>to get any idea of how big the</p>
+				<p>Earth is other than just "big".</p>
+				<p>But maybe removing some of the</p>
+				<p>visual obstacles will help. Eh,</p>
+				<p>that still looks pretty flat.</p>
+				<p>Well anyway, if we ascend to the</p>
+				<p>tops of the trees...it looks pretty</p>
+				<p>much the same. Even at the very</p>
+				<p>top of the Burj Khalifa (the tallest</p>
+				<p>building in the world), there's</p>
+				<p>not much more to see, with the</p>
+				<p>exception of a few distant mountains.</p>
+				<p>Ascending to the tops of the mountains...</p>
+				<p>there's still no clear reference</p>
+				<p>for the size of the Earth. Even</p>
+				<p>removing the visual obstacles</p>
+				<p>for a clear view of the horizon,</p>
+				<p>the curvature is minimal. I think</p>
+				<p>it's clear at this point that...</p>
+				<p>the Earth is rather large. Ascending</p>
+				<p>to the cruising altitude of airliners,</p>
+				<p>the Earth still looks remarkably flat.</p>
+				<p>But this should come as no surprise</p>
+				<p>for the reason that...the Earth's</p>
+				<p>design is absolutely gigantic.</p>
+				<p>At 100 kilometers (the border</p>
+				<p>of space), the curvature is now</p>
+				<p>quite visible. But even in space</p>
+				<p>the Earth appears to extend on</p>
+				<p>for quite some time. Likely because</p>
+				<p>it's gigantic. Anyway, if we ascend</p>
+				<p>to over four times this altitude,</p>
+				<p>we'll find the International</p>
+				<p>Space Station. At this point,</p>
+				<p>we can clearly see the curvature</p>
+				<p>of the Earth. But, even four times</p>
+				<p>farther than the edge of space</p>
+				<p>you can still only see a small</p>
+				<p>section of the Earth. Here's the</p>
+				<p>thing, though. We're 4 times farther</p>
+				<p>than the border of space but,</p>
+				<p>if we take a bit more than a step</p>
+				<p>back, we can see that we aren't</p>
+				<p>actually that far above the Earth.</p>
+				<p>It almost looks as if we're only</p>
+				<p>a few dozen kilometers above the</p>
+				<p>Earth, not several hundred. Looking</p>
+				<p>at the cruising altitude of airliners</p>
+				<p>from this perspective, it's easy</p>
+				<p>to see why the Earth was looking</p>
+				<p>so flat when we were at that altitude.</p>
+				<p>Viewing the entire Earth certainly</p>
+				<p>gives a different perspective!</p>
+				<p>Speaking of viewing the entire Earth.</p>
+				<p>This is Mt. Everest. Oh what,</p>
+				<p>you don't see it? Well...it's</p>
+				<p>right here. Not like...in the</p>
+				<p>real world but I mean like...that's</p>
+				<p>where it is here...or...I mean</p>
+				<p>it's not like actually...</p>
+				<p>Even viewing it in 8k you can</p>
+				<p>barely see it! And, in reality,</p>
+				<p>it'd be even more difficult to see Mt.</p>
+				<p>Everest because of all the other</p>
+				<p>mountains surrounding it.</p>
+				<p>And, while we're looking at</p>
+				<p>the entire Earth, we might as</p>
+				<p>well try traveling around it.</p>
+				<p>Walking around the Earth would</p>
+				<p>take a full year. Obviously ignoring</p>
+				<p>the water and whatever other obstacles</p>
+				<p>you may encounter. Driving around</p>
+				<p>the Earth at standard highway</p>
+				<p>speeds would take around 2 weeks</p>
+				<p>of continuous driving. Again ignoring</p>
+				<p>any obstacles. Flying around the</p>
+				<p>Earth in an airliner would take</p>
+				<p>2 full days. Even traveling around</p>
+				<p>the Earth at the speed of sound</p>
+				<p>would take 32 hours! But you might</p>
+				<p>actually be traveling faster than</p>
+				<p>this right now!</p>
+				<p>The Earth is so large that,</p>
+				<p>despite taking nearly 24 hours</p>
+				<p>to make one full rotation, anyone</p>
+				<p>near the equator will be traveling</p>
+				<p>1674 kilometers per hour or Mach 1.3!</p>
+				<p>Well except that the Earth is</p>
+				<p>also orbiting the Sun and the</p>
+				<p>Sun is orbiting the Milkyway and the...</p>
+				<p>But at least the air is moving</p>
+				<p>along with you so that you're</p>
+				<p>not being faced with supersonic winds.</p>
+				<p>Oh and, fun fact, because of the</p>
+				<p>Earth's spin and its shape you</p>
+				<p>actually weigh less at the equator</p>
+				<p>than at the poles. Your mass is</p>
+				<p>still the same, it's just your</p>
+				<p>weight is less. But the change</p>
+				<p>in weight is very negligible,</p>
+				<p>so you'll likely never know.</p>
+				<p>Anyway, Earth has a surface</p>
+				<p>area of 51 billion hectares. This</p>
+				<p>means that if every person on</p>
+				<p>the Earth were spaced out with</p>
+				<p>equal distances from everyone</p>
+				<p>else, each person would have over</p>
+				<p>6 hectares entirely for themselves!</p>
+				<p>Well except nearly 71% of Earth</p>
+				<p>is covered with water. But, even</p>
+				<p>only counting the surface area</p>
+				<p>of the land, each person would</p>
+				<p>have over 1.8 hectares all to</p>
+				<p>themselves. Well...and probably</p>
+				<p>some animals, trees, rocks, and</p>
+				<p>whatever else.</p>
+				<p>Ok, but let's try scaling everything</p>
+				<p>down a bit. If you were half the</p>
+				<p>height of a grain of sand, the</p>
+				<p>Earth would be about the height</p>
+				<p>of 450 houses or about the depth</p>
+				<p>of the Grand Canyon or more than</p>
+				<p>twice the height of the Burj Khalifa!</p>
+				<p>Speaking of the Burj Khalifa,</p>
+				<p>at this scale, the Burj Khalifa</p>
+				<p>would be about the height of a</p>
+				<p>lightbulb. Mt. Everest would be</p>
+				<p>only a little taller than a trash bin.</p>
+				<p>And, despite many people thinking</p>
+				<p>the moon isn't nearly as big as it is.</p>
+				<p>At this scale, the Moon would</p>
+				<p>be taller than the Empire State</p>
+				<p>Building. Remember, you are half</p>
+				<p>the height of a grain of sand.</p>
+				<p>Oh, and the Sun at this scale</p>
+				<p>would extend two times farther</p>
+				<p>than the edge of space!</p>
+			</div>
+			<h2>Thumbnails</h2>
+			<div id="thumbnails">
+				<a href="./thumbnails/23-the_earth_is_gigantic-2-1080.png" class="tb"><img src="./thumbnails/23-the_earth_is_gigantic-2-180.png" alt="Thumbnail"><b>July 30, 2024</b></a>
+				<a href="./thumbnails/23-the_earth_is_gigantic-1-1080.png" class="tb"><img src="./thumbnails/23-the_earth_is_gigantic-1-180.png" alt="Thumbnail"><b>July 30, 2024</b></a>
+				<a href="./thumbnails/23-the_earth_is_gigantic-1080.png" class="tb"><img src="./thumbnails/23-the_earth_is_gigantic-180.png" alt="Thumbnail"><b>July 30, 2024</b></a>
+			</div>
+		</div>
+		<footer></footer>
+		<script>
+			fetch('/noindex/footer.html')
+				.then(response => response.text())
+				.then(data => {document.querySelector('footer').innerHTML = data});
+		</script>
+		<script src="/static/main.js"></script>
+		<script src="/static/video-sources-pages.js"></script>
+	</body>
+</html>

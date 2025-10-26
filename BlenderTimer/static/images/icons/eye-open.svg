@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="24"
+   height="24"
+   viewBox="0 0 6.3499999 6.3499999"
+   version="1.1"
+   id="svg1"
+   xml:space="preserve"
+   sodipodi:docname="eye-open.svg"
+   inkscape:version="1.4 (86a8ad7, 2024-10-11)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"><sodipodi:namedview
+     id="namedview1"
+     pagecolor="#505050"
+     bordercolor="#ffffff"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="1"
+     inkscape:deskcolor="#505050"
+     inkscape:document-units="mm"
+     inkscape:zoom="32"
+     inkscape:cx="19.25"
+     inkscape:cy="12.203125"
+     inkscape:window-width="3440"
+     inkscape:window-height="1377"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     showguides="true" /><defs
+     id="defs1"><inkscape:perspective
+       sodipodi:type="inkscape:persp3d"
+       inkscape:vp_x="0 : 3.175 : 1"
+       inkscape:vp_y="-1.8369095e-13 : 1000 : 0"
+       inkscape:vp_z="6.3499999 : 3.175 : 1"
+       inkscape:persp3d-origin="3.175 : 2.1166666 : 1"
+       id="perspective1" /></defs><g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"><path
+       id="circle2"
+       style="fill:#f5f5f5;stroke-width:103.14;stroke-linecap:round;stroke-linejoin:round;paint-order:markers stroke fill"
+       d="m 3.175,1.3311849 c -1.7078401,0 -3.0923177,1.6453776 -3.0923177,1.8438151 0,0.1984375 1.3844777,1.8438151 3.0923177,1.8438151 1.70784,0 3.0923177,-1.6453776 3.0923177,-1.8438151 C 6.2673177,2.9765625 4.88284,1.3311849 3.175,1.3311849 Z m 0,0.5457031 c 0.7169275,0 1.298112,0.5811845 1.298112,1.298112 0,0.7169275 -0.5811845,1.298112 -1.298112,1.298112 -0.7169275,0 -1.298112,-0.5811845 -1.298112,-1.298112 0,-0.7169275 0.5811845,-1.298112 1.298112,-1.298112 z"
+       sodipodi:nodetypes="zzzzzsssss" /><circle
+       style="fill:#f5f5f5;fill-opacity:1;stroke:none;stroke-width:30;stroke-linecap:round;stroke-linejoin:round;paint-order:markers stroke fill"
+       id="path1"
+       cx="3.175"
+       cy="3.175"
+       r="0.69453126" /></g></svg>

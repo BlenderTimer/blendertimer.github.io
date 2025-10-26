@@ -328,7 +328,7 @@ const worldEvents = [
 	},
 	{
 		date:"1986-1-28",
-		title:"<p>The</p><b>Space Shuttle Challenger explodes</b><p> after launch.</p>",
+		title:"<p>The </p><b>Space Shuttle Challenger explodes</b><p> after launch.</p>",
 		description:"The Space Shuttle Challenger broke apart 73 seconds into its flight, killing all seven crew members aboard. The spacecraft disintegrated 46,000 feet (14 km) above the Atlantic Ocean, off the coast of Cape Canaveral, Florida. This was the first fatal accident involving an American spacecraft while in flight.",
 		major:true,
 		type:"incident",
@@ -430,6 +430,13 @@ const worldEvents = [
 		type:"world-population-increases",
 	},
 	{
+		date:"2000",
+		title:"<p>The </p><b>first USB flash drives</b><p> are patented and released.</p>",
+		description:"The first USB flash storage devices.",
+		major:true,
+		type:"invention",
+	},
+	{
 		date:"2001-1-15",
 		title:"<b>Wikipedia is founded</b><p>.</p>",
 		description:"Now one of the most used websites in the world, Wikipedia was founded by Jimmy Wales and Larry Sanger.",
@@ -473,6 +480,13 @@ const worldEvents = [
 		title:"<b>SpaceX is founded</b><p>.</p>",
 		description:"SpaceX is founded by Elon Musk.",
 		type:"company-founded",
+	},
+	{
+		date:"2002-9-17",
+		title:"<p>The </p><b>first robot vacuum</b><p> (Roomba) is released.</p>",
+		description:"Changing how people clean their floors.",
+		major:true,
+		type:"product-launched",
 	},
 	{
 		date:"2002-9-19",
@@ -603,6 +617,13 @@ const worldEvents = [
 		description:"The First Ivorian Civil War was a civil conflict in the Ivory Coast (Côte d'Ivoire) that began with a military rebellion.",
 		type:"war-ends",
 		deaths:3400,
+	},
+	{
+		date:"2007-5-25",
+		title:"<b>Google Street View</b><p> is released.</p>",
+		description:"Google Street View revolutionized digital navigation and maps.",
+		major:true,
+		type:"product-launched",
 	},
 	{
 		date:"2007-6-29",
@@ -739,7 +760,7 @@ const worldEvents = [
 	{
 		date:"2013-1-7",
 		title:"<p>The first </p><b>DJI Phantom</b><p> drone is released.</p>",
-		description:"The DJI Phantom (now the Phantom 1) was the first affordable drone which could easily be used by consumers for videography and photography. This release is likely what started the huge drone boom",
+		description:"The DJI Phantom (now the Phantom 1) was the first affordable drone which could easily be used by consumers for videography and photography. This release is likely what started the huge drone boom.",
 		major:true,
 		type:"product-launched",
 	},
@@ -761,6 +782,13 @@ const worldEvents = [
 		title:"<p>The </p><b>2014 Gaza War</b><p> begins.</p>",
 		description:"A military operation launched by Israel in the Gaza Strip, a Palestinian territory.",
 		type:"war-begins",
+	},
+	{
+		date:"2014-8-12",
+		title:"<p>The </p><b>first USB-C connectors</b><p> are released.</p>",
+		description:"USB-C superseded previous USB connectors as well as Mini DisplayPort and Lightning connectors.",
+		major:false,
+		type:"invention",
 	},
 	{
 		date:"2014-8-26",
@@ -786,7 +814,7 @@ const worldEvents = [
 		date:"2018-6",
 		title:"<p>OpenAI's </p><b>first GPT model</b><p> is released.</p>",
 		description:"The following years see a huge surge in AI tools and content.",
-		major:true,
+		major:false,
 		type:"product-launched",
 	},
 	{
@@ -797,11 +825,25 @@ const worldEvents = [
 		type:"human-accomplishment",
 	},
 	{
+		date:"2019",
+		title:"<p>One of </p><b>Australia's worst bushfire seasons</b>",
+		description:"The 2019–20 Australian bushfire season, also known as the Black Summer, was one of the most intense and catastrophic fire seasons on record in Australia.",
+		major:true,
+		type:"crisis-begins",
+	},
+	{
 		date:"2020-3-11",
 		title:"<p>A </p><b>COVID-19 pandemic</b><p> is declared by the World Health Organization.</p>",
 		description:"The World Health Organization (WHO) declares the outbreak of COVID-19 a global pandemic. The following months and years see a major rise in global restrictions as well as major changes in the work force and overall society. The origin and cause of the pandemic is one of the most controversial in history.",
 		major:true,
 		type:"pandemic-begins",
+	},
+	{
+		date:"2020-5-25",
+		title:"<p>The </p><b>murder of George Floyd</b><p> and beginning of major Black Lives Matter protests</p>",
+		description:"The cruel murder of George Floyd by a police officer led to hundreds of major protests and riots by the political movement Black Lives Matter. The riots led to 14,000 arrests, caused at least 19 deaths, and resulted in billions of dollars in property damage, the highest recorded damage from civil disorder in US history.",
+		major:true,
+		type:"incident",
 	},
 	{
 		date:"2020-8-31",
@@ -858,6 +900,13 @@ const worldEvents = [
 		type:"spacecraft-launch",
 	},
 	{
+		date:"2022-9-8",
+		title:"<b>Queen Elizabeth II dies</b>",
+		description:"The longest reigning British monarch, Queen Elizabeth II died at 3:10PM at the age of 96.",
+		type:"incident",
+		major:true,
+	},
+	{
 		date:"2022-11-3",
 		title:"<p>The </p><b>Tigray War</b><p> ends.</p>",
 		description:"A civil war (that was primarily fought in the Tigray Region of Ethiopia) between forces allied to the Ethiopian federal government and Eritrea on one side, and the Tigray People's Liberation Front (TPLF) on the other.",
@@ -869,6 +918,13 @@ const worldEvents = [
 		title:"<p>The </p><b>world population surpasses 8 billion</b><p>.</p>",
 		description:"",
 		type:"world-population-increases",
+	},
+	{
+		date:"2023-3-14",
+		title:"<b>GPT-4</b><p> is released by OpenAI.</p>",
+		description:"This was one of the most major steps in the AI age, transforming AI use in business, education, and everyday life.",
+		major:true,
+		type:"product-launched",
 	},
 	{
 		date:"2023-4-15",
@@ -888,5 +944,12 @@ const worldEvents = [
 		title:"<p>The </p><b>Israel-Hamas War</b><p> begins.</p>",
 		description:"An armed conflict between Israel and Hamas-led Palestinian militant groups.",
 		type:"war-begins",
+	},
+	{
+		date:"2025-4-21",
+		title:"<b>Pope Francis dies</b>",
+		description:"The first Jesuit pope, Jorge Mario Bergoglio died at 7:35AM at age 88.",
+		type:"incident",
+		major:true,
 	},
 ];

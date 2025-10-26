@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en-US">
+	<head>
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-  SYR26MG6YV"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            
+            gtag('config', 'G-SYR26MG6YV');
+        </script>
+        <!-- Google Tag Manager -->
+		<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+		new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+		j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+		'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+		})(window,document,'script','dataLayer','GTM-KSL94KH');</script>
+		<!-- End Google Tag Manager -->
+        <meta charset="utf-8">
+		<title>BT-JS - BlenderTimer</title>
+		<meta name="description" content="BT-JS, a free javascript library with many pre-built functions!">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="icon" href="/favicon.png" type="image/x-icon">
+		<link rel="stylesheet" type="text/css" href="/static/main.css">
+		<link rel="stylesheet" type="text/css" href="/static/bt-js.css">
+		<script src="/bt-js/bt-js.js"></script>
+	</head>
+	<body>
+		<header></header>
+		<script>
+			fetch('/noindex/header.html')
+				.then(response => response.text())
+				.then(data => {document.querySelector('header').innerHTML = data});
+		</script>
+		<script src="/noindex/pages.js"></script>
+		<noscript>
+			<div id="nojs" style="position: fixed; top: 0px; bottom: 0px; left: 0px; right: 0px; display: flex; flex-flow: column; justify-content: center; align-items: center; background: var(--semi-back); padding: 15px 20px; z-index: 1000000; cursor: default;">
+				<b style="font-family: sans-serif; font-size: 16pt; color: #FFF; text-align: center;">Page Failed to Load</b>
+				<p style="font-family: sans-serif; font-size: 14pt; color: #FFF6; text-align: center;">This website requires Javascript to operate.</p>
+			</div>
+		</noscript>
+		<div id="loader" style="width: 100%; height: calc(100% - 50px); top: 50px; left: 0px; position: fixed; z-index: -100000;">
+			<img alt="Loading" src="/static/images/loader.gif" style="width: 100px; height: 100px; position: fixed; left: calc(50% - 50px); top: calc(50% - 25px); filter: drop-shadow(0px 0px 15px #000000);">
+		</div>
+		<div id="content-main" style="opacity: 0; transition: 0.5s">
+			<div id="primary-block">
+				<h1 class="title">BT-JS</h1>
+				<p>BT-JS (BlenderTimer Javascript) is a free javascript library which includes many pre-built functions to make certain web programming areas easier, quicker, and just more time efficient! With BT-JS you can quickly get a random item from a list, get the cursor position relative to an element, translate time to a human readable time string, create cookies, and much more!</p>
+				<br>
+				<a href="./bt-js/docs#all-functions">View a full list of functions here!</a>
+				<div id="primary-links">
+					<a id="btjs-download" href="./bt-js/bt-js.js" download>Download BT-JS</a>
+					<a id="btjs-docs" href="./bt-js/docs">View Documentation</a>
+				</div>
+				<div id="secondary-links"><a id="download-old" href="./bt-js/archive">Previous Versions</a></div>
+			</div>
+			<div>
+				<h3 id="change-log">Changelog</h3>
+				<table id="change-table">
+					<tr>
+						<th style="width: 25%">Change</th>
+						<th style="width: 25%">Area</th>
+						<th style="width: 50%">Notes</th>
+					</tr>
+					<tr onclick="link('./bt-js/docs#functions-isnumber')">
+						<td><b>Bug Fix</b></td>
+						<td><p>isNumber</p></td>
+						<td>False "true" with some punctuation.</td>
+					</tr>
+					<tr onclick="link('./bt-js/docs')">
+						<td><b>General Optimization</b></td>
+						<td><p>-</p></td>
+						<td>-</td>
+					</tr>
+				</table>
+				<div id="change-table-error">
+					<img src="./static-0//files/images/rotate-device-2-factsheet.png" alt="Rotate device">
+					<b>Rotate your device to view the changelog</b>
+				</div>
+			</div>
+		</div>
+		<footer></footer>
+		<script>
+			fetch('/noindex/footer.html')
+				.then(response => response.text())
+				.then(data => {document.querySelector('footer').innerHTML = data});
+		</script>
+		<script src="/static/main.js"></script>
+		<script src="/static/bt-js.js"></script>
+	</body>
+</html>

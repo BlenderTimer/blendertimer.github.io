@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en-US">
+	<head>
+		<!-- Google tag (gtag.js) -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-  SYR26MG6YV"></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
+			
+			gtag('config', 'G-SYR26MG6YV');
+		</script>
+		<meta charset="utf-8">
+		<title>Age Estimator - BlenderTimer Activities</title>
+		<meta name="description" content="Answer these 10 questions and I'll try to guess your age!">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="icon" href="/favicon.png" type="image/x-icon">
+		<link rel="stylesheet" type="text/css" href="/static/main.css">
+		<link rel="stylesheet" type="text/css" href="./test-main.css">
+		<script src="/bt-js/bt-js.js"></script>
+	</head>
+	<body>
+		<header></header>
+		<script>
+			fetch('/noindex/header.html')
+				.then(response => response.text())
+				.then(data => {document.querySelector('header').innerHTML = data});
+		</script>
+		<script src="/noindex/pages.js"></script>
+		<noscript>
+			<div id="nojs" style="position: fixed; top: 0px; bottom: 0px; left: 0px; right: 0px; display: flex; flex-flow: column; justify-content: center; align-items: center; background: var(--semi-back); padding: 15px 20px; z-index: 1000000; cursor: default;">
+				<b style="font-family: sans-serif; font-size: 16pt; color: #FFF; text-align: center;">Page Failed to Load</b>
+				<p style="font-family: sans-serif; font-size: 14pt; color: #FFF6; text-align: center;">This website requires Javascript to operate.</p>
+			</div>
+		</noscript>
+		<div id="loader" style="width: 100%; height: calc(100% - 50px); top: 50px; left: 0px; position: fixed; z-index: -100000;">
+			<img alt="Loading" src="/static/images/loader.gif" style="width: 100px; height: 100px; position: fixed; left: calc(50% - 50px); top: calc(50% - 25px); filter: drop-shadow(0px 0px 15px #000000);">
+		</div>
+		<div id="popup-base" style="opacity: 0; pointer-events: none;" onclick="closePopup()">
+			<div id="popup" style="transform: scale(0);">
+				<img src="/static-0/files/images/close.svg" id="popup-exit" onclick="closePopup()">
+				<p id="popup-text"></p>
+			</div>
+		</div>
+		<div id="content-main" class="limwidth" style="opacity: 0; transition: 0.5s">
+			<h1 class="a-title">Age Estimator</h1>
+			<p class="a-description">Answer these 10 questions and I'll try to guess your age!</p>
+			<div id="quiz-base">
+				<div class="question">
+					<p>I've used a smartphone most of my life.<img src="../static-0/files/images/info-popup1.svg" onclick="setQuestionExplain(event), explainQuestion()"></p>
+					<div class="agree-responder"><b class="disagree">DISAGREE</b><button class="agree-responder-selector ars1" onclick="setAgree(event)" title="Strongly Disagree"></button><button class="agree-responder-selector ars2" onclick="setAgree(event)" title="Disagree"></button><button class="agree-responder-selector ars3" onclick="setAgree(event)" title="Slightly Disagree"></button><button class="agree-responder-selector ars4" onclick="setAgree(event)" title="Neutral"></button><button class="agree-responder-selector ars5" onclick="setAgree(event)" title="Slightly Agree"></button><button class="agree-responder-selector ars6" onclick="setAgree(event)" title="Agree"></button><button class="agree-responder-selector ars7" onclick="setAgree(event)" title="Strongly Agree"></button><b class="agree">AGREE</b></div>
+				</div>
+				<div class="question">
+					<p>I often use a physical dictionary to look up a word.<img src="../static-0/files/images/info-popup1.svg" onclick="setQuestionExplain(event), explainQuestion()"></p>
+					<div class="agree-responder"><b class="disagree">DISAGREE</b><button class="agree-responder-selector ars1" onclick="setAgree(event)" title="Strongly Disagree"></button><button class="agree-responder-selector ars2" onclick="setAgree(event)" title="Disagree"></button><button class="agree-responder-selector ars3" onclick="setAgree(event)" title="Slightly Disagree"></button><button class="agree-responder-selector ars4" onclick="setAgree(event)" title="Neutral"></button><button class="agree-responder-selector ars5" onclick="setAgree(event)" title="Slightly Agree"></button><button class="agree-responder-selector ars6" onclick="setAgree(event)" title="Agree"></button><button class="agree-responder-selector ars7" onclick="setAgree(event)" title="Strongly Agree"></button><b class="agree">AGREE</b></div>
+				</div>
+				<div class="question">
+					<p>For special occasions, I prefer handwritten letters rather than email or text.<img src="../static-0/files/images/info-popup1.svg" onclick="setQuestionExplain(event), explainQuestion()"></p>
+					<div class="agree-responder"><b class="disagree">DISAGREE</b><button class="agree-responder-selector ars1" onclick="setAgree(event)" title="Strongly Disagree"></button><button class="agree-responder-selector ars2" onclick="setAgree(event)" title="Disagree"></button><button class="agree-responder-selector ars3" onclick="setAgree(event)" title="Slightly Disagree"></button><button class="agree-responder-selector ars4" onclick="setAgree(event)" title="Neutral"></button><button class="agree-responder-selector ars5" onclick="setAgree(event)" title="Slightly Agree"></button><button class="agree-responder-selector ars6" onclick="setAgree(event)" title="Agree"></button><button class="agree-responder-selector ars7" onclick="setAgree(event)" title="Strongly Agree"></button><b class="agree">AGREE</b></div>
+				</div>
+				<div class="question">
+					<p>I did most of my school research with the internet.<img src="../static-0/files/images/info-popup1.svg" onclick="setQuestionExplain(event), explainQuestion()"></p>
+					<div class="agree-responder"><b class="disagree">DISAGREE</b><button class="agree-responder-selector ars1" onclick="setAgree(event)" title="Strongly Disagree"></button><button class="agree-responder-selector ars2" onclick="setAgree(event)" title="Disagree"></button><button class="agree-responder-selector ars3" onclick="setAgree(event)" title="Slightly Disagree"></button><button class="agree-responder-selector ars4" onclick="setAgree(event)" title="Neutral"></button><button class="agree-responder-selector ars5" onclick="setAgree(event)" title="Slightly Agree"></button><button class="agree-responder-selector ars6" onclick="setAgree(event)" title="Agree"></button><button class="agree-responder-selector ars7" onclick="setAgree(event)" title="Strongly Agree"></button><b class="agree">AGREE</b></div>
+				</div>
+				<div class="question">
+					<p>I grew up watching YouTube.<img src="../static-0/files/images/info-popup1.svg" onclick="setQuestionExplain(event), explainQuestion()"></p>
+					<div class="agree-responder"><b class="disagree">DISAGREE</b><button class="agree-responder-selector ars1" onclick="setAgree(event)" title="Strongly Disagree"></button><button class="agree-responder-selector ars2" onclick="setAgree(event)" title="Disagree"></button><button class="agree-responder-selector ars3" onclick="setAgree(event)" title="Slightly Disagree"></button><button class="agree-responder-selector ars4" onclick="setAgree(event)" title="Neutral"></button><button class="agree-responder-selector ars5" onclick="setAgree(event)" title="Slightly Agree"></button><button class="agree-responder-selector ars6" onclick="setAgree(event)" title="Agree"></button><button class="agree-responder-selector ars7" onclick="setAgree(event)" title="Strongly Agree"></button><b class="agree">AGREE</b></div>
+				</div>
+				<div class="question">
+					<p>I often use texting abbreviations in real-world conversations.<img src="../static-0/files/images/info-popup1.svg" onclick="setQuestionExplain(event), explainQuestion()"></p>
+					<div class="agree-responder"><b class="disagree">DISAGREE</b><button class="agree-responder-selector ars1" onclick="setAgree(event)" title="Strongly Disagree"></button><button class="agree-responder-selector ars2" onclick="setAgree(event)" title="Disagree"></button><button class="agree-responder-selector ars3" onclick="setAgree(event)" title="Slightly Disagree"></button><button class="agree-responder-selector ars4" onclick="setAgree(event)" title="Neutral"></button><button class="agree-responder-selector ars5" onclick="setAgree(event)" title="Slightly Agree"></button><button class="agree-responder-selector ars6" onclick="setAgree(event)" title="Agree"></button><button class="agree-responder-selector ars7" onclick="setAgree(event)" title="Strongly Agree"></button><b class="agree">AGREE</b></div>
+				</div>
+				<div class="question">
+					<p>Have you ever regularly used a VHS player?<img src="../static-0/files/images/info-popup1.svg" onclick="setQuestionExplain(event), explainQuestion()"></p>
+					<div class="yesno-responder"><button class="yesno-responder-no" onclick="setYesNo(event)">NO</button><button class="yesno-responder-yes" onclick="setYesNo(event)">YES</button></div>
+				</div>
+				<div class="question">
+					<p>Do you know what "sus" means?<img src="../static-0/files/images/info-popup1.svg" onclick="setQuestionExplain(event), explainQuestion()"></p>
+					<div class="yesno-responder"><button class="yesno-responder-no" onclick="setYesNo(event)">NO</button><button class="yesno-responder-yes" onclick="setYesNo(event)">YES</button></div>
+				</div>
+				<div class="question">
+					<p>Have you ever owned a landline phone?<img src="../static-0/files/images/info-popup1.svg" onclick="setQuestionExplain(event), explainQuestion()"></p>
+					<div class="yesno-responder"><button class="yesno-responder-no" onclick="setYesNo(event)">NO</button><button class="yesno-responder-yes" onclick="setYesNo(event)">YES</button></div>
+				</div>
+				<div class="question">
+					<p>Were/are you homeschooled?<img src="../static-0/files/images/info-popup1.svg" onclick="setQuestionExplain(event), explainQuestion()"></p>
+					<div class="yesno-responder"><button class="yesno-responder-no" onclick="setYesNo(event)">NO</button><button class="yesno-responder-yes" onclick="setYesNo(event)">YES</button></div>
+				</div>
+				<button id="finish" onclick="getResult()">Estimate My Age!</button>
+				<div id="result" style="background: var(--base-back); border: 3px solid var(--close-back); box-shadow: 0px 0px 20px #0005;">
+					<p>You are</p>
+					<b>...</b>
+				</div>
+			</div>
+			<div id="extra-pages-container">
+				<div class="spr"></div>
+				<h1 class="title">Some other pages you might enjoy:</h1>
+				<div id="extra-pages">
+					<a href="/activities">
+						<img alt="Activities" src="../static-0/files/images/activities.svg" class="misc-content-img">
+						<b>Other Activities</b>
+					</a>
+				</div>
+			</div>
+		</div>
+		<footer></footer>
+		<script>
+			fetch('/noindex/footer.html')
+				.then(response => response.text())
+				.then(data => {document.querySelector('footer').innerHTML = data});
+		</script>
+		<script src="/static/main.js"></script>
+		<script src="./test-main.js"></script>
+		<script src="./age-estimator.js"></script>
+	</body>
+</html>

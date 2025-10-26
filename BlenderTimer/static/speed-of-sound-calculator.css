@@ -1,0 +1,267 @@
+body {
+	background: var(--semi-back);
+}
+
+#content-main {
+	box-shadow: none;
+	background: var(--semi-back);
+	margin: 0px 0px 0px 0px;
+	border-radius: 0px;
+	min-height: calc(100vh - 50px);
+	padding: 0px 20px 20px 20px;
+}
+
+.title {
+	margin-top: 12px !important;
+	margin-bottom: 0px !important;
+	font-size: 14pt !important;
+}
+
+.description {
+	font-size: 12pt !important;
+	color: var(--italic-text) !important;
+	text-align: center;
+	width: 100% !important;
+	margin: 0px;
+	display: block !important;
+}
+
+#main-tool {
+	display: flex;
+	width: 100%;
+	justify-content: space-between;
+	align-items: flex-start;
+	margin: 10px 0px;
+}
+
+#tool-input, #tool-output {
+	display: flex;
+	flex-flow: column;
+	background: var(--close-back);
+	box-sizing: border-box;
+	box-shadow: 0px 0px 10px #0005;
+	border-radius: 5px;
+	padding: 10px;
+	width: calc(50% - 5px);
+}
+
+#mode-switch {
+	display: flex;
+	width: 100%;
+	max-width: 300px;
+	margin: 0px auto 5px auto;
+	overflow: hidden;
+	border-radius: 3px;
+	border: 2px solid var(--hover-back1);
+}
+
+#mode-switch button {
+	display: block;
+	width: 50%;
+	outline: none;
+	border: none;
+	box-sizing: border-box;
+	padding: 5px 10px;
+	background: var(--semi-back);
+	color: var(--base-text);
+	cursor: pointer;
+	font-size: 11pt;
+	font-weight: bold;
+	transition: 0.2s;
+}
+
+#mode-switch button:hover {
+	background: var(--closer-back);
+	box-shadow: 0px 0px 15px #0005 inset;
+}
+
+#mode-switch > button:first-child {
+	border-right: 1px solid var(--hover-back1);
+}
+
+#mode-switch > button:last-child {
+	border-left: 1px solid var(--hover-back1);
+}
+
+.mode-switch-selected {
+	background: var(--theme2) !important;
+	box-shadow: 0px 0px 15px #0005 inset !important;
+}
+
+#tool-input label, #tool-output label {
+	display: block;
+	width: 100%;
+	text-align: center;
+	font-size: 14pt;
+	color: var(--base-text);
+	font-weight: bold;
+	margin: 3px 0px 2px 0px;
+}
+
+#tool-output label {
+	margin-top: 0px !important;
+}
+
+#tool-input input, #tool-output input {
+	display: block;
+	width: 100%;
+	box-sizing: border-box;
+	border-radius: 3px;
+	background: var(--far-back);
+	box-shadow: 0px 0px 10px #0005 inset;
+	border: none;
+	outline: none;
+	font-size: 12pt;
+	padding: 5px 8px;
+	color: var(--base-text);
+	margin-bottom: 10px;
+}
+
+#tool-input input::-webkit-outer-spin-button, #tool-input input::-webkit-inner-spin-button, #tool-output input::-webkit-outer-spin-button, #tool-output input::-webkit-inner-spin-button {
+	appearance: inner-spin-button !important;
+	position: absolute;
+	top: 0;
+	right: 0;
+	height: 100%;
+	opacity: 0.3;
+}
+
+.input-with-settings {
+	margin-bottom: 5px !important;
+}
+
+#tool-output {
+	display: flex;
+	flex-flow: column;
+	background: var(--close-back);
+	box-sizing: border-box;
+	box-shadow: 0px 0px 10px #0005;
+	border-radius: 5px;
+	padding: 10px;
+	width: calc(50% - 5px);
+}
+
+.input-settings {
+	display: flex;
+	width: 100%;
+	margin: 0px 0px 5px 0px;
+	overflow: hidden;
+	border-radius: 3px;
+	border: 2px solid var(--hover-back1);
+	box-sizing: border-box;
+}
+
+.input-settings button {
+	display: block;
+	width: 50%;
+	outline: none;
+	border-top: none;
+	border-bottom: none;
+	border-right: 1px solid var(--hover-back1);
+	border-left: 1px solid var(--hover-back1);
+	box-sizing: border-box;
+	padding: 5px 10px;
+	background: var(--semi-back);
+	color: var(--base-text);
+	cursor: pointer;
+	font-size: 11pt;
+	font-weight: bold;
+	transition: 0.2s;
+}
+
+.input-settings button:hover {
+	background: var(--closer-back);
+	box-shadow: 0px 0px 15px #0005 inset;
+}
+
+.input-settings > button:first-child {
+	border-left: none;
+}
+
+.input-settings > button:last-child {
+	border-right: none;
+}
+
+.input-settings-selected {
+	background: var(--theme2) !important;
+	box-shadow: 0px 0px 15px #0005 inset !important;
+}
+
+.single-line-input {
+	display: flex;
+	align-items: center;
+	margin-top: 5px;
+}
+
+.single-line-input label {
+	width: auto !important;
+	margin-right: 10px !important;
+	font-size: 12pt !important;
+}
+
+.single-line-input input {
+	margin-bottom: 0px !important;
+	max-width: 100px;
+}
+
+#math-description {
+	line-height: 1.5;
+}
+
+#math-description b:not(#math-description span b) {
+	border-radius: 3px;
+	background: var(--base-back);
+	box-shadow: 0px 0px 5px #0005;
+	box-sizing: border-box;
+	padding: 2px 8px;
+	color: var(--theme3);
+	display: inline;
+	font-size: 13pt !important;
+}
+
+#math-description p {
+	color: var(--brighter-italic-text);
+	font-size: 12pt;
+}
+
+#math-description span {
+	display: flex;
+	align-items: center;
+	width: max-content;
+	white-space-collapse: preserve;
+	border-radius: 3px;
+	background: var(--base-back);
+	box-shadow: 0px 0px 5px #0005;
+	margin: 3px 0px;
+	box-sizing: border-box;
+	padding: 3px 8px 4px 8px;
+	line-height: 1;
+}
+
+#math-description span b {
+	color: var(--theme3);
+	display: inline;
+	font-size: 13pt !important;
+	margin-top: 2px;
+}
+
+#math-description span p {
+	color: var(--italic-text);
+	display: inline;
+	font-size: 13pt !important;
+}
+
+@media screen and (max-width: 600px) {
+	#main-tool {
+		flex-flow: column;
+	}
+
+	#tool-input {
+		width: 100%;
+	}
+
+	#tool-output {
+		margin-top: 10px;
+		width: 100%;
+	}
+}

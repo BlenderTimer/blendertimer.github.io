@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en-US">
+	<head>
+		<!-- Google tag (gtag.js) -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-  SYR26MG6YV"></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
+			
+			gtag('config', 'G-SYR26MG6YV');
+		</script>
+		<meta charset="utf-8">
+		<title>Farther Than You Think - BlenderTimer Video Sources</title>
+		<meta name="description" content="The video sources for Farther Than You Think.">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="icon" href="/favicon.png">
+		<link rel="stylesheet" type="text/css" href="/static/main.css">
+		<link rel="stylesheet" type="text/css" href="/static/video-sources-pages.css">
+		<script src="/bt-js/bt-js.js"></script>
+		<script src="/static/videos.js"></script>
+		<script src="/static/jquery-3.6.3.js"></script>
+	</head>
+	<body>
+		<header></header>
+		<script>
+			fetch('/noindex/header.html')
+				.then(response => response.text())
+				.then(data => {document.querySelector('header').innerHTML = data});
+		</script>
+		<script src="/noindex/pages.js"></script>
+		<noscript>
+			<div id="nojs" style="position: fixed; top: 0px; bottom: 0px; left: 0px; right: 0px; display: flex; flex-flow: column; justify-content: center; align-items: center; background: var(--semi-back); padding: 15px 20px; z-index: 1000000; cursor: default;">
+				<b style="font-family: sans-serif; font-size: 16pt; color: #FFF; text-align: center;">Page Failed to Load</b>
+				<p style="font-family: sans-serif; font-size: 14pt; color: #FFF6; text-align: center;">This website requires Javascript to operate.</p>
+			</div>
+		</noscript>
+		<div id="loader" style="width: 100%; height: calc(100% - 50px); top: 50px; left: 0px; position: fixed; z-index: -100000;">
+			<img alt="Loading" src="/static/images/loader.gif" style="width: 100px; height: 100px; position: fixed; left: calc(50% - 50px); top: calc(50% - 25px); filter: drop-shadow(0px 0px 15px #000000);">
+		</div>
+		<div id="content-main" style="opacity: 0; transition: 0.5s">
+			<h1 id="title">Farther Than You Think - Fantastic Fact 07</h1>
+			<p id="published-date">Published: February 10, 2024 at 8:21 PM (PT)</p>
+			<div id="video-info">
+				<div id="vid-info-left">
+					<b class="vit">Video Information</b>
+					<span><b>Length:</b><p>0:27</p><i>(837 frames/30fps)</i></span>
+					<span><b>Resolution:</b><p>1080x1920</p><i>(FHD)</i></span>
+					<span><b>Most Rewatched:</b><a>N/A</a></span>
+					<span class="spr"></span>
+					<b class="vit">Realtime Statistics</b>
+					<div id="realtime-stats">
+						<span title="Views"><img src="../static-0/files/images/icons/eye.svg" alt="Views"><b>...</b></span>
+						<span title="Likes"><img src="../static-0/files/images/icons/like.svg" alt="Likes"><b>...</b></span>
+						<span title="Comments"><img src="../static-0/files/images/icons/comment.svg" alt="Comments"><b>...</b></span>
+					</div>
+					<span class="spr"></span>
+					<b class="vit">Views in the First</b>
+					<div id="first-views">
+						<span><b>10 Minutes</b><p>...</p></span>
+						<span><b>30 Minutes</b><p>...</p></span>
+						<span><b>Hour</b><p>...</p></span>
+						<span><b>24 Hours</b><p>...</p></span>
+					</div>
+				</div>
+				<span class="spr" id="info1-spr" style="display: none"></span>
+				<div id="vid-info-right">
+					<a id="thumbnail" href="./thumbnails/18-farther_than_you_think_-_fantastic_fact_07-1080.png" target="_blank"><img src="./thumbnails/18-farther_than_you_think_-_fantastic_fact_07-180.png" alt="Thumbnail"></a>
+					<div id="video-icons">
+						<span><b>Upload ID</b><p>18</p></span>
+						<span><b>Short ID</b><p>7</p></span>
+						<span><b>Type</b><p>Short</p></span>
+					</div>
+					<span id="yt-link"><a href="https://youtu.be/ixWrZeh2i5I" target="_blank">https://youtu.be/ixWrZeh2i5I</a><img src="../static-0/files/images/icons/copy-link.svg" alt="Copy link" onclick="copyVideoLink(event)"></span>
+					<script type="text/javascript">
+						var fv = document.getElementById('first-views');
+						var video = videos[parseInt(document.getElementById('video-icons').children[0].children[1].textContent)-1];
+						if (video.views10 == -1) {fv.children[0].children[1].innerHTML = "NO DATA"}
+						else {fv.children[0].children[1].innerHTML = video.views10};
+						if (video.views10 == -1) {fv.children[1].children[1].innerHTML = "NO DATA"}
+						else {fv.children[1].children[1].innerHTML = video.views30};
+						if (video.views10 == -1) {fv.children[2].children[1].innerHTML = "NO DATA"}
+						else {fv.children[2].children[1].innerHTML = video.views1};
+						if (video.views10 == -1) {fv.children[3].children[1].innerHTML = "NO DATA"}
+						else {fv.children[3].children[1].innerHTML = video.views24};
+						//Realtime Stats
+						var ytid = document.getElementById('yt-link').children[0].textContent.removeBefore("/", 1, true);
+						$.get(
+							"https://www.googleapis.com/youtube/v3/videos",{
+							part: 'statistics',
+							id: ytid,
+							key: 'AIzaSyDsaGX5mhvqCpI3jWMFFGMmmmB5IUEyUrk'},
+							function(data) {
+								var views = 0;
+								var likes = 0;
+								var comments = 0;
+								views = data.items[0].statistics.viewCount;
+								likes = data.items[0].statistics.likeCount;
+								comments = data.items[0].statistics.commentCount;
+								document.getElementById("realtime-stats").children[0].children[1].innerHTML = parseInt(views).toLocaleString();
+								document.getElementById("realtime-stats").children[1].children[1].innerHTML = parseInt(likes).toLocaleString();
+								document.getElementById("realtime-stats").children[2].children[1].innerHTML = parseInt(comments).toLocaleString();
+							}
+						);
+					</script>
+				</div>
+			</div>
+			<h2>Information Sources</h2>
+			<div id="info-sources" class="sources">
+				<a id="IDQ34IY8" href="https://nssdc.gsfc.nasa.gov/planetary/factsheet/moonfact.html" target="_blank"><b>Moon Factsheet</b><p>https://nssdc.gsfc.nasa.gov/planetary/factsheet/moonfact.html</p></a>
+				<a id="IDMVMMB" href="https://blendertimer.com/factsheets/solar-system/planet-factsheet" target="_blank"><b>8 Planets Factsheet</b><p>https://blendertimer.com/factsheets/solar-system/planet-factsheet</p></a>
+				<a id="IDNL1TYP7" href="https://www.iau.org/static/resolutions/IAU1976_French.pdf#page=9" target="_blank"><b>Astronomical and Light Data</b><p>https://www.iau.org/static/resolutions/IAU1976_French.pdf#page=9</p></a>
+				<a id="IDDJ73KV" href="https://blendertimer.com/factsheets/solar-system/dwarf-planet-factsheet" target="_blank"><b>5 Dwarf Planets Factsheet</b><p>https://blendertimer.com/factsheets/solar-system/dwarf-planet-factsheet</p></a>
+			</div>
+			<h2>Graphic Sources</h2>
+			<div id="graphic-sources" class="sources">
+				<a id="IDRJN8IUZBE" href="https://pixabay.com/vectors/earth-planet-space-terrestrial-8233221" target="_blank"><b>Earth (Daniel Roberts)</b><p>https://pixabay.com/vectors/earth-planet-space-terrestrial-8233221</p></a>
+				<a id="IDNIIXUV" href="https://pixabay.com/vectors/moon-earth-space-natural-satellite-8236211" target="_blank"><b>The Moon (Daniel Roberts)</b><p>https://pixabay.com/vectors/moon-earth-space-natural-satellite-8236211</p></a>
+				<a id="ID8AWKYXV" href="https://pixabay.com/vectors/mercury-planet-space-terrestrial-8233227" target="_blank"><b>Mercury (Daniel Roberts)</b><p>https://pixabay.com/vectors/mercury-planet-space-terrestrial-8233227</p></a>
+				<a id="IDPPU27QHT" href="https://pixabay.com/vectors/venus-planet-space-terrestrial-8233225" target="_blank"><b>Venus (Daniel Roberts)</b><p>https://pixabay.com/vectors/venus-planet-space-terrestrial-8233225</p></a>
+				<a id="IDHD25J" href="https://pixabay.com/vectors/mars-planet-space-terrestrial-8233226" target="_blank"><b>Mars (Daniel Roberts)</b><p>https://pixabay.com/vectors/mars-planet-space-terrestrial-8233226</p></a>
+				<a id="IDMT435QQK" href="https://pixabay.com/vectors/jupiter-planet-space-terrestrial-8233223" target="_blank"><b>Jupiter (Daniel Roberts)</b><p>https://pixabay.com/vectors/jupiter-planet-space-terrestrial-8233223</p></a>
+				<a id="ID8H4IYU" href="https://pixabay.com/vectors/saturn-planet-space-terrestrial-8233220" target="_blank"><b>Saturn (Daniel Roberts)</b><p>https://pixabay.com/vectors/saturn-planet-space-terrestrial-8233220</p></a>
+				<a id="ID242Q8R" href="https://pixabay.com/vectors/uranus-planet-space-terrestrial-8233222" target="_blank"><b>Uranus (Daniel Roberts)</b><p>https://pixabay.com/vectors/uranus-planet-space-terrestrial-8233222</p></a>
+				<a id="IDL9KLY1Y" href="https://pixabay.com/vectors/neptune-planet-space-terrestrial-8233219" target="_blank"><b>Neptune (Daniel Roberts)</b><p>https://pixabay.com/vectors/neptune-planet-space-terrestrial-8233219</p></a>
+				<a id="IDN6O0HN" href="https://pixabay.com/vectors/ceres-planet-asteroid-terrestrial-8236207" target="_blank"><b>Ceres (Daniel Roberts)</b><p>https://pixabay.com/vectors/ceres-planet-asteroid-terrestrial-8236207</p></a>
+				<a id="IDPBF8Z814" href="https://pixabay.com/vectors/pluto-asteroid-planet-terrestrial-8236209" target="_blank"><b>Pluto (Daniel Roberts)</b><p>https://pixabay.com/vectors/pluto-asteroid-planet-terrestrial-8236209</p></a>
+				<a id="IDCUF0Z" href="https://pixabay.com/vectors/haumea-dwarf-planet-terrestrial-8236206" target="_blank"><b>Haumea (Daniel Roberts)</b><p>https://pixabay.com/vectors/haumea-dwarf-planet-terrestrial-8236206</p></a>
+				<a id="IDN4VU7J83G" href="https://pixabay.com/vectors/makemake-planet-terrestrial-ball-8236208" target="_blank"><b>Makemake (Daniel Roberts)</b><p>https://pixabay.com/vectors/makemake-planet-terrestrial-ball-8236208</p></a>
+				<a id="IDAS2M35HH7" href="https://pixabay.com/vectors/eris-planet-terrestrial-satellite-8236210" target="_blank"><b>Eris (Daniel Roberts)</b><p>https://pixabay.com/vectors/eris-planet-terrestrial-satellite-8236210</p></a>
+			</div>
+			<h2>Audio Sources</h2>
+			<div id="audio-sources" class="sources">
+				<a id="ID2GEHOFS"><b>Narration (Daniel Roberts)</b><p>N/A</p></a>
+			</div>
+			<div id="cc"><h2>Subtitles</h2><a href="./cc/18.txt" download="Farther Than You Think - Subtitles.txt" title="Download subtitles"><img src="../static-0/files/images/icons/download.svg" alt="Download"></a></div>
+			<div id="subtitles">
+				<p>This is the Earth. And this, is</p>
+				<p>the Moon. But, despite popular</p>
+				<p>belief, they're not anywhere near</p>
+				<p>this close to each other. The</p>
+				<p>moon is actually all the way over here.</p>
+				<p>To put this distance into perspective,</p>
+				<p>this is light traveling around</p>
+				<p>the Earth. And this is light traveling</p>
+				<p>between the Earth and the Moon.</p>
+				<p>And these, are all the planets</p>
+				<p>in the Solar System, including</p>
+				<p>all the dwarf planets. That's</p>
+				<p>right, there's still room left!</p>
+			</div>
+			<h2>Thumbnails</h2>
+			<div id="thumbnails">
+				<a href="./thumbnails/18-farther_than_you_think_-_fantastic_fact_07-1080.png" class="tb"><img src="./thumbnails/18-farther_than_you_think_-_fantastic_fact_07-180.png" alt="Thumbnail"><b>February 10, 2024</b></a>
+			</div>
+		</div>
+		<footer></footer>
+		<script>
+			fetch('/noindex/footer.html')
+				.then(response => response.text())
+				.then(data => {document.querySelector('footer').innerHTML = data});
+		</script>
+		<script src="/static/main.js"></script>
+		<script src="/static/video-sources-pages.js"></script>
+	</body>
+</html>

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en-US">
+	<head>
+		<!-- Google tag (gtag.js) -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-  SYR26MG6YV"></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
+			
+			gtag('config', 'G-SYR26MG6YV');
+		</script>
+		<!-- Google Tag Manager -->
+		<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+		new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+		j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+		'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+		})(window,document,'script','dataLayer','GTM-KSL94KH');</script>
+		<!-- End Google Tag Manager -->
+		<meta charset="utf-8">
+		<title>Nature - The NowStream by BlenderTimer</title>
+		<meta name="description" content="A live visualization of things which are happening in nature now!">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="icon" href="/favicon.png" type="image/x-icon">
+		<link rel="stylesheet" type="text/css" href="/static/main.css">
+		<link rel="stylesheet" type="text/css" href="./stream-main.css">
+		<script src="/bt-js/bt-js.js"></script>
+	</head>
+	<body>
+		<header></header>
+		<script>
+			fetch('/noindex/header.html')
+				.then(response => response.text())
+				.then(data => {document.querySelector('header').innerHTML = data});
+		</script>
+		<script src="/noindex/pages.js"></script>
+		<noscript>
+			<div id="nojs" style="position: fixed; top: 0px; bottom: 0px; left: 0px; right: 0px; display: flex; flex-flow: column; justify-content: center; align-items: center; background: var(--semi-back); padding: 15px 20px; z-index: 1000000; cursor: default;">
+				<b style="font-family: sans-serif; font-size: 16pt; color: #FFF; text-align: center;">Page Failed to Load</b>
+				<p style="font-family: sans-serif; font-size: 14pt; color: #FFF6; text-align: center;">This website requires Javascript to operate.</p>
+			</div>
+		</noscript>
+		<div id="loader" style="width: 100%; height: calc(100% - 50px); top: 50px; left: 0px; position: fixed; z-index: -100000;">
+			<img alt="Loading" src="/static/images/loader.gif" style="width: 100px; height: 100px; position: fixed; left: calc(50% - 50px); top: calc(50% - 25px); filter: drop-shadow(0px 0px 15px #000000);">
+		</div>
+		<div id="source-popup-back" onclick="closeSourcePopup()" style="opacity: 0; pointer-events: none;"></div>
+		<div id="source-popup-container" style="opacity: 0">
+			<div id="source-popup-main" style="pointer-events: none; user-select: none; transform: scale(0)">
+				<img id="source-popup-close" alt="Close" src="../static-0/files/images/icons/x.svg" onclick="closeSourcePopup()">
+				<div id="source-popup" style="display: flex">
+					<h1>Sources</h1>
+					<div class="popup-scroll"></div>
+				</div>
+			</div>
+		</div>
+		<div id="content-main" style="opacity: 0; transition: 0.5s">
+			<div id="stream-header">
+				<div>
+					<a href="/nowstream"><img src="../static-0/files/images/nowstream.svg" alt="The NowStream logo"></a>
+					<span><i id="sh-slash">/</i><i>Nature</i></span>
+				</div>
+			</div>
+			<p class="description">Things which are happening in nature right now!</p>
+			<div id="page-load-time">
+				<i></i>
+				<b></b>
+			</div>
+			<div id="stream-container">
+				<div id="ants-hatched" style="--back: #311f1b;--border: #933322;" class="stream-box">
+					<div class="stream-visual"><img src="./images/ant.svg" alt="Ant"></div>
+					<span><b>0</b><p> ants have hatched</p></span>
+					<span><i>33,333,333,333 per second</i><img onclick="viewSource(event)" src="../static-0/files/images/icons/source.svg" title="View source" alt="Source"></span>
+				</div>
+				<div id="lightning-strikes" style="--back: #000720;--border: #3573bb;" class="stream-box">
+					<div class="stream-visual"><img src="./images/lightning-bolt.png" style="display: none;" alt="Lightning bolt"><canvas class="fade-2x random-scale-3"></canvas></div>
+					<span><b>0</b><p> lightning strikes have occurred</p></span>
+					<span><i>100 per second</i><img onclick="viewSource(event)" src="../static-0/files/images/icons/source.svg" title="View source" alt="Source"></span>
+				</div>
+				<div id="meteors" style="--back: #2f2521;--border: #714a38;" class="stream-box">
+					<div class="stream-visual"><img src="./images/asteroid.png" style="display: none;" alt="Asteroid"><canvas class="anim-in random-scale-3"></canvas></div>
+					<span><b>0</b><p> meteors have entered Earth's atmosphere</p></span>
+					<span><i>289 per second</i><img onclick="viewSource(event)" src="../static-0/files/images/icons/source.svg" title="View source" alt="Source"></span>
+				</div>
+				<div id="meteors-hit-earth" style="--back: #3a2a24;--border: #8c634d;" class="stream-box force-integer">
+					<div class="stream-visual"><img src="./images/asteroid.png" alt="Asteroid"></div>
+					<span><b>0</b><p> meteors have hit Earth</p></span>
+					<span><i>17 per day</i><img onclick="viewSource(event)" src="../static-0/files/images/icons/source.svg" title="View source" alt="Source"></span>
+				</div>
+				<div id="rainfall" style="--back: #0d2541;--border: #2c708a;" class="stream-box">
+					<div class="stream-visual"><img src="./images/water-drop.svg" alt="Water drop"></div>
+					<span><b>0</b><p> liters of rain has fallen worldwide</p></span>
+					<i>0 gallons</i>
+					<span><i>16,996,448,500l per second</i><img onclick="viewSource(event)" src="../static-0/files/images/icons/source.svg" title="View source" alt="Source"></span>
+				</div>
+				<div id="earthquakes" style="--back: #000720;--border: #3573bb;" class="stream-box force-integer">
+					<div class="stream-visual"><img src="./images/earth.svg" class="image-shake" alt="Earth"></div>
+					<span><b>0</b><p> earthquakes have occurred</p></span>
+					<span><i>57 per hour</i><img onclick="viewSource(event)" src="../static-0/files/images/icons/source.svg" title="View source" alt="Source"></span>
+				</div>
+				<div id="species-discovered" style="--back: #1a4120;--border: #5da76f;" class="stream-box force-integer">
+					<div class="stream-visual"><img src="./images/animals.svg" alt="Animals"></div>
+					<span><b>0</b><p> new animal species have been discovered</p></span>
+					<span><i>49 per day</i><img onclick="viewSource(event)" src="../static-0/files/images/icons/source.svg" title="View source" alt="Source"></span>
+				</div>
+			</div>
+			<i id="disclaimer">All data in this stream is an estimate.</i>
+			<div class="spr"></div>
+			<h1 class="title">More Streams</h1>
+			<div id="more-streams">
+				<a href="/nowstream/aroundtheworld" class="stream">
+					<div class="stream-thumbnail"><img src="../static-0/files/images/nowstream-aroundtheworld.svg" alt="Around the World - The NowStream by BlenderTimer"></div>
+					<b>Around the World</b>
+					<div class="stream-description"><i>Things which are happening all around the world right now!</i></div>
+				</a>
+				<a href="/nowstream/space" class="stream">
+					<div class="stream-thumbnail"><img src="../static-0/files/images/nowstream-space.svg" alt="Space - The NowStream by BlenderTimer"></div>
+					<b>Space</b>
+					<div class="stream-description"><i>Things which are happening in space right now!</i></div>
+				</a>
+				<a href="/nowstream/technology" class="stream">
+					<div class="stream-thumbnail"><img src="../static-0/files/images/nowstream-technology.svg" alt="Technology - The NowStream by BlenderTimer"></div>
+					<b>Technology</b>
+					<div class="stream-description"><i>Things which are happening with technology right now!</i></div>
+				</a>
+				<a href="/nowstream/you" class="stream">
+					<div class="stream-thumbnail"><img src="../static-0/files/images/nowstream-you.svg" alt="You - The NowStream by BlenderTimer"></div>
+					<b>You</b>
+					<div class="stream-description"><i>Things which are happening with you right now!</i></div>
+				</a>
+			</div>
+			<br>
+			<p>This stream shows how many things are happening in the natural world RIGHT NOW! This stream includes:</p>
+			<br>
+			<ul>
+				<li><p>The amount of ants that hatch every second</p></li>
+				<li><p>The amount of lightning strikes which occur every second</p></li>
+				<li><p>The amount of meteors which enter Earth's atmosphere every second</p></li>
+				<li><p>The amount of meteors which actually hit Earth every day</p></li>
+				<li><p>The amount of rain which falls worldwide every second</p></li>
+				<li><p>The amount of earthquakes which occur every hour</p></li>
+				<li><p>The amount of animal species which are discovered every day</p></li>
+			</ul>
+		</div>
+		<footer></footer>
+		<script>
+			fetch('/noindex/footer.html')
+				.then(response => response.text())
+				.then(data => {document.querySelector('footer').innerHTML = data});
+		</script>
+		<script src="/static/main.js"></script>
+		<script src="./stream-main.js"></script>
+		<script type="text/javascript">
+			const sourceData = {
+				"ants-hatched":"<p>The source gives a rate of </p><b>2.88 quadrillion ants</b><p> born/hatched per day.</p><div class='spr'></div><a href='https://privateexterminator.com/are-all-the-ants-as-heavy-as-all-the-humans' target='_blank'>https://privateexterminator.com/are-all-the-ants-as-heavy-as-all-the-humans</a>",
+				"lightning-strikes":"<p>The source gives a rate of </p><b>100 lightning flashes</b><p> per second.</p><div class='spr'></div><a href='https://www.weather.gov/fgz/Lightning' target='_blank'>https://www.weather.gov/fgz/Lightning</a>",
+				"meteors":"<p>The source states that </p><b>25 million meteors</b><p> enter Earth's atmosphere per day.</p><div class='spr'></div><a href='https://www.smithsonianmag.com/smithsonian-institution/oldest-material-smithsonian-institution-came-outer-space-180971017' target='_blank'>https://www.smithsonianmag.com/smithsonian-institution/oldest-material-smithsonian-institution-came-outer-space-180971017</a>",
+				"meteors-hit-earth":"<p>The source gives a rate of </p><b>17</b><p> meteors per day.</p><div class='spr'></div><a href='https://cosmosmagazine.com/space/earth-hit-by-17-meteors-a-day' target='_blank'>https://cosmosmagazine.com/space/earth-hit-by-17-meteors-a-day</a>",
+				"rainfall":"<p>The source gives a rate of </p><b>5.36 × 10¹⁴ m³</b><p> cubic meters per year.</p><div class='spr'></div><a href='https://hypertextbook.com/facts/2008/VernonWu.shtml' target='_blank'>https://hypertextbook.com/facts/2008/VernonWu.shtml</a>",
+				"earthquakes":"<p>The source gives a rate of </p><b>500,000 detectable earthquakes</b><p> per year.</p><div class='spr'></div><a href='https://www.usgs.gov/programs/earthquake-hazards/cool-earthquake-facts' target='_blank'>https://www.usgs.gov/programs/earthquake-hazards/cool-earthquake-facts</a>",
+				"species-discovered":"<p>The source gives a rate of </p><b>18,000 new species</b><p> per year.</p><div class='spr'></div><a href='https://smv.org/learn/blog/how-many-species-are-left-be-discovered' target='_blank'>https://smv.org/learn/blog/how-many-species-are-left-be-discovered</a>",
+			};
+		</script>
+	</body>
+</html>

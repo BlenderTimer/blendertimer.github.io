@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en-US">
+	<head>
+		<!-- Google tag (gtag.js) -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-  SYR26MG6YV"></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
+			
+			gtag('config', 'G-SYR26MG6YV');
+		</script>
+		<meta charset="utf-8">
+		<title>When MASSIVE Becomes TINY - BlenderTimer Video Sources</title>
+		<meta name="description" content="The video sources for When MASSIVE Becomes TINY.">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="icon" href="/favicon.png">
+		<link rel="stylesheet" type="text/css" href="/static/main.css">
+		<link rel="stylesheet" type="text/css" href="/static/video-sources-pages.css">
+		<script src="/bt-js/bt-js.js"></script>
+		<script src="/static/videos.js"></script>
+		<script src="/static/jquery-3.6.3.js"></script>
+	</head>
+	<body>
+		<header></header>
+		<script>
+			fetch('/noindex/header.html')
+				.then(response => response.text())
+				.then(data => {document.querySelector('header').innerHTML = data});
+		</script>
+		<script src="/noindex/pages.js"></script>
+		<noscript>
+			<div id="nojs" style="position: fixed; top: 0px; bottom: 0px; left: 0px; right: 0px; display: flex; flex-flow: column; justify-content: center; align-items: center; background: var(--semi-back); padding: 15px 20px; z-index: 1000000; cursor: default;">
+				<b style="font-family: sans-serif; font-size: 16pt; color: #FFF; text-align: center;">Page Failed to Load</b>
+				<p style="font-family: sans-serif; font-size: 14pt; color: #FFF6; text-align: center;">This website requires Javascript to operate.</p>
+			</div>
+		</noscript>
+		<div id="loader" style="width: 100%; height: calc(100% - 50px); top: 50px; left: 0px; position: fixed; z-index: -100000;">
+			<img alt="Loading" src="/static/images/loader.gif" style="width: 100px; height: 100px; position: fixed; left: calc(50% - 50px); top: calc(50% - 25px); filter: drop-shadow(0px 0px 15px #000000);">
+		</div>
+		<div id="content-main" style="opacity: 0; transition: 0.5s">
+			<h1 id="title">When MASSIVE Becomes TINY</h1>
+			<p id="published-date">Published: August 23, 2023 at 9:39 PM (PT)</p>
+			<div id="video-info">
+				<div id="vid-info-left">
+					<b class="vit">Video Information</b>
+					<span><b>Length:</b><p>11:32</p><i>(20768 frames/30fps)</i></span>
+					<span><b>Resolution:</b><p>1920x1080</p><i>(FHD)</i></span>
+					<span><b>Most Rewatched:</b><a href="https://youtu.be/cJOHvciuHj8?t=224" target="_blank">3:44 to 4:19</a></span>
+					<span class="spr"></span>
+					<b class="vit">Realtime Statistics</b>
+					<div id="realtime-stats">
+						<span title="Views"><img src="../static-0/files/images/icons/eye.svg" alt="Views"><b>...</b></span>
+						<span title="Likes"><img src="../static-0/files/images/icons/like.svg" alt="Likes"><b>...</b></span>
+						<span title="Comments"><img src="../static-0/files/images/icons/comment.svg" alt="Comments"><b>...</b></span>
+					</div>
+					<span class="spr"></span>
+					<b class="vit">Views in the First</b>
+					<div id="first-views">
+						<span><b>10 Minutes</b><p>...</p></span>
+						<span><b>30 Minutes</b><p>...</p></span>
+						<span><b>Hour</b><p>...</p></span>
+						<span><b>24 Hours</b><p>...</p></span>
+					</div>
+				</div>
+				<span class="spr" id="info1-spr" style="display: none"></span>
+				<div id="vid-info-right">
+					<a id="thumbnail" href="./thumbnails/13-when_massive_becomes_tiny-1080.png" target="_blank"><img src="./thumbnails/13-when_massive_becomes_tiny-180.png" alt="Thumbnail"></a>
+					<div id="video-icons">
+						<span><b>Upload ID</b><p>13</p></span>
+						<span><b>Video ID</b><p>9</p></span>
+						<span><b>Type</b><p>Video</p></span>
+					</div>
+					<span id="yt-link"><a href="https://youtu.be/cJOHvciuHj8" target="_blank">https://youtu.be/cJOHvciuHj8</a><img src="../static-0/files/images/icons/copy-link.svg" alt="Copy link" onclick="copyVideoLink(event)"></span>
+					<script type="text/javascript">
+						var fv = document.getElementById('first-views');
+						var video = videos[parseInt(document.getElementById('video-icons').children[0].children[1].textContent)-1];
+						if (video.views10 == -1) {fv.children[0].children[1].innerHTML = "NO DATA"}
+						else {fv.children[0].children[1].innerHTML = video.views10};
+						if (video.views10 == -1) {fv.children[1].children[1].innerHTML = "NO DATA"}
+						else {fv.children[1].children[1].innerHTML = video.views30};
+						if (video.views10 == -1) {fv.children[2].children[1].innerHTML = "NO DATA"}
+						else {fv.children[2].children[1].innerHTML = video.views1};
+						if (video.views10 == -1) {fv.children[3].children[1].innerHTML = "NO DATA"}
+						else {fv.children[3].children[1].innerHTML = video.views24};
+						//Realtime Stats
+						var ytid = document.getElementById('yt-link').children[0].textContent.removeBefore("/", 1, true);
+						$.get(
+							"https://www.googleapis.com/youtube/v3/videos",{
+							part: 'statistics',
+							id: ytid,
+							key: 'AIzaSyDsaGX5mhvqCpI3jWMFFGMmmmB5IUEyUrk'},
+							function(data) {
+								var views = 0;
+								var likes = 0;
+								var comments = 0;
+								views = data.items[0].statistics.viewCount;
+								likes = data.items[0].statistics.likeCount;
+								comments = data.items[0].statistics.commentCount;
+								document.getElementById("realtime-stats").children[0].children[1].innerHTML = parseInt(views).toLocaleString();
+								document.getElementById("realtime-stats").children[1].children[1].innerHTML = parseInt(likes).toLocaleString();
+								document.getElementById("realtime-stats").children[2].children[1].innerHTML = parseInt(comments).toLocaleString();
+							}
+						);
+					</script>
+				</div>
+			</div>
+			<h2>Corrections</h2>
+			<div id="corrections">
+				<div class="correction">
+					<a class="correction-time" href="https://youtu.be/cJOHvciuHj8?t=364">6:04</a>
+					<span><i>"...Earth is the fourth largest planet in the Solar System."</i>
+					<p>Earth is the fourth smallest planet in the Solar System.</p></span>
+					<a>I read my script wrong. The subtitles are correct.</a>
+				</div>
+			<h2>Information Sources</h2>
+			<div id="info-sources" class="sources">
+				<a id="IDQQES8FO" href="https://senecalearning.com/en-GB/definitions/atom-size-number" target="_blank"><b>Size of an Atom</b><p>https://senecalearning.com/en-GB/definitions/atom-size-number</p></a>
+				<a id="IDOMFF7W9IJ" href="https://www.merriam-webster.com/dictionary/microscopic" target="_blank"><b>Microscopic Definition</b><p>https://www.merriam-webster.com/dictionary/microscopic</p></a>
+				<a id="ID1U0ZTTA4" href="https://www.sciencedaily.com/releases/2016/07/160718093446.htm" target="_blank"><b>A Glimpse Inside the Atom</b><p>https://www.sciencedaily.com/releases/2016/07/160718093446.htm</p></a>
+				<a id="ID25G7O" href="https://nnci.net/sites/default/files/inline-files/nanooze_edition_11-1ljz4uy.pdf" target="_blank"><b>Size of a Water Molecule</b><p>https://nnci.net/sites/default/files/inline-files/nanooze_edition_11-1ljz4uy.pdf</p></a>
+				<a id="IDNWAGIZQY" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2581715" target="_blank"><b>Size of an Adenovirus</b><p>https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2581715</p></a>
+				<a id="IDXRRQ7K8" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4363144" target="_blank"><b>Size of Mycoplasma Gallisepticum</b><p>https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4363144</p></a>
+				<a id="IDKH5RP" href="https://my.clevelandclinic.org/health/diagnostics/22980-rdw-blood-test" target="_blank"><b>Size of a Red Blood Cell</b><p>https://my.clevelandclinic.org/health/diagnostics/22980-rdw-blood-test</p></a>
+				<a id="IDN2EI2EJ" href="https://njseagrant.org/wp-content/uploads/2014/03/Grain_Size_How_Big.pdf" target="_blank"><b>Size of a Grain of Sand</b><p>https://njseagrant.org/wp-content/uploads/2014/03/Grain_Size_How_Big.pdf</p></a>
+				<a id="IDTCCQOOD4R" href="https://www.whatsugar.com/refined-cane-sugar" target="_blank"><b>Size of a Sugar Granule</b><p>https://www.whatsugar.com/refined-cane-sugar</p></a>
+				<a id="IDA49CR9UY" href="https://en.wikipedia.org/wiki/Drop_(liquid)" target="_blank"><b>Size of a Water Drop</b><p>https://en.wikipedia.org/wiki/Drop_(liquid)</p></a>
+				<a id="ID18OGTF" href="https://entnemdept.ufl.edu/creatures/beneficial/lady_beetles.htm" target="_blank"><b>Size of a Ladybug</b><p>https://entnemdept.ufl.edu/creatures/beneficial/lady_beetles.htm</p></a>
+				<a id="ID82WC13Z" href="https://nationalzoo.si.edu/animals/gray-tree-frog" target="_blank"><b>Size of a Tree Frog</b><p>https://nationalzoo.si.edu/animals/gray-tree-frog</p></a>
+				<a id="IDVRUGJ" href="https://a-z-animals.com/blog/how-big-do-chameleons-get" target="_blank"><b>Size of a Chameleon</b><p>https://a-z-animals.com/blog/how-big-do-chameleons-get</p></a>
+				<a id="ID4B7F2Q" href="https://oddlycutepets.com/how-long-are-chameleons-tongues" target="_blank"><b>Size of a Chameleon's Tongue</b><p>https://oddlycutepets.com/how-long-are-chameleons-tongues</p></a>
+				<a id="IDXXAL1" href="https://www.dimensions.com/element/german-shepherd-dog" target="_blank"><b>Size of a German Shepherd</b><p>https://www.dimensions.com/element/german-shepherd-dog</p></a>
+				<a id="IDMWNBJN" href="https://www.dryukselyurttas.com/post/average-height-men-and-women" target="_blank"><b>Size of a Human</b><p>https://www.dryukselyurttas.com/post/average-height-men-and-women</p></a>
+				<a id="IDAQKV502WC" href="https://rainforests.mongabay.com/kids/animals/biggest/tallest-animal.html" target="_blank"><b>Size of a Giraffe</b><p>https://rainforests.mongabay.com/kids/animals/biggest/tallest-animal.html</p></a>
+				<a id="IDFAUP015N" href="https://a-z-animals.com/blog/the-biggest-land-animal-on-earth" target="_blank"><b>Largest Land Animal</b><p>https://a-z-animals.com/blog/the-biggest-land-animal-on-earth</p></a>
+				<a id="IDNMH5X1YI1" href="https://www.nasa.gov/centers/johnson/pdf/167751main_FS_SpaceShuttle508c.pdf" target="_blank"><b>Size of the Space Shuttle</b><p>https://www.nasa.gov/centers/johnson/pdf/167751main_FS_SpaceShuttle508c.pdf</p></a>
+				<a id="IDVFNIEN" href="https://en.wikipedia.org/wiki/Space_Shuttle_program" target="_blank"><b>Space Shuttle Program</b><p>https://en.wikipedia.org/wiki/Space_Shuttle_program</p></a>
+				<a id="IDFPR1QT" href="https://solarsystem.nasa.gov/news/337/what-was-the-saturn-v" target="_blank"><b>Size of the Saturn V</b><p>https://solarsystem.nasa.gov/news/337/what-was-the-saturn-v</p></a>
+				<a id="IDGX63I6" href="https://en.wikipedia.org/wiki/Hyperion_(tree)" target="_blank"><b>Size of Hyperion</b><p>https://en.wikipedia.org/wiki/Hyperion_(tree)</p></a>
+				<a id="IDE0XVK49JZ" href="https://science.howstuffworks.com/life/botany/tallest-tree-in-world.htm" target="_blank"><b>Diameter of Hyperion's Trunk</b><p>https://science.howstuffworks.com/life/botany/tallest-tree-in-world.htm</p></a>
+				<a id="ID5BUEQ" href="https://www.toureiffel.paris/en/the-monument/key-figures" target="_blank"><b>Size of the Eiffel Tower</b><p>https://www.toureiffel.paris/en/the-monument/key-figures</p></a>
+				<a id="IDDX5HTQT" href="https://en.wikipedia.org/wiki/Burj_Khalifa" target="_blank"><b>Size of the Burj Khalifa</b><p>https://en.wikipedia.org/wiki/Burj_Khalifa</p></a>
+				<a id="ID5IFUGMXW" href="https://www.britannica.com/place/Mount-Saint-Helens" target="_blank"><b>Size of Mount Saint Helens</b><p>https://www.britannica.com/place/Mount-Saint-Helens</p></a>
+				<a id="ID8RJBM" href="https://www.peakbagger.com/peak.aspx?pid=3550" target="_blank"><b>Size of Currant Peak</b><p>https://www.peakbagger.com/peak.aspx?pid=3550</p></a>
+				<a id="IDVKZ0SOW" href="https://en.wikipedia.org/wiki/Mount_Rainier" target="_blank"><b>Size of Mount Rainier</b><p>https://en.wikipedia.org/wiki/Mount_Rainier</p></a>
+				<a id="IDHTF4V" href="https://education.nationalgeographic.org/resource/denali" target="_blank"><b>Size of Denali</b><p>https://education.nationalgeographic.org/resource/denali</p></a>
+				<a id="ID3KWXGZ7N" href="https://www.britannica.com/place/Mount-Everest" target="_blank"><b>Mount Everest</b><p>https://www.britannica.com/place/Mount-Everest</p></a>
+				<a id="ID5FFY7AKTH" href="https://solarsystem.nasa.gov/asteroids-comets-and-meteors/comets/1p-halley/in-depth" target="_blank"><b>Halley's Comet</b><p>https://solarsystem.nasa.gov/asteroids-comets-and-meteors/comets/1p-halley/in-depth</p></a>
+				<a id="ID57G8GJB" href="https://bigthink.com/starts-with-a-bang/largest-comet-earth" target="_blank"><b>Bernardinelli-Bernstein</b><p>https://bigthink.com/starts-with-a-bang/largest-comet-earth</p></a>
+				<a id="IDVJ7NK7" href="https://en.wikipedia.org/wiki/10_Hygiea" target="_blank"><b>Hygiea</b><p>https://en.wikipedia.org/wiki/10_Hygiea</p></a>
+				<a id="IDIUV9MS" href="https://eos.org/articles/meet-hygiea-the-smallest-dwarf-planet-in-our-solar-system" target="_blank"><b>Hygiea, the Smallest Dwarf Planet</b><p>https://eos.org/articles/meet-hygiea-the-smallest-dwarf-planet-in-our-solar-system</p></a>
+				<a id="ID0FRLP7E" href="https://www.cnn.com/2019/10/28/world/hygiea-smallest-dwarf-planet-intl-scli-trnd-scn/index.html" target="_blank"><b>Hygiea, the Smallest Dwarf Planet (2)</b><p>https://www.cnn.com/2019/10/28/world/hygiea-smallest-dwarf-planet-intl-scli-trnd-scn/index.html</p></a>
+				<a id="IDHN054NA" href="https://prezi.com/p/phkzilwoskjr/all-about-the-ceres-planet" target="_blank"><b>Ceres</b><p>https://prezi.com/p/phkzilwoskjr/all-about-the-ceres-planet</p></a>
+				<a id="IDZAX3STS" href="https://science.nasa.gov/dwarf-planets/ceres" target="_blank"><b>Ceres Overview</b><p>https://science.nasa.gov/dwarf-planets/ceres</p></a>
+				<a id="ID514QDH" href="https://www.astronomy.com/science/how-big-is-pluto-new-horizons-settles-decades-long-debate" target="_blank"><b>Size of Pluto</b><p>https://www.astronomy.com/science/how-big-is-pluto-new-horizons-settles-decades-long-debate</p></a>
+				<a id="IDARPNZMNI" href="https://www.guinnessworldrecords.com/world-records/84699-largest-dwarf-planet" target="_blank"><b>Pluto, Largest Dwarf Planet</b><p>https://www.guinnessworldrecords.com/world-records/84699-largest-dwarf-planet</p></a>
+				<a id="IDLBBNXX" href="https://www.space.com/18135-how-big-is-the-moon.html" target="_blank"><b>Size of the Moon</b><p>https://www.space.com/18135-how-big-is-the-moon.html</p></a>
+				<a id="IDMVMMB" href="https://blendertimer.com/factsheets/solar-system/planet-factsheet" target="_blank"><b>8 Planets Factsheet</b><p>https://blendertimer.com/factsheets/solar-system/planet-factsheet</p></a>
+				<a id="IDCZ3GO" href="https://www.space.com/17001-how-big-is-the-sun-size-of-the-sun.html" target="_blank"><b>Size of the Sun</b><p>https://www.space.com/17001-how-big-is-the-sun-size-of-the-sun.html</p></a>
+				<a id="IDC16Z0" href="https://en.wikipedia.org/wiki/Solar_mass" target="_blank"><b>Solar Mass</b><p>https://en.wikipedia.org/wiki/Solar_mass</p></a>
+				<a id="IDYNPYC" href="https://en.wikipedia.org/wiki/Solar_System" target="_blank"><b>Solar System Facts</b><p>https://en.wikipedia.org/wiki/Solar_System</p></a>
+				<a id="ID7D8F472S" href="https://www.universeguide.com/star/123062/siriusa" target="_blank"><b>Sirius A</b><p>https://www.universeguide.com/star/123062/siriusa</p></a>
+				<a id="IDI72BX7G" href="https://en.wikipedia.org/wiki/Polaris" target="_blank"><b>Polaris</b><p>https://en.wikipedia.org/wiki/Polaris</p></a>
+				<a id="ID7RO05U5B1" href="https://www.constellation-guide.com/vy-canis-majoris" target="_blank"><b>VY Canis Majoris</b><p>https://www.constellation-guide.com/vy-canis-majoris</p></a>
+				<a id="IDUFV7K5M" href="https://ourplnt.com/biggest-stars-universe" target="_blank"><b>Largest Stars</b><p>https://ourplnt.com/biggest-stars-universe</p></a>
+				<a id="IDYSVEECR" href="https://en.wikipedia.org/wiki/UY_Scuti" target="_blank"><b>UY Scuti Facts</b><p>https://en.wikipedia.org/wiki/UY_Scuti</p></a>
+				<a id="IDPQUKR2Z" href="https://en.wikipedia.org/wiki/Stephenson_2_DFK_1" target="_blank"><b>Stephenson 2-18</b><p>https://en.wikipedia.org/wiki/Stephenson_2_DFK_1</p></a>
+				<a id="IDZP5Y1K" href="https://www.star-facts.com/stephenson-2-18" target="_blank"><b>Largest Star</b><p>https://www.star-facts.com/stephenson-2-18</p></a>
+				<a id="IDC1VW6ZC" href="https://en.wikipedia.org/wiki/Segue_2" target="_blank"><b>Segue 2</b><p>https://en.wikipedia.org/wiki/Segue_2</p></a>
+				<a id="ID6GOM0DBZ" href="https://viewspace.org/interactives/unveiling_invisible_universe/interacting_galaxies/future_of_the_milky_way" target="_blank"><b>Milky Way</b><p>https://viewspace.org/interactives/unveiling_invisible_universe/interacting_galaxies/future_of_the_milky_way</p></a>
+				<a id="ID1IW5HQV41" href="https://en.wikipedia.org/wiki/ESO_306-17" target="_blank"><b>ESO 306-17</b><p>https://en.wikipedia.org/wiki/ESO_306-17</p></a>
+				<a id="IDZB3VS4F" href="https://www.livescience.com/largest-galaxy-ever-spotted" target="_blank"><b>Alcyoneus</b><p>https://www.livescience.com/largest-galaxy-ever-spotted</p></a>
+				<a id="ID2Z6OM9RF" href="https://simple.wikipedia.org/wiki/Hercules%E2%80%93Corona_Borealis_Great_Wall" target="_blank"><b>Hercules-Corona Borealis Great Wall</b><p>https://simple.wikipedia.org/wiki/Hercules%E2%80%93Corona_Borealis_Great_Wall</p></a>
+				<a id="IDDYO45478" href="https://en.wikipedia.org/wiki/Observable_universe" target="_blank"><b>Observable Universe Facts</b><p>https://en.wikipedia.org/wiki/Observable_universe</p></a>
+			</div>
+			<h2>Graphic Sources</h2>
+			<div id="graphic-sources" class="sources">
+				<a id="IDIAU5J06" href="https://pixabay.com/vectors/molecule-water-atom-science-small-8307719" target="_blank"><b>Water Molecule (Daniel Roberts)</b><p>https://pixabay.com/vectors/molecule-water-atom-science-small-8307719</p></a>
+				<a id="IDQZJJLDYKV" href="https://pixabay.com/vectors/adenovirus-virus-disease-smallest-8213825" target="_blank"><b>Adenovirus (Daniel Roberts)</b><p>https://pixabay.com/vectors/adenovirus-virus-disease-smallest-8213825</p></a>
+				<a id="IDCAWZC8W" href="https://pixabay.com/vectors/award-badge-number-1-first-best-8207550" target="_blank"><b>#1 Badge (Daniel Roberts)</b><p>https://pixabay.com/vectors/award-badge-number-1-first-best-8207550</p></a>
+				<a id="IDWQ0VL3P" href="https://pixabay.com/vectors/mycoplasma-gallisepticum-cell-nature-8316167" target="_blank"><b>Mycoplasma Gallisepticum (Daniel Roberts)</b><p>https://pixabay.com/vectors/mycoplasma-gallisepticum-cell-nature-8316167</p></a>
+				<a id="IDPMG32D" href="https://pixabay.com/vectors/blood-cell-red-human-anatomy-8307724" target="_blank"><b>Red Blood Cell (Daniel Roberts)</b><p>https://pixabay.com/vectors/blood-cell-red-human-anatomy-8307724</p></a>
+				<a id="IDBSXUAD" href="https://pixabay.com/vectors/sand-grain-particle-nature-small-8316168" target="_blank"><b>Grain of Sand (Daniel Roberts)</b><p>https://pixabay.com/vectors/sand-grain-particle-nature-small-8316168</p></a>
+				<a id="IDLAEAII2HP" href="https://pixabay.com/vectors/sugar-granule-grain-food-sweet-8307721" target="_blank"><b>Sugar Granule (Daniel Roberts)</b><p>https://pixabay.com/vectors/sugar-granule-grain-food-sweet-8307721</p></a>
+				<a id="IDL208RY" href="https://pixabay.com/vectors/water-drop-liquid-fluid-nature-8904702" target="_blank"><b>Water Drop (Daniel Roberts)</b><p>https://pixabay.com/vectors/water-drop-liquid-fluid-nature-8904702</p></a>
+				<a id="IDX6QZL" href="https://pixabay.com/vectors/ladybug-bug-beetle-animal-ladybird-8204923" target="_blank"><b>Ladybug (Daniel Roberts)</b><p>https://pixabay.com/vectors/ladybug-bug-beetle-animal-ladybird-8204923</p></a>
+				<a id="IDWJZIN7I4W" href="https://pixabay.com/vectors/frog-tree-frog-amphibian-animal-8207551" target="_blank"><b>Tree Frog (Daniel Roberts)</b><p>https://pixabay.com/vectors/frog-tree-frog-amphibian-animal-8207551</p></a>
+				<a id="IDPVNHQQS" href="https://pixabay.com/vectors/chameleon-lizard-animal-reptile-8204925" target="_blank"><b>Chameleon (Daniel Roberts)</b><p>https://pixabay.com/vectors/chameleon-lizard-animal-reptile-8204925</p></a>
+				<a id="IDL5UA5JMP"><b>German Shepherd (Daniel Roberts)</b><p>N/A</p></a>
+				<a id="IDVNPU5WMD" href="https://pixabay.com/vectors/person-man-stand-human-arms-legs-8238232" target="_blank"><b>Man Standing-Front (Daniel Roberts)</b><p>https://pixabay.com/vectors/person-man-stand-human-arms-legs-8238232</p></a>
+				<a id="IDJVOEJZYDA" href="https://pixabay.com/vectors/giraffe-animal-nature-wild-8204924" target="_blank"><b>Giraffe (Daniel Roberts)</b><p>https://pixabay.com/vectors/giraffe-animal-nature-wild-8204924</p></a>
+				<a id="ID3PJZ1Z" href="https://pixabay.com/vectors/space-shuttle-rocket-challenger-8297058" target="_blank"><b>Space Shuttle (Daniel Roberts)</b><p>https://pixabay.com/vectors/space-shuttle-rocket-challenger-8297058</p></a>
+				<a id="IDLMM7NK80" href="https://pixabay.com/vectors/saturn-v-saturn-5-rocket-space-8297056" target="_blank"><b>Saturn V (Daniel Roberts)</b><p>https://pixabay.com/vectors/saturn-v-saturn-5-rocket-space-8297056</p></a>
+				<a id="IDAMP7VE" href="https://pixabay.com/vectors/tree-hyperion-tall-nature-wild-8316166" target="_blank"><b>Hyperion (Daniel Roberts)</b><p>https://pixabay.com/vectors/tree-hyperion-tall-nature-wild-8316166</p></a>
+				<a id="IDTVUHMODG" href="https://pixabay.com/vectors/eiffel-tower-eiffel-architecture-150119" target="_blank"><b>Eiffel Tower (OpenClipart-Vectors)</b><p>https://pixabay.com/vectors/eiffel-tower-eiffel-architecture-150119</p></a>
+				<a id="IDH13IK1TXK" href="https://pixabay.com/vectors/burj-khalifa-dubai-building-tall-8207549" target="_blank"><b>Burj Khalifa (Daniel Roberts)</b><p>https://pixabay.com/vectors/burj-khalifa-dubai-building-tall-8207549</p></a>
+				<a id="ID4RR4R0UGT" href="https://pixabay.com/vectors/mount-saint-helens-mountian-nature-8272070" target="_blank"><b>Mount Saint Helens (Daniel Roberts)</b><p>https://pixabay.com/vectors/mount-saint-helens-mountian-nature-8272070</p></a>
+				<a id="IDV9VKBQXDN" href="https://pixabay.com/vectors/currant-peak-mountain-rock-nature-8272071" target="_blank"><b>Currant Peak (Daniel Roberts)</b><p>https://pixabay.com/vectors/currant-peak-mountain-rock-nature-8272071</p></a>
+				<a id="ID021AF" href="https://pixabay.com/vectors/mount-rainier-mountain-nature-snow-8297057" target="_blank"><b>Mount Rainier (Daniel Roberts)</b><p>https://pixabay.com/vectors/mount-rainier-mountain-nature-snow-8297057</p></a>
+				<a id="IDJI49G8KQ" href="https://pixabay.com/vectors/denali-mountain-nature-8272069" target="_blank"><b>Denali (Daniel Roberts)</b><p>https://pixabay.com/vectors/denali-mountain-nature-8272069</p></a>
+				<a id="IDBDKV1VE" href="https://pixabay.com/vectors/mount-everest-mountain-nature-8297059" target="_blank"><b>Mount Everest (Daniel Roberts)</b><p>https://pixabay.com/vectors/mount-everest-mountain-nature-8297059</p></a>
+				<a id="IDQFI3S" href="https://pixabay.com/vectors/halleys-comet-nature-space-rock-8316165" target="_blank"><b>Halley's Comet (Daniel Roberts)</b><p>https://pixabay.com/vectors/halleys-comet-nature-space-rock-8316165</p></a>
+				<a id="ID45ZY788FV" href="https://pixabay.com/vectors/bernardinelli-bernstein-comet-8213823" target="_blank"><b>Bernardinelli-Bernstein (Daniel Roberts)</b><p>https://pixabay.com/vectors/bernardinelli-bernstein-comet-8213823</p></a>
+				<a id="IDN0B05ZL1"><b>Hygiea (Daniel Roberts)</b><p>N/A</p></a>
+				<a id="IDN6O0HN" href="https://pixabay.com/vectors/ceres-planet-asteroid-terrestrial-8236207" target="_blank"><b>Ceres (Daniel Roberts)</b><p>https://pixabay.com/vectors/ceres-planet-asteroid-terrestrial-8236207</p></a>
+				<a id="IDPBF8Z814" href="https://pixabay.com/vectors/pluto-asteroid-planet-terrestrial-8236209" target="_blank"><b>Pluto (Daniel Roberts)</b><p>https://pixabay.com/vectors/pluto-asteroid-planet-terrestrial-8236209</p></a>
+				<a id="IDNIIXUV" href="https://pixabay.com/vectors/moon-earth-space-natural-satellite-8236211" target="_blank"><b>The Moon (Daniel Roberts)</b><p>https://pixabay.com/vectors/moon-earth-space-natural-satellite-8236211</p></a>
+				<a id="ID8AWKYXV" href="https://pixabay.com/vectors/mercury-planet-space-terrestrial-8233227" target="_blank"><b>Mercury (Daniel Roberts)</b><p>https://pixabay.com/vectors/mercury-planet-space-terrestrial-8233227</p></a>
+				<a id="IDHD25J" href="https://pixabay.com/vectors/mars-planet-space-terrestrial-8233226" target="_blank"><b>Mars (Daniel Roberts)</b><p>https://pixabay.com/vectors/mars-planet-space-terrestrial-8233226</p></a>
+				<a id="IDPPU27QHT" href="https://pixabay.com/vectors/venus-planet-space-terrestrial-8233225" target="_blank"><b>Venus (Daniel Roberts)</b><p>https://pixabay.com/vectors/venus-planet-space-terrestrial-8233225</p></a>
+				<a id="IDRJN8IUZBE" href="https://pixabay.com/vectors/earth-planet-space-terrestrial-8233221" target="_blank"><b>Earth (Daniel Roberts)</b><p>https://pixabay.com/vectors/earth-planet-space-terrestrial-8233221</p></a>
+				<a id="IDL9KLY1Y" href="https://pixabay.com/vectors/neptune-planet-space-terrestrial-8233219" target="_blank"><b>Neptune (Daniel Roberts)</b><p>https://pixabay.com/vectors/neptune-planet-space-terrestrial-8233219</p></a>
+				<a id="ID242Q8R" href="https://pixabay.com/vectors/uranus-planet-space-terrestrial-8233222" target="_blank"><b>Uranus (Daniel Roberts)</b><p>https://pixabay.com/vectors/uranus-planet-space-terrestrial-8233222</p></a>
+				<a id="ID8H4IYU" href="https://pixabay.com/vectors/saturn-planet-space-terrestrial-8233220" target="_blank"><b>Saturn (Daniel Roberts)</b><p>https://pixabay.com/vectors/saturn-planet-space-terrestrial-8233220</p></a>
+				<a id="IDMT435QQK" href="https://pixabay.com/vectors/jupiter-planet-space-terrestrial-8233223" target="_blank"><b>Jupiter (Daniel Roberts)</b><p>https://pixabay.com/vectors/jupiter-planet-space-terrestrial-8233223</p></a>
+				<a id="ID1KTTG3I" href="https://pixabay.com/vectors/sun-star-space-solar-light-bright-8328084" target="_blank"><b>The Sun (Daniel Roberts)</b><p>https://pixabay.com/vectors/sun-star-space-solar-light-bright-8328084</p></a>
+				<a id="IDCX5ICT" href="https://pixabay.com/vectors/star-space-light-bright-ball-8328086" target="_blank"><b>Sirius A (Daniel Roberts)</b><p>https://pixabay.com/vectors/star-space-light-bright-ball-8328086</p></a>
+				<a id="IDEEIGKI83" href="https://pixabay.com/vectors/polaris-star-space-light-bright-8328083" target="_blank"><b>Polaris (Daniel Roberts)</b><p>https://pixabay.com/vectors/polaris-star-space-light-bright-8328083</p></a>
+				<a id="ID1LVD6K" href="https://pixabay.com/vectors/vy-canis-majoris-star-space-light-8328085" target="_blank"><b>VY Canis Majoris (Daniel Roberts)</b><p>https://pixabay.com/vectors/vy-canis-majoris-star-space-light-8328085</p></a>
+				<a id="IDXQVH4MMN" href="https://pixabay.com/vectors/uy-scuti-star-space-light-bright-8328087" target="_blank"><b>UY Scuti (Daniel Roberts)</b><p>https://pixabay.com/vectors/uy-scuti-star-space-light-bright-8328087</p></a>
+				<a id="IDYSBWFE" href="https://pixabay.com/vectors/stephenson-2-18-star-space-light-8328088" target="_blank"><b>Stephenson 2-18 (Daniel Roberts)</b><p>https://pixabay.com/vectors/stephenson-2-18-star-space-light-8328088</p></a>
+				<a id="IDIVVPJ" href="https://pixabay.com/vectors/segue-2-galaxy-stars-abstract-glow-8282016" target="_blank"><b>Segue 2 (Daniel Roberts)</b><p>https://pixabay.com/vectors/segue-2-galaxy-stars-abstract-glow-8282016</p></a>
+				<a id="IDX0V2CI" href="https://pixabay.com/vectors/milky-way-galaxy-abstract-space-8282020" target="_blank"><b>The Milky Way (Daniel Roberts)</b><p>https://pixabay.com/vectors/milky-way-galaxy-abstract-space-8282020</p></a>
+				<a id="IDB0RRC10" href="https://pixabay.com/vectors/eso-306-17-galaxy-space-abstract-8282015" target="_blank"><b>ESO 306-17 (Daniel Roberts)</b><p>https://pixabay.com/vectors/eso-306-17-galaxy-space-abstract-8282015</p></a>
+				<a id="IDVBFZN" href="https://pixabay.com/vectors/alcyoneus-galaxy-universe-stars-8213824" target="_blank"><b>Alcyoneus (Daniel Roberts)</b><p>https://pixabay.com/vectors/alcyoneus-galaxy-universe-stars-8213824</p></a>
+				<a id="IDC0NJ4" href="https://pixabay.com/vectors/hercules-corona-borealis-great-wall-8282017" target="_blank"><b>Hercules-Corona Borealis Great Wall (Daniel Roberts)</b><p>https://pixabay.com/vectors/hercules-corona-borealis-great-wall-8282017</p></a>
+				<a id="IDJQUXRA6"><b>Observable Universe (Daniel Roberts)</b><p>N/A</p></a>
+				<a id="IDJ7D4Q884"><b>Stellar X3 Microphone (Daniel Roberts)</b><p>N/A</p></a>
+			</div>
+			<h2>Audio Sources</h2>
+			<div id="audio-sources" class="sources">
+				<a id="ID2GEHOFS"><b>Narration (Daniel Roberts)</b><p>N/A</p></a>
+				<a id="IDISW0MF" href="https://pixabay.com/music/introoutro-bouncing-joy-126495" target="_blank"><b>Bouncing Joy (Daniel Roberts)</b><p>https://pixabay.com/music/introoutro-bouncing-joy-126495</p></a>
+				<a id="IDK5KX5H" href="https://pixabay.com/music/main-title-fallen-comrade-20788" target="_blank"><b>Fallen Comrade (Daniel Roberts)</b><p>https://pixabay.com/music/main-title-fallen-comrade-20788</p></a>
+				<a id="IDDTKW91PY4" href="https://pixabay.com/music/suspense-escape-of-triumph-epic-cinematic-127029" target="_blank"><b>Escape of Triumph-Epic Cinematic (Daniel Roberts)</b><p>https://pixabay.com/music/suspense-escape-of-triumph-epic-cinematic-127029</p></a>
+				<a id="ID0UGKEA0Q0" href="https://pixabay.com/music/pulses-beyond-infinity-159345" target="_blank"><b>Beyond Infinity (Daniel Roberts)</b><p>https://pixabay.com/music/pulses-beyond-infinity-159345</p></a>
+				<a id="IDBAEXXGCRD"><b>Rumble-1 (Daniel Roberts)</b><p>N/A</p></a>
+			</div>
+			<div id="cc"><h2>Subtitles</h2><a href="./cc/13.txt" download="When MASSIVE Becomes TINY - Subtitles.txt" title="Download subtitles"><img src="../static-0/files/images/icons/download.svg" alt="Download"></a></div>
+			<div id="subtitles">
+				<p>This is an atom, and it is absolutely tiny.</p>
+				<p>So tiny that it's not even microscopic.</p>
+				<p>Well...</p>
+				<p>unless we're talking about electron microscopes.</p>
+				<p>Oh, and, no, this is not just a boring video about atoms.</p>
+				<p>This is a water molecule. It is also</p>
+				<p>too small to be microscopic.</p>
+				<p>Well, except for electron microscopes of course.</p>
+				<p>This is an adenovirus. It is the smallest DNA virus.</p>
+				<p>It too, is not microscopic (except for electron microscopes).</p>
+				<p>This is Mycoplasma gallisepticum. And, you guessed it,</p>
+				<p>it is also not microscopic (except for electron microscopes).</p>
+				<p>This is a red blood cell. And it's the first object in this list</p>
+				<p>that is actually microscopic.</p>
+				<p>But don't worry...we'll soon be out of the</p>
+				<p>microscopic range again. Although this time, the other way.</p>
+				<p>This is a grain of sand. There are about 7.5 quintillion of</p>
+				<p>these on the planet.</p>
+				<p>I'm just glad I didn't have to count all those.</p>
+				<p>This is a sugar granule. It is larger than most sand,</p>
+				<p>but it's still pretty small.</p>
+				<p>This is a water drop. And what's so amazing about it is that...</p>
+				<p>uh...I already made an entire video about that, sorry.</p>
+				<p>This is a ladybug. Ladybugs are very tiny,</p>
+				<p>as you probably knew.</p>
+				<p>Oh, and they're also sometimes referred to as "ladybirds"</p>
+				<p>but I prefer the term "ladybug" because last time I checked...</p>
+				<p>birds didn't have six legs.</p>
+				<p>This is a frog. A tree frog to be specific.</p>
+				<p>Although, to be specific, it doesn't actually exist because</p>
+				<p>I just needed a graphic of a tree frog.</p>
+				<p>So I made up my own species.</p>
+				<p>This is a chameleon. They have really long tongues that can</p>
+				<p>be up to 1.5 times their length! But you probably knew that.</p>
+				<p>This is a German Shepherd. The best dog breed ever.</p>
+				<p>I mean, you can't even argue that,</p>
+				<p>my script literally says "the best dog breed ever."</p>
+				<p>This is a person. A person referring to a human, of course.</p>
+				<p>This is a giraffe. It is the tallest land animal on the planet.</p>
+				<p>Not the biggest, but the tallest.</p>
+				<p>This is the Space Shuttle. It served for 30 years as one of</p>
+				<p>the main transportation vehicles between Earth and space,</p>
+				<p>but was eventually retired in 2011. It is absolutely massive,</p>
+				<p>coming in at 184 feet tall and weighing over 2000 tons!</p>
+				<p>It's actually pretty small though. Remember, we are going BIG.</p>
+				<p>This is the Saturn V...more commonly known as the Saturn 5.</p>
+				<p>At 363 feet, it is nearly double the height of the Space Shuttle.</p>
+				<p>But, it's still really, really, REALLY tiny!</p>
+				<p>This is Hyperion. At over 380 feet, Hyperion is the tallest</p>
+				<p>tree in the world. It's trunk is a remarkable 16 feet in diameter!</p>
+				<p>This is the Eiffel Tower. It comes in at 1083 feet.</p>
+				<p>Nearly 3 times as tall as the Saturn V!</p>
+				<p>This is the Burj Khalifa. Completed in January of 2010,</p>
+				<p>it is currently the tallest building in the world.</p>
+				<p>At 2,722 feet, it is over half a mile tall.</p>
+				<p>But it too is absolutely minute.</p>
+				<p>This is Mount Saint Helens. Coming in at just over 8,360 feet,</p>
+				<p>Mount Saint Helens is not actually one of the</p>
+				<p>tallest mountains in the world.</p>
+				<p>Which immediately makes it sound much less impressive.</p>
+				<p>But it's actually massive...but also very, very tiny.</p>
+				<p>This is Currant Peak. It's 11,518 feet in height,</p>
+				<p>a little over 2 miles.</p>
+				<p>This is Mount Rainier. At 14,410 feet, it is...</p>
+				<p>not actually very big.</p>
+				<p>Remember, we've still got a ways to go.</p>
+				<p>I mean, we're still on Earth.</p>
+				<p>Although, we will only be for a short while longer.</p>
+				<p>This is Denali. Even though it is the third highest</p>
+				<p>of the Seven Summits, it's only the 245th tallest</p>
+				<p>mountain in the world.</p>
+				<p>But at a magnificent 20,310 feet,</p>
+				<p>it is 3,500 times taller than the average human.</p>
+				<p>But don't forget, it's still tiny.</p>
+				<p>This is Mt. Everest. At 29,032 feet, Mt. Everest is</p>
+				<p>not only the tallest mountain but also the tallest</p>
+				<p>object above sea level on Earth.</p>
+				<p>So, enjoy Earth while you can, because this will be</p>
+				<p>the last time you see Earth. Anyway...</p>
+				<p>This is Halley's Comment.</p>
+				<p>No...comet.</p>
+				<p>I can never pronounce that right.</p>
+				<p>At 9.3 miles on it's longest axis...it's uh...</p>
+				<p>not actually that much larger than Mt. Everest.</p>
+				<p>But it's still massive...</p>
+				<p>and also very, very, VERY tiny.</p>
+				<p>This is Bernardinelli-Bernstein.</p>
+				<p>The largest comet ever discovered.</p>
+				<p>But even at nearly 74 miles, it's not even as large</p>
+				<p>as the smallest dwarf planet in our Solar System.</p>
+				<p>Speaking of which...</p>
+				<p>This is Hygiea. At nearly 270 miles, Hygiea is the smallest</p>
+				<p>planet in our Solar System.</p>
+				<p>It's of course not a regular planet,</p>
+				<p>but instead a dwarf planet and was only just recently</p>
+				<p>actually considered to be a dwarf planet.</p>
+				<p>This is Ceres. Located in the asteroid belt,</p>
+				<p>along with Hygiea, Ceres is over 587 miles in diameter!</p>
+				<p>But it's not the biggest dwarf planet.</p>
+				<p>This is good ol' Pluto. At 1,473 miles in diameter,</p>
+				<p>Pluto is the largest of all the dwarf planets.</p>
+				<p>This is the moon. Or maybe I should say, the Earth's moon.</p>
+				<p>At 2,159.2 miles in diameter,</p>
+				<p>the moon is not even double the size of Pluto.</p>
+				<p>This is Mercury, the smallest of all the major planets.</p>
+				<p>At over 3,000 miles in diameter, Mercury is just</p>
+				<p>barely over twice the size of Pluto.</p>
+				<p>Pluto is definitely quite big.</p>
+				<p>This is Mars, the second smallest of all the major planets.</p>
+				<p>Mars is only 4,208 miles in diameter,</p>
+				<p>making it just a little bit larger than Mercury.</p>
+				<p>This is Venus. Coming in at over 7,500 miles,</p>
+				<p>Venus is just a little less than twice the size of Mars.</p>
+				<p>This is Earth. This is a very special planet.</p>
+				<p>Designed with life. Designed with water.</p>
+				<p>Designed at just 7,913.162 miles in diameter,</p>
+				<p>Earth is the fourth smallest planet in the Solar System.</p>
+				<p>And if Pluto were a planet, Earth would be the fifth smallest</p>
+				<p>and and fifth largest. But anyway...</p>
+				<p>enjoy Earth while you can, because this will be</p>
+				<p>the last time you see it.</p>
+				<p>Wait, didn't I already say that?</p>
+				<p>This is Neptune. At over 30,500 miles in diameter,</p>
+				<p>Neptune is the smallest gas planet but the fourth largest planet.</p>
+				<p>And also, the coldest, being the farthest</p>
+				<p>major planet from the Sun.</p>
+				<p>This is Uranus. Closer to the Sun than Neptune,</p>
+				<p>but also larger at 31,399 miles in diameter.</p>
+				<p>This is Saturn. Coming in at 71,229 miles in diameter,</p>
+				<p>Saturn is the second largest planet</p>
+				<p>and also has some beautiful rings.</p>
+				<p>But no, we're measuring the planet itself, not the rings.</p>
+				<p>This is Jupiter, the largest of all the planets</p>
+				<p>in the Solar System with a diameter of 85,964 miles.</p>
+				<p>But there's something in the Solar System</p>
+				<p>that is still much bigger.</p>
+				<p>This is the Sun. At 864,938 miles in diameter,</p>
+				<p>the Sun is the largest object in the Solar System,</p>
+				<p>and is over 10 times larger than Jupiter.</p>
+				<p>The Sun is so massive that it makes up 99.86% of the mass</p>
+				<p>of our entire Solar System!</p>
+				<p>For comparison, Jupiter (which is more than double the</p>
+				<p>mass of all the other planets combined)</p>
+				<p>makes up less than 0.1% (0.095%) of the Solar System's mass.</p>
+				<p>But don't worry. This gigantic star will very, very quickly</p>
+				<p>become completely, invisibly small.</p>
+				<p>This is Sirius A. No, seriously, it's Sirius.</p>
+				<p>At nearly 1.47 million miles in diameter,</p>
+				<p>Sirius is seriously massive. But not too massive.</p>
+				<p>We've still got 10 more celestial creations to compare,</p>
+				<p>and the transitions between them are rather extreme.</p>
+				<p>This is Polaris, also known as the North Star since</p>
+				<p>it's bright and fairly close to exactly north.</p>
+				<p>At nearly 32.5 million miles in diameter,</p>
+				<p>Polaris is over 37 times larger than our Sun.</p>
+				<p>But it's actually still a pretty small star.</p>
+				<p>This is VY Canis Majoris.</p>
+				<p>And no, this is not the largest star.</p>
+				<p>At only 1.2 billion miles in diameter, VY Canis Majoris is</p>
+				<p>outranked by at least 6 other known stars.</p>
+				<p>This is UY Scuti. While also previously the largest star,</p>
+				<p>at a mere 1.48 billion miles in diameter,</p>
+				<p>it is also now outranked by an even bigger star.</p>
+				<p>This is Stephenson 2-18.</p>
+				<p>Coming in at 1.86 billion miles in diameter,</p>
+				<p>this is the current record holder for the largest known star.</p>
+				<p>Now...prepare yourself for a massive jump in sizes.</p>
+				<p>Because, though this star is massive,</p>
+				<p>there are still things far more massive.</p>
+				<p>And this star, is actually very, very small.</p>
+				<p>This is Segue 2, one of the smallest galaxies</p>
+				<p>in the Universe. And that...was not a good segue</p>
+				<p>in comparisons.</p>
+				<p>Anyway, though it's one of the smallest,</p>
+				<p>it is still over 651 trillion miles in diameter!</p>
+				<p>This is the Milky Way.</p>
+				<p>At over 621 quadrillion miles in diameter,</p>
+				<p>our galaxy is actually still a pretty small one.</p>
+				<p>This is ESO 306-17.</p>
+				<p>With a very unmemorable name, this galaxy is</p>
+				<p>1 million light-years in diameter or nearly 6 quintillion miles.</p>
+				<p>But...our comparison will still get much, much larger.</p>
+				<p>This is Alcyoneus, the largest galaxy we've ever discovered.</p>
+				<p>At an astounding 16.3 million light-years in diameter,</p>
+				<p>this galaxy is truly massive. But...we must go bigger!</p>
+				<p>This is the Hercules-Corona Borealis Great Wall.</p>
+				<p>With a length of 10 billion light-years</p>
+				<p>(just a little longer than it's name),</p>
+				<p>this is the largest known structure in</p>
+				<p>the Observable Universe.</p>
+				<p>Which leaves us only one thing left...</p>
+				<p>This is the Observable Universe.</p>
+				<p>At approximately 93 billion light-years in diameter,</p>
+				<p>the Observable Universe is insanely massive!</p>
+				<p>But the most shocking...</p>
+				<p>this is only the "observable" Universe.</p>
+				<p>The question must be raised, what lies beyond?</p>
+				<p>What has been created so far from us,</p>
+				<p>and how far does it extend?</p>
+				<p>For all we know, it could even extend to infinity.</p>
+				<p>But one thing I do know is that there is a vastness of sizes</p>
+				<p>we can observe that cannot truly be comprehended.</p>
+				<p>Huge thanks to TechZone Audio Products for</p>
+				<p>supporting my work and sending over their</p>
+				<p>Stellar X3 professional grade mic!</p>
+				<p>The quality is absolutely...stellar...</p>
+				<p>Would highly recommend this microphone to anyone</p>
+				<p>wanting to take their audio quality to a professional level!</p>
+				<p>If you're interested in getting one for yourself,</p>
+				<p>check out the link in the description!</p>
+			</div>
+			<h2>Thumbnails</h2>
+			<div id="thumbnails">
+				<a href="./thumbnails/13-when_massive_becomes_tiny-1080.png" class="tb"><img src="./thumbnails/13-when_massive_becomes_tiny-180.png" alt="Thumbnail"><b>August 23, 2023</b></a>
+			</div>
+		</div>
+		<footer></footer>
+		<script>
+			fetch('/noindex/footer.html')
+				.then(response => response.text())
+				.then(data => {document.querySelector('footer').innerHTML = data});
+		</script>
+		<script src="/static/main.js"></script>
+		<script src="/static/video-sources-pages.js"></script>
+	</body>
+</html>

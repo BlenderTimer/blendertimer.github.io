@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en-US">
+	<head>
+		<!-- Google tag (gtag.js) -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-  SYR26MG6YV"></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
+			
+			gtag('config', 'G-SYR26MG6YV');
+		</script>
+		<!-- Google Tag Manager -->
+		<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+		new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+		j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+		'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+		})(window,document,'script','dataLayer','GTM-KSL94KH');</script>
+		<!-- End Google Tag Manager -->
+		<meta charset="utf-8">
+		<title>Technology - The NowStream by BlenderTimer</title>
+		<meta name="description" content="A live visualization of things which are happening with technology right now!">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="icon" href="/favicon.png" type="image/x-icon">
+		<link rel="stylesheet" type="text/css" href="/static/main.css">
+		<link rel="stylesheet" type="text/css" href="./stream-main.css">
+		<script src="/bt-js/bt-js.js"></script>
+	</head>
+	<body>
+		<header></header>
+		<script>
+			fetch('/noindex/header.html')
+				.then(response => response.text())
+				.then(data => {document.querySelector('header').innerHTML = data});
+		</script>
+		<script src="/noindex/pages.js"></script>
+		<noscript>
+			<div id="nojs" style="position: fixed; top: 0px; bottom: 0px; left: 0px; right: 0px; display: flex; flex-flow: column; justify-content: center; align-items: center; background: var(--semi-back); padding: 15px 20px; z-index: 1000000; cursor: default;">
+				<b style="font-family: sans-serif; font-size: 16pt; color: #FFF; text-align: center;">Page Failed to Load</b>
+				<p style="font-family: sans-serif; font-size: 14pt; color: #FFF6; text-align: center;">This website requires Javascript to operate.</p>
+			</div>
+		</noscript>
+		<div id="loader" style="width: 100%; height: calc(100% - 50px); top: 50px; left: 0px; position: fixed; z-index: -100000;">
+			<img alt="Loading" src="/static/images/loader.gif" style="width: 100px; height: 100px; position: fixed; left: calc(50% - 50px); top: calc(50% - 25px); filter: drop-shadow(0px 0px 15px #000000);">
+		</div>
+		<div id="source-popup-back" onclick="closeSourcePopup()" style="opacity: 0; pointer-events: none;"></div>
+		<div id="source-popup-container" style="opacity: 0">
+			<div id="source-popup-main" style="pointer-events: none; user-select: none; transform: scale(0)">
+				<img id="source-popup-close" alt="Close" src="../static-0/files/images/icons/x.svg" onclick="closeSourcePopup()">
+				<div id="source-popup" style="display: flex">
+					<h1>Sources</h1>
+					<div class="popup-scroll"></div>
+				</div>
+			</div>
+		</div>
+		<div id="content-main" style="opacity: 0; transition: 0.5s">
+			<div id="stream-header">
+				<div>
+					<a href="/nowstream"><img src="../static-0/files/images/nowstream.svg" alt="The NowStream logo"></a>
+					<span><i id="sh-slash">/</i><i>Technology</i></span>
+				</div>
+			</div>
+			<p class="description">Things which are happening with technology right now!</p>
+			<div id="page-load-time">
+				<i></i>
+				<b></b>
+			</div>
+			<div id="stream-container">
+				<div id="phone-calls" style="--back: #25332a;--border: #389562;" class="stream-box">
+					<div class="stream-visual"><img src="./images/phone-calling.svg" alt="Phone calling"></div>
+					<span><b>0</b><p> phone calls have been made</p></span>
+					<span><i>156,250 per second</i><img onclick="viewSource(event)" src="../static-0/files/images/icons/source.svg" title="View source" alt="Source"></span>
+				</div>
+				<div id="data-created" style="--back: #202b28;--border: #60977f;" class="stream-box">
+					<div class="stream-visual"><img src="./images/supercomputer.svg" alt="Supercomputer"></div>
+					<span><b>0</b><p> terabytes of data has been created</p></span>
+					<span><i>4661tb per second</i><img onclick="viewSource(event)" src="../static-0/files/images/icons/source.svg" title="View source" alt="Source"></span>
+				</div>
+				<div id="photos-captured" style="--back: #3f3b3b;--border: #837f7f;" class="stream-box">
+					<div class="stream-visual"><img src="./images/camera.svg" alt="Camera"></div>
+					<span><b>0</b><p> photos have been captured</p></span>
+					<span><i>61,400 per second</i><img onclick="viewSource(event)" src="../static-0/files/images/icons/source.svg" title="View source" alt="Source"></span>
+				</div>
+				<div id="emails-sent" style="--back: #1f282d;--border: #4a7278;" class="stream-box">
+					<div class="stream-visual"><img src="./images/email.svg" alt="Email"></div>
+					<span><b>0</b><p> emails have been sent</p></span>
+					<span><i>4,019,676 per second</i><img onclick="viewSource(event)" src="../static-0/files/images/icons/source.svg" title="View source" alt="Source"></span>
+				</div>
+				<div id="mobile-messages-sent" style="--back: #1e242d;--border: #7480a2;" class="stream-box">
+					<div class="stream-visual"><img src="./images/mobile-messages.svg" alt="Mobile messages"></div>
+					<span><b>0</b><p> mobile messages have been sent</p></span>
+					<span><i>1,428,000 per second</i><img onclick="viewSource(event)" src="../static-0/files/images/icons/source.svg" title="View source" alt="Source"></span>
+				</div>
+				<div id="google-searches" style="--back: #1f282d;--border: #4a7278;" class="stream-box">
+					<div class="stream-visual"><img src="./images/google-searches.svg" alt="Google searches"></div>
+					<span><b>0</b><p> Google searches have been performed</p></span>
+					<span><i>99,000 per second</i><img onclick="viewSource(event)" src="../static-0/files/images/icons/source.svg" title="View source" alt="Source"></span>
+				</div>
+				<div id="youtube-videos" style="--back: #361616;--border: #bd2a3a;" class="stream-box">
+					<div class="stream-visual"><img src="./images/youtube-icon-small-shadow.png" style="display: none;" alt="YouTube icon with shadow"><canvas class="random-scale-3 fade-2x anim-in"></canvas></div>
+					<span><b>0</b><p> videos have been uploaded to YouTube</p></span>
+					<span><i>232 per second</i><img onclick="viewSource(event)" src="../static-0/files/images/icons/source.svg" title="View source" alt="Source"></span>
+				</div>
+				<div id="ddos-attacks" style="--back: #33383f;--border: #64737e;" class="stream-box force-integer">
+					<div class="stream-visual"><img src="./images/desktop.svg" class="image-flash-in-faster" alt="Desktop computer"><img src="./images/ddos.svg" style="opacity: 0; position: absolute;" alt="DDoS"></div>
+					<span><p>There have been </p><b>0</b><p> DDoS attacks</p></span>
+					<span><i>29 per minute</i><img onclick="viewSource(event)" src="../static-0/files/images/icons/source.svg" title="View source" alt="Source"></span>
+				</div>
+			</div>
+			<i id="disclaimer">All data in this stream is an estimate.</i>
+			<div class="spr"></div>
+			<h1 class="title">More Streams</h1>
+			<div id="more-streams">
+				<a href="/nowstream/aroundtheworld" class="stream">
+					<div class="stream-thumbnail"><img src="../static-0/files/images/nowstream-aroundtheworld.svg" alt="Around the World - The NowStream by BlenderTimer"></div>
+					<b>Around the World</b>
+					<div class="stream-description"><i>Things which are happening all around the world right now!</i></div>
+				</a>
+				<a href="/nowstream/nature" class="stream">
+					<div class="stream-thumbnail"><img src="../static-0/files/images/nowstream-nature.svg" alt="Nature - The NowStream by BlenderTimer"></div>
+					<b>Nature</b>
+					<div class="stream-description"><i>Things which are happening in nature right now!</i></div>
+				</a>
+				<a href="/nowstream/space" class="stream">
+					<div class="stream-thumbnail"><img src="../static-0/files/images/nowstream-space.svg" alt="Space - The NowStream by BlenderTimer"></div>
+					<b>Space</b>
+					<div class="stream-description"><i>Things which are happening in space right now!</i></div>
+				</a>
+				<a href="/nowstream/you" class="stream">
+					<div class="stream-thumbnail"><img src="../static-0/files/images/nowstream-you.svg" alt="You - The NowStream by BlenderTimer"></div>
+					<b>You</b>
+					<div class="stream-description"><i>Things which are happening with you right now!</i></div>
+				</a>
+			</div>
+			<br>
+			<p>This stream shows how many things are happening in technology RIGHT NOW! This stream includes:</p>
+			<br>
+			<ul>
+				<li><p>The amount of phone calls made every second</p></li>
+				<li><p>The amount of data created every second</p></li>
+				<li><p>The amount of photos captured every second</p></li>
+				<li><p>The amount of emails sent every second</p></li>
+				<li><p>The amount of mobile messages sent every second</p></li>
+				<li><p>The amount of Google searches performed every second</p></li>
+				<li><p>The amount of videos uploaded to YouTube every second</p></li>
+				<li><p>The amount of Distributed Denial-of-Service (DDoS) attacks which occur every minute</p></li>
+			</ul>
+		</div>
+		<footer></footer>
+		<script>
+			fetch('/noindex/footer.html')
+				.then(response => response.text())
+				.then(data => {document.querySelector('footer').innerHTML = data});
+		</script>
+		<script src="/static/main.js"></script>
+		<script src="./stream-main.js"></script>
+		<script type="text/javascript">
+			const sourceData = {
+				"phone-calls":"<p>The source gives a rate of </p><b>156,250</b><p> phone calls per second.</p><div class='spr'></div><a href='https://www.sellcell.com/blog/how-many-phone-calls-are-made-a-day-2023-statistics' target='_blank'>https://www.sellcell.com/blog/how-many-phone-calls-are-made-a-day-2023-statistics</a>",
+				"data-created":"<p>The source gives a rate of </p><b>402.74 million terabytes of data</b><p> per day.</p><div class='spr'></div><a href='https://explodingtopics.com/blog/data-generated-per-day' target='_blank'>https://explodingtopics.com/blog/data-generated-per-day</a>",
+				"photos-captured":"<p>The source gives a rate of </p><b>61,400</b><p> photos taken per second.</p><div class='spr'></div><a href='https://photutorial.com/photos-statistics' target='_blank'>https://photutorial.com/photos-statistics</a>",
+				"emails-sent":"<p>The source gives a rate of </p><b>347.3 billion emails</b><p> sent per day.</p><div class='spr'></div><a href='https://www.yaguara.co/how-many-emails-are-sent-per-day' target='_blank'>https://www.yaguara.co/how-many-emails-are-sent-per-day</a>",
+				"mobile-messages-sent":"<p>The source gives a statistics for SMS & MMS (</p><b>270 thousand</b><p>), WhatsApp (</p><b>578 thousand</b><p>), Facebook Messenger (</p><b>578 thousand</b><p>), and Snapchat (</p><b>2 thousand</b><p>). All listed here are per second.</p><div class='spr'></div><a href='https://www.sellcell.com/blog/how-many-text-messages-are-sent-a-day-2023-statistics' target='_blank'>https://www.sellcell.com/blog/how-many-text-messages-are-sent-a-day-2023-statistics</a>",
+				"google-searches":"<p>The source gives a rate of </p><b>99,000 search queries</b><p> per second.</p><div class='spr'></div><a href='https://seo.ai/blog/how-many-people-use-google' target='_blank'>https://seo.ai/blog/how-many-people-use-google</a>",
+				"youtube-videos":"<p>The source gives an upload rate of </p><b>over 20 million videos</b><p> per day.</p><div class='spr'></div><a href='https://blog.youtube/news-and-events/happy-birthday-youtube-20' target='_blank'>https://blog.youtube/news-and-events/happy-birthday-youtube-20</a>",
+				"ddos-attacks":"<p>The source gives an estimate of </p><b>15.4 million</b><p> per year.</p><div class='spr'></div><a href='https://www.stationx.net/ddos-statistics' target='_blank'>https://www.stationx.net/ddos-statistics</a>",
+			};
+		</script>
+	</body>
+</html>

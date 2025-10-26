@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en-US">
+	<head>
+		<!-- Google tag (gtag.js) -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-  SYR26MG6YV"></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
+			
+			gtag('config', 'G-SYR26MG6YV');
+		</script>
+		<meta charset="utf-8">
+		<title>You're Amazing - BlenderTimer Video Sources</title>
+		<meta name="description" content="The video sources for You're Amazing.">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="icon" href="/favicon.png">
+		<link rel="stylesheet" type="text/css" href="/static/main.css">
+		<link rel="stylesheet" type="text/css" href="/static/video-sources-pages.css">
+		<script src="/bt-js/bt-js.js"></script>
+		<script src="/static/videos.js"></script>
+		<script src="/static/jquery-3.6.3.js"></script>
+	</head>
+	<body>
+		<header></header>
+		<script>
+			fetch('/noindex/header.html')
+				.then(response => response.text())
+				.then(data => {document.querySelector('header').innerHTML = data});
+		</script>
+		<script src="/noindex/pages.js"></script>
+		<noscript>
+			<div id="nojs" style="position: fixed; top: 0px; bottom: 0px; left: 0px; right: 0px; display: flex; flex-flow: column; justify-content: center; align-items: center; background: var(--semi-back); padding: 15px 20px; z-index: 1000000; cursor: default;">
+				<b style="font-family: sans-serif; font-size: 16pt; color: #FFF; text-align: center;">Page Failed to Load</b>
+				<p style="font-family: sans-serif; font-size: 14pt; color: #FFF6; text-align: center;">This website requires Javascript to operate.</p>
+			</div>
+		</noscript>
+		<div id="loader" style="width: 100%; height: calc(100% - 50px); top: 50px; left: 0px; position: fixed; z-index: -100000;">
+			<img alt="Loading" src="/static/images/loader.gif" style="width: 100px; height: 100px; position: fixed; left: calc(50% - 50px); top: calc(50% - 25px); filter: drop-shadow(0px 0px 15px #000000);">
+		</div>
+		<div id="content-main" style="opacity: 0; transition: 0.5s">
+			<h1 id="title">You're Amazing</h1>
+			<p id="published-date">Published: June 14, 2025 at 9:40 PM (PT)</p>
+			<div id="video-info">
+				<div id="vid-info-left">
+					<b class="vit">Video Information</b>
+					<span><b>Length:</b><p>7:24</p><i>(13347 frames/30fps)</i></span>
+					<span><b>Resolution:</b><p>3840x2160</p><i>(4K/UHD)</i></span>
+					<span><b>Most Rewatched:</b><a>N/A</a></span>
+					<span class="spr"></span>
+					<b class="vit">Realtime Statistics</b>
+					<div id="realtime-stats">
+						<span title="Views"><img src="../static-0/files/images/icons/eye.svg" alt="Views"><b>...</b></span>
+						<span title="Likes"><img src="../static-0/files/images/icons/like.svg" alt="Likes"><b>...</b></span>
+						<span title="Comments"><img src="../static-0/files/images/icons/comment.svg" alt="Comments"><b>...</b></span>
+					</div>
+					<span class="spr"></span>
+					<b class="vit">Views in the First</b>
+					<div id="first-views">
+						<span><b>10 Minutes</b><p>...</p></span>
+						<span><b>30 Minutes</b><p>...</p></span>
+						<span><b>Hour</b><p>...</p></span>
+						<span><b>24 Hours</b><p>...</p></span>
+					</div>
+				</div>
+				<span class="spr" id="info1-spr" style="display: none"></span>
+				<div id="vid-info-right">
+					<a id="thumbnail" href="./thumbnails/34-youre_amazing-1080.png" target="_blank"><img src="./thumbnails/34-youre_amazing-180.png" alt="Thumbnail"></a>
+					<div id="video-icons">
+						<span><b>Upload ID</b><p>34</p></span>
+						<span><b>Video ID</b><p>20</p></span>
+						<span><b>Type</b><p>Video</p></span>
+					</div>
+					<span id="yt-link"><a href="https://youtu.be/WEZJmVTyBLM" target="_blank">https://youtu.be/WEZJmVTyBLM</a><img src="../static-0/files/images/icons/copy-link.svg" alt="Copy link" onclick="copyVideoLink(event)"></span>
+					<script type="text/javascript">
+						var fv = document.getElementById('first-views');
+						var video = videos[parseInt(document.getElementById('video-icons').children[0].children[1].textContent)-1];
+						if (video.views10 == -1) {fv.children[0].children[1].innerHTML = "NO DATA"}
+						else {fv.children[0].children[1].innerHTML = video.views10};
+						if (video.views10 == -1) {fv.children[1].children[1].innerHTML = "NO DATA"}
+						else {fv.children[1].children[1].innerHTML = video.views30};
+						if (video.views10 == -1) {fv.children[2].children[1].innerHTML = "NO DATA"}
+						else {fv.children[2].children[1].innerHTML = video.views1};
+						if (video.views10 == -1) {fv.children[3].children[1].innerHTML = "NO DATA"}
+						else {fv.children[3].children[1].innerHTML = video.views24};
+						//Realtime Stats
+						var ytid = document.getElementById('yt-link').children[0].textContent.removeBefore("/", 1, true);
+						$.get(
+							"https://www.googleapis.com/youtube/v3/videos",{
+							part: 'statistics',
+							id: ytid,
+							key: 'AIzaSyDsaGX5mhvqCpI3jWMFFGMmmmB5IUEyUrk'},
+							function(data) {
+								var views = 0;
+								var likes = 0;
+								var comments = 0;
+								views = data.items[0].statistics.viewCount;
+								likes = data.items[0].statistics.likeCount;
+								comments = data.items[0].statistics.commentCount;
+								document.getElementById("realtime-stats").children[0].children[1].innerHTML = parseInt(views).toLocaleString();
+								document.getElementById("realtime-stats").children[1].children[1].innerHTML = parseInt(likes).toLocaleString();
+								document.getElementById("realtime-stats").children[2].children[1].innerHTML = parseInt(comments).toLocaleString();
+							}
+						);
+					</script>
+				</div>
+			</div>
+			<h2>Information Sources</h2>
+			<div id="info-sources" class="sources">
+				<a id="IDZXEBE5772" href="https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0006256" target="_blank"><b>Human's Biophoton Emission Paper</b><p>https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0006256</p></a>
+				<a id="IDY5NMEMRU7" href="https://www.sciencealert.com/you-can-t-see-it-but-humans-actually-glow-in-visible-light" target="_blank"><b>Human's Biophoton Emission</b><p>https://www.sciencealert.com/you-can-t-see-it-but-humans-actually-glow-in-visible-light</p></a>
+				<a id="ID6VAZK" href="https://www.guinnessworldrecords.com/world-records/420635-strongest-human-bone" target="_blank"><b>Strength of Human Femur</b><p>https://www.guinnessworldrecords.com/world-records/420635-strongest-human-bone</p></a>
+				<a id="IDY6XEAG" href="https://en.wikipedia.org/wiki/Human_body_weight" target="_blank"><b>Average Weight of a Human</b><p>https://en.wikipedia.org/wiki/Human_body_weight</p></a>
+				<a id="IDXRR5KO30" href="https://www.epa.gov/system/files/documents/2022-12/420r22029.pdf" target="_blank"><b>Average Vehicle Weights</b><p>https://www.epa.gov/system/files/documents/2022-12/420r22029.pdf</p></a>
+				<a id="IDO1W83TO3" href="https://schneiderjobs.com/blog/how-much-does-a-semi-truck-weigh" target="_blank"><b>Weight of a Semi-Truck</b><p>https://schneiderjobs.com/blog/how-much-does-a-semi-truck-weigh</p></a>
+				<a id="IDPKUSO26V" href="https://my.clevelandclinic.org/health/body/hyoid-bone" target="_blank"><b>Hyoid Bone</b><p>https://my.clevelandclinic.org/health/body/hyoid-bone</p></a>
+				<a id="ID4LAU5X53" href="https://atlanticcardiovascular.com/blog/how-long-does-it-take-for-blood-to-circulate" target="_blank"><b>How Fast Blood Circulates the Body</b><p>https://atlanticcardiovascular.com/blog/how-long-does-it-take-for-blood-to-circulate</p></a>
+				<a id="IDEGEZRPZ2I" href="https://www.pbs.org/wgbh/nova/heart/heartfacts.html" target="_blank"><b>Heart Facts</b><p>https://www.pbs.org/wgbh/nova/heart/heartfacts.html</p></a>
+				<a id="IDCRANQY39" href="https://www.worldometers.info/demographics/life-expectancy" target="_blank"><b>Average Human Lifespan</b><p>https://www.worldometers.info/demographics/life-expectancy</p></a>
+				<a id="ID3OZ7GO" href="https://pubmed.ncbi.nlm.nih.gov/36413639" target="_blank"><b>You Can Hear While Unconscious</b><p>https://pubmed.ncbi.nlm.nih.gov/36413639</p></a>
+				<a id="IDKY2PE6" href="https://www.neuwritewest.org/blog/4541" target="_blank"><b>Synaptic Firing Rate of the Human Brain</b><p>https://www.neuwritewest.org/blog/4541</p></a>
+				<a id="ID5Q60G" href="https://www.sleepfoundation.org/stages-of-sleep/rem-sleep" target="_blank"><b>REM Sleep</b><p>https://www.sleepfoundation.org/stages-of-sleep/rem-sleep</p></a>
+				<a id="IDESY0XI" href="https://pmc.ncbi.nlm.nih.gov/articles/PMC8364152" target="_blank"><b>Energy Use of the Human Brain</b><p>https://pmc.ncbi.nlm.nih.gov/articles/PMC8364152</p></a>
+				<a id="IDA0GUMPG"><b>Energy Use of a Laptop</b><p>Real-world measurement of 8W minimum when idle, 15W minimum when working, 100W+ when doing heavy work</p></a>
+				<a id="IDY5SN9CSX" href="https://pmc.ncbi.nlm.nih.gov/articles/PMC4991899" target="_blank"><b>Cells in the Human Body</b><p>https://pmc.ncbi.nlm.nih.gov/articles/PMC4991899</p></a>
+				<a id="IDFF3G845JJ" href="https://www.wtamu.edu/~cbaird/sq/2013/08/22/why-does-every-cell-in-our-body-contain-dna" target="_blank"><b>Cells Which Don't Contain DNA</b><p>https://www.wtamu.edu/~cbaird/sq/2013/08/22/why-does-every-cell-in-our-body-contain-dna</p></a>
+				<a id="IDKHIY1BM" href="https://www.ncbi.nlm.nih.gov/books/NBK26834" target="_blank"><b>Length of DNA in a Human Cell</b><p>https://www.ncbi.nlm.nih.gov/books/NBK26834</p></a>
+				<a id="IDMVMMB" href="https://blendertimer.com/factsheets/solar-system/planet-factsheet" target="_blank"><b>8 Planets Factsheet</b><p>https://blendertimer.com/factsheets/solar-system/planet-factsheet</p></a>
+				<a id="IDDM1LE" href="https://www.sciencedirect.com/topics/neuroscience/bacterial-dna" target="_blank"><b>Base pairs in a Bacteria</b><p>https://www.sciencedirect.com/topics/neuroscience/bacterial-dna</p></a>
+				<a id="ID3745STP64" href="https://en.wikipedia.org/wiki/Base_pair" target="_blank"><b>Length of a Base Pair</b><p>https://en.wikipedia.org/wiki/Base_pair</p></a>
+				<a id="ID0Y65ZT" href="https://en.wikipedia.org/wiki/Milky_Way" target="_blank"><b>Milky Way</b><p>https://en.wikipedia.org/wiki/Milky_Way</p></a>
+				<a id="IDN3VCE" href="https://pmc.ncbi.nlm.nih.gov/articles/PMC4466264" target="_blank"><b>Amount of DNA on Earth</b><p>https://pmc.ncbi.nlm.nih.gov/articles/PMC4466264</p></a>
+			</div>
+			<h2>Graphic Sources</h2>
+			<div id="graphic-sources" class="sources">
+				<a id="IDVNPU5WMD" href="https://pixabay.com/vectors/person-man-stand-human-arms-legs-8238232" target="_blank"><b>Man Standing-Front (Daniel Roberts)</b><p>https://pixabay.com/vectors/person-man-stand-human-arms-legs-8238232</p></a>
+				<a id="IDR1QI6IXIC"><b>Human Skeleton-Front (Daniel Roberts)</b><p>N/A</p></a>
+				<a id="IDWGT1PSJ"><b>Steel Pipe (Daniel Roberts)</b><p>N/A</p></a>
+				<a id="IDMO3MI73" href="https://pixabay.com/vectors/bone-skeleton-anatomy-cutout-9079454" target="_blank"><b>Bone (Daniel Roberts)</b><p>https://pixabay.com/vectors/bone-skeleton-anatomy-cutout-9079454</p></a>
+				<a id="IDLUVKU2ARD"><b>Human Femur (Daniel Roberts)</b><p>N/A</p></a>
+				<a id="IDAHFRWW" href="https://www.alamy.com/just-an-orange-car-image471694088.html" target="_blank"><b>Yellow Car (Daniel Roberts)</b><p>https://www.alamy.com/just-an-orange-car-image471694088.html</p></a>
+				<a id="IDHSKRJ464" href="https://pixabay.com/vectors/semi-truck-truck-semi-trailer-9089823" target="_blank"><b>Semi-Truck (Daniel Roberts)</b><p>https://pixabay.com/vectors/semi-truck-truck-semi-trailer-9089823</p></a>
+				<a id="ID31YUX"><b>Hyoid Bone (Daniel Roberts)</b><p>N/A</p></a>
+				<a id="IDGFT2A7R1E" href="https://pixabay.com/vectors/heart-anatomy-human-organ-veins-7735546" target="_blank"><b>Human Heart (Daniel Roberts)</b><p>https://pixabay.com/vectors/heart-anatomy-human-organ-veins-7735546</p></a>
+				<a id="ID3PJZ1Z" href="https://pixabay.com/vectors/space-shuttle-rocket-challenger-8297058" target="_blank"><b>Space Shuttle (Daniel Roberts)</b><p>https://pixabay.com/vectors/space-shuttle-rocket-challenger-8297058</p></a>
+				<a id="IDRJN8IUZBE" href="https://pixabay.com/vectors/earth-planet-space-terrestrial-8233221" target="_blank"><b>Earth (Daniel Roberts)</b><p>https://pixabay.com/vectors/earth-planet-space-terrestrial-8233221</p></a>
+				<a id="ID1KTTG3I" href="https://pixabay.com/vectors/sun-star-space-solar-light-bright-8328084" target="_blank"><b>The Sun (Daniel Roberts)</b><p>https://pixabay.com/vectors/sun-star-space-solar-light-bright-8328084</p></a>
+				<a id="IDAS41XMHE"><b>Ear (Daniel Roberts)</b><p>N/A</p></a>
+				<a id="IDEGPLFW" href="https://pixabay.com/vectors/brain-human-anatomy-organ-body-7822205" target="_blank"><b>Human Brain (Daniel Roberts)</b><p>https://pixabay.com/vectors/brain-human-anatomy-organ-body-7822205</p></a>
+				<a id="IDR2Z0NHGB" href="https://pixabay.com/vectors/laptop-computer-technology-business-7884573" target="_blank"><b>Laptop (Daniel Roberts)</b><p>https://pixabay.com/vectors/laptop-computer-technology-business-7884573</p></a>
+				<a id="IDPMG32D" href="https://pixabay.com/vectors/blood-cell-red-human-anatomy-8307724" target="_blank"><b>Red Blood Cell (Daniel Roberts)</b><p>https://pixabay.com/vectors/blood-cell-red-human-anatomy-8307724</p></a>
+				<a id="ID0TD3EF166"><b>Cell (Daniel Roberts)</b><p>N/A</p></a>
+				<a id="IDX0V2CI" href="https://pixabay.com/vectors/milky-way-galaxy-abstract-space-8282020" target="_blank"><b>The Milky Way (Daniel Roberts)</b><p>https://pixabay.com/vectors/milky-way-galaxy-abstract-space-8282020</p></a>
+				<a id="IDJEQ820"><b>Thyme (Daniel Roberts)</b><p>N/A</p></a>
+				<a id="IDR7TLXL9" href="https://pixabay.com/vectors/smpte-color-bars-cctv-colorful-bars-5791787" target="_blank"><b>SMPTE Color Bars (Daniel Roberts)</b><p>https://pixabay.com/vectors/smpte-color-bars-cctv-colorful-bars-5791787</p></a>
+				<a id="IDJQUXRA6"><b>Observable Universe (Daniel Roberts)</b><p>N/A</p></a>
+			</div>
+			<h2>Audio Sources</h2>
+			<div id="audio-sources" class="sources">
+				<a id="ID2GEHOFS"><b>Narration (Daniel Roberts)</b><p>N/A</p></a>
+				<a id="IDFHYGOL7" href="https://pixabay.com/music/ambient-to-the-galaxy-10734" target="_blank"><b>To the Galaxy (Daniel Roberts)</b><p>https://pixabay.com/music/ambient-to-the-galaxy-10734</p></a>
+				<a id="IDWC4CO" href="https://pixabay.com/music/ambient-dwindling-hope-287000" target="_blank"><b>Dwindling Hope (Daniel Roberts)</b><p>https://pixabay.com/music/ambient-dwindling-hope-287000</p></a>
+				<a id="IDCT420CS" href="https://pixabay.com/music/ambient-beyond-the-abyss-2-58-336507" target="_blank"><b>Beyond the Abyss (Daniel Roberts)</b><p>https://pixabay.com/music/ambient-beyond-the-abyss-2-58-336507</p></a>
+				<a id="IDOZG3DM8"><b>Hit-02 (Daniel Roberts)</b><p>N/A</p></a>
+				<a id="ID0UGKEA0Q0" href="https://pixabay.com/music/pulses-beyond-infinity-159345" target="_blank"><b>Beyond Infinity (Daniel Roberts)</b><p>https://pixabay.com/music/pulses-beyond-infinity-159345</p></a>
+				<a id="ID594CA87TO" href="https://pixabay.com/music/main-title-rescuer-inspiring-cinematic-229615" target="_blank"><b>Rescuer-Inspiring Cinematic (Daniel Roberts)</b><p>https://pixabay.com/music/main-title-rescuer-inspiring-cinematic-229615</p></a>
+			</div>
+			<h2>Chapters</h2>
+			<div id="chapters">
+				<span><b>0:00</b><p>You glow in the dark</p></span>
+				<span><b>0:37</b><p>Your bones are strong</p></span>
+				<span><b>2:20</b><p>Your heart is SUPER resilient</p></span>
+				<span><b>3:36</b><p>Your always listening</p></span>
+				<span><b>4:04</b><p>Your brain is amazing</p></span>
+				<span><b>5:12</b><p>You have a TON of DNA</p></span>
+			</div>
+			<div id="cc"><h2>Subtitles</h2><a href="./cc/34.txt" download="You're Amazing - Subtitles.txt" title="Download subtitles"><img src="../static-0/files/images/icons/download.svg" alt="Download"></a></div>
+			<div id="subtitles">
+				<p>You are amazing. You literally glow.</p>
+				<p>No seriously, humans glow in the dark.</p>
+				<p>Just barely. We only emit a very</p>
+				<p>small amount of light. Such a</p>
+				<p>tiny amount that only specialized</p>
+				<p>equipment can actually see it.</p>
+				<p>The brightness of the light is</p>
+				<p>about a thousand times dimmer</p>
+				<p>than what humans can perceive.</p>
+				<p>This glow is known as biophoton</p>
+				<p>emission, which is slightly different</p>
+				<p>from bioluminescence. The reason</p>
+				<p>we produce the light is something</p>
+				<p>related to our metabolism and</p>
+				<p>highly reactive free radicals</p>
+				<p>interacting with free-floating</p>
+				<p>lipids and proteins and a whole</p>
+				<p>lot of other stuff that I'm not</p>
+				<p>about to try and explain.</p>
+				<p>Also...you're tough...kinda.</p>
+				<p>Your skeleton is made of bones</p>
+				<p>(who knew) and those bones are</p>
+				<p>stronger than steel! Well...kind of...</p>
+				<p>Bones are stronger than steel</p>
+				<p>by weight, so a regular bone isn't</p>
+				<p>going to be stronger than a steel</p>
+				<p>bone since the steel is way more</p>
+				<p>dense and thus weighs a lot more</p>
+				<p>and is thus much stronger. But</p>
+				<p>if you made a steel bone using</p>
+				<p>a small enough amount of steel</p>
+				<p>that it weighed the same as a</p>
+				<p>regular bone, the regular bone</p>
+				<p>would be stronger than the steel bone.</p>
+				<p>Your femur (also known as the</p>
+				<p>thighbone) is more special than</p>
+				<p>most of your bones. It's not only</p>
+				<p>the largest bone in your body</p>
+				<p>but also the thickest and strongest.</p>
+				<p>It holds a lot of weight and often</p>
+				<p>has a lot of force applied to</p>
+				<p>it (such as when you're walking</p>
+				<p>or running) so it had to be created</p>
+				<p>incredibly strong. But it's probably</p>
+				<p>far stronger than you'd expect.</p>
+				<p>The femur is so strong that it</p>
+				<p>can support about 30 times your</p>
+				<p>body weight! That means just one</p>
+				<p>femur from an average person weighing</p>
+				<p>62 kilograms could support nearly</p>
+				<p>2 tonnes, about the weight of</p>
+				<p>an average car! And if you weighed</p>
+				<p>more, such as 100 kilograms, 4</p>
+				<p>of your femurs would be able to</p>
+				<p>support an entire semi-truck!</p>
+				<p>Well, an empty one at least and</p>
+				<p>also ignoring the fact that most</p>
+				<p>humans don't have four legs. But</p>
+				<p>that's still absolutely amazing!</p>
+				<p>Oh, and another special bone</p>
+				<p>is the hyoid bone. The hyoid bone</p>
+				<p>is the only bone in the human</p>
+				<p>body which is not directly connected</p>
+				<p>to another bone. It's important</p>
+				<p>for really minor things like um...</p>
+				<p>speaking and swallowing.</p>
+				<p>Anyway, something else, besides</p>
+				<p>your bones, that makes you tough</p>
+				<p>is your heart. It doesn't really</p>
+				<p>matter how soft-hearted you are,</p>
+				<p>you have an incredibly tough</p>
+				<p>or rather resilient heart. Your</p>
+				<p>heart, despite all its intricate</p>
+				<p>and seemingly fragile mechanisms,</p>
+				<p>has been working non-stop for</p>
+				<p>your entire life. No rests, no</p>
+				<p>stops for repair, just continuously</p>
+				<p>pumping blood and keeping you alive.</p>
+				<p>At least for most of us.</p>
+				<p>Your heart pumps blood through</p>
+				<p>your blood vessels at up to 40</p>
+				<p>centimeters per second, the blood</p>
+				<p>completing 1 entire circuit of</p>
+				<p>your body in about 20 seconds!</p>
+				<p>In those 20 seconds it pumps around</p>
+				<p>5 liters of blood a total of 4</p>
+				<p>kilometers. That means in the</p>
+				<p>average lifetime of 70 years the</p>
+				<p>heart pumps around 600 million</p>
+				<p>liters of blood, which is about</p>
+				<p>this much. The total distance</p>
+				<p>the blood was pumped would be</p>
+				<p>around 500 million kilometers,</p>
+				<p>about the distance around the</p>
+				<p>Earth 12 thousand times or 3 times</p>
+				<p>the distance from Earth to the Sun.</p>
+				<p>500 million kilometers, 600 million</p>
+				<p>liters of blood, 2.5 billion beats,</p>
+				<p>and absolutely no breaks for rest.</p>
+				<p>I'm getting tired just thinking</p>
+				<p>about it.</p>
+				<p>But you want to know something</p>
+				<p>else that never stops? Your ears.</p>
+				<p>You are constantly hearing the</p>
+				<p>sounds around you. Even while</p>
+				<p>you're sleeping or even while</p>
+				<p>you're unconscious, you are constantly</p>
+				<p>hearing sounds. It's just that</p>
+				<p>sometimes your brain chooses to</p>
+				<p>ignore the sound or fails to process</p>
+				<p>the sound. For example, you may</p>
+				<p>have been woken up before because</p>
+				<p>of a loud noise. In order for</p>
+				<p>you to hear that noise, you had</p>
+				<p>to be listening.</p>
+				<p>Which, speaking of sleeping,</p>
+				<p>your brain is very active with</p>
+				<p>all your neurons firing billions</p>
+				<p>or trillions of times per second.</p>
+				<p>But what's crazy about this is</p>
+				<p>that your brain can sometimes</p>
+				<p>become more active while you're</p>
+				<p>sleeping, exceeding the activity</p>
+				<p>levels of the brain when you're awake.</p>
+				<p>And there's something else fascinating</p>
+				<p>about your brain. Well, there</p>
+				<p>are a lot of fascinating things</p>
+				<p>about your brain, but just one</p>
+				<p>of those things is that your brain</p>
+				<p>uses only about 20 watts of electricity.</p>
+				<p>That is incredibly power efficient!</p>
+				<p>For comparison, even a very basic</p>
+				<p>laptop will generally use around</p>
+				<p>20 watts while doing basic work</p>
+				<p>and more powerful laptops can</p>
+				<p>easily use over 100 watts when working!</p>
+				<p>But your brain uses only 20 watts</p>
+				<p>to process super high-resolution</p>
+				<p>video and audio and perform billions</p>
+				<p>of mathematical calculations,</p>
+				<p>plus much, much more. It's just</p>
+				<p>amazing that the brain does so</p>
+				<p>much with so little energy.</p>
+				<p>But, as you can probably guess,</p>
+				<p>this isn't the only amazing thing</p>
+				<p>about you. Not just because I've</p>
+				<p>said other things already but</p>
+				<p>also because you have around 68</p>
+				<p>trillion cells in your body, although</p>
+				<p>that's a very rough estimate.</p>
+				<p>About 38 trillion of those are</p>
+				<p>bacteria, which does in a way</p>
+				<p>mean that you are more bacteria</p>
+				<p>than you are human. Of those remaining</p>
+				<p>30 trillion cells, which are human</p>
+				<p>cells instead of bacteria, about</p>
+				<p>84% of them are red blood cells.</p>
+				<p>Real surprising, I know. But anyway,</p>
+				<p>red blood cells (and actually</p>
+				<p>several other types of cells)</p>
+				<p>don't have DNA once mature, but</p>
+				<p>taking all the cells which do</p>
+				<p>have DNA, each cell contains around</p>
+				<p>2 meters of DNA. So taking that</p>
+				<p>2 meters of DNA and multiplying</p>
+				<p>it by the remaining 3 trillion</p>
+				<p>human cells with DNA, we get a</p>
+				<p>total measurement of about 6.7</p>
+				<p>billion kilometers of DNA. About</p>
+				<p>enough to wrap around the entire</p>
+				<p>Earth 166 thousand times, or about</p>
+				<p>the distance to the Sun 45 times!</p>
+				<p>If we add in all the DNA from</p>
+				<p>the bacteria in your body, the</p>
+				<p>total length of DNA would be about</p>
+				<p>52 million kilometers longer.</p>
+				<p>Sooo...if we combined the DNA</p>
+				<p>from every person on the entire</p>
+				<p>planet, the DNA would stretch</p>
+				<p>all the way around our entire</p>
+				<p>galaxy 21 times! All that compressed</p>
+				<p>onto a tiny little ball floating</p>
+				<p>in the middle of space...</p>
+				<p>And that's just the DNA of humans!</p>
+				<p>If we added the DNA of all the</p>
+				<p>other living organisms into that,</p>
+				<p>the length would be far, far longer!</p>
+				<p>I'm not going to calculate it</p>
+				<p>because...um...there's this thing</p>
+				<p>called...uh...thyme and um...these</p>
+				<p>things called leaves...and uh...</p>
+				<p>basically time leaves-</p>
+				<p>Anyway, while I'm not going</p>
+				<p>to calculate it, other people</p>
+				<p>have estimated that the total</p>
+				<p>length of DNA on Earth is about</p>
+				<p>8 trillion light-years long. Which</p>
+				<p>is enough to wrap around the entire</p>
+				<p>observable universe 27 times!</p>
+				<p>Now that is what I like to call...</p>
+				<p>the- the end-screen. That- That's</p>
+				<p>the end-screen which basically</p>
+				<p>means the video's over and I'm</p>
+				<p>trying to get you to watch more</p>
+				<p>of my videos because my videos</p>
+				<p>are packed with really cool facts</p>
+				<p>and are actually pretty bor-</p>
+			</div>
+			<h2>Thumbnails</h2>
+			<div id="thumbnails">
+				<a href="./thumbnails/34-youre_amazing-1-1080.png" class="tb"><img src="./thumbnails/34-youre_amazing-1-180.png" alt="Thumbnail"><b>June 14, 2025</b></a>
+				<a href="./thumbnails/34-youre_amazing-1080.png" class="tb"><img src="./thumbnails/34-youre_amazing-180.png" alt="Thumbnail"><b>June 14, 2025</b></a>
+			</div>
+		</div>
+		<footer></footer>
+		<script>
+			fetch('/noindex/footer.html')
+				.then(response => response.text())
+				.then(data => {document.querySelector('footer').innerHTML = data});
+		</script>
+		<script src="/static/main.js"></script>
+		<script src="/static/video-sources-pages.js"></script>
+	</body>
+</html>

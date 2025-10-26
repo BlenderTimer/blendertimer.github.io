@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en-US">
+	<head>
+		<!-- Google tag (gtag.js) -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-  SYR26MG6YV"></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
+			
+			gtag('config', 'G-SYR26MG6YV');
+		</script>
+		<meta charset="utf-8">
+		<title>You're Smarter Than You Think - BlenderTimer Video Sources</title>
+		<meta name="description" content="The video sources for You're Smarter Than You Think.">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="icon" href="/favicon.png">
+		<link rel="stylesheet" type="text/css" href="/static/main.css">
+		<link rel="stylesheet" type="text/css" href="/static/video-sources-pages.css">
+		<script src="/bt-js/bt-js.js"></script>
+		<script src="/static/videos.js"></script>
+		<script src="/static/jquery-3.6.3.js"></script>
+	</head>
+	<body>
+		<header></header>
+		<script>
+			fetch('/noindex/header.html')
+				.then(response => response.text())
+				.then(data => {document.querySelector('header').innerHTML = data});
+		</script>
+		<script src="/noindex/pages.js"></script>
+		<noscript>
+			<div id="nojs" style="position: fixed; top: 0px; bottom: 0px; left: 0px; right: 0px; display: flex; flex-flow: column; justify-content: center; align-items: center; background: var(--semi-back); padding: 15px 20px; z-index: 1000000; cursor: default;">
+				<b style="font-family: sans-serif; font-size: 16pt; color: #FFF; text-align: center;">Page Failed to Load</b>
+				<p style="font-family: sans-serif; font-size: 14pt; color: #FFF6; text-align: center;">This website requires Javascript to operate.</p>
+			</div>
+		</noscript>
+		<div id="loader" style="width: 100%; height: calc(100% - 50px); top: 50px; left: 0px; position: fixed; z-index: -100000;">
+			<img alt="Loading" src="/static/images/loader.gif" style="width: 100px; height: 100px; position: fixed; left: calc(50% - 50px); top: calc(50% - 25px); filter: drop-shadow(0px 0px 15px #000000);">
+		</div>
+		<div id="content-main" style="opacity: 0; transition: 0.5s">
+			<h1 id="title">You're Smarter Than You Think - Fantastic Fact 14</h1>
+			<p id="published-date">Published: May 29, 2025 at 3:15 PM (PT)</p>
+			<div id="video-info">
+				<div id="vid-info-left">
+					<b class="vit">Video Information</b>
+					<span><b>Length:</b><p>0:42</p><i>(1289 frames/30fps)</i></span>
+					<span><b>Resolution:</b><p>1080x1920</p><i>(FHD)</i></span>
+					<span><b>Most Rewatched:</b><a>N/A</a></span>
+					<span class="spr"></span>
+					<b class="vit">Realtime Statistics</b>
+					<div id="realtime-stats">
+						<span title="Views"><img src="../static-0/files/images/icons/eye.svg" alt="Views"><b>...</b></span>
+						<span title="Likes"><img src="../static-0/files/images/icons/like.svg" alt="Likes"><b>...</b></span>
+						<span title="Comments"><img src="../static-0/files/images/icons/comment.svg" alt="Comments"><b>...</b></span>
+					</div>
+					<span class="spr"></span>
+					<b class="vit">Views in the First</b>
+					<div id="first-views">
+						<span><b>10 Minutes</b><p>...</p></span>
+						<span><b>30 Minutes</b><p>...</p></span>
+						<span><b>Hour</b><p>...</p></span>
+						<span><b>24 Hours</b><p>...</p></span>
+					</div>
+				</div>
+				<span class="spr" id="info1-spr" style="display: none"></span>
+				<div id="vid-info-right">
+					<a id="thumbnail" href="./thumbnails/33-youre_smarter_than_you_think_-_fantastic_fact_14-1080.png" target="_blank"><img src="./thumbnails/33-youre_smarter_than_you_think_-_fantastic_fact_14-180.png" alt="Thumbnail"></a>
+					<div id="video-icons">
+						<span><b>Upload ID</b><p>33</p></span>
+						<span><b>Short ID</b><p>14</p></span>
+						<span><b>Type</b><p>Short</p></span>
+					</div>
+					<span id="yt-link"><a href="https://youtu.be/MqRaYZJ6mnY" target="_blank">https://youtu.be/MqRaYZJ6mnY</a><img src="../static-0/files/images/icons/copy-link.svg" alt="Copy link" onclick="copyVideoLink(event)"></span>
+					<script type="text/javascript">
+						var fv = document.getElementById('first-views');
+						var video = videos[parseInt(document.getElementById('video-icons').children[0].children[1].textContent)-1];
+						if (video.views10 == -1) {fv.children[0].children[1].innerHTML = "NO DATA"}
+						else {fv.children[0].children[1].innerHTML = video.views10};
+						if (video.views10 == -1) {fv.children[1].children[1].innerHTML = "NO DATA"}
+						else {fv.children[1].children[1].innerHTML = video.views30};
+						if (video.views10 == -1) {fv.children[2].children[1].innerHTML = "NO DATA"}
+						else {fv.children[2].children[1].innerHTML = video.views1};
+						if (video.views10 == -1) {fv.children[3].children[1].innerHTML = "NO DATA"}
+						else {fv.children[3].children[1].innerHTML = video.views24};
+						//Realtime Stats
+						var ytid = document.getElementById('yt-link').children[0].textContent.removeBefore("/", 1, true);
+						$.get(
+							"https://www.googleapis.com/youtube/v3/videos",{
+							part: 'statistics',
+							id: ytid,
+							key: 'AIzaSyDsaGX5mhvqCpI3jWMFFGMmmmB5IUEyUrk'},
+							function(data) {
+								var views = 0;
+								var likes = 0;
+								var comments = 0;
+								views = data.items[0].statistics.viewCount;
+								likes = data.items[0].statistics.likeCount;
+								comments = data.items[0].statistics.commentCount;
+								document.getElementById("realtime-stats").children[0].children[1].innerHTML = parseInt(views).toLocaleString();
+								document.getElementById("realtime-stats").children[1].children[1].innerHTML = parseInt(likes).toLocaleString();
+								document.getElementById("realtime-stats").children[2].children[1].innerHTML = parseInt(comments).toLocaleString();
+							}
+						);
+					</script>
+				</div>
+			</div>
+			<h2>Information Sources</h2>
+			<div id="info-sources" class="sources">
+				<a id="ID2UBFIDR" href="https://online.utpb.edu/about-us/articles/psychology/what-is-cognitive-bias-and-how-does-it-affect-our-lives" target="_blank"><b>Data Processed by the Brain</b><p>https://online.utpb.edu/about-us/articles/psychology/what-is-cognitive-bias-and-how-does-it-affect-our-lives</p></a>
+				<a id="IDQBZ07ZW"><b>Average Character/Letter Size</b><p>Calculated at around 1 byte</p></a>
+				<a id="IDWVK2M" href="https://www.huffpost.com/entry/book-length_n_1334636" target="_blank"><b>Average Book Length</b><p>https://www.huffpost.com/entry/book-length_n_1334636</p></a>
+				<a id="IDLJXSVYIEL"><b>Photo Size</b><p>Calculated at around 8.5MB</p></a>
+				<a id="IDU813N"><b>HD Video Size</b><p>Calculated at around 0.047MB/s</p></a>
+				<a id="ID916TUR"><b>Audio Size</b><p>Calculated at around 4.5KB/s</p></a>
+				<a id="IDKEXHXOL1" href="https://explodingtopics.com/blog/data-generated-per-day" target="_blank"><b>Data Created</b><p>https://explodingtopics.com/blog/data-generated-per-day</p></a>
+				<a id="IDYLHFFSJO" href="https://www.worldometers.info/world-population" target="_blank"><b>World Population</b><p>https://www.worldometers.info/world-population</p></a>
+			</div>
+			<h2>Graphic Sources</h2>
+			<div id="graphic-sources" class="sources">
+				<a id="IDEGPLFW" href="https://pixabay.com/vectors/brain-human-anatomy-organ-body-7822205" target="_blank"><b>Human Brain (Daniel Roberts)</b><p>https://pixabay.com/vectors/brain-human-anatomy-organ-body-7822205</p></a>
+				<a id="ID0UF48KS" href="https://pixabay.com/vectors/supercomputer-futuristic-computer-7884574" target="_blank"><b>Supercomputer (Daniel Roberts)</b><p>https://pixabay.com/vectors/supercomputer-futuristic-computer-7884574</p></a>
+				<a id="IDVNPU5WMD" href="https://pixabay.com/vectors/person-man-stand-human-arms-legs-8238232" target="_blank"><b>Man Standing-Front (Daniel Roberts)</b><p>https://pixabay.com/vectors/person-man-stand-human-arms-legs-8238232</p></a>
+			</div>
+			<h2>Audio Sources</h2>
+			<div id="audio-sources" class="sources">
+				<a id="ID2GEHOFS"><b>Narration (Daniel Roberts)</b><p>N/A</p></a>
+			</div>
+			<div id="cc"><h2>Subtitles</h2><a href="./cc/33.txt" download="You're Smarter Than You Think - Subtitles.txt" title="Download subtitles"><img src="../static-0/files/images/icons/download.svg" alt="Download"></a></div>
+			<div id="subtitles">
+				<p>Your brain processes the equivalent</p>
+				<p>of around 1.6 megabytes per second.</p>
+				<p>That might not sound like much</p>
+				<p>until you realize that in just</p>
+				<p>one minute your brain will have</p>
+				<p>processed the equivalent of 96</p>
+				<p>million letters or about 300 books.</p>
+				<p>In one hour your brain will have</p>
+				<p>processed the equivalent of over</p>
+				<p>40 thousand webpages. And in a</p>
+				<p>day you'll have processed the</p>
+				<p>equivalent of 3 and a half days</p>
+				<p>of full HD video or 23 years of audio!</p>
+				<p>Oh and as a side note, around</p>
+				<p>3.8 terabytes of data is created</p>
+				<p>per second. But all humans on</p>
+				<p>the planet combined process the</p>
+				<p>equivalent of 12.8 thousand terabytes</p>
+				<p>per second.</p>
+			</div>
+			<h2>Thumbnails</h2>
+			<div id="thumbnails">
+				<a href="./thumbnails/33-youre_smarter_than_you_think_-_fantastic_fact_14-1080.png" class="tb"><img src="./thumbnails/33-youre_smarter_than_you_think_-_fantastic_fact_14-180.png" alt="Thumbnail"><b>May 29, 2025</b></a>
+			</div>
+		</div>
+		<footer></footer>
+		<script>
+			fetch('/noindex/footer.html')
+				.then(response => response.text())
+				.then(data => {document.querySelector('footer').innerHTML = data});
+		</script>
+		<script src="/static/main.js"></script>
+		<script src="/static/video-sources-pages.js"></script>
+	</body>
+</html>

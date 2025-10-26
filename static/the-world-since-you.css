@@ -184,7 +184,7 @@
 	background: var(--theme2);
 	border: none;
 	box-shadow: 0px 0px 20px #37F5, 0px 0px 10px #5AEF inset;
-	outline: none;
+	outline: #BFF0 solid 2px;
 	cursor: pointer;
 	padding: 5px 11px;
 	color: var(--base-text);
@@ -364,16 +364,14 @@
 }
 
 #timeline-filters button {
-	display: block;
+	display: flex;
 	flex-grow: 0.5;
 	max-width: 200px;
 	box-sizing: border-box;
-	padding: 4px 8px;
 	border-radius: 3px;
+	padding: 3px;
 	background: var(--close-back);
 	cursor: pointer;
-	color: var(--base-text);
-	font-size: 11pt;
 	border: none;
 	outline: none;
 	transition: 0.2s;
@@ -381,6 +379,35 @@
 
 #timeline-filters button:hover {
 	background: var(--closer-back);
+}
+
+#timeline-filters button span {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: var(--base-text);
+	font-size: 11pt;
+	padding: 4px 8px;
+	gap: 5px;
+	width: 100%;
+	pointer-events: none;
+}
+
+#timeline-filters button span p {
+	color: var(--base-text);
+	font-size: 11pt;
+}
+
+#timeline-filters button img {
+	display: block;
+	width: 18pt;
+	height: 18pt;
+	padding: 5px;
+	box-sizing: border-box;
+	background: var(--base-back);
+	border-radius: 3px;
+	box-shadow: 0px 0px 7px #0005 inset;
+	pointer-events: none;
 }
 
 .filter-enabled {

@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en-US">
+	<head>
+		<!-- Google tag (gtag.js) -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-  SYR26MG6YV"></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
+			
+			gtag('config', 'G-SYR26MG6YV');
+		</script>
+		<meta charset="utf-8">
+		<title>The Mysterious Explosion of 1908 - BlenderTimer Video Sources</title>
+		<meta name="description" content="The video sources for The Mysterious Explosion of 1908.">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="icon" href="/favicon.png">
+		<link rel="stylesheet" type="text/css" href="/static/main.css">
+		<link rel="stylesheet" type="text/css" href="/static/video-sources-pages.css">
+		<script src="/bt-js/bt-js.js"></script>
+		<script src="/static/videos.js"></script>
+		<script src="/static/jquery-3.6.3.js"></script>
+	</head>
+	<body>
+		<header></header>
+		<script>
+			fetch('/noindex/header.html')
+				.then(response => response.text())
+				.then(data => {document.querySelector('header').innerHTML = data});
+		</script>
+		<script src="/noindex/pages.js"></script>
+		<noscript>
+			<div id="nojs" style="position: fixed; top: 0px; bottom: 0px; left: 0px; right: 0px; display: flex; flex-flow: column; justify-content: center; align-items: center; background: var(--semi-back); padding: 15px 20px; z-index: 1000000; cursor: default;">
+				<b style="font-family: sans-serif; font-size: 16pt; color: #FFF; text-align: center;">Page Failed to Load</b>
+				<p style="font-family: sans-serif; font-size: 14pt; color: #FFF6; text-align: center;">This website requires Javascript to operate.</p>
+			</div>
+		</noscript>
+		<div id="loader" style="width: 100%; height: calc(100% - 50px); top: 50px; left: 0px; position: fixed; z-index: -100000;">
+			<img alt="Loading" src="/static/images/loader.gif" style="width: 100px; height: 100px; position: fixed; left: calc(50% - 50px); top: calc(50% - 25px); filter: drop-shadow(0px 0px 15px #000000);">
+		</div>
+		<div id="content-main" style="opacity: 0; transition: 0.5s">
+			<h1 id="title">The Mysterious Explosion of 1908</h1>
+			<p id="published-date">Published: October 11, 2025 at 8:00 PM (PT)</p>
+			<div id="video-info">
+				<div id="vid-info-left">
+					<b class="vit">Video Information</b>
+					<span><b>Length:</b><p>8:16</p><i>(14898 frames/30fps)</i></span>
+					<span><b>Resolution:</b><p>3840x2160</p><i>(4K/UHD)</i></span>
+					<span><b>Most Rewatched:</b><a href="https://youtu.be/2Iov8P85mYk?t=381" target="_blank">6:21 to 6:56</a></span>
+					<span class="spr"></span>
+					<b class="vit">Realtime Statistics</b>
+					<div id="realtime-stats">
+						<span title="Views"><img src="../static-0/files/images/icons/eye.svg" alt="Views"><b>...</b></span>
+						<span title="Likes"><img src="../static-0/files/images/icons/like.svg" alt="Likes"><b>...</b></span>
+						<span title="Comments"><img src="../static-0/files/images/icons/comment.svg" alt="Comments"><b>...</b></span>
+					</div>
+					<span class="spr"></span>
+					<b class="vit">Views in the First</b>
+					<div id="first-views">
+						<span><b>10 Minutes</b><p>...</p></span>
+						<span><b>30 Minutes</b><p>...</p></span>
+						<span><b>Hour</b><p>...</p></span>
+						<span><b>24 Hours</b><p>...</p></span>
+					</div>
+				</div>
+				<span class="spr" id="info1-spr" style="display: none"></span>
+				<div id="vid-info-right">
+					<a id="thumbnail" href="./thumbnails/38-the_mysterious_explosion_of_1908-1080.png" target="_blank"><img src="./thumbnails/38-the_mysterious_explosion_of_1908-180.png" alt="Thumbnail"></a>
+					<div id="video-icons">
+						<span><b>Upload ID</b><p>38</p></span>
+						<span><b>Video ID</b><p>22</p></span>
+						<span><b>Type</b><p>Video</p></span>
+					</div>
+					<span id="yt-link"><a href="https://youtu.be/2Iov8P85mYk" target="_blank">https://youtu.be/2Iov8P85mYk</a><img src="../static-0/files/images/icons/copy-link.svg" alt="Copy link" onclick="copyVideoLink(event)"></span>
+					<script type="text/javascript">
+						var fv = document.getElementById('first-views');
+						var video = videos[parseInt(document.getElementById('video-icons').children[0].children[1].textContent)-1];
+						if (video.views10 == -1) {fv.children[0].children[1].innerHTML = "NO DATA"}
+						else {fv.children[0].children[1].innerHTML = video.views10};
+						if (video.views10 == -1) {fv.children[1].children[1].innerHTML = "NO DATA"}
+						else {fv.children[1].children[1].innerHTML = video.views30};
+						if (video.views10 == -1) {fv.children[2].children[1].innerHTML = "NO DATA"}
+						else {fv.children[2].children[1].innerHTML = video.views1};
+						if (video.views10 == -1) {fv.children[3].children[1].innerHTML = "NO DATA"}
+						else {fv.children[3].children[1].innerHTML = video.views24};
+						//Realtime Stats
+						var ytid = document.getElementById('yt-link').children[0].textContent.removeBefore("/", 1, true);
+						$.get(
+							"https://www.googleapis.com/youtube/v3/videos",{
+							part: 'statistics',
+							id: ytid,
+							key: 'AIzaSyDsaGX5mhvqCpI3jWMFFGMmmmB5IUEyUrk'},
+							function(data) {
+								var views = 0;
+								var likes = 0;
+								var comments = 0;
+								views = data.items[0].statistics.viewCount;
+								likes = data.items[0].statistics.likeCount;
+								comments = data.items[0].statistics.commentCount;
+								document.getElementById("realtime-stats").children[0].children[1].innerHTML = parseInt(views).toLocaleString();
+								document.getElementById("realtime-stats").children[1].children[1].innerHTML = parseInt(likes).toLocaleString();
+								document.getElementById("realtime-stats").children[2].children[1].innerHTML = parseInt(comments).toLocaleString();
+							}
+						);
+					</script>
+				</div>
+			</div>
+			<h2>Information Sources</h2>
+			<div id="info-sources" class="sources">
+				<a id="IDIZ55NIR" href="https://en.wikipedia.org/wiki/Tunguska_event" target="_blank"><b>The Tunguska Event</b><p>https://en.wikipedia.org/wiki/Tunguska_event</p></a>
+				<a id="IDV968O" href="https://www.sciencedirect.com/science/article/abs/pii/S0019103518305104?via%3Dihub" target="_blank"><b>Tunguska eyewitness accounts, injuries, and casualties</b><p>https://www.sciencedirect.com/science/article/abs/pii/S0019103518305104?via%3Dihub</p></a>
+				<a id="ID372NGXA" href="https://www.rmg.co.uk/stories/space-astronomy/tunguska-event" target="_blank"><b>The Tunguska Event-Royal Museums Greenwich</b><p>https://www.rmg.co.uk/stories/space-astronomy/tunguska-event</p></a>
+				<a id="ID6MMYD6" href="https://en.wikipedia.org/wiki/Chelyabinsk_meteor" target="_blank"><b>Chelyabinsk Meteor</b><p>https://en.wikipedia.org/wiki/Chelyabinsk_meteor</p></a>
+				<a id="ID3RWKTSERL" href="https://www.science.org/doi/10.1126/science.1242642" target="_blank"><b>Chelyabinsk Airburst, Damage Assessment, Meteorite Recovery, and Characterization</b><p>https://www.science.org/doi/10.1126/science.1242642</p></a>
+				<a id="IDNDO84" href="https://www.researchgate.net/publication/358683747_An_observational_synthesis_of_the_Taurid_meteor_complex?_tp=eyJjb250ZXh0Ijp7ImZpcnN0UGFnZSI6Il9kaXJlY3QiLCJwYWdlIjoiX2RpcmVjdCJ9fQ" target="_blank"><b>Beta Taurids Activity Graph</b><p>https://www.researchgate.net/publication/358683747_An_observational_synthesis_of_the_Taurid_meteor_complex?_tp=eyJjb250ZXh0Ijp7ImZpcnN0UGFnZSI6Il9kaXJlY3QiLCJwYWdlIjoiX2RpcmVjdCJ9fQ</p></a>
+			</div>
+			<h2>Graphic Sources</h2>
+			<div id="graphic-sources" class="sources">
+				<a id="IDSRVQQBN" href="https://pixabay.com/vectors/grave-tomb-tombstone-gravestone-9412527" target="_blank"><b>Grave Stone (Daniel Roberts)</b><p>https://pixabay.com/vectors/grave-tomb-tombstone-gravestone-9412527</p></a>
+				<a id="IDMQP40C0C" href="https://pixabay.com/vectors/person-man-stand-human-arms-legs-9095533" target="_blank"><b>Man Standing-Side (Daniel Roberts)</b><p>https://pixabay.com/vectors/person-man-stand-human-arms-legs-9095533</p></a>
+				<a id="IDJ9VZ47PAS" href="https://commons.wikimedia.org/wiki/File:Tunguska_Ereignis-1.jpg" target="_blank"><b>Tunguska Event-Kulik (Leonid Kulik)</b><p>https://commons.wikimedia.org/wiki/File:Tunguska_Ereignis-1.jpg</p></a>
+				<a id="IDYDI8K4JK" href="https://pixabay.com/vectors/bomb-little-boy-atomic-nuclear-9082605" target="_blank"><b>Little Boy (Daniel Roberts)</b><p>https://pixabay.com/vectors/bomb-little-boy-atomic-nuclear-9082605</p></a>
+				<a id="IDQC2RMHQ" href="https://pixabay.com/vectors/dynamite-tnt-bomb-explosive-sticks-9079455" target="_blank"><b>TNT (Daniel Roberts)</b><p>https://pixabay.com/vectors/dynamite-tnt-bomb-explosive-sticks-9079455</p></a>
+				<a id="IDNT820Q4" href="https://pixabay.com/vectors/asteroid-meteor-space-meteorite-8648910" target="_blank"><b>Asteroid (Daniel Roberts)</b><p>https://pixabay.com/vectors/asteroid-meteor-space-meteorite-8648910</p></a>
+				<a id="IDP00IHMYR"><b>Comet (Daniel Roberts)</b><p>N/A</p></a>
+				<a id="IDAHFRWW" href="https://www.alamy.com/just-an-orange-car-image471694088.html" target="_blank"><b>Yellow Car (Daniel Roberts)</b><p>https://www.alamy.com/just-an-orange-car-image471694088.html</p></a>
+				<a id="IDHGVAWAC9X" href="https://www.youtube.com/watch?v=CMEOjldlwgI" target="_blank"><b>Chelyabinsk Meteor Dashcam Video (Aleksandr Ivanov)</b><p>https://www.youtube.com/watch?v=CMEOjldlwgI</p></a>
+				<a id="IDVR8UXQ" href="https://pixabay.com/vectors/asteroid-meteor-space-meteorite-8648912" target="_blank"><b>Meteor (Daniel Roberts)</b><p>https://pixabay.com/vectors/asteroid-meteor-space-meteorite-8648912</p></a>
+				<a id="ID3UT9G" href="https://pixabay.com/vectors/building-deserted-brick-fallen-7695849" target="_blank"><b>Deserted Building (Daniel Roberts)</b><p>https://pixabay.com/vectors/building-deserted-brick-fallen-7695849</p></a>
+				<a id="IDQVG1C" href="https://en.wikipedia.org/wiki/File:%D0%A6%D0%B8%D0%BD%D0%BA%D0%BE%D0%B2%D1%8B%D0%B9_%D0%B7%D0%B0%D0%B2%D0%BE%D0%B4_%D0%A7%D0%B5%D0%BB%D1%8F%D0%B1%D0%B8%D0%BD%D1%81%D0%BA%D0%B0.jpg" target="_blank"><b>Chelyabinsk Zinc Plant (Passed A)</b><p>https://en.wikipedia.org/wiki/File:%D0%A6%D0%B8%D0%BD%D0%BA%D0%BE%D0%B2%D1%8B%D0%B9_%D0%B7%D0%B0%D0%B2%D0%BE%D0%B4_%D0%A7%D0%B5%D0%BB%D1%8F%D0%B1%D0%B8%D0%BD%D1%81%D0%BA%D0%B0.jpg</p></a>
+				<a id="IDILNG1" href="https://en.wikipedia.org/wiki/File:Chelyabinsk_meteor_event_consequences_in_Drama_Theatre.jpg" target="_blank"><b>Chelyabinsk Drama Theatre (Nikita Plekhanov)</b><p>https://en.wikipedia.org/wiki/File:Chelyabinsk_meteor_event_consequences_in_Drama_Theatre.jpg</p></a>
+				<a id="IDRJN8IUZBE" href="https://pixabay.com/vectors/earth-planet-space-terrestrial-8233221" target="_blank"><b>Earth (Daniel Roberts)</b><p>https://pixabay.com/vectors/earth-planet-space-terrestrial-8233221</p></a>
+			</div>
+			<h2>Audio Sources</h2>
+			<div id="audio-sources" class="sources">
+				<a id="ID2GEHOFS"><b>Narration (Daniel Roberts)</b><p>N/A</p></a>
+				<a id="IDML0LDI8RO" href="https://pixabay.com/music/mystery-event-of-doom-395427" target="_blank"><b>Event of Doom (Daniel Roberts)</b><p>https://pixabay.com/music/mystery-event-of-doom-395427</p></a>
+				<a id="IDDZLOLV"><b>Powerful Swoosh-01 (Daniel Roberts)</b><p>N/A</p></a>
+				<a id="IDOAYOMUBWN" href="https://www.premiumbeat.com/blog/free-explosion-sfx-vfx-elements" target="_blank"><b>0017_explo_bomb_04_PremiumBeat (Detonate, PremiumBeat)</b><p>https://www.premiumbeat.com/blog/free-explosion-sfx-vfx-elements</p></a>
+				<a id="IDEY00VR" href="https://pixabay.com/sound-effects/distant-warfare-51848" target="_blank"><b>Distant Warfare (Suburbanwizard)</b><p>https://pixabay.com/sound-effects/distant-warfare-51848</p></a>
+				<a id="IDH000XU4BB" href="https://pixabay.com/sound-effects/fire-sound-334130" target="_blank"><b>Fire Sound (SoundReality)</b><p>https://pixabay.com/sound-effects/fire-sound-334130</p></a>
+				<a id="IDPRNNGF" href="https://pixabay.com/music/beautiful-plays-the-last-echo-410567" target="_blank"><b>The Last Echo (Daniel Roberts)</b><p>https://pixabay.com/music/beautiful-plays-the-last-echo-410567</p></a>
+				<a id="ID1C6VXL0LN" href="https://pixabay.com/sound-effects/object-flyby-8115" target="_blank"><b>Object Flyby (Daniel Roberts)</b><p>https://pixabay.com/sound-effects/object-flyby-8115</p></a>
+				<a id="IDCT420CS" href="https://pixabay.com/music/ambient-beyond-the-abyss-2-58-336507" target="_blank"><b>Beyond the Abyss (Daniel Roberts)</b><p>https://pixabay.com/music/ambient-beyond-the-abyss-2-58-336507</p></a>
+				<a id="IDH3QNYMW" href="https://www.youtube.com/watch?v=qcVyLmWZIDg" target="_blank"><b>The aftermath of the meteorite fall and explosion on February 15, 2013 in Chelyabinsk @ meteor falling (Yuri Lazarenko)</b><p>https://www.youtube.com/watch?v=qcVyLmWZIDg</p></a>
+			</div>
+			<h2>Chapters</h2>
+			<div id="chapters">
+				<span><b>0:00</b><p>Introduction</p></span>
+				<span><b>0:26</b><p>The Tunguska Event</p></span>
+				<span><b>1:56</b><p>The Aftermath</p></span>
+				<span><b>2:54</b><p>What Was It?</p></span>
+				<span><b>6:13</b><p>The Chelyabinsk Meteor</p></span>
+			</div>
+			<div id="cc"><h2>Subtitles</h2><a href="./cc/38.txt" download="The Mysterious Explosion of 1908 - Subtitles.txt" title="Download subtitles"><img src="../static-0/files/images/icons/download.svg" alt="Download"></a></div>
+			<div id="subtitles">
+				<p>On June 30, 1908, a catastrophic</p>
+				<p>event occurred which, despite</p>
+				<p>being the largest of its kind</p>
+				<p>in recorded history, remains largely</p>
+				<p>unnoticed. An event so catastrophic</p>
+				<p>that it could have killed millions</p>
+				<p>of people and wiped many large</p>
+				<p>modern day cities off the map</p>
+				<p>in mere seconds. Except this event</p>
+				<p>occurred deep within the remote</p>
+				<p>Siberian taiga. This event is</p>
+				<p>known as the Tunguska event.</p>
+				<p>At around 7:17 in the morning</p>
+				<p>of June 30, 1908, Evenki natives</p>
+				<p>observed an extremely bright bluish-white</p>
+				<p>object moving slowly downward</p>
+				<p>toward the horizon. The object</p>
+				<p>was nearly impossible to look</p>
+				<p>at glowing brighter than the Sun.</p>
+				<p>It appeared to have a cylindrical</p>
+				<p>shape and left a thin white trail</p>
+				<p>in its path. As it neared the</p>
+				<p>ground, the object seemed to smudge.</p>
+				<p>Suddenly there was a bright flash</p>
+				<p>and a huge column of black smoke</p>
+				<p>rose into the air emitting flames</p>
+				<p>of uncertain shapes. People near</p>
+				<p>the event watched as the entire</p>
+				<p>landscape around them turned red</p>
+				<p>and the air became so hot that</p>
+				<p>it felt as if their clothes were on fire.</p>
+				<p>A sound of an incredibly strong</p>
+				<p>wind was heard. Immediately following</p>
+				<p>came a tremendous shock wave destroying</p>
+				<p>structures, shattering glass,</p>
+				<p>and throwing people backward,</p>
+				<p>some up to 40 meters. Ringing</p>
+				<p>in the air was a sound akin to</p>
+				<p>that of artillery fire. Trees</p>
+				<p>snapped like toothpicks and the</p>
+				<p>entire forest was uprooted and</p>
+				<p>flattened to the ground bursting</p>
+				<p>into flames. Then came a second</p>
+				<p>shock wave as strong as the first,</p>
+				<p>and then a third. The shock waves</p>
+				<p>were felt hundreds of kilometers</p>
+				<p>away and many people were knocked</p>
+				<p>unconscious, some for just a few</p>
+				<p>minutes and others for 3 days.</p>
+				<p>The peaceful morning had just</p>
+				<p>been interrupted by one of the</p>
+				<p>most extreme events in recorded</p>
+				<p>history.</p>
+				<p>Quantifying the number of injuries</p>
+				<p>and casualties from this event</p>
+				<p>is difficult. More on that in a bit.</p>
+				<p>However, the Tunguska event caused</p>
+				<p>at least 3 deaths and an unknown</p>
+				<p>number of injuries with many people</p>
+				<p>lying unconscious for hours or</p>
+				<p>even days. The blast flattened</p>
+				<p>around 2,150 square kilometers</p>
+				<p>of forest, an estimated 80 million trees.</p>
+				<p>This photograph was taken nearly</p>
+				<p>21 years after the event, yet</p>
+				<p>the forest has barely begun to</p>
+				<p>recover.</p>
+				<p>The shock waves were powerful</p>
+				<p>enough to knock people off their</p>
+				<p>feet 600 kilometers from the epicenter</p>
+				<p>and knock people unconscious nearly</p>
+				<p>200 kilometers away.</p>
+				<p>For several nights after the</p>
+				<p>event, the skies glowed all the</p>
+				<p>way to Northern Ireland bright</p>
+				<p>enough to read a newspaper by</p>
+				<p>after midnight. The glow was likely</p>
+				<p>caused by particles dispersed</p>
+				<p>in the upper atmosphere.</p>
+				<p>It's actually not very easy</p>
+				<p>to determine what happened or</p>
+				<p>even how exactly the story goes.</p>
+				<p>The description given just now</p>
+				<p>was a compilation of data collected</p>
+				<p>from interviews with many different</p>
+				<p>witnesses and is the most likely</p>
+				<p>storyline. But there are many</p>
+				<p>inconsistencies and problems with</p>
+				<p>the data. The people who were</p>
+				<p>interviewed lived deep in remote</p>
+				<p>forest, their language didn't</p>
+				<p>even have a written form before</p>
+				<p>1931, and they had many superstitions.</p>
+				<p>These superstitions led them to</p>
+				<p>avoid talking about dead relatives</p>
+				<p>or friends, which made it difficult</p>
+				<p>for interviewers to assess the</p>
+				<p>casualties from this event. These</p>
+				<p>superstitions may also have embellished</p>
+				<p>some of the stories as well, it's</p>
+				<p>really hard to know. And, of course,</p>
+				<p>many of these interviews were</p>
+				<p>recorded decades after the event</p>
+				<p>occurred. In fact, not until nearly</p>
+				<p>20 years later, in 1927, was the</p>
+				<p>first scientific expedition to</p>
+				<p>the blast site. Some of the stories</p>
+				<p>were from people who were children</p>
+				<p>at the time of the event, some</p>
+				<p>of the stories were from people</p>
+				<p>hearing what someone else told</p>
+				<p>them, and the list of likely possibilities</p>
+				<p>of how stories were exaggerated</p>
+				<p>or completely distorted just goes</p>
+				<p>on and on. So, it goes without</p>
+				<p>saying, that what we think we</p>
+				<p>know may not be factual at all.</p>
+				<p>However, there is some data that</p>
+				<p>is simply undeniable.</p>
+				<p>The place of the event is still</p>
+				<p>visibly scared  to this day, which</p>
+				<p>absolutely verifies that this</p>
+				<p>was an extreme event, otherwise,</p>
+				<p>the forest would have easily</p>
+				<p>regrown in the nearly 120 years</p>
+				<p>since the event. However, there</p>
+				<p>is almost no evidence of any sort</p>
+				<p>of explosive or meteor at the</p>
+				<p>blast site. This has led to two</p>
+				<p>main theories for the event.</p>
+				<p>One theory is that a small comet</p>
+				<p>(composed of things like dust</p>
+				<p>and ice) vaporized in Earth's</p>
+				<p>atmosphere, thus leaving no traces</p>
+				<p>at the blast site. This theory</p>
+				<p>is further supported by the glowing</p>
+				<p>skies after the event as the dust</p>
+				<p>and ice from the meteor could</p>
+				<p>have been dispersed in the upper</p>
+				<p>atmosphere. This theory is then</p>
+				<p>even further supported as the</p>
+				<p>time of the event was at peak</p>
+				<p>activity of the Beta Taurids meteor</p>
+				<p>shower, suggesting that a fragment</p>
+				<p>of Comet Encke was responsible</p>
+				<p>for the event. However, this theory</p>
+				<p>begins to break when some other</p>
+				<p>data comes into the picture.</p>
+				<p>The other, and more likely theory</p>
+				<p>is that an asteroid (composed</p>
+				<p>of iron) entered Earth's atmosphere</p>
+				<p>traveling at an insane 27 kilometers</p>
+				<p>per second, or Mach 80. The asteroid</p>
+				<p>then exploded mid-air about 9</p>
+				<p>kilometers above the ground. It's</p>
+				<p>size has been estimated at around</p>
+				<p>60 meters in diameter. Whereas</p>
+				<p>a comet would have likely disintegrated</p>
+				<p>in the upper atmosphere, an iron</p>
+				<p>meteor would have been able to</p>
+				<p>make it into the lower atmosphere,</p>
+				<p>which would be required for the</p>
+				<p>tree fall pattern. This theory</p>
+				<p>is also supported by materials</p>
+				<p>found in the trees near the blast</p>
+				<p>site which are found in rocky</p>
+				<p>asteroids but not comets. Various</p>
+				<p>other analyses have also supported</p>
+				<p>the asteroid theory, although</p>
+				<p>there is really not enough evidence</p>
+				<p>for either the comet or the asteroid</p>
+				<p>theory to definitively prove one</p>
+				<p>as the correct theory.</p>
+				<p>In early 2013 an event similar</p>
+				<p>to the Tunguska event occurred</p>
+				<p>over Chelyabinsk. This event is</p>
+				<p>the second largest meteor event</p>
+				<p>in recorded history. It was much</p>
+				<p>smaller than the Tunguska event</p>
+				<p>but, importantly, a lot more data</p>
+				<p>was able to be collected than</p>
+				<p>from the Tunguska event. This</p>
+				<p>allowed scientists to compare</p>
+				<p>the aftermath of the Tunguska</p>
+				<p>event to a similar meteor event.</p>
+				<p>It also provided recordings of</p>
+				<p>what the so called "artillery</p>
+				<p>fire" after the main blast sounded like.</p>
+				<p>It sounds exactly like artillery fire.</p>
+				<p>The Chelyabinsk meteor released</p>
+				<p>the equivalent of around 450 kilotonnes</p>
+				<p>of TNT and exploded about 30 kilometers</p>
+				<p>above the ground. With that energy</p>
+				<p>and distance there was enough</p>
+				<p>power from the shock waves to</p>
+				<p>collapse brick walls and shatter</p>
+				<p>glass 100 kilometers away. The</p>
+				<p>Chelyabinsk meteor was smaller,</p>
+				<p>traveled slower, and exploded</p>
+				<p>at a much higher altitude than</p>
+				<p>the Tunguska meteor. If an event</p>
+				<p>with just 4% the blast energy</p>
+				<p>and three times the altitude of</p>
+				<p>the Tunguska event produces results</p>
+				<p>like this, it makes one wonder</p>
+				<p>what the result would have been</p>
+				<p>if the Tunguska event had happened</p>
+				<p>over a populous city instead of</p>
+				<p>remote forest. It also makes one</p>
+				<p>very grateful that our planet</p>
+				<p>was designed with an atmosphere</p>
+				<p>to catch most of the meteors before</p>
+				<p>they become a real hazard.</p>
+				<p>The Tunguska event is, to this</p>
+				<p>day, the largest impact event</p>
+				<p>on Earth in recorded history.</p>
+			</div>
+			<h2>Thumbnails</h2>
+			<div id="thumbnails">
+				<a href="./thumbnails/38-the_mysterious_explosion_of_1908-2-1080.png" class="tb"><img src="./thumbnails/38-the_mysterious_explosion_of_1908-2-180.png" alt="Thumbnail"><b>October 11, 2025</b></a>
+				<a href="./thumbnails/38-the_mysterious_explosion_of_1908-1-1080.png" class="tb"><img src="./thumbnails/38-the_mysterious_explosion_of_1908-1-180.png" alt="Thumbnail"><b>October 11, 2025</b></a>
+				<a href="./thumbnails/38-the_mysterious_explosion_of_1908-1080.png" class="tb"><img src="./thumbnails/38-the_mysterious_explosion_of_1908-180.png" alt="Thumbnail"><b>October 11, 2025</b></a>
+				<a href="./thumbnails/38-the_mysterious_explosion_of_1908-3-1080.png" class="tb"><img src="./thumbnails/38-the_mysterious_explosion_of_1908-3-180.png" alt="Thumbnail"><b>October 14, 2025</b></a>
+				<a href="./thumbnails/38-the_mysterious_explosion_of_1908-4-1080.png" class="tb"><img src="./thumbnails/38-the_mysterious_explosion_of_1908-4-180.png" alt="Thumbnail"><b>October 14, 2025</b></a>
+			</div>
+		</div>
+		<footer></footer>
+		<script>
+			fetch('/noindex/footer.html')
+				.then(response => response.text())
+				.then(data => {document.querySelector('footer').innerHTML = data});
+		</script>
+		<script src="/static/main.js"></script>
+		<script src="/static/video-sources-pages.js"></script>
+	</body>
+</html>
