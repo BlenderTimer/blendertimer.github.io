@@ -17,7 +17,7 @@ function getResult() {
 	var answers = [];
 	// I've used a smartphone most of my life.
 	var answer = getQuestionAnswer(q[0].id);
-	answers.push({id:"SmartphoneUse",answer:answer});
+	answers.push({id:"SmartphoneUse",answer:answer-4});
 	if (answer == 1) {estAges.push(70)}
 	else if (answer == 2) {estAges.push(60)}
 	else if (answer == 3) {estAges.push(50)}
@@ -28,7 +28,7 @@ function getResult() {
 	else {error = true};
 	// I often use a physical dictionary to look up a word.
 	answer = getQuestionAnswer(q[1].id);
-	answers.push({id:"DictionaryUse",answer:answer});
+	answers.push({id:"DictionaryUse",answer:answer-4});
 	if (answer == 1) {estAges.push(13)}
 	else if (answer == 2) {estAges.push(18)}
 	else if (answer == 3) {estAges.push(24)}
@@ -39,7 +39,7 @@ function getResult() {
 	else {error = true};
 	// For special occasions, I prefer handwritten letters rather than email or text.
 	answer = getQuestionAnswer(q[2].id);
-	answers.push({id:"HandwrittenLetterPreference",answer:answer});
+	answers.push({id:"HandwrittenLetterPreference",answer:answer-4});
 	if (answer == 1) {estAges.push(13)}
 	else if (answer == 2) {estAges.push(18)}
 	else if (answer == 3) {estAges.push(25)}
@@ -50,7 +50,7 @@ function getResult() {
 	else {error = true};
 	// I did most of my school research with the internet.
 	answer = getQuestionAnswer(q[3].id);
-	answers.push({id:"InternetForSchoolResearch",answer:answer});
+	answers.push({id:"InternetForSchoolResearch",answer:answer-4});
 	if (answer == 1) {estAges.push(78)}
 	else if (answer == 2) {estAges.push(67)}
 	else if (answer == 3) {estAges.push(50)}
@@ -61,7 +61,7 @@ function getResult() {
 	else {error = true};
 	// I grew up watching YouTube.
 	answer = getQuestionAnswer(q[4].id);
-	answers.push({id:"WatchingYouTube",answer:answer});
+	answers.push({id:"WatchingYouTube",answer:answer-4});
 	if (answer == 1) {estAges.push(67)}
 	else if (answer == 2) {estAges.push(51)}
 	else if (answer == 3) {estAges.push(40)}
@@ -72,7 +72,7 @@ function getResult() {
 	else {error = true};
 	// I often use abbreviations (e.g. LOL, SMH, etc.) in real-world conversations.
 	answer = getQuestionAnswer(q[5].id);
-	answers.push({id:"AbbreviationsIRL",answer:answer});
+	answers.push({id:"AbbreviationsIRL",answer:answer-4});
 	if (answer == 1) {estAges.push(55)}
 	else if (answer == 2) {estAges.push(38)}
 	else if (answer == 3) {estAges.push(28)}
