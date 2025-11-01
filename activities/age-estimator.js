@@ -192,19 +192,22 @@ function getResult() {
 
 		// Send Data to GTM
 		subId = crypto.randomUUID();
+		quizId = "AgeEstimator";
 		window.dataLayer = window.dataLayer || [];
 		dataLayer.push({
 			event:"quizComplete",
 			submissionId:subId,
 			questionCount:answers.length,
-			result:estAge
+			result:estAge,
+			quizId:quizId
 		});
 		answers.forEach(q => {
 			dataLayer.push({
 				event:"quizAnswer",
 				submissionId:subId,
 				questionId:q.id,
-				answer:q.answer
+				answer:q.answer,
+				quizId:quizId
 			});
 		});
 	}
