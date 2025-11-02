@@ -14,8 +14,10 @@ function getResult() {
 	estAges = [];
 	var minAge = 0;
 	var maxAge = 100;
+	var answers = [];
 	// I've used a smartphone most of my life.
 	var answer = getQuestionAnswer(q[0].id);
+	answers.push({id:"SmartphoneUse",answer:answer-4});
 	if (answer == 1) {estAges.push(70)}
 	else if (answer == 2) {estAges.push(60)}
 	else if (answer == 3) {estAges.push(50)}
@@ -26,6 +28,7 @@ function getResult() {
 	else {error = true};
 	// I often use a physical dictionary to look up a word.
 	answer = getQuestionAnswer(q[1].id);
+	answers.push({id:"DictionaryUse",answer:answer-4});
 	if (answer == 1) {estAges.push(13)}
 	else if (answer == 2) {estAges.push(18)}
 	else if (answer == 3) {estAges.push(24)}
@@ -36,6 +39,7 @@ function getResult() {
 	else {error = true};
 	// For special occasions, I prefer handwritten letters rather than email or text.
 	answer = getQuestionAnswer(q[2].id);
+	answers.push({id:"HandwrittenLetterPreference",answer:answer-4});
 	if (answer == 1) {estAges.push(13)}
 	else if (answer == 2) {estAges.push(18)}
 	else if (answer == 3) {estAges.push(25)}
@@ -46,6 +50,7 @@ function getResult() {
 	else {error = true};
 	// I did most of my school research with the internet.
 	answer = getQuestionAnswer(q[3].id);
+	answers.push({id:"InternetForSchoolResearch",answer:answer-4});
 	if (answer == 1) {estAges.push(78)}
 	else if (answer == 2) {estAges.push(67)}
 	else if (answer == 3) {estAges.push(50)}
@@ -56,6 +61,7 @@ function getResult() {
 	else {error = true};
 	// I grew up watching YouTube.
 	answer = getQuestionAnswer(q[4].id);
+	answers.push({id:"WatchingYouTube",answer:answer-4});
 	if (answer == 1) {estAges.push(67)}
 	else if (answer == 2) {estAges.push(51)}
 	else if (answer == 3) {estAges.push(40)}
@@ -66,6 +72,7 @@ function getResult() {
 	else {error = true};
 	// I often use abbreviations (e.g. LOL, SMH, etc.) in real-world conversations.
 	answer = getQuestionAnswer(q[5].id);
+	answers.push({id:"AbbreviationsIRL",answer:answer-4});
 	if (answer == 1) {estAges.push(55)}
 	else if (answer == 2) {estAges.push(38)}
 	else if (answer == 3) {estAges.push(28)}
@@ -79,6 +86,7 @@ function getResult() {
 
 	// Have you ever regularly used a VHS player?
 	var a0 = getQuestionAnswer(q[6].id, "str");
+	answers.push({id:"VHSUse",answer:a0});
 	if (a0 == "yes") {
 		minAge = 16;
 		if (estAge < 30) {
@@ -101,6 +109,7 @@ function getResult() {
 	else {error = true};
 	// Do you know what "sus" means?
 	var a1 = getQuestionAnswer(q[7].id, "str");
+	answers.push({id:"SusMeaning",answer:a1});
 	if (a1 == "yes") {
 		maxAge = 35;
 		estAge = (((estAge*2)+(18+yrfrcal))/3).round(0);
@@ -112,6 +121,7 @@ function getResult() {
 	else {error = true};
 	// Have you ever owned a landline phone?
 	var a2 = getQuestionAnswer(q[8].id, "str");
+	answers.push({id:"OwnsLandline",answer:a2});
 	if (a2 == "yes") {
 		if (estAge < 35) {
 			estAge = (estAge * 1.1).round(0);
@@ -128,6 +138,7 @@ function getResult() {
 	else {error = true};
 	// Were/are you homeschooled
 	var a2 = getQuestionAnswer(q[9].id, "str");
+	answers.push({id:"Homeschooled",answer:a2});
 	if (a2 == "yes") {
 		if (estAge >= 20 && estAge <= 45) {
 			estAge = (estAge / 1.2).round(0);
@@ -178,6 +189,27 @@ function getResult() {
 			result.style.transform = null;
 			result.children[1].innerHTML = estAge.toString();
 		}, 200);
+
+		// Send Data to GTM
+		subId = crypto.randomUUID();
+		quizId = "AgeEstimator";
+		window.dataLayer = window.dataLayer || [];
+		dataLayer.push({
+			event:"quizComplete",
+			submissionId:subId,
+			questionCount:answers.length,
+			result:estAge,
+			quizId:quizId
+		});
+		answers.forEach(q => {
+			dataLayer.push({
+				event:"quizAnswer",
+				submissionId:subId,
+				questionId:q.id,
+				answer:q.answer,
+				quizId:quizId
+			});
+		});
 	}
 }
 

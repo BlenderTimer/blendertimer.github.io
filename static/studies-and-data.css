@@ -1,0 +1,76 @@
+#item-list {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.list-item {
+	display: flex !important;
+	justify-content: center;
+	flex-flow: column;
+	width: calc(50% - 10px);
+	box-sizing: border-box;
+	margin: 5px !important;
+	padding: 15px 20px;
+	background: var(--close-back);
+	border-radius: 5px;
+	border: 2px solid var(--closer-back);
+}
+
+.list-item:hover {
+	text-shadow: none !important;
+	background: var(--closer-back);
+	border: 2px solid var(--italic-text);
+	box-shadow: 0px 0px 10px #FFF4;
+}
+
+.list-item-title {
+	display: flex;
+	margin-bottom: 2px;
+}
+
+.list-item-title b {
+	width: 100% !important;
+	color: var(--base-text) !important;
+	font-size: 13pt !important;
+	display: -webkit-box !important;
+	-webkit-line-clamp: 2;
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.list-item-preview {
+	display: flex;
+	margin-bottom: 2px;
+	overflow: hidden;
+}
+
+.list-item-preview p {
+	width: 100% !important;
+	color: var(--italic-text) !important;
+	font-size: 12pt !important;
+	display: -webkit-box !important;
+	-webkit-line-clamp: 2;
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.list-item-date {
+	display: flex;
+	margin-bottom: 2px;
+	overflow: hidden;
+}
+
+.list-item-date i {
+	width: 100% !important;
+	color: #FFF5 !important;
+	font-size: 10pt !important;
+}
+
+@media screen and (max-width: 900px) {
+	.list-item {
+		width: calc(100% - 10px);
+	}
+}

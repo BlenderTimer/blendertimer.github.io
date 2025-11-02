@@ -5,6 +5,12 @@
 	gap: 10px;
 }
 
+.no-nav {
+	width: calc(100% - 40px) !important;
+	margin: 10px 0px 0px 0px !important;
+	padding: 0px 20px;
+}
+
 #disclaimer {
 	display: block !important;
 	color: #FFF5 !important;
@@ -35,7 +41,7 @@
 	background: var(--close-back);
 	box-shadow: 0px 0px 10px #0005;
 	z-index: 10000;
-	transition: 0.4s;
+	transition: 0s;
 }
 
 #navigator::-webkit-scrollbar {
@@ -98,9 +104,40 @@
 	padding-bottom: 8px;
 }
 
-#bible-data-container {
+#data-content {
 	display: block;
 	width: 100%;
+}
+
+.ref {
+	font-size: 9pt !important;
+	padding: 8pt 8pt 8pt 8pt;
+	margin: -8pt -8pt -8pt -8pt !important;
+	line-height: 0;
+	vertical-align: super;
+	position: relative;
+	z-index: 10000;
+}
+
+.no-nav #data-content p {
+	color: var(--brighter-italic-text);
+	font-size: 14pt !important;
+}
+
+.no-nav #data-content i {
+	font-size: 14pt !important;
+}
+
+#data-content i {
+	color: var(--italic-text);
+}
+
+.data-image {
+	display: block;
+	max-width: 80%;
+	margin: 20pt auto;
+	border-radius: 10px;
+	box-shadow: 0px 0px 20px #0008;
 }
 
 .col-spr {
@@ -301,7 +338,6 @@
 }
 
 .bar-map-section:hover {
-/*	outline: 3px solid color-mix(in srgb, var(--b) 30%, transparent);*/
 	border: 2px solid color-mix(in srgb, var(--b) 30%, var(--semi-far-back));
 }
 
@@ -381,8 +417,16 @@
 	text-align: right !important;
 }
 
-#editors-notes i {
-	color: var(--italic-text) !important;
+#data-content ol {
+	display: block;
+	max-width: 500px;
+	margin: 10px auto;
+	padding-left: 20pt;
+	box-sizing: border-box;
+}
+
+#data-content ol li::marker {
+	font-size: 12pt;
 }
 
 @media screen and (max-width: 1400px) {
@@ -427,9 +471,18 @@
 		box-shadow: 0px 0px 20px #0008;
 	}
 
-	#bible-data-container {
+	#data-content {
 		margin-left: 20px;
 		width: calc(100% - 20px);
+	}
+
+	.no-nav #data-content {
+		margin-left: 0px !important;
+		width: 100% !important;
+	}
+
+	.data-image {
+		max-width: 90%;
 	}
 
 	.data-block {
@@ -442,8 +495,17 @@
 }
 
 @media screen and (max-width: 700px) {
+	.no-nav {
+		width: calc(100% - 10px) !important;
+		padding: 0px 5px;
+	}
+
 	.bar-map-section b {
 		font-size: 10pt !important;
+	}
+
+	.data-image {
+		max-width: 100%;
 	}
 }
 

@@ -37,7 +37,7 @@ window.pages = [
 	},
 	{
 		title:"Bounce - BlenderTimer",
-		description:"A highly customizable \"DVD\"; logo type bounce visualization. Make it go fast, make it go wild! You're welcome!",
+		description:"A highly customizable \"DVD\" logo type bounce visualization. Make it go fast, make it go wild! You're welcome!",
 		url:"/bounce",
 		keywords:[]
 	},
@@ -96,6 +96,19 @@ window.pages = [
 		description:"The archive of all the previous versions of BT-JS.",
 		url:"/bt-js/archive",
 		keywords:["code", "javascript", "functions"]
+	},
+	// Studies and Data
+	{
+		title:"Studies and Data - BlenderTimer",
+		description:"Explore studies, statistics, datasheets, and articles by BlenderTimer!",
+		url:"/data",
+		keywords:["papers", "scientific"]
+	},
+	{
+		title:"How Many People Stub Their Toe Every Day? - BlenderTimer Studies and Data",
+		description:"Ever wonder how many people stub their toes every day, minute, or second? Here's a rough estimate based on a survey of nearly 3 thousand people!",
+		url:"/data/how-many-people-stub-their-toe-every-day",
+		keywords:["papers", "scientific"]
 	},
 	// Factsheets
 	{

@@ -15,8 +15,8 @@
 		<meta name="description" content="Check out some of these fun, interesting visualizations and demos of various things!">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="icon" href="/favicon.png" type="image/x-icon">
+		<meta property="og:image" content="https://blendertimer.com/static/images/page-thumbs/visualizations.png">
 		<link rel="stylesheet" type="text/css" href="/static/main.css">
-		<link rel="stylesheet" type="text/css" href="/static/visualizations.css">
 		<script src="/bt-js/bt-js.js"></script>
 	</head>
 	<body>
@@ -36,34 +36,42 @@
 		<div id="loader" style="width: 100%; height: calc(100% - 50px); top: 50px; left: 0px; position: fixed; z-index: -100000;">
 			<img alt="Loading" src="/static/images/loader.gif" style="width: 100px; height: 100px; position: fixed; left: calc(50% - 50px); top: calc(50% - 25px); filter: drop-shadow(0px 0px 15px #000000);">
 		</div>
-		<div id="content-main" style="opacity: 0; transition: 0.5s">
-			<h1 class="title">Visualizations</h1>
-			<p class="description">Interesting visualizations and demonstrations of data!</p>
-			<div id="visualizations-list">
-				<a href="/visualizations/extra-visualizations" class="visualization">
-					<img src="./static-0/files/images/visualizationpreview-extravisualizations.png" alt="Extra Visualizations - BlenderTimer">
-					<b>Extra Visualizations</b>
-					<div class="visualization-description"><i>Some extra interesting visualizations and demonstrations of various things!</i></div>
+		<div id="content-main" class="limwidth" style="opacity: 0; transition: 0.5s">
+			<div class="article-header">
+				<h1 class="article-title">Visualizations</h1>
+				<i class="article-subtitle">Free online visualizations and demonstrations of science, history, physics, and other data!</i>
+			</div>
+			<div class="image-list">
+				<a href="/web-tools/compare-size" class="image-list-item">
+					<p class="image-list-item-hot">HOT</p>
+					<img src="/static/images/web-tool-previews/comparesize.png" alt="Compare (Size and Shape) - BlenderTimer Web Tools">
+					<b>Compare (Size and Shape)</b>
+					<div class="image-list-item-description"><i>Compare the sizes of hundreds of objects!</i></div>
 				</a>
-				<a href="/nowstream" class="visualization">
-					<img src="./static-0/files/images/visualizationpreview-thenowstream.png" alt="The NowStream - BlenderTimer">
-					<b>The NowStream</b>
-					<div class="visualization-description"><i>Visualizations of things that are happening all around you!</i></div>
-				</a>
-				<a href="/visualizations/solar-system" class="visualization">
-					<img src="./static-0/files/images/visualizationpreview-ourmassivelytinysolarsystem.png" alt="Our Massively Tiny Solar System - BlenderTimer">
+				<a href="/visualizations/solar-system" class="image-list-item">
+					<img src="/static/images/visualization-previews/ourmassivelytinysolarsystem.png" alt="Our Massively Tiny Solar System - BlenderTimer">
 					<b>Our Massively Tiny Solar System</b>
-					<div class="visualization-description"><i>Travel through the Solar System at the speed of light and beyond!</i></div>
+					<div class="image-list-item-description"><i>Travel through the Solar System at the speed of light and beyond!</i></div>
 				</a>
-				<a href="/visualizations/solar-system-live" class="visualization">
-					<img src="./static-0/files/images/visualizationpreview-solarsystemlive.png" alt="Solar System LIVE - BlenderTimer">
+				<a href="/visualizations/solar-system-live" class="image-list-item">
+					<img src="/static/images/visualization-previews/solarsystemlive.png" alt="Solar System LIVE - BlenderTimer">
 					<b>Solar System LIVE</b>
-					<div class="visualization-description"><i>How far the planets in our Solar System have traveled since you loaded the page!</i></div>
+					<div class="image-list-item-description"><i>How far the planets in our Solar System have traveled since you loaded the page!</i></div>
 				</a>
-				<a href="/the-world-since-you" class="visualization">
-					<img src="./static-0/files/images/activitypreview-theworldsinceyou.png" alt="The World Since You - BlenderTimer Activities">
+				<a href="/nowstream" class="image-list-item">
+					<img src="/static/images/visualization-previews/thenowstream.png" alt="The NowStream - BlenderTimer">
+					<b>The NowStream</b>
+					<div class="image-list-item-description"><i>Visualizations of things that are happening all around you!</i></div>
+				</a>
+				<a href="/the-world-since-you" class="image-list-item">
+					<img src="/static/images/activity-previews/theworldsinceyou.png" alt="The World Since You - BlenderTimer Activities">
 					<b>The World Since You</b>
-					<div class="visualization-description"><i>World events which have happened in YOUR lifetime!</i></div>
+					<div class="image-list-item-description"><i>World events which have happened in YOUR lifetime!</i></div>
+				</a>
+				<a href="/visualizations/extra-visualizations" class="image-list-item">
+					<img src="/static/images/visualization-previews/extravisualizations.png" alt="Extra Visualizations - BlenderTimer">
+					<b>Extra Visualizations</b>
+					<div class="image-list-item-description"><i>Some extra interesting visualizations and demonstrations of various things!</i></div>
 				</a>
 			</div>
 			<div id="extra-pages-container">

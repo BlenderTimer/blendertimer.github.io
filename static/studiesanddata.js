@@ -3,9 +3,9 @@ var nav = document.getElementById('navigator');
 var sections = document.getElementsByClassName('title');
 var barMapTooltips = document.getElementsByClassName('bar-map-tooltip');
 //Load
-nav.style.transition = "0s";
+if (nav) {nav.style.transition = "0s"};
 positionNavigator();
-setTimeout(function() {nav.style.transition = null}, 1)
+setTimeout(function() {if (nav) {nav.style.transition = null}}, 1)
 //----------Event Listeners
 window.addEventListener('scroll', positionNavigator);
 window.addEventListener('resize', positionNavigator);
@@ -38,20 +38,28 @@ function btjs(t) {
 }
 //----------Functions
 function positionNavigator() {
-	if (nav.offsetWidth < (window.innerWidth/2) && nav.parentNode.getBoundingClientRect().top <= 60) {
-		nav.style.position = "fixed";
-		nav.style.top = "60px";
-		nav.style.maxHeight = null;
-	}
-	else if (nav.offsetWidth >= (window.innerWidth/2) && nav.parentNode.getBoundingClientRect().top <= 50) {
-		nav.style.position = "fixed";
-		nav.style.top = "50px";
-		nav.style.maxHeight = null;
-	}
-	else {
-		nav.style.position = "relative";
-		nav.style.top = null;
-		nav.style.maxHeight = "calc(100vh - " + (10+nav.parentNode.getBoundingClientRect().top) + "px)";
+	if (nav) {
+		if (nav.offsetWidth < (window.innerWidth/2) && nav.parentNode.getBoundingClientRect().top <= 60) {
+			nav.style.position = "fixed";
+			nav.style.top = "60px";
+			nav.style.maxHeight = null;
+		}
+		else if (nav.offsetWidth >= (window.innerWidth/2) && nav.parentNode.getBoundingClientRect().top <= 50) {
+			nav.style.position = "fixed";
+			nav.style.top = "50px";
+			nav.style.maxHeight = null;
+		}
+		else {
+			nav.style.position = "relative";
+			nav.style.top = null;
+			nav.style.maxHeight = "calc(100vh - " + (10+nav.parentNode.getBoundingClientRect().top) + "px)";
+		}
+		if (nav.getBoundingClientRect().bottom > nav.parentNode.getBoundingClientRect().bottom) {
+			nav.style.maxHeight = (nav.getBoundingClientRect().height - (nav.getBoundingClientRect().bottom - nav.parentNode.getBoundingClientRect().bottom)) + "px"
+		}
+		else {
+			nav.style.maxHeight = null;
+		}
 	}
 }
 
