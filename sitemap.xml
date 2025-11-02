@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>https://blendertimer.com/</loc>
-<lastmod>2025-10-18T17:51:39-07:00</lastmod>
+<lastmod>2025-11-01T17:30:53-07:00</lastmod>
 </url>
 <url>
 <loc>https://blendertimer.com/08a2e399-e7bb-4994-8195-109b1c364407</loc>
@@ -14,7 +14,7 @@
 </url>
 <url>
 <loc>https://blendertimer.com/activities</loc>
-<lastmod>2025-10-09T13:36:49-07:00</lastmod>
+<lastmod>2025-11-01T17:30:53-07:00</lastmod>
 </url>
 <url>
 <loc>https://blendertimer.com/bounce</loc>
@@ -35,6 +35,10 @@
 <url>
 <loc>https://blendertimer.com/channel-statistics</loc>
 <lastmod>2025-10-09T13:36:49-07:00</lastmod>
+</url>
+<url>
+<loc>https://blendertimer.com/data</loc>
+<lastmod>2025-11-01T17:30:53-07:00</lastmod>
 </url>
 <url>
 <loc>https://blendertimer.com/donate</loc>
@@ -86,15 +90,15 @@
 </url>
 <url>
 <loc>https://blendertimer.com/visualizations</loc>
-<lastmod>2025-10-25T17:52:05-07:00</lastmod>
+<lastmod>2025-11-01T17:30:53-07:00</lastmod>
 </url>
 <url>
 <loc>https://blendertimer.com/web-tools</loc>
-<lastmod>2025-10-09T13:36:49-07:00</lastmod>
+<lastmod>2025-11-01T17:30:53-07:00</lastmod>
 </url>
 <url>
 <loc>https://blendertimer.com/activities/age-estimator</loc>
-<lastmod>2025-10-31T22:30:38-07:00</lastmod>
+<lastmod>2025-11-01T17:30:53-07:00</lastmod>
 </url>
 <url>
 <loc>https://blendertimer.com/activities/cant-touch-this</loc>
@@ -115,6 +119,14 @@
 <url>
 <loc>https://blendertimer.com/bt-js/tester</loc>
 <lastmod>2025-10-09T13:34:13-07:00</lastmod>
+</url>
+<url>
+<loc>https://blendertimer.com/data/bible-data</loc>
+<lastmod>2025-11-01T17:30:53-07:00</lastmod>
+</url>
+<url>
+<loc>https://blendertimer.com/data/how-many-people-stub-their-toe-every-day</loc>
+<lastmod>2025-11-01T17:30:53-07:00</lastmod>
 </url>
 <url>
 <loc>https://blendertimer.com/factsheets/bible-data</loc>
@@ -142,7 +154,7 @@
 </url>
 <url>
 <loc>https://blendertimer.com/noindex/header</loc>
-<lastmod>2025-10-21T14:24:06-07:00</lastmod>
+<lastmod>2025-11-01T17:30:53-07:00</lastmod>
 </url>
 <url>
 <loc>https://blendertimer.com/nowstream/aroundtheworld</loc>
@@ -362,11 +374,11 @@
 </url>
 <url>
 <loc>https://blendertimer.com/web-tools/compare-size</loc>
-<lastmod>2025-10-25T17:52:05-07:00</lastmod>
+<lastmod>2025-11-01T17:30:53-07:00</lastmod>
 </url>
 <url>
 <loc>https://blendertimer.com/web-tools/morse-code-translator</loc>
-<lastmod>2025-10-31T22:56:28-07:00</lastmod>
+<lastmod>2025-11-01T17:30:53-07:00</lastmod>
 </url>
 <url>
 <loc>https://blendertimer.com/web-tools/pattern-based-word-finder</loc>
