@@ -105,6 +105,12 @@ window.pages = [
 		keywords:["papers", "scientific"]
 	},
 	{
+		title:"How Many Satellites Are Above You? - BlenderTimer Studies and Data",
+		description:"Ever wonder how many satellites are orbiting above you or how many satellites pass over you in a minute? Chances are, there are several above you right now!",
+		url:"/data/how-many-satellites-are-above-you",
+		keywords:["papers", "scientific"]
+	},
+	{
 		title:"How Many People Stub Their Toe Every Day? - BlenderTimer Studies and Data",
 		description:"Ever wonder how many people stub their toes every day, minute, or second? Here's a rough estimate based on a survey of nearly 3 thousand people!",
 		url:"/data/how-many-people-stub-their-toe-every-day",

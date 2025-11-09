@@ -1,0 +1,11 @@
+"New York City, USA","London, UK","Sydney, AU",Average/Total
+Stationary satellites: 3-4,Stationary satellites: 5,Stationary satellites: 3,Stationary satellites: 4
+Fewest satellites: 3,Fewest satellites: 5,Fewest satellites: 3,Fewest satellites: 4
+Most satellites: 9,Most satellites: 12,Most satellites: 9,Most satellites: 10
+,,,
+Avg. time overhead: 32.95s,Avg. time overhead: 33.56s,Avg. time overhead: 35.47s,Avg. time overhead: 34.00s
+Avg. rate: 3.4/min,Avg. rate: 3.9/min,Avg. rate: 3.7/min,Avg. rate: 3.7/min
+Avg. satellites overhead: 6.2,Avg. satellites overhead: 7.0,Avg. satellites overhead: 6.3,Avg. satellites overhead: 6.5
+,,,
+Shortest transit time: 4.1s,Shortest transit time: 14.4s,Shortest transit time: 6.0s,Shortest transit time: 4.1s
+Longest transit time: 66.8s,Longest transit time: 123.1s,Longest transit time: 125.5s,Longest transit time: 125.5s
