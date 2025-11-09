@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en-US">
+	<head>
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-SYR26MG6YV"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-SYR26MG6YV');
+        </script>
+        <meta charset="utf-8">
+		<title>How Many Satellites Are Above You? - BlenderTimer Studies and Data</title>
+		<meta name="description" content="Ever wonder how many satellites are orbiting above you or how many satellites pass over you in a minute? Chances are, there are several above you right now!">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="icon" href="/favicon.png" type="image/x-icon">
+		<meta property="og:image" content="https://blendertimer.com/data/images/how-many-satellites-are-above-you.png">
+		<link rel="stylesheet" type="text/css" href="/static/main.css">
+		<link rel="stylesheet" type="text/css" href="/static/studiesanddata.css">
+		<script src="/bt-js/bt-js.js"></script>
+	</head>
+	<body>
+		<header></header>
+		<script>
+			fetch('/noindex/header.html')
+				.then(response => response.text())
+				.then(data => {document.querySelector('header').innerHTML = data});
+		</script>
+		<script src="/noindex/pages.js"></script>
+		<noscript>
+			<div id="nojs" style="position: fixed; top: 0px; bottom: 0px; left: 0px; right: 0px; display: flex; flex-flow: column; justify-content: center; align-items: center; background: var(--semi-back); padding: 15px 20px; z-index: 1000000; cursor: default;">
+				<b style="font-family: sans-serif; font-size: 16pt; color: #FFF; text-align: center;">Page Failed to Load</b>
+				<p style="font-family: sans-serif; font-size: 14pt; color: #FFF6; text-align: center;">This website requires Javascript to operate.</p>
+			</div>
+		</noscript>
+		<div id="loader" style="width: 100%; height: calc(100% - 50px); top: 50px; left: 0px; position: fixed; z-index: -100000;">
+			<img alt="Loading" src="/static/images/loader.gif" style="width: 100px; height: 100px; position: fixed; left: calc(50% - 50px); top: calc(50% - 25px); filter: drop-shadow(0px 0px 15px #000000);">
+		</div>
+		<div id="content-main" class="limwidth" style="opacity: 0; transition: 0.5s">
+			<div class="article-header">
+				<h1 class="article-title">How Many Satellites Are Above You?</h1>
+				<i class="article-subtitle">Some calculations based on satellite orbit data!</i>
+				<i class="article-date">November 7, 2025</i>
+			</div>
+			<div id="primary-block" class="no-nav">
+				<div id="data-content">
+					<p>Have you ever wondered how many artificial satellites are orbiting above you? At any given moment, around 6 to 7 satellites are orbiting above you or about 3.7 passing over per minute! Of course, this statistic is made using the assumption that <i>"above you"</i> is about 30° in the sky since the chance of any satellite passing exactly over the top of you is very low. This is also how many satellites are over you, not necessarily how many you can see overhead. Many of the satellites aren't visible to the naked eye.</p>
+					<img src="/data/images/how-many-satellites-are-above-you.png" alt="How Many Satellites Are Above You" class="data-image">
+					<p>Those aren't the only statistics we can get from satellite orbit data. We can also see that satellites take, on average, 34 seconds to pass overhead, though some can take over 2 minutes! In general, the lowest number of satellites overhead will be about 3, and the most overhead will be about 12.</p>
+					<br><br>
+					<p>Now, to explain how this data was collected. I used Stellarium<a class="ref" onclick="scrollToNote('ref1')">1</a> and its built-in "Satellites" plugin, which made it easier to observe all satellites from multiple data sources (you can view the data sources inside the Stellarium Satellites plugin). I made the assumption that <i>"overhead"</i> is a circle directly upward with an angular diameter of 30°. The data was collected from 3, 10 minute observations, each in a separate location on Earth. The locations were <b>New York City, USA</b>. <b>London, UK</b>. And <b>Sydney, AU</b>. </p>
+					<br><br>
+					<p>Some of the satellites observed were geostationary or near-geostationary, meaning they stayed in or near the 30° area for the full 10 minutes. Some of the satellites barely grazed the overhead area, giving them a transit time of just a few seconds. Others traveled slowly across almost the full diameter, giving them a transit time of over 2 minutes. In total, 109 satellites were observed across the 3 locations, averaging about 36 satellites observed per location. New York City had a rate of 3.4 satellites per minute or 6.2 concurrently overhead. London had a rate of 3.9 satellites per minute or 7 concurrently overhead. Sydney had a rate of 3.7 satellites per minute or 6.3 concurrently overhead. At no point during any of the 3 observations were there no satellites overhead.</p>
+					<br><br>
+					<p>You can download the full CSV data files if you wish to analyze the data yourself.<br>
+					<a href="/data/downloads/satellites-overhead-calculations.csv" download="Full Calculations of Satellite Rates and Transits.csv">Full Calculations of Satellite Rates and Transits</a><br>
+					<a href="/data/downloads/satellites-overhead-newyork.csv" download="New York City Overhead Satellite Transit Log.csv">New York City Overhead Satellite Transit Log</a><br>
+					<a href="/data/downloads/satellites-overhead-london.csv" download="London Overhead Satellite Transit Log.csv">London Overhead Satellite Transit Log</a><br>
+					<a href="/data/downloads/satellites-overhead-sydney.csv" download="Sydney Overhead Satellite Transit Log.csv">Sydney Overhead Satellite Transit Log</a></p>
+					<div class="spr"></div>
+					<h1 class="title" id="sources">Sources</h1>
+					<ol>
+						<li id="ref1"><a href="https://stellarium.org/" target="_blank">Stellarium.org</a></li>
+					</ol>
+				</div>
+			</div>
+			<div id="extra-pages-container">
+				<div class="spr"></div>
+				<h1 class="title">Some other pages you might enjoy:</h1>
+				<div id="extra-pages">
+					<a href="/data">
+						<img alt="Studies and Data" src="/static/images/studies-and-data.svg" class="misc-content-img">
+						<b>Other Studies and Data</b>
+					</a>
+					<a href="/factsheets">
+						<img alt="Factsheets" src="/static/images/factsheets.svg" class="misc-content-img">
+						<b>Factsheets</b>
+					</a>
+					<a href="/nowstream">
+						<img alt="The NowStream" src="/static/images/nowstream.svg" class="misc-content-img">
+						<b>The NowStream</b>
+					</a>
+					<a href="/web-tools">
+						<img alt="Web Tools" src="/static/images/webtools.svg" class="misc-content-img">
+						<b>Web Tools</b>
+					</a>
+				</div>
+			</div>
+		</div>
+		<footer></footer>
+		<script>
+			fetch('/noindex/footer.html')
+				.then(response => response.text())
+				.then(data => {document.querySelector('footer').innerHTML = data});
+		</script>
+		<script src="/static/main.js"></script>
+		<script src="/static/studiesanddata.js"></script>
+	</body>
+</html>
