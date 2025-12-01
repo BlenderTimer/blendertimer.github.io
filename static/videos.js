@@ -540,9 +540,9 @@ const videos = [
 		cc:"Did you know there's a punctuation mark for irony? Actually, there are several, or rather, there were several proposed. Proposed as far back as the 1580s and as recently as 2007, the currently recognized, yet largely forgotten, irony mark is this one. It is essentially a backwards question mark and would be used for sarcastic comments or rhetorical questions. Unfortunately, as with the interrobang, this symbol is almost entirely forgotten in society. I'm not sure why but it's probably because keyboards are already overflowing and can barely hold the symbols they have already, and probably just that people can usually tell what is intended as sarcasm based on context. Not to mention emojis which are arguably better at portraying irony then a punctuation mark could ever be.",
 		youtubeID:"gOEpPygWqF4",
 		date:"29-11-2025",
-		views10:-1,
-		views30:-1,
-		views1:-1,
-		views24:-1,
+		views10:117,
+		views30:400,
+		views1:652,
+		views24:5128,
 	},
 ];
