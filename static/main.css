@@ -789,13 +789,6 @@ header nav a:hover b {
 	right: -8px;
 }
 
-.end-page-ad {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	width: 100%;
-}
-
 footer {
 	display: flex;
 	flex-flow: column;
