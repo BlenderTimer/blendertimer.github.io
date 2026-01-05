@@ -1,16 +1,3 @@
-body {
-	background: var(--semi-back);
-}
-
-#content-main {
-	box-shadow: none;
-	background: var(--semi-back);
-	margin: 0px 0px 0px 0px;
-	border-radius: 0px;
-	min-height: calc(100vh - 50px);
-	padding: 0px 20px 20px 20px;
-}
-
 #main-tool {
 	display: flex;
 	width: 100%;
@@ -22,7 +9,7 @@ body {
 #tool-input {
 	display: flex;
 	flex-flow: column;
-	background: var(--close-back);
+	background: var(--wincol);
 	box-sizing: border-box;
 	box-shadow: 0px 0px 10px #0005;
 	border-radius: 5px;
@@ -35,7 +22,7 @@ body {
 	width: 100%;
 	text-align: center;
 	font-size: 14pt;
-	color: var(--base-text);
+	color: var(--txtcol);
 	font-weight: bold;
 }
 
@@ -46,13 +33,13 @@ body {
 	height: 40vh;
 	box-sizing: border-box;
 	border-radius: 3px;
-	background: var(--far-back);
+	background: var(--bgcol-darken);
 	box-shadow: 0px 0px 10px #0005 inset;
 	border: none;
 	outline: none;
 	font-size: 12pt;
 	padding: 5px 8px;
-	color: var(--base-text);
+	color: var(--txtcol);
 	margin-top: 6px;
 	resize: none;
 	font-family: sans-serif !important;
@@ -61,7 +48,7 @@ body {
 #tool-output {
 	display: flex;
 	flex-flow: column;
-	background: var(--close-back);
+	background: var(--wincol);
 	box-sizing: border-box;
 	box-shadow: 0px 0px 10px #0005;
 	border-radius: 5px;
@@ -76,13 +63,13 @@ body {
 	height: 40vh;
 	box-sizing: border-box;
 	border-radius: 3px;
-	background: var(--far-back);
+	background: var(--bgcol-darken);
 	box-shadow: 0px 0px 10px #0005 inset;
 	border: none;
 	outline: none;
 	font-size: 12pt;
 	padding: 5px 8px;
-	color: var(--base-text);
+	color: var(--txtcol);
 	margin-top: 6px;
 	resize: none;
 	font-family: monospace !important;

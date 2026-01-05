@@ -5,7 +5,6 @@ body {
 
 #content-main {
 	box-shadow: none;
-	background: var(--semi-back);
 	margin: 0px 0px 0px 0px;
 	border-radius: 0px;
 	min-height: calc(100vh - 50px);

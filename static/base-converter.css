@@ -2,30 +2,6 @@ body {
 	background: var(--semi-back);
 }
 
-#content-main {
-	box-shadow: none;
-	background: var(--semi-back);
-	margin: 0px 0px 0px 0px;
-	border-radius: 0px;
-	min-height: calc(100vh - 50px);
-	padding: 0px 20px 20px 20px;
-}
-
-.title {
-	margin-top: 12px !important;
-	margin-bottom: 0px !important;
-	font-size: 14pt !important;
-}
-
-.description {
-	font-size: 12pt !important;
-	color: var(--italic-text) !important;
-	text-align: center;
-	width: 100% !important;
-	margin: 0px;
-	display: block !important;
-}
-
 #main-tool {
 	display: flex;
 	width: 100%;
@@ -37,7 +13,7 @@ body {
 #tool-input {
 	display: flex;
 	flex-flow: column;
-	background: var(--close-back);
+	background: var(--wincol);
 	box-sizing: border-box;
 	box-shadow: 0px 0px 10px #0005;
 	border-radius: 5px;
@@ -50,7 +26,7 @@ body {
 	width: 100%;
 	text-align: center;
 	font-size: 14pt;
-	color: var(--base-text);
+	color: var(--txtcol);
 	font-weight: bold;
 }
 
@@ -59,13 +35,13 @@ body {
 	width: 100%;
 	box-sizing: border-box;
 	border-radius: 3px;
-	background: var(--far-back);
+	background: var(--bgcol-darken);
 	box-shadow: 0px 0px 10px #0005 inset;
 	border: none;
 	outline: none;
 	font-size: 12pt;
 	padding: 5px 8px;
-	color: var(--base-text);
+	color: var(--txtcol);
 	margin-bottom: 5px;
 }
 
@@ -85,7 +61,7 @@ body {
 .base-input {
 	display: flex;
 	align-items: center;
-	background: var(--far-back);
+	background: var(--bgcol-darken);
 	box-shadow: 0px 0px 10px #0005 inset;
 	padding: 0px;
 	box-sizing: border-box;
@@ -95,7 +71,7 @@ body {
 }
 
 .base-input b {
-	color: var(--italic-text) !important;
+	color: var(--txtcol-muted) !important;
 	font-size: 12pt !important;
 	padding: 2px 0px 2px 6px;
 	pointer-events: none;
@@ -109,7 +85,7 @@ body {
 	height: 100%;
 	border: none;
 	outline: none;
-	color: var(--base-text);
+	color: var(--txtcol);
 	font-size: 14pt;
 	font-weight: bold;
 	padding-left: 7px;
@@ -147,10 +123,10 @@ body {
 	max-width: 250px;
 	box-sizing: border-box;
 	padding: 7px 12px;
-	color: var(--base-text);
+	color: var(--txtcol);
 	border-radius: 3px;
-	background: var(--theme1);
-	border: 2px solid var(--theme3);
+	background: var(--pricol);
+	border: 2px solid var(--pricol-light);
 	outline: none;
 	font-size: 13pt;
 	font-weight: bold;
@@ -161,15 +137,15 @@ body {
 }
 
 #convert-btn:hover {
-	background: var(--theme2);
+	background: var(--pricol-hover);
 }
 
 #tool-output {
 	display: block !important;
 	width: 100% !important;
 	text-align: center;
-	color: var(--base-text) !important;
-	background: var(--far-back);
+	color: var(--txtcol) !important;
+	background: var(--bgcol-darken);
 	box-shadow: 0px 0px 10px #0005 inset;
 	border-radius: 3px;
 	font-size: 14pt !important;
@@ -185,7 +161,7 @@ body {
 	display: flex;
 	flex-flow: column;
 	gap: 5px;
-	background: var(--close-back);
+	background: var(--wincol);
 	box-sizing: border-box;
 	box-shadow: 0px 0px 10px #0005;
 	border-radius: 5px;
@@ -197,10 +173,10 @@ body {
 #numeral-list b {
 	display: block !important;
 	width: 100%;
-	color: var(--base-text);
+	color: var(--txtcol);
 	box-sizing: border-box;
 	padding: 2px 5px;
-	background: var(--closer-back);
+	background: var(--wincol-lighten);
 	border-radius: 3px;
 	font-size: 14pt;
 	text-align: center;
@@ -210,7 +186,7 @@ body {
 	display: flex;
 	align-items: center;
 	width: 100%;
-	background: var(--closer-back);
+	background: var(--wincol-lighten);
 	box-sizing: border-box;
 	border-radius: 3px;
 	height: 30px;
@@ -222,7 +198,7 @@ body {
 	width: 100%;
 	box-sizing: border-box;
 	border-radius: 3px;
-	background: var(--far-back);
+	background: var(--bgcol-darken);
 	box-shadow: 0px 0px 10px #0005 inset;
 	border: none;
 	outline: none;
@@ -230,7 +206,7 @@ body {
 	font-weight: bold;
 	padding: 2px 6px;
 	height: 24px;
-	color: var(--base-text);
+	color: var(--txtcol);
 	margin: 0px 3px 0px 3px;
 }
 
@@ -244,7 +220,7 @@ body {
 }
 
 #numeral-list-menu img:hover {
-	background: var(--hover-back1);
+	background: var(--wincol-lighten);
 }
 
 #numeral-list-items {
@@ -258,7 +234,7 @@ body {
 #numeral-list-items span {
 	display: flex;
 	align-items: center;
-	background: var(--closer-back);
+	background: var(--wincol-lighten);
 	border-radius: 3px;
 	box-sizing: border-box;
 	padding: 3px;
@@ -271,7 +247,7 @@ body {
 	display: block;
 	position: absolute;
 	padding: 1px 6px;
-	background: var(--theme2);
+	background: var(--pricol);
 	color: #F5F5F5;
 	border-radius: 2px 2px 0px 0px;
 	font-size: 8pt;
@@ -292,10 +268,10 @@ body {
 #numeral-list-items span input {
 	display: block;
 	width: 100%;
-	background: var(--far-back);
+	background: var(--bgcol-darken);
 	border: none;
 	outline: none;
-	color: var(--base-text);
+	color: var(--txtcol);
 	font-size: 11pt;
 	font-weight: bold;
 	padding: 3px 5px 2px 5px;

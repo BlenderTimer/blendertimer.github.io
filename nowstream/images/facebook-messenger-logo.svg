@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   viewBox="0 0 128 128"
+   version="1.1"
+   id="svg5"
+   sodipodi:docname="facebook-messenger-logo.svg"
+   width="128"
+   height="128"
+   inkscape:version="1.4 (86a8ad7, 2024-10-11)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs5" />
+  <sodipodi:namedview
+     id="namedview5"
+     pagecolor="#505050"
+     bordercolor="#ffffff"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="1"
+     inkscape:deskcolor="#505050"
+     inkscape:zoom="1.0385631"
+     inkscape:cx="353.37285"
+     inkscape:cy="440.51248"
+     inkscape:window-width="3440"
+     inkscape:window-height="1377"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg5" />
+  <radialGradient
+     id="a"
+     cx="101.9"
+     cy="809"
+     r="1.1"
+     gradientTransform="matrix(123.10355,0,0,-123.10355,-12521.184,99716.322)"
+     gradientUnits="userSpaceOnUse">
+    <stop
+       offset="0"
+       style="stop-color:#09f"
+       id="stop1" />
+    <stop
+       offset=".6"
+       style="stop-color:#a033ff"
+       id="stop2" />
+    <stop
+       offset=".9"
+       style="stop-color:#ff5280"
+       id="stop3" />
+    <stop
+       offset="1"
+       style="stop-color:#ff7061"
+       id="stop4" />
+  </radialGradient>
+  <path
+     fill="url(#a)"
+     d="m 64.000002,2.4465376 c -34.669037,0 -61.551776,25.4054934 -61.551776,59.7052214 0,17.942342 7.3554369,33.453389 19.327258,44.163401 1.000216,0.8925 1.615734,2.15431 1.646509,3.50845 l 0.338536,10.95622 a 4.9241421,4.9241421 0 0 0 6.909186,4.35478 l 12.218028,-5.38578 c 1.030991,-0.46164 2.200476,-0.53858 3.29302,-0.2462 5.616599,1.53879 11.587122,2.36974 17.819239,2.36974 34.669032,0 61.551768,-25.405497 61.551768,-59.705223 0,-34.299727 -26.882736,-59.7206094 -61.551768,-59.7206094 z"
+     id="path4"
+     style="fill:url(#a);stroke-width:0.153879" />
+  <path
+     fill="#ffffff"
+     d="M 27.03816,79.617075 45.118994,50.933948 A 9.2327663,9.2327663 0 0 1 58.47573,48.471877 l 14.387727,10.786948 a 3.6931066,3.6931066 0 0 0 4.447116,-0.01538 l 19.419581,-14.74165 c 2.58518,-1.969656 5.970526,1.138707 4.247076,3.893149 L 82.881009,77.062676 A 9.2327663,9.2327663 0 0 1 69.524274,79.524748 L 55.136547,68.737799 a 3.6931066,3.6931066 0 0 0 -4.447116,0.01539 L 31.269845,83.494845 c -2.585175,1.969656 -5.970522,-1.12332 -4.231685,-3.877762 z"
+     id="path5"
+     style="stroke-width:0.153879" />
+</svg>

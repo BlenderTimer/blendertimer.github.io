@@ -22,11 +22,18 @@
 * {
 	margin: 0;
 	padding: 0;
+	color: var(--txtcol);
+	font-family: sans-serif;
+	font-size: 13pt;
 }
 
 ::selection {
 	background: #EEEEEE;
 	color: #404040;
+}
+
+::placeholder {
+	color: var(--txtcol-subtle);
 }
 
 body, html {
@@ -37,8 +44,8 @@ body, html {
 }
 
 body {
-	background: var(--semi-far-back);
-	color: #000;
+	background: var(--bgcol);
+	color: var(--txtcol);
 	box-sizing: border-box;
 	position: relative;
 	z-index: -999999;
@@ -66,8 +73,8 @@ header nav {
 	top: 0px;
 	left: 0px;
 	right: 0px;
-	background: var(--close-back);
-	box-shadow: 0px 0px 20px #0008;
+	background: var(--wincol);
+	box-shadow: var(--winshadow);
 }
 
 #header-desktop {
@@ -96,7 +103,7 @@ header nav {
 }
 
 #header-home:hover img {
-	background: var(--closer-back);
+	background: var(--wincol-lighten);
 	box-shadow: 0px 0px 10px #0002;
 }
 
@@ -106,8 +113,8 @@ header nav a img {
 	padding: 5px 10px 5px 8px;
 	height: 100%;
 	min-width: 185px;
-	border-radius: 4px;
-	transition: 0.2s;
+	border-radius: var(--cors);
+	transition: var(--trans-fast);
 }
 
 header nav a {
@@ -120,7 +127,7 @@ header nav a {
 	position: relative;
 	text-decoration: none;
 	cursor: pointer;
-	transition: 0.2s;
+	transition: var(--trans-fast);
 }
 
 .header-button {
@@ -150,31 +157,31 @@ header nav a {
 	margin: 0px 0px 0px 0px;
 	box-sizing: border-box;
 	padding-bottom: 8px;
-	background: var(--close-back);
-	border-radius: 4px;
-	box-shadow: 0px 0px 20px #0008;
+	background: var(--wincol-light);
+	border-radius: var(--cors);
+	box-shadow: var(--winshadow);
 	overflow-y: auto;
 	max-height: min(calc(100vh - 70px), 500px);
 	opacity: 0;
 	z-index: -1;
-	transition: 0.2s;
+	transition: var(--trans-fast);
 }
 
 .header-dropdown::-webkit-scrollbar {
-	background: var(--close-back);
+	background: var(--wincol-light);
 	width: 10px;
-	border-radius: 0px 0px 3px 0px
+	border-radius: 0px var(--cors) var(--cors) 0px;
 }
 
 .header-dropdown::-webkit-scrollbar-thumb {
-	background: var(--closer-back);
+	background: var(--wincol-lighter);
 	border-radius: 5px;
 	height: 50px;
-	border: 3px solid var(--close-back);
+	border: 3px solid var(--wincol-light);
 }
 
 .header-dropdown::-webkit-scrollbar-thumb:hover {
-	background: var(--hover-back2);
+	background: var(--wincol-lighten);
 }
 
 .header-dropdown a {
@@ -196,18 +203,18 @@ header nav a b {
 	box-sizing: border-box;
 	padding: 6px 13px;
 	height: 30px;
-	border-radius: 4px;
+	border-radius: var(--cors);
 	text-align: center;
 	color: #FFF;
 	font-family: sans-serif;
 	font-size: 13pt;
 	font-weight: bold;
 	text-wrap-mode: nowrap;
-	transition: 0.2s;
+	transition: var(--trans-fast);
 }
 
 header nav a:hover b {
-	background: var(--closer-back);
+	background: var(--wincol-lighten);
 	box-shadow: 0px 0px 10px #0002;
 }
 
@@ -216,12 +223,12 @@ header nav a:hover b {
 }
 
 .header-donate b {
-	background: var(--theme1);
+	background: var(--pricol);
 }
 
 .header-donate:hover b {
-	background: var(--theme2);
-	box-shadow: 0px 0px 8px var(--theme1);
+	background: var(--pricol-hover);
+	box-shadow: 0px 0px 8px var(--pricol-hover);
 }
 
 #header-search {
@@ -229,9 +236,9 @@ header nav a:hover b {
 	align-items: center;
 	width: 200px;
 	height: 30px;
-	background: var(--semi-back);
-	border-radius: 4px;
-	box-shadow: 0px 0px 8px #0004 inset;
+	background: var(--wincol-darken);
+	border-radius: var(--cors);
+	box-shadow: var(--inshadow);
 }
 
 #header-search img {
@@ -253,7 +260,7 @@ header nav a:hover b {
 	border: none;
 	outline: none;
 	background: #0000;
-	color: var(--base-text);
+	color: var(--txtcol);
 	font-family: sans-serif;
 	font-size: 13pt;
 }
@@ -266,9 +273,9 @@ header nav a:hover b {
 	right: 10px;
 	max-width: min(500px, calc(100% - 20px));
 	max-height: min(calc(100vh - 70px), 400px);
-	background: var(--close-back);
-	box-shadow: 0px 0px 20px #0008;
-	border-radius: 4px;
+	background: var(--wincol-light);
+	box-shadow: var(--winshadow);
+	border-radius: var(--cors);
 	padding: 0px 0px 8px 0px;
 	box-sizing: border-box;
 	overflow-x: hidden;
@@ -276,20 +283,20 @@ header nav a:hover b {
 }
 
 #header-search-output::-webkit-scrollbar {
-	background: var(--close-back);
+	background: var(--wincol-light);
 	width: 10px;
-	border-radius: 0px 0px 3px 0px
+	border-radius: 0px var(--cors) var(--cors) 0px;
 }
 
 #header-search-output::-webkit-scrollbar-thumb {
-	background: var(--closer-back);
+	background: var(--wincol-lighter);
 	border-radius: 5px;
 	height: 50px;
-	border: 3px solid var(--close-back);
+	border: 3px solid var(--wincol-light);
 }
 
 #header-search-output::-webkit-scrollbar-thumb:hover {
-	background: var(--hover-back2);
+	background: var(--wincol-lighten);
 }
 
 .header-search-result {
@@ -301,7 +308,7 @@ header nav a:hover b {
 }
 
 .header-search-result:hover div {
-	background: var(--closer-back);
+	background: var(--wincol-lighten);
 	box-shadow: 0px 0px 10px #0002;
 }
 
@@ -313,9 +320,9 @@ header nav a:hover b {
 	width: 100%;
 	height: auto;
 	padding: 3px 5px;
-	border-radius: 4px;
+	border-radius: var(--cors);
 	cursor: pointer;
-	transition: 0.2s;
+	transition: var(--trans-fast);
 }
 
 .header-search-result b {
@@ -325,7 +332,7 @@ header nav a:hover b {
 	background: none !important;
 	box-shadow: none !important;
 	text-align: left;
-	color: var(--base-text);
+	color: var(--txtcol);
 	font-size: 11pt;
 	font-family: sans-serif;
 	text-wrap-mode: nowrap;
@@ -336,7 +343,7 @@ header nav a:hover b {
 
 .header-search-result p {
 	text-align: left;
-	color: var(--italic-text);
+	color: var(--txtcol-muted);
 	font-size: 11pt;
 	font-family: sans-serif;
 	text-wrap-mode: nowrap;
@@ -347,7 +354,7 @@ header nav a:hover b {
 
 .header-search-result i {
 	text-align: left;
-	color: var(--hover-back2);
+	color: var(--txtcol-subtle);
 	font-size: 11pt;
 	font-family: sans-serif;
 	text-wrap-mode: nowrap;
@@ -400,20 +407,18 @@ header nav a:hover b {
 }
 
 #content-main {
-	background: var(--semi-far-back);
+	display: block;
+	background: var(--bgcol);
 	height: auto;
 	width: auto;
-	display: block;
 	position: relative;
 	margin: 0px;
 	padding: 0px 20px 20px 20px;
 	min-height: calc(100vh - 100px);
-	z-index: -100;
-	font-family: sans-serif;
-	font-size: 15pt;
-	color: #F5F5F5;
+	color: var(--txtcol);
 	box-sizing: border-box;
     overflow: hidden;
+	z-index: -100;
 }
 
 #content-main article {
@@ -423,7 +428,7 @@ header nav a:hover b {
 #content-main h1 {
 	font-size: 18pt;
 	margin-bottom: 10px;
-	color: var(--base-text);
+	color: var(--txtcol);
 	font-weight: bold;
 	text-align: center;
 	cursor: default;
@@ -432,14 +437,14 @@ header nav a:hover b {
 #content-main h2 {
 	font-size: 15pt;
 	text-align: center;
-	color: var(--base-text);
+	color: var(--txtcol);
 	font-weight: bold;
 	cursor: default;
 }
 
 #content-main h3 {
 	font-size: 15pt;
-	color: var(--base-text);
+	color: var(--txtcol);
 	font-weight: bold;
 	text-align: center;
 	cursor: default;
@@ -447,7 +452,7 @@ header nav a:hover b {
 
 #content-main h4 {
 	font-size: 12pt;
-	color: var(--base-text);
+	color: var(--txtcol);
 	font-weight: bold;
 	text-align: center;
 	margin: 0px 0px 10px 0px;
@@ -456,7 +461,7 @@ header nav a:hover b {
 
 #content-main h5 {
 	font-size: 12pt;
-	color: #E5E5E5;
+	color: var(--txtcol-muted);
 	font-weight: bold;
 	width: auto;
 	display: inline-block;
@@ -465,7 +470,7 @@ header nav a:hover b {
 
 #content-main h6 {
 	font-size: 10pt;
-	color: #E5E5E5;
+	color: var(--txtcol-muted);
 	font-weight: bold;
 	width: auto;
 	display: inline-block;
@@ -476,48 +481,54 @@ header nav a:hover b {
 	height: 2px;
 	min-height: 2px;
 	max-height: 2px;
-	background: #FFFFFF10;
+	background: #82b3ff24;
 	box-shadow: 0px 0px 10px #00000030;
 	margin: 10px auto 10px auto;
 }
 
 #content-main b {
-	font-size: 12pt;
-	color: #E5E5E5;
+	font-size: 13pt;
+	color: var(--txtcol-muted);
 	font-weight: bold;
 	width: auto;
 	display: inline-block;
+	font-family: sans-serif;
 }
 
 #content-main p {
-	font-size: 12pt;
-	color: #C5C5C5;
+	font-size: 13pt;
+	color: var(--txtcol-muted);
 	display: inline;
+	font-family: sans-serif;
 }
 
 #content-main i {
-	font-size: 12pt;
-	color: #555555;
+	font-size: 13pt;
+	color: var(--txtcol-subtle);
 	display: inline;
+	font-family: sans-serif;
 }
 
 #content-main a {
-	font-size: 12pt;
-	color: #85C5F5;
+	font-size: 13pt;
+	color: var(--txtcol-link);
 	display: inline-block;
 	text-decoration: none;
-	transition: 0.2s;
 	cursor: pointer;
+	font-family: sans-serif;
 	margin: 0px;
+	transition: var(--trans-fast);
 }
 
 #content-main a:hover {
-	text-shadow: 0px 0px 10px rgba(133,197,245,0.5);
+	color: var(--txtcol-link-hover);
+	text-decoration: underline;
+	/*text-shadow: 0px 0px 10px var(--pricol-light);*/
 }
 
 #content-main ul {
 	font-size: 12pt;
-	color: #C5C5C5;
+	color: var(--txtcol-muted);
 	display: block;
 	padding: 20px;
 	box-sizing: border-box;
@@ -541,7 +552,7 @@ header nav a:hover b {
 	display: block;
 	text-align: center;
 	font-size: 20pt !important;
-	color: var(--base-text) !important;
+	color: var(--txtcol) !important;
 	margin: 0px 0px 3pt 0px !important;
 }
 
@@ -549,12 +560,12 @@ header nav a:hover b {
 	display: block;
 	text-align: center;
 	font-size: 14pt !important;
-	color: var(--italic-text) !important;
+	color: var(--txtcol-muted) !important;
 }
 
 .article-date {
 	display: block;
-	color: #FFF5 !important;
+	color: var(--txtcol-subtle) !important;
 	font-size: 10pt !important;
 	text-align: center;
 	margin-top: 5px;
@@ -572,7 +583,7 @@ header nav a:hover b {
 
 .description {
 	font-size: 12pt !important;
-	color: var(--italic-text) !important;
+	color: var(--txtcol-subtle) !important;
 	text-align: center;
 	width: 100% !important;
 	margin: 0px;
@@ -582,27 +593,15 @@ header nav a:hover b {
 .recommendation-credit {
 	display: block !important;
 	font-size: 12pt !important;
-	color: var(--italic-text) !important;
+	color: var(--txtcol-subtle) !important;
 	box-sizing: border-box;
-	background: var(--close-back);
-	border-radius: 3px;
+	background: var(--wincol);
+	border-radius: var(--cors);
 	box-shadow: 0px 0px 10px #0005;
 	text-align: center;
 	padding: 5px 12px;
 	margin: 20px auto 0px auto;
 	width: fit-content;
-}
-
-#content-main p {
-	font-family: sans-serif;
-}
-
-#content-main i {
-	font-family: sans-serif;
-}
-
-#content-main a {
-	font-family: sans-serif;
 }
 
 #extra-pages-container {
@@ -629,23 +628,24 @@ header nav a:hover b {
 	width: calc((100% / 6) - 10px);
 	max-width: 300px;
 	margin: 5px !important;
-	border-radius: 5px;
+	border-radius: var(--cors);
 	overflow: hidden;
 	box-shadow: 0px 0px 10px #0005;
-	background: var(--base-back);
-	border: 2px solid var(--closer-back);
+	background: var(--wincol);
+	border: 2px solid var(--wincol-lighten);
 	padding: 10px;
 	box-sizing: border-box;
 	cursor: pointer !important;
 	text-align: center;
 	aspect-ratio: 16 / 9;
-	transition: 0.2s !important;
+	transition: var(--trans-fast) !important;
 }
 
 #extra-pages a:hover {
 	transform: scaleX(1.05) scaleY(1.05);
 	box-shadow: 0px 0px 10px #000A;
 	text-shadow: none;
+	text-decoration: none !important;
 }
 
 #extra-pages a img {
@@ -655,10 +655,11 @@ header nav a:hover b {
 
 #extra-pages a b {
 	padding: 5px;
+	color: var(--txtcol);
 }
 
 #extra-pages a i {
-	color: var(--italic-text);
+	color: var(--txtcol-subtle);
 	font-size: 10pt;
 }
 
@@ -670,20 +671,20 @@ header nav a:hover b {
 	border-radius: 3px;
 	opacity: 1;
 	z-index: 0;
-	transition: 0.2s;
+	transition: var(--trans-fast);
 }
 
 .extra-pages-video b {
 	opacity: 0;
 	text-shadow: 0px 0px 7px #000;
 	z-index: 10;
-	transition: 0.2s;
+	transition: var(--trans-fast);
 }
 
 .extra-pages-video i {
 	opacity: 0;
 	z-index: 10;
-	transition: 0.2s;
+	transition: var(--trans-fast);
 }
 
 .extra-pages-video:hover {
@@ -718,23 +719,23 @@ header nav a:hover b {
 	flex-flow: column;
 	align-items: center;
 	width: calc(25% - 12px) !important;
-	background: var(--close-back);
-	border: 2px solid var(--closer-back);
-	border-radius: 5px;
+	background: var(--wincol);
+	border: 2px solid var(--wincol-lighten);
+	border-radius: var(--cors);
 	box-sizing: border-box;
 	padding: 5px 8px;
 	cursor: pointer !important;
 	margin: 6px !important;
 	position: relative;
-	transition: 0.2s !important;
+	transition: var(--trans-fast) !important;
 }
 
 .image-list-item:hover {
 	text-shadow: none !important;
-	background: var(--closer-back);
-	border: 2px solid var(--italic-text);
+	background: var(--wincol-lighter);
 	transform: scale(1.05);
-	box-shadow: 0px 0px 10px #FFF4;
+	box-shadow: 0px 0px 10px var(--wincol-lighten);
+	text-decoration: none !important;
 	z-index: 100;
 }
 
@@ -749,7 +750,7 @@ header nav a:hover b {
 
 .image-list-item b {
 	display: block !important;
-	color: var(--base-text) !important;
+	color: var(--txtcol) !important;
 	font-size: 13pt !important;
 	text-align: center;
 	pointer-events: none;
@@ -770,7 +771,7 @@ header nav a:hover b {
 	padding: 4px 6px;
 	box-sizing: border-box;
 	font-size: 12pt !important;
-	color: var(--italic-text) !important;
+	color: var(--txt-subtle) !important;
 	pointer-events: none;
 }
 
@@ -789,13 +790,41 @@ header nav a:hover b {
 	right: -8px;
 }
 
+.content-container {
+	display: block;
+	width: 100%;
+	margin: 10px;
+	background: var(--wincol);
+	border-radius: var(--corl);
+	box-shadow: var(--winshadow);
+	box-sizing: border-box;
+	padding: var(--winspace);
+}
+
+.medium-button {
+	display: block;
+	background: var(--pricol);
+	border-radius: var(--cors);
+	font-size: 13pt;
+	font-weight: bold;
+	color: var(--txtcol) !important;
+	padding: var(--butspace-medium);
+	cursor: pointer;
+	transition: var(--trans-fast);
+}
+
+.medium-button:hover {
+	text-shadow: none !important;
+	background: var(--pricol-hover);
+}
+
 footer {
 	display: flex;
 	flex-flow: column;
 	width: 100%;
 	margin: 0px;
 	box-sizing: border-box;
-	background: var(--base-back);
+	background: var(--wincol);
 }
 
 #footer-main {
@@ -855,11 +884,11 @@ footer {
 	box-sizing: border-box;
 	padding: 7px;
 	border-radius: 4px;
-	transition: 0.2s;
+	transition: var(--trans-fast);
 }
 
 #footer-right a:hover img {
-	background: var(--hover-back1);
+	background: var(--wincol-lighten);
 	box-shadow: 0px 0px 10px #0002;
 }
 
@@ -870,26 +899,26 @@ footer {
 	flex-wrap: wrap;
 	box-sizing: border-box;
 	padding: 3px 10px;
-	background: var(--close-back);
+	background: var(--bgcol-subtle);
 	font-family: sans-serif;
 	white-space-collapse: preserve;
 }
 
 #footer-terms p {
-	color: #FFF7;
+	color: var(--txtcol-subtle);
 	font-size: 11pt;
 	text-align: center;
 }
 
 #footer-terms a {
-	color: #FFFB;
+	color: var(--txtcol-muted);
 	font-size: 11pt;
 	text-decoration: none;
 	text-align: center;
 }
 
 #footer-terms a:hover {
-	color: #FFFD;
+	color: var(--txtcol);
 	text-shadow: none;
 	text-decoration: underline;
 }

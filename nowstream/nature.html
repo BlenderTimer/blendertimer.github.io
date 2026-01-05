@@ -22,6 +22,7 @@
 		<meta name="description" content="A live visualization of things which are happening in nature now!">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="icon" href="/favicon.png" type="image/x-icon">
+		<link rel="stylesheet" type="text/css" href="/noindex/theme.css">
 		<link rel="stylesheet" type="text/css" href="/static/main.css">
 		<link rel="stylesheet" type="text/css" href="./stream-main.css">
 		<script src="/bt-js/bt-js.js"></script>
@@ -35,7 +36,7 @@
 		</script>
 		<script src="/noindex/pages.js"></script>
 		<noscript>
-			<div id="nojs" style="position: fixed; top: 0px; bottom: 0px; left: 0px; right: 0px; display: flex; flex-flow: column; justify-content: center; align-items: center; background: var(--semi-back); padding: 15px 20px; z-index: 1000000; cursor: default;">
+			<div id="nojs" style="position: fixed; top: 0px; bottom: 0px; left: 0px; right: 0px; display: flex; flex-flow: column; justify-content: center; align-items: center; background: var(--bgcol); padding: 15px 20px; z-index: 1000000; cursor: default;">
 				<b style="font-family: sans-serif; font-size: 16pt; color: #FFF; text-align: center;">Page Failed to Load</b>
 				<p style="font-family: sans-serif; font-size: 14pt; color: #FFF6; text-align: center;">This website requires Javascript to operate.</p>
 			</div>
@@ -43,64 +44,112 @@
 		<div id="loader" style="width: 100%; height: calc(100% - 50px); top: 50px; left: 0px; position: fixed; z-index: -100000;">
 			<img alt="Loading" src="/static/images/loader.gif" style="width: 100px; height: 100px; position: fixed; left: calc(50% - 50px); top: calc(50% - 25px); filter: drop-shadow(0px 0px 15px #000000);">
 		</div>
-		<div id="source-popup-back" onclick="closeSourcePopup()" style="opacity: 0; pointer-events: none;"></div>
-		<div id="source-popup-container" style="opacity: 0">
-			<div id="source-popup-main" style="pointer-events: none; user-select: none; transform: scale(0)">
-				<img id="source-popup-close" alt="Close" src="../static-0/files/images/icons/x.svg" onclick="closeSourcePopup()">
-				<div id="source-popup" style="display: flex">
-					<h1>Sources</h1>
-					<div class="popup-scroll"></div>
-				</div>
+		<div id="popup-base" style="opacity: 0; pointer-events: none;" onmousedown="closePopup(event)">
+			<div id="popup" style="transform: scale(0);">
+				<img src="/static-0/files/images/close.svg" id="popup-exit" onmousedown="closePopup(event)">
+				<div id="popup-text"></div>
 			</div>
 		</div>
 		<div id="content-main" style="opacity: 0; transition: 0.5s">
-			<div id="stream-header">
-				<div>
-					<a href="/nowstream"><img src="../static-0/files/images/nowstream.svg" alt="The NowStream logo"></a>
+			<div class="article-header">
+				<div id="stream-header">
+					<a href="/nowstream"><img src="/static/images/nowstream.svg" alt="The NowStream logo"></a>
 					<span><i id="sh-slash">/</i><i>Nature</i></span>
 				</div>
+				<i class="article-subtitle">Things which are happening in nature right now!</i>
 			</div>
-			<p class="description">Things which are happening in nature right now!</p>
 			<div id="page-load-time">
 				<i></i>
 				<b></b>
 			</div>
 			<div id="stream-container">
-				<div id="ants-hatched" style="--back: #311f1b;--border: #933322;" class="stream-box">
+				<div id="ants-hatched" style="--back:var(--sback-deepblue);--border:var(--sborder-deepblue);--backshadow:var(--sbackshadow-deepblue);--shadow:var(--sshadow-deepblue);" class="stream-box">
 					<div class="stream-visual"><img src="./images/ant.svg" alt="Ant"></div>
 					<span><b>0</b><p> ants have hatched</p></span>
-					<span><i>33,333,333,333 per second</i><img onclick="viewSource(event)" src="../static-0/files/images/icons/source.svg" title="View source" alt="Source"></span>
+					<span class="stream-source"><i>33,333,333,333 per second</i><img onclick="viewSource(event)" src="/static/images/icons/source.svg" title="View source" alt="Source"></span>
 				</div>
-				<div id="lightning-strikes" style="--back: #000720;--border: #3573bb;" class="stream-box">
+				<div id="lightning-strikes" style="--back:var(--sback-deepblue);--border:var(--sborder-deepblue);--backshadow:var(--sbackshadow-deepblue);--shadow:var(--sshadow-deepblue);" class="stream-box">
 					<div class="stream-visual"><img src="./images/lightning-bolt.png" style="display: none;" alt="Lightning bolt"><canvas class="fade-2x random-scale-3"></canvas></div>
 					<span><b>0</b><p> lightning strikes have occurred</p></span>
-					<span><i>100 per second</i><img onclick="viewSource(event)" src="../static-0/files/images/icons/source.svg" title="View source" alt="Source"></span>
+					<span class="stream-source"><i>100 per second</i><img onclick="viewSource(event)" src="/static/images/icons/source.svg" title="View source" alt="Source"></span>
 				</div>
-				<div id="meteors" style="--back: #2f2521;--border: #714a38;" class="stream-box">
+				<div id="meteors" style="--back:var(--sback-deepblue);--border:var(--sborder-deepblue);--backshadow:var(--sbackshadow-deepblue);--shadow:var(--sshadow-deepblue);" class="stream-box">
 					<div class="stream-visual"><img src="./images/asteroid.png" style="display: none;" alt="Asteroid"><canvas class="anim-in random-scale-3"></canvas></div>
 					<span><b>0</b><p> meteors have entered Earth's atmosphere</p></span>
-					<span><i>289 per second</i><img onclick="viewSource(event)" src="../static-0/files/images/icons/source.svg" title="View source" alt="Source"></span>
+					<span class="stream-source"><i>289 per second</i><img onclick="viewSource(event)" src="/static/images/icons/source.svg" title="View source" alt="Source"></span>
 				</div>
-				<div id="meteors-hit-earth" style="--back: #3a2a24;--border: #8c634d;" class="stream-box force-integer">
+				<div id="meteors-hit-earth" style="--back:var(--sback-deepblue);--border:var(--sborder-deepblue);--backshadow:var(--sbackshadow-deepblue);--shadow:var(--sshadow-deepblue);" class="stream-box force-integer">
 					<div class="stream-visual"><img src="./images/asteroid.png" alt="Asteroid"></div>
 					<span><b>0</b><p> meteors have hit Earth</p></span>
-					<span><i>17 per day</i><img onclick="viewSource(event)" src="../static-0/files/images/icons/source.svg" title="View source" alt="Source"></span>
+					<span class="stream-source"><i>17 per day</i><img onclick="viewSource(event)" src="/static/images/icons/source.svg" title="View source" alt="Source"></span>
 				</div>
-				<div id="rainfall" style="--back: #0d2541;--border: #2c708a;" class="stream-box">
+				<div id="bats-echolocation-signals" style="--back:var(--sback-deepblue);--border:var(--sborder-deepblue);--backshadow:var(--sbackshadow-deepblue);--shadow:var(--sshadow-deepblue);" class="stream-box">
+					<div class="stream-visual"><img src="./images/bat.svg" alt="Bat"></div>
+					<span><p>Bats have sent out </p><b>0</b><p> echolocation signals worldwide</p></span>
+					<span class="stream-source"><i>5,000,000,000 per second</i><img onclick="viewSource(event)" src="/static/images/icons/source.svg" title="View source" alt="Source"></span>
+				</div>
+				<div id="birds-taken-first-flight" style="--back:var(--sback-deepblue);--border:var(--sborder-deepblue);--backshadow:var(--sbackshadow-deepblue);--shadow:var(--sshadow-deepblue);" class="stream-box">
+					<div class="stream-visual"><img src="./images/bird.png" style="display: none;" alt="Bird"><canvas class="random-scale-3 fade-2x"></canvas></div>
+					<span><b>0</b><p> birds have taken their first flight</p></span>
+					<span class="stream-source"><i>317 per second</i><img onclick="viewSource(event)" src="/static/images/icons/source.svg" title="View source" alt="Source"></span>
+				</div>
+				<div id="rainfall" style="--back:var(--sback-deepblue);--border:var(--sborder-deepblue);--backshadow:var(--sbackshadow-deepblue);--shadow:var(--sshadow-deepblue);" class="stream-box">
 					<div class="stream-visual"><img src="./images/water-drop.svg" alt="Water drop"></div>
 					<span><b>0</b><p> liters of rain has fallen worldwide</p></span>
 					<i>0 gallons</i>
-					<span><i>16,996,448,500l per second</i><img onclick="viewSource(event)" src="../static-0/files/images/icons/source.svg" title="View source" alt="Source"></span>
+					<span class="stream-source"><i>15,400,000,000L per second</i><img onclick="viewSource(event)" src="/static/images/icons/source.svg" title="View source" alt="Source"></span>
 				</div>
-				<div id="earthquakes" style="--back: #000720;--border: #3573bb;" class="stream-box force-integer">
+				<div id="raindrops-fallen" style="--back:var(--sback-deepblue);--border:var(--sborder-deepblue);--backshadow:var(--sbackshadow-deepblue);--shadow:var(--sshadow-deepblue);" class="stream-box">
+					<div class="stream-visual"><img src="./images/water-drop.svg" alt="Water drop"></div>
+					<span><b>0</b><p> raindrops have fallen worldwide</p></span>
+					<span class="stream-source"><i>3,000,000,000,000,000 per second</i><img onclick="viewSource(event)" src="/static/images/icons/source.svg" title="View source" alt="Source"></span>
+				</div>
+				<div id="leaves-fallen" style="--back:var(--sback-deepblue);--border:var(--sborder-deepblue);--backshadow:var(--sbackshadow-deepblue);--shadow:var(--sshadow-deepblue);" class="stream-box">
+					<div class="stream-visual"><img src="./images/leaf.svg" alt="Leaf"></div>
+					<span><b>0</b><p> leaves have fallen worldwide</p></span>
+					<span class="stream-source"><i>1,700,000,000 per second</i><img onclick="viewSource(event)" src="/static/images/icons/source.svg" title="View source" alt="Source"></span>
+				</div>
+				<div id="earthquakes" style="--back:var(--sback-deepblue);--border:var(--sborder-deepblue);--backshadow:var(--sbackshadow-deepblue);--shadow:var(--sshadow-deepblue);" class="stream-box force-integer">
 					<div class="stream-visual"><img src="./images/earth.svg" class="image-shake" alt="Earth"></div>
 					<span><b>0</b><p> earthquakes have occurred</p></span>
-					<span><i>57 per hour</i><img onclick="viewSource(event)" src="../static-0/files/images/icons/source.svg" title="View source" alt="Source"></span>
+					<span class="stream-source"><i>57 per hour</i><img onclick="viewSource(event)" src="/static/images/icons/source.svg" title="View source" alt="Source"></span>
 				</div>
-				<div id="species-discovered" style="--back: #1a4120;--border: #5da76f;" class="stream-box force-integer">
+				<div id="species-discovered" style="--back:var(--sback-deepblue);--border:var(--sborder-deepblue);--backshadow:var(--sbackshadow-deepblue);--shadow:var(--sshadow-deepblue);" class="stream-box force-integer">
 					<div class="stream-visual"><img src="./images/animals.svg" alt="Animals"></div>
 					<span><b>0</b><p> new animal species have been discovered</p></span>
-					<span><i>49 per day</i><img onclick="viewSource(event)" src="../static-0/files/images/icons/source.svg" title="View source" alt="Source"></span>
+					<span class="stream-source"><i>49 per day</i><img onclick="viewSource(event)" src="/static/images/icons/source.svg" title="View source" alt="Source"></span>
+				</div>
+				<div id="oxygen-produced-by-trees" style="--back:var(--sback-deepblue);--border:var(--sborder-deepblue);--backshadow:var(--sbackshadow-deepblue);--shadow:var(--sshadow-deepblue);" class="stream-box force-integer">
+					<div class="stream-visual"><img src="./images/pond.svg" alt="Trees by pond"></div>
+					<span><p>Trees have produced </p><b>0</b><p> tonnes of oxygen</p></span>
+					<i>0 tons</i>
+					<span class="stream-source"><i>1,200t per second</i><img onclick="viewSource(event)" src="/static/images/icons/source.svg" title="View source" alt="Source"></span>
+				</div>
+				<div id="trees-sprouted" style="--back:var(--sback-deepblue);--border:var(--sborder-deepblue);--backshadow:var(--sbackshadow-deepblue);--shadow:var(--sshadow-deepblue);" class="stream-box force-integer">
+					<div class="stream-visual"><img src="./images/tree.png" style="display: none;" alt="Tree"><canvas class="random-scale-3 fade-1.5x"></canvas></div>
+					<span><b>0</b><p> new trees have sprouted</p></span>
+					<span class="stream-source"><i>230 per second</i><img onclick="viewSource(event)" src="/static/images/icons/source.svg" title="View source" alt="Source"></span>
+				</div>
+				<div id="wildfires-ignited" style="--back:var(--sback-deepblue);--border:var(--sborder-deepblue);--backshadow:var(--sbackshadow-deepblue);--shadow:var(--sshadow-deepblue);" class="stream-box force-integer">
+					<div class="stream-visual"><img src="./images/wildfire.svg" alt="Wildfire"></div>
+					<span><b>0</b><p> wildfires have been ignited</p></span>
+					<span class="stream-source"><i>5.2 per minute</i><img onclick="viewSource(event)" src="/static/images/icons/source.svg" title="View source" alt="Source"></span>
+				</div>
+				<div id="area-burned-by-wildfires" style="--back:var(--sback-deepblue);--border:var(--sborder-deepblue);--backshadow:var(--sbackshadow-deepblue);--shadow:var(--sshadow-deepblue);" class="stream-box">
+					<div class="stream-visual"><img src="./images/wildfire.svg" alt="Wildfire"></div>
+					<span><p>Wildfires have burned </p><b>0</b><p> hectares of land</p></span>
+					<i>0 acres</i>
+					<span class="stream-source"><i>7ha per minute</i><img onclick="viewSource(event)" src="/static/images/icons/source.svg" title="View source" alt="Source"></span>
+				</div>
+				<div id="mt-everest-growth" style="--back:var(--sback-deepblue);--border:var(--sborder-deepblue);--backshadow:var(--sbackshadow-deepblue);--shadow:var(--sshadow-deepblue);" class="stream-box">
+					<div class="stream-visual"><img src="./images/mt-everest.svg" alt="Mt. Everest"></div>
+					<span><p>Mt. Everest has grown by </p><b>0</b><p> nanometers</p></span>
+					<span class="stream-source"><i>3.8nm per minute</i><img onclick="viewSource(event)" src="/static/images/icons/source.svg" title="View source" alt="Source"></span>
+				</div>
+				<div id="landslides" style="--back:var(--sback-deepblue);--border:var(--sborder-deepblue);--backshadow:var(--sbackshadow-deepblue);--shadow:var(--sshadow-deepblue);" class="stream-box force-integer">
+					<div class="stream-visual"><img src="./images/landslide.svg" alt="Landslide"></div>
+					<span><b>0</b><p> landslides have occurred</p></span>
+					<span class="stream-source"><i>1 per minute</i><img onclick="viewSource(event)" src="/static/images/icons/source.svg" title="View source" alt="Source"></span>
 				</div>
 			</div>
 			<i id="disclaimer">All data in this stream is an estimate.</i>
@@ -108,37 +157,48 @@
 			<h1 class="title">More Streams</h1>
 			<div id="more-streams">
 				<a href="/nowstream/aroundtheworld" class="stream">
-					<div class="stream-thumbnail"><img src="../static-0/files/images/nowstream-aroundtheworld.svg" alt="Around the World - The NowStream by BlenderTimer"></div>
+					<div class="stream-thumbnail"><img src="/static/images/nowstream-thumbs/nowstream-aroundtheworld.svg" alt="Around the World - The NowStream by BlenderTimer"></div>
 					<b>Around the World</b>
 					<div class="stream-description"><i>Things which are happening all around the world right now!</i></div>
 				</a>
 				<a href="/nowstream/space" class="stream">
-					<div class="stream-thumbnail"><img src="../static-0/files/images/nowstream-space.svg" alt="Space - The NowStream by BlenderTimer"></div>
+					<div class="stream-thumbnail"><img src="/static/images/nowstream-thumbs/nowstream-space.svg" alt="Space - The NowStream by BlenderTimer"></div>
 					<b>Space</b>
 					<div class="stream-description"><i>Things which are happening in space right now!</i></div>
 				</a>
 				<a href="/nowstream/technology" class="stream">
-					<div class="stream-thumbnail"><img src="../static-0/files/images/nowstream-technology.svg" alt="Technology - The NowStream by BlenderTimer"></div>
+					<div class="stream-thumbnail"><img src="/static/images/nowstream-thumbs/nowstream-technology.svg" alt="Technology - The NowStream by BlenderTimer"></div>
 					<b>Technology</b>
 					<div class="stream-description"><i>Things which are happening with technology right now!</i></div>
 				</a>
 				<a href="/nowstream/you" class="stream">
-					<div class="stream-thumbnail"><img src="../static-0/files/images/nowstream-you.svg" alt="You - The NowStream by BlenderTimer"></div>
+					<div class="stream-thumbnail"><img src="/static/images/nowstream-thumbs/nowstream-you.svg" alt="You - The NowStream by BlenderTimer"></div>
 					<b>You</b>
 					<div class="stream-description"><i>Things which are happening with you right now!</i></div>
 				</a>
 			</div>
 			<br>
+			<div class="spr"></div>
 			<p>This stream shows how many things are happening in the natural world RIGHT NOW! This stream includes:</p>
 			<br>
 			<ul>
-				<li><p>The amount of ants that hatch every second</p></li>
-				<li><p>The amount of lightning strikes which occur every second</p></li>
-				<li><p>The amount of meteors which enter Earth's atmosphere every second</p></li>
-				<li><p>The amount of meteors which actually hit Earth every day</p></li>
-				<li><p>The amount of rain which falls worldwide every second</p></li>
-				<li><p>The amount of earthquakes which occur every hour</p></li>
-				<li><p>The amount of animal species which are discovered every day</p></li>
+				<li><p>The amount of ants that hatch every second (about 33.3 billion)</p></li>
+				<li><p>The amount of lightning strikes which occur every second (about 100)</p></li>
+				<li><p>The amount of meteors which enter Earth's atmosphere every second (about 289)</p></li>
+				<li><p>The amount of meteors which actually hit Earth every day (about 17)</p></li>
+				<li><p>The amount of bat echolocation signals sent out every second (about 5 billion)</p></li>
+				<li><p>The amount of birds taking their first flight every second (about 317)</p></li>
+				<li><p>The amount of rain which falls worldwide every second (about 15.4 billion liters)</p></li>
+				<li><p>The amount of raindrops which fall worldwide every second (about 3 quadrillion)</p></li>
+				<li><p>The amount of leaves which fall worldwide every second (about 1.7 billion)</p></li>
+				<li><p>The amount of earthquakes which occur every hour (about 57)</p></li>
+				<li><p>The amount of animal species which are discovered every day (about 49)</p></li>
+				<li><p>The amount of oxygen produced by trees every second (about 1,200 tonnes)</p></li>
+				<li><p>The amount of new trees which sprout every second (about 230)</p></li>
+				<li><p>The amount of wildfires ignited every minute (about 5.2)</p></li>
+				<li><p>The amount of land burned by wildfires every minute (about 7 hectares)</p></li>
+				<li><p>The amount of Mt. Everest grows every minute (about 3.8 nanometers)</p></li>
+				<li><p>The amount of landslides that occur every minute (about 1)</p></li>
 			</ul>
 		</div>
 		<footer></footer>
@@ -151,13 +211,23 @@
 		<script src="./stream-main.js"></script>
 		<script type="text/javascript">
 			const sourceData = {
-				"ants-hatched":"<p>The source gives a rate of </p><b>2.88 quadrillion ants</b><p> born/hatched per day.</p><div class='spr'></div><a href='https://privateexterminator.com/are-all-the-ants-as-heavy-as-all-the-humans' target='_blank'>https://privateexterminator.com/are-all-the-ants-as-heavy-as-all-the-humans</a>",
-				"lightning-strikes":"<p>The source gives a rate of </p><b>100 lightning flashes</b><p> per second.</p><div class='spr'></div><a href='https://www.weather.gov/fgz/Lightning' target='_blank'>https://www.weather.gov/fgz/Lightning</a>",
-				"meteors":"<p>The source states that </p><b>25 million meteors</b><p> enter Earth's atmosphere per day.</p><div class='spr'></div><a href='https://www.smithsonianmag.com/smithsonian-institution/oldest-material-smithsonian-institution-came-outer-space-180971017' target='_blank'>https://www.smithsonianmag.com/smithsonian-institution/oldest-material-smithsonian-institution-came-outer-space-180971017</a>",
-				"meteors-hit-earth":"<p>The source gives a rate of </p><b>17</b><p> meteors per day.</p><div class='spr'></div><a href='https://cosmosmagazine.com/space/earth-hit-by-17-meteors-a-day' target='_blank'>https://cosmosmagazine.com/space/earth-hit-by-17-meteors-a-day</a>",
-				"rainfall":"<p>The source gives a rate of </p><b>5.36 × 10¹⁴ m³</b><p> cubic meters per year.</p><div class='spr'></div><a href='https://hypertextbook.com/facts/2008/VernonWu.shtml' target='_blank'>https://hypertextbook.com/facts/2008/VernonWu.shtml</a>",
-				"earthquakes":"<p>The source gives a rate of </p><b>500,000 detectable earthquakes</b><p> per year.</p><div class='spr'></div><a href='https://www.usgs.gov/programs/earthquake-hazards/cool-earthquake-facts' target='_blank'>https://www.usgs.gov/programs/earthquake-hazards/cool-earthquake-facts</a>",
-				"species-discovered":"<p>The source gives a rate of </p><b>18,000 new species</b><p> per year.</p><div class='spr'></div><a href='https://smv.org/learn/blog/how-many-species-are-left-be-discovered' target='_blank'>https://smv.org/learn/blog/how-many-species-are-left-be-discovered</a>",
+				"ants-hatched":"<p>The source gives a rate of <b>2.88 quadrillion ants</b> born/hatched per day.</p><div class='spr'></div><a href='https://privateexterminator.com/are-all-the-ants-as-heavy-as-all-the-humans' target='_blank'>https://privateexterminator.com/are-all-the-ants-as-heavy-as-all-the-humans</a><br><i>Data last verified: March, 2024 (%time%)</i>",
+				"lightning-strikes":"<p>The source gives a rate of <b>100 lightning flashes</b> per second.</p><div class='spr'></div><a href='https://www.weather.gov/fgz/Lightning' target='_blank'>https://www.weather.gov/fgz/Lightning</a><br><i>Data last verified: November, 2025 (%time%)</i>",
+				"meteors":"<p>The source states that <b>25 million meteors</b> enter Earth's atmosphere per day.</p><div class='spr'></div><a href='https://www.smithsonianmag.com/smithsonian-institution/oldest-material-smithsonian-institution-came-outer-space-180971017' target='_blank'>https://www.smithsonianmag.com/smithsonian-institution/oldest-material-smithsonian-institution-came-outer-space-180971017</a><br><i>Data last verified: November, 2025 (%time%)</i>",
+				"meteors-hit-earth":"<p>The source gives a rate of <b>17</b> meteors per day.</p><div class='spr'></div><a href='https://cosmosmagazine.com/space/earth-hit-by-17-meteors-a-day' target='_blank'>https://cosmosmagazine.com/space/earth-hit-by-17-meteors-a-day</a><br><i>Data last verified: March, 2024 (%time%)</i>",
+				"bats-echolocation-signals":"<p>The first source states that there are up to <b>one billion ants</b> worldwide. The second source gives various rates of signals ranging from 3 to 140 per second, here we average <b>5 every second</b>.</p><div class='spr'></div><a href='https://www.worldatlas.com/articles/bat-species.html' target='_blank'>https://www.worldatlas.com/articles/bat-species.html</a><a href='http://www.scholarpedia.org/article/Echolocation_in_bats' target='_blank'>http://www.scholarpedia.org/article/Echolocation_in_bats</a><br><i>Data last verified: November, 2025 (%time%)</i>",
+				"birds-taken-first-flight":"<p>The first source states that there are around <b>50 billion</b> birds worldwide. The second source states that \"smaller birds like sparrows and finches typically live 2-5 years in the wild, while medium-sized birds might make it 5-10 years. And some of the bigger birds can stick around for decades.\", here we assume that birds live an average of <b>5 years</b>.</p><div class='spr'></div><a href='https://www.pnas.org/doi/10.1073/pnas.2023170118' target='_blank'>https://www.pnas.org/doi/10.1073/pnas.2023170118</a><a href='https://betterwithbirds.com/blogs/bird-identification/how-long-do-birds-live' target='_blank'>https://betterwithbirds.com/blogs/bird-identification/how-long-do-birds-live</a><br><i>Data last verified: November, 2025 (%time%)</i>",
+				"rainfall":"<p>The source gives a rate of <b>436.9 × 10³</b> cubic kilometers per year.</p><div class='spr'></div><a href='https://journals.ametsoc.org/view/journals/hydr/8/4/jhm600_1.xml' target='_blank'>https://journals.ametsoc.org/view/journals/hydr/8/4/jhm600_1.xml</a><br><i>Data last verified: November, 2025 (%time%)</i>",
+				"raindrops-fallen":"<p>The first source gives a rate of <b>436.9 × 10³</b> cubic kilometers of rainfall per year. The seconds sources states that raindrop sizes range from <b>0.5 mm to 4 mm</b> with size distributions quickly decreasing past diameters larger than 2-2.5mm. We can then assume an average raindrop diameter of 2mm (or a volume of 4.19mm³).</p><div class='spr'></div><a href='https://journals.ametsoc.org/view/journals/hydr/8/4/jhm600_1.xml' target='_blank'>https://journals.ametsoc.org/view/journals/hydr/8/4/jhm600_1.xml</a><a href='https://en.wikipedia.org/wiki/Drop_(liquid)' target='_blank'>https://en.wikipedia.org/wiki/Drop_(liquid)</a><br><i>Data last verified: November, 2025 (%time%)</i>",
+				"leaves-fallen":"<p>The first source states that each deciduous tree has around <b>56,000</b> leaves. The second sources states that around <b>32% (27% + 5%)</b> of trees on Earth are deciduous. The third source states that there are around <b>3.04 trillion</b> trees on Earth.</p><div class='spr'></div><a href='https://storymaps.arcgis.com/stories/9d8204f3ffa24547a5510c36ed4445fc' target='_blank'>https://storymaps.arcgis.com/stories/9d8204f3ffa24547a5510c36ed4445fc</a><a href='https://www.nature.com/articles/s41477-023-01543-5' target='_blank'>https://www.nature.com/articles/s41477-023-01543-5</a><a href='https://worldpopulationreview.com/metrics/how-many-trees-are-in-the-world' target='_blank'>https://worldpopulationreview.com/metrics/how-many-trees-are-in-the-world</a><br><i>Data last verified: November, 2025 (%time%)</i>",
+				"earthquakes":"<p>The source gives a rate of <b>500,000 detectable earthquakes</b> per year.</p><div class='spr'></div><a href='https://www.usgs.gov/programs/earthquake-hazards/cool-earthquake-facts' target='_blank'>https://www.usgs.gov/programs/earthquake-hazards/cool-earthquake-facts</a><br><i>Data last verified: March, 2024 (%time%)</i>",
+				"species-discovered":"<p>The source gives a rate of <b>18,000 new species</b> per year.</p><div class='spr'></div><a href='https://smv.org/learn/blog/how-many-species-are-left-be-discovered' target='_blank'>https://smv.org/learn/blog/how-many-species-are-left-be-discovered</a><br><i>Data last verified: November, 2024 (%time%)</i>",
+				"oxygen-produced-by-trees":"<p>The first source gives a table with the \"Net total\" of oxygen produced per area and the \"Total\" number of trees in that area. Combining them all together we get <b>585,000 tonnes</b> produced per year and <b>46,843,000 trees</b>, meaning each tree generates around <b>12.49 kilograms</b> of oxygen per year. The second source states that there are around <b>3.04 trillion</b> trees on Earth.</p><div class='spr'></div><a href='https://www.nrs.fs.usda.gov/pubs/jrnl/2007/nrs_2007_nowak_001.pdf' target='_blank'>https://www.nrs.fs.usda.gov/pubs/jrnl/2007/nrs_2007_nowak_001.pdf</a><a href='https://worldpopulationreview.com/metrics/how-many-trees-are-in-the-world' target='_blank'>https://worldpopulationreview.com/metrics/how-many-trees-are-in-the-world</a><br><i>Data last verified: November, 2025 (%time%)</i>",
+				"trees-sprouted":"<p>The first source states that there are around <b>3.04 trillion</b> trees on Earth. The second source states the average lifetime of angiosperms and conifers is 229 and 616 years respectively (averaging about <b>423 years</b>).</p><div class='spr'></div><a href='https://worldpopulationreview.com/metrics/how-many-trees-are-in-the-world' target='_blank'>https://worldpopulationreview.com/metrics/how-many-trees-are-in-the-world</a><a href='https://pmc.ncbi.nlm.nih.gov/articles/PMC10011738' target='_blank'>https://pmc.ncbi.nlm.nih.gov/articles/PMC10011738</a><br><i>Data last verified: November, 2025 (%time%)</i>",
+				"wildfires-ignited":"<p>The source gives a ton of data related to the number of wildfires. Here, we got a yearly average of <b>2,743,460</b> from 2012-2024.</p><div class='spr'></div><a href='https://ourworldindata.org/grapher/annual-number-of-fires' target='_blank'>https://ourworldindata.org/grapher/annual-number-of-fires</a><br><i>Data last verified: November, 2025 (%time%)</i>",
+				"area-burned-by-wildfires":"<p>The source states that around <b>3.7m square kilometers</b> of land is burned per year worldwide.</p><div class='spr'></div><a href='https://www.carbonbrief.org/global-wildfires-burned-an-area-of-land-larger-than-india-in-2024' target='_blank'>https://www.carbonbrief.org/global-wildfires-burned-an-area-of-land-larger-than-india-in-2024</a><br><i>Data last verified: November, 2025 (%time%)</i>",
+				"mt-everest-growth":"<p>The source states that Mt. Everest is rising by about <b>2 mm</b> per year.</p><div class='spr'></div><a href='https://en.wikipedia.org/wiki/Mount_Everest' target='_blank'>https://en.wikipedia.org/wiki/Mount_Everest</a><br><i>Data last verified: November, 2025 (%time%)</i>",
+				"landslides":"<p>The source states that the average annual number of rainfall-triggered landslides is <b>400,000</b> and the average annual number of earthquake-triggered landslides is <b>130,000</b>, a total of <b>530,000</b> landslides per year.</p><div class='spr'></div><a href='https://datacatalog.worldbank.org/search/dataset/0037584/Global-landslide-hazard-map' target='_blank'>https://datacatalog.worldbank.org/search/dataset/0037584/Global-landslide-hazard-map</a><br><i>Data last verified: November, 2025 (%time%)</i>",
 			};
 		</script>
 	</body>

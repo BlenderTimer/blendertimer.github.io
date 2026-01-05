@@ -138,6 +138,7 @@ function analyze() {
 	// 	readlevelUI.innerHTML = "Professional";
 	// }
 	fleschscore = 206.835 - 1.015 * (words / sents) - 84.6 * (syllables / words) || 0;
+	// console.log(0.39 * (words / sents) + 11.8 * (syllables / words) - 15.59);
 	drawFlesch();
 	if (text.length == 0) {
 		for (var i=0; i < freTable.children.length; i++) {

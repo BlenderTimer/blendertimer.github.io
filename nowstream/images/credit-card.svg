@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="200"
+   height="128"
+   viewBox="0 0 52.916665 33.866666"
+   version="1.1"
+   id="svg1"
+   inkscape:version="1.4 (86a8ad7, 2024-10-11)"
+   sodipodi:docname="credit-card.svg"
+   inkscape:export-filename="credit-card.png"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#505050"
+     bordercolor="#ffffff"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="1"
+     inkscape:deskcolor="#505050"
+     inkscape:document-units="mm"
+     inkscape:zoom="3.6774412"
+     inkscape:cx="162.61307"
+     inkscape:cy="102.10904"
+     inkscape:current-layer="layer1"
+     inkscape:window-width="3440"
+     inkscape:window-height="1377"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1" />
+  <defs
+     id="defs1" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <path
+       id="rect4"
+       style="fill:#4a81b0;fill-opacity:1;stroke:none;stroke-width:0.446596;stroke-linecap:round;stroke-linejoin:round;paint-order:markers stroke fill"
+       d="M 16.219284,0.44490727 C 12.728349,0.46820995 9.2340142,0.41914773 5.7451699,0.48715899 2.6531173,0.76902478 0.15237125,3.7694403 0.39029869,6.8597326 0.42030194,13.965051 0.32560312,21.07503 0.44462721,28.177376 c 0.32883857,3.063305 3.32224469,5.502592 6.38632479,5.260547 13.421739,-0.01323 26.845317,0.03554 40.2659,-0.03358 3.142862,-0.249238 5.69663,-3.299351 5.427632,-6.4357 -0.0114,-7.055901 0.04536,-14.114331 -0.04059,-21.1686012 -0.282709,-3.1032869 -3.299651,-5.60287712 -6.398711,-5.35516603 -9.9553,-7.021e-4 -19.910599,-0.003042 -29.865897,3.529e-5 z" />
+    <rect
+       style="fill:#b9e0ff;fill-opacity:1;stroke:none;stroke-width:0.446596;stroke-linecap:round;stroke-linejoin:round;paint-order:markers stroke fill"
+       id="rect1"
+       width="50.116329"
+       height="30.973591"
+       x="1.400212"
+       y="1.4544711"
+       ry="5.0489869" />
+    <path
+       id="path1"
+       style="fill:#94d0ff;fill-opacity:1;stroke-width:0.446596;stroke-linecap:round;stroke-linejoin:round;paint-order:markers stroke fill"
+       d="M 51.516301,11.725252 C 34.055783,14.412134 18.864972,23.775327 3.1653668,31.215734 c 0.8819309,0.754832 2.0265788,1.212114 3.2837548,1.212114 H 46.467632 c 2.797139,0 5.048669,-2.251529 5.048669,-5.048668 z"
+       sodipodi:nodetypes="ccsssc" />
+    <path
+       id="rect2"
+       style="fill:#0f0f0f;fill-opacity:1;stroke-width:0.446596;stroke-linecap:round;stroke-linejoin:round;paint-order:markers stroke fill"
+       d="m 1.4103161,6.3092012 c -0.00246,0.064982 -0.00986,0.1286898 -0.00986,0.1942933 V 12.329336 H 51.516301 V 6.5034945 c 0,-0.065604 -0.0074,-0.1293116 -0.0099,-0.1942933 z" />
+    <rect
+       style="fill:#ffffff;fill-opacity:1;stroke-width:0.446596;stroke-linecap:round;stroke-linejoin:round;paint-order:markers stroke fill"
+       id="rect3"
+       width="17.283072"
+       height="3.6896446"
+       x="6.3561883"
+       y="24.077816"
+       ry="1.8448223" />
+  </g>
+</svg>

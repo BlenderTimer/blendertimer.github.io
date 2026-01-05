@@ -1,31 +1,3 @@
-body {
-	background: var(--semi-back);
-}
-
-#content-main {
-	box-shadow: none;
-	background: var(--semi-back);
-	margin: 0px 0px 0px 0px;
-	border-radius: 0px;
-	min-height: calc(100vh - 50px);
-	padding: 0px 20px 20px 20px;
-}
-
-.title {
-	margin-top: 12px !important;
-	margin-bottom: 0px !important;
-	font-size: 14pt !important;
-}
-
-.description {
-	font-size: 12pt !important;
-	color: var(--italic-text) !important;
-	text-align: center;
-	width: 100% !important;
-	margin: 0px;
-	display: block !important;
-}
-
 #main-tool {
 	display: flex;
 	width: 100%;
@@ -37,7 +9,7 @@ body {
 #tool-input {
 	display: flex;
 	flex-flow: column;
-	background: var(--close-back);
+	background: var(--wincol);
 	box-sizing: border-box;
 	box-shadow: 0px 0px 10px #0005;
 	border-radius: 5px;
@@ -50,7 +22,7 @@ body {
 	width: 100%;
 	text-align: left;
 	font-size: 13pt;
-	color: var(--base-text);
+	color: var(--txtcol);
 	font-weight: bold;
 	margin: 5px 0px 5px 10px;
 }
@@ -62,7 +34,7 @@ body {
 	margin: 0px auto 5px auto;
 	overflow: hidden;
 	border-radius: 3px;
-	border: 2px solid var(--hover-back1);
+	border: 2px solid var(--wincol-lighter);
 }
 
 #mode-switch button {
@@ -72,8 +44,8 @@ body {
 	border: none;
 	box-sizing: border-box;
 	padding: 5px 10px;
-	background: var(--semi-back);
-	color: var(--base-text);
+	background: var(--wincol-darken);
+	color: var(--txtcol);
 	cursor: pointer;
 	font-size: 11pt;
 	font-weight: bold;
@@ -81,20 +53,20 @@ body {
 }
 
 #mode-switch button:hover {
-	background: var(--closer-back);
+	background: var(--wincol);
 	box-shadow: 0px 0px 15px #0005 inset;
 }
 
 #mode-switch > button:first-child {
-	border-right: 1px solid var(--hover-back1);
+	border-right: 1px solid var(--wincol-lighter);
 }
 
 #mode-switch > button:last-child {
-	border-left: 1px solid var(--hover-back1);
+	border-left: 1px solid var(--wincol-lighter);
 }
 
 .mode-switch-selected {
-	background: var(--theme2) !important;
+	background: var(--pricol) !important;
 	box-shadow: 0px 0px 15px #0005 inset !important;
 }
 
@@ -103,14 +75,14 @@ body {
 	width: 100%;
 	min-height: 200px;
 	height: -webkit-fill-available;
-	background: var(--far-back);
+	background: var(--bgcol-darken);
 	border-radius: 3px 3px 0px 0px;
 	border: none;
 	box-shadow: 0px 0px 10px #0005 inset;
 	box-sizing: border-box;
 	padding: 8px 10px;
 	outline: none;
-	color: var(--base-text);
+	color: var(--txtcol);
 	resize: none;
 	margin: 0px;
 	font-size: 12pt;
@@ -118,12 +90,12 @@ body {
 }
 
 #input-box2 {
-	border-top: 2px solid var(--closer-back) !important;
+	border-top: 2px solid var(--wincol-light) !important;
 	border-radius: 0px !important;
 	height: 100px !important;
 	font-family: math !important;
 	font-weight: bold !important;
-	background: var(--semi-back) !important;
+	background: var(--wincol-darken) !important;
 }
 
 .textarea-menu {
@@ -131,7 +103,7 @@ body {
 	align-items: center;
 	justify-content: space-between;
 	width: 100%;
-	background: var(--closer-back);
+	background: var(--wincol-light);
 	box-sizing: border-box;
 	border-radius: 0px 0px 3px 3px;
 	height: 30px;
@@ -155,7 +127,7 @@ body {
 }
 
 .textarea-menu div img:hover {
-	background: var(--hover-back1);
+	background: var(--wincol-lighten);
 }
 
 #convert-btn {
@@ -164,10 +136,10 @@ body {
 	max-width: 250px;
 	box-sizing: border-box;
 	padding: 7px 12px;
-	color: var(--base-text);
+	color: var(--txtcol);
 	border-radius: 3px;
-	background: var(--theme1);
-	border: 2px solid var(--theme3);
+	background: var(--pricol);
+	border: 2px solid var(--pricol-light);
 	outline: none;
 	font-size: 13pt;
 	font-weight: bold;
@@ -178,13 +150,13 @@ body {
 }
 
 #convert-btn:hover {
-	background: var(--theme2);
+	background: var(--pricol-hover);
 }
 
 #tool-output {
 	display: flex;
 	flex-flow: column;
-	background: var(--close-back);
+	background: var(--wincol);
 	box-sizing: border-box;
 	box-shadow: 0px 0px 10px #0005;
 	border-radius: 5px;
@@ -209,13 +181,13 @@ body {
 }
 
 #international-morse-code-rules span p {
-	color: var(--brighter-italic-text);
+	color: var(--txtcol-muted);
 	display: inline-block;
 	white-space-collapse: preserve;
 }
 
 #international-morse-code-rules span b {
-	color: var(--base-text);
+	color: var(--txtcol);
 	display: inline-block;
 	white-space-collapse: preserve;
 }
@@ -223,7 +195,7 @@ body {
 #international-morse-code-rules span div {
 	display: flex;
 	gap: 2px;
-	background: var(--closer-back);
+	background: var(--wincol-lighter);
 	border-radius: 3px;
 	padding: 2px;
 	box-sizing: border-box;
@@ -231,7 +203,7 @@ body {
 }
 
 #international-morse-code-rules span div b {
-	background: var(--semi-far-back);
+	background: var(--wincol-darken);
 	border-radius: 3px;
 	text-align: center;
 	width: 12pt;
@@ -261,12 +233,12 @@ body {
 #international-morse-code-key div span i {
 	display: inline-block;
 	font-weight: bold;
-	color: var(--theme3);
+	color: var(--pricol-light);
 }
 
 #international-morse-code-key div span b {
 	display: inline-block;
-	color: var(--base-text);
+	color: var(--txtcol);
 	font-family: monospace;
 }
 

@@ -1,5 +1,5 @@
 //----------VARIABLES----------
-var contentTitle = document.getElementById("content-main").children[0];
+var contentTitle = document.getElementById("content-title");
 var searchbar = document.getElementById("searchbar");
 var sortMenu = document.getElementById("sort-dd");
 var videoList = document.getElementById("video-list");
@@ -11,9 +11,9 @@ var vlChanged = false;
 var vstart = visibleVideos;
 //----------LOAD----------
 checkVideo();
-videoList.children[2].remove();
-document.body.addEventListener('mousedown', bodyMouseDown, true);
-document.body.addEventListener('scroll', checkVideoList, true);
+videoList.children[1].remove();
+document.body.addEventListener('mousedown', function(event) {bodyMouseDown(event)});
+window.addEventListener('scroll', function(event) {checkVideoList(event)});
 //----------FUNCTIONS----------
 function bodyMouseDown(event) {
 	var clickElement = event.srcElement || event.target;
@@ -36,6 +36,7 @@ function checkVideo() {
 }
 
 function loadVideos(vl, srch, srt) {
+	let limit = 100;
 	loadingVideos = true;
 	videoListEnd.style.display = "none";
 	if (vl) {
@@ -56,44 +57,41 @@ function loadVideos(vl, srch, srt) {
 		vstart = visibleVideos;
 	}
 	vlChanged = false;
-	//vlist = JSON.parse(JSON.stringify(vlist));
 	if (sortMenu.children[0].textContent == "Relevance") {
-		vlist.sort(((a, b) => (a.searchRelevance < b.searchRelevance) ? 1 : (a.searchRelevance === b.searchRelevance) ? ((a.tui > b.tui) ? 1 : -1) : -1));
+		vlist.sort(((a, b) => (a.searchRelevance < b.searchRelevance) ? 1 : (a.searchRelevance === b.searchRelevance) ? ((a.id > b.id) ? 1 : -1) : -1));
 	}
 	else if (sortMenu.children[0].textContent == "Views First 10 Minutes") {
-		vlist.sort(((a, b) => (a.views10 > b.views10) ? 1 : (a.views10 === b.views10) ? ((a.tui > b.tui) ? 1 : -1) : -1));
+		vlist.sort(((a, b) => (a.views10 > b.views10) ? 1 : (a.views10 === b.views10) ? ((a.id > b.id) ? 1 : -1) : -1));
 	}
 	else if (sortMenu.children[0].textContent == "Views First 30 Minutes") {
-		vlist.sort(((a, b) => (a.views30 > b.views30) ? 1 : (a.views30 === b.views30) ? ((a.tui > b.tui) ? 1 : -1) : -1));
+		vlist.sort(((a, b) => (a.views30 > b.views30) ? 1 : (a.views30 === b.views30) ? ((a.id > b.id) ? 1 : -1) : -1));
 	}
 	else if (sortMenu.children[0].textContent == "Views First Hour") {
-		vlist.sort(((a, b) => (a.views1 > b.views1) ? 1 : (a.views1 === b.views1) ? ((a.tui > b.tui) ? 1 : -1) : -1));
+		vlist.sort(((a, b) => (a.views1 > b.views1) ? 1 : (a.views1 === b.views1) ? ((a.id > b.id) ? 1 : -1) : -1));
 	}
 	else if (sortMenu.children[0].textContent == "Views First 24 Hours") {
-		vlist.sort(((a, b) => (a.views24 > b.views24) ? 1 : (a.views24 === b.views24) ? ((a.tui > b.tui) ? 1 : -1) : -1));
+		vlist.sort(((a, b) => (a.views24 > b.views24) ? 1 : (a.views24 === b.views24) ? ((a.id > b.id) ? 1 : -1) : -1));
 	}
 	else {
-		vlist.sort((a, b) => (a.tui > b.tui) ? 1 : -1);
+		vlist.sort((a, b) => (a.id > b.id) ? 1 : -1);
 	}
-	console.log(vlist);
-	var limit = 50;
-	for (var i=vlist.length-vstart-1; i >= 0; i-=1) {
+	for (var i=vlist.length-vstart-1; i >= 0; i--) {
 		if (limit == 0 || !(vlist[i])) {if (!(vlist[i])) {videoListEnd.style.display = null};break};
 		var vb = document.createElement('a');
 		vb.className = "video-block";
 		vb.id = "video-" + vlist[i].id;
-		vb.href = "./video-sources/" + vlist[i].url;
+		vb.href = "/video?v=" + videos[i].id;
 		var vType = document.createElement('img');
 		vType.className = "video-type";
 		if (vlist[i].type == "short") {
 			vType.alt = "Short";
 			vType.title = "This video is a short.";
-			vType.src = "./static-0/files/images/videotype-short.png";
+			vType.src = "./static/images/icons/videotype-short.svg";
 		}
 		else {
 			vType.alt = "Full Video";
 			vType.title = "This is a full video.";
-			vType.src = "./static-0/files/images/videotype-fullvideo.png";
+			vType.src = "./static/images/icons/videotype-longform.svg";
 		}
 		var y = parseInt(vlist[i].date.removeBefore("-", 1, true));
 		var m = parseInt(vlist[i].date.removeBefore("-", 1).removeAfter("-", -1, true));
@@ -109,10 +107,10 @@ function loadVideos(vl, srch, srt) {
 		var vThumb = document.createElement('img');
 		vThumb.className = "video-thumb";
 		vThumb.alt = "Thumbnail";
-		vThumb.src = "./video-sources/thumbnails/" + vlist[i].tui + "-" + vlist[i].name.toLowerCase().replaceAll(/ /g, "_").replaceAll(/\./g, "").replaceAll(/\!/g, "").replaceAll(/\?/g, "").replaceAll(/\,/g, "").replaceAll(/\'/g, "") + "-180.png";
+		vThumb.src = "./video-thumbnails/" + vlist[i].id + "-small.png";
 		var vTitle = document.createElement('div');
 		vTitle.className = "video-title";
-		vTitle.innerHTML = "<p>" + vlist[i].name + "</p>"
+		vTitle.innerHTML = "<p>" + vlist[i].title + "</p>"
 		vb.appendChild(vType);
 		vb.appendChild(vThumb);
 		vb.appendChild(vTitle);
@@ -130,13 +128,13 @@ function loadVideos(vl, srch, srt) {
 }
 
 function search() {
-	document.getElementById("content-main").children[0].innerHTML = "Searching...";
+	contentTitle.innerHTML = "Searching...";
 	setTimeout(function() {
 		var q = searchbar.value.toLowerCase();
 		if (q == "") {
 			vlChanged = true;
 			loadVideos(videos, true);
-			document.getElementById("content-main").children[0].innerHTML = "Video Sources (" + videos.length + ")";
+			contentTitle.innerHTML = "Video Sources (" + videos.length + ")";
 			if (sortMenu.children[1].firstChild.textContent == "Relevance") {
 				sortMenu.children[1].firstChild.remove();
 				sortMenu.children[0].innerHTML = "Latest";
@@ -164,16 +162,16 @@ function search() {
 			else {
 				for (var i=0; i < videos.length; i++) {
 					var r = 0;
-					if (videos[i].name.toLowerCase() == q) {
+					if (videos[i].title.toLowerCase() == q) {
 						r = -1000000;
 					}
-					if (videos[i].name.toLowerCase().startsWith(q)) {
+					if (videos[i].title.toLowerCase().startsWith(q)) {
 						r -= 10000;
 					}
-					if (videos[i].name.toLowerCase().indexOf(q) > -1) {
+					if (videos[i].title.toLowerCase().indexOf(q) > -1) {
 						r -= 100;
 					}
-					if (videos[i].cc.toLowerCase().indexOf(q) > -1) {
+					if (videos[i].subtitles.replace(/<\/p><p>/g, " ").replace(/<\/p>/g, " ").replace(/<p>/g, " ").replace(/<br>/g, " ").toLowerCase().indexOf(q) > -1) {
 						r -= 1;
 					}
 					if (r < 0) {
@@ -182,7 +180,7 @@ function search() {
 					}
 				}
 			}
-			document.getElementById("content-main").children[0].innerHTML = "Video Sources (" + vl.length + "/" + videos.length + ")";
+			contentTitle.innerHTML = "Video Sources (" + vl.length + "/" + videos.length + ")";
 			if (!(sortMenu.children[1].firstChild.textContent == "Relevance")) {
 				var ddi = document.createElement('button');
 				ddi.addEventListener('click', function(event) {setSort(event)});
@@ -199,10 +197,10 @@ function search() {
 function checkVideoList() {
 	var videoListAverage = 0;
 	for (var i=0; i < videoList.children.length; i++) {
-		videoListAverage += videoList.children[i].offsetHeight + 10;
+		videoListAverage += videoList.children[i].getBoundingClientRect().height + 16;
 	}
 	videoListAverage = videoListAverage / videoList.children.length;
-	if ((window.scrollY + window.innerHeight) > (videoList.offsetTop + videoList.offsetHeight - videoListAverage)) {
+	if ((window.scrollY + window.innerHeight) > (videoList.offsetTop + videoList.getBoundingClientRect().height - videoListAverage)) {
 		if (loadingVideos == false) {
 			loadVideos();
 		}

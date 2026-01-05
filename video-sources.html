@@ -12,11 +12,13 @@
         </script>
         <meta charset="utf-8">
 		<title>Video Sources - BlenderTimer</title>
-		<meta name="description" content="The full list of all primary videos uploaded to the BlenderTimer YouTube channel!">
+		<meta name="description" content="Data sources for BlenderTimer productions!">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="icon" href="/favicon.png" type="image/x-icon">
+		<link rel="stylesheet" type="text/css" href="/noindex/theme.css">
 		<link rel="stylesheet" type="text/css" href="/static/main.css">
 		<link rel="stylesheet" type="text/css" href="/static/video-sources.css">
+		<script src="/noindex/bt-videos.js"></script>
 		<script src="/bt-js/bt-js.js"></script>
 	</head>
 	<body>
@@ -36,9 +38,11 @@
 		<div id="loader" style="width: 100%; height: calc(100% - 50px); top: 50px; left: 0px; position: fixed; z-index: -100000;">
 			<img alt="Loading" src="/static/images/loader.gif" style="width: 100px; height: 100px; position: fixed; left: calc(50% - 50px); top: calc(50% - 25px); filter: drop-shadow(0px 0px 15px #000000);">
 		</div>
-		<div id="content-main" style="opacity: 0; transition: 0.5s">
-			<h1 class="title">Video Sources</h1>
-			<p class="description">View the sources for all official BlenderTimer videos and shorts!</p>
+		<div id="content-main" class="limwidth" style="opacity: 0; transition: 0.5s">
+			<div class="article-header">
+				<h1 class="article-title" id="content-title">Video Sources</h1>
+				<i class="article-subtitle">Data sources for BlenderTimer productions!</i>
+			</div>
 			<div id="controls">
 				<input placeholder="Search videos" type="text" id="searchbar" onkeydown="search()">
 				<div id="sort-dd" style="overflow:hidden">
@@ -54,32 +58,31 @@
 			</div>
 			<div id="video-list">
 				<span id="video-list-end"></span>
-				<script src="/static/videos.js"></script>
 				<script type="text/javascript">
-					var limit = 50;
-					for (var i=videos.length-1; i >= 0; i-=1) {
+					let limit = 100;
+					for (let i=videos.length-1; i >= 0; i--) {
 						if (limit == 0) {break};
-						var vb = document.createElement('a');
+						let vb = document.createElement('a');
 						vb.className = "video-block";
 						vb.id = "video-" + videos[i].id;
-						vb.href = "./video-sources/" + videos[i].url;
-						var vType = document.createElement('img');
+						vb.href = "/video?v=" + videos[i].id;
+						let vType = document.createElement('img');
 						vType.className = "video-type";
 						if (videos[i].type == "short") {
 							vType.alt = "Short";
 							vType.title = "This video is a short.";
-							vType.src = "./static-0/files/images/videotype-short.png";
+							vType.src = "./static/images/icons/videotype-short.svg";
 						}
 						else {
 							vType.alt = "Full Video";
 							vType.title = "This is a full video.";
-							vType.src = "./static-0/files/images/videotype-fullvideo.png";
+							vType.src = "./static/images/icons/videotype-longform.svg";
 						}
-						var y = parseInt(videos[i].date.removeBefore("-", 1, true));
-						var m = parseInt(videos[i].date.removeBefore("-", 1).removeAfter("-", -1, true));
-						var d = parseInt(videos[i].date.removeAfter("-", -1));
+						let y = parseInt(videos[i].date.removeBefore("-", 1, true));
+						let m = parseInt(videos[i].date.removeBefore("-", 1).removeAfter("-", -1, true));
+						let d = parseInt(videos[i].date.removeAfter("-", -1));
 						if ((Date.now() - new Date(y, m-1, d).getTime()) <= 604800000) {
-							var vNew = document.createElement('b');
+							let vNew = document.createElement('b');
 							vNew.className = "video-new";
 							vNew.textContent = "NEW!";
 							vNew.title = "This video is a recent upload!"
@@ -89,10 +92,10 @@
 						var vThumb = document.createElement('img');
 						vThumb.className = "video-thumb";
 						vThumb.alt = "Thumbnail";
-						vThumb.src = "./video-sources/thumbnails/" + videos[i].tui + "-" + videos[i].name.toLowerCase().replaceAll(/ /g, "_").replaceAll(/\./g, "").replaceAll(/\!/g, "").replaceAll(/\?/g, "").replaceAll(/\,/g, "").replaceAll(/\'/g, "") + "-180.png";
-						var vTitle = document.createElement('div');
+						vThumb.src = "./video-thumbnails/" + videos[i].id + "-small.png";
+						let vTitle = document.createElement('div');
 						vTitle.className = "video-title";
-						vTitle.innerHTML = "<p>" + videos[i].name + "</p>"
+						vTitle.innerHTML = "<p>" + videos[i].title + "</p>"
 						vb.appendChild(vType);
 						vb.appendChild(vThumb);
 						vb.appendChild(vTitle);
@@ -100,7 +103,7 @@
 						if (i == 0) {document.getElementById("video-list-end").style.display = "none"};
 						limit -= 1;
 					}
-					document.getElementById("content-main").children[0].innerHTML = "Video Sources (" + videos.length + ")";
+					document.getElementById("content-title").innerHTML = "Video Sources (" + videos.length + ")";
 				</script>
 			</div>
 		</div>

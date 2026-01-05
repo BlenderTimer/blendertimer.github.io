@@ -22,6 +22,7 @@
 		<meta name="description" content="A live visualization of things which are happening all around the world right now!">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="icon" href="/favicon.png" type="image/x-icon">
+		<link rel="stylesheet" type="text/css" href="/noindex/theme.css">
 		<link rel="stylesheet" type="text/css" href="/static/main.css">
 		<link rel="stylesheet" type="text/css" href="./stream-main.css">
 		<script src="/bt-js/bt-js.js"></script>
@@ -35,7 +36,7 @@
 		</script>
 		<script src="/noindex/pages.js"></script>
 		<noscript>
-			<div id="nojs" style="position: fixed; top: 0px; bottom: 0px; left: 0px; right: 0px; display: flex; flex-flow: column; justify-content: center; align-items: center; background: var(--semi-back); padding: 15px 20px; z-index: 1000000; cursor: default;">
+			<div id="nojs" style="position: fixed; top: 0px; bottom: 0px; left: 0px; right: 0px; display: flex; flex-flow: column; justify-content: center; align-items: center; background: var(--bgcol); padding: 15px 20px; z-index: 1000000; cursor: default;">
 				<b style="font-family: sans-serif; font-size: 16pt; color: #FFF; text-align: center;">Page Failed to Load</b>
 				<p style="font-family: sans-serif; font-size: 14pt; color: #FFF6; text-align: center;">This website requires Javascript to operate.</p>
 			</div>
@@ -43,109 +44,220 @@
 		<div id="loader" style="width: 100%; height: calc(100% - 50px); top: 50px; left: 0px; position: fixed; z-index: -100000;">
 			<img alt="Loading" src="/static/images/loader.gif" style="width: 100px; height: 100px; position: fixed; left: calc(50% - 50px); top: calc(50% - 25px); filter: drop-shadow(0px 0px 15px #000000);">
 		</div>
-		<div id="source-popup-back" onclick="closeSourcePopup()" style="opacity: 0; pointer-events: none;"></div>
-		<div id="source-popup-container" style="opacity: 0">
-			<div id="source-popup-main" style="pointer-events: none; user-select: none; transform: scale(0)">
-				<img id="source-popup-close" alt="Close" src="../static-0/files/images/icons/x.svg" onclick="closeSourcePopup()">
-				<div id="source-popup" style="display: flex">
-					<h1>Sources</h1>
-					<div class="popup-scroll"></div>
-				</div>
+		<div id="popup-base" style="opacity: 0; pointer-events: none;" onmousedown="closePopup(event)">
+			<div id="popup" style="transform: scale(0);">
+				<img src="/static-0/files/images/close.svg" id="popup-exit" onmousedown="closePopup(event)">
+				<div id="popup-text"></div>
 			</div>
 		</div>
 		<div id="content-main" class="limwidth" style="opacity: 0; transition: 0.5s">
-			<div id="stream-header">
-				<div>
-					<a href="/nowstream"><img src="../static-0/files/images/nowstream.svg" alt="The NowStream logo"></a>
+			<div class="article-header">
+				<div id="stream-header">
+					<a href="/nowstream"><img src="/static/images/nowstream.svg" alt="The NowStream logo"></a>
 					<span><i id="sh-slash">/</i><i>Around the World</i></span>
 				</div>
+				<i class="article-subtitle">Things which are happening all around the world right now!</i>
 			</div>
-			<p class="description">Things which are happening all around the world right now!</p>
 			<div id="page-load-time">
 				<i></i>
 				<b></b>
 			</div>
 			<div id="stream-container">
-				<div id="people-born" style="--back: #0c2038;--border: #2d64b2;" class="stream-box force-integer">
+				<div id="people-born" style="--back:var(--sback-deepblue);--border:var(--sborder-deepblue);--backshadow:var(--sbackshadow-deepblue);--shadow:var(--sshadow-deepblue);" class="stream-box force-integer">
 					<div class="stream-visual"><img src="./images/person.png" style="display: none;" alt="Person"><canvas class="random-scale-1"></canvas></div>
 					<span><b>0</b><p> people have been born</p></span>
-					<span><i>385,000 per day</i><img onclick="viewSource(event)" src="../static-0/files/images/icons/source.svg" title="View source" alt="Source"></span>
+					<span class="stream-source"><i>267 per minute</i><img onclick="viewSource(event)" src="/static/images/icons/source.svg" title="View source" alt="Source"></span>
 				</div>
-				<div id="people-died" style="--back: #333130;--border: #8e8381;" class="stream-box force-integer">
+				<div id="people-died" style="--back:var(--sback-deepblue);--border:var(--sborder-deepblue);--backshadow:var(--sbackshadow-deepblue);--shadow:var(--sshadow-deepblue);" class="stream-box force-integer">
 					<div class="stream-visual"><img src="./images/grave.png" style="display: none;" alt="Gravestone"><canvas class="image-2x random-scale-2"></canvas></div>
 					<span><b>0</b><p> people have died</p></span>
-					<span><i>170,790 per day</i><img onclick="viewSource(event)" src="../static-0/files/images/icons/source.svg" title="View source" alt="Source"></span>
+					<span class="stream-source"><i>120 per minute</i><img onclick="viewSource(event)" src="/static/images/icons/source.svg" title="View source" alt="Source"></span>
 				</div>
-				<div id="people-stubbed-toe" style="--back: #621616;--border: #ea4343;" class="stream-box">
+				<div id="people-stubbed-toe" style="--back:var(--sback-deepblue);--border:var(--sborder-deepblue);--backshadow:var(--sbackshadow-deepblue);--shadow:var(--sshadow-deepblue);" class="stream-box">
 					<div class="stream-visual"><img src="./images/foot.svg" alt="Foot"></div>
 					<span><b>0</b><p> people have stubbed their toe</p></span>
-					<span><i>14,000 per second</i><img onclick="viewSource(event)" src="../static-0/files/images/icons/source.svg" title="View source" alt="Source"></span>
+					<span class="stream-source"><i>15,700 per second</i><img onclick="viewSource(event)" src="/static/images/icons/source.svg" title="View source" alt="Source"></span>
 				</div>
-				<div id="sharks-killed" style="--back: #0c2038;--border: #2d64b2;" class="stream-box force-integer">
+				<div id="people-sneezed" style="--back:var(--sback-deepblue);--border:var(--sborder-deepblue);--backshadow:var(--sbackshadow-deepblue);--shadow:var(--sshadow-deepblue);" class="stream-box">
+					<div class="stream-visual"><img src="./images/person.svg" alt="Person"></div>
+					<span><b>0</b><p> people have sneezed</p></span>
+					<span class="stream-source"><i>115,000 per second</i><img onclick="viewSource(event)" src="../static-0/files/images/icons/source.svg" title="View source" alt="Source"></span>
+				</div>
+				<div id="sharks-killed" style="--back:var(--sback-deepblue);--border:var(--sborder-deepblue);--backshadow:var(--sbackshadow-deepblue);--shadow:var(--sshadow-deepblue);" class="stream-box force-integer">
 					<div class="stream-visual"><img src="./images/shark.svg" style="display: none;" alt="Shark"><canvas class="image-3x anim-in random-scale-1"></canvas></div>
 					<span><p>Humans have killed </p><b>0</b><p> sharks</p></span>
-					<span><i>6 per second</i><img onclick="viewSource(event)" src="../static-0/files/images/icons/source.svg" title="View source" alt="Source"></span>
+					<span class="stream-source"><i>6 per second</i><img onclick="viewSource(event)" src="/static/images/icons/source.svg" title="View source" alt="Source"></span>
 				</div>
-				<div id="water-used" style="--back: #0d2541;--border: #2c708a;" class="stream-box">
+				<div id="water-used" style="--back:var(--sback-deepblue);--border:var(--sborder-deepblue);--backshadow:var(--sbackshadow-deepblue);--shadow:var(--sshadow-deepblue);" class="stream-box">
 					<div class="stream-visual"><img src="./images/water-drop.svg" alt="Water drop"></div>
-					<span><p>Humans have used </p><b>0</b><p> tonnes of freshwater</p></span>
-					<i>0 tons</i>
-					<span><i>116t per second</i><img onclick="viewSource(event)" src="../static-0/files/images/icons/source.svg" title="View source" alt="Source"></span>
+					<span><p>Humans have used </p><b>0</b><p> liters of freshwater</p></span>
+					<i>0 gallons</i>
+					<span class="stream-source"><i>136,000,000L per second</i><img onclick="viewSource(event)" src="/static/images/icons/source.svg" title="View source" alt="Source"></span>
 				</div>
-				<div id="newspapers-thrown-away" style="--back: #2d2d2d;--border: #555555;" class="stream-box force-integer">
+				<div id="newspapers-thrown-away" style="--back:var(--sback-deepblue);--border:var(--sborder-deepblue);--backshadow:var(--sbackshadow-deepblue);--shadow:var(--sshadow-deepblue);" class="stream-box force-integer">
 					<div class="stream-visual"><img src="./images/newspaper.png" style="display: none;" alt="Newspaper"><canvas class="anim-in fade-2x random-scale-2"></canvas></div>
 					<span><p></p><b>0</b><p> newspapers have been thrown away</p></span>
-					<span><i>761 per second</i><img onclick="viewSource(event)" src="../static-0/files/images/icons/source.svg" title="View source" alt="Source"></span>
+					<span class="stream-source"><i>761 per second</i><img onclick="viewSource(event)" src="/static/images/icons/source.svg" title="View source" alt="Source"></span>
 				</div>
-				<div id="children-missing" style="--back: #0c2038;--border: #2d64b2;" class="stream-box force-integer">
-					<div class="stream-visual"><img src="./images/missing-child.png" style="display: none;" alt="Person"><canvas class="random-scale-1"></canvas></div>
+				<div id="magazines-thrown-away" style="--back:var(--sback-deepblue);--border:var(--sborder-deepblue);--backshadow:var(--sbackshadow-deepblue);--shadow:var(--sshadow-deepblue);" class="stream-box force-integer">
+					<div class="stream-visual"><img src="./images/newspaper.png" style="display: none;" alt="Magazine"><canvas class="anim-in fade-2x random-scale-2"></canvas></div>
+					<span><p></p><b>0</b><p> magazines have been thrown away</p></span>
+					<span class="stream-source"><i>11 per second</i><img onclick="viewSource(event)" src="/static/images/icons/source.svg" title="View source" alt="Source"></span>
+				</div>
+				<div id="books-thrown-away" style="--back:var(--sback-deepblue);--border:var(--sborder-deepblue);--backshadow:var(--sbackshadow-deepblue);--shadow:var(--sshadow-deepblue);" class="stream-box force-integer">
+					<div class="stream-visual"><img src="./images/book.svg" class="image-flash-in" alt="Book"><img src="./images/book-red.svg" style="opacity: 0; position: absolute;" alt="Red book silhouette"></div>
+					<span><p></p><b>0</b><p> books have been thrown away</p></span>
+					<span class="stream-source"><i>3.8 per minute</i><img onclick="viewSource(event)" src="/static/images/icons/source.svg" title="View source" alt="Source"></span>
+				</div>
+				<div id="children-missing" style="--back:var(--sback-deepblue);--border:var(--sborder-deepblue);--backshadow:var(--sbackshadow-deepblue);--shadow:var(--sshadow-deepblue);" class="stream-box force-integer">
+					<div class="stream-visual"><img src="./images/missing-child.png" style="display: none;" alt="Missing child"><canvas class="image-1.5x random-scale-1"></canvas></div>
 					<span><b>0</b><p> children have gone missing</p></span>
-					<span><i>21,900 per day</i><img onclick="viewSource(event)" src="../static-0/files/images/icons/source.svg" title="View source" alt="Source"></span>
+					<span class="stream-source"><i>15 per minute</i><img onclick="viewSource(event)" src="/static/images/icons/source.svg" title="View source" alt="Source"></span>
 				</div>
-				<div id="road-built" style="--back: #1e2b1d;--border: #55904a;" class="stream-box">
+				<div id="road-built" style="--back:var(--sback-deepblue);--border:var(--sborder-deepblue);--backshadow:var(--sbackshadow-deepblue);--shadow:var(--sshadow-deepblue);" class="stream-box">
 					<div class="stream-visual"><img src="./images/road.svg" alt="Road"></div>
 					<span><p></p><b>0</b><p> kilometers of road has been built</p></span>
 					<i>0 miles</i>
-					<span><i>1.8km per minute</i><img onclick="viewSource(event)" src="../static-0/files/images/icons/source.svg" title="View source" alt="Source"></span>
+					<span class="stream-source"><i>2.3km per minute</i><img onclick="viewSource(event)" src="/static/images/icons/source.svg" title="View source" alt="Source"></span>
 				</div>
-				<div id="humans-distance-walked" style="--back: #413826;--border: #906f45;" class="stream-box">
+				<div id="distance-driven" style="--back:var(--sback-deepblue);--border:var(--sborder-deepblue);--backshadow:var(--sbackshadow-deepblue);--shadow:var(--sshadow-deepblue);" class="stream-box">
+					<div class="stream-visual"><img src="./images/car.svg" alt="Car"></div>
+					<span><p>Vehicles have collectively driven </p><b>0</b><p> kilometers</p></span>
+					<i>0 miles</i>
+					<span class="stream-source"><i>1,160,000km per second</i><img onclick="viewSource(event)" src="/static/images/icons/source.svg" title="View source" alt="Source"></span>
+				</div>
+				<div id="humans-distance-walked" style="--back:var(--sback-deepblue);--border:var(--sborder-deepblue);--backshadow:var(--sbackshadow-deepblue);--shadow:var(--sshadow-deepblue);" class="stream-box">
 					<div class="stream-visual"><img src="./images/foot.svg" alt="Foot"></div>
 					<span><p>Humans have collectively walked </p><b>0</b><p> kilometers</p></span>
 					<i>0 miles</i>
-					<span><i>332,000km per second</i><img onclick="viewSource(event)" src="../static-0/files/images/icons/source.svg" title="View source" alt="Source"></span>
+					<span class="stream-source"><i>343,500km per second</i><img onclick="viewSource(event)" src="/static/images/icons/source.svg" title="View source" alt="Source"></span>
 				</div>
-				<div id="food-wasted" style="--back: #621616;--border: #ea4343;" class="stream-box">
+				<div id="humans-heartbeats" style="--back:var(--sback-deepblue);--border:var(--sborder-deepblue);--backshadow:var(--sbackshadow-deepblue);--shadow:var(--sshadow-deepblue);" class="stream-box">
+					<div class="stream-visual"><img src="./images/heart.svg" alt="Heart"></div>
+					<span><p>Humans hearts have collectively beat </p><b>0</b><p> times</p></span>
+					<span class="stream-source"><i>9,600,000,000 per second</i><img onclick="viewSource(event)" src="/static/images/icons/source.svg" title="View source" alt="Source"></span>
+				</div>
+				<div id="humans-breaths" style="--back:var(--sback-deepblue);--border:var(--sborder-deepblue);--backshadow:var(--sbackshadow-deepblue);--shadow:var(--sshadow-deepblue);" class="stream-box">
+					<div class="stream-visual"><img src="./images/head-side.svg" alt="Human head side profile"></div>
+					<span><p>Humans have collectively breathed</p><b>0</b><p> times</p></span>
+					<span class="stream-source"><i>2,000,000,000 per second</i><img onclick="viewSource(event)" src="/static/images/icons/source.svg" title="View source" alt="Source"></span>
+				</div>
+				<div id="humans-blinked" style="--back:var(--sback-deepblue);--border:var(--sborder-deepblue);--backshadow:var(--sbackshadow-deepblue);--shadow:var(--sshadow-deepblue);" class="stream-box force-integer">
+					<div class="stream-visual"><img src="./images/eye-open.svg" alt="Open eye"></div>
+					<span><p>Humans have collectively blinked </p><b>0</b><p> times</p></span>
+					<span class="stream-source"><i>2,000,000,000 per second</i><img onclick="viewSource(event)" src="/static/images/icons/source.svg" title="View source" alt="Source"></span>
+				</div>
+				<div id="humans-yawned" style="--back:var(--sback-deepblue);--border:var(--sborder-deepblue);--backshadow:var(--sbackshadow-deepblue);--shadow:var(--sshadow-deepblue);" class="stream-box">
+					<div class="stream-visual"><img src="./images/yawn.svg" alt="Yawn"></div>
+					<span><p>Humans have collectively yawned </p><b>0</b><p> times</p></span>
+					<span class="stream-source"><i>700,000 per second</i><img onclick="viewSource(event)" src="/static/images/icons/source.svg" title="View source" alt="Source"></span>
+				</div>
+				<div id="people-hit-snooze" style="--back:var(--sback-deepblue);--border:var(--sborder-deepblue);--backshadow:var(--sbackshadow-deepblue);--shadow:var(--sshadow-deepblue);" class="stream-box">
+					<div class="stream-visual"><img src="./images/alarm-clock.svg" alt="Alarm clock"></div>
+					<span><b>0</b><p> people have hit snooze</p></span>
+					<span class="stream-source"><i>127,000 per second</i><img onclick="viewSource(event)" src="/static/images/icons/source.svg" title="View source" alt="Source"></span>
+				</div>
+				<div id="food-wasted" style="--back:var(--sback-deepblue);--border:var(--sborder-deepblue);--backshadow:var(--sbackshadow-deepblue);--shadow:var(--sshadow-deepblue);" class="stream-box">
 					<div class="stream-visual"><img src="./images/tomato.svg" alt="Tomato"></div>
 					<span><b>0</b><p> tonnes of food has been wasted</p></span>
 					<i>0 tons</i>
-					<span><i>41t per second</i><img onclick="viewSource(event)" src="../static-0/files/images/icons/source.svg" title="View source" alt="Source"></span>
+					<span class="stream-source"><i>37.4t per second</i><img onclick="viewSource(event)" src="/static/images/icons/source.svg" title="View source" alt="Source"></span>
 				</div>
-				<div id="books-published" style="--back: #282221;--border: #5f4c48;" class="stream-box force-integer">
+				<div id="books-published" style="--back:var(--sback-deepblue);--border:var(--sborder-deepblue);--backshadow:var(--sbackshadow-deepblue);--shadow:var(--sshadow-deepblue);" class="stream-box force-integer">
 					<div class="stream-visual"><img src="./images/book.svg" class="image-flash-in" alt="Book"><img src="./images/book-green.svg" style="opacity: 0; position: absolute;" alt="Green book silhouette"></div>
 					<span><p></p><b>0</b><p> books have been published</p></span>
-					<span><i>251 per hour</i><img onclick="viewSource(event)" src="../static-0/files/images/icons/source.svg" title="View source" alt="Source"></span>
+					<span class="stream-source"><i>252 per hour</i><img onclick="viewSource(event)" src="/static/images/icons/source.svg" title="View source" alt="Source"></span>
 				</div>
-
-				<div id="aircraft-taken-off" style="--back: #22313a;--border: #539c9e;" class="stream-box force-integer">
-					<div class="stream-visual"><img src="./images/airliner-gearup.png" style="display: none;" alt="Airliner with landing gear up"><canvas class="image-3x random-scale-1 image-2x anim-grow"></canvas></div>
+				<div id="cars-manufactured" style="--back:var(--sback-deepblue);--border:var(--sborder-deepblue);--backshadow:var(--sbackshadow-deepblue);--shadow:var(--sshadow-deepblue);" class="stream-box force-integer">
+					<div class="stream-visual"><img src="./images/missing-child.png" style="display: none;" alt="Missing child"><canvas class="random-scale-1 anim-grow"></canvas></div>
+					<span><b>0</b><p> cars have been manufactured</p></span>
+					<span class="stream-source"><i>2.9 per second</i><img onclick="viewSource(event)" src="/static/images/icons/source.svg" title="View source" alt="Source"></span>
+				</div>
+				<div id="packages-shipped" style="--back:var(--sback-deepblue);--border:var(--sborder-deepblue);--backshadow:var(--sbackshadow-deepblue);--shadow:var(--sshadow-deepblue);" class="stream-box force-integer">
+					<div class="stream-visual"><img src="./images/package.svg" alt="Package"></canvas></div>
+					<span><p></p><b>0</b><p> packages have been shipped</p></span>
+					<span class="stream-source"><i>12,900 per second</i><img onclick="viewSource(event)" src="/static/images/icons/source.svg" title="View source" alt="Source"></span>
+				</div>
+				<div id="aircraft-taken-off" style="--back:var(--sback-deepblue);--border:var(--sborder-deepblue);--backshadow:var(--sbackshadow-deepblue);--shadow:var(--sshadow-deepblue);" class="stream-box force-integer">
+					<div class="stream-visual"><img src="./images/airliner-gearup.png" style="display: none;" alt="Airliner with landing gear up"><canvas class="image-4x random-scale-1 image-2x anim-grow"></canvas></div>
 					<span><p></p><b>0</b><p> aircraft have taken off</p></span>
-					<span><i>153 per minute</i><img onclick="viewSource(event)" src="../static-0/files/images/icons/source.svg" title="View source" alt="Source"></span>
+					<span class="stream-source"><i>153 per minute</i><img onclick="viewSource(event)" src="/static/images/icons/source.svg" title="View source" alt="Source"></span>
 				</div>
-				<div id="commercial-flights-canceled" style="--back: #331c1c;--border: #9b3939;" class="stream-box force-integer">
+				<div id="airline-flights" style="--back:var(--sback-deepblue);--border:var(--sborder-deepblue);--backshadow:var(--sbackshadow-deepblue);--shadow:var(--sshadow-deepblue);" class="stream-box force-integer">
+					<div class="stream-visual"><img src="./images/airliner-gearup.png" style="display: none;" alt="Airliner with landing gear up"><canvas class="image-4x random-scale-1 image-2x anim-grow"></canvas></div>
+					<span><p></p><b>0</b><p> airline flights have taken off</p></span>
+					<span class="stream-source"><i>76 per minute</i><img onclick="viewSource(event)" src="/static/images/icons/source.svg" title="View source" alt="Source"></span>
+				</div>
+				<div id="commercial-flights-canceled" style="--back:var(--sback-deepblue);--border:var(--sborder-deepblue);--backshadow:var(--sbackshadow-deepblue);--shadow:var(--sshadow-deepblue);" class="stream-box force-integer">
 					<div class="stream-visual"><img src="./images/airliner.svg" class="image-flash-in" alt="Airliner"><img src="./images/airliner-red.svg" style="opacity: 0; position: absolute;" alt="Red airliner silhouette"></div>
-					<span><p></p><b>0</b><p> commercial flights have been canceled</p></span>
-					<span><i>1 per minute</i><img onclick="viewSource(event)" src="../static-0/files/images/icons/source.svg" title="View source" alt="Source"></span>
+					<span><p></p><b>0</b><p> airline flights have been canceled</p></span>
+					<span class="stream-source"><i>110 per hour</i><img onclick="viewSource(event)" src="/static/images/icons/source.svg" title="View source" alt="Source"></span>
 				</div>
-				<div id="words-spoken" style="--back: #2d2d2d;--border: #555555;" class="stream-box">
+				<div id="words-spoken" style="--back:var(--sback-deepblue);--border:var(--sborder-deepblue);--backshadow:var(--sbackshadow-deepblue);--shadow:var(--sshadow-deepblue);" class="stream-box">
 					<div class="stream-visual"><img src="./images/letters.svg" alt="Letters"></div>
 					<span><p>Humans have collectively spoken </p><b>0</b><p> words</p></span>
 					<i>0 books</i>
-					<span><i>1,500,000,000 per second</i><img onclick="viewSource(event)" src="../static-0/files/images/icons/source.svg" title="View source" alt="Source"></span>
+					<span class="stream-source"><i>1,200,000,000 per second</i><img onclick="viewSource(event)" src="../static-0/files/images/icons/source.svg" title="View source" alt="Source"></span>
 				</div>
-				<div id="bibles-printed" style="--back: #282221;--border: #5f4c48;" class="stream-box force-integer">
-					<div class="stream-visual"><img src="./images/book.svg" style="display: none;" alt="Book"><canvas class="image-2x"></canvas></div>
+				<div id="consumers-spent" style="--back:var(--sback-deepblue);--border:var(--sborder-deepblue);--backshadow:var(--sbackshadow-deepblue);--shadow:var(--sshadow-deepblue);" class="stream-box">
+					<div class="stream-visual"><img src="./images/money.svg" alt="Money"></div>
+					<span><p>Consumers have spent </p><b>0</b><p> USD globally</p></span>
+					<span class="stream-source"><i>1,400,000 USD per second</i><img onclick="viewSource(event)" src="../static-0/files/images/icons/source.svg" title="View source" alt="Source"></span>
+				</div>
+				<div id="bibles-printed" style="--back:var(--sback-deepblue);--border:var(--sborder-deepblue);--backshadow:var(--sbackshadow-deepblue);--shadow:var(--sshadow-deepblue);" class="stream-box force-integer">
+					<div class="stream-visual"><img src="./images/book.svg" style="display: none;" alt="Book"><canvas class="image-3x random-scale-1"></canvas></div>
 					<span><p></p><b>0</b><p> Bibles have been printed</p></span>
-					<span><i>152 per minute</i><img onclick="viewSource(event)" src="../static-0/files/images/icons/source.svg" title="View source" alt="Source"></span>
+					<span class="stream-source"><i>152 per minute</i><img onclick="viewSource(event)" src="/static/images/icons/source.svg" title="View source" alt="Source"></span>
+				</div>
+				<div id="people-contracted-a-cold" style="--back:var(--sback-deepblue);--border:var(--sborder-deepblue);--backshadow:var(--sbackshadow-deepblue);--shadow:var(--sshadow-deepblue);" class="stream-box">
+					<div class="stream-visual"><img src="./images/person.svg" alt="Person"></div>
+					<span><b>0</b><p> people have contracted a cold</p></span>
+					<span class="stream-source"><i>1,600 per second</i><img onclick="viewSource(event)" src="../static-0/files/images/icons/source.svg" title="View source" alt="Source"></span>
+				</div>
+				<div id="people-contracted-a-mosquito-borne-illness" style="--back:var(--sback-deepblue);--border:var(--sborder-deepblue);--backshadow:var(--sbackshadow-deepblue);--shadow:var(--sshadow-deepblue);" class="stream-box">
+					<div class="stream-visual"><img src="./images/person.png" style="display: none;" alt="Person"><canvas class="random-scale-1"></canvas></div>
+					<span><b>0</b><p> people have contracted a mosquito-borne illness</p></span>
+					<span class="stream-source"><i>22 per second</i><img onclick="viewSource(event)" src="../static-0/files/images/icons/source.svg" title="View source" alt="Source"></span>
+				</div>
+				<div id="people-contracted-pneumonia" style="--back:var(--sback-deepblue);--border:var(--sborder-deepblue);--backshadow:var(--sbackshadow-deepblue);--shadow:var(--sshadow-deepblue);" class="stream-box">
+					<div class="stream-visual"><img src="./images/person.png" style="display: none;" alt="Person"><canvas class="random-scale-1"></canvas></div>
+					<span><b>0</b><p> people have contracted pneumonia</p></span>
+					<span class="stream-source"><i>14 per second</i><img onclick="viewSource(event)" src="../static-0/files/images/icons/source.svg" title="View source" alt="Source"></span>
+				</div>
+				<div id="people-died-from-pneumonia" style="--back:var(--sback-deepblue);--border:var(--sborder-deepblue);--backshadow:var(--sbackshadow-deepblue);--shadow:var(--sshadow-deepblue);" class="stream-box force-integer">
+					<div class="stream-visual"><img src="./images/grave.png" alt="Gravestone"></div>
+					<span><b>0</b><p> people have died from pneumonia</p></span>
+					<span class="stream-source"><i>7.6 per minute</i><img onclick="viewSource(event)" src="/static/images/icons/source.svg" title="View source" alt="Source"></span>
+				</div>
+				<div id="new-businesses" style="--back:var(--sback-deepblue);--border:var(--sborder-deepblue);--backshadow:var(--sbackshadow-deepblue);--shadow:var(--sshadow-deepblue);" class="stream-box">
+					<div class="stream-visual"><img src="./images/shop.png" style="display: none;" alt="Shop"><canvas class="random-scale-1 image-2x"></canvas></div>
+					<span><b>0</b><p> new businesses have started</p></span>
+					<span class="stream-source"><i>95 per minute</i><img onclick="viewSource(event)" src="../static-0/files/images/icons/source.svg" title="View source" alt="Source"></span>
+				</div>
+				<div id="weddings" style="--back:var(--sback-deepblue);--border:var(--sborder-deepblue);--backshadow:var(--sbackshadow-deepblue);--shadow:var(--sshadow-deepblue);" class="stream-box force-integer">
+					<div class="stream-visual"><img src="./images/wedding.svg" alt="Wedding"></div>
+					<span><p>There have been </p><b>0</b><p> weddings</p></span>
+					<span class="stream-source"><i>80 per minute</i><img onclick="viewSource(event)" src="../static-0/files/images/icons/source.svg" title="View source" alt="Source"></span>
+				</div>
+				<div id="divorces" style="--back:var(--sback-deepblue);--border:var(--sborder-deepblue);--backshadow:var(--sbackshadow-deepblue);--shadow:var(--sshadow-deepblue);" class="stream-box force-integer">
+					<div class="stream-visual"><img src="./images/divorce.svg" alt="Divorce"></div>
+					<span><p>There have been </p><b>0</b><p> divorces</p></span>
+					<span class="stream-source"><i>14 per minute</i><img onclick="viewSource(event)" src="../static-0/files/images/icons/source.svg" title="View source" alt="Source"></span>
+				</div>
+				<div id="traffic-accidents" style="--back:var(--sback-deepblue);--border:var(--sborder-deepblue);--backshadow:var(--sbackshadow-deepblue);--shadow:var(--sshadow-deepblue);" class="stream-box force-integer">
+					<div class="stream-visual"><img src="./images/traffic-accident.svg" alt="Traffic accident"></div>
+					<span><p>There have been </p><b>0</b><p> traffic accidents</p></span>
+					<span class="stream-source"><i>17 per minute</i><img onclick="viewSource(event)" src="../static-0/files/images/icons/source.svg" title="View source" alt="Source"></span>
+				</div>
+				<div id="traffic-accident-injuries" style="--back:var(--sback-deepblue);--border:var(--sborder-deepblue);--backshadow:var(--sbackshadow-deepblue);--shadow:var(--sshadow-deepblue);" class="stream-box force-integer">
+					<div class="stream-visual"><img src="./images/traffic-accident-injuries.svg" alt="Traffic accident injuries"></div>
+					<span><b>0</b><p> people have been injured in a traffic accident</p></span>
+					<span class="stream-source"><i>8 per minute</i><img onclick="viewSource(event)" src="../static-0/files/images/icons/source.svg" title="View source" alt="Source"></span>
+				</div>
+				<div id="traffic-accident-deaths" style="--back:var(--sback-deepblue);--border:var(--sborder-deepblue);--backshadow:var(--sbackshadow-deepblue);--shadow:var(--sshadow-deepblue);" class="stream-box force-integer">
+					<div class="stream-visual"><img src="./images/traffic-accident-deaths.svg" alt="Traffic accident deaths"></div>
+					<span><b>0</b><p> people have died in a traffic accident</p></span>
+					<span class="stream-source"><i>11 per hour</i><img onclick="viewSource(event)" src="../static-0/files/images/icons/source.svg" title="View source" alt="Source"></span>
 				</div>
 			</div>
 			<i id="disclaimer">All data in this stream is an estimate.</i>
@@ -153,46 +265,69 @@
 			<h1 class="title">More Streams</h1>
 			<div id="more-streams">
 				<a href="/nowstream/nature" class="stream">
-					<div class="stream-thumbnail"><img src="../static-0/files/images/nowstream-nature.svg" alt="Nature - The NowStream by BlenderTimer"></div>
+					<div class="stream-thumbnail"><img src="/static/images/nowstream-thumbs/nowstream-nature.svg" alt="Nature - The NowStream by BlenderTimer"></div>
 					<b>Nature</b>
 					<div class="stream-description"><i>Things which are happening in nature right now!</i></div>
 				</a>
 				<a href="/nowstream/space" class="stream">
-					<div class="stream-thumbnail"><img src="../static-0/files/images/nowstream-space.svg" alt="Space - The NowStream by BlenderTimer"></div>
+					<div class="stream-thumbnail"><img src="/static/images/nowstream-thumbs/nowstream-space.svg" alt="Space - The NowStream by BlenderTimer"></div>
 					<b>Space</b>
 					<div class="stream-description"><i>Things which are happening in space right now!</i></div>
 				</a>
 				<a href="/nowstream/technology" class="stream">
-					<div class="stream-thumbnail"><img src="../static-0/files/images/nowstream-technology.svg" alt="Technology - The NowStream by BlenderTimer"></div>
+					<div class="stream-thumbnail"><img src="/static/images/nowstream-thumbs/nowstream-technology.svg" alt="Technology - The NowStream by BlenderTimer"></div>
 					<b>Technology</b>
 					<div class="stream-description"><i>Things which are happening with technology right now!</i></div>
 				</a>
 				<a href="/nowstream/you" class="stream">
-					<div class="stream-thumbnail"><img src="../static-0/files/images/nowstream-you.svg" alt="You - The NowStream by BlenderTimer"></div>
+					<div class="stream-thumbnail"><img src="/static/images/nowstream-thumbs/nowstream-you.svg" alt="You - The NowStream by BlenderTimer"></div>
 					<b>You</b>
 					<div class="stream-description"><i>Things which are happening with you right now!</i></div>
 				</a>
 			</div>
 			<br>
+			<div class="spr"></div>
 			<p>This stream shows how many things are happening all around the world RIGHT NOW! This stream includes:</p>
 			<br>
 			<ul>
-				<li><p>The amount of people who are born every day</p></li>
-				<li><p>The amount of people who die every day</p></li>
-				<li><p>The amount of people who stub their toe every second</p></li>
-				<li><p>The amount of sharks humans kill every second</p></li>
-				<li><p>The amount of water humans use every second</p></li>
-				<li><p>The amount of newspapers thrown away every second</p></li>
-				<li><p>The amount of children who go missing every day</p></li>
-				<li><p>The amount of road built every minute</p></li>
-				<li><p>The amount of people who are born every second</p></li>
-				<li><p>The distance humans collectively walk every second</p></li>
-				<li><p>The amount of food wasted every second</p></li>
-				<li><p>The amount of books published every hour</p></li>
-				<li><p>The amount of aircraft taking off every minute</p></li>
-				<li><p>The amount of commercial flights canceled every minute</p></li>
-				<li><p>The amount of words humans collectively speak every second</p></li>
-				<li><p>The amount of Bibles published every minute</p></li>
+				<li><p>The amount of people who are born every minute (about 267)</p></li>
+				<li><p>The amount of people who die every minute (about 120)</p></li>
+				<li><p>The amount of people who stub their toe every second (about 15,700)</p></li>
+				<li><p>The amount of people who sneeze every second (about 115,000)</p></li>
+				<li><p>The amount of sharks humans kill every second (about 6)</p></li>
+				<li><p>The amount of water humans use every second (about 136,000,000 liters)</p></li>
+				<li><p>The amount of newspapers thrown away every second (about 761)</p></li>
+				<li><p>The amount of magazines thrown away every second (about 11)</p></li>
+				<li><p>The amount of books thrown away every minute (about 3.8)</p></li>
+				<li><p>The amount of children who go missing every minute (about 15)</p></li>
+				<li><p>The amount of road built every minute (about 2.28 kilometers)</p></li>
+				<li><p>The distance vehicles collectively drive every second (about 1,160,000 kilometers)</p></li>
+				<li><p>The distance humans collectively walk every second (about 343,500 kilometers)</p></li>
+				<li><p>The amount of collective human heartbeats per second (about 9.6 billion)</p></li>
+				<li><p>The amount of collective human breaths per second (about 2 billion)</p></li>
+				<li><p>The amount of collective human blinks per second (about 2 billion)</p></li>
+				<li><p>The amount of collective human yawns per second (about 700,000)</p></li>
+				<li><p>The amount of people hitting snooze per second (about 127,000)</p></li>
+				<li><p>The amount of food wasted every second (about 37.4 tons)</p></li>
+				<li><p>The amount of books published every hour (about 252)</p></li>
+				<li><p>The amount of cars manufactured every second (about 2.9)</p></li>
+				<li><p>The amount of packages shipped every second (about 12,900)</p></li>
+				<li><p>The amount of aircraft taking off every minute (about 153)</p></li>
+				<li><p>The amount of airline flights taking off every minute (about 76)</p></li>
+				<li><p>The amount of airline flights canceled every hour (about 110)</p></li>
+				<li><p>The amount of words humans collectively speak every second (about 1.2 billion)</p></li>
+				<li><p>The amount of money consumers spent globally every second (about 1.4 million)</p></li>
+				<li><p>The amount of Bibles published every minute (about 152)</p></li>
+				<li><p>The amount of people who get a cold every second (about 1,600)</p></li>
+				<li><p>The amount of people who contract a mosquito-borne illness every second (about 22)</p></li>
+				<li><p>The amount of people who get pneumonia every second (about 14)</p></li>
+				<li><p>The amount of people who die from pneumonia every minute (about 7.6)</p></li>
+				<li><p>The amount of new businesses started every minute (about 95)</p></li>
+				<li><p>The amount of weddings every minute (about 80)</p></li>
+				<li><p>The amount of divorces every minute (about 14)</p></li>
+				<li><p>The amount of traffic accidents every minute (about 17)</p></li>
+				<li><p>The amount of injuries from traffic accidents every minute (about 8)</p></li>
+				<li><p>The amount of deaths from traffic accidents every hour (about 11)</p></li>
 			</ul>
 		</div>
 		<footer></footer>
@@ -205,21 +340,44 @@
 		<script src="./stream-main.js"></script>
 		<script type="text/javascript">
 			const sourceData = {
-				"people-born":"<p>The source gives a birth rate of </p><b>385,000 babies</b><p> per day.</p><div class='spr'></div><a href='https://www.theworldcounts.com/challenges/toxic-exposures/polluted-bodies/how-many-babies-are-born-a-day' target='_blank'>https://www.theworldcounts.com/challenges/toxic-exposures/polluted-bodies/how-many-babies-are-born-a-day</a>",
-				"people-died":"<p>The source gives a death rate of </p><b>170,790</b><p> deaths per day.</p><div class='spr'></div><a href='https://worldpopulationreview.com/countries/deaths-per-day' target='_blank'>https://worldpopulationreview.com/countries/deaths-per-day</a>",
-				"people-stubbed-toe":"<p>Based on the percentages and their time frame, around </p><b>15%</b><p> of the worlds population stubs their toe every day, this equates to </p><b>14,000 people</b><p> per second (averaging a population of </p><b>8.2 billion people</b><p>).</p><div class='spr'></div><a href='https://www.youtube.com/post/UgkxhsDaeoK-BhznsP3toH4FtkmuAT2qwneP' target='_blank'>https://www.youtube.com/post/UgkxhsDaeoK-BhznsP3toH4FtkmuAT2qwneP</a><a href='https://www.worldometers.info/world-population' target='_blank'>https://www.worldometers.info/world-population</a>",
-				"sharks-killed":"<p>The source gives a rate of </p><b>100 million sharks</b><p> per year. It also states that this number could be as high as </p><b>273 million sharks</b><p> per year. Averaging the two numbers we get about </p><b>6 sharks</b><p> per second.</p><div class='spr'></div><a href='https://www.nationalgeographic.com/culture/article/100-million-sharks-killed-every-year-study-shows-on-eve-of-international-conference-on-shark-protection' target='_blank'>https://www.nationalgeographic.com/culture/article/100-million-sharks-killed-every-year-study-shows-on-eve-of-international-conference-on-shark-protection</a>",
-				"water-used":"<p>The source states that humans use </p><b>10 billion tons</b><p> of freshwater per day.</p><div class='spr'></div><a href='https://www.theworldcounts.com/stories/average-daily-water-usage' target='_blank'>https://www.theworldcounts.com/stories/average-daily-water-usage</a>",
-				"newspapers-thrown-away":"<p>The source states that humans throw away </p><b>24 billion newspapers</b><p> per year.</p><div class='spr'></div><a href='https://www.depts.ttu.edu/housing/documents/sustainabilityToday/SustainabilityVolume1Issue3.pdf' target='_blank'>https://www.depts.ttu.edu/housing/documents/sustainabilityToday/SustainabilityVolume1Issue3.pdf</a>",
-				"children-missing":"<p>The source states that </p><b>8 million children</b><p> are reported missing worldwide each year.</p><div class='spr'></div><a href='https://www.linkedin.com/pulse/missing-abducted-children-dr-tyrone-s-cooper-sr--sh5je' target='_blank'>https://www.linkedin.com/pulse/missing-abducted-children-dr-tyrone-s-cooper-sr--sh5je</a>",
-				"road-built":"<p>The source states that </p><b>25 million kilometers</b><p> will be built/paved by 2050 (the article was written in September, 2023). Using the given time frame of 9,615 days we get a rate of </p><b>2,600 kilometers</b><p> of road built/paved per day.</p><div class='spr'></div><a href='https://www.depts.ttu.edu/housing/documents/sustainabilityToday/SustainabilityVolume1Issue3.pdf' target='_blank'>https://www.depts.ttu.edu/housing/documents/sustainabilityToday/SustainabilityVolume1Issue3.pdf</a>",
-				"humans-distance-walked":"<p>The first sources gives an average steps-per-day of </p><b>5,000</b><p>. The second source gives an average stride length of </p><b>2.1 to 2.5 feet</b><p>. Averaging a stride length of </p><b>2.3 feet</b><p>, this gives a rate of </p><b>3.5 kilometers</b><p> walked per person every day. Multiplying for the </p><b>8.2 billion</b><p> people on Earth gives a rate of </p><b>332,000 kilometers</b><p> per second.</p><div class='spr'></div><a href='https://www.aicr.org/news/globally-the-average-person-walks-about-5000-steps-per-day' target='_blank'>https://www.aicr.org/news/globally-the-average-person-walks-about-5000-steps-per-day</a><a href='https://www.chparks.com/411/How-To-Measure-Steps' target='_blank'>https://www.chparks.com/411/How-To-Measure-Steps</a><a href='https://www.worldometers.info/world-population' target='_blank'>https://www.worldometers.info/world-population</a>",
-				"food-wasted":"<p>The source gives a rate of </p><b>1.3 billion tons</b><p> of food wasted per year.</p><div class='spr'></div><a href='https://www.theworldcounts.com/challenges/people-and-poverty/hunger-and-obesity/food-waste-statistics' target='_blank'>https://www.theworldcounts.com/challenges/people-and-poverty/hunger-and-obesity/food-waste-statistics</a>",
-				"books-published":"<p>The source states that </p><b>2.2 million books</b><p> are published per year.</p><div class='spr'></div><a href='https://isbndb.com/blog/how-many-books-are-in-the-world' target='_blank'>https://isbndb.com/blog/how-many-books-are-in-the-world</a>",
-				"aircraft-taken-off":"<p>The source gives statistics for the number of daily flights. Using this data we can calculate around </p><b>153</b><p> aircraft take off per minute.</p><div class='spr'></div><a href='https://www.flightradar24.com/data/statistics' target='_blank'>https://www.flightradar24.com/data/statistics</a>",
-				"commercial-flights-canceled":"<p>The first source gives a cancellation rate of </p><b>0.8</b><p> to </p><b>1.2</b><p> percent of commercial flights. The second source's statistics give a daily commercial flight rate of </p><b>133,738.4388</b><p>. Averaging the percentage of canceled flights we can calculate around </p><b>1 canceled flight</b><p> per minute.</p><div class='spr'></div><a href='https://www.transportation.gov/briefing-room/2023-numbers-more-flights-fewer-cancellations-more-consumer-protections' target='_blank'>https://www.transportation.gov/briefing-room/2023-numbers-more-flights-fewer-cancellations-more-consumer-protections</a><a href='https://www.flightradar24.com/data/statistics' target='_blank'>https://www.flightradar24.com/data/statistics</a>",
-				"words-spoken":"<p>The first sources gives an average of </p><b>16,000</b><p> words spoken per person per day. Multiplying for the </p><b>8.2 billion</b><p> people on Earth gives a rate of around </p><b>1,500,000,000</b><p> words spoken per second.</p><div class='spr'></div><a href='https://wordsrated.com/how-many-words-does-the-average-person-say-a-day' target='_blank'>https://wordsrated.com/how-many-words-does-the-average-person-say-a-day</a><a href='https://www.worldometers.info/world-population' target='_blank'>https://www.worldometers.info/world-population</a>",
-				"bibles-printed":"<p>The source states that around </p><b>80 million</b><p> Bibles are published per year.</p><div class='spr'></div><a href='https://www.guinnessworldrecords.com/world-records/best-selling-book-of-non-fiction' target='_blank'>https://www.guinnessworldrecords.com/world-records/best-selling-book-of-non-fiction</a>",
+				"people-born":"<p>The source gives a birth rate of <b>385,000 babies</b> per day.</p><div class='spr'></div><a href='https://www.theworldcounts.com/challenges/toxic-exposures/polluted-bodies/how-many-babies-are-born-a-day' target='_blank'>https://www.theworldcounts.com/challenges/toxic-exposures/polluted-bodies/how-many-babies-are-born-a-day</a><br><i>Data last verified: November, 2025 (%time%)</i>",
+				"people-died":"<p>The source gives a death rate of <b>172,824</b> deaths per day.</p><div class='spr'></div><a href='https://worldpopulationreview.com/countries/deaths-per-day' target='_blank'>https://worldpopulationreview.com/countries/deaths-per-day</a><br><i>Data last verified: November, 2025 (%time%)</i>",
+				"people-stubbed-toe":"<p>The source gives a rate of <b>15,700</b> people that stub their toe per second.</p><div class='spr'></div><a href='https://blendertimer.com/data/how-many-people-stub-their-toe-every-day' target='_blank'>https://blendertimer.com/data/how-many-people-stub-their-toe-every-day</a><br><i>Data last verified: November, 2025 (%time%)</i>",
+				"people-sneezed":"<p>The first source states that people sneeze about <b>1.2 times</b> per day.</p><div class='spr'></div><a href='https://www.rhinologyjournal.com/Rhinology_issues/113.pdf' target='_blank'>https://www.rhinologyjournal.com/Rhinology_issues/113.pdf</a><a href='https://www.worldometers.info/world-population' target='_blank'>https://www.worldometers.info/world-population</a><br><i>Data last verified: November, 2025 (%time%)</i>",
+				"sharks-killed":"<p>The source gives a rate of <b>100 million sharks</b> per year. It also states that this number could be as high as <b>273 million sharks</b> per year. Averaging the two numbers we get about <b>6 sharks</b> per second.</p><div class='spr'></div><a href='https://www.nationalgeographic.com/culture/article/100-million-sharks-killed-every-year-study-shows-on-eve-of-international-conference-on-shark-protection' target='_blank'>https://www.nationalgeographic.com/culture/article/100-million-sharks-killed-every-year-study-shows-on-eve-of-international-conference-on-shark-protection</a><br><i>Data last verified: March, 2024 (%time%)</i>",
+				"water-used":"<p>The source states that humans use <b>4.3 trillion cubic meters</b> of freshwater per year.</p><div class='spr'></div><a href='https://www.theworldcounts.com/challenges/freshwater/are-we-running-out-of-water' target='_blank'>https://www.theworldcounts.com/challenges/freshwater/are-we-running-out-of-water</a><br><i>Data last verified: November, 2025 (%time%)</i>",
+				"newspapers-thrown-away":"<p>The source states that humans throw away <b>24 billion newspapers</b> per year.</p><div class='spr'></div><a href='https://www.depts.ttu.edu/housing/documents/sustainabilityToday/SustainabilityVolume1Issue3.pdf' target='_blank'>https://www.depts.ttu.edu/housing/documents/sustainabilityToday/SustainabilityVolume1Issue3.pdf</a><br><i>Data last verified: November, 2025 (%time%)</i>",
+				"magazines-thrown-away":"<p>The source states that humans throw away <b>350 million magazines</b> per year.</p><div class='spr'></div><a href='https://www.depts.ttu.edu/housing/documents/sustainabilityToday/SustainabilityVolume1Issue3.pdf' target='_blank'>https://www.depts.ttu.edu/housing/documents/sustainabilityToday/SustainabilityVolume1Issue3.pdf</a><br><i>Data last verified: November, 2025 (%time%)</i>",
+				"books-thrown-away":"<p>The source states that humans throw away <b>2 million books</b> per year.</p><div class='spr'></div><a href='https://www.depts.ttu.edu/housing/documents/sustainabilityToday/SustainabilityVolume1Issue3.pdf' target='_blank'>https://www.depts.ttu.edu/housing/documents/sustainabilityToday/SustainabilityVolume1Issue3.pdf</a><br><i>Data last verified: November, 2025 (%time%)</i>",
+				"children-missing":"<p>The source states that <b>8 million children</b> are reported missing worldwide each year.</p><div class='spr'></div><a href='https://www.linkedin.com/pulse/missing-abducted-children-dr-tyrone-s-cooper-sr--sh5je' target='_blank'>https://www.linkedin.com/pulse/missing-abducted-children-dr-tyrone-s-cooper-sr--sh5je</a><br><i>Data last verified: November, 2025 (%time%)</i>",
+				"road-built":"<p>The source states that more than <b>1.2 million kilometers</b> of road is built per year.</p><div class='spr'></div><a href='https://www.marketreportsworld.com/market-reports/road-construction-market-14720244' target='_blank'>https://www.marketreportsworld.com/market-reports/road-construction-market-14720244</a><br><i>Data last verified: November, 2025 (%time%)</i>",
+				"distance-drive":"<p>The source states that an estimated <b>36.5 trillion kilometers</b> is driven by vehicles per year.</p><div class='spr'></div><a href='https://documents1.worldbank.org/curated/en/099900312152317565/pdf/IDU-115208e8-423d-4381-b86e-5f35c138b74c.pdf' target='_blank'>https://documents1.worldbank.org/curated/en/099900312152317565/pdf/IDU-115208e8-423d-4381-b86e-5f35c138b74c.pdf</a><br><i>Data last verified: November, 2025 (%time%)</i>",
+				"humans-distance-walked":"<p>The first sources states that the average person takes <b>4,961</b> steps per day. The second source gives an average stride length of <b>79</b> centimeters for men and <b>66</b> centimeters for women, an average of <b>72.5</b> centimeters. This gives a rate of <b>3,597 meters</b> walked per person every day. Multiplying for the <b>8.25 billion</b> people on Earth gives a rate of about <b>343,500 kilometers</b> per second.</p><div class='spr'></div><a href='https://www.nature.com/articles/nature23018' target='_blank'>https://www.nature.com/articles/nature23018</a><a href='https://ouhsc.edu/bserdac/dthompso/web/gait/knmatics/stride.htm' target='_blank'>https://ouhsc.edu/bserdac/dthompso/web/gait/knmatics/stride.htm</a><a href='https://www.worldometers.info/world-population' target='_blank'>https://www.worldometers.info/world-population</a><br><i>Data last verified: November, 2025 (%time%)</i>",
+				"humans-heartbeats":"<p>The first sources states that the average person's heart rate is about <b>55 and 85</b> beats per minute (an average of <b>70</b>). Multiplying for the <b>8.25 billion</b> people on Earth gives a rate of about <b>9,600,000,000</b> heartbeats per second.</p><div class='spr'></div><a href='https://www.health.harvard.edu/heart-health/what-your-heart-rate-is-telling-you' target='_blank'>https://www.health.harvard.edu/heart-health/what-your-heart-rate-is-telling-you</a><a href='https://www.worldometers.info/world-population' target='_blank'>https://www.worldometers.info/world-population</a><br><i>Data last verified: November, 2025 (%time%)</i>",
+				"humans-breaths":"<p>The first sources states that the average person's respiratory rate is <b>12 to 18</b> breaths per minute (an average of <b>15</b>). Multiplying for the <b>8.25 billion</b> people on Earth gives a rate of about <b>2,000,000,000</b> breaths per second.</p><div class='spr'></div><a href='https://my.clevelandclinic.org/health/articles/10881-vital-signs' target='_blank'>https://my.clevelandclinic.org/health/articles/10881-vital-signs</a><a href='https://www.worldometers.info/world-population' target='_blank'>https://www.worldometers.info/world-population</a><br><i>Data last verified: November, 2025 (%time%)</i>",
+				"humans-blinked":"<p>The first sources gives a blinking rate of once every <b>4.0 seconds</b>. Multiplying for the <b>8.25 billion</b> people on Earth gives a rate of about <b>2,000,000,000</b> blinks per second.</p><div class='spr'></div><a href='https://jamanetwork.com/journals/jamaophthalmology/article-abstract/641677' target='_blank'>https://jamanetwork.com/journals/jamaophthalmology/article-abstract/641677</a><a href='https://www.worldometers.info/world-population' target='_blank'>https://www.worldometers.info/world-population</a><br><i>Data last verified: November, 2025 (%time%)</i>",
+				"humans-yawned":"<p>The first sources states that people yawn <b>5-10 times</b> per day. Averaging that to <b>7.5 times</b> and multiplying for the <b>8.25 billion</b> people on Earth gives a rate of about <b>61,000,000,000</b> yawns per day.</p><div class='spr'></div><a href='https://karger.com/books/book/2691/chapter/5762384/Popular-Knowledge-and-Beliefs' target='_blank'>https://karger.com/books/book/2691/chapter/5762384/Popular-Knowledge-and-Beliefs</a><a href='https://www.worldometers.info/world-population' target='_blank'>https://www.worldometers.info/world-population</a><br><i>Data last verified: November, 2025 (%time%)</i>",
+				"people-hit-snooze":"<p>The first sources states that <b>55.6%</b> of sleep sessions end with at least one snooze alarm and that for sleep sessions which do end with a snooze alarm the snooze alarm is pressed an average of <b>2.4 times</b>. Multiplying for the <b>8.25 billion</b> people on Earth gives a rate of about <b>11,008,800,000</b> snooze alarms presses per day.</p><div class='spr'></div><a href='https://www.nature.com/articles/s41598-025-99563-y' target='_blank'>https://www.nature.com/articles/s41598-025-99563-y</a><a href='https://www.worldometers.info/world-population' target='_blank'>https://www.worldometers.info/world-population</a><br><i>Data last verified: November, 2025 (%time%)</i>",
+				"food-wasted":"<p>The source gives a rate of <b>1.3 billion tons</b> of food wasted per year.</p><div class='spr'></div><a href='https://www.theworldcounts.com/challenges/people-and-poverty/hunger-and-obesity/food-waste-statistics' target='_blank'>https://www.theworldcounts.com/challenges/people-and-poverty/hunger-and-obesity/food-waste-statistics</a><br><i>Data last verified: November, 2025 (%time%)</i>",
+				"books-published":"<p>The source states that around <b>2,210,000</b> books are published per year.</p><div class='spr'></div><a href='https://en.wikipedia.org/wiki/Books_published_per_country_per_year' target='_blank'>https://en.wikipedia.org/wiki/Books_published_per_country_per_year</a><br><i>Data last verified: November, 2025 (%time%)</i>",
+				"cars-manufactured":"<p>The source gives a rate of <b>2.9 new cars</b> manufactured per second.</p><div class='spr'></div><a href='https://autokunbo.com/how-many-cars-are-made-per-day-2020-2025' target='_blank'>https://autokunbo.com/how-many-cars-are-made-per-day-2020-2025</a><br><i>Data last verified: November, 2025 (%time%)</i>",
+				"packages-shipped":"<p>The source states that around <b>407 billion</b> packages are shipped per year.</p><div class='spr'></div><a href='https://capitaloneshopping.com/research/package-delivery-statistics' target='_blank'>https://capitaloneshopping.com/research/package-delivery-statistics</a><br><i>Data last verified: November, 2025 (%time%)</i>",
+				"aircraft-taken-off":"<p>The source gives statistics for the number of daily flights. Using this data we can calculate around <b>153</b> aircraft take off per minute.</p><div class='spr'></div><a href='https://www.flightradar24.com/data/statistics' target='_blank'>https://www.flightradar24.com/data/statistics</a><br><i>Data last verified: March, 2024 (%time%)</i>",
+				"commercial-flights-canceled":"<p>The source gives a rate of around <b>40 million</b> airline flights per year.</p><div class='spr'></div><a href='https://www.statista.com/statistics/564769/airline-industry-number-of-flights' target='_blank'>https://www.statista.com/statistics/564769/airline-industry-number-of-flights</a><br><i>Data last verified: November, 2025 (%time%)</i>",
+				"commercial-flights-canceled":"<p>The first source states there are around <b>40 million</b> airline flights per year. The second source gives a cancellation rate of <b>1.5% to 3.2%</b>. Averaging the percentage to <b>2.4%</b> we get about <b>960,000 canceled flights</b> per year.</p><div class='spr'></div><a href='https://www.statista.com/statistics/564769/airline-industry-number-of-flights' target='_blank'>https://www.statista.com/statistics/564769/airline-industry-number-of-flights</a><a href='https://www.perk.com/blog/delayed-canceled-travel-statistics' target='_blank'>https://www.perk.com/blog/delayed-canceled-travel-statistics</a><br><i>Data last verified: November, 2025 (%time%)</i>",
+				"words-spoken":"<p>The first source gives rates of <b>11,950</b> words spoken per day by an average man and <b>13,349</b> words spoken per day by an average woman. Averaging <b>12,650</b> words spoken per person per day and multiplying for the <b>8.25 billion</b> people on Earth gives a rate of around <b>1,200,000,000</b> words spoken per second.</p><div class='spr'></div><a href='https://psycnet.apa.org/doiLanding?doi=10.1037%2Fpspp0000534' target='_blank'>https://psycnet.apa.org/doiLanding?doi=10.1037%2Fpspp0000534</a><a href='https://www.worldometers.info/world-population' target='_blank'>https://www.worldometers.info/world-population</a><br><i>Data last verified: November, 2025 (%time%)</i>",
+				"consumers-spent":"<p>The source gives a rate of <b>1.4 million USD</b> spent by consumers per second.</p><div class='spr'></div><a href='https://www.theworldcounts.com/economies/global/global-consumer-spending' target='_blank'>https://www.theworldcounts.com/economies/global/global-consumer-spending</a><br><i>Data last verified: November, 2025 (%time%)</i>",
+				"bibles-printed":"<p>The source states that around <b>80 million</b> Bibles are printed per year.</p><div class='spr'></div><a href='https://www.guinnessworldrecords.com/world-records/best-selling-book-of-non-fiction' target='_blank'>https://www.guinnessworldrecords.com/world-records/best-selling-book-of-non-fiction</a><br><i>Data last verified: November, 2025 (%time%)</i>",
+				"people-contracted-a-cold":"<p>The first source states that adults get <b>4 to 6 colds</b> per year and children get about <b>6 to 8 colds</b> per year (average of about <b>6 colds</b> per person per year).</p><div class='spr'></div><a href='https://pmc.ncbi.nlm.nih.gov/articles/PMC3215607' target='_blank'>https://pmc.ncbi.nlm.nih.gov/articles/PMC3215607</a><a href='https://www.worldometers.info/world-population' target='_blank'>https://www.worldometers.info/world-population</a><br><i>Data last verified: November, 2025 (%time%)</i>",
+				"people-contracted-a-mosquito-borne-illness":"<p>The source states that nearly <b>700 million</b> people contract mosquito-borne illnesses per year.</p><div class='spr'></div><a href='https://en.wikipedia.org/wiki/Mosquito-borne_disease' target='_blank'>https://en.wikipedia.org/wiki/Mosquito-borne_disease</a><br><i>Data last verified: November, 2025 (%time%)</i>",
+				"people-contracted-pneumonia":"<p>The source states that about <b>450 million</b> people contract pneumonia per year.</p><div class='spr'></div><a href='https://en.wikipedia.org/wiki/Pneumonia' target='_blank'>https://en.wikipedia.org/wiki/Pneumonia</a><br><i>Data last verified: November, 2025 (%time%)</i>",
+				"people-died-from-pneumonia":"<p>The source states that about <b>4 million</b> people die from pneumonia per year.</p><div class='spr'></div><a href='https://en.wikipedia.org/wiki/Pneumonia' target='_blank'>https://en.wikipedia.org/wiki/Pneumonia</a><br><i>Data last verified: November, 2025 (%time%)</i>",
+				"new-businesses":"<p>The source gives a rate of around <b>137,000</b> new startups every day.</p><div class='spr'></div><a href='https://www.demandsage.com/startup-statistics' target='_blank'>https://www.demandsage.com/startup-statistics</a><br><i>Data last verified: November, 2025 (%time%)</i>",
+				"weddings":"<p>The source gives a rate of around <b>115,000</b> weddings worldwide every day.</p><div class='spr'></div><a href='https://storyamour.com/blog/how-many-weddings-per-year' target='_blank'>https://storyamour.com/blog/how-many-weddings-per-year</a><br><i>Data last verified: November, 2025 (%time%)</i>",
+				"divorces":"<p>The first source states that in 2023 around <b>1.8 per 1,000 people</b> got divorced (about <b>14,850,000</b> people per year at the current world population). If we assume most divorces are between two people, that's <b>7,425,000</b> divorces per year.</p><div class='spr'></div><a href='https://divorce.com/blog/divorce-rates-in-the-world' target='_blank'>https://divorce.com/blog/divorce-rates-in-the-world</a><a href='https://www.worldometers.info/world-population' target='_blank'>https://www.worldometers.info/world-population</a><br><i>Data last verified: November, 2025 (%time%)</i>",
+				"traffic-accidents":"<p>The source gives a ton of traffic accident related data. The data used here is from 2019 and from 50 different countries. The total count is around <b>8,865,277</b> traffic accidents per year.</p><div class='spr'></div><a href='https://data-explorer.oecd.org/vis?fs[0]=Topic%2C0%7CTransport%23TRA%23&pg=0&fc=Topic&bp=true&snb=22&df[ds]=dsDisseminateFinalDMZ&df[id]=DSD_TRENDS%40DF_TRENDSSAFETY&df[ag]=OECD.ITF&df[vs]=1.0' target='_blank'>https://data-explorer.oecd.org/vis?fs[0]=Topic%2C0%7CTransport%23TRA%23&pg=0&fc=Topic&bp=true&snb=22&df[ds]=dsDisseminateFinalDMZ&df[id]=DSD_TRENDS%40DF_TRENDSSAFETY&df[ag]=OECD.ITF&df[vs]=1.0</a><br><i>Data last verified: November, 2025 (%time%)</i>",
+				"traffic-accident-injuries":"<p>The source gives a ton of traffic accident related data including injuries and deaths. The data used here is a yearly average from 2005-2024 and from ~56 different countries. The total count is around <b>4,214,896</b> traffic accident injuries per year.</p><div class='spr'></div><a href='https://w3.unece.org/PXWeb2015/pxweb/en/STAT/STAT__10-CountryOverviews__01-Figures/ZZZ_en_CoSummary_r.px' target='_blank'>https://w3.unece.org/PXWeb2015/pxweb/en/STAT/STAT__10-CountryOverviews__01-Figures/ZZZ_en_CoSummary_r.px</a><br><i>Data last verified: November, 2025 (%time%)</i>",
+				"traffic-accident-deaths":"<p>The source gives a ton of traffic accident related data including injuries and deaths. The data used here is a yearly average from 2005-2024 and from ~56 different countries. The total count is around <b>96,127</b> traffic accident deaths per year.</p><div class='spr'></div><a href='https://w3.unece.org/PXWeb2015/pxweb/en/STAT/STAT__10-CountryOverviews__01-Figures/ZZZ_en_CoSummary_r.px' target='_blank'>https://w3.unece.org/PXWeb2015/pxweb/en/STAT/STAT__10-CountryOverviews__01-Figures/ZZZ_en_CoSummary_r.px</a><br><i>Data last verified: November, 2025 (%time%)</i>",
 			};
 		</script>
 	</body>

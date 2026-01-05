@@ -15,9 +15,10 @@
 		<meta name="description" content="Check out the latest videos on the channel, shop for cool merch, check out some of the web tools, some factsheets, have some fun with web tools, learn about BlenderTimer in the FAQs, and much more!">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="icon" href="/favicon.png">
+		<link rel="stylesheet" type="text/css" href="/noindex/theme.css">
 		<link rel="stylesheet" type="text/css" href="/static/main.css">
 		<link rel="stylesheet" type="text/css" href="/static/home.css">
-		<script src="/static/videos.js"></script>
+		<script src="/noindex/bt-videos.js"></script>
 		<script src="/bt-js/bt-js.js"></script>
 	</head>
 	<body>
@@ -95,25 +96,25 @@
 				<span id="latest-videos-end"></span>
 				<div id="latest-videos-more"><a href="https://www.youtube.com/@BlenderTimer/videos">View More!</a></div>
 				<script type="text/javascript">
-					var limit = 50;
-					for (var i=videos.length-1; i >= 0; i-=1) {
+					let limit = 100;
+					for (let i=videos.length-1; i >= 0; i--) {
 						if (limit == 0) {break};
 						if (!(videos[i].hidden && videos[i].hidden == true)) {
 							var vb = document.createElement('a');
 							vb.className = "latest-video-block";
 							vb.id = "video-" + videos[i].id;
-							vb.href = "https://youtube.com/watch?v=" + videos[i].youtubeID;
+							vb.href = "https://youtube.com/watch?v=" + videos[i].youtubeId;
 							var vType = document.createElement('img');
 							vType.className = "latest-video-type";
 							if (videos[i].type == "short") {
 								vType.alt = "Short";
 								vType.title = "This video is a short.";
-								vType.src = "./static-0/files/images/videotype-short.png";
+								vType.src = "./static/images/icons/videotype-short.svg";
 							}
 							else {
 								vType.alt = "Full Video";
 								vType.title = "This is a full video.";
-								vType.src = "./static-0/files/images/videotype-fullvideo.png";
+								vType.src = "./static/images/icons/videotype-longform.svg";
 							}
 							var y = parseInt(videos[i].date.removeBefore("-", 1, true));
 							var m = parseInt(videos[i].date.removeBefore("-", 1).removeAfter("-", -1, true));
@@ -129,10 +130,10 @@
 							var vThumb = document.createElement('img');
 							vThumb.className = "latest-video-thumb";
 							vThumb.alt = "Thumbnail";
-							vThumb.src = "./video-sources/thumbnails/" + videos[i].tui + "-" + videos[i].name.toLowerCase().replaceAll(/ /g, "_").replaceAll(/\./g, "").replaceAll(/\!/g, "").replaceAll(/\?/g, "").replaceAll(/\,/g, "").replaceAll(/\'/g, "") + "-180.png";
+							vThumb.src = "./video-thumbnails/" + videos[i].id + "-small.png";
 							var vTitle = document.createElement('div');
 							vTitle.className = "latest-video-title";
-							vTitle.innerHTML = "<p>" + videos[i].name + "</p>"
+							vTitle.innerHTML = "<p>" + videos[i].title + "</p>"
 							vb.appendChild(vType);
 							vb.appendChild(vThumb);
 							vb.appendChild(vTitle);

@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en-US">
+	<head>
+		<!-- Google tag (gtag.js) -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-  SYR26MG6YV"></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
+			
+			gtag('config', 'G-SYR26MG6YV');
+		</script>
+		<meta charset="utf-8">
+		<title>BlenderTimer Video Sources</title>
+		<meta name="description" content="Data sources for BlenderTimer productions!">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="icon" href="/favicon.png">
+		<link rel="stylesheet" type="text/css" href="/noindex/theme.css">
+		<link rel="stylesheet" type="text/css" href="/static/main.css">
+		<link rel="stylesheet" type="text/css" href="/static/video-data-pages.css">
+		<script src="/noindex/bt-videos.js"></script>
+		<script src="/bt-js/bt-js.js"></script>
+		<script src="/static/video-data-pages.js"></script>
+	</head>
+	<body>
+		<header></header>
+		<script>
+			fetch('/noindex/header.html')
+				.then(response => response.text())
+				.then(data => {document.querySelector('header').innerHTML = data});
+		</script>
+		<script src="/noindex/pages.js"></script>
+		<noscript>
+			<div id="nojs" style="position: fixed; top: 0px; bottom: 0px; left: 0px; right: 0px; display: flex; flex-flow: column; justify-content: center; align-items: center; background: var(--bgcol); padding: 15px 20px; z-index: 1000000; cursor: default;">
+				<b style="font-family: sans-serif; font-size: 16pt; color: #FFF; text-align: center;">Page Failed to Load</b>
+				<p style="font-family: sans-serif; font-size: 14pt; color: #FFF6; text-align: center;">This website requires Javascript to operate.</p>
+			</div>
+		</noscript>
+		<div id="loader" style="width: 100%; height: calc(100% - 50px); top: 50px; left: 0px; position: fixed; z-index: -100000;">
+			<img alt="Loading" src="/static/images/loader.gif" style="width: 100px; height: 100px; position: fixed; left: calc(50% - 50px); top: calc(50% - 25px); filter: drop-shadow(0px 0px 15px #000000);">
+		</div>
+		<script>
+			const videoId = parseInt(new URL(window.location.toString()).searchParams.get("v")) || -1;
+			let id = -1;
+			for (let i=0; i < videos.length; i++) {if (videos[i].id == videoId) {id = i;break}};
+			const video = videos[id];
+			const videoFound = video == undefined ? false:true;
+			if (videoFound) {
+				document.title = video.title.removeAfter("-", -1, true).trim() + " - BlenderTimer Video Sources";
+				document.querySelector('meta[name="description"]').setAttribute('content', 'Data sources for the BlenderTimer production: ' + video.title);
+			}
+		</script>
+		<div id="popup-base" style="opacity: 0; pointer-events: none;" onmousedown="closePopup(event)">
+			<div id="popup" style="transform: scale(0);">
+				<img src="/static/images/icons/x.svg" alt="Close" id="popup-exit" onmousedown="closePopup(event)">
+			</div>
+		</div>
+		<div id="content-none" class="limwidth" style="display: none">
+			<h1>NO SOURCES</h1>
+			<p>This video either does not exist or is not registered in the database.</p>
+		</div>
+		<div id="content-main" class="limwidth" style="opacity: 0; transition: 0.5s">
+			<script>if (videoFound == false) {document.getElementById('content-none').style.display = null;document.getElementById('content-main').style.display = "none"}</script>
+			<div id="video-info">
+				<div id="video-info-left"><div id="thumbnail-container" onclick="viewThumbnail(event)"><div id="thumbnail-hover"><img src="/static/images/icons/zoom-in.svg" alt="Zoom in"></div></div></div>
+				<div id="video-info-right">
+					<h1 id="video-title"></h1>
+					<div id="video-details">
+						<div class="video-detail">
+							<p>Duration</p>
+							<b></b>
+						</div>
+						<div class="video-detail">
+							<p>Video URL</p>
+							<a target="_blank"></a>
+						</div>
+						<div class="video-detail">
+							<p>Format</p>
+							<div id="video-formats"></div>
+						</div>
+						<div class="video-detail">
+							<p>Upload date</p>
+							<b></b>
+						</div>
+					</div>
+				</div>
+			</div>
+			<script>
+				if (videoFound) {
+					let img = document.createElement('img');
+					img.src = "/video-thumbnails/" + video.id + "-small.png";
+					img.alt = video.title;
+					img.id = "thumbnail";
+					document.getElementById('thumbnail-container').prepend(img);
+					document.getElementById('video-title').innerHTML = video.title;
+					document.getElementById('video-details').children[0].children[1].innerHTML = video.duration;
+					document.getElementById('video-details').children[1].children[1].innerHTML = "https://youtu.be/" + video.youtubeId;
+					document.getElementById('video-details').children[1].children[1].href = "https://youtu.be/" + video.youtubeId;
+					document.getElementById('video-details').children[2].children[1].innerHTML = "<b>" + video.type.toProperCase() + "</b><b>" + video.resolution + "</b>";
+					document.getElementById('video-details').children[3].children[1].innerHTML = dateToString(video.date);
+				}
+			</script>
+			<div id="sources">
+				<h1>Sources</h1>
+				<div id="sources-columns">
+					<div id="info-sources"><div class="source-list-title"><img src="/static/images/icons/source.svg" alt="Source icon"><b>Information</b></div></div>
+					<div id="graphic-sources"><div class="source-list-title"><img src="/static/images/icons/bezier.svg" alt="Bezier icon"><b>Graphics</b></div></div>
+					<div id="audio-sources"><div class="source-list-title"><img src="/static/images/icons/speaker.svg" alt="Audio icon"><b>Audio</b></div></div>
+				</div>
+			</div>
+			<script>
+				if (videoFound) {
+					for (let i=0; i < video.info.length; i++) {
+						let s = video.info[i];
+						let source = document.createElement('div');
+						source.className = "source";
+						source.innerHTML = "<b>" + s.title + "</b>";
+						if (!(s.link == undefined)) {
+							source.innerHTML += "<a href=\"" + s.link + "\" target=\"_blank\">" + s.link + "</a>";
+						}
+						if (!(s.source == undefined)) {
+							source.innerHTML += "<i>" + s.source + "</i>";
+						}
+						document.getElementById('info-sources').appendChild(source);
+					}
+					if (document.getElementById('info-sources').children.length == 1) {
+						document.getElementById('info-sources').innerHTML += "<i>No sources</i>";
+					}
+					for (let i=0; i < video.graphics.length; i++) {
+						let s = video.graphics[i];
+						let source = document.createElement('div');
+						source.className = "source";
+						source.innerHTML = "<b>" + s.title + "</b>";
+						if (!(s.link == undefined)) {
+							source.innerHTML += "<a href=\"" + s.link + "\" target=\"_blank\">" + s.link + "</a>";
+						}
+						if (!(s.source == undefined)) {
+							source.innerHTML += "<i>" + s.source + "</i>";
+						}
+						document.getElementById('graphic-sources').appendChild(source);
+					}
+					if (document.getElementById('graphic-sources').children.length == 1) {
+						document.getElementById('graphic-sources').innerHTML += "<i>No sources</i>";
+					}
+					for (let i=0; i < video.audio.length; i++) {
+						let s = video.audio[i];
+						let source = document.createElement('div');
+						source.className = "source";
+						source.innerHTML = "<b>" + s.title + "</b>";
+						if (!(s.link == undefined)) {
+							source.innerHTML += "<a href=\"" + s.link + "\" target=\"_blank\">" + s.link + "</a>";
+						}
+						if (!(s.source == undefined)) {
+							source.innerHTML += "<i>" + s.source + "</i>";
+						}
+						document.getElementById('audio-sources').appendChild(source);
+					}
+					if (document.getElementById('audio-sources').children.length == 1) {
+						document.getElementById('audio-sources').innerHTML += "<i>No sources</i>";
+					}
+				}
+			</script>
+			<div id="statistics">
+				<h1>Statistics</h1>
+				<div id="statistic-list">
+					<div class="statistic">
+						<p>Views in the first 10 minutes</p>
+						<b></b>
+					</div>
+					<div class="statistic">
+						<p>Views in the first 30 minutes</p>
+						<b></b>
+					</div>
+					<div class="statistic">
+						<p>Views in the first hour</p>
+						<b></b>
+					</div>
+					<div class="statistic">
+						<p>Views in the first 24 hours</p>
+						<b></b>
+					</div>
+				</div>
+			</div>
+			<script>
+				if (videoFound) {
+					if (video.views10 == -1 || video.views30 == -1 || video.views1 == -1 || video.views24 == -1) {
+						document.getElementById('statistic-list').children[0].children[1].innerHTML = "NO DATA";
+						document.getElementById('statistic-list').children[1].children[1].innerHTML = "NO DATA";
+						document.getElementById('statistic-list').children[2].children[1].innerHTML = "NO DATA";
+						document.getElementById('statistic-list').children[3].children[1].innerHTML = "NO DATA";
+						document.getElementById('statistics').remove();
+					}
+					else {
+						document.getElementById('statistic-list').children[0].children[1].innerHTML = video.views10.toLocaleString();
+						document.getElementById('statistic-list').children[1].children[1].innerHTML = video.views30.toLocaleString();
+						document.getElementById('statistic-list').children[2].children[1].innerHTML = video.views1.toLocaleString();
+						document.getElementById('statistic-list').children[3].children[1].innerHTML = video.views24.toLocaleString();
+					}
+				}
+			</script>
+			<div id="subtitles">
+				<h1>Subtitles</h1>
+				<article id="closed-captions"></article>
+			</div>
+			<script>
+				if (videoFound) {
+					document.getElementById('closed-captions').innerHTML = video.subtitles;
+				}
+			</script>
+		</div>
+		<footer></footer>
+		<script>
+			fetch('/noindex/footer.html')
+				.then(response => response.text())
+				.then(data => {document.querySelector('footer').innerHTML = data});
+		</script>
+		<script src="/static/main.js"></script>
+		<script>if (videoFound == false) {document.getElementById('content-main').remove()} else {document.getElementById('content-none').remove()}</script>
+	</body>
+</html>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   viewBox="0 0 127.99999 128"
+   version="1.1"
+   id="svg8"
+   sodipodi:docname="discord-logo.svg"
+   inkscape:export-filename="discord-logo.png"
+   inkscape:export-xdpi="566.18237"
+   inkscape:export-ydpi="566.18237"
+   inkscape:version="1.4 (86a8ad7, 2024-10-11)"
+   width="128"
+   height="128"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs8" />
+  <sodipodi:namedview
+     id="namedview8"
+     pagecolor="#505050"
+     bordercolor="#ffffff"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="1"
+     inkscape:deskcolor="#505050"
+     inkscape:zoom="3.1926395"
+     inkscape:cx="93.339696"
+     inkscape:cy="57.162733"
+     inkscape:window-width="3440"
+     inkscape:window-height="1377"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg8" />
+  <rect
+     style="opacity:1;fill:#5865f2;fill-opacity:1;stroke-width:1.48758;stroke-linecap:round;stroke-linejoin:round;paint-order:markers fill stroke"
+     id="rect1"
+     width="124.97496"
+     height="124.97496"
+     x="1.5125198"
+     y="1.5125198"
+     ry="19.570679" />
+  <path
+     d="m 95.823774,35.075051 a 75.827938,75.827938 0 0 0 -18.915518,-5.819605 51.965391,51.965391 0 0 0 -2.423032,4.925391 70.441015,70.441015 0 0 0 -20.992403,0 52.188944,52.188944 0 0 0 -2.423032,-4.925391 76.361579,76.361579 0 0 0 -18.929941,5.834028 c -11.970934,17.711212 -15.216067,34.98253 -13.5935,52.008662 v 0 A 76.246194,76.246194 0 0 0 41.745441,98.744557 56.032628,56.032628 0 0 0 46.7141,90.732681 49.340438,49.340438 0 0 1 38.889724,86.997175 c 0.656238,-0.475956 1.298053,-0.966327 1.918234,-1.442284 a 54.496596,54.496596 0 0 0 46.383763,0 c 0.627389,0.512014 1.269204,1.002391 1.918231,1.442284 a 49.527939,49.527939 0 0 1 -7.838796,3.742719 55.527826,55.527826 0 0 0 4.968657,8.004663 75.900048,75.900048 0 0 0 23.213507,-11.639209 v 0 C 111.35714,67.360516 106.20098,50.247849 95.823774,35.075051 Z M 48.76935,76.627175 c -4.521551,0 -8.25706,-4.103289 -8.25706,-9.151274 0,-5.047989 3.605703,-9.187336 8.242637,-9.187336 4.636933,0 8.343599,4.139347 8.264271,9.187336 -0.07932,5.047985 -3.641758,9.151274 -8.249848,9.151274 z m 30.460978,0 c -4.528763,0 -8.249849,-4.103289 -8.249849,-9.151274 0,-5.047989 3.605705,-9.187336 8.249849,-9.187336 4.644143,0 8.321964,4.139347 8.242641,9.187336 -0.07933,5.047985 -3.63455,9.151274 -8.242641,9.151274 z"
+     id="path7"
+     style="fill:#ffffff;fill-opacity:1;stroke-width:0.721142" />
+</svg>

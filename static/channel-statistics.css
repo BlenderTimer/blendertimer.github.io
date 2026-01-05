@@ -59,7 +59,7 @@
 	align-content: center;
 	width: 100%;
 	overflow: hidden;
-	background: var(--semi-far-back);
+	background: var(--bgcol);
 }
 
 #stats iframe {
@@ -71,5 +71,5 @@
 	border: none;
 	outline: none;
 	overflow: hidden;
-	background: var(--semi-far-back);
+	background: var(--bgcol);
 }

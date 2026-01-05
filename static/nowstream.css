@@ -9,30 +9,36 @@
 	display: flex;
 	align-items: stretch;
 	align-content: flex-start;
+	justify-content: center;
+	width: calc(100% + 12px);
 	flex-wrap: wrap;
-	width: calc(100% + 16px);
-	margin: 10px -8px 0px -8px;
+	margin: 0px -5px;
 }
 
 .stream {
 	display: flex !important;
 	flex-flow: column;
 	align-items: center;
-	justify-content: space-between;
-	width: calc(20% - 6px);
-	margin: 3px !important;
-	background: var(--base-back);
-	border: 2px solid var(--closer-back);
-	border-radius: 5px;
-	padding: 10px;
+	justify-content: space-evenly;
+	width: calc(20% - 12px);
+	background: var(--wincol);
+	border: 2px solid var(--wincol-lighten);
+	border-radius: var(--cors);
 	box-sizing: border-box;
-	text-shadow: none !important;
+	padding: 5px 8px;
+	cursor: pointer !important;
+	margin: 6px !important;
+	position: relative;
+	transition: var(--trans-fast) !important;
 }
 
 .stream:hover {
-	background: var(--close-back);
-	border: 2px solid var(--italic-text);
-	transform: scale(1.03);
+	text-shadow: none !important;
+	background: var(--wincol-lighter);
+	transform: scale(1.05);
+	box-shadow: 0px 0px 10px var(--wincol-lighten);
+	text-decoration: none !important;
+	z-index: 100;
 }
 
 .stream-thumbnail {
@@ -41,6 +47,7 @@
 	justify-content: center;
 	width: 100%;
 	margin-bottom: 5px;
+	pointer-events: none;
 }
 
 .stream-thumbnail img {
@@ -50,50 +57,42 @@
 }
 
 .stream b {
-	display: block;
-	width: 100% !important;
+	display: block !important;
+	color: var(--txtcol) !important;
+	font-size: 15pt !important;
 	text-align: center;
-	color: var(--theme4) !important;
-	text-shadow: 0px 0px 7px var(--theme1);
-	font-size: 14pt !important;
-}
-
-#content-main p {
-	color: var(--base-text);
-}
-
-#content-main i {
-	color: var(--italic-text);
+	pointer-events: none;
+	margin: 4px 0px;
 }
 
 .stream-description {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	margin-top: 2px;
+	margin: 4px 0px 8px 0px;
 }
 
 .stream-description i {
-	color: var(--italic-text) !important;
+	color: var(--txtcol-subtle) !important;
 	font-size: 12pt !important;
 	text-align: center;
 }
 
 @media screen and (max-width: 1100px) {
 	.stream {
-		width: calc(25% - 6px);
+		width: calc(25% - 12px);
 	}
 }
 
 @media screen and (max-width: 800px) {
 	.stream {
-		width: calc(33.33% - 6px);
+		width: calc(33.33% - 12px);
 	}
 }
 
 @media screen and (max-width: 600px) {
 	.stream {
-		width: calc(50% - 6px);
+		width: calc(50% - 12px);
 	}
 }
 

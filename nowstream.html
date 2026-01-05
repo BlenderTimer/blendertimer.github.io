@@ -15,6 +15,7 @@
 		<meta name="description" content="Visualizations of things that are happening all around you!">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="icon" href="/favicon.png" type="image/x-icon">
+		<link rel="stylesheet" type="text/css" href="/noindex/theme.css">
 		<link rel="stylesheet" type="text/css" href="/static/main.css">
 		<link rel="stylesheet" type="text/css" href="/static/nowstream.css">
 		<script src="/bt-js/bt-js.js"></script>
@@ -36,7 +37,7 @@
 		<div id="loader" style="width: 100%; height: calc(100% - 50px); top: 50px; left: 0px; position: fixed; z-index: -100000;">
 			<img alt="Loading" src="/static/images/loader.gif" style="width: 100px; height: 100px; position: fixed; left: calc(50% - 50px); top: calc(50% - 25px); filter: drop-shadow(0px 0px 15px #000000);">
 		</div>
-		<div id="content-main" style="opacity: 0; transition: 0.5s">
+		<div id="content-main" class="limwidth" style="opacity: 0; transition: 0.5s">
 			<img id="ns-logo" src="./static-0/files/images/nowstream.svg" alt="The NowStream logo">
 			<p class="description">Visualizations of things that are happening all around you!</p>
 			<div id="stream-list">

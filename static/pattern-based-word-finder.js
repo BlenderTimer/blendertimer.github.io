@@ -73,17 +73,17 @@ function checkURL() {
 	if (url.indexOf("?") > -1) {
 		if (url.removeBefore("?", 1, true).startsWith("spanish") || url.removeBefore("?", 1, true).startsWith("es")) {
 			importLanguageDictionary("spanish");
-			document.getElementById("lang-spanish").style.background = "var(--hover-back2)";
+			document.getElementById("lang-spanish").style.background = "var(--wincol-lighter)";
 			spanishLoad = true;
 		}
 		else if (url.removeBefore("?", 1, true).startsWith("fr")) {
 			importLanguageDictionary("french");
-			document.getElementById("lang-french").style.background = "var(--hover-back2)";
+			document.getElementById("lang-french").style.background = "var(--wincol-lighter)";
 			frenchLoad = true;
 		}
 		else if (url.removeBefore("?", 1, true).startsWith("german") || url.removeBefore("?", 1, true).startsWith("de")) {
 			importLanguageDictionary("german");
-			document.getElementById("lang-german").style.background = "var(--hover-back2)";
+			document.getElementById("lang-german").style.background = "var(--wincol-lighter)";
 			germanLoad = true;
 		}
 		else if (url.removeBefore("?", 1, true).startsWith("custom")) {
@@ -91,13 +91,13 @@ function checkURL() {
 		}
 		else {
 			importLanguageDictionary("english");
-			document.getElementById("lang-english").style.background = "var(--hover-back2)";
+			document.getElementById("lang-english").style.background = "var(--wincol-lighter)";
 			englishLoad = true;
 		}
 	}
 	else {
 		importLanguageDictionary("english");
-		document.getElementById("lang-english").style.background = "var(--hover-back2)";
+		document.getElementById("lang-english").style.background = "var(--wincol-lighter)";
 		englishLoad = true;
 	}
 }
@@ -105,7 +105,7 @@ function checkURL() {
 function importLanguageDictionary(lang) {
 	if (lang == "custom") {
 		document.getElementById("custom-list-base").style.display = null;
-		document.getElementById("lang-custom").style.background = "var(--hover-back2)";
+		document.getElementById("lang-custom").style.background = "var(--wincol-lighter)";
 	}
 	else {
 		var ld = document.createElement('i');
@@ -128,44 +128,44 @@ function setLanguage(event) {
 	if (lang == "english") {
 		if (englishLoad == false) {
 			importLanguageDictionary(lang);
-			element.style.background = "var(--hover-back2)";
+			element.style.background = "var(--wincol-lighter)";
 			englishLoad = true;
 		}
 		else {
-			element.style.background = "var(--hover-back2)";
+			element.style.background = "var(--wincol-lighter)";
 			englishLoad = true;
 		}
 	}
 	else if (lang == "spanish") {
 		if (spanishLoad == false) {
 			importLanguageDictionary(lang);
-			element.style.background = "var(--hover-back2)";
+			element.style.background = "var(--wincol-lighter)";
 			spanishLoad = true;
 		}
 		else {
-			element.style.background = "var(--hover-back2)";
+			element.style.background = "var(--wincol-lighter)";
 			spanishLoad = true;
 		}
 	}
 	else if (lang == "french") {
 		if (frenchLoad == false) {
 			importLanguageDictionary(lang);
-			element.style.background = "var(--hover-back2)";
+			element.style.background = "var(--wincol-lighter)";
 			frenchLoad = true;
 		}
 		else {
-			element.style.background = "var(--hover-back2)";
+			element.style.background = "var(--wincol-lighter)";
 			frenchLoad = true;
 		}
 	}
 	else if (lang == "german") {
 		if (germanLoad == false) {
 			importLanguageDictionary(lang);
-			element.style.background = "var(--hover-back2)";
+			element.style.background = "var(--wincol-lighter)";
 			germanLoad = true;
 		}
 		else {
-			element.style.background = "var(--hover-back2)";
+			element.style.background = "var(--wincol-lighter)";
 			germanLoad = true;
 		}
 	}
@@ -931,10 +931,10 @@ function setCustomSeparator(e) {
 		s.style.background = null;
 	}
 	if (element.tagName == "INPUT") {
-		element.parentNode.style.background = "var(--hover-back2)";
+		element.parentNode.style.background = "var(--wincol-lighter)";
 	}
 	else {
-		element.style.background = "var(--hover-back2)";
+		element.style.background = "var(--wincol-lighter)";
 	}
 }
 

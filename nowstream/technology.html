@@ -22,6 +22,7 @@
 		<meta name="description" content="A live visualization of things which are happening with technology right now!">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="icon" href="/favicon.png" type="image/x-icon">
+		<link rel="stylesheet" type="text/css" href="/noindex/theme.css">
 		<link rel="stylesheet" type="text/css" href="/static/main.css">
 		<link rel="stylesheet" type="text/css" href="./stream-main.css">
 		<script src="/bt-js/bt-js.js"></script>
@@ -35,7 +36,7 @@
 		</script>
 		<script src="/noindex/pages.js"></script>
 		<noscript>
-			<div id="nojs" style="position: fixed; top: 0px; bottom: 0px; left: 0px; right: 0px; display: flex; flex-flow: column; justify-content: center; align-items: center; background: var(--semi-back); padding: 15px 20px; z-index: 1000000; cursor: default;">
+			<div id="nojs" style="position: fixed; top: 0px; bottom: 0px; left: 0px; right: 0px; display: flex; flex-flow: column; justify-content: center; align-items: center; background: var(--bgcol); padding: 15px 20px; z-index: 1000000; cursor: default;">
 				<b style="font-family: sans-serif; font-size: 16pt; color: #FFF; text-align: center;">Page Failed to Load</b>
 				<p style="font-family: sans-serif; font-size: 14pt; color: #FFF6; text-align: center;">This website requires Javascript to operate.</p>
 			</div>
@@ -43,68 +44,174 @@
 		<div id="loader" style="width: 100%; height: calc(100% - 50px); top: 50px; left: 0px; position: fixed; z-index: -100000;">
 			<img alt="Loading" src="/static/images/loader.gif" style="width: 100px; height: 100px; position: fixed; left: calc(50% - 50px); top: calc(50% - 25px); filter: drop-shadow(0px 0px 15px #000000);">
 		</div>
-		<div id="source-popup-back" onclick="closeSourcePopup()" style="opacity: 0; pointer-events: none;"></div>
-		<div id="source-popup-container" style="opacity: 0">
-			<div id="source-popup-main" style="pointer-events: none; user-select: none; transform: scale(0)">
-				<img id="source-popup-close" alt="Close" src="../static-0/files/images/icons/x.svg" onclick="closeSourcePopup()">
-				<div id="source-popup" style="display: flex">
-					<h1>Sources</h1>
-					<div class="popup-scroll"></div>
-				</div>
+		<div id="popup-base" style="opacity: 0; pointer-events: none;" onmousedown="closePopup(event)">
+			<div id="popup" style="transform: scale(0);">
+				<img src="/static-0/files/images/close.svg" id="popup-exit" onmousedown="closePopup(event)">
+				<div id="popup-text"></div>
 			</div>
 		</div>
-		<div id="content-main" style="opacity: 0; transition: 0.5s">
-			<div id="stream-header">
-				<div>
-					<a href="/nowstream"><img src="../static-0/files/images/nowstream.svg" alt="The NowStream logo"></a>
+		<div id="content-main" class="limwidth" style="opacity: 0; transition: 0.5s">
+			<div class="article-header">
+				<div id="stream-header">
+					<a href="/nowstream"><img src="/static/images/nowstream.svg" alt="The NowStream logo"></a>
 					<span><i id="sh-slash">/</i><i>Technology</i></span>
 				</div>
+				<i class="article-subtitle">Things which are happening with technology right now!</i>
 			</div>
-			<p class="description">Things which are happening with technology right now!</p>
 			<div id="page-load-time">
 				<i></i>
 				<b></b>
 			</div>
 			<div id="stream-container">
-				<div id="phone-calls" style="--back: #25332a;--border: #389562;" class="stream-box">
+				<div id="phone-calls" style="--back:var(--sback-deepblue);--border:var(--sborder-deepblue);--backshadow:var(--sbackshadow-deepblue);--shadow:var(--sshadow-deepblue);" class="stream-box">
 					<div class="stream-visual"><img src="./images/phone-calling.svg" alt="Phone calling"></div>
 					<span><b>0</b><p> phone calls have been made</p></span>
-					<span><i>156,250 per second</i><img onclick="viewSource(event)" src="../static-0/files/images/icons/source.svg" title="View source" alt="Source"></span>
+					<span class="stream-source"><i>156,250 per second</i><img onclick="viewSource(event)" src="/static/images/icons/source.svg" title="View source" alt="Source"></span>
 				</div>
-				<div id="data-created" style="--back: #202b28;--border: #60977f;" class="stream-box">
+				<div id="data-created" style="--back:var(--sback-deepblue);--border:var(--sborder-deepblue);--backshadow:var(--sbackshadow-deepblue);--shadow:var(--sshadow-deepblue);" class="stream-box">
 					<div class="stream-visual"><img src="./images/supercomputer.svg" alt="Supercomputer"></div>
 					<span><b>0</b><p> terabytes of data has been created</p></span>
-					<span><i>4661tb per second</i><img onclick="viewSource(event)" src="../static-0/files/images/icons/source.svg" title="View source" alt="Source"></span>
+					<span class="stream-source"><i>4,700TB per second</i><img onclick="viewSource(event)" src="/static/images/icons/source.svg" title="View source" alt="Source"></span>
 				</div>
-				<div id="photos-captured" style="--back: #3f3b3b;--border: #837f7f;" class="stream-box">
+				<div id="photos-captured" style="--back:var(--sback-deepblue);--border:var(--sborder-deepblue);--backshadow:var(--sbackshadow-deepblue);--shadow:var(--sshadow-deepblue);" class="stream-box">
 					<div class="stream-visual"><img src="./images/camera.svg" alt="Camera"></div>
 					<span><b>0</b><p> photos have been captured</p></span>
-					<span><i>61,400 per second</i><img onclick="viewSource(event)" src="../static-0/files/images/icons/source.svg" title="View source" alt="Source"></span>
+					<span class="stream-source"><i>61,591 per second</i><img onclick="viewSource(event)" src="/static/images/icons/source.svg" title="View source" alt="Source"></span>
 				</div>
-				<div id="emails-sent" style="--back: #1f282d;--border: #4a7278;" class="stream-box">
+				<div id="selfies-taken" style="--back:var(--sback-deepblue);--border:var(--sborder-deepblue);--backshadow:var(--sbackshadow-deepblue);--shadow:var(--sshadow-deepblue);" class="stream-box">
+					<div class="stream-visual"><img src="./images/phone.png" style="display: none;" alt="Smartphone"><canvas class="fade-2x image-0.5x"></canvas></div>
+					<span><b>0</b><p> selfies have been taken</p></span>
+					<span class="stream-source"><i>466 per second</i><img onclick="viewSource(event)" src="/static/images/icons/source.svg" title="View source" alt="Source"></span>
+				</div>
+				<div id="surveillance-video-captured" style="--back:var(--sback-deepblue);--border:var(--sborder-deepblue);--backshadow:var(--sbackshadow-deepblue);--shadow:var(--sshadow-deepblue);" class="stream-box">
+					<div class="stream-visual"><img src="./images/security-camera.svg" alt="Security camera"></div>
+					<span><b>0</b><p> years of surveillance video has been captured</p></span>
+					<span class="stream-source"><i>45 years per second</i><img onclick="viewSource(event)" src="/static/images/icons/source.svg" title="View source" alt="Source"></span>
+				</div>
+				<div id="emails-sent" style="--back:var(--sback-deepblue);--border:var(--sborder-deepblue);--backshadow:var(--sbackshadow-deepblue);--shadow:var(--sshadow-deepblue);" class="stream-box">
 					<div class="stream-visual"><img src="./images/email.svg" alt="Email"></div>
 					<span><b>0</b><p> emails have been sent</p></span>
-					<span><i>4,019,676 per second</i><img onclick="viewSource(event)" src="../static-0/files/images/icons/source.svg" title="View source" alt="Source"></span>
+					<span class="stream-source"><i>4,360,000 per second</i><img onclick="viewSource(event)" src="/static/images/icons/source.svg" title="View source" alt="Source"></span>
 				</div>
-				<div id="mobile-messages-sent" style="--back: #1e242d;--border: #7480a2;" class="stream-box">
+				<div id="text-messages-sent" style="--back:var(--sback-deepblue);--border:var(--sborder-deepblue);--backshadow:var(--sbackshadow-deepblue);--shadow:var(--sshadow-deepblue);" class="stream-box">
 					<div class="stream-visual"><img src="./images/mobile-messages.svg" alt="Mobile messages"></div>
-					<span><b>0</b><p> mobile messages have been sent</p></span>
-					<span><i>1,428,000 per second</i><img onclick="viewSource(event)" src="../static-0/files/images/icons/source.svg" title="View source" alt="Source"></span>
+					<span><b>0</b><p> text messages have been sent</p></span>
+					<span class="stream-source"><i>289,000 per second</i><img onclick="viewSource(event)" src="/static/images/icons/source.svg" title="View source" alt="Source"></span>
 				</div>
-				<div id="google-searches" style="--back: #1f282d;--border: #4a7278;" class="stream-box">
+				<div id="whatsapp-messages-sent" style="--back:var(--sback-deepblue);--border:var(--sborder-deepblue);--backshadow:var(--sbackshadow-deepblue);--shadow:var(--sshadow-deepblue);" class="stream-box">
+					<div class="stream-visual"><img src="./images/whatsapp-logo.svg" alt="WhatsApp logo"></div>
+					<span><b>0</b><p> WhatsApp messages have been sent</p></span>
+					<span class="stream-source"><i>1,620,000 per second</i><img onclick="viewSource(event)" src="/static/images/icons/source.svg" title="View source" alt="Source"></span>
+				</div>
+				<div id="facebook-messenger-messages-sent" style="--back:var(--sback-deepblue);--border:var(--sborder-deepblue);--backshadow:var(--sbackshadow-deepblue);--shadow:var(--sshadow-deepblue);" class="stream-box">
+					<div class="stream-visual"><img src="./images/facebook-messenger-logo.svg" alt="Facebook Messenger logo"></div>
+					<span><b>0</b><p> Facebook Messenger messages have been sent</p></span>
+					<span class="stream-source"><i>1,160,000 per second</i><img onclick="viewSource(event)" src="/static/images/icons/source.svg" title="View source" alt="Source"></span>
+				</div>
+				<div id="wechat-messages-sent" style="--back:var(--sback-deepblue);--border:var(--sborder-deepblue);--backshadow:var(--sbackshadow-deepblue);--shadow:var(--sshadow-deepblue);" class="stream-box">
+					<div class="stream-visual"><img src="./images/wechat-logo.svg" alt="WeChat logo"></div>
+					<span><b>0</b><p> WeChat messages have been sent</p></span>
+					<span class="stream-source"><i>521,000 per second</i><img onclick="viewSource(event)" src="/static/images/icons/source.svg" title="View source" alt="Source"></span>
+				</div>
+				<div id="mobile-messages-sent" style="--back:var(--sback-deepblue);--border:var(--sborder-deepblue);--backshadow:var(--sbackshadow-deepblue);--shadow:var(--sshadow-deepblue);" class="stream-box">
+					<div class="stream-visual"><img src="./images/mobile-messages.svg" alt="Mobile messages"></div>
+					<span><b>0</b><p> total mobile messages have been sent</p></span>
+					<span class="stream-source"><i>3,590,000 per second</i><img onclick="viewSource(event)" src="/static/images/icons/source.svg" title="View source" alt="Source"></span>
+				</div>
+				<div id="discord-messages-sent" style="--back:var(--sback-deepblue);--border:var(--sborder-deepblue);--backshadow:var(--sbackshadow-deepblue);--shadow:var(--sshadow-deepblue);" class="stream-box">
+					<div class="stream-visual"><img src="./images/discord-logo.svg" alt="Discord logo"></div>
+					<span><b>0</b><p> Discord messages have been sent</p></span>
+					<span class="stream-source"><i>46,300 per second</i><img onclick="viewSource(event)" src="/static/images/icons/source.svg" title="View source" alt="Source"></span>
+				</div>
+				<div id="tweets" style="--back:var(--sback-deepblue);--border:var(--sborder-deepblue);--backshadow:var(--sbackshadow-deepblue);--shadow:var(--sshadow-deepblue);" class="stream-box">
+					<div class="stream-visual"><img src="./images/twitter-logo.svg" alt="Twitter/X logo"></div>
+					<span><b>0</b><p> tweets posted on X</p></span>
+					<span class="stream-source"><i>5,800 per second</i><img onclick="viewSource(event)" src="/static/images/icons/source.svg" title="View source" alt="Source"></span>
+				</div>
+				<div id="google-searches" style="--back:var(--sback-deepblue);--border:var(--sborder-deepblue);--backshadow:var(--sbackshadow-deepblue);--shadow:var(--sshadow-deepblue);" class="stream-box">
 					<div class="stream-visual"><img src="./images/google-searches.svg" alt="Google searches"></div>
 					<span><b>0</b><p> Google searches have been performed</p></span>
-					<span><i>99,000 per second</i><img onclick="viewSource(event)" src="../static-0/files/images/icons/source.svg" title="View source" alt="Source"></span>
+					<span class="stream-source"><i>189,815 per second</i><img onclick="viewSource(event)" src="/static/images/icons/source.svg" title="View source" alt="Source"></span>
 				</div>
-				<div id="youtube-videos" style="--back: #361616;--border: #bd2a3a;" class="stream-box">
-					<div class="stream-visual"><img src="./images/youtube-icon-small-shadow.png" style="display: none;" alt="YouTube icon with shadow"><canvas class="random-scale-3 fade-2x anim-in"></canvas></div>
+				<div id="googled-google" style="--back:var(--sback-deepblue);--border:var(--sborder-deepblue);--backshadow:var(--sbackshadow-deepblue);--shadow:var(--sshadow-deepblue);" class="stream-box">
+					<div class="stream-visual"><img src="./images/google-logo.png" style="display: none;" alt="Google logo"><canvas class="random-scale-3 fade-1.5x"></canvas></div>
+					<span><b>0</b><p> people have googled "google"</p></span>
+					<span class="stream-source"><i>48 per second</i><img onclick="viewSource(event)" src="/static/images/icons/source.svg" title="View source" alt="Source"></span>
+				</div>
+				<div id="googled-the" style="--back:var(--sback-deepblue);--border:var(--sborder-deepblue);--backshadow:var(--sbackshadow-deepblue);--shadow:var(--sshadow-deepblue);" class="stream-box">
+					<div class="stream-visual"><img src="./images/the.png" style="display: none;" alt='Text "the"'><canvas class="random-scale-3"></canvas></div>
+					<span><b>0</b><p> people have googled "the"</p></span>
+					<span class="stream-source"><i>5 per second</i><img onclick="viewSource(event)" src="/static/images/icons/source.svg" title="View source" alt="Source"></span>
+				</div>
+				<div id="googled-where-am-i" style="--back:var(--sback-deepblue);--border:var(--sborder-deepblue);--backshadow:var(--sbackshadow-deepblue);--shadow:var(--sshadow-deepblue);" class="stream-box force-integer">
+					<div class="stream-visual"><img src="./images/where-am-i.png" style="display: none;" alt='Text "where am i"'><canvas class="random-scale-3 image-4x fade-0.5x"></canvas></div>
+					<span><b>0</b><p> people have googled "where am i"</p></span>
+					<span class="stream-source"><i>11 per minute</i><img onclick="viewSource(event)" src="/static/images/icons/source.svg" title="View source" alt="Source"></span>
+				</div>
+				<div id="youtube-videos" style="--back:var(--sback-deepblue);--border:var(--sborder-deepblue);--backshadow:var(--sbackshadow-deepblue);--shadow:var(--sshadow-deepblue);" class="stream-box">
+					<div class="stream-visual"><img src="./images/youtube-icon-small-shadow.png" style="display: none;" alt="YouTube logo with shadow"><canvas class="random-scale-3 fade-2x anim-in"></canvas></div>
 					<span><b>0</b><p> videos have been uploaded to YouTube</p></span>
-					<span><i>232 per second</i><img onclick="viewSource(event)" src="../static-0/files/images/icons/source.svg" title="View source" alt="Source"></span>
+					<span class="stream-source"><i>232 per second</i><img onclick="viewSource(event)" src="/static/images/icons/source.svg" title="View source" alt="Source"></span>
 				</div>
-				<div id="ddos-attacks" style="--back: #33383f;--border: #64737e;" class="stream-box force-integer">
+				<div id="youtube-video-likes" style="--back:var(--sback-deepblue);--border:var(--sborder-deepblue);--backshadow:var(--sbackshadow-deepblue);--shadow:var(--sshadow-deepblue);" class="stream-box">
+					<div class="stream-visual"><img src="./images/youtube-like.svg" alt="YouTube like icon"></div>
+					<span><p>Videos on YouTube have received </p><b>0</b><p> likes</p></span>
+					<span class="stream-source"><i>40,500 per second</i><img onclick="viewSource(event)" src="/static/images/icons/source.svg" title="View source" alt="Source"></span>
+				</div>
+				<div id="youtube-video-comments" style="--back:var(--sback-deepblue);--border:var(--sborder-deepblue);--backshadow:var(--sbackshadow-deepblue);--shadow:var(--sshadow-deepblue);" class="stream-box">
+					<div class="stream-visual"><img src="./images/youtube-comment.svg" alt="YouTube comment icon"></div>
+					<span><p>Videos on YouTube have received </p><b>0</b><p> comments</p></span>
+					<span class="stream-source"><i>1,160 per second</i><img onclick="viewSource(event)" src="/static/images/icons/source.svg" title="View source" alt="Source"></span>
+				</div>
+				<div id="ddos-attacks" style="--back:var(--sback-deepblue);--border:var(--sborder-deepblue);--backshadow:var(--sbackshadow-deepblue);--shadow:var(--sshadow-deepblue);" class="stream-box force-integer">
 					<div class="stream-visual"><img src="./images/desktop.svg" class="image-flash-in-faster" alt="Desktop computer"><img src="./images/ddos.svg" style="opacity: 0; position: absolute;" alt="DDoS"></div>
 					<span><p>There have been </p><b>0</b><p> DDoS attacks</p></span>
-					<span><i>29 per minute</i><img onclick="viewSource(event)" src="../static-0/files/images/icons/source.svg" title="View source" alt="Source"></span>
+					<span class="stream-source"><i>29 per minute</i><img onclick="viewSource(event)" src="/static/images/icons/source.svg" title="View source" alt="Source"></span>
+				</div>
+				<div id="credit-card-transactions" style="--back:var(--sback-deepblue);--border:var(--sborder-deepblue);--backshadow:var(--sbackshadow-deepblue);--shadow:var(--sshadow-deepblue);" class="stream-box">
+					<div class="stream-visual"><img src="./images/credit-card.png" style="display: none;" alt="Credit card"><canvas class="random-scale-3 fade-3x anim-in"></canvas></div>
+					<span><b>0</b><p> credit card transactions have been made</p></span>
+					<span class="stream-source"><i>1,781 per second</i><img onclick="viewSource(event)" src="/static/images/icons/source.svg" title="View source" alt="Source"></span>
+				</div>
+				<div id="video-calls" style="--back:var(--sback-deepblue);--border:var(--sborder-deepblue);--backshadow:var(--sbackshadow-deepblue);--shadow:var(--sshadow-deepblue);" class="stream-box">
+					<div class="stream-visual"><img src="./images/video-call.svg" alt="Video call"></div>
+					<span><b>0</b><p> people have joined a video call</p></span>
+					<span class="stream-source"><i>7,500 per second</i><img onclick="viewSource(event)" src="/static/images/icons/source.svg" title="View source" alt="Source"></span>
+				</div>
+				<div id="chatgpt-responses" style="--back:var(--sback-deepblue);--border:var(--sborder-deepblue);--backshadow:var(--sbackshadow-deepblue);--shadow:var(--sshadow-deepblue);" class="stream-box">
+					<div class="stream-visual"><img src="./images/chatgpt-logo.svg" alt="ChatGPT logo"></div>
+					<span><p>ChatGPT has responded to </p><b>0</b><p> prompts</p></span>
+					<span class="stream-source"><i>29,000 per second</i><img onclick="viewSource(event)" src="/static/images/icons/source.svg" title="View source" alt="Source"></span>
+				</div>
+				<div id="lines-of-code-written" style="--back:var(--sback-deepblue);--border:var(--sborder-deepblue);--backshadow:var(--sbackshadow-deepblue);--shadow:var(--sshadow-deepblue);" class="stream-box">
+					<div class="stream-visual"><img src="./images/code.svg" alt="Code"></div>
+					<span><b>0</b><p> lines of code have been written</p></span>
+					<span class="stream-source"><i>3,000 per second</i><img onclick="viewSource(event)" src="/static/images/icons/source.svg" title="View source" alt="Source"></span>
+				</div>
+				<div id="time-watching-youtube" style="--back:var(--sback-deepblue);--border:var(--sborder-deepblue);--backshadow:var(--sbackshadow-deepblue);--shadow:var(--sshadow-deepblue);" class="stream-box">
+					<div class="stream-visual"><img src="./images/youtube-icon.svg" alt="YouTube icon"></div>
+					<span><p>People have collectively spent </p><b>0</b><p> years watching YouTube</p></span>
+					<span class="stream-source"><i>1.3 years per second</i><img onclick="viewSource(event)" src="/static/images/icons/source.svg" title="View source" alt="Source"></span>
+				</div>
+				<div id="time-on-social-media" style="--back:var(--sback-deepblue);--border:var(--sborder-deepblue);--backshadow:var(--sbackshadow-deepblue);--shadow:var(--sshadow-deepblue);" class="stream-box">
+					<div class="stream-visual"><img src="./images/social-media.svg" alt="Social media"></div>
+					<span><p>People have collectively spent </p><b>0</b><p> years on social media</p></span>
+					<span class="stream-source"><i>18.8 years per second</i><img onclick="viewSource(event)" src="/static/images/icons/source.svg" title="View source" alt="Source"></span>
+				</div>
+				<div id="ai-images-generated" style="--back:var(--sback-deepblue);--border:var(--sborder-deepblue);--backshadow:var(--sbackshadow-deepblue);--shadow:var(--sshadow-deepblue);" class="stream-box">
+					<div class="stream-visual"><img src="./images/ai-image.png" style="display: none;" alt="Ai image"><canvas class="random-scale-3 fade-2x"></canvas></div>
+					<span><b>0</b><p> AI images have been generated</p></span>
+					<span class="stream-source"><i>600 per second</i><img onclick="viewSource(event)" src="/static/images/icons/source.svg" title="View source" alt="Source"></span>
+				</div>
+				<div id="phones-sold" style="--back:var(--sback-deepblue);--border:var(--sborder-deepblue);--backshadow:var(--sbackshadow-deepblue);--shadow:var(--sshadow-deepblue);" class="stream-box">
+					<div class="stream-visual"><img src="./images/phone.png" style="display: none;" alt="Phone"><canvas class="random-scale-1"></canvas></div>
+					<span><b>0</b><p> phones have been sold</p></span>
+					<span class="stream-source"><i>59 per second</i><img onclick="viewSource(event)" src="/static/images/icons/source.svg" title="View source" alt="Source"></span>
+				</div>
+				<div id="websites-made" style="--back:var(--sback-deepblue);--border:var(--sborder-deepblue);--backshadow:var(--sbackshadow-deepblue);--shadow:var(--sshadow-deepblue);" class="stream-box force-integer">
+					<div class="stream-visual"><img src="./images/website.png" style="display: none;" alt="Website"><canvas class="random-scale-3 image-1.5x"></canvas></div>
+					<span><b>0</b><p> new websites have been created</p></span>
+					<span class="stream-source"><i>2.9 per second</i><img onclick="viewSource(event)" src="/static/images/icons/source.svg" title="View source" alt="Source"></span>
 				</div>
 			</div>
 			<i id="disclaimer">All data in this stream is an estimate.</i>
@@ -112,38 +219,61 @@
 			<h1 class="title">More Streams</h1>
 			<div id="more-streams">
 				<a href="/nowstream/aroundtheworld" class="stream">
-					<div class="stream-thumbnail"><img src="../static-0/files/images/nowstream-aroundtheworld.svg" alt="Around the World - The NowStream by BlenderTimer"></div>
+					<div class="stream-thumbnail"><img src="/static/images/nowstream-thumbs/nowstream-aroundtheworld.svg" alt="Around the World - The NowStream by BlenderTimer"></div>
 					<b>Around the World</b>
 					<div class="stream-description"><i>Things which are happening all around the world right now!</i></div>
 				</a>
 				<a href="/nowstream/nature" class="stream">
-					<div class="stream-thumbnail"><img src="../static-0/files/images/nowstream-nature.svg" alt="Nature - The NowStream by BlenderTimer"></div>
+					<div class="stream-thumbnail"><img src="/static/images/nowstream-thumbs/nowstream-nature.svg" alt="Nature - The NowStream by BlenderTimer"></div>
 					<b>Nature</b>
 					<div class="stream-description"><i>Things which are happening in nature right now!</i></div>
 				</a>
 				<a href="/nowstream/space" class="stream">
-					<div class="stream-thumbnail"><img src="../static-0/files/images/nowstream-space.svg" alt="Space - The NowStream by BlenderTimer"></div>
+					<div class="stream-thumbnail"><img src="/static/images/nowstream-thumbs/nowstream-space.svg" alt="Space - The NowStream by BlenderTimer"></div>
 					<b>Space</b>
 					<div class="stream-description"><i>Things which are happening in space right now!</i></div>
 				</a>
 				<a href="/nowstream/you" class="stream">
-					<div class="stream-thumbnail"><img src="../static-0/files/images/nowstream-you.svg" alt="You - The NowStream by BlenderTimer"></div>
+					<div class="stream-thumbnail"><img src="/static/images/nowstream-thumbs/nowstream-you.svg" alt="You - The NowStream by BlenderTimer"></div>
 					<b>You</b>
 					<div class="stream-description"><i>Things which are happening with you right now!</i></div>
 				</a>
 			</div>
 			<br>
+			<div class="spr"></div>
 			<p>This stream shows how many things are happening in technology RIGHT NOW! This stream includes:</p>
 			<br>
 			<ul>
-				<li><p>The amount of phone calls made every second</p></li>
-				<li><p>The amount of data created every second</p></li>
-				<li><p>The amount of photos captured every second</p></li>
-				<li><p>The amount of emails sent every second</p></li>
-				<li><p>The amount of mobile messages sent every second</p></li>
-				<li><p>The amount of Google searches performed every second</p></li>
-				<li><p>The amount of videos uploaded to YouTube every second</p></li>
-				<li><p>The amount of Distributed Denial-of-Service (DDoS) attacks which occur every minute</p></li>
+				<li><p>The amount of phone calls made every second (about 156,250)</p></li>
+				<li><p>The amount of data created every second (about 4,700 terabytes)</p></li>
+				<li><p>The amount of photos captured every second (about 66,591)</p></li>
+				<li><p>The amount of selfies taken every second (about 466)</p></li>
+				<li><p>The amount of surveillance video captured every second (about 45 years)</p></li>
+				<li><p>The amount of emails sent every second (about 4.36 million)</p></li>
+				<li><p>The amount of ordinary text messages sent every second (about 289,000 million)</p></li>
+				<li><p>The amount of WhatsApp messages sent every second (about 1.62 million)</p></li>
+				<li><p>The amount of Facebook Messenger messages sent every second (about 1.16 million)</p></li>
+				<li><p>The amount of WeChat messages sent every second (about 521,000)</p></li>
+				<li><p>The amount of total mobile messages sent every second (about 3.59 million)</p></li>
+				<li><p>The amount of Discord messages sent every second (about 46,300)</p></li>
+				<li><p>The amount of tweets/X messages posted every second (about 5,800)</p></li>
+				<li><p>The amount of Google searches performed every second (about 189,815)</p></li>
+				<li><p>The amount of people who google "google" every second (about 48)</p></li>
+				<li><p>The amount of people who google "the" every second (about 5)</p></li>
+				<li><p>The amount of people who google "where am i" every minute (about 11)</p></li>
+				<li><p>The amount of videos uploaded to YouTube every second (about 232)</p></li>
+				<li><p>The amount of likes given to videos on YouTube every second (about 40,500)</p></li>
+				<li><p>The amount of comments written on videos on YouTube every second (about 1,160)</p></li>
+				<li><p>The amount of Distributed Denial-of-Service (DDoS) attacks which occur every minute (about 29)</p></li>
+				<li><p>The amount of credit card transactions every second (about 1,781)</p></li>
+				<li><p>The amount of people joining a video call every second (about 7,500)</p></li>
+				<li><p>The amount of prompts ChatGPT responds to every second (about 29,000)</p></li>
+				<li><p>How many lines of code are written every second (about 3,000)</p></li>
+				<li><p>The amount of time humans collectively spend watching YouTube every second (about 1.3 years)</p></li>
+				<li><p>The amount of time humans collectively spend on social media every second (about 18.8 years)</p></li>
+				<li><p>The amount of AI images generated every second (about 600)</p></li>
+				<li><p>The amount of phones sold every second (about 59)</p></li>
+				<li><p>The amount of new websites started every second (about 2.9)</p></li>
 			</ul>
 		</div>
 		<footer></footer>
@@ -156,14 +286,36 @@
 		<script src="./stream-main.js"></script>
 		<script type="text/javascript">
 			const sourceData = {
-				"phone-calls":"<p>The source gives a rate of </p><b>156,250</b><p> phone calls per second.</p><div class='spr'></div><a href='https://www.sellcell.com/blog/how-many-phone-calls-are-made-a-day-2023-statistics' target='_blank'>https://www.sellcell.com/blog/how-many-phone-calls-are-made-a-day-2023-statistics</a>",
-				"data-created":"<p>The source gives a rate of </p><b>402.74 million terabytes of data</b><p> per day.</p><div class='spr'></div><a href='https://explodingtopics.com/blog/data-generated-per-day' target='_blank'>https://explodingtopics.com/blog/data-generated-per-day</a>",
-				"photos-captured":"<p>The source gives a rate of </p><b>61,400</b><p> photos taken per second.</p><div class='spr'></div><a href='https://photutorial.com/photos-statistics' target='_blank'>https://photutorial.com/photos-statistics</a>",
-				"emails-sent":"<p>The source gives a rate of </p><b>347.3 billion emails</b><p> sent per day.</p><div class='spr'></div><a href='https://www.yaguara.co/how-many-emails-are-sent-per-day' target='_blank'>https://www.yaguara.co/how-many-emails-are-sent-per-day</a>",
-				"mobile-messages-sent":"<p>The source gives a statistics for SMS & MMS (</p><b>270 thousand</b><p>), WhatsApp (</p><b>578 thousand</b><p>), Facebook Messenger (</p><b>578 thousand</b><p>), and Snapchat (</p><b>2 thousand</b><p>). All listed here are per second.</p><div class='spr'></div><a href='https://www.sellcell.com/blog/how-many-text-messages-are-sent-a-day-2023-statistics' target='_blank'>https://www.sellcell.com/blog/how-many-text-messages-are-sent-a-day-2023-statistics</a>",
-				"google-searches":"<p>The source gives a rate of </p><b>99,000 search queries</b><p> per second.</p><div class='spr'></div><a href='https://seo.ai/blog/how-many-people-use-google' target='_blank'>https://seo.ai/blog/how-many-people-use-google</a>",
-				"youtube-videos":"<p>The source gives an upload rate of </p><b>over 20 million videos</b><p> per day.</p><div class='spr'></div><a href='https://blog.youtube/news-and-events/happy-birthday-youtube-20' target='_blank'>https://blog.youtube/news-and-events/happy-birthday-youtube-20</a>",
-				"ddos-attacks":"<p>The source gives an estimate of </p><b>15.4 million</b><p> per year.</p><div class='spr'></div><a href='https://www.stationx.net/ddos-statistics' target='_blank'>https://www.stationx.net/ddos-statistics</a>",
+				"phone-calls":"<p>The source gives a rate of <b>156,250</b> phone calls per second.</p><div class='spr'></div><a href='https://www.sellcell.com/blog/how-many-phone-calls-are-made-a-day-2023-statistics' target='_blank'>https://www.sellcell.com/blog/how-many-phone-calls-are-made-a-day-2023-statistics</a><br><i>Data last verified: November, 2025 (%time%)</i>",
+				"data-created":"<p>The source gives a rate of <b>402.74 million terabytes of data</b> per day.</p><div class='spr'></div><a href='https://explodingtopics.com/blog/data-generated-per-day' target='_blank'>https://explodingtopics.com/blog/data-generated-per-day</a><br><i>Data last verified: November, 2025 (%time%)</i>",
+				"photos-captured":"<p>The source gives a rate of <b>2.1 trillion</b> photos taken per year.</p><div class='spr'></div><a href='https://photutorial.com/photos-statistics' target='_blank'>https://photutorial.com/photos-statistics</a><br><i>Data last verified: November, 2025 (%time%)</i>",
+				"selfies-taken":"<p>The first source gives a rate of <b>2.1 trillion</b> photos taken per year. The second source states that around <b>0.7%</b> of photos are selfies.</p><div class='spr'></div><a href='https://photutorial.com/photos-statistics' target='_blank'>https://photutorial.com/photos-statistics</a><a href='https://www.researchgate.net/publication/342240604_Studying_Instagram_Beyond_Selfies' target='_blank'>https://www.researchgate.net/publication/342240604_Studying_Instagram_Beyond_Selfies</a><br><i>Data last verified: November, 2025 (%time%)</i>",
+				"surveillance-video-captured":"<p>The first source states that at the end of 2021 an estimated <b>1 billion</b> surveillance cameras were in operation globally. The second source shows that the surveillance camera market increased by about <b>1.417x</b> between 2021 and 2025.</p><div class='spr'></div><a href='https://geographical.co.uk/science-environment/whos-watching-the-cities-with-the-most-cctv-cameras' target='_blank'>https://geographical.co.uk/science-environment/whos-watching-the-cities-with-the-most-cctv-cameras</a><a href='https://www.grandviewresearch.com/industry-analysis/surveillance-camera-market-report' target='_blank'>https://www.grandviewresearch.com/industry-analysis/surveillance-camera-market-report</a><br><i>Data last verified: November, 2025 (%time%)</i>",
+				"emails-sent":"<p>The source gives a rate of <b>376.4 billion</b> emails sent per day.</p><div class='spr'></div><a href='https://www.statista.com/statistics/456500/daily-number-of-e-mails-worldwide' target='_blank'>https://www.statista.com/statistics/456500/daily-number-of-e-mails-worldwide</a><br><i>Data last verified: November, 2025 (%time%)</i>",
+				"text-messages-sent":"<p>The source states that around <b>25 billion</b> ordinary text messages are sent every day (SMS, MMS, and RCS).</p><div class='spr'></div><a href='https://blog.ecoatm.com/how-many-texts-are-sent-per-day-in-depth-texting-statistics-and-analysis' target='_blank'>https://blog.ecoatm.com/how-many-texts-are-sent-per-day-in-depth-texting-statistics-and-analysis</a><br><i>Data last verified: November, 2025 (%time%)</i>",
+				"whatsapp-messages-sent":"<p>The source states that over <b>140 billion</b> WhatsApp messages are sent every day.</p><div class='spr'></div><a href='https://blog.ecoatm.com/how-many-texts-are-sent-per-day-in-depth-texting-statistics-and-analysis' target='_blank'>https://blog.ecoatm.com/how-many-texts-are-sent-per-day-in-depth-texting-statistics-and-analysis</a><br><i>Data last verified: November, 2025 (%time%)</i>",
+				"facebook-messenger-messages-sent":"<p>The source states that over <b>100 billion</b> Facebook Messenger messages are sent every day.</p><div class='spr'></div><a href='https://blog.ecoatm.com/how-many-texts-are-sent-per-day-in-depth-texting-statistics-and-analysis' target='_blank'>https://blog.ecoatm.com/how-many-texts-are-sent-per-day-in-depth-texting-statistics-and-analysis</a><br><i>Data last verified: November, 2025 (%time%)</i>",
+				"wechat-messages-sent":"<p>The source states that <b>45+ billion</b> WeChat messages are sent every day (WeChat is China's most popular social media).</p><div class='spr'></div><a href='https://blog.ecoatm.com/how-many-texts-are-sent-per-day-in-depth-texting-statistics-and-analysis' target='_blank'>https://blog.ecoatm.com/how-many-texts-are-sent-per-day-in-depth-texting-statistics-and-analysis</a><br><i>Data last verified: November, 2025 (%time%)</i>",
+				"mobile-messages-sent":"<p>The source states that we send around <b>25 billion</b> text messages every day. In addition to ordinary text messages, we also send around <b>140 billion</b> WhatsApp messages, <b>100 billion</b> Facebook Messenger messages, and <b>45+ billion</b> WeChat messages every day.</p><div class='spr'></div><a href='https://blog.ecoatm.com/how-many-texts-are-sent-per-day-in-depth-texting-statistics-and-analysis' target='_blank'>https://blog.ecoatm.com/how-many-texts-are-sent-per-day-in-depth-texting-statistics-and-analysis</a><br><i>Data last verified: November, 2025 (%time%)</i>",
+				"discord-messages-sent":"<p>The source states that <b>over 4 billion</b> Discord messages are sent every day.</p><div class='spr'></div><a href='https://whop.com/blog/discord-statistics' target='_blank'>https://whop.com/blog/discord-statistics</a><br><i>Data last verified: November, 2025 (%time%)</i>",
+				"tweets":"<p>The source states that <b>5,800</b> tweets are sent every second. <i>(I call them tweets because it makes more sense than whatever X is)</i></p><div class='spr'></div><a href='https://www.dsayce.com/digital-marketing/tweets-day' target='_blank'>https://www.dsayce.com/digital-marketing/tweets-day</a><br><i>Data last verified: November, 2025 (%time%)</i>",
+				"google-searches":"<p>The source states that Google processes <b>189,815</b> searches per second.</p><div class='spr'></div><a href='https://explodingtopics.com/blog/google-searches-per-day' target='_blank'>https://explodingtopics.com/blog/google-searches-per-day</a><br><i>Data last verified: November, 2025 (%time%)</i>",
+				"googled-google":"<p>The source gives a rate of around <b>124,000,000</b> \"google\" queries per month.</p><div class='spr'></div><a href='https://dataforseo.com/free-seo-stats/top-1000-keywords' target='_blank'>https://dataforseo.com/free-seo-stats/top-1000-keywords</a><br><i>Data last verified: November, 2025 (%time%)</i>",
+				"googled-the":"<p>The source gives a rate of around <b>13,600,000</b> \"the\" queries per month.</p><div class='spr'></div><a href='https://dataforseo.com/free-seo-stats/top-1000-keywords' target='_blank'>https://dataforseo.com/free-seo-stats/top-1000-keywords</a><br><i>Data last verified: November, 2025 (%time%)</i>",
+				"googled-where-am-i":"<p>The source gives a rate of around <b>469,454</b> \"where am i\" queries per month.</p><div class='spr'></div><a href='https://meetglimpse.com/top-searched/most-searched-questions' target='_blank'>https://meetglimpse.com/top-searched/most-searched-questions</a><br><i>Data last verified: November, 2025 (%time%)</i>",
+				"youtube-videos":"<p>The source gives an upload rate of <b>over 20 million videos</b> per day.</p><div class='spr'></div><a href='https://blog.youtube/news-and-events/happy-birthday-youtube-20' target='_blank'>https://blog.youtube/news-and-events/happy-birthday-youtube-20</a><br><i>Data last verified: November, 2025 (%time%)</i>",
+				"youtube-video-likes":"<p>The source gives a like rate of <b>over 3.5 billion</b> likes per day.</p><div class='spr'></div><a href='https://blog.youtube/news-and-events/happy-birthday-youtube-20' target='_blank'>https://blog.youtube/news-and-events/happy-birthday-youtube-20</a><br><i>Data last verified: November, 2025 (%time%)</i>",
+				"youtube-video-comments":"<p>The source gives a comment rate of <b>over 100 million</b> comments per day.</p><div class='spr'></div><a href='https://blog.youtube/news-and-events/happy-birthday-youtube-20' target='_blank'>https://blog.youtube/news-and-events/happy-birthday-youtube-20</a><br><i>Data last verified: November, 2025 (%time%)</i>",
+				"ddos-attacks":"<p>The source gives an estimate of <b>15.4 million</b> per year.</p><div class='spr'></div><a href='https://www.stationx.net/ddos-statistics' target='_blank'>https://www.stationx.net/ddos-statistics</a><br><i>Data last verified: March, 2024 (%time%)</i>",
+				"credit-card-transactions":"<p>The source gives a credit card transaction rate estimate of <b>1,781</b> per second.</p><div class='spr'></div><a href='https://capitaloneshopping.com/research/number-of-credit-card-transactions' target='_blank'>https://capitaloneshopping.com/research/number-of-credit-card-transactions</a><br><i>Data last verified: November, 2025 (%time%)</i>",
+				"video-calls":"<p>The source states that Zoom and Microsoft Teams have <b>300 million</b> and <b>320 million</b> daily users respectively while Skype and Cisco Webex have <b>300 million</b> and <b>650 million</b> monthly users respectively.</p><div class='spr'></div><a href='https://www.affiliatebooster.com/video-conferencing-statistics' target='_blank'>https://www.affiliatebooster.com/video-conferencing-statistics</a><br><i>Data last verified: November, 2025 (%time%)</i>",
+				"chatgpt-responses":"<p>The source states that ChatGPT receives <b>2.5 billion</b> prompts per day.</p><div class='spr'></div><a href='https://techcrunch.com/2025/07/21/chatgpt-users-send-2-5-billion-prompts-a-day' target='_blank'>https://techcrunch.com/2025/07/21/chatgpt-users-send-2-5-billion-prompts-a-day</a><br><i>Data last verified: November, 2025 (%time%)</i>",
+				"lines-of-code-written":"<p>The source estimates that around <b>93 billion</b> lines of code is written per year.</p><div class='spr'></div><a href='https://medium.com/modern-stack/how-much-computer-code-has-been-written-c8c03100f459' target='_blank'>https://medium.com/modern-stack/how-much-computer-code-has-been-written-c8c03100f459</a><br><i>Data last verified: November, 2025 (%time%)</i>",
+				"time-watching-youtube":"<p>The source states that around <b>1 billion hours</b> of content is watched per day.</p><div class='spr'></div><a href='https://seo.ai/blog/how-many-videos-are-on-youtube' target='_blank'>https://seo.ai/blog/how-many-videos-are-on-youtube</a><br><i>Data last verified: November, 2025 (%time%)</i>",
+				"time-on-social-media":"<p>The first source states that the average internet user spends around <b>141 minutes</b> on social media per day. The second sources gives us a total of <b>6.04 billion</b> internet users worldwide.</p><div class='spr'></div><a href='https://www.statista.com/statistics/433871/daily-social-media-usage-worldwide' target='_blank'>https://www.statista.com/statistics/433871/daily-social-media-usage-worldwide</a><a href='https://www.statista.com/statistics/617136/digital-population-worldwide' target='_blank'>https://www.statista.com/statistics/617136/digital-population-worldwide</a><br><i>Data last verified: November, 2025 (%time%)</i>",
+				"ai-images-generated":"<p>The first source (from 2023) estimates that around <b>34 million</b> AI images are generated per day. The second source says the number of AI users increased from <b>254.78 million</b> in 2023 to <b>378.8 million</b> in 2025 (1.487x increase) and we can adjust the AI images generated per day accordingly.</p><div class='spr'></div><a href='https://journal.everypixel.com/ai-image-statistics' target='_blank'>https://journal.everypixel.com/ai-image-statistics</a><a href='https://resourcera.com/data/artificial-intelligence/ai-statistics' target='_blank'>https://resourcera.com/data/artificial-intelligence/ai-statistics</a><br><i>Data last verified: November, 2025 (%time%)</i>",
+				"phones-sold":"<p>The source gives a rate of around <b>1847.5 million</b> phones sold in 2025.</p><div class='spr'></div><a href='https://www.sellcell.com/how-many-mobile-phones-are-sold-each-year' target='_blank'>https://www.sellcell.com/how-many-mobile-phones-are-sold-each-year</a><br><i>Data last verified: November, 2025 (%time%)</i>",
+				"websites-made":"<p>The source gives a rate of around <b>252,000</b> new websites every day.</p><div class='spr'></div><a href='https://www.demandsage.com/website-statistics' target='_blank'>https://www.demandsage.com/website-statistics</a><br><i>Data last verified: November, 2025 (%time%)</i>",
 			};
 		</script>
 	</body>

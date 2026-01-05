@@ -1,10 +1,6 @@
 //----------Variables
 var streamData = [];
 var streamContainerChildren = document.getElementById("stream-container").children;
-var sourcePopupBack = document.getElementById('source-popup-back');
-var sourcePopupContainer = document.getElementById('source-popup-container');
-var sourcePopupMain = document.getElementById('source-popup-main');
-var sourcePopup = document.getElementById('source-popup');
 var pageLoadTime = document.getElementById('page-load-time');
 var lastFrames = [{d:Date.now(),t:0}];
 var currentFPS = 0;
@@ -73,6 +69,12 @@ for (var i=0; i < streamContainerChildren.length; i++) {
 		if (streamData[streamData.length-1].blank == true) {
 			streamData[streamData.length-1].fadeTime = 100;
 		}
+		else if (Array.from(streamContainerChildren[i].children[0].children[1].classList).indexOf("fade-0.5x") > -1) {
+			streamData[streamData.length-1].fadeTime = ((1/streamData[streamData.length-1].data.limit(0.005, 0.05))*10).limit(300, 3000)/0.5;
+		}
+		else if (Array.from(streamContainerChildren[i].children[0].children[1].classList).indexOf("fade-1.5x") > -1) {
+			streamData[streamData.length-1].fadeTime = ((1/streamData[streamData.length-1].data.limit(0.005, 0.05))*10).limit(300, 3000)/1.5;
+		}
 		else if (Array.from(streamContainerChildren[i].children[0].children[1].classList).indexOf("fade-2x") > -1) {
 			streamData[streamData.length-1].fadeTime = ((1/streamData[streamData.length-1].data.limit(0.005, 0.05))*10).limit(300, 3000)/2;
 		}
@@ -82,7 +84,10 @@ for (var i=0; i < streamContainerChildren.length; i++) {
 		else {
 			streamData[streamData.length-1].fadeTime = ((1/streamData[streamData.length-1].data.limit(0.005, 0.05))*10).limit(300, 3000);
 		}
-		if (Array.from(streamContainerChildren[i].children[0].children[1].classList).indexOf("image-3x") > -1) {
+		if (Array.from(streamContainerChildren[i].children[0].children[1].classList).indexOf("image-4x") > -1) {
+			streamData[streamData.length-1].scale = 1.5;
+		}
+		else if (Array.from(streamContainerChildren[i].children[0].children[1].classList).indexOf("image-3x") > -1) {
 			streamData[streamData.length-1].scale = 3;
 		}
 		else if (Array.from(streamContainerChildren[i].children[0].children[1].classList).indexOf("image-2x") > -1) {
@@ -90,6 +95,9 @@ for (var i=0; i < streamContainerChildren.length; i++) {
 		}
 		else if (Array.from(streamContainerChildren[i].children[0].children[1].classList).indexOf("image-1.5x") > -1) {
 			streamData[streamData.length-1].scale = 6.7;
+		}
+		else if (Array.from(streamContainerChildren[i].children[0].children[1].classList).indexOf("image-0.8x") > -1) {
+			streamData[streamData.length-1].scale = 12;
 		}
 		else if (Array.from(streamContainerChildren[i].children[0].children[1].classList).indexOf("image-0.5x") > -1) {
 			streamData[streamData.length-1].scale = 20;
@@ -261,27 +269,49 @@ function addCommas(n) {
 	return parts.join(".");
 }
 
-function closeSourcePopup() {
-	document.body.style.width = null;
-	document.body.style.overflowY = null;
-	sourcePopupBack.style.opacity = 0;
-	sourcePopupBack.style.pointerEvents = "none";
-	sourcePopupContainer.style.opacity = 0;
-	sourcePopupMain.style.pointerEvents = "none";
-	sourcePopupMain.style.transform = "scale(0)";
+function closePopup(e) {
+	var element = e.target || e.srcElement;
+	if (element.id == "popup-exit" || element.id == "popup-base") {
+		var base = document.getElementById("popup-base");
+		var popup = document.getElementById("popup");
+		base.style.opacity = "0";
+		base.style.pointerEvents = "none";
+		popup.style.transform = "scale(0)";
+	}
 }
 
 function viewSource(e) {
+	var base = document.getElementById("popup-base");
+	var popup = document.getElementById("popup");
 	var element = e.target || e.srcElement;
-	sourcePopup.children[1].innerHTML = sourceData[element.parentNode.parentNode.id];
-	sourcePopupBack.style.opacity = 1;
-	sourcePopupBack.style.pointerEvents = "visible";
-	sourcePopupContainer.style.opacity = 1;
-	sourcePopupMain.style.pointerEvents = "visible";
-	sourcePopupMain.style.transform = "scale(1)";
-	var scrollPx = window.innerWidth - document.body.offsetWidth;
-	document.body.style.width = "calc(100% - " + scrollPx + "px)";
-	document.body.style.overflowY = "hidden";
+	var dataDate = sourceData[element.parentNode.parentNode.id].removeBefore("Data last verified:", 20, true).removeAfter("(%time%)", -2, true);
+	var dataDateM = getMonthNumber(dataDate.removeAfter(",", -1));
+	var dataDateY = parseInt(dataDate.removeBefore(",", 2));
+	var dataAgeTime = ((Date.now() - new Date(dataDateY, dataDateM)) / (1000*60*60*24*365)).round(3);
+	var dataAge = "";
+	var dataAgeYears = Math.floor(dataAgeTime);
+	var dataAgeMonths = Math.floor((dataAgeTime - dataAgeYears) * 12);
+	if (dataAgeYears == 1) {
+		dataAge = dataAgeYears + " year";
+		if (dataAgeMonths == 1) {dataAge += " and " + dataAgeMonths + " month ago"}
+		else if (dataAgeMonths > 0) {dataAge += " and " + dataAgeMonths + " months ago"}
+		else {dataAge += " ago"};
+	}
+	else if (dataAgeYears > 0) {
+		dataAge = dataAgeYears + " years";
+		if (dataAgeMonths == 1) {dataAge += " and " + dataAgeMonths + " month ago"}
+		else if (dataAgeMonths > 0) {dataAge += " and " + dataAgeMonths + " months ago"}
+		else {dataAge += " ago"};
+	}
+	else {
+		if (dataAgeMonths == 1) {dataAge = dataAgeMonths + " month ago"}
+		else if (dataAgeMonths > 0) {dataAge = dataAgeMonths + " months ago"}
+		else {dataAge = "very recently"};
+	}
+	popup.children[1].innerHTML = sourceData[element.parentNode.parentNode.id].replace(/%time%/g, dataAge);
+	base.style.opacity = null;
+	base.style.pointerEvents = null;
+	popup.style.transform = null;
 }
 
 function toImperial(num, returnAs) {
@@ -294,12 +324,33 @@ function toImperial(num, returnAs) {
 	else if (returnAs == "tons") {
 		return num/0.90718474;
 	}
+	else if (returnAs == "pounds") {
+		return num*2.20462262184878;
+	}
+	else if (returnAs == "acres") {
+		return num*2.4710538146717;
+	}
 	else if (returnAs == "books") {
 		return num/64000;
 	}
 	else {
 		return num;
 	}
+}
+
+function getMonthNumber(mo) {
+	if (mo.toLowerCase() == "february") {return 1}
+	else if (mo.toLowerCase() == "march") {return 2}
+	else if (mo.toLowerCase() == "april") {return 3}
+	else if (mo.toLowerCase() == "may") {return 4}
+	else if (mo.toLowerCase() == "june") {return 5}
+	else if (mo.toLowerCase() == "july") {return 6}
+	else if (mo.toLowerCase() == "august") {return 7}
+	else if (mo.toLowerCase() == "september") {return 8}
+	else if (mo.toLowerCase() == "october") {return 9}
+	else if (mo.toLowerCase() == "november") {return 10}
+	else if (mo.toLowerCase() == "december") {return 11}
+	else {return 0}
 }
 
 function timeRead(t) {
