@@ -43,12 +43,12 @@ function loadVideos(vl, srch, srt) {
 		vlist = vl;
 	}
 	if (vlChanged == true) {
-		while (videoList.children.length > 2) {
+		while (videoList.children.length > 1) {
 			videoList.removeChild(videoList.lastChild);
 		}
 	}
 	if (srch == true) {
-		visibleVideos = videoList.children.length - 2;
+		visibleVideos = videoList.children.length - 1;
 	}
 	if (srt == true) {
 		vstart = 0;
