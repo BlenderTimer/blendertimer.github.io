@@ -1,7 +1,3 @@
-body {
-	background: var(--semi-back);
-}
-
 #popup-base {
 	display: flex;
 	justify-content: center;
