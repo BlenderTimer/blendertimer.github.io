@@ -31,6 +31,7 @@
 	display: flex;
 	width: 100%;
 	max-width: 300px;
+	flex-shrink: 0;
 	margin: 0px auto 5px auto;
 	overflow: hidden;
 	border-radius: 3px;
@@ -107,6 +108,7 @@
 	box-sizing: border-box;
 	border-radius: 0px 0px 3px 3px;
 	height: 30px;
+	flex-shrink: 0;
 	overflow: hidden;
 }
 
