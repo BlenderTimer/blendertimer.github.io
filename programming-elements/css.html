@@ -15,19 +15,14 @@
 		<meta name="description" content="Various CSS programming elements and examples.">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="icon" href="/favicon.png" type="image/x-icon">
-		<link rel="stylesheet" type="text/css" href="/noindex/theme.css">
+		<link rel="stylesheet" type="text/css" href="/static/defaults/theme.css">
 		<link rel="stylesheet" type="text/css" href="/static/main.css">
 		<link rel="stylesheet" type="text/css" href="./programming-elements.css">
 		<script src="/bt-js/bt-js.js"></script>
 	</head>
 	<body>
 		<header></header>
-		<script>
-			fetch('/noindex/header.html')
-				.then(response => response.text())
-				.then(data => {document.querySelector('header').innerHTML = data});
-		</script>
-		<script src="/noindex/pages.js"></script>
+		<script src="/static/defaults/pages.js"></script>
 		<noscript>
 			<div id="nojs" style="position: fixed; top: 0px; bottom: 0px; left: 0px; right: 0px; display: flex; flex-flow: column; justify-content: center; align-items: center; background: var(--bgcol); padding: 15px 20px; z-index: 1000000; cursor: default;">
 				<b style="font-family: sans-serif; font-size: 16pt; color: #FFF; text-align: center;">Page Failed to Load</b>
@@ -48,11 +43,7 @@
 			</div>
 		</div>
 		<footer></footer>
-		<script>
-			fetch('/noindex/footer.html')
-				.then(response => response.text())
-				.then(data => {document.querySelector('footer').innerHTML = data});
-		</script>
+		<script src="/static/defaults/headerfooter-loader.js"></script>
 		<script src="/static/main.js"></script>
 	</body>
 </html>
