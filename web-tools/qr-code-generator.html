@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en-US">
+	<head>
+		<!-- Google tag (gtag.js) -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-SYR26MG6YV"></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
+			gtag('config', 'G-SYR26MG6YV');
+		</script>
+		<meta charset="utf-8">
+		<title>QR Code Generator - BlenderTimer Web Tools</title>
+		<meta name="description" content="An online QR code generator that's actually free! No trials to expire, no third-party hosts, no sign-up or email required, just a genuine, no caveat, free QR code generator!">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="icon" href="/favicon.png" type="image/x-icon">
+		<meta property="og:image" content="https://blendertimer.com/static/images/page-thumbs/qr-code-generator.png">
+		<link rel="stylesheet" type="text/css" href="/static/defaults/theme.css">
+		<link rel="stylesheet" type="text/css" href="/static/main.css">
+		<link rel="stylesheet" type="text/css" href="/static/qr-code-generator.css">
+		<script src="/bt-js/bt-js.js"></script>
+	</head>
+	<body>
+		<header></header>
+		<script src="/static/defaults/pages.js"></script>
+		<noscript>
+			<div id="nojs" style="position: fixed; top: 0px; bottom: 0px; left: 0px; right: 0px; display: flex; flex-flow: column; justify-content: center; align-items: center; background: var(--bgcol); padding: 15px 20px; z-index: 1000000; cursor: default;">
+				<b style="font-family: sans-serif; font-size: 16pt; color: #FFF; text-align: center;">Page Failed to Load</b>
+				<p style="font-family: sans-serif; font-size: 14pt; color: #FFF6; text-align: center;">This website requires Javascript to operate.</p>
+			</div>
+		</noscript>
+		<div id="loader" style="width: 100%; height: calc(100% - 50px); top: 50px; left: 0px; position: fixed; z-index: -100000;">
+			<img alt="Loading" src="/static/images/loader.gif" style="width: 100px; height: 100px; position: fixed; left: calc(50% - 50px); top: calc(50% - 25px); filter: drop-shadow(0px 0px 15px #000000);">
+		</div>
+		<div id="content-main" class="limwidth" style="opacity: 0; transition: 0.5s">
+			<h1 class="title">QR Code Generator</h1>
+			<p class="description">An ACTUALLY free QR code generator with no third-party hosts, expiration, or sign-ups!</p>
+			<div id="main-tool">
+				<div id="tool-controls">
+					<label id="url-label" name="url-text">URL:<input type="text" id="url-input" name="url-text" placeholder="e.g. https://blendertimer.com" oninput="tryGenerateQRCode(event)"></label>
+					<i>Shorter URLs create simpler QR codes. Try to keep your URL/text as short as possible.</i>
+					<div class="label wrap-label">Error correction:<div id="correction-selector" class="expanded-selector">
+						<button onclick="setErrorCorrection(event)" style="background: var(--pricol)"><b>L</b><i>7%</i></button>
+						<button onclick="setErrorCorrection(event)"><b>M</b><i>15%</i></button>
+						<button onclick="setErrorCorrection(event)"><b>Q</b><i>25%</i></button>
+						<button onclick="setErrorCorrection(event)"><b>H</b><i>30%</i></button>
+					</div></div>
+					<i>QR codes can become degraded over time. Error correction prevents the QR code from becoming unreadable but creates a more complex QR code. If you're placing a logo in the center of your QR code, it's best to use an error correction of 30% (H).</i>
+					<label id="image-size-label" name="image-size" class="range-slider">Image size (px):<input name="image-size" type="range" min="10" max="2048" step="1" value="512" oninput="adjustImageSize(event)"><input name="image-size" type="number" min="10" max="2048" step="1" value="512" oninput="adjustImageSize(event)"></label>
+					<div id="background-controls" class="control-group">
+						<div class="control-group-head" onclick="toggleControlGroup(event)"><b>Background</b><div id="background-enabled" class="checkbox group-checkbox" onclick="toggleBackground(event)"><img src="/static/images/icons/checkmark.svg" alt="Checkmark"></div><img src="/static/images/icons/down.svg" alt="Down"></div>
+						<div class="control-group-controls" style="display: none;">
+							<label id="background-color-label" name="bg-color" class="clear-right">Color:<input name="bg-color" type="color" value="#ffffff" oninput="adjustBackgroundColor(event)"></label>
+							<label id="background-padding-label" name="bg-padding" class="range-slider">Padding:<input name="bg-padding" type="range" min="0" max="10" step="0.1" value="1.5" oninput="adjustBackgroundPadding(event)"><input name="bg-padding" type="number" min="0" step="0.5" max="10" value="1.5" oninput="adjustBackgroundPadding(event)"></label>
+							<label id="background-rounding-label" name="bg-rounding" class="range-slider">Rounding:<input name="bg-rounding" type="range" min="0" max="10" step="0.5" value="1.5" oninput="adjustBackgroundRounding(event)"><input name="bg-rounding" type="number" min="0" step="0.5" max="10" value="1.5" oninput="adjustBackgroundRounding(event)"></label>
+						</div>
+					</div>
+					<div id="position-mark-controls" class="control-group">
+						<div class="control-group-head" onclick="toggleControlGroup(event)"><b>Position Marks</b><img src="/static/images/icons/down.svg" alt="Down"></div>
+						<div class="control-group-controls" style="display: none;">
+							<label id="position-outer-rounding-label" name="pos-outer-rounding" class="range-slider">Outer rounding:<input name="pos-outer-rounding" type="range" min="0" max="4.5" step="0.1" value="1.2" oninput="adjustPositionOuterRounding(event)"><input name="pos-outer-rounding" type="number" min="0" max="4.5" step="0.1" value="1.2" oninput="adjustPositionOuterRounding(event)"></label>
+							<label id="position-inner-rounding-label" name="pos-inner-rounding" class="range-slider">Inner rounding:<input name="pos-inner-rounding" type="range" min="0" max="1.5" step="0.1" value="0.4" oninput="adjustPositionInnerRounding(event)"><input name="pos-inner-rounding" type="number" min="0" max="1.5" step="0.1" value="0.4" oninput="adjustPositionInnerRounding(event)"></label>
+							<div class="label">Strict modules:<div id="position-stroke" class="checkbox" onclick="togglePositionStroke(event)"><img src="/static/images/icons/checkmark.svg" alt="Checkmark" style="display: none;"></div></div>
+						</div>
+					</div>
+					<div id="module-controls" class="control-group">
+						<div class="control-group-head" onclick="toggleControlGroup(event)"><b>Modules</b><img src="/static/images/icons/down.svg" alt="Down"></div>
+						<div class="control-group-controls" style="display: none;">
+							<label id="module-color-label" name="module-color" class="clear-right">Color:<input name="module-color" type="color" value="#000000" oninput="adjustModuleColor(event)"></label>
+							<label id="module-rounding-label" name="module-rounding" class="range-slider">Rounding:<input name="module-rounding" type="range" min="0" max="0.5" step="0.05" value="0.4" oninput="adjustModuleRounding(event)"><input name="module-rounding" type="number" min="0" max="0.5" step="0.05" value="0.4" oninput="adjustModuleRounding(event)"></label>
+							<div class="label">Full rounding:<div id="full-rounding" class="checkbox" onclick="toggleFullRounding(event)"><img src="/static/images/icons/checkmark.svg" alt="Checkmark" style="display: none;"></div></div>
+						</div>
+					</div>
+					<div id="logo-controls" class="control-group">
+						<div class="control-group-head" onclick="toggleControlGroup(event)"><b>Logo</b><div id="logo-enabled" class="checkbox group-checkbox" onclick="toggleLogo(event)"><img src="/static/images/icons/checkmark.svg" alt="Checkmark" style="display: none;"></div><img src="/static/images/icons/down.svg" alt="Down"></div>
+						<div class="control-group-controls" style="display: none;">
+							<label id="logo-upload-label" name="logo-upload">Logo image:<input name="logo-upload" type="file" accept="image/*" onchange="setLogoImage(event)"><img id="logo-image" alt="Logo" style="max-width: 0; max-height: 0; opacity: 0; position: absolute;"></label>
+							<label id="logo-space-label" name="logo-space" class="range-slider">Space (%):<input name="logo-space" type="range" min="0" max="30" step="1" value="25" oninput="adjustLogoSpace(event)"><input name="logo-space" type="number" min="0" step="1" max="30" value="25" oninput="adjustLogoSpace(event)"></label>
+							<label id="logo-size-label" name="logo-size" class="range-slider">Size (%):<input name="logo-size" type="range" min="0" max="30" step="1" value="20" oninput="adjustLogoSize(event)"><input name="logo-size" type="number" min="0" step="1" max="30" value="20" oninput="adjustLogoSize(event)"></label>
+						</div>
+					</div>
+					<div class="max-space"></div>
+					<button id="generate-btn" onclick="generateQRCode()">Generate QR Code</button>
+				</div>
+				<div id="tool-output">
+					<h2>Your QR Code</h2>
+					<div id="qr-container"></div>
+					<script src="/static/generateqrcode.js"></script>
+					<div id="download-options"><button id="svg-download" title="Download SVG of QR code" onclick="downloadSVG()"><img src="/static/images/icons/bezier.svg" alt="Download SVG"><b>SVG</b></button><button id="png-download" title="Download PNG of QR code" onclick="downloadPNG()"><img src="/static/images/icons/download.svg" alt="Download PNG"><b>PNG</b></button><button id="copy-download" title="Copy QR code" onclick="copyQRCode()"><img src="/static/images/icons/copy.svg" alt="Copy QR code"><b>Copy</b></button></div>
+					<div id="qr-info"><p>Type: 2 of 40 (25x25 of 177x177)</p></div>
+					<div id="optimizations" class="control-group">
+						<div class="control-group-head" onclick="toggleControlGroup(event)" style="background: var(--wincol-lighter);"><b>Errors and Optimizations</b><img src="/static/images/icons/down.svg" alt="Down" style="transform:rotate(-180deg);"></div>
+						<div class="control-group-controls" id="optimization-list"></div>
+					</div>
+				</div>
+			</div>
+			<p>Almost all "free" QR code generators aren't actually free. They either give you a QR code which will eventually expire without you knowing (making them risky for long-term use), or they require you to sign-up. This free QR code generator is different from all the others creating permanent QR codes that NEVER expire. There's no sign-up, no collecting user data, and no surprise paywalls! This no-nonsense ACTUALLY free QR code generator allows you to create clean, custom QR codes quickly and easily! You can download your QR code for free as either a PNG or an SVG vector graphic, no-signup required.</p>
+			<div id="extra-pages-container">
+				<div class="spr"></div>
+				<h1 class="title">Some other pages you might enjoy:</h1>
+				<div id="extra-pages">
+					<a href="https://youtu.be/EUggVZ8tTOA" class="extra-pages-video">
+						<img alt="A Superior Language - Thumbnail" src="../video-thumbnails/70-small.png" class="misc-content-img">
+						<b>A Superior Language</b>
+						<i>(YouTube video)</i>
+					</a>
+					<a href="/web-tools/periodic-table-word-finder" class="extra-pages-video">
+						<img alt="Periodic Table Word Finder" src="../static-0/files/images/webtoolpreview-periodictablewordfinder.png" class="misc-content-img">
+						<b>Periodic Table Word Finder</b>
+					</a>
+					<a href="/web-tools">
+						<img alt="Web Tools" src="../static-0/files/images/webtools.svg" class="misc-content-img">
+						<b>Other Web Tools</b>
+					</a>
+					<a href="https://youtu.be/TzKivkomsJM" class="extra-pages-video">
+						<img alt="What You Didn't Know About Roman Numerals - Thumbnail" src="../video-thumbnails/40-small.png" class="misc-content-img">
+						<b>What You Didn't Know About Roman Numerals</b>
+						<i>(YouTube video)</i>
+					</a>
+					<a href="/web-tools/word-unscrambler" class="extra-pages-video">
+						<img alt="Word Unscrambler" src="../static-0/files/images/webtoolpreview-wordunscrambler.png" class="misc-content-img">
+						<b>Word Unscrambler</b>
+					</a>
+				</div>
+			</div>
+		</div>
+		<footer></footer>
+		<script src="/static/defaults/headerfooter-loader.js"></script>
+		<script src="/static/main.js"></script>
+		<script src="/static/qr-code-generator.js"></script>
+	</body>
+</html>

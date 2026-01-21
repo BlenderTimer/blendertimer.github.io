@@ -133,6 +133,7 @@
 			let newURL = window.location.origin;
 			let redirect = false;
 			if (url.indexOf("video-sources/") > -1) {newURL += "/video?v=" + (parseInt(window.location.pathname.replace(/^\D+/g, ''))*10);redirect=true}
+			else if (url.endsWith("/qr")) {newURL += "/web-tools/qr-code-generator";redirect=true}
 			if (redirect == true) {window.location = newURL};
 		</script>
 		<div id="content-main" class="limwidth" style="opacity: 0; transition: 0.5s">
