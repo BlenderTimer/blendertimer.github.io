@@ -205,15 +205,21 @@ window.pages = [
 	},
 	{
 		title:"BT-SC License - BlenderTimer Licenses",
-		description:"The BT-SC license.",
+		description:"The BT-SC (BlenderTimer Strict Copyright) license.",
 		url:"/licenses/bt-sc",
 		keywords:["legal"]
 	},
 	{
 		title:"BT-LU License - BlenderTimer Licenses",
-		description:"The BT-LU license.",
+		description:"The BT-LU (BlenderTimer Limited-use) license.",
 		url:"/licenses/bt-lu",
 		keywords:["legal"]
+	},
+	{
+		title:"BT-M License - BlenderTimer Licenses",
+		description:"The BT-M (BlenderTimer Media) license.",
+		url:"/licenses/bt-m",
+		keywords:["legal", "photos", "videos", "music", "content"]
 	},
 	// The NowStream
 	{
