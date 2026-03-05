@@ -53,6 +53,49 @@ window.pages = [
 		url:"/submit-a-video-idea",
 		keywords:["form"]
 	},
+	// Portfolio
+	{
+		title:"Featured Photos - Daniel Roberts - BlenderTimer",
+		description:"A curated photography portfolio showcasing my best work in landscape, wildlife, astrophotography, macro, and other photography areas. Featuring my personal favorite and highest quality photos!",
+		url:"/portfolio",
+		keywords:["profile"]
+	},
+	{
+		title:"Bird Photography - Daniel Roberts - BlenderTimer",
+		description:"A curated photography portfolio showcasing my best work in landscape, wildlife, astrophotography, macro, and other photography areas. Featuring my personal favorite and highest quality photos!",
+		url:"/portfolio?c=bird-photography",
+		keywords:["profile"]
+	},
+	{
+		title:"Wildlife Photography - Daniel Roberts - BlenderTimer",
+		description:"A curated photography portfolio showcasing my best work in landscape, wildlife, astrophotography, macro, and other photography areas. Featuring my personal favorite and highest quality photos!",
+		url:"/portfolio?c=wildlife-photography",
+		keywords:["profile"]
+	},
+	{
+		title:"Macro Photography - Daniel Roberts - BlenderTimer",
+		description:"A curated photography portfolio showcasing my best work in landscape, wildlife, astrophotography, macro, and other photography areas. Featuring my personal favorite and highest quality photos!",
+		url:"/portfolio?c=macro-photography",
+		keywords:["profile"]
+	},
+	{
+		title:"Landscape Photography - Daniel Roberts - BlenderTimer",
+		description:"A curated photography portfolio showcasing my best work in landscape, wildlife, astrophotography, macro, and other photography areas. Featuring my personal favorite and highest quality photos!",
+		url:"/portfolio?c=landscape-photography",
+		keywords:["profile"]
+	},
+	{
+		title:"Space Photography - Daniel Roberts - BlenderTimer",
+		description:"A curated photography portfolio showcasing my best work in landscape, wildlife, astrophotography, macro, and other photography areas. Featuring my personal favorite and highest quality photos!",
+		url:"/portfolio?c=space-photography",
+		keywords:["profile"]
+	},
+	{
+		title:"Nature Photography - Daniel Roberts - BlenderTimer",
+		description:"A curated photography portfolio showcasing my best work in landscape, wildlife, astrophotography, macro, and other photography areas. Featuring my personal favorite and highest quality photos!",
+		url:"/portfolio?c=nature-photography",
+		keywords:["profile"]
+	},
 	// Activities
 	{
 		title:"Age Estimator - BlenderTimer Activities",
@@ -387,6 +430,12 @@ window.pages = [
 		description:"A list of all 53 thousand English words which can be spelled using the elements on the periodic table!",
 		url:"/web-tools/periodic-table-word-finder/words",
 		keywords:["53000", "chemicals", "atomic", "text"]
+	},
+	{
+		title:"QR Code Generator - BlenderTimer Web Tools",
+		description:"An online QR code generator that's actually free! No trials to expire, no third-party hosts, no sign-up or email required, just a genuine, no caveat, free QR code generator!",
+		url:"/web-tools/qr-code-generator",
+		keywords:["creator", "create", "make"]
 	},
 	{
 		title:"Speed of Sound (in air) Calculator - BlenderTimer Web Tools",

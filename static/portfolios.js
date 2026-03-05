@@ -28,6 +28,9 @@ let contentSize = {w:0,h:0};
 
 window.addEventListener('scroll', function() {loadContent()});
 window.addEventListener('resize', function() {fitPreview()});
+window.addEventListener('keypress', (e) => {
+	if (e.key == "R") {document.getElementById('rating-spr').removeAttribute('style');document.getElementById('rating').removeAttribute('style')};
+})
 
 // ----- LOAD COLLECTIONS -----
 const portfolioCollections = document.getElementById('portfolio-collections-list');
@@ -207,6 +210,8 @@ function checkContentViewing(loadTitle = true) {
 								html += `<div class="spr"></div>`;
 							}
 							html += `<div class="info-line"><b>Resolution:</b><p>${photo.width.toString()}x${photo.height.toString()} (${Math.round((photo.width*photo.height)/1000000).toString()}MP)</p></div>`;
+							html += `<div class="spr" style="display: none;" id="rating-spr"></div>`;
+							html += `<div class="info-line" style="display: none;" id="rating"><b>Rating:</b><p>${photo.rating}</p></div>`;
 							if (photo.location && photo.location.length > 0) {
 								html += `<div class="spr"></div>`;
 								if (photo.location.indexOf("http") > -1) {

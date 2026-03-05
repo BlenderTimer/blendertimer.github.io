@@ -25,6 +25,7 @@ document.getElementsByTagName("header")[0].innerHTML = `<nav>
 				<a href="/about"><b>About</b></a>
 				<div class="header-dropdown">
 					<a href="/about#contact"><b>Contact</b></a>
+					<a href="/portfolio"><b>Portfolio</b></a>
 					<a href="/about#faq"><b>FAQs</b></a>
 					<a href="/brand-kit"><b>Brand Kit</b></a>
 					<a href="/terms-of-service"><b>Terms of Service</b></a>
