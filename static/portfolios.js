@@ -229,7 +229,7 @@ function checkContentViewing(loadTitle = true) {
 							}
 							html += `</div>`;
 							html += `<a id="download-btn" href="/media/photos/${photo.title.getLink()}.${photo.filetype.indexOf("/") > -1 ? photo.filetype.removeAfter("/", -1) : photo.filetype}" download="${photo.title} by Daniel Roberts (BlenderTimer).${photo.filetype.indexOf("/") > -1 ? photo.filetype.removeAfter("/", -1) : photo.filetype}">Download Photo</a>`;
-							html += `<i id="download-info">Free for commercial use (<a href="/licenses/bt-m">BT-M License</a>).</i>`;
+							html += `<i id="download-info">Free for commercial use under the <a href="/licenses/bt-m" target="_blank">BT-M License</a>. No attribution required!</i>`;
 							viewerContentInfo.innerHTML = html;
 						}
 					}
