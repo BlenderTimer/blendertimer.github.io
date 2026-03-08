@@ -187,7 +187,7 @@ const photos = [
 	camera:"Canon R5 Mark II",
 	lens:"Laowa 25mm f2.8 2.5-5X Ultra-macro",
 	tags:["2.5X", "Handheld", "Focus Stacked (3)"],
-	caption:`These guys sure don't like to site still long enough for you to get a very good photo...`,
+	caption:`These guys sure don't like to sit still long enough for you to get a very good photo...`,
 	filetype:"jpg",
 	width:4688,
 	height:3478,
