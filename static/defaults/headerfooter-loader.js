@@ -62,6 +62,7 @@ document.getElementsByTagName("header")[0].innerHTML = `<nav>
 				<a href="/media" class="header-mobile-page hmpl"><b>Stock Media</b></a>
 				<a href="/about" class="header-mobile-group"><b>About</b></a> <!------- About ------->
 				<a href="/about#contact" class="header-mobile-page"><b>Contact</b></a>
+				<a href="/portfolio" class="header-mobile-page"><b>Portfolio</b></a>
 				<a href="/about#faq" class="header-mobile-page"><b>FAQs</b></a>
 				<a href="/brand-kit" class="header-mobile-page"><b>Brand Kit</b></a>
 				<a href="/terms-of-service" class="header-mobile-page"><b>Terms of Service</b></a>
