@@ -57,7 +57,7 @@ document.getElementsByTagName("header")[0].innerHTML = `<nav>
 				<a href="/visualizations" class="header-mobile-page"><b>Visualizations</b></a>
 				<a href="/data" class="header-mobile-page"><b>Studies and Data</b></a>
 				<a href="/factsheets" class="header-mobile-page"><b>Factsheets</b></a>
-				<a href="/activites" class="header-mobile-page"><b>Activities</b></a>
+				<a href="/activities" class="header-mobile-page"><b>Activities</b></a>
 				<a href="/software" class="header-mobile-page"><b>Software</b></a>
 				<a href="/media" class="header-mobile-page hmpl"><b>Stock Media</b></a>
 				<a href="/about" class="header-mobile-group"><b>About</b></a> <!------- About ------->
