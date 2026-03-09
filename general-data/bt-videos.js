@@ -2358,4 +2358,29 @@ const videos = [
 			{title:"The Last Echo",link:"https://pixabay.com/music/beautiful-plays-the-last-echo-410567",source:"Daniel Roberts"},
 		],
 	},
+	{
+		title:"English is Nice - Fantastic Fact 18",
+		id:410,
+		type:"short",
+		subtitles:"<p>You are such a nice person! You are so incredibly nice! And if you thought I was complimenting you, well...that's where you made the first mistake.<br>The word \"nice\" isn't actually as nice as you might think. It comes from the Latin word \"nescius\" which means ignorant. In fact a lesser-known English word \"nescience\", which essentially means ignorance, originates from the exact same Latin word.<br>So on top of calling someone \"nice\" being a bit bland and boring, it's also an insult, disguised as a compliment.<br>English is a really nice language-</p>",
+		youtubeId:"lGETV0yARps",
+		date:"9-3-2026",
+		views10:-1,
+		views30:-1,
+		views1:-1,
+		views24:-1,
+		duration:"0:36",
+		resolution:"HD",
+		info:[
+			{title:"The Meaning of \"Nice\"",link:"https://www.merriam-webster.com/wordplay/nice-multiple-meanings",source:"Merriam Webster"},
+			{title:"\"Nice\" Definition",link:"https://www.merriam-webster.com/dictionary/nice",source:"Merriam Webster"},
+			{title:"\"Nescience\" Definition",link:"https://www.merriam-webster.com/dictionary/nescience",source:"Merriam Webster"},
+		],
+		graphics:[
+			{title:"Man Standing-Front",link:"https://pixabay.com/vectors/person-man-stand-human-arms-legs-8238232",source:"Daniel Roberts"},
+		],
+		audio:[
+			{title:"Narration",source:"Daniel Roberts"},
+		],
+	},
 ];
