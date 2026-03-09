@@ -48,6 +48,12 @@ window.pages = [
 		keywords:["images", "videos", "photos", "music", "gifs", "audio", "vector", "graphics", "sound", "effects", "sfx", "pixabay"]
 	},
 	{
+		title:"Flags of the World - Free Flag GIFs - BlenderTimer",
+		description:"Hundreds of flag GIFs free for commercial use under the BT-M License!",
+		url:"/flags-of-the-world",
+		keywords:["images"]
+	},
+	{
 		title:"Submit a video idea! - BlenderTimer",
 		description:"Have an idea for a BlenderTimer video? Submit it here!",
 		url:"/submit-a-video-idea",

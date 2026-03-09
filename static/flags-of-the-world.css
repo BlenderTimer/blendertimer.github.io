@@ -1,0 +1,78 @@
+#flag-list {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: flex-start;
+	gap: 10px;
+	width: 100%;
+}
+
+.flag-item {
+	display: flex;
+	flex-flow: column;
+	width: 128px;
+	padding: 5px;
+	border-radius: var(--corm);
+	background: var(--wincol);
+}
+
+.flag-image {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+}
+
+.flag-image img {
+	display: block;
+	width: 100%;
+	height: auto;
+}
+
+.flag-title {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	overflow: hidden;
+	padding: 5px 0px;
+	text-align: center;
+	text-wrap-mode: nowrap;
+	text-overflow: ellipsis;
+	color: var(--txtcol) !important;
+}
+
+.flag-item-buttons {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 5px;
+	width: 100%;
+	height: 30px;
+}
+
+.flag-item-buttons a, .flag-item-buttons button {
+	display: flex !important;
+	justify-content: center;
+	align-items: center;
+	width: auto;
+	height: 30px;
+	padding: 5px;
+	box-sizing: border-box;
+	border: none;
+	outline: none;
+	border-radius: var(--cors);
+	color: var(--txtcol) !important;
+	background: var(--pricol);
+	cursor: pointer;
+	transition: var(--trans);
+}
+
+.flag-item-buttons a:hover, .flag-item-buttons button:hover {
+	text-decoration: none !important;
+	background: var(--pricol-hover);
+}
+
+.flag-item-buttons a img, .flag-item-buttons button img {
+	height: 100%;
+	pointer-events: none;
+	user-select: none;
+}
