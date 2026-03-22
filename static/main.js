@@ -7,7 +7,7 @@ document.getElementById('content-main').style.opacity = "1";
 function donate() {
 	var title = window.location.toString().removeBefore("/", 1, true);
 	var link = document.createElement('a');
-	link.href = `/donate?p=${document.title.removeAfter(" -", -1).replace(/ /g, "+").replace(/\?/g, "")}`;
+	link.href = `https://blendertimer.com/donate?p=${document.title.removeAfter(" -", -1).replace(/ /g, "+").replace(/\?/g, "")}`;
 	link.click();
 }
 
