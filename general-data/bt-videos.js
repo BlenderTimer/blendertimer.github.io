@@ -1357,7 +1357,7 @@ const videos = [
 		],
 		audio:[
 			{title:"Narration",source:"Daniel Roberts"},
-			{title:"Journey Through Nothing-Ambient Background Loop",link:"https://pixabay.com/music/adventure-journey-through-nothing-ambient-background-loop-232364",source:"Daniel Roberts"},
+			{title:"Journey Through Nothing-Ambient Background Loop",link:"https://pixabay.com/music/ambient-journey-through-nothing-ambient-background-loop-509073",source:"Daniel Roberts"},
 		],
 	},
 	{
@@ -1645,7 +1645,7 @@ const videos = [
 			{title:"To the Galaxy",link:"https://pixabay.com/music/ambient-to-the-galaxy-10734",source:"Daniel Roberts"},
 			{title:"Hit-02",source:"Daniel Roberts"},
 			{title:"Object Flyby",link:"https://pixabay.com/sound-effects/object-flyby-8115",source:"Daniel Roberts"},
-			{title:"Journey Through Nothing-Ambient Background Loop",link:"https://pixabay.com/music/adventure-journey-through-nothing-ambient-background-loop-232364",source:"Daniel Roberts"},
+			{title:"Journey Through Nothing-Ambient Background Loop",link:"https://pixabay.com/music/ambient-journey-through-nothing-ambient-background-loop-509073",source:"Daniel Roberts"},
 			{title:"0017_explo_grenade_06_PremiumBeat",link:"https://www.premiumbeat.com/blog/free-explosion-sfx-vfx-elements",source:"Detonate, PremiumBeat"},
 			{title:"Metal Hit-01",source:"Daniel Roberts"},
 			{title:"Powerful Swoosh-01",source:"Daniel Roberts"},
@@ -1825,7 +1825,7 @@ const videos = [
 		audio:[
 			{title:"Narration",source:"Daniel Roberts"},
 			{title:"Dwindling Hope",link:"https://pixabay.com/music/ambient-dwindling-hope-287000",source:"Daniel Roberts"},
-			{title:"Journey Through Nothing-Ambient Background Loop",link:"https://pixabay.com/music/adventure-journey-through-nothing-ambient-background-loop-232364",source:"Daniel Roberts"},
+			{title:"Journey Through Nothing-Ambient Background Loop",link:"https://pixabay.com/music/ambient-journey-through-nothing-ambient-background-loop-509073",source:"Daniel Roberts"},
 			{title:"Camera Exposure Dial",source:"Daniel Roberts"},
 			{title:"Venera 14 Venus Audio",link:"https://archive.org/details/venera-14-venus-recording",source:"Soviet Academy of Sciences"},
 			{title:"softwind-birds.wav",link:"https://freesound.org/people/ellanjellan/sounds/525256",source:"ellanjellan"},
@@ -2370,6 +2370,31 @@ const videos = [
 		views1:374,
 		views24:5612,
 		duration:"0:36",
+		resolution:"HD",
+		info:[
+			{title:"The Meaning of \"Nice\"",link:"https://www.merriam-webster.com/wordplay/nice-multiple-meanings",source:"Merriam Webster"},
+			{title:"\"Nice\" Definition",link:"https://www.merriam-webster.com/dictionary/nice",source:"Merriam Webster"},
+			{title:"\"Nescience\" Definition",link:"https://www.merriam-webster.com/dictionary/nescience",source:"Merriam Webster"},
+		],
+		graphics:[
+			{title:"Man Standing-Front",link:"https://pixabay.com/vectors/person-man-stand-human-arms-legs-8238232",source:"Daniel Roberts"},
+		],
+		audio:[
+			{title:"Narration",source:"Daniel Roberts"},
+		],
+	},
+	{
+		title:"BUFFALO - Fantastic Fact 19",
+		id:430,
+		type:"short",
+		subtitles:"<p>On this episode of \"I Hate English\"... \"Buffalo buffalo Buffalo buffalo buffalo buffalo Buffalo buffalo.\" That's a real, grammatically correct English sentence.<br>Broken down, the sentence is similar to \"London cats, Paris dogs bewilder, baffle Berlin rats.\" Or you can say the sentence with an optional \"which\" which makes the sentence a bit more clear but, for the buffalo sentence, that obviously makes it much less impressive. And the same goes for commas. They make it more clear and easier to understand, but they're not actually necessary.<br>If you still don't understand it, the first \"buffalo\" is a place name, such as Buffalo, New York. The second refers to the animal. The third is yet another place name, such as Buffalo, Wyoming. The fourth refers to the animal again. The fifth is the verb form of \"buffalo\" which means to bewilder or baffle. The sixth is the verb again. Then the seventh is another place name. And lastly the eighth is the animal again.<br>If you still don't understand it, don't worry, I must say I too am pretty buffaloed by this sentence about Buffalo buffalo.</p>",
+		youtubeId:"",
+		date:"",
+		views10:-1,
+		views30:-1,
+		views1:-1,
+		views24:-1,
+		duration:"0:59",
 		resolution:"HD",
 		info:[
 			{title:"The Meaning of \"Nice\"",link:"https://www.merriam-webster.com/wordplay/nice-multiple-meanings",source:"Merriam Webster"},
