@@ -15,6 +15,7 @@
 #about img {
 	display: block;
 	max-width: 150px;
+	margin-left: 4%;
 	filter: drop-shadow(0px 0px 8px #000A);
 }
 
@@ -35,6 +36,15 @@
 	width: 35%;
 }
 
+#secondary-downloads {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-flow: column;
+	gap: 5px;
+	margin-bottom: 20px;
+}
+
 .main-download {
 	display: block !important;
 	width: 100%;
@@ -46,15 +56,16 @@
 	padding: 10px 20px;
 	text-align: center;
 	color: #FFF !important;
-	border-radius: 5px;
+	border-radius: var(--corm);
 	border: 2px solid var(--theme3);
 	cursor: pointer;
 	box-shadow: 0px 0px 15px #0007;
 	user-select: none;
-	transition: 0.3s;
+	transition: var(--trans);
 }
 
 .main-download:hover {
+	text-decoration: none !important;
 	box-shadow: 0px 0px 20px #028A;
 	transform: scale(1.05);
 	border: 2px solid var(--theme4);
@@ -64,15 +75,43 @@
 	display: block !important;
 	width: 100%;
 	text-align: center;
-	margin-bottom: 30px;
+	margin-bottom: 20px;
 	cursor: default;
+}
+
+.secondary-download {
+	display: block !important;
+	width: 80%;
+	max-width: 280px;
+	margin: 0px auto 0px auto !important;
+	background: var(--wincol);
+	font-size: 13pt !important;
+	box-sizing: border-box;
+	padding: 3px 8px;
+	text-align: center;
+	color: #FFF !important;
+	border-radius: var(--cors);
+	border: 2px solid var(--borcol);
+	cursor: pointer;
+	box-shadow: 0px 0px 15px #0007;
+	user-select: none;
+	transition: var(--trans-fast);
+}
+
+.secondary-download:hover {
+	text-decoration: none !important;
+	background: var(--wincol-light);
+	box-shadow: 0px 0px 20px #000;
+	border: 2px solid var(--borcol-strong);
 }
 
 #screenshot1 {
 	display: block;
 	max-width: 800px;
+	width: 100%;
 	margin: 10px auto 20px auto;
 	border: 2px solid var(--hover-back2);
+	box-sizing: border-box;
 	border-radius: 5px;
 	box-shadow: 0px 0px 15px #000A;
 }
@@ -121,11 +160,23 @@
 	#about, #downloads {
 		width: 100%;
 	}
+
+	#secondary-downloads {
+		flex-flow: row;
+	}
 }
 
 @media screen and (max-width: 600px) {
 	#about {
 		flex-flow: column;
 		align-items: center;
+	}
+
+	#about img {
+		margin: 0;
+	}
+
+	#secondary-downloads {
+		flex-flow: column;
 	}
 }
