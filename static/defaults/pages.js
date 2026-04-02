@@ -351,6 +351,12 @@ window.pages = [
 		keywords:["programs", "apps", "tools"]
 	},
 	{
+		title:"Mathmetic - BlenderTimer Software",
+		description:"An ultra-powerful and precise calculation workspace!",
+		url:"https://blendertimer.com/software/mathmetic",
+		keywords:["mathematical", "app"]
+	},
+	{
 		title:"Tekstra - BlenderTimer Software",
 		description:"An advanced and extensive text editor/notepad!",
 		url:"https://blendertimer.com/tekstra",

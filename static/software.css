@@ -13,9 +13,9 @@
 	flex-flow: column;
 	align-items: center;
 	width: calc(16.667% - 10px) !important;
-	background: var(--base-back);
-	border: 2px solid var(--closer-back);
-	border-radius: 5px;
+	background: var(--wincol);
+	border: 2px solid var(--borcol);
+	border-radius: var(--corm);
 	box-sizing: border-box;
 	padding: 5px 5px;
 	cursor: pointer !important;
@@ -25,15 +25,16 @@
 
 .app:hover {
 	text-shadow: none !important;
-	background: var(--hover-back1);
-	border: 2px solid var(--hover-back2);
+	background: var(--wincol-light);
+	border: 2px solid var(--borcol-strong);
 	transform: scale(1.05);
+	text-decoration: none !important;
 }
 
 .app b {
 	display: block !important;
-	color: var(--base-text) !important;
-	font-size: 13pt !important;
+	color: var(--txtcol) !important;
+	font-size: 16pt !important;
 	text-align: center;
 	pointer-events: none;
 }
@@ -46,7 +47,7 @@
 	width: 100%;
 	height: 150px;
 	overflow: hidden;
-	border-radius: 3px;
+	border-radius: var(--cors);
 	margin-bottom: 8px;
 	box-shadow: 0px 0px 6px #FFF1;
 }
@@ -95,8 +96,9 @@
 	width: 100%;
 	padding: 4px 6px;
 	box-sizing: border-box;
-	font-size: 12pt !important;
-	color: var(--italic-text) !important;
+	font-size: 13pt !important;
+	color: var(--txtcol-muted) !important;
+	text-align: center;
 	pointer-events: none;
 }
 
