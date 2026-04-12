@@ -5,6 +5,7 @@
 	--pricol-hover: #3f99ff;
 	--pricol-light: #60a5fa;
 	--pricol-dark: #1e40af;
+	--pricol-darken: #1d74ff33;
 
 	/* STANDARD COLORS */
 	--bgcol: #0f172a;
@@ -44,6 +45,8 @@
 	/* SPACING */
 	--butspace-medium: 10px 20px;
 	--winspace: 20px;
+	--adspace: 12px;
+	--butspace-ad: 7px 16px;
 
 	/* TRANSITIONS */
 	--trans-fast: 150ms ease;

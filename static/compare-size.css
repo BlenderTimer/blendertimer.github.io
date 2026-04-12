@@ -1710,7 +1710,7 @@
 	flex-flow: column;
 	align-items: center;
 	position: relative;
-	background: var(--wincol);
+	background: var(--wincol-light);
 	box-sizing: border-box;
 	border-radius: 3px;
 	margin: 2px;
