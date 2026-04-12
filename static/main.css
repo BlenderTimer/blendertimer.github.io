@@ -59,7 +59,7 @@ body {
 
 /* —————————— ADS —————————— */
 
-.ad-inline {
+.ad-inline, .donate-inline {
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -67,7 +67,7 @@ body {
 	margin: 20px 0px;
 }
 
-.ad-wrapper {
+.ad-wrapper, .donate-wrapper {
 	display: flex;
 	justify-content: stretch;
 	align-items: stretch;
@@ -81,17 +81,17 @@ body {
 	transition: var(--trans);
 }
 
-.ad-wrapper:hover {
+.ad-wrapper:hover, .donate-wrapper:hover {
 	box-shadow: 0px 0px 40px var(--pricol-dark);
 	border: 2px solid var(--pricol-hover);
 }
 
-.ad-inline-wrapper {
+.ad-inline-wrapper, .donate-inline-wrapper {
 	width: 100%;
 	max-width: 800px;
 }
 
-.ad-background {
+.ad-background, .donate-background {
 	position: absolute;
 	top: 0;
 	bottom: 0;
@@ -106,24 +106,24 @@ body {
 	z-index: -1;
 }
 
-.ad-wrapper:hover .ad-background {
+.ad-wrapper:hover .ad-background, .donate-wrapper:hover .donate-background {
 	opacity: 0.8;
 }
 
-.ad-background span {
+.ad-background span, .donate-background span {
 	display: block;
 	position: absolute;
 	background: var(--pricol);
 	border-radius: 100%;
 }
 
-.ad-horizontal-left {
+.ad-horizontal-left, .donate-horizontal-left {
 	display: flex;
 	justify-content: center;
 	align-items: center;
 }
 
-.ad-horizontal-left img {
+.ad-horizontal-left img, .donate-horizontal-left img {
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -133,11 +133,11 @@ body {
 	transition: ease 800ms;
 }
 
-.ad-wrapper:hover .ad-horizontal-left img {
+.ad-wrapper:hover .ad-horizontal-left img, .donate-wrapper:hover .donate-horizontal-left img {
 	transform: scale(1.05);
 }
 
-.ad-horizontal-right {
+.ad-horizontal-right, .donate-horizontal-right {
 	display: flex;
 	flex-flow: column;
 	justify-content: center;
@@ -145,21 +145,21 @@ body {
 	width: 100%;
 }
 
-.ad-horizontal-right b {
+.ad-horizontal-right b, .donate-horizontal-right b {
 	color: var(--txtcol) !important;
 	font-size: 17pt !important;
 	text-align: center;
 	cursor: default;
 }
 
-.ad-horizontal-right p {
+.ad-horizontal-right p, .donate-horizontal-right p {
 	color: var(--pricol-light) !important;
 	font-size: 14pt !important;
 	text-align: center;
 	cursor: default;
 }
 
-.ad-inline-wrapper button {
+.ad-inline-wrapper button, .donate-inline-wrapper button {
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -174,17 +174,17 @@ body {
 	transition: var(--trans);
 }
 
-.ad-inline-wrapper button:hover {
+.ad-inline-wrapper button:hover, .donate-inline-wrapper button:hover {
 	background: var(--pricol-hover);
 	box-shadow: 0px 0px 10px var(--pricol);
 }
 
-.ad-inline-wrapper button img {
+.ad-inline-wrapper button img, .donate-inline-wrapper button img {
 	height: 15pt;
 	pointer-events: none;
 }
 
-.ad-inline-wrapper button b {
+.ad-inline-wrapper button b, .donate-inline-wrapper button b {
 	font-size: 16pt !important;
 	color: white !important;
 	pointer-events: none;
@@ -1122,7 +1122,7 @@ footer {
 }
 
 @media screen and (max-width: 500px) {
-	.ad-horizontal-left {
+	.ad-horizontal-left, .donate-horizontal-left {
 		display: none;
 	}
 
