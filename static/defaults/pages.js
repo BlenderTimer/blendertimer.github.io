@@ -170,7 +170,7 @@ window.pages = [
 		title:"Factsheets - BlenderTimer",
 		description:"All the data in one spot for your convenience!",
 		url:"https://blendertimer.com/factsheets",
-		keywords:["space", "bible", "solar"]
+		keywords:["space", "solar"]
 	},
 	{
 		title:"Planet Factsheet - Solar System - BlenderTimer Factsheets",
@@ -187,7 +187,7 @@ window.pages = [
 	{
 		title:"Bible Data - BlenderTimer Factsheets",
 		description:"A collection of thousands of facts and data about the Bible!",
-		url:"https://blendertimer.com/factsheets/bible-data",
+		url:"https://blendertimer.com/data/bible-data",
 		keywords:["kjv", "words", "verses", "chapters", "books", "center", "flesch", "testament"]
 	},
 	{
