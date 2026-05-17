@@ -2,7 +2,7 @@
 <html lang="en-US">
 	<head>
 		<!-- Google tag (gtag.js) -->
-		<script async src="https://www.googletagmanager.com/gtag/js?id=G-  SYR26MG6YV"></script>
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-SYR26MG6YV"></script>
 		<script>
 			window.dataLayer = window.dataLayer || [];
 			function gtag(){dataLayer.push(arguments);}
@@ -35,23 +35,40 @@
 		</div>
 		<div id="content-main" style="opacity: 0; transition: 0.5s ease">
 			<div id="welcome-banner">
-				<span id="welcome-banner-back"></span>
-				<script type="text/javascript">document.getElementById('welcome-banner-back').style.backgroundImage = "url('/static//images/banners/wbb-" + randomNumber(1,30).toString() + ".jpg')"</script>
-				<div id="welcome-banner-text">
-					<h1>BlenderTimer</h1>
-					<p>Free resources for EVERYONE!</p>
+				<div id="wbb-fade"></div>
+				<div id="welcome-banner-back">
+					<div id="wbb-center"></div>
+					<div class="wbb-dot" id="wbb-dot1"></div>
+					<div class="wbb-dot" id="wbb-dot2"></div>
+					<div class="wbb-dot" id="wbb-dot3"></div>
+					<div class="wbb-dot" id="wbb-dot4"></div>
+					<div class="wbb-dot" id="wbb-dot5"></div>
+					<div id="wbb-grid1"></div>
+					<div id="wbb-grid2"></div>
+					<div id="wbb-grid3"></div>
 				</div>
-			</div>
-			<div id="welcome-text">
-				<p>BlenderTimer is the work of Daniel Roberts, a self-taught photographer, videographer, digital artist, YouTube creator, and developer. In an age of money-hungry corporations, Daniel Roberts has set out on a mission to provide the world with thousands of completely free resources, no caveats! This website is the home base of the entire business. Here, you can explore unique <a href="/web-tools">web tools</a> like the <a href="/web-tools/morse-code-translator">Morse Code Translator</a> and <a href="/web-tools/compare-size">Size Comparison Tool</a>, or dive into <a href="/activities">fun activities</a> such as <a href="/the-world-since-you">The World Since You.</a> Watch engaging, <a href="/channel">educational videos</a> exploring science, history, and other fascinating topics! Delve into the <a href="/visualizations">visualizations</a> that challenge perception and illustrate space and time in remarkable ways! Browse an ever-expanding library of <a href="/media">completely free stock media</a>, including photos, videos, music, sound effects, illustrations, GIFs, vector graphics, and 3D models! With extensive <a href="/factsheets">factsheets</a>, <a href="/software">useful software</a>, and a <a href="https://discord.gg/EBYeZ3E58c">welcoming Discord community</a>, BlenderTimer brings science, data, creativity, and fun together in one place! Built and maintained by me, Daniel Roberts, founder and owner of BlenderTimer.</p>
-				<p>If my work has helped or inspired you in any way, please consider <a href="/donate">supporting me</a> and the free resources I provide.</p>
-				<p>Thank you for visiting BlenderTimer, I hope you enjoy your stay!</p>
+				<div id="welcome-banner-text">
+					<img id="wbt-title" src="/static/images/brand/logo-textonly.svg" alt="BlenderTimer" title="BlenderTimer">
+					<div id="wbt-subtitle-row">
+						<div id="wbt-subtitle-line-left"></div>
+						<div id="wbt-subtitle">Free resources for <span class="wbt-subtitle-highlight">EVERYONE<span></div>
+						<div id="wbt-subtitle-line-right"></div>
+					</div>
+				</div>
 			</div>
 			<h1 class="title">Tools and Resources</h1>
 			<div id="main-links">
+				<a href="/activities">
+					<img alt="Activities" src="/static/images/activities.svg" class="misc-content-img">
+					<b>Activities</b>
+				</a>
 				<a href="/web-tools">
 					<img alt="Web Tools" src="/static/images/webtools.svg" class="misc-content-img">
 					<b>Web Tools</b>
+				</a>
+				<a href="/software">
+					<img alt="Software" src="/static/images/software.svg" class="misc-content-img">
+					<b>Software</b>
 				</a>
 				<a href="/visualizations">
 					<img alt="Visualizations" src="/static/images/visualizations.svg" class="misc-content-img">
@@ -65,86 +82,88 @@
 					<img alt="Studies and Data" src="/static/images/studies-and-data.svg" class="misc-content-img">
 					<b>Studies and Data</b>
 				</a>
+				<a href="/media">
+					<img alt="Free Stock Media" src="/static/images/free-stock-media.svg" class="misc-content-img">
+					<b>Free Stock Media</b>
+				</a>
 				<a href="/nowstream">
 					<img alt="NowStream" src="/static/images/nowstream.svg" class="misc-content-img">
 					<b>The NowStream</b>
 				</a>
-				<a href="/media">
-					<img alt="Free Stock Media" src="/static/images/desert.svg" class="misc-content-img">
-					<b>Free Stock Media</b>
-				</a>
-				<a href="/activities">
-					<img alt="Activities" src="/static/images/activities.svg" class="misc-content-img">
-					<b>Activities</b>
-				</a>
-				<a href="/channel-statistics">
-					<img alt="Channel Statistics" src="/static/images/milestone-flag.svg" class="misc-content-img">
-					<b>Channel Statistics</b>
-				</a>
-				<a href="/software">
-					<img alt="Software" src="/static/images/software.svg" class="misc-content-img">
-					<b>Software</b>
-				</a>
 			</div>
 			<h1 class="title">Latest Videos</h1>
-			<div id="latest-videos">
+			<div id="latest-videos-container">
 				<span id="latest-videos-end"></span>
-				<div id="latest-videos-more"><a href="https://www.youtube.com/@BlenderTimer/videos">View More!</a></div>
-				<script type="text/javascript">
-					let limit = 100;
-					for (let i=videos.length-1; i >= 0; i--) {
-						if (limit == 0) {break};
-						if (!(videos[i].hidden && videos[i].hidden == true)) {
-							var vb = document.createElement('a');
-							vb.className = "latest-video-block";
-							vb.id = "video-" + videos[i].id;
-							vb.href = "https://youtube.com/watch?v=" + videos[i].youtubeId;
-							var vType = document.createElement('img');
-							vType.className = "latest-video-type";
-							if (videos[i].type == "short") {
-								vType.alt = "Short";
-								vType.title = "This video is a short.";
-								vType.src = "./static/images/icons/videotype-short.svg";
+				<div id="latest-videos-more"><a href="https://youtube.com/@BlenderTimer/videos">View More!</a></div>
+				<div id="latest-videos">
+					<script type="text/javascript">
+						let limit = 20;
+						for (let i=videos.length-1; i >= 0; i--) {
+							if (limit == 0) {break};
+							if (!(videos[i].hidden && videos[i].hidden == true)) {
+								var vb = document.createElement('a');
+								vb.className = "latest-video-block";
+								vb.id = "video-" + videos[i].id;
+								vb.href = "https://youtube.com/watch?v=" + videos[i].youtubeId;
+								var vType = document.createElement('img');
+								vType.className = "latest-video-type";
+								if (videos[i].type == "short") {
+									vType.alt = "Short";
+									vType.title = "This video is a short.";
+									vType.src = "./static/images/icons/videotype-short.svg";
+								}
+								else {
+									vType.alt = "Full Video";
+									vType.title = "This is a full video.";
+									vType.src = "./static/images/icons/videotype-longform.svg";
+								}
+								var y = parseInt(videos[i].date.removeBefore("-", 1, true));
+								var m = parseInt(videos[i].date.removeBefore("-", 1).removeAfter("-", -1, true));
+								var d = parseInt(videos[i].date.removeAfter("-", -1));
+								if ((Date.now() - new Date(y, m-1, d).getTime()) <= 604800000) {
+									var vNew = document.createElement('b');
+									vNew.className = "latest-video-new";
+									vNew.textContent = "NEW!";
+									vNew.title = "This video is a recent upload!"
+									vb.appendChild(vNew);
+								}
+								if (new Date(videos[i].date))
+								var vThumb = document.createElement('img');
+								vThumb.className = "latest-video-thumb";
+								vThumb.alt = "Thumbnail";
+								vThumb.src = "./video-thumbnails/" + videos[i].id + "-small.png";
+								var vTitle = document.createElement('div');
+								vTitle.className = "latest-video-title";
+								vTitle.innerHTML = "<p>" + videos[i].title + "</p>"
+								vb.appendChild(vType);
+								vb.appendChild(vThumb);
+								vb.appendChild(vTitle);
+								document.getElementById('latest-videos').appendChild(vb);
+								limit -= 1;
 							}
-							else {
-								vType.alt = "Full Video";
-								vType.title = "This is a full video.";
-								vType.src = "./static/images/icons/videotype-longform.svg";
-							}
-							var y = parseInt(videos[i].date.removeBefore("-", 1, true));
-							var m = parseInt(videos[i].date.removeBefore("-", 1).removeAfter("-", -1, true));
-							var d = parseInt(videos[i].date.removeAfter("-", -1));
-							if ((Date.now() - new Date(y, m-1, d).getTime()) <= 604800000) {
-								var vNew = document.createElement('b');
-								vNew.className = "latest-video-new";
-								vNew.textContent = "NEW!";
-								vNew.title = "This video is a recent upload!"
-								vb.appendChild(vNew);
-							}
-							if (new Date(videos[i].date))
-							var vThumb = document.createElement('img');
-							vThumb.className = "latest-video-thumb";
-							vThumb.alt = "Thumbnail";
-							vThumb.src = "./video-thumbnails/" + videos[i].id + "-small.png";
-							var vTitle = document.createElement('div');
-							vTitle.className = "latest-video-title";
-							vTitle.innerHTML = "<p>" + videos[i].title + "</p>"
-							vb.appendChild(vType);
-							vb.appendChild(vThumb);
-							vb.appendChild(vTitle);
-							document.getElementById('latest-videos').appendChild(vb);
-							limit -= 1;
 						}
-					}
-				</script>
-			</div>
-			<div id="site-activity-block">
-				<div id="stat-map-container">
-					<h1 class="title">Site Activity</h1>
-					<p>(since December 10, 2022)</p>
-					<div id="stat-map" style="background: var(--wincol)"><b>Loading data...</b><iframe src="https://lookerstudio.google.com/embed/reporting/de373ea3-fbf7-4176-9672-ced8d8320519/page/sLzeF" frameborder="0" style="border:0" allowfullscreen sandbox="allow-storage-access-by-user-activation allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox"></iframe></div>
+					</script>
 				</div>
 			</div>
+			<div class="donate-inline" style="margin-top: 80px;">
+				<div class="donate-wrapper donate-inline-wrapper">
+					<div class="donate-background">
+						<span style="width: 200px; height: 200px; left: -80px; top: -90px; opacity: 1; filter: blur(50px);"></span>
+						<span style="width: 300px; height: 200px; bottom: -120px; right: -80px; opacity: 0.6; filter: blur(50px);"></span>
+						<span style="width: 100px; height: 100px; left: 20%; bottom: -20px; opacity: 0.4; filter: blur(30px);"></span>
+						<span style="width: 80px; height: 80px; left: 79%; top: -19%; opacity: 0.4; filter: blur(30px);"></span>
+					</div>
+					<div class="donate-horizontal-left"><img src="/static/images/icons/heart-color-outlined.svg" alt="Heart icon"></div>
+					<div class="donate-horizontal-right donate-text">
+						<b>Support BlenderTimer</b>
+						<p>for as little as $2 per month!</p>
+						<button onclick="donate()"><img src="/static/images/icons/heart-white.svg" alt="Heart icon"><b>Donate</b></button>
+					</div>
+				</div>
+			</div>
+			<h1 class="title">Site Activity</h1>
+			<p class="description">(since December 10, 2022)</p>
+			<div id="stat-map" style="background: var(--wincol)"><b>Loading data...</b><iframe src="https://lookerstudio.google.com/embed/reporting/de373ea3-fbf7-4176-9672-ced8d8320519/page/sLzeF" frameborder="0" style="border:0" allowfullscreen sandbox="allow-storage-access-by-user-activation allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox"></iframe></div>
 		</div>
 		<footer></footer>
 		<script src="/static/defaults/headerfooter-loader.js"></script>

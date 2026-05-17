@@ -16,7 +16,7 @@
 	justify-content: center;
 	align-items: center;
 	position: relative;
-	background: var(--close-back);
+	background: var(--wincol);
 	box-shadow: 0px 0px 30px #000F;
 	border-radius: 10px;
 	color: var(--base-text);
@@ -37,7 +37,7 @@
 	width: 30px;
 	height: 30px;
 	border-radius: 50%;
-	background: var(--closer-back);
+	background: var(--wincol-light);
 	box-shadow: 0px 0px 10px #0004;
 	cursor: pointer;
 	transition: 0.2s;
@@ -55,12 +55,12 @@
 	justify-content: center;
 	max-width: 800px;
 	margin: 0px auto 25px auto;
-	background: #F91;
+	background: #d15900;
 	border-radius: 10px;
-	border: 2px solid #F50;
+	border: 3px solid #ff9e3e;
 	box-sizing: border-box;
 	padding: 10px 20px;
-	box-shadow: 0px 0px 10px #F905;
+	box-shadow: 0px 0px 20px #ff840085;
 }
 
 #test-disclaimer h1 {
@@ -92,7 +92,7 @@
 
 .a-description {
 	font-size: 14pt !important;
-	color: var(--italic-text) !important;
+	color: var(--txtcol-subtle) !important;
 	text-align: center;
 	width: 100% !important;
 	margin: 0px 0px 20px 0px;
@@ -113,9 +113,9 @@
 	justify-content: center;
 	align-items: center;
 	width: 100%;
-	background: var(--close-back);
+	background: var(--wincol);
 	box-sizing: border-box;
-	border-radius: 10px;
+	border-radius: var(--corm);
 	box-shadow: 0px 0px 10px #0005;
 	padding: 20px 40px;
 	margin: 10px auto;
@@ -123,7 +123,7 @@
 
 .question p {
 	font-size: 14pt !important;
-	color: var(--base-text) !important;
+	color: var(--txtcol) !important;
 	text-align: center;
 	margin-bottom: 2pt;
 }
@@ -142,7 +142,7 @@
 }
 
 .question p img:hover {
-	background: var(--hover-back1);
+	background: var(--wincol-lighten);
 }
 
 .agree-responder {
@@ -486,19 +486,19 @@
 	display: block;
 	min-width: 300px;
 	box-sizing: border-box;
-	font-size: 14pt;
+	font-size: 16pt;
 	margin: 30px auto;
-	background: var(--theme1);
+	background: var(--pricol);
 	color: #FFF;
-	border: 2px solid var(--theme3);
-	border-radius: 6px;
+	border: 2px solid var(--pricol-light);
+	border-radius: var(--corm);
 	padding: 12px 30px;
 	cursor: pointer;
 	transition: 0.2s;
 }
 
 #finish:hover {
-	background: var(--theme2);
+	background: var(--pricol-hover);
 	transform: scale(1.05);
 }
 
@@ -519,20 +519,20 @@
 
 #result p {
 	font-size: 16pt;
-	color: var(--base-text);
+	color: var(--txtcol);
 	text-align: center;
 }
 
 #result b {
 	font-family: sans-serif;
 	font-size: 40pt;
-	color: var(--base-text);
+	color: var(--txtcol);
 	text-align: center;
 }
 
 #result i {
 	font-size: 16pt;
-	color: var(--base-text);
+	color: var(--txtcol);
 	text-align: center;
 	margin-top: 10px;
 }

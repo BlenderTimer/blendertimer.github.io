@@ -169,6 +169,7 @@ const worldEvents = [
 		title:"<b>NASA is founded</b><p>.</p>",
 		description:"NASA, previously NACA, is founded.",
 		type:"company-founded",
+		major:true,
 	},
 	{
 		date:"1959-8-21",
@@ -181,7 +182,7 @@ const worldEvents = [
 	{
 		date:"1960-5-22",
 		title:"<p>The </p><b>Valdivia earthquake</b><p> occurs of magnitude 9.2.</p>",
-		description:"The Valdivia earthquake (also known as the Chilean earthquake) was a magnitude 9.2 earthquake and is the most powerful earthquake ever recorded as of 2025.",
+		description:"The Valdivia earthquake (also known as the Chilean earthquake) was a magnitude 9.2 earthquake and is the most powerful earthquake ever recorded as of 2026.",
 		major:true,
 		type:"earthquake",
 	},
@@ -243,6 +244,7 @@ const worldEvents = [
 		title:"<b>Microsoft is founded</b><p>.</p>",
 		description:"Bill Gates and Paul Allen officially founded Microsoft in Albuquerque, New Mexico.",
 		type:"company-founded",
+		major:true,
 	},
 	{
 		date:"1975-4-30",
@@ -270,11 +272,12 @@ const worldEvents = [
 		title:"<b>Apple is founded</b><p>.</p>",
 		description:"Steve Jobs and Steve Wozniak officially founded Apple Computer, Inc.",
 		type:"company-founded",
+		major:true,
 	},
 	{
 		date:"1980-5-18",
 		title:"<b>Mt. Saint Helens erupts</b><p>.</p>",
-		description:"The eruption of Mt. Saint Helens was the most deadly volcanic event in the history of the United States (as of 2025) killing around 57 people.",
+		description:"The eruption of Mt. Saint Helens was the most deadly volcanic event in the history of the United States (as of 2026) killing around 57 people.",
 		major:true,
 		type:"volcanic-eruption",
 	},
@@ -404,6 +407,7 @@ const worldEvents = [
 		title:"<b>Google is founded</b><p>.</p>",
 		description:"Page and Brin officially founded Google Inc. in a garage in Menlo Park, California.",
 		type:"company-founded",
+		major:true,
 	},
 	{
 		date:"1999-4-21",
@@ -441,6 +445,7 @@ const worldEvents = [
 		title:"<b>Wikipedia is founded</b><p>.</p>",
 		description:"Now one of the most used websites in the world, Wikipedia was founded by Jimmy Wales and Larry Sanger.",
 		type:"company-founded",
+		major:true,
 	},
 	{
 		date:"2001",
@@ -546,6 +551,7 @@ const worldEvents = [
 		title:"<b>Facebook is launched</b><p>.</p>",
 		description:"Launched by Mark Zuckerberg, it was originally under the name of \"TheFacebook\" and located at thefacebook.com.",
 		type:"social-media-launch",
+		major:true,
 	},
 	{
 		date:"2004-3-16",
@@ -565,18 +571,21 @@ const worldEvents = [
 		title:"<b>YouTube is launched</b><p>.</p>",
 		description:"Steve Chen, Chad Hurley, and Jawed Karim launched YouTube.",
 		type:"social-media-launch",
+		major:true,
 	},
 	{
 		date:"2005-6-23",
 		title:"<b>Reddit is launched</b><p>.</p>",
 		description:"Launched by Steve Huffman, Alexis Ohanian, and Aaron Swartz in Medford, Massachusetts.",
 		type:"social-media-launch",
+		major:true,
 	},
 	{
 		date:"2006-3-21",
 		title:"<b>Twitter is launched</b><p>.</p>",
 		description:"Now known as X, Twitter was launched by Jack Dorsey, Evan Williams, and Biz Stone.",
 		type:"social-media-launch",
+		major:true,
 	},
 	{
 		date:"2006-6-17",
@@ -710,6 +719,7 @@ const worldEvents = [
 		title:"<b>Instagram is founded</b><p>.</p>",
 		description:"Kevin Systrom and Mike Krieger founded Instagram on October 6, 2010.",
 		type:"social-media-launch",
+		major:true,
 	},
 	{
 		date:"2010-11-28",
@@ -743,6 +753,7 @@ const worldEvents = [
 		title:"<b>SnapChat is launched</b><p>.</p>",
 		description:"Evan Spiegel and Bobby Murphy relaunch the photo sharing app Picaboo as Snapchat.",
 		type:"social-media-launch",
+		major:true,
 	},
 	{
 		date:"2011-10-31",
@@ -809,6 +820,7 @@ const worldEvents = [
 		title:"<b>TikTok is launched</b><p>.</p>",
 		description:"TikTok (also known as Douyin) is launched by ByteDance (a Chinese internet company).",
 		type:"social-media-launch",
+		major:true,
 	},
 	{
 		date:"2018-6",
@@ -895,7 +907,7 @@ const worldEvents = [
 	{
 		date:"2021-12-25",
 		title:"<p>The </p><b>James Webb Space Telescope</b><p> is launched.</p>",
-		description:"As the largest telescope in space, the JWST is equipped with high-resolution and high-sensitivity instruments, allowing it to view objects too old, distant, or faint for the Hubble Space Telescope.",
+		description:"As the largest telescope in space, the JWST is equipped with high-resolution and high-sensitivity instruments, allowing it to view objects too distant or faint for the Hubble Space Telescope.",
 		major:true,
 		type:"spacecraft-launch",
 	},

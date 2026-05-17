@@ -38,14 +38,33 @@ if (isMobile()) {
 	button.type = 1;
 }
 //----------Events and Intervals
-window.addEventListener('resize', function() {setCanvasSize()});
-document.addEventListener('mousemove', function() {
+let pixelRatio = window.devicePixelRatio || window.screen.availWidth / document.documentElement.clientWidth;
+window.addEventListener('resize', () => {cl = Math.max(chZo(), cl); setCanvasSize()});
+document.addEventListener('mousemove', () => {
 	cur.x = event.pageX - ctt.getBoundingClientRect().x - window.scrollX;
 	cur.y = event.pageY - ctt.getBoundingClientRect().y - window.scrollY;
 	moveButton();
 	updateCanvas(0);
 });
-document.addEventListener('click', function() {
+function chZo(){
+	let newPixelRatio = window.devicePixelRatio || window.screen.availWidth / document.documentElement.clientWidth;
+	if (newPixelRatio > pixelRatio && newPixelRatio > 1.49) {
+		return 1;
+	}
+	return 0;
+	// if (newPixelRatio > pixelRatio) { // zooming in
+	// 	pixelRatio = newPixelRatio;
+	// 	return true;
+	// }
+	// else if (newPixelRatio < pixelRatio) { // zooming out
+	// 	pixelRatio = newPixelRatio;
+	// 	return false;
+	// }
+	// else { // resizing
+	// 	return false;
+	// }
+}
+document.addEventListener('click', () => {
 	cur.x = event.pageX - ctt.getBoundingClientRect().x - window.scrollX;
 	cur.y = event.pageY - ctt.getBoundingClientRect().y - window.scrollY;
 	moveButton();
@@ -56,7 +75,7 @@ document.addEventListener('click', function() {
 		ch = co();
 	}
 });
-document.addEventListener('touchstart', function() {
+document.addEventListener('touchstart', () => {
 	if (event.changedTouches.length > 0) {
 		const touch = event.changedTouches[0];
 		cur.x = touch.pageX - ctt.getBoundingClientRect().x - window.scrollX;
@@ -65,7 +84,7 @@ document.addEventListener('touchstart', function() {
 		updateCanvas(2);
 	}
 });
-document.addEventListener('touchend', function() {
+document.addEventListener('touchend', () => {
 	if (event.changedTouches.length > 0) {
 		const touch = event.changedTouches[0];
 		cur.x = touch.pageX - ctt.getBoundingClientRect().x - window.scrollX;
@@ -79,7 +98,7 @@ document.addEventListener('touchend', function() {
 		}
 	}
 });
-setInterval(function() {updateCanvas()}, 1);
+setInterval(() => {updateCanvas()}, 1);
 //----------
 function setCanvasSize() {
 	ctt.width = ctt.parentNode.getBoundingClientRect().width * 0.9;
@@ -88,7 +107,7 @@ function setCanvasSize() {
 
 function updateCanvas(e) {
 	c.clearRect(0, 0, ctt.width, ctt.height);
-	devtoolsOpen==!![]&&(ch=!![],cl=!![]);
+	// devtoolsOpen==!![]&&(ch=!![],cl=!![]);
 	if (cl == true) {
 		ctt.style.background = "hsl(" + randomNumber(0, 360) + ", 100%, 50%)";
 		c.fillStyle = "hsl(" + randomNumber(0, 360) + ", 100%, 50%)";

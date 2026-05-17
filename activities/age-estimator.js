@@ -164,8 +164,8 @@ function getResult() {
 		estAge = 110;
 	}
 	if (error == true) {
-		result.style.background = "var(--base-back)";
-		result.style.border = "3px solid var(--close-back)";
+		result.style.background = "var(--wincol)";
+		result.style.border = "3px solid var(--wincol-light)";
 		result.style.boxShadow = "0px 0px 20px #0005";
 		document.getElementById("finish").style.background = "#F44";
 		document.getElementById("finish").style.borderColor = "#F88";
@@ -179,9 +179,9 @@ function getResult() {
 		}, 3000);
 	}
 	else {
-		result.style.background = "var(--theme1)";
-		result.style.border = "3px solid var(--theme4)";
-		result.style.boxShadow = "0px 0px 20px var(--theme1)";
+		result.style.background = "var(--pricol)";
+		result.style.border = "3px solid var(--pricol-light)";
+		result.style.boxShadow = "0px 0px 20px var(--pricol)";
 		document.getElementById("finish").style.background = null;
 		document.getElementById("finish").style.borderColor = null;
 		result.style.transform = "scaleY(0)";

@@ -141,6 +141,21 @@
 	text-shadow: 0px 0px 10px var(--theme2);
 }
 
+.a-title {
+	margin-top: 30px !important;
+	margin-bottom: 5px !important;
+	font-size: 20pt !important;
+}
+
+.a-description {
+	font-size: 14pt !important;
+	color: var(--txtcol-subtle) !important;
+	text-align: center;
+	width: 100% !important;
+	margin: 0px 0px 20px 0px;
+	display: block !important;
+}
+
 #start-input {
 	display: flex;
 	align-items: center;
@@ -148,14 +163,14 @@
 	box-sizing: border-box;
 	position: relative;
 	width: 100%;
-	height: calc(100vh - 126px);
+	height: calc(100vh - 190px);
 	min-height: max-content;
 	margin: 5px 0px 5px 0px;
-	border: 3px solid var(--theme1);
+	border: 3px solid var(--pricol);
 	box-shadow: 0px 0px 30px #59F2 inset;
 	border-radius: 10px;
 	padding: 20px;
-	background: #7AF1;
+	background: #0b76ff11;
 }
 
 #start-input-note {
@@ -213,7 +228,7 @@
 #start-input-1 label {
 	display: block;
 	font-size: 20pt;
-	color: var(--base-text);
+	color: var(--txtcol);
 	font-weight: bold;
 	text-align: center;
 	margin-bottom: 10px;
@@ -227,7 +242,7 @@
 	padding: 8px 16px;
 	font-size: 20pt;
 	font-weight: bold;
-	color: var(--base-text);
+	color: var(--txtcol);
 	outline: none;
 	border: none;
 	border-radius: 5px;
@@ -249,7 +264,7 @@
 	outline: none;
 	cursor: pointer;
 	padding: 15px 20px;
-	color: var(--base-text);
+	color: var(--txtcol);
 	overflow: hidden;
 	text-overflow: ellipsis;
 	font-size: 15pt;
@@ -281,7 +296,7 @@
 	position: relative;
 	align-items: center;
 	width: calc(50% - 10px);
-	background: var(--close-back);
+	background: var(--wincol);
 	border-radius: 5px;
 	box-shadow: 0px 0px 10px #0005;
 	padding: 0px 5px;
@@ -318,12 +333,12 @@
 
 .data-block-text p {
 	font-size: 13pt !important;
-	color: var(--brighter-italic-text) !important;
+	color: var(--txtcol-muted) !important;
 }
 
 .data-block-text b {
 	font-size: 15pt !important;
-	color: var(--base-text) !important;
+	color: var(--txtcol) !important;
 }
 
 #timeline-legend {
@@ -350,7 +365,7 @@
 }
 
 #timeline-legend div i {
-	color: var(--base-text) !important;
+	color: var(--txtcol) !important;
 	font-size: 12pt !important;
 }
 
@@ -370,7 +385,7 @@
 	box-sizing: border-box;
 	border-radius: 3px;
 	padding: 3px;
-	background: var(--close-back);
+	background: var(--wincol-light);
 	cursor: pointer;
 	border: none;
 	outline: none;
@@ -378,14 +393,14 @@
 }
 
 #timeline-filters button:hover {
-	background: var(--closer-back);
+	background: var(--pricol-hover);
 }
 
 #timeline-filters button span {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	color: var(--base-text);
+	color: var(--txtcol);
 	font-size: 11pt;
 	padding: 4px 8px;
 	gap: 5px;
@@ -394,7 +409,7 @@
 }
 
 #timeline-filters button span p {
-	color: var(--base-text);
+	color: var(--txtcol);
 	font-size: 11pt;
 }
 
@@ -404,7 +419,7 @@
 	height: 18pt;
 	padding: 5px;
 	box-sizing: border-box;
-	background: var(--base-back);
+	background: var(--wincol-darken);
 	border-radius: 3px;
 	box-shadow: 0px 0px 7px #0005 inset;
 	pointer-events: none;
@@ -436,7 +451,7 @@
 	flex-flow: column;
 	align-items: center;
 	width: 100%;
-	background: var(--close-back);
+	background: var(--wincol);
 	border-radius: 5px;
 	box-shadow: 0px 0px 10px #0005;
 	padding: 8px 10px 10px 10px;
@@ -538,21 +553,21 @@
 
 #event-suggestion-button {
 	display: block;
-	color: var(--base-text);
-	background: var(--close-back);
-	border-radius: 3px;
+	color: var(--txtcol);
+	background: var(--pricol);
+	border-radius: var(--cors);
 	border: none;
 	outline: none;
-	padding: 5px 15px 4px 15px;
+	padding: 5px 15px;
 	box-sizing: border-box;
-	font-size: 12pt;
-	margin-top: 25px;
+	font-size: 14pt;
+	margin: 25px auto 0px auto;
 	cursor: pointer;
-	transition: 0.2s;
+	transition: var(--trans-fast);
 }
 
 #event-suggestion-button:hover {
-	background: var(--closer-back);
+	background: var(--pricol-hover);
 }
 
 @media screen and (max-width: 1000px) {

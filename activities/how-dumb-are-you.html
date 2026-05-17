@@ -141,10 +141,26 @@
 					<div class="truefalse-responder"><button class="truefalse-responder-false" onclick="setTrueFalse(event)">FALSE</button><button class="truefalse-responder-true" onclick="setTrueFalse(event)">TRUE</button></div>
 				</div>
 				<button id="finish" onclick="getResult()">Finish</button>
-				<div id="result" style="background: var(--base-back); border: 3px solid var(--close-back); box-shadow: 0px 0px 20px #0005;">
+				<div id="result" style="background: var(--wincol); border: 3px solid var(--wincol-light); box-shadow: 0px 0px 20px #0005;">
 					<p>You are</p>
 					<b>...</b>
 					<i></i>
+				</div>
+			</div>
+			<div class="donate-inline">
+				<div class="donate-wrapper donate-inline-wrapper">
+					<div class="donate-background">
+						<span style="width: 200px; height: 200px; left: -80px; top: -90px; opacity: 1; filter: blur(50px);"></span>
+						<span style="width: 300px; height: 200px; bottom: -120px; right: -80px; opacity: 0.6; filter: blur(50px);"></span>
+						<span style="width: 100px; height: 100px; left: 20%; bottom: -20px; opacity: 0.4; filter: blur(30px);"></span>
+						<span style="width: 80px; height: 80px; left: 79%; top: -19%; opacity: 0.4; filter: blur(30px);"></span>
+					</div>
+					<div class="donate-horizontal-left"><img src="/static/images/icons/heart-color-outlined.svg" alt="Heart icon"></div>
+					<div class="donate-horizontal-right donate-text">
+						<b>Support BlenderTimer</b>
+						<p>for as little as $2 per month!</p>
+						<button onclick="donate()"><img src="/static/images/icons/heart-white.svg" alt="Heart icon"><b>Donate</b></button>
+					</div>
 				</div>
 			</div>
 			<div id="extra-pages-container">
