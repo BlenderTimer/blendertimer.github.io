@@ -2,7 +2,7 @@
 
 /* WECLOME BANNER */
 
-#welcome-banner {
+#homepage-banner {
 	display: flex;
 	flex-flow: column;
 	justify-content: center;
@@ -18,7 +18,7 @@
 	z-index: -1;
 }
 
-#welcome-banner-back {
+#homepage-banner-back {
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -29,21 +29,21 @@
 	z-index: -5;
 }
 
-#wbb-center {
+#hpbb-center {
 	width: 50vw;
 	height: 15vh;
 	background: #0093ff;
 	filter: blur(20vw);
 	border-radius: 100%;
-	animation: wbb-center-pulse 10s ease-in-out infinite;
+	animation: hpbb-center-pulse 10s ease-in-out infinite;
 }
 
-@keyframes wbb-center-pulse {
+@keyframes hpbb-center-pulse {
 	0%, 100% {transform: scale(0.8); opacity: 0.5}
 	50% {transform: scale(1); opacity: 1}
 }
 
-.wbb-dot {
+.hpbb-dot {
 	position: absolute;
 	width: 3vw;
 	height: 3vw;
@@ -52,85 +52,85 @@
 	filter: blur(4vw);
 }
 
-#wbb-dot1 {animation: wbb-dot1-anim 20s cubic-bezier(0.2, 0, 0.8, 1) infinite}
-@keyframes wbb-dot1-anim {
+#hpbb-dot1 {animation: hpbb-dot1-anim 20s cubic-bezier(0.2, 0, 0.8, 1) infinite}
+@keyframes hpbb-dot1-anim {
 	0%, 100% {opacity: 0.5; transform: rotate(-20deg) translate(30vw, 0vw);}
 	25% {opacity: 1; transform: rotate(0deg) translate(25vw, 0vw);}
 	50% {opacity: 0.5; transform: rotate(20deg) translate(30vw, 0vw);}
 	75% {opacity: 1; transform: rotate(0deg) translate(25vw, 0vw);}
 }
 
-#wbb-dot2 {animation: wbb-dot2-anim 30s cubic-bezier(0.2, 0, 0.8, 1) infinite}
-@keyframes wbb-dot2-anim {
+#hpbb-dot2 {animation: hpbb-dot2-anim 30s cubic-bezier(0.2, 0, 0.8, 1) infinite}
+@keyframes hpbb-dot2-anim {
 	0%, 100% {opacity: 0.5; transform: rotate(-20deg) translate(-30vw, 0vw);}
 	25% {opacity: 1; transform: rotate(0deg) translate(-25vw, 0vw);}
 	50% {opacity: 0.5; transform: rotate(20deg) translate(-30vw, 0vw);}
 	75% {opacity: 1; transform: rotate(0deg) translate(-25vw, 0vw);}
 }
 
-#wbb-dot3 {animation: wbb-dot3-anim 200s cubic-bezier(0.2, 0, 0.8, 1) infinite}
-@keyframes wbb-dot3-anim {
+#hpbb-dot3 {animation: hpbb-dot3-anim 200s cubic-bezier(0.2, 0, 0.8, 1) infinite}
+@keyframes hpbb-dot3-anim {
 	0%, 100% {opacity: 0.5; transform: rotate(-5deg) translate(-50vw, 0vw);}
 	25% {opacity: 1; transform: rotate(0deg) translate(50vw, 0vw);}
 	50% {opacity: 0.5; transform: rotate(5deg) translate(-50vw, 0vw);}
 	75% {opacity: 1; transform: rotate(0deg) translate(50vw, 0vw);}
 }
 
-#wbb-dot4 {animation: wbb-dot4-anim 35s cubic-bezier(0.2, 0, 0.8, 1) infinite}
-@keyframes wbb-dot4-anim {
+#hpbb-dot4 {animation: hpbb-dot4-anim 35s cubic-bezier(0.2, 0, 0.8, 1) infinite}
+@keyframes hpbb-dot4-anim {
 	0%, 100% {opacity: 0.5; transform: rotate(-20deg) translate(-40vw, 0vw);}
 	50% {opacity: 1; transform: rotate(20deg) translate(-35vw, 0vw);}
 }
 
-#wbb-dot5 {animation: wbb-dot5-anim 35s cubic-bezier(0.2, 0, 0.8, 1) infinite}
-@keyframes wbb-dot5-anim {
+#hpbb-dot5 {animation: hpbb-dot5-anim 35s cubic-bezier(0.2, 0, 0.8, 1) infinite}
+@keyframes hpbb-dot5-anim {
 	0%, 100% {opacity: 0.5; transform: rotate(-20deg) translate(40vw, 0vw);}
 	50% {opacity: 1; transform: rotate(20deg) translate(35vw, 0vw);}
 }
 
-#wbb-grid1 {
+#hpbb-grid1 {
 	position: absolute;
 	top: 0; right: 0; bottom: 0; left: 0;
 	background-image: radial-gradient(circle, #3cb8ff59 1px, transparent 1px);
 	background-size: 32px 32px;
 	background-position: 50% 50%;
 	mask-image: radial-gradient(ellipse 100% 100% at 50% 50%, black 0%, transparent 70%);
-	animation: wbb-grid1-pulse 6s ease-in-out infinite;
+	animation: hpbb-grid1-pulse 6s ease-in-out infinite;
 }
-@keyframes wbb-grid1-pulse {
+@keyframes hpbb-grid1-pulse {
 	0%, 100% {opacity: 0.8}
 	50% {opacity: 0.5}
 }
 
-#wbb-grid2 {
+#hpbb-grid2 {
 	position: absolute;
 	top: 0; right: 0; bottom: 0; left: 0;
 	background-image: radial-gradient(circle, #3cb8ff35 1px, transparent 10px);
 	background-size: 8px 8px;
 	background-position: 50% 50%;
 	mask-image: radial-gradient(ellipse 100% 100% at 50% 50%, black 0%, transparent 70%);
-	animation: wbb-grid2-pulse 3s ease-in-out infinite;
+	animation: hpbb-grid2-pulse 3s ease-in-out infinite;
 }
-@keyframes wbb-grid2-pulse {
+@keyframes hpbb-grid2-pulse {
 	0%, 100% {opacity: 0.5}
 	50% {opacity: 0.3}
 }
 
-#wbb-grid3 {
+#hpbb-grid3 {
 	position: absolute;
 	top: 0; right: 0; bottom: 0; left: 0;
 	background-image: radial-gradient(circle, #21aeffff 1px, transparent 1px);
 	background-size: 64px 64px;
 	background-position: 50% 50%;
 	mask-image: radial-gradient(ellipse 60% 60% at 50% 50%, black 0%, transparent 70%);
-	animation: wbb-grid3-pulse 1s ease-in-out infinite;
+	animation: hpbb-grid3-pulse 1s ease-in-out infinite;
 }
-@keyframes wbb-grid3-pulse {
+@keyframes hpbb-grid3-pulse {
 	0%, 100% {opacity: 0.1}
 	50% {opacity: 0.5}
 }
 
-#wbb-fade {
+#hpbb-fade {
 	position: absolute;
 	top: 0; right: 0; bottom: 0; left: 0;
 	background: linear-gradient(0deg, var(--bgcol) 0%, transparent 60%);
@@ -138,7 +138,7 @@
 	z-index: 99;
 }
 
-#welcome-banner-text {
+#homepage-banner-text {
 	display: flex;
 	flex-flow: column;
 	justify-content: center;
@@ -147,7 +147,7 @@
 	border-radius: 100px;
 }
 
-#wbt-title {
+#hpbt-title {
 	width: 80vw;
 	max-width: 500px;
 	margin-bottom: 20px;
@@ -155,14 +155,14 @@
 	filter: drop-shadow(0px 0px 15px #49a9ff47) drop-shadow(0px 0px 100px #49a9ffff);
 }
 
-#wbt-subtitle-row {
+#hpbt-subtitle-row {
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	z-index: 999;
 }
 
-#wbt-subtitle {
+#hpbt-subtitle {
 	margin: 0px 10px;
 	text-align: center;
 	letter-spacing: 1.5pt;
@@ -172,21 +172,21 @@
 	cursor: default;
 }
 
-.wbt-subtitle-highlight {
+.hpbt-subtitle-highlight {
 	font-size: inherit;
 	font-weight: 500;
 	color: #43afff;
 	text-shadow: 0px 0px 8px var(--pricol-lighten);
 }
 
-#wbt-subtitle-line-left {
+#hpbt-subtitle-line-left {
 	width: 80px;
 	height: 1px;
 	background: linear-gradient(90deg, transparent, #1991f7c9);
 	position: relative;
 }
 
-#wbt-subtitle-line-left::after {
+#hpbt-subtitle-line-left::after {
 	content: '';
     position: absolute;
     right: 0;
@@ -197,14 +197,14 @@
     box-shadow: 0 0 6px #6cbaff;
 }
 
-#wbt-subtitle-line-right {
+#hpbt-subtitle-line-right {
 	width: 80px;
 	height: 1px;
 	background: linear-gradient(90deg, #1991f7c9, transparent);
 	position: relative;
 }
 
-#wbt-subtitle-line-right::after {
+#hpbt-subtitle-line-right::after {
 	content: '';
     position: absolute;
     right: 0;
@@ -215,6 +215,67 @@
     box-shadow: 0 0 6px #6cbaff;
 	left: 0;
 	right: auto;
+}
+
+/* LEGACY BANNER */
+
+#welcome-banner {
+	display: flex;
+	flex-flow: column;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	width: calc(100% + 40px);
+	height: 25vh;
+	min-height: 120px;
+	max-height: 300px;
+	margin: 0px -20px 20px -20px;
+	overflow: hidden;
+}
+
+#welcome-banner-back {
+	display: block;
+	position: absolute;
+	top: -10px;
+	left: -10px;
+	bottom: -10px;
+	right: -10px;
+	background-position: 50% 50%;
+	background-size: cover;
+	filter: blur(4px);
+	z-index: -5;
+}
+
+#welcome-banner-text {
+	display: flex;
+	flex-flow: column;
+	justify-content: center;
+	align-items: center;
+	background: #0003;
+	padding: 0px 25px;
+	border-radius: 100px;
+	box-shadow: 0px 0px 30px 30px #0003;
+}
+
+#welcome-banner-text h1 {
+	display: block;
+	text-align: center;
+	font-size: 30pt;
+	color: #FFF;
+	text-shadow: 0px 0px 10px #000F;
+	font-family: monospace;
+	font-weight: 100;
+	letter-spacing: 3pt;
+	margin: 0px;
+}
+
+#welcome-banner-text p {
+	display: block;
+	text-align: center;
+	font-size: 16.2pt;
+	color: #FFFC;
+	text-shadow: 0px 0px 10px #000F;
+	font-family: sans-serif;
 }
 
 #welcome-text {
