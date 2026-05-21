@@ -1,7 +1,7 @@
 const mainDownload = document.getElementById('main-download');
 const secondaryDownloads = document.getElementById('secondary-downloads');
 
-const version = '1.0.0';
+const version = '1.1.0';
 const installers = {
 	windows: {url:`https://github.com/BlenderTimer/Mathmetic/releases/download/v${version}/mathmetic-v${version}.exe`, info:'Windows (127MB)'},
 	macos: {url:`https://github.com/BlenderTimer/Mathmetic/releases/download/v${version}/mathmetic-v${version}.dmg`, info:'MacOS (105MB)'},
