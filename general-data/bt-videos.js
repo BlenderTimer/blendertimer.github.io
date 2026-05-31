@@ -2476,29 +2476,4 @@ const videos = [
 			{title:"Musical, Stinger, Strings, Horror, Screech, Metal, Hit (SND139955)",link:"https://getsoundly.com",source:"Soundly"},
 		],
 	},
-	{
-		title:"BUFFALO - Fantastic Fact 19",
-		id:430,
-		type:"short",
-		subtitles:"<p>On this episode of \"I Hate English\"... \"Buffalo buffalo Buffalo buffalo buffalo buffalo Buffalo buffalo.\" That's a real, grammatically correct English sentence.<br>Broken down, the sentence is similar to \"London cats, Paris dogs bewilder, baffle Berlin rats.\" Or you can say the sentence with an optional \"which\" which makes the sentence a bit more clear but, for the buffalo sentence, that obviously makes it much less impressive. And the same goes for commas. They make it more clear and easier to understand, but they're not actually necessary.<br>If you still don't understand it, the first \"buffalo\" is a place name, such as Buffalo, New York. The second refers to the animal. The third is yet another place name, such as Buffalo, Wyoming. The fourth refers to the animal again. The fifth is the verb form of \"buffalo\" which means to bewilder or baffle. The sixth is the verb again. Then the seventh is another place name. And lastly the eighth is the animal again.<br>If you still don't understand it, don't worry, I must say I too am pretty buffaloed by this sentence about Buffalo buffalo.</p>",
-		youtubeId:"",
-		date:"",
-		views10:-1,
-		views30:-1,
-		views1:-1,
-		views24:-1,
-		duration:"0:59",
-		resolution:"HD",
-		info:[
-			{title:"The Meaning of \"Nice\"",link:"https://www.merriam-webster.com/wordplay/nice-multiple-meanings",source:"Merriam Webster"},
-			{title:"\"Nice\" Definition",link:"https://www.merriam-webster.com/dictionary/nice",source:"Merriam Webster"},
-			{title:"\"Nescience\" Definition",link:"https://www.merriam-webster.com/dictionary/nescience",source:"Merriam Webster"},
-		],
-		graphics:[
-			{title:"Man Standing-Front",link:"https://pixabay.com/vectors/person-man-stand-human-arms-legs-8238232",source:"Daniel Roberts"},
-		],
-		audio:[
-			{title:"Narration",source:"Daniel Roberts"},
-		],
-	},
 ];
