@@ -124,7 +124,7 @@ window.pages = [
 	{
 		title:"The World Since You - BlenderTimer Activities",
 		description:"A fascinating list of major world events which have happened in YOUR lifetime!",
-		url:"https://blendertimer.com/activities/the-world-since-you",
+		url:"https://blendertimer.com/the-world-since-you",
 		keywords:["activity", "fun", "test", "history"]
 	},
 	// BT-JS

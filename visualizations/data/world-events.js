@@ -965,6 +965,12 @@ const worldEvents = [
 		major:true,
 	},
 	{
+		date:"2026-2-28",
+		title:"<p>The </p><b>2026 Iran War</b><p> begins.</p>",
+		description:"The United States and Israel launched airstrikes on Iran, initiating a war with Iran and its regional allies.",
+		type:"war-begins",
+	},
+	{
 		date:"2026-4-1",
 		title:"<b>Humans go back to the Moon</b><p> for the first time in 50 years.</p>",
 		description:"Artemis II launches from Kennedy Space Center in Florida. The 4 crew members aboard Integrity (the Orion spacecraft) begin the lunar flyby on April 6 and set a new record for the farthest distance humans have been from Earth at 252,756 miles (406,771 km).",
