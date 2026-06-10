@@ -35,7 +35,7 @@ document.getElementsByTagName("header")[0].innerHTML = `<nav>
 		</div>
 		<div id="header-right">
 			<div id="header-search"><img src="https://blendertimer.com/static/images/icons/search.svg" alt="Search Icon"><input type="text" id="header-search-input" placeholder="Search..." onkeydown="headerSearch(event)"></div>
-			<a class="header-donate" onclick="donate()"><b><img src="/static/images/icons/heart-white.svg" alt="Heart icon">Donate</b></a>
+			<a class="header-donate" onclick="donate()"><b><img src="https://blendertimer.com/static/images/icons/heart-white.svg" alt="Heart icon">Donate</b></a>
 		</div>
 		<div id="header-search-output">
 			<!-- <a class="header-search-result"><div>
