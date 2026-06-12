@@ -370,11 +370,27 @@ const worldEvents = [
 		type:"war-begins",
 	},
 	{
+		date:"1992-4-6",
+		title:"<p>The </p><b>Bosnian War</b><p> begins.</p>",
+		description:"The Bosnian War was an international armed conflict that erupted following the breakup of Yugoslavia. Fought between the newly independent Republic of Bosnia and Herzegovina, the Yugoslav People's Army (JNA), and later Bosnian Serb and Croat forces, the four-year war resulted in over 100,000 deaths and widespread ethnic cleansing.",
+		major:true,
+		type:"war-begins",
+		user:"SaifoGames",
+	},
+	{
 		date:"1993-2-10",
 		title:"<b>GPS</b><p> becomes fully operational with 24 satellites.</p>",
 		description:"Though it was initially invented in 1973, GPS became fully operational in February, 1993 and was made available to civilians on December 8, 1993.",
 		major:true,
 		type:"product-launched",
+	},
+	{
+		date:"1995-11-21",
+		title:"<p>The </p><b>Bosnian War</b><p> ends.</p>",
+		description:"The Bosnian War was an international armed conflict that erupted following the breakup of Yugoslavia. Fought between the newly independent Republic of Bosnia and Herzegovina, the Yugoslav People's Army (JNA), and later Bosnian Serb and Croat forces, the four-year war resulted in over 100,000 deaths and widespread ethnic cleansing.",
+		type:"war-ends",
+		deaths:100469,
+		user:"SaifoGames",
 	},
 	{
 		date:"1996-2-13",
