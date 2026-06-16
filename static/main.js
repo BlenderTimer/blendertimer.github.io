@@ -1,16 +1,4 @@
-//----------Variables
-//----------Event Listeners
-
-//----------LOAD----------
-document.getElementById('content-main').style.opacity = "1";
-//----------Functions
-function donate() {
-	var title = window.location.toString().removeBefore("/", 1, true);
-	var link = document.createElement('a');
-	link.href = `https://blendertimer.com/donate?p=${document.title.removeAfter(" -", -1).replace(/ /g, "+").replace(/\?/g, "")}`;
-	link.click();
-}
-
+// —————————— HEADER ——————————
 function headerSearch(e) {
 	if (e.key == "Enter") {
 		if (document.getElementById("header-search-output").children.length > 0) {
@@ -80,7 +68,21 @@ function headerSearch(e) {
 	}, 1)
 }
 
+document.getElementById("header-search-input").addEventListener('blur', () => {document.getElementById("header-search-output").style.display = null});
+document.getElementById("header-search-input").addEventListener('focus', () => {document.getElementById("header-search-output").style.display = 'flex'});
+
+// —————————— MISC ——————————
+function donate() {
+	var title = window.location.toString().removeBefore("/", 1, true);
+	var link = document.createElement('a');
+	link.href = `https://blendertimer.com/donate?p=${document.title.removeAfter(" -", -1).replace(/ /g, "+").replace(/\?/g, "")}`;
+	link.click();
+}
+
 function copyIDURL(event) {
 	var element = event.target || event.srcElement;
 	navigator.clipboard.writeText(window.location.toString().removeAfter("#", -1) + "#" + element.id);
 }
+
+// —————————— LOAD ——————————
+document.getElementById('content-main').style.opacity = "1";

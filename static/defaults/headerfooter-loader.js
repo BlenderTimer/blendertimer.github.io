@@ -1,5 +1,32 @@
 document.getElementsByTagName("header")[0].innerHTML = `<nav>
 	<a href="https://blendertimer.com" title="BlenderTimer Home" id="header-home"><img src="https://blendertimer.com/static/images/brand/logo-text.png" alt="BlenderTimer Logo"></a>
+	<div id="header-mobile">
+		<div style="--width: auto;" id="header-mobile-menu" class="header-button">
+			<a><b>Explore</b></a>
+			<div class="header-dropdown">
+				<a href="https://blendertimer.com/channel" class="header-mobile-group"><b>YouTube Channel</b></a> <!------- YouTube Channel ------->
+				<a href="https://blendertimer.com/channel-statistics" class="header-mobile-page"><b>Statistics</b></a>
+				<a href="https://blendertimer.com/video-sources" class="header-mobile-page hmpl"><b>Video Sources</b></a>
+				<a class="header-mobile-group"><b>Resources</b></a> <!------- Resources ------->
+				<a href="https://blendertimer.com/web-tools" class="header-mobile-page"><b>Web Tools</b></a>
+				<a href="https://blendertimer.com/visualizations" class="header-mobile-page"><b>Visualizations</b></a>
+				<a href="https://blendertimer.com/data" class="header-mobile-page"><b>Studies and Data</b></a>
+				<a href="https://blendertimer.com/factsheets" class="header-mobile-page"><b>Factsheets</b></a>
+				<a href="https://blendertimer.com/activities" class="header-mobile-page"><b>Activities</b></a>
+				<a href="https://blendertimer.com/software" class="header-mobile-page"><b>Software</b></a>
+				<a href="https://blendertimer.com/media" class="header-mobile-page hmpl"><b>Stock Media</b></a>
+				<a href="https://blendertimer.com/about" class="header-mobile-group"><b>About</b></a> <!------- About ------->
+				<a href="https://blendertimer.com/about#contact" class="header-mobile-page"><b>Contact</b></a>
+				<a href="https://blendertimer.com/portfolio" class="header-mobile-page"><b>Portfolio</b></a>
+				<a href="https://blendertimer.com/about#faq" class="header-mobile-page"><b>FAQs</b></a>
+				<a href="https://blendertimer.com/brand-kit" class="header-mobile-page"><b>Brand Kit</b></a>
+				<a href="https://blendertimer.com/terms-of-service" class="header-mobile-page"><b>Terms of Service</b></a>
+				<a href="https://blendertimer.com/privacy-policy" class="header-mobile-page"><b>Privacy Policy</b></a>
+				<a href="https://blendertimer.store" class="header-mobile-page"><b>Store</b></a>
+				<a class="header-donate" onclick="donate()"><b><img src="/static/images/icons/heart-white.svg" alt="Heart icon">Donate</b></a>
+			</div>
+		</div>
+	</div>
 	<div id="header-desktop">
 		<div id="header-left">
 			<div style="--width: 140pt;" class="header-button">
@@ -44,33 +71,6 @@ document.getElementsByTagName("header")[0].innerHTML = `<nav>
 				<p>Description</p>
 				<i>URL</i></div>
 			</a> -->
-		</div>
-	</div>
-	<div id="header-mobile">
-		<div style="--width: auto;" id="header-mobile-menu" class="header-button">
-			<a><b>Explore</b></a>
-			<div class="header-dropdown">
-				<a href="https://blendertimer.com/channel" class="header-mobile-group"><b>YouTube Channel</b></a> <!------- YouTube Channel ------->
-				<a href="https://blendertimer.com/channel-statistics" class="header-mobile-page"><b>Statistics</b></a>
-				<a href="https://blendertimer.com/video-sources" class="header-mobile-page hmpl"><b>Video Sources</b></a>
-				<a class="header-mobile-group"><b>Resources</b></a> <!------- Resources ------->
-				<a href="https://blendertimer.com/web-tools" class="header-mobile-page"><b>Web Tools</b></a>
-				<a href="https://blendertimer.com/visualizations" class="header-mobile-page"><b>Visualizations</b></a>
-				<a href="https://blendertimer.com/data" class="header-mobile-page"><b>Studies and Data</b></a>
-				<a href="https://blendertimer.com/factsheets" class="header-mobile-page"><b>Factsheets</b></a>
-				<a href="https://blendertimer.com/activities" class="header-mobile-page"><b>Activities</b></a>
-				<a href="https://blendertimer.com/software" class="header-mobile-page"><b>Software</b></a>
-				<a href="https://blendertimer.com/media" class="header-mobile-page hmpl"><b>Stock Media</b></a>
-				<a href="https://blendertimer.com/about" class="header-mobile-group"><b>About</b></a> <!------- About ------->
-				<a href="https://blendertimer.com/about#contact" class="header-mobile-page"><b>Contact</b></a>
-				<a href="https://blendertimer.com/portfolio" class="header-mobile-page"><b>Portfolio</b></a>
-				<a href="https://blendertimer.com/about#faq" class="header-mobile-page"><b>FAQs</b></a>
-				<a href="https://blendertimer.com/brand-kit" class="header-mobile-page"><b>Brand Kit</b></a>
-				<a href="https://blendertimer.com/terms-of-service" class="header-mobile-page"><b>Terms of Service</b></a>
-				<a href="https://blendertimer.com/privacy-policy" class="header-mobile-page"><b>Privacy Policy</b></a>
-				<a href="https://blendertimer.store" class="header-mobile-page"><b>Store</b></a>
-				<a class="header-donate" onclick="donate()"><b><img src="/static/images/icons/heart-white.svg" alt="Heart icon">Donate</b></a>
-			</div>
 		</div>
 	</div>
 </nav>`;
