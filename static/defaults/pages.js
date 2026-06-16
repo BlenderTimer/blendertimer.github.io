@@ -36,6 +36,12 @@ window.pages = [
 		keywords:["tos", "terms", "service"]
 	},
 	{
+		title:"BlenderTimer Store",
+		description:"The official BlenderTimer merch store!",
+		url:"https://blendertimer.store",
+		keywords:["shop"]
+	},
+	{
 		title:"Bounce - BlenderTimer",
 		description:"A highly customizable \"DVD\" logo type bounce visualization. Make it go fast, make it go wild! You're welcome!",
 		url:"https://blendertimer.com/bounce",

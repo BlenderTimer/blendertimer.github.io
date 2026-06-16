@@ -32,6 +32,7 @@ document.getElementsByTagName("header")[0].innerHTML = `<nav>
 					<a href="https://blendertimer.com/privacy-policy"><b>Privacy Policy</b></a>
 				</div>
 			</div>
+			<div style="--width: 70pt;" class="header-button"><a href="https://blendertimer.store"><b>Store</b></a></div>
 		</div>
 		<div id="header-right">
 			<div id="header-search"><img src="https://blendertimer.com/static/images/icons/search.svg" alt="Search Icon"><input type="text" id="header-search-input" placeholder="Search..." onkeydown="headerSearch(event)"></div>
@@ -67,6 +68,7 @@ document.getElementsByTagName("header")[0].innerHTML = `<nav>
 				<a href="https://blendertimer.com/brand-kit" class="header-mobile-page"><b>Brand Kit</b></a>
 				<a href="https://blendertimer.com/terms-of-service" class="header-mobile-page"><b>Terms of Service</b></a>
 				<a href="https://blendertimer.com/privacy-policy" class="header-mobile-page"><b>Privacy Policy</b></a>
+				<a href="https://blendertimer.store" class="header-mobile-page"><b>Store</b></a>
 				<a class="header-donate" onclick="donate()"><b><img src="/static/images/icons/heart-white.svg" alt="Heart icon">Donate</b></a>
 			</div>
 		</div>
