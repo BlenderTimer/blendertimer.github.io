@@ -23,7 +23,7 @@
 
 /* —————————— GENERAL —————————— */
 
-* {
+*:not(svg):not(svg *) {
 	margin: 0;
 	padding: 0;
 	color: var(--txtcol);
@@ -53,7 +53,7 @@ body {
 	box-sizing: border-box;
 	position: relative;
 	z-index: -999999;
-	padding-top: 50px;
+	padding-top: 50px !important;
 	width: 100%;
 }
 
