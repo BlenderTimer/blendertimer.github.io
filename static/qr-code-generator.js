@@ -56,7 +56,7 @@ function generateQRCode(onload) {
 	try {currentQR = new QRCode(document.getElementById('qrcode'), {text: qrText, correctLevel: correctionLevel})}
 	catch {urlInput.style.outline = "2px solid #ff1b1b";errors.push("The text is too long or too complex for a QR code.");drawOptimizations();generateBTN.innerHTML = "Generate QR Code";return};
 	drawQRCode();
-	qrInfo.children[0].innerHTML = `Type: ${currentQR._oQRCode.typeNumber} of 40 (${currentQR._oQRCode.moduleCount}x${currentQR._oQRCode.moduleCount} of 177x177)`;
+	qrInfo.children[0].innerHTML = `Version: ${currentQR._oQRCode.typeNumber} of 40 (${currentQR._oQRCode.moduleCount}x${currentQR._oQRCode.moduleCount} of 177x177)`;
 	generateBTN.innerHTML = "Generate QR Code";
 	urlInput.style.removeProperty('outline');
 }

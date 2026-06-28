@@ -12,12 +12,14 @@
 		</script>
 		<meta charset="utf-8">
 		<title>Base Converter - BlenderTimer Web Tools</title>
-		<meta name="description" content="A free, fast, and easy to use numeral base converter! Convert base 10 (decimal) to base 2 (binary) or base 16 (hexidecimal) and more!">
+		<meta name="description" content="Free online base converter for binary, decimal, hexadecimal, octal, base 36, base 62, and custom numeral systems! Fast, accurate, and supports very large numbers.">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="icon" href="/favicon.png" type="image/x-icon">
+		<meta property="og:image" content="https://blendertimer.com/static/images/page-thumbs/base-converter.png">
 		<link rel="stylesheet" type="text/css" href="/static/defaults/theme.css">
 		<link rel="stylesheet" type="text/css" href="/static/main.css">
 		<link rel="stylesheet" type="text/css" href="/static/base-converter.css">
+		<link rel="stylesheet" type="text/css" href="/static/web-tool.css">
 		<script src="/bt-js/bt-js.js"></script>
 	</head>
 	<body>
@@ -37,7 +39,7 @@
 				<h1 class="title">Base Converter</h1>
 				<p class="description">Convert base 10 (decimal) to base 2 (binary) or base 16 (hexidecimal) and more!</p>
 			</div>
-			<div id="main-tool">
+			<div id="main-tool" class="simple-tool">
 				<div id="tool-input">
 					<label for="number-input">Number to convert:</label>
 					<input id="number-input" spellcheck="false" placeholder="123" type="text" oninput="convert()" onkeydown="checkEnter(event)">

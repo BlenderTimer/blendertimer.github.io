@@ -193,38 +193,6 @@ body {
 	pointer-events: none;
 }
 
-/* ———————— TITLES ———————— */
-#tool-title {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-flow: column;
-	min-height: 80px;
-	height: fit-content;
-	padding: 10px;
-	transition: var(--tool-window-transition);
-}
-
-#tool-title .title {
-	margin-top: 0 !important;
-	font-family: 'Barlow', sans-serif !important;
-	font-size: 17pt !important;
-	font-weight: 500 !important;
-}
-
-#tool-title .description {
-	font-family: 'Barlow', sans-serif !important;
-	font-size: 14pt !important;
-	font-weight: 400 !important;
-}
-
-.tool-description {
-	display: block !important;
-	font-size: 14pt !important;
-	max-width: 800px;
-	margin: 0 auto;
-}
-
 /* —————————— HEADER —————————— */
 
 header {

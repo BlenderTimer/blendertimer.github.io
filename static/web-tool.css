@@ -1,0 +1,219 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@400;500&display=swap');
+
+#tool-title {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-flow: column;
+	min-height: 80px;
+	height: fit-content;
+	padding: 10px;
+	transition: var(--tool-window-transition);
+}
+
+#tool-title .title {
+	margin-top: 0 !important;
+	font-family: 'Barlow', sans-serif !important;
+	font-size: 17pt !important;
+	font-weight: 500 !important;
+}
+
+#tool-title .description {
+	font-family: 'Barlow', sans-serif !important;
+	font-size: 14pt !important;
+	font-weight: 400 !important;
+}
+
+.tool-description {
+	display: block !important;
+	font-size: 14pt !important;
+	max-width: 800px;
+	margin: 0 auto;
+}
+
+#main-tool {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	min-height: 20vh;
+	padding-bottom: 3vh;
+}
+
+.simple-tool {
+	flex-flow: column;
+}
+
+.simple-500 {
+	max-width: 500px !important;
+}
+
+#tool-input {
+	display: flex;
+	flex-flow: column;
+	position: relative;
+	box-sizing: border-box;
+	padding: var(--winspace);
+	margin-bottom: 30px;
+	border-radius: var(--corl);
+	background: var(--wincol);
+	box-shadow: var(--winshadow);
+}
+
+.simple-tool #tool-input {
+	width: 100%;
+	max-width: 400px;
+}
+
+.simple-tool #tool-input label {
+	display: block;
+	text-align: center;
+	font-size: 16pt;
+	font-weight: 500;
+	font-family: 'Barlow', sans-serif;
+	width: 100%;
+	margin-bottom: 8px;
+	color: var(--txtcol);
+}
+
+.simple-tool #tool-input input[type="text"] {
+	display: block;
+	width: 100%;
+	box-sizing: border-box;
+	padding: 5px 8px;
+	margin-bottom: 20px;
+	font-size: 18pt;
+	font-family: 'Barlow', sans-serif;
+	font-weight: 500;
+	letter-spacing: 1pt;
+	text-align: center;
+	border: none;
+	outline: none;
+	color: var(--txtcol);
+	border-radius: var(--cors);
+	background: linear-gradient(90deg, transparent, var(--pricol), transparent) bottom / 100% 2px no-repeat;
+	transition: var(--trans-fast);
+}
+
+.simple-tool #tool-input input[type="text"]:focus {
+	background: linear-gradient(90deg, transparent, var(--pricol-hover), transparent) bottom / 100% 2px no-repeat,
+		radial-gradient(ellipse 80% 20px at bottom center, var(--pricol-darken), transparent 60%) bottom / 100% 24px no-repeat,
+		var(--wincol-darken) bottom / 100% 2px no-repeat;
+	box-shadow: var(--inshadow);
+}
+
+.main-btn {
+	display: block;
+	font-family: 'Barlow', sans-serif;
+	font-size: 14pt;
+	font-weight: 500;
+	line-height: 1;
+	letter-spacing: 0.5pt;
+	box-sizing: border-box;
+	padding: 10px 32px;
+	margin: 0px auto;
+	outline: none;
+	border-radius: var(--corf);
+	border: 2px solid var(--pricol-lighter);
+	color: var(--txtcol);
+	background: var(--pricol);
+	box-shadow: var(--wincol);
+	cursor: pointer;
+	transition: var(--trans-fast);
+}
+
+.main-btn:hover {
+	background: var(--pricol-hover);
+	box-shadow: 0 0 10px #0005;
+}
+
+.main-btn-additional {
+	display: block !important;
+	width: 100%;
+	text-align: center;
+	font-family: 'Barlow', sans-serif !important;
+	font-size: 12pt !important;
+	font-weight: 400;
+	line-height: 1;
+	box-sizing: border-box;
+	padding-top: 5px;
+	color: var(--txtcol-subtle) !important;
+}
+
+#tool-stats {
+	display: block !important;
+	width: 100%;
+	text-align: center;
+	font-family: 'Barlow', sans-serif !important;
+	font-size: 12pt !important;
+	font-weight: 400;
+	line-height: 1;
+	box-sizing: border-box;
+	color: var(--txtcol-subtle) !important;
+}
+
+.checkbox {
+	display: flex !important;
+	justify-content: center;
+	align-items: center;
+	gap: 10px;
+	cursor: pointer;
+	user-select: none;
+}
+
+.checkbox span {
+	font-size: 1.02rem;
+	font-weight: 500;
+	font-family: 'Barlow', sans-serif;
+	letter-spacing: 0.5pt;
+	line-height: 1;
+	color: var(--txtcol);
+}
+
+.checkbox input[type="checkbox"] {
+	appearance: none;
+	-webkit-appearance: none;
+	width: 24px;
+	height: 24px;
+	margin: 0;
+	border: 2px solid var(--borcol);
+	border-radius: var(--cors);
+	background: var(--bgcol-darken);
+	display: grid;
+	place-content: center;
+	cursor: inherit;
+	transition: var(--trans-fast);
+}
+
+.checkbox input[type="checkbox"]::before {
+	content: "";
+	width: 10px;
+	height: 7px;
+	border: solid white;
+	border-width: 0 0 3px 3px;
+	transform: translate(0, 0) rotate(-45deg) scale(0);
+	transition: var(--trans-fast);
+}
+
+.checkbox input[type="checkbox"]:checked {
+	background: var(--pricol);
+	border-color: var(--pricol);
+}
+
+.checkbox input[type="checkbox"]:checked::before {
+	transform: translate(0.8px, -2px) rotate(-45deg) scale(1);
+}
+
+.checkbox input[type="checkbox"]:hover {
+	border-color: var(--pricol-hover);
+}
+
+.checkbox input[type="checkbox"]:focus-visible {
+	outline: 2px solid var(--pricol-hover);
+	outline-offset: 2px;
+}
+
+.checkbox input[type="checkbox"]:disabled {
+	opacity: 0.5;
+	cursor: not-allowed;
+}
