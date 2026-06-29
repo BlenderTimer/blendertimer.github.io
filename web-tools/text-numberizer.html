@@ -19,12 +19,13 @@
 		<!-- End Google Tag Manager -->
 		<meta charset="utf-8">
 		<title>Text Numberizer - BlenderTimer Web Tools</title>
-		<meta name="description" content="Quickly replace certain letters with similar looking numbers!">
+		<meta name="description" content="Free online leetspeak-style (1337) text converter. Replace letters with similar-looking numbers, create classic leet-style text instantly, and copy the results with one click.">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="icon" href="/favicon.png" type="image/x-icon">
+		<meta property="og:image" content="https://blendertimer.com/static/images/page-thumbs/text-numberizer.png">
 		<link rel="stylesheet" type="text/css" href="/static/defaults/theme.css">
 		<link rel="stylesheet" type="text/css" href="/static/main.css">
-		<link rel="stylesheet" type="text/css" href="/static/text-numberizer.css">
+		<link rel="stylesheet" type="text/css" href="/static/web-tool.css">
 		<script src="/bt-js/bt-js.js"></script>
 	</head>
 	<body>
@@ -39,20 +40,38 @@
 		<div id="loader" style="width: 100%; height: calc(100% - 50px); top: 50px; left: 0px; position: fixed; z-index: -100000;">
 			<img alt="Loading" src="/static/images/loader.gif" style="width: 100px; height: 100px; position: fixed; left: calc(50% - 50px); top: calc(50% - 25px); filter: drop-shadow(0px 0px 15px #000000);">
 		</div>
-		<div id="content-main" style="opacity: 0; transition: 0.5s">
-			<h1 class="title">Text Numberizer</h1>
-			<p class="description">Quickly replace certain letters with similar looking numbers!</p>
+		<div id="content-main" class="limwidth" style="opacity: 0; transition: 0.5s">
+			<div id="tool-title">
+				<h1 class="title">Text Numberizer</h1>
+				<p class="description">Quickly replace certain letters with similar looking numbers!</p>
+			</div>
 			<div id="main-tool">
-				<div id="tool-input">
+				<div id="tool-input" class="simple-500">
 					<label for="text-input">Text to numberize:</label>
 					<textarea id="text-input" placeholder="Type your text here!" oninput="numberize()"></textarea>
 				</div>
-				<div id="tool-output">
+				<div id="tool-output" class="separated-output simple-500">
 					<label for="text-output">Numberized text:</label>
-					<textarea id="text-output" readonly></textarea>
+					<div class="textarea-container"><textarea id="text-output" readonly></textarea><img src="/static/images/icons/copy-spaced.svg" alt="Copy icon" onclick="copyResult()"></div>
 				</div>
 			</div>
-			<p>This tool converts certain numbers (such as A) into similar looking numbers (such as 4)! A very basic version of leet/leetspeak.</p>
+			<div class="donate-inline">
+				<div class="donate-wrapper donate-inline-wrapper">
+					<div class="donate-background">
+						<span style="width: 200px; height: 200px; left: -80px; top: -90px; opacity: 1; filter: blur(50px);"></span>
+						<span style="width: 300px; height: 200px; bottom: -120px; right: -80px; opacity: 0.6; filter: blur(50px);"></span>
+						<span style="width: 100px; height: 100px; left: 20%; bottom: -20px; opacity: 0.4; filter: blur(30px);"></span>
+						<span style="width: 80px; height: 80px; left: 79%; top: -19%; opacity: 0.4; filter: blur(30px);"></span>
+					</div>
+					<div class="donate-horizontal-left"><img src="/static/images/icons/heart-color-outlined.svg" alt="Heart icon"></div>
+					<div class="donate-horizontal-right donate-text">
+						<b>Support BlenderTimer</b>
+						<p>for as little as $2 per month!</p>
+						<button onclick="donate()"><img src="/static/images/icons/heart-white.svg" alt="Heart icon"><b>Donate</b></button>
+					</div>
+				</div>
+			</div>
+			<p class="tool-description">Convert text by replacing letters with visually similar numbers! This free online text converter for creating leetspeak-style (1337) text by automatically transforming characters like A into 4, E into 3, I into 1, O into 0, and more.</p>
 			<i class="recommendation-credit">This tool was a recommendation by: Mels</i>
 			<div id="extra-pages-container">
 				<div class="spr"></div>
@@ -67,7 +86,7 @@
 						<b>Periodic Table Word Finder</b>
 					</a>
 					<a href="/web-tools">
-						<img alt="Web Tools" src="../static-0/files/images/webtools.svg" class="misc-content-img">
+						<img alt="Web Tools" src="/static/images/webtools.svg" class="misc-content-img">
 						<b>Other Web Tools</b>
 					</a>
 					<a href="/web-tools/pattern-based-word-finder" class="extra-pages-video">
