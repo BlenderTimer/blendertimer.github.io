@@ -80,7 +80,7 @@ function loadVideos(vl, srch, srt) {
 		var vb = document.createElement('a');
 		vb.className = "video-block";
 		vb.id = "video-" + vlist[i].id;
-		vb.href = "/video?v=" + videos[i].id;
+		vb.href = "/video?v=" + vlist[i].id;
 		var vType = document.createElement('img');
 		vType.className = "video-type";
 		if (vlist[i].type == "short") {

@@ -55,7 +55,15 @@
 			<p>This video either does not exist or is not registered in the database.</p>
 		</div>
 		<div id="content-main" class="limwidth" style="opacity: 0; transition: 0.5s">
-			<script>if (videoFound == false) {document.getElementById('content-none').style.display = null;document.getElementById('content-main').style.display = "none"}</script>
+			<script>
+				if (videoFound == false) {
+					if (videoId === videos[videos.length-1].id+10) {
+						document.getElementById('content-none').innerHTML = `<h1>SOURCES PENDING</h1><p>The sources for this video have not yet been published. They will be available soon. Please check back later.</p>`;
+					}
+					document.getElementById('content-none').style.display = null;
+					document.getElementById('content-main').style.display = "none";
+				}
+			</script>
 			<div id="video-info">
 				<div id="video-info-left"><div id="thumbnail-container" onclick="viewThumbnail(event)"><div id="thumbnail-hover"><img src="/static/images/icons/zoom-in.svg" alt="Zoom in"></div></div></div>
 				<div id="video-info-right">
