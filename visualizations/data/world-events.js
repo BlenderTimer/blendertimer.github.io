@@ -724,6 +724,12 @@ const worldEvents = [
 		type:"project-finishes",
 	},
 	{
+		date:"2010-4-3",
+		title:"<p>The </p><b>first iPad</b><p> is released.</p>",
+		description:"The iPad is released to the public.",
+		type:"product-launched",
+	},
+	{
 		date:"2010-9",
 		title:"<p>The </p><b>Prusa Mendel</b><p> 3D Printer is released.</p>",
 		description:"This printer is considered the \"Ford Model T\" of 3D printers opening up the 3D printing hobby to a huge crowd.",
