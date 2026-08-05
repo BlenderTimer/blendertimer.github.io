@@ -193,6 +193,85 @@ body {
 	pointer-events: none;
 }
 
+/* —————————— SUPPORTER TICKER —————————— */
+.supporter-ticker {
+	overflow: hidden;
+	width: 100%;
+	mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+	-webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+	pointer-events: none;
+	user-select: none;
+}
+
+.supporter-ticker-track {
+	display: flex;
+	width: max-content;
+	animation: supporter-ticker var(--speed) linear infinite;
+}
+
+.supporter-ticker-track div {
+	display: flex;
+	align-items: center;
+	gap: 20px;
+	flex-shrink: 0;
+	width: max-content;
+	padding-right: 20px;
+	white-space: nowrap;
+}
+
+@keyframes supporter-ticker {
+	from {transform: translateX(0)}
+	to {transform: translateX(-50%)}
+}
+
+.supporter-ticker .tier0 {
+	padding: 0px 5px !important;
+	font-size: 11pt !important;
+	font-weight: normal !important;
+	color: var(--txtcol) !important;
+}
+
+.supporter-ticker .tier1 {
+	padding: 2pt 9pt !important;
+	font-size: 13pt !important;
+	color: var(--txtcol) !important;
+	border-radius: var(--corm) !important;
+	background: var(--wincol-light) !important;
+	box-shadow: 0px 0px 20px var(--wincol) !important;
+}
+
+.supporter-ticker .tier2 {
+	padding: 2pt 9pt !important;
+	font-size: 13.5pt !important;
+	color: var(--txtcol) !important;
+	border-radius: var(--corm) !important;
+	border: 2px solid var(--borcol-strong) !important;
+	background: var(--wincol-light) !important;
+	box-shadow: 0px 0px 30px var(--wincol-lighter) inset, 0px 0px 30px #DEF2 !important;
+}
+
+.supporter-ticker .tier3 {
+	padding: 2pt 9pt !important;
+	font-size: 14pt !important;
+	letter-spacing: 0.4pt;
+	color: var(--txtcol) !important;
+	border-radius: var(--corm) !important;
+	border: 2px solid #15A0FF !important;
+	background: #0060FF30 !important;
+	box-shadow: 0px 0px 30px #38A1FF4F inset, 0px 0px 30px #005FFF59 !important;
+}
+
+.supporter-ticker .tier4 {
+	padding: 2pt 9pt !important;
+	font-size: 14pt !important;
+	letter-spacing: 0.4pt;
+	color: var(--txtcol) !important;
+	border-radius: var(--corm) !important;
+	border: 3px solid #FFAD1C !important;
+	background: #FF830035 !important;
+	box-shadow: 0px 0px 30px #FFCD3840 inset, 0px 0px 30px #FF7D0054 !important;
+}
+
 /* —————————— HEADER —————————— */
 
 header {
@@ -215,7 +294,7 @@ header nav {
 	max-width: 1500px;
 	height: 50px;
 	position: relative;
-	margin: 0 auto;
+	margin: 0 auto !important;
 }
 
 #header-desktop {
