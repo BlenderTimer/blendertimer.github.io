@@ -62,6 +62,7 @@ const supporters = [
 	{name:`Elizabeth Bodenham`,tier:0},
 	{name:`Ellen Stoecker`,tier:0},
 	{name:`Ernst Wicki`,tier:0},
+	{name:`Esther-Maria Roos`,tier:0},
 	{name:`Evelyn Alicea-Santiago`,tier:0},
 	{name:`EVOLUCE, druzstvo`,tier:0},
 	{name:`Frank Carey`,tier:0},
