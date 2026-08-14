@@ -168,6 +168,7 @@ const supporters = [
 	{name:`Tanglewood West dba Abiquiu News`,tier:0},
 	{name:`Taylor O'Dair`,tier:0},
 	{name:`Teresa Hutton`,tier:0},
+	{name:`Teresa Tallman`,tier:0},
 	{name:`Terry Hueffed`,tier:0},
 	{name:`Terry Safko`,tier:0},
 	{name:`TETNTM`,tier:0},
