@@ -221,7 +221,7 @@ function init() {
 
 	if (user !== null) {
 		const userFilter = contributors.filter(a => a.name === user);
-		if (userFilter.length > 0) {modal(false, {parent:'page', contributor:userFilter[0]})};
+		if (userFilter.length > 0) {modal('contributor', {parent:'page', contributor:userFilter[0]})};
 	}
 }
 
