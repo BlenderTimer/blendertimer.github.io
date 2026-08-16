@@ -1,0 +1,297 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@400;500&display=swap');
+
+#guidelines-intro {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+#guidelines-intro b {
+	font-family: 'Barlow', sans-serif !important;
+	font-size: 16pt !important;
+	font-weight: 500 !important;
+	letter-spacing: 0.5pt;
+	line-height: 1;
+	text-align: center;
+	color: var(--txtcol) !important;
+	padding: 7px 20px;
+	margin-bottom: 30px;
+	border-radius: var(--corf);
+	border: 1px solid var(--pricol-light);
+	background: var(--pricol);
+	box-shadow: 0 0 15px var(--pricol);
+}
+
+#guidelines-base {
+	display: grid;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	justify-content: stretch;
+	align-items: stretch;
+	gap: 20px;
+	width: 100%;
+	max-width: 1200px;
+	margin: 0 auto 20px auto;
+}
+
+.guideline {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-flow: column;
+	gap: 10px;
+	position: relative;
+	max-width: 600px;
+	padding: var(--winspace);
+	margin: 0 auto;
+	border-radius: var(--corl);
+	border: 1px solid var(--borcol);
+	background: var(--wincol);
+	box-shadow: var(--winshadow);
+}
+
+.guideline-header {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-flow: column;
+	width: 100%;
+	padding-bottom: 10px;
+	border-bottom: 1px solid var(--wincol-light);
+}
+
+.no-border {
+	border-bottom: none !important;
+	padding: 0 !important;
+}
+
+.guideline-number {
+	display: flex !important;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+	top: -10px; left: -10px;
+	font-family: 'Barlow', sans-serif !important;
+	font-size: 14pt !important;
+	font-weight: 500 !important;
+	line-height: 1;
+	color: var(--txtcol) !important;
+	width: 32px !important; height: 32px;
+	border-radius: var(--corf);
+	border: 1px solid var(--pricol-light);
+	background: var(--pricol);
+	box-shadow: 0 0 15px var(--pricol);
+}
+
+.guideline-title {
+	margin-bottom: 10pt !important;
+	font-family: 'Barlow', sans-serif !important;
+	font-size: 17pt !important;
+	font-weight: 500 !important;
+	letter-spacing: 0.7pt;
+	line-height: 1;
+}
+
+.guideline-description {
+	font-family: 'Barlow', sans-serif !important;
+	font-size: 13pt !important;
+	font-weight: 500 !important;
+	letter-spacing: 0.2pt;
+	line-height: 1.1;
+	text-align: center;
+}
+
+.guideline-description a {
+	font-family: 'Barlow', sans-serif !important;
+	font-size: 13pt !important;
+	font-weight: 500 !important;
+	letter-spacing: 0.2pt;
+	line-height: 1.1;
+}
+
+.guideline-description b {
+	font-family: 'Barlow', sans-serif !important;
+	font-size: 13pt !important;
+	font-weight: 600 !important;
+	letter-spacing: 0.2pt;
+	line-height: 1.1;
+	color: var(--txtcol) !important;
+}
+
+.guideline-examples {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-flow: column;
+	gap: 10px;
+}
+
+.guideline-example {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	gap: 10px 20px;
+	width: 100%;
+	box-sizing: border-box;
+	padding: 15px;
+	border-radius: var(--corm);
+	background: var(--bgcol);
+	box-shadow: var(--inshadow);
+}
+
+.guideline-example-header {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 10px;
+	flex: 1 1 1000px;
+}
+
+.guideline-example-header-inline {
+	flex: 0 0 0;
+	margin-bottom: 10px;
+}
+
+.guideline-example-header img {
+	width: 18pt; height: 18;
+}
+
+.guideline-example-header h1 {
+	font-family: 'Barlow', sans-serif !important;
+	font-size: 14pt !important;
+	font-weight: 500 !important;
+	letter-spacing: 1pt;
+	line-height: 1;
+	margin: 0 !important;
+}
+
+.incorrect h1 {
+	color: #ff3840 !important;
+}
+
+.correct h1 {
+	color: #60ff45 !important;
+}
+
+.guideline-example-image {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-flow: column;
+	position: relative;
+	flex: 1 1 0;
+	min-width: 0;
+	height: 250px;
+	max-height: 250px;
+}
+
+.guideline-example-image-full {
+	height: auto !important;
+	max-height: none !important;
+}
+
+.guideline-example-image-full img {
+	flex: 0 1 auto !important;
+}
+
+.guideline-example-image img {
+	flex: 0 1 250px;
+	min-height: 0;
+	min-width: 0;
+	max-width: 100%;
+	object-fit: contain;
+}
+
+.guideline-example-image p {
+	font-family: 'Barlow', sans-serif !important;
+	font-size: 13pt !important;
+	font-weight: 400 !important;
+	line-height: 1;
+	text-align: center;
+	margin-top: 10px !important;
+}
+
+.guideline-list li, .guideline-list li a {
+	font-family: 'Barlow', sans-serif !important;
+	font-size: 13pt !important;
+	font-weight: 500 !important;
+	letter-spacing: 0.2pt;
+	line-height: 1.1;
+	width: fit-content;
+	margin-top: 10px;
+}
+
+.guideline-list li::marker {
+	color: var(--txtcol-subtle);
+}
+
+.guideline-text {
+	font-family: 'Barlow', sans-serif !important;
+	font-size: 13pt !important;
+	font-weight: 500 !important;
+	letter-spacing: 0.2pt;
+	line-height: 1.1;
+	color: var(--txtcol) !important;
+	text-align: center;
+}
+
+.guideline-text a {
+	font-family: 'Barlow', sans-serif !important;
+	font-size: 13pt !important;
+	font-weight: 500 !important;
+	letter-spacing: 0.2pt;
+	line-height: 1.1;
+}
+
+.guideline-text b {
+	font-family: 'Barlow', sans-serif !important;
+	font-size: 14pt !important;
+	font-weight: 500 !important;
+	letter-spacing: 0.8pt;
+	line-height: 1.1;
+	color: var(--txtcol) !important;
+}
+
+#start-uploading {
+	display: block !important;
+	width: 100%;
+	max-width: 500px;
+	margin: 30px auto !important;
+	padding: 12px 25px;
+	box-sizing: border-box;
+	font-family: 'Barlow', sans-serif !important;
+	font-size: 16pt !important;
+	font-weight: 500 !important;
+	letter-spacing: 0.8pt;
+	line-height: 1;
+	text-align: center;
+	color: var(--txtcol) !important;
+	border-radius: var(--corf);
+	border: 1px solid var(--pricol-light);
+	background: var(--pricol);
+	box-shadow: 0 0 15px var(--pricol);
+	cursor: pointer;
+	transition: var(--trans) !important;
+}
+
+#start-uploading:hover {
+	text-decoration: none !important;
+	background: var(--pricol-hover);
+}
+
+@media screen and (max-width: 1000px) {
+	#guidelines-base {
+		grid-template-columns: 1fr;
+	}
+}
+
+@media screen and (max-width: 500px) {
+	.guideline-example-header {
+		gap: 4px;
+	}
+
+	.guideline-example-header h1 {
+		letter-spacing: 0pt !important;
+		font-size: 13pt !important;
+	}
+}

@@ -38,27 +38,27 @@
 	overflow-y: auto;
 	overflow-x: hidden;
 	top: 0px;
-	background: var(--close-back);
+	background: var(--wincol);
 	box-shadow: 0px 0px 10px #0005;
 	z-index: 10000;
 	transition: 0s;
 }
 
 #navigator::-webkit-scrollbar {
-	background: var(--close-back);
+	background: var(--wincol);
 	width: 10px;
 	border-radius: 0px 3px 3px 0px
 }
 
 #navigator::-webkit-scrollbar-thumb {
-	background: var(--closer-back);
+	background: var(--wincol-lighter);
 	border-radius: 5px;
 	height: 20px;
-	border: 3px solid var(--close-back);
+	border: 3px solid var(--wincol);
 }
 
 #navigator::-webkit-scrollbar-thumb:hover {
-	background: var(--hover-back2);
+	background: var(--borcol-strong);
 }
 
 .nav-cat {
@@ -66,7 +66,7 @@
 	width: 100% !important;
 	box-sizing: border-box;
 	padding: 4px 7px 4px 10px;
-	color: var(--base-text) !important;
+	color: var(--txtcol) !important;
 	border: none;
 	outline: none;
 	background: #0000;
@@ -82,7 +82,7 @@
 	width: 100%;
 	box-sizing: border-box;
 	padding: 4px 7px 4px 17px;
-	color: var(--brighter-italic-text);
+	color: var(--txtcol-muted);
 	border: none;
 	outline: none;
 	background: #0000;
@@ -93,7 +93,7 @@
 }
 
 .nav-sec:hover {
-	background: var(--hover-back1);
+	background: var(--wincol-lighter);
 }
 
 #navigator *:first-child {
@@ -120,7 +120,7 @@
 }
 
 .no-nav #data-content p {
-	color: var(--brighter-italic-text);
+	color: var(--txtcol);
 	font-size: 14pt !important;
 }
 
@@ -128,8 +128,13 @@
 	font-size: 14pt !important;
 }
 
+.no-nav #data-content b {
+	color: var(--txtcol);
+	font-size: 14pt !important;
+}
+
 #data-content i {
-	color: var(--italic-text);
+	color: var(--txtcol-muted);
 }
 
 .data-image {
@@ -185,7 +190,7 @@
 }
 
 .note i {
-	color: var(--italic-text) !important;
+	color: var(--txtcol-subtle) !important;
 }
 
 .data-block {
@@ -195,7 +200,7 @@
 	flex-flow: column;
 	justify-content: center;
 	width: calc(12.5% - 10px);
-	background: var(--close-back);
+	background: var(--wincol);
 	border-radius: 5px;
 	box-shadow: 0px 0px 10px #0005;
 	padding: 0px 5px;
@@ -204,7 +209,7 @@
 }
 
 .pop-block {
-	background: var(--theme1) !important;
+	background: var(--pricol) !important;
 }
 
 .max-width-block {
@@ -251,7 +256,7 @@
 
 .data-block p {
 	font-size: 13pt !important;
-	color: var(--brighter-italic-text) !important;
+	color: var(--txtcol-muted) !important;
 }
 
 .data-block i {
@@ -261,12 +266,12 @@
 
 .data-block b {
 	font-size: 15pt !important;
-	color: var(--base-text) !important;
+	color: var(--txtcol) !important;
 }
 
 .data-block .boldened {
 	font-size: 11pt !important;
-	color: var(--base-text) !important;
+	color: var(--txtcol) !important;
 	white-space-collapse: preserve;
 }
 
@@ -299,7 +304,7 @@
 	gap: 2px;
 	justify-content: center;
 	position: absolute;
-	background: var(--close-back);
+	background: var(--wincol);
 	border-radius: 3px;
 	box-shadow: 0px 0px 10px #0005;
 	padding: 5px 10px;
@@ -310,9 +315,17 @@
 	z-index: 100000000;
 }
 
+.bar-map-tooltip b {
+	color: var(--txtcol) !important;
+}
+
+.bar-map-tooltip p {
+	color: var(--txtcol-muted) !important;
+}
+
 .bar-map-tooltip i {
 	font-size: 9pt !important;
-	color: var(--italic-text) !important;
+	color: var(--txtcol-subtle) !important;
 }
 
 .bar-map-row {
@@ -331,24 +344,25 @@
 	width: var(--w);
 	background: var(--b);
 	min-width: 1px;
-	border: 2px solid var(--semi-far-back);
+	border: 2px solid var(--bgcol);
 	cursor: default;
 	overflow: hidden;
 	text-overflow: clip;
 }
 
 .bar-map-section:hover {
-	border: 2px solid color-mix(in srgb, var(--b) 30%, var(--semi-far-back));
+	border: 2px solid color-mix(in srgb, var(--b) 30%, var(--bgcol));
 }
 
 .bar-map-section b {
+	color: var(--txtcol) !important;
 	pointer-events: none;
 }
 
 #data-table {
 	border-radius: 5px;
 	padding: 0px;
-	border: 1px solid var(--closer-back);
+	border: 1px solid var(--wincol);
 	box-sizing: border-box;
 	border-collapse: collapse;
 	table-layout: fixed;
@@ -364,40 +378,40 @@
 }
 
 #data-table tr:nth-child(even) {
-	background-color: var(--base-back);
+	background-color: var(--wincol);
 }
 
 #data-table tr:nth-child(odd) {
-	background-color: var(--close-back);
+	background-color: color-mix(in srgb, var(--wincol-light) 40%, var(--wincol));
 }
 
 #data-table th {
-	border: 1px solid var(--closer-back);
+	border: 1px solid var(--wincol-light);
 	margin: 0px;
 	padding: 6px 12px;
 	text-align: center;
 	vertical-align: middle;
 	cursor: default;
-	background: var(--theme1);
-	text-shadow: 0px 0px 10px var(--theme2);
+	background: var(--pricol);
+	text-shadow: 0px 0px 10px var(--pricol-light);
 	font-size: 13pt;
 	font-family: sans-serif;
 }
 
 #data-table td {
-	border: 1px solid var(--closer-back);
+	border: 1px solid var(--wincol-light);
 	margin: 0px;
 	padding: 5px 10px;
 	text-align: left;
 	vertical-align: middle;
-	color: var(--brighter-italic-text);
+	color: var(--txtcol);
 	font-size: 12pt;
 	font-family: sans-serif;
 }
 
 #data-table td p {
 	display: block;
-	color: var(--base-text) !important;
+	color: var(--txtcol) !important;
 	padding: 0px 0px;
 	text-wrap-mode: nowrap;
 	text-align: center;
@@ -405,7 +419,7 @@
 
 #data-table td i {
 	display: block;
-	color: var(--italic-text) !important;
+	color: var(--txtcol-muted) !important;
 	padding: 0px 5px;
 	text-wrap-mode: nowrap;
 	text-align: center;
@@ -417,16 +431,29 @@
 	text-align: right !important;
 }
 
-#data-content ol {
+#data-content ol, #data-content ul {
 	display: block;
+	width: fit-content;
 	max-width: 500px;
 	margin: 10px auto;
 	padding-left: 20pt;
 	box-sizing: border-box;
 }
 
-#data-content ol li::marker {
+#data-content ol li::marker, #data-content ul li::marker {
 	font-size: 12pt;
+}
+
+.wide-list {
+	max-width: 1000px !important;
+}
+
+.primary-list li {
+	font-size: 14pt !important;
+}
+
+.primary-list li::marker {
+	color: var(--txtcol-subtle) !important;
 }
 
 @media screen and (max-width: 1400px) {
