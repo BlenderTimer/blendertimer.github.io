@@ -6686,4 +6686,18 @@ const objects = [
 			artist:'Daniel Roberts (BlenderTimer)',
 		},
 	},
+	{
+		id:453,
+		name:'Bicycle',
+		category:'vehicles',
+		tags:['bike'],
+		createdOn:'2026-08-18',
+		scale:0.01,
+		length:170,
+		height:99,
+		side:{
+			keys:['on-ground','default'],
+			artist:'Daniel Roberts (BlenderTimer)',
+		},
+	},
 ]
