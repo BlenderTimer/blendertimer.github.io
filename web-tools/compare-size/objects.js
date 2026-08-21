@@ -6700,4 +6700,18 @@ const objects = [
 			artist:'Daniel Roberts (BlenderTimer)',
 		},
 	},
+	{
+		id:454,
+		name:'Triton (Neptune\'s Moon)',
+		category:'space>moons',
+		createdOn:'2026-08-21',
+		scale:1000,
+		width:2706.8,
+		length:2706.8,
+		height:2706.8,
+		front:{
+			keys:['default'],
+			artist:'Nathaniel123',
+		},
+	},
 ]
