@@ -6714,4 +6714,52 @@ const objects = [
 			artist:'Nathaniel123',
 		},
 	},
+	{
+		id:455,
+		name:'Europa (Jupiter\'s Moon)',
+		category:'space>moons',
+		createdOn:'2026-08-22',
+		scale:1000,
+		width:3121.6,
+		length:3121.6,
+		height:3121.6,
+		front:{
+			keys:['default'],
+			artist:'Nathaniel123',
+		},
+	},
+	{
+		id:456,
+		name:'Io (Jupiter\'s Moon)',
+		category:'space>moons',
+		createdOn:'2026-08-22',
+		scale:1000,
+		width:3660,
+		length:3637.4,
+		height:3630.6,
+		side:{
+			artist:'Nathaniel123',
+		},
+		front:{
+			keys:['default'],
+			artist:'Nathaniel123',
+		},
+		top:{
+			artist:'Nathaniel123',
+		},
+	},
+	{
+		id:457,
+		name:'Goliath',
+		category:'biblical',
+		tags:['gath','philistine'],
+		createdOn:'2026-08-23',
+		scale:0.01,
+		width:126,
+		height:290,
+		front:{
+			keys:['on-ground','default'],
+			artist:'Daniel Roberts (BlenderTimer)',
+		},
+	},
 ]
