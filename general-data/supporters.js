@@ -133,6 +133,7 @@ const supporters = [
 	{name:`Numbered`,tier:0},
 	{name:`Pages Editorial Service`,tier:0},
 	{name:`Pattern Research, Inc.`,tier:0},
+	{name:`Peter May`,tier:0},
 	{name:`PIERRE perrenoud`,tier:0},
 	{name:`Pike-Attack`,tier:0},
 	{name:`R.-Andreas Klein`,tier:0},
