@@ -7016,4 +7016,17 @@ const objects = [
 		},
 		similar:true,
 	},
+	{
+		id:473,
+		name:'Bell 407',
+		category:'aircraft>helicopters',
+		createdOn:'2026-08-27',
+		scale:0.3048,
+		length:41.4,
+		height:11.75,
+		side:{
+			keys:['on-ground','default'],
+			artist:'Daniel Roberts (BlenderTimer)',
+		},
+	},
 ]
