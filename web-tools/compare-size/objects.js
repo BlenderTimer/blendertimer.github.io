@@ -5,6 +5,7 @@ const objects = [
 		category:'space>planets',
 		tags:['africa','america','antarctica','arctic','asia','australia','ball','continent','ocean','sea','solar system','sphere','us','usa'],
 		createdOn:'2023-07-29',
+		description:`The third planet from the Sun and the planet we live on.`,
 		scale:1000,
 		width:12756,
 		length:12756,
@@ -389,7 +390,7 @@ const objects = [
 		width:4300,
 		length:4300,
 		height:4300,
-		notes:'Astronomers are very uncertain about the size and distance of this star. The size used here may be extremely inaccurate.',
+		notes:`Astronomers are very uncertain about the size and distance of this star. The size used here may be extremely inaccurate.`,
 		front:{
 			keys:['default'],
 			artist:'Daniel Roberts (BlenderTimer)',
@@ -2741,7 +2742,7 @@ const objects = [
 		width:26,
 		length:156,
 		height:15.6,
-		notes:'Due to the fact that cubits are relative to the size of a man\'s arm, we don\'t know the exact size of Noah\'s Ark. In the Bible it is described as 300 cubits long, 50 cubits wide, and 30 cubits tall. There are two common modern measurements for a cubit, the Royal Cubit (52cm) and the Short Cubit (44.5cm). Most sources measure the Ark using the Short Cubit, however, based on biblical sources as well as more modern archaeological finds, it\'s more likely that the Royal Cubit (52cm) is what God used when he told Noah the dimensions of the Ark. But, again, this still may not be accurate as pre-flood humans were likely much taller than post-flood humans, thus making a cubit much larger.',
+		notes:`Due to the fact that cubits are relative to the size of a man's arm, we don't know the exact size of Noah's Ark. In the Bible it is described as 300 cubits long, 50 cubits wide, and 30 cubits tall. There are two common modern measurements for a cubit, the Royal Cubit (52cm) and the Short Cubit (44.5cm). Most sources measure the Ark using the Short Cubit, however, based on biblical sources as well as more modern archaeological finds, it's more likely that the Royal Cubit (52cm) is what God used when he told Noah the dimensions of the Ark. But, again, this still may not be accurate as pre-flood humans were likely much taller than post-flood humans, thus making a cubit much larger.`,
 		side:{
 			keys:['on-ground','default'],
 			artist:'Daniel Roberts (BlenderTimer)',
@@ -7026,6 +7027,28 @@ const objects = [
 		height:11.75,
 		side:{
 			keys:['on-ground','default'],
+			artist:'Daniel Roberts (BlenderTimer)',
+		},
+	},
+	{
+		id:474,
+		name:'Kman K-MAX',
+		category:'aircraft>helicopters',
+		tags:['k-1200'],
+		createdOn:'2026-09-01',
+		scale:1,
+		width:11.8,
+		length:15.4,
+		height:5.3,
+		side:{
+			keys:['on-ground','default'],
+			artist:'Daniel Roberts (BlenderTimer)',
+		},
+		front:{
+			keys:['on-ground'],
+			artist:'Daniel Roberts (BlenderTimer)',
+		},
+		top:{
 			artist:'Daniel Roberts (BlenderTimer)',
 		},
 	},

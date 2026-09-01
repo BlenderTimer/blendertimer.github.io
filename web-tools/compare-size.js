@@ -3320,6 +3320,12 @@ function modal(type = 'empty', args = {}) {
 					<h1>Angles</h1>
 					<div class="mim-angles">${makeAngles(obj)}</div>
 				</div>
+				${obj.description ? `
+					<div class="modal-details" style="flex-basis: 400px">
+						<h1>Description</h1>
+						<p>${obj.description}</p>
+					</div>
+				`:''}
 				<div class="modal-details" style="flex-basis: 250px">
 					<h1>Original Dimensions</h1>
 					${obj.width ? `<span><p>Width</p><b>${formatDimensions(obj, unitMode, 'width', 0, true)}</b></span>`:''}
