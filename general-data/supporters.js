@@ -183,6 +183,7 @@ const supporters = [
 	{name:`Tomasz Batorowicz`,tier:0},
 	{name:`Trees for a Change LLC`,tier:0},
 	{name:`TRex Enterprises`,tier:0},
+	{name:`ursel Ritz`,tier:0},
 	{name:`Valkyrie Enterprises`,tier:0},
 	{name:`Victoria Carlie`,tier:0},
 	{name:`Viktor Karlsson`,tier:0},
