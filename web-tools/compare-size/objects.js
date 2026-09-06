@@ -7052,4 +7052,33 @@ const objects = [
 			artist:'Daniel Roberts (BlenderTimer)',
 		},
 	},
+	{
+		id:475,
+		name:'Polaris Australis',
+		category:'space>stars',
+		createdOn:'2026-09-06',
+		scale:695700000,
+		width:8.8,
+		length:8.8,
+		height:8.8,
+		front:{
+			keys:['default'],
+			artist:'Waitwut6',
+		},
+	},
+	{
+		id:476,
+		name:'Mirach',
+		category:'space>stars',
+		tags:['beta andromedae'],
+		createdOn:'2026-09-06',
+		scale:695700000,
+		width:172.8,
+		length:172.8,
+		height:172.8,
+		front:{
+			keys:['default'],
+			artist:'Waitwut6',
+		},
+	},
 ]
