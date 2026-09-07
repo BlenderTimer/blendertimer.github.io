@@ -7117,4 +7117,32 @@ const objects = [
 			artist:'Waitwut6',
 		},
 	},
+	{
+		id:479,
+		name:'Wind Turbine (Generic)',
+		category:'technology>power',
+		tags:['windmill'],
+		createdOn:'2026-09-07',
+		scale:1,
+		width:50,
+		height:80,
+		front:{
+			keys:['on-ground','default'],
+			artist:'Daniel Roberts (BlenderTimer)',
+		},
+	},
+	{
+		id:480,
+		name:'Giant Clam',
+		category:'animals>mulluscs',
+		tags:['tridacna gigas'],
+		createdOn:'2026-09-07',
+		scale:0.01,
+		length:135,
+		height:72.5,
+		side:{
+			keys:['on-ground','default'],
+			artist:'Daniel Roberts (BlenderTimer)',
+		},
+	},
 ]
