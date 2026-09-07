@@ -7081,4 +7081,40 @@ const objects = [
 			artist:'Waitwut6',
 		},
 	},
+	{
+		id:477,
+		name:'Sargas',
+		category:'space>stars',
+		tags:['theta scorpii a','θ scorpii'],
+		createdOn:'2026-09-07',
+		description:`Sargas (also known as Theta Scorpii A) is the 37th Brightest star in the night sky. It is an oblate star and is in the binary star system Theta Scorpii.`,
+		scale:695700000,
+		width:71,
+		length:71,
+		height:52.6,
+		side:{
+			artist:'Waitwut6',
+		},
+		front:{
+			keys:['default'],
+			artist:'Waitwut6',
+		},
+		top:{
+			artist:'Waitwut6',
+		},
+	},
+	{
+		id:478,
+		name:'Shanghai Tower',
+		category:'buildings>skyscrapers',
+		createdOn:'2026-09-07',
+		description:`The tallest building in Shanghai.`,
+		scale:1,
+		length:164.5,
+		height:632,
+		side:{
+			keys:['on-ground','default'],
+			artist:'Waitwut6',
+		},
+	},
 ]
