@@ -7145,4 +7145,33 @@ const objects = [
 			artist:'Daniel Roberts (BlenderTimer)',
 		},
 	},
+	{
+		id:481,
+		name:'Shastasaurus Pacificus',
+		category:'animals>reptiles>dinosaurs',
+		tags:['ichthyosaur'],
+		createdOn:'2026-09-07',
+		scale:1,
+		length:7,
+		height:1.64,
+		side:{
+			keys:['default'],
+			artist:'Waitwut6',
+		},
+	},
+	{
+		id:482,
+		name:'Procyon A',
+		category:'space>stars',
+		createdOn:'2026-09-08',
+		description:`The brightest star in Canis Minor and the main component of the Procyon system.`,
+		scale:695700000,
+		width:4.08,
+		length:4.08,
+		height:4.08,
+		front:{
+			keys:['default'],
+			artist:'Waitwut6',
+		},
+	},
 ]
