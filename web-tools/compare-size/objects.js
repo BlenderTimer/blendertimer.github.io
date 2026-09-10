@@ -7174,4 +7174,19 @@ const objects = [
 			artist:'Waitwut6',
 		},
 	},
+	{
+		id:483,
+		name:'R136a1',
+		category:'space>stars',
+		createdOn:'2026-09-09',
+		description:`The most massive and luminous star known.`,
+		scale:695700000,
+		width:85.4,
+		length:85.4,
+		height:85.4,
+		front:{
+			keys:['default'],
+			artist:'Waitwut6',
+		},
+	},
 ]
