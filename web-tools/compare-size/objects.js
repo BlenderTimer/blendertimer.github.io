@@ -7189,4 +7189,25 @@ const objects = [
 			artist:'Waitwut6',
 		},
 	},
+	{
+		id:484,
+		name:'Altair',
+		category:'space>stars',
+		createdOn:'2026-09-10',
+		description:`The brightest star in the constellation Aquila.`,
+		scale:695700000,
+		width:4,
+		length:4,
+		height:3.13,
+		side:{
+			artist:'Waitwut6',
+		},
+		front:{
+			keys:['default'],
+			artist:'Waitwut6',
+		},
+		top:{
+			artist:'Waitwut6',
+		},
+	},
 ]
