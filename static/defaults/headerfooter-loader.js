@@ -23,7 +23,7 @@ document.getElementsByTagName("header")[0].innerHTML = `<nav>
 				<a href="https://blendertimer.com/terms-of-service" class="header-mobile-page"><b>Terms of Service</b></a>
 				<a href="https://blendertimer.com/privacy-policy" class="header-mobile-page"><b>Privacy Policy</b></a>
 				<a href="https://blendertimer.store" class="header-mobile-page"><b>Store</b></a>
-				<a class="header-donate" onclick="donate()"><b><img src="/static/images/icons/heart-white.svg" alt="Heart icon">Donate</b></a>
+				<a class="header-donate" onclick="donate()"><b><img src="https://blendertimer.com/static/images/icons/heart-white.svg" alt="Heart icon">Donate</b></a>
 			</div>
 		</div>
 	</div>

@@ -576,7 +576,7 @@ function toggleCatalogSortDropdown(e) {
 // —————————— SEARCH ——————————
 
 const opts = {};
-		const weights = Object.assign({ name: 10, category: 6, tags: 4 }, opts.weights);
+		const weights = Object.assign({ name: 10, category: 9, tags: 4 }, opts.weights);
 		const fuzzyMax = opts.fuzzyMaxDistance ?? 2;
 		const fuzzyMinLen = opts.minTokenLenForFuzzy ?? 4;
 		const minSubstringLen = opts.minSubstringLen ?? 3; // shorter token must be at least this long
@@ -716,7 +716,11 @@ function queryCatalog() {
 		for (const [i, e] of acc) {
 			const coverage = e.matched.size / totalQueryTokens;
 			if (opts.minScore != null && e.rawScore < opts.minScore) continue;
-			const score = coverage * 1_000_000 + e.rawScore;
+			let score = coverage * 1_000_000 + e.rawScore;
+			const obj = catalog[i];
+			if (obj.searchBoosts && obj.searchBoosts.length > 0) {
+				for (const b of obj.searchBoosts) {if (b.q === query) {score += b.v}};
+			}
 			results.push(Object.assign({}, catalog[i], { score, relevance: score }));
 		}
 

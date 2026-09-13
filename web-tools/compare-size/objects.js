@@ -39,6 +39,7 @@ const objects = [
 		top:{
 			artist:'Daniel Roberts (BlenderTimer)',
 		},
+		searchBoosts:[{q:'truck',v:100},{q:'truc',v:10},{q:'tru',v:1},{q:'car',v:100},{q:'vehicle',v:1000},{q:'vehicl',v:1000},{q:'vehic',v:1000},{q:'vehi',v:1000},{q:'vehi',v:1000},{q:'veh',v:100}],
 	},
 	{
 		id:3,
@@ -79,6 +80,7 @@ const objects = [
 		top:{
 			artist:'Daniel Roberts (BlenderTimer)',
 		},
+		searchBoosts:[{q:'human',v:1000},{q:'huma',v:100},{q:'person',v:1000},{q:'perso',v:100},{q:'pers',v:10}],
 	},
 	{
 		id:5,
@@ -417,6 +419,7 @@ const objects = [
 		top:{
 			artist:'Daniel Roberts (BlenderTimer)',
 		},
+		searchBoosts:[{q:'human',v:100},{q:'huma',v:10},{q:'person',v:100},{q:'perso',v:10},{q:'pers',v:1}],
 	},
 	{
 		id:25,
@@ -439,6 +442,7 @@ const objects = [
 		top:{
 			artist:'Daniel Roberts (BlenderTimer)',
 		},
+		searchBoosts:[{q:'car',v:1000},{q:'vehicle',v:2000},{q:'vehicl',v:2000},{q:'vehic',v:2000},{q:'vehi',v:2000},{q:'vehi',v:2000},{q:'veh',v:200}],
 	},
 	{
 		id:26,
