@@ -42,6 +42,7 @@ const supporters = [
 	{name:`Constanze Mülders`,tier:0},
 	{name:`Courtney Rush`,tier:0},
 	{name:`Crista Bromley`,tier:0},
+	{name:`Cynthia Maloney`,tier:0},
 	{name:`Daiana Arhex`,tier:0},
 	{name:`Damir Mrkulic`,tier:0},
 	{name:`Daniel Martin`,tier:0},
