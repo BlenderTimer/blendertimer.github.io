@@ -7214,4 +7214,19 @@ const objects = [
 			artist:'Waitwut6',
 		},
 	},
+	{
+		id:485,
+		name:'Rocky Mountain Douglas-fir',
+		category:'plants>trees',
+		tags:['pseudotsuga menziesii var. glauca','evergreen','conifer','spruce'],
+		createdOn:'2026-09-22',
+		description:`The Rocky Mountain Douglas-fir is an evergreen conifer native to the interior mountainous regions of western North America, from central British Columbia and southwest Alberta in Canada southward through the United States to the far north of Mexico.`,
+		scale:1,
+		width:17,
+		height:40,
+		front:{
+			keys:['on-ground','default'],
+			artist:'Daniel Roberts (BlenderTimer)',
+		},
+	},
 ]
