@@ -3,6 +3,7 @@ const supporters = [
 	// Supersonic Members
 	{name:`felax`,tier:1},
 	{name:`Gene Leaphart`,tier:1},
+	{name:`Lukaslovesphysics`,tier:1},
 
 	// One-time Supporters
 	{name:`Ahrbee Imkerei`,tier:0},
