@@ -23,6 +23,7 @@ const supporters = [
 	{name:`Avishay Bar-El`,tier:0},
 	{name:`Beat Scheidegger`,tier:0},
 	{name:`Beate Teuber`,tier:0},
+	{name:`Bernd Thiel`,tier:0},
 	{name:`Beth Flanagan`,tier:0},
 	{name:`Big Amateur Telescope Ltd`,tier:0},
 	{name:`bob palatka`,tier:0},
