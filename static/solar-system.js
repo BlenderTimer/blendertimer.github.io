@@ -1096,25 +1096,25 @@ function setSpeedMultiplier(mul) {
 		cSpeedX1.style.background = null;
 		cSpeedX2.style.background = null;
 		cSpeedX10.style.background = null;
-		cSpeedX05.style.background = "#333";
+		cSpeedX05.style.background = "var(--wincol-lighter)";
 	}
 	else if (mul == 1) {
 		cSpeedX05.style.background = null;
 		cSpeedX2.style.background = null;
 		cSpeedX10.style.background = null;
-		cSpeedX1.style.background = "#333";
+		cSpeedX1.style.background = "var(--wincol-lighter)";
 	}
 	else if (mul == 2) {
 		cSpeedX05.style.background = null;
 		cSpeedX1.style.background = null;
 		cSpeedX10.style.background = null;
-		cSpeedX2.style.background = "#333";
+		cSpeedX2.style.background = "var(--wincol-lighter)";
 	}
 	else if (mul == 10) {
 		cSpeedX05.style.background = null;
 		cSpeedX1.style.background = null;
 		cSpeedX2.style.background = null;
-		cSpeedX10.style.background = "#333";
+		cSpeedX10.style.background = "var(--wincol-lighter)";
 	}
 	else {
 		cSpeedX05.style.background = null;

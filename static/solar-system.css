@@ -4,7 +4,7 @@
 
 #primary-block h1 {
 	font-size: 15pt;
-	color: #F5F5F5;
+	color: var(--txtcol);
 	font-weight: bold;
 	text-align: center;
 	cursor: default;
@@ -12,7 +12,7 @@
 
 #primary-block h2 {
 	font-size: 14pt;
-	color: #F5F5F5;
+	color: var(--txtcol);
 	font-weight: bold;
 	text-align: center;
 	cursor: default;
@@ -20,7 +20,7 @@
 
 #primary-block h3 {
 	font-size: 19pt;
-	color: #F5F5F5;
+	color: var(--txtcol);
 	font-weight: bold;
 	text-align: center;
 	cursor: default;
@@ -41,7 +41,7 @@
 	margin: 15px 0px 0px 0px;
 	border-radius: 10px;
 	background: #101010;
-	box-shadow: 0px 0px 20px #FFFFFF0A;
+	box-shadow: var(--winshadow);
 	padding: 0px;
 	box-sizing: border-box;
 	display: block;
@@ -75,7 +75,7 @@
 	position: absolute;
 	bottom: 0px;
 	height: auto;
-	background: #1A1A1A;
+	background: var(--wincol);
 	border-radius: 10px 10px 0px 0px;
 	display: flex;
 	box-shadow: 0px 0px 10px #0005;
@@ -92,7 +92,7 @@
 }
 
 .c-group {
-	border: 2px solid #333;
+	border: 1px solid var(--wincol-light);
 	border-radius: 5px;
 	box-shadow: 0px 0px 7px #000A;
 	padding: 2px;
@@ -105,7 +105,7 @@
 	height: auto;
 	width: 2px;
 	margin: 3px;
-	background: #333;
+	background: var(--wincol-light);
 	box-shadow: 0px 0px 10px #0009;
 	border-radius: 2px;
 }
@@ -119,7 +119,7 @@
 
 #controls label {
 	font-family: monospace;
-	color: #AAA;
+	color: var(--txtcol-muted);
 	font-size: 12pt;
 	padding: 5px 0px 5px 8px;
 	margin: 3px;
@@ -127,54 +127,54 @@
 
 .label-2 {
 	font-size: 10pt !important;
-	color: #888 !important;
+	color: var(--txtcol-subtle) !important;
 	font-style: italic;
 	margin: 5px 3px !important;
 }
 
 #controls input[type="number"] {
-	background: #101010;
+	background: var(--wincol-darken);
 	display: block;
 	border-radius: 5px;
 	box-shadow: 0px 0px 10px #0005 inset;
 	border: none;
 	outline: none;
-	transition: 0.2s;
 	padding: 5px 8px;
 	margin: 3px;
 	font-family: monospace;
-	color: #F5F5F5;
+	color: var(--txtcol);
 	font-size: 12pt;
+	transition: var(--trans-fast);
 }
 
 #controls input[type="text"] {
-	background: #101010;
+	background: var(--wincol-darken);
 	display: block;
 	border-radius: 5px;
 	box-shadow: 0px 0px 10px #0005 inset;
 	border: none;
 	outline: none;
-	transition: 0.2s;
 	padding: 5px 8px;
 	margin: 3px;
 	font-family: monospace;
-	color: #F5F5F5;
+	color: var(--txtcol);
 	font-size: 12pt;
+	transition: var(--trans-fast);
 }
 
 #controls select {
-	background: #101010;
+	background: var(--wincol-darken);
 	display: block;
 	border-radius: 5px;
 	box-shadow: 0px 0px 10px #0005 inset;
 	border: none;
 	outline: none;
-	transition: 0.2s;
 	padding: 5px 8px;
 	margin: 3px;
 	font-family: monospace;
-	color: #F5F5F5;
+	color: var(--txtcol);
 	font-size: 12pt;
+	transition: var(--trans-fast);
 }
 
 #controls input[type="range"] {
@@ -189,17 +189,17 @@
 .checkbox {
 	width: 30px;
 	height: 30px;
-	background: #101010;
+	background: var(--wincol-darken);
 	box-shadow: 0px 0px 10px rgba(0,0,0,0.5) inset;
 	border-radius: 5px;
 	margin: 3px;
 	cursor: pointer;
 	user-select: none;
-	transition: 0.2s;
+	transition: var(--trans-fast);
 }
 
 .checkbox:hover {
-	background: #151515;
+	background: var(--bgcol-darken);
 }
 
 .c-button-group {
@@ -212,16 +212,16 @@
 	width: 29px;
 	height: 29px;
 	cursor: pointer;
-	transition: 0.2s;
 	padding: 5px;
 	border-radius: 50%;
 	margin: 3px;
 	box-sizing: border-box;
+	transition: var(--trans-fast);
 }
 
 .c-button:hover {
 	display: block;
-	background: #333;
+	background: var(--wincol-light);
 	box-shadow: 0px 0px 10px #0005;
 }
 
@@ -254,9 +254,9 @@
 	padding: 10px;
 	display: flex;
 	align-items: center;
-	border-radius: 5px;
-	background: #303030;
-	box-shadow: 0px 0px 10px #0005;
+	border-radius: var(--corl);
+	background: var(--wincol);
+	box-shadow: var(--winshadow);
 }
 
 .object img {
@@ -272,18 +272,18 @@
 
 .object div i {
 	display: block !important;
-	color: #A5A5A5 !important;
+	color: var(--txtcol-subtle) !important;
 }
 
 .metric {
 	font-size: 14pt !important;
-	color: #F5F5F5 !important;
+	color: var(--txtcol) !important;
 	display: block !important;
 }
 
 .imperial {
 	font-size: 12pt !important;
-	color: #CCC !important;
+	color: var(--txtcol-muted) !important;
 	display: block !important;
 }
 

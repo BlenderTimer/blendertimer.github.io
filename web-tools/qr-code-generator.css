@@ -9,6 +9,7 @@
 	display: flex;
 	justify-content: space-between;
 	align-items: stretch;
+	flex-wrap: nowrap !important;
 	margin: 10px auto 30px auto;
 	width: 100%;
 	max-width: 1000px;
@@ -44,6 +45,10 @@
 	font-size: 13pt;
 	color: var(--txtcol);
 	font-weight: bold;
+}
+
+#url-label {
+	margin: 0 0 5px 0 !important;
 }
 
 .wrap-label {
@@ -212,6 +217,7 @@
 }
 
 .range-slider input[type="number"]::-webkit-outer-spin-button, .range-slider input[type="number"]::-webkit-inner-spin-button {
+	appearance: none;
 	-moz-appearance: none;
 	-webkit-appearance: none;
 }
@@ -476,6 +482,10 @@
 }
 
 @media screen and (max-width: 700px) {
+	#tool-title {
+		padding: 0 !important;
+	}
+
 	#main-tool {
 		flex-flow: column;
 	}

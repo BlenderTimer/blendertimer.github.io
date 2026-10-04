@@ -63,7 +63,7 @@ function generateQRCode(onload) {
 
 function drawQRCode() {
 	drawingInfo = [];
-	if (currentQR._oQRCode.moduleCount >= 40) {drawingInfo.push({text:"Your QR code is very complex! Try to shorten the length of the URL.", type:"warning"})}
+	if (currentQR._oQRCode.moduleCount >= 30) {drawingInfo.push({text:"Your QR code is very complex! Try to shorten the length of the URL.", type:"warning"})}
 	if ((currentQR._oQRCode.moduleCount*5) > qrImageWidth) {drawingInfo.push({text:"The resolution of your image is very low for the complexity of the QR code.", type:"warning"})}
 	if (contrastRatio(backgroundColor, primaryColor) < 5) {drawingInfo.push({text:"Your QR code has poor contrast which can prevent it from scanning well. Consider choosing better contrasting colors.", type:"warning"})}
 	let newModules = removeLogoSpaceModules(currentQR._oQRCode.modules.map(row => [...row]));
@@ -72,7 +72,8 @@ function drawQRCode() {
 	if (showSVG == true) {qrContainer.innerHTML = qrSVG};
 	qrContainer.innerHTML += '<canvas id="qr-canvas"></canvas>';
 	drawQRCanvas(newModules);
-	if (qrText.startsWith("https://www.") || qrText.startsWith("http://www.")) {drawingInfo.push({text:"Your URL contains \"www.\". You may be able to achieve a simpler QR code by omitting it.", type:"warning"})};
+	if (qrText.includes("www.")) {drawingInfo.push({text:"Your URL contains \"www.\". You may be able to achieve a simpler QR code by omitting it.", type:"warning"})};
+	if ((qrText.includes("www.") || qrText.includes(".org") || qrText.includes(".co") || qrText.includes(".io") || qrText.includes(".net") || qrText.includes(".gov") || qrText.includes(".store")) &&! (qrText.startsWith("http://") || qrText.startsWith("https://"))) {drawingInfo.push({text:"For safe compatibility, URLs should include \"https://\".", type:"warning"})};
 	if (qrText.startsWith("https://www.youtube.com") || qrText.startsWith("http://www.youtube.com") || qrText.startsWith("https://youtube.com") || qrText.startsWith("http://youtube.com")) {
 		if (qrText.indexOf("/shorts/") > -1) {drawingInfo.push({text:`Your using a youtube.com URL which could be shortened to "https://youtu.be/${qrText.substring(qrText.lastIndexOf("/")+1, qrText.length-1)}"`, type:"warning"})}
 		else if (qrText.indexOf("/watch?v=") > -1) {drawingInfo.push({text:`Your using a youtube.com URL which could be shortened to "https://youtu.be/${qrText.substring(qrText.lastIndexOf("/watch?v=")+9, qrText.length-1)}"`, type:"warning"})};
