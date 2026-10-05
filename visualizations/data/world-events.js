@@ -412,6 +412,13 @@ const worldEvents = [
 		type:"record-set",
 	},
 	{
+		date:"1998-2-28",
+		title:"<p>The </p><b>Kosovo War</b><p> begins.</p>",
+		description:"The Kosovo War was an armed conflict in Kosovo that was fought between the forces of the Federal Republic of Yugoslavia (FRY), which controlled Kosovo before the war, and the Kosovo Albanian separatist militia known as the Kosovo Liberation Army (KLA).",
+		type:"war-begins",
+		recommended:"KosovarRobert",
+	},
+	{
 		date:"1998-8-2",
 		title:"<p>The </p><b>Second Congo War</b><p> begins.</p>",
 		description:"The war initially erupted when Congolese president Laurent-Désiré Kabila turned against his former allies from Rwanda and Uganda, who had helped him seize power. Eventually, the conflict expanded, drawing in nine African nations and approximately 25 armed groups, making it one of the largest wars in African history.",
@@ -430,6 +437,12 @@ const worldEvents = [
 		title:"<p>The </p><b>Second Liberian Civil War</b><p> begins.</p>",
 		description:"A civil war in the West African nation of Liberia.",
 		type:"war-begins",
+	},
+	{
+		date:"1999-6-11",
+		title:"<p>The </p><b>Kosovo War</b><p> ends.</p>",
+		description:"The Kosovo War was an armed conflict in Kosovo that was fought between the forces of the Federal Republic of Yugoslavia (FRY), which controlled Kosovo before the war, and the Kosovo Albanian separatist militia known as the Kosovo Liberation Army (KLA).",
+		type:"war-ends",
 	},
 	{
 		date:"1999-8-7",
