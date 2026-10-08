@@ -192,6 +192,7 @@ const supporters = [
 	{name:`Viktor Karlsson`,tier:0},
 	{name:`White Criss Wilson`,tier:0},
 	{name:`Willy Chen`,tier:0},
+	{name:`Woodys Originals Inc.`,tier:0},
 	{name:`Yaron Toor`,tier:0},
 	{name:`Yuming Chen`,tier:0},
 	{name:`Zee Colin`,tier:0},
