@@ -7036,7 +7036,7 @@ const objects = [
 	},
 	{
 		id:474,
-		name:'Kman K-MAX',
+		name:'Kaman K-MAX',
 		category:'aircraft>helicopters',
 		tags:['k-1200'],
 		createdOn:'2026-09-01',
