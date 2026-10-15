@@ -171,6 +171,12 @@ window.pages = [
 		url:"https://blendertimer.com/data/how-many-people-stub-their-toe-every-day",
 		keywords:["papers", "scientific"]
 	},
+	{
+		title:"How Common Are Space Misconceptions? - BlenderTimer Studies and Data",
+		description:"A survey of over 350 people sheds some light on the question.",
+		url:"https://blendertimer.com/data/how-common-are-space-misconceptions",
+		keywords:["papers", "scientific"]
+	},
 	// Factsheets
 	{
 		title:"Factsheets - BlenderTimer",

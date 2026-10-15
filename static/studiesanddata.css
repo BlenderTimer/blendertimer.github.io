@@ -125,7 +125,7 @@
 }
 
 .no-nav #data-content i {
-	font-size: 14pt !important;
+	font-size: 14pt;
 }
 
 .no-nav #data-content b {
@@ -143,6 +143,20 @@
 	margin: 20pt auto;
 	border-radius: 10px;
 	box-shadow: 0px 0px 20px #0008;
+}
+
+.data-image-group {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	max-width: 80%;
+	margin: 20pt auto;
+}
+
+.data-image-group img {
+	margin: 5px;
+	width: calc(50% - 10px) !important;
 }
 
 .col-spr {
@@ -456,6 +470,89 @@
 	color: var(--txtcol-subtle) !important;
 }
 
+.graph-data-list, .graph-data-table {
+	display: flex !important;
+	align-items: center;
+	justify-content: center;
+	flex-flow: column;
+	margin: 0 auto !important;
+}
+
+.graph-data-list ul {
+	padding: 0 !important;
+}
+
+.graph-data-list ul li {
+	color: var(--txtcol-muted);
+}
+
+.graph-data-list ul li::marker {
+	color: var(--txtcol-subtle) !important;
+}
+
+.graph-data-table table {
+	box-sizing: border-box;
+	padding: 0px;
+	border-radius: var(--cors);
+	border: 1px solid var(--wincol);
+	border-collapse: collapse;
+	table-layout: fixed;
+	width: min(calc(100% - 10px), 600px);
+	overflow: hidden;
+	margin: 8px auto;
+	box-shadow: 0px 0px 10px #0005;
+}
+
+.graph-data-table table tr {
+	margin: 0px;
+	padding: 0px;
+}
+
+.graph-data-table table th[scope="col"] {
+	border: 1px solid color-mix(in srgb, var(--pricol) 60%, var(--bgcol));
+	background: var(--pricol);
+}
+
+.graph-data-table table th {
+	font-size: 12pt;
+	text-align: center;
+	vertical-align: middle;
+	border: 1px solid color-mix(in srgb, var(--wincol-light) 35%, var(--bgcol));
+	margin: 0px;
+	padding: 5px 10px;
+	background: color-mix(in srgb, var(--wincol-light) 50%, var(--wincol));
+	cursor: default;
+}
+
+.graph-data-table table th i {
+	font-size: 12pt !important;
+}
+
+.graph-data-table table td {
+	font-size: 11.5pt;
+	text-align: center;
+	vertical-align: middle;
+	margin: 0;
+	padding: 5px 10px;
+	color: var(--txtcol);
+}
+
+.graph-data-table table tr:nth-child(even) {
+	background-color: color-mix(in srgb, var(--wincol-light) 23%, var(--bgcol));
+}
+
+.graph-data-table table tr:nth-child(odd) {
+	background-color: var(--wincol);
+}
+
+.graph-data-table table td p {
+	display: block;
+	white-space: nowrap;
+	text-align: center;
+	color: var(--txtcol) !important;
+	padding: 0;
+}
+
 @media screen and (max-width: 1400px) {
 	.data-block {
 		width: calc(16.66% - 10px);
@@ -463,6 +560,10 @@
 
 	.split-data-container-hold .data-block {
 		width: calc(33.33% - 10px);
+	}
+
+	.data-image-group {
+		max-width: 100%;
 	}
 }
 
@@ -473,6 +574,10 @@
 
 	.split-data-container-hold .data-block {
 		width: calc(50% - 10px);
+	}
+
+	.data-image-group img {
+		width: 100% !important;
 	}
 }
 
