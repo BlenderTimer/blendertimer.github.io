@@ -68,7 +68,7 @@ function headerSearch(e) {
 	}, 1)
 }
 
-document.getElementById("header-search-input").addEventListener('blur', () => {document.getElementById("header-search-output").style.display = null});
+document.getElementById("header-search-input").addEventListener('blur', () => {setTimeout(() => {document.getElementById("header-search-output").style.display = null}, 200)});
 document.getElementById("header-search-input").addEventListener('focus', () => {document.getElementById("header-search-output").style.display = 'flex'});
 
 // —————————— MISC ——————————
