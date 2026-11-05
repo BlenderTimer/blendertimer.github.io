@@ -133,6 +133,7 @@ const supporters = [
 	{name:`Nemileanu`,tier:0},
 	{name:`Nils Skywalker Isberg Erenough`,tier:0},
 	{name:`Numbered`,tier:0},
+	{name:`ole petter daleng`,tier:0},
 	{name:`Pages Editorial Service`,tier:0},
 	{name:`Pattern Research, Inc.`,tier:0},
 	{name:`Peter May`,tier:0},
