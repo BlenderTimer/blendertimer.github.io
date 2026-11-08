@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="28"
+   height="28"
+   viewBox="0 0 7.4083332 7.4083333"
+   version="1.1"
+   id="svg1"
+   xml:space="preserve"
+   sodipodi:docname="info-warning2.svg"
+   inkscape:version="1.4.4 (dcaf3e7, 2026-05-05)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"><sodipodi:namedview
+     id="namedview1"
+     pagecolor="#505050"
+     bordercolor="#ffffff"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="1"
+     inkscape:deskcolor="#505050"
+     inkscape:document-units="mm"
+     inkscape:zoom="32"
+     inkscape:cx="7.984375"
+     inkscape:cy="15.921875"
+     inkscape:window-width="3440"
+     inkscape:window-height="1377"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" /><defs
+     id="defs1" /><g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"><path
+       style="baseline-shift:baseline;display:inline;overflow:visible;opacity:1;vector-effect:none;fill:#ffbe2a;stroke-width:1.01345;stroke-linejoin:round;enable-background:accumulate;stop-color:#000000;stop-opacity:1"
+       d="M 3.350846,0.6727022 0.08485605,6.3278131 C -0.07173289,6.6001051 0.12505999,6.9398202 0.43916648,6.939444 H 6.9691669 C 7.2832734,6.9398202 7.4800663,6.6001051 7.3234773,6.3278131 L 4.0574875,0.6727022 c -0.1571673,-0.27175095 -0.5494741,-0.27175095 -0.7066415,0 z"
+       id="path1"
+       sodipodi:nodetypes="ccccccc" /><circle
+       style="fill:#61411d;fill-opacity:1;stroke:none;stroke-width:0.874687;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
+       id="path2"
+       cx="3.7041667"
+       cy="5.6073341"
+       r="0.56048906" /><ellipse
+       style="fill:#61411d;fill-opacity:1;stroke:none;stroke-width:1.26603;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
+       id="circle2"
+       cx="3.7041667"
+       cy="3.333041"
+       rx="0.56048906"
+       ry="1.1741816" /></g></svg>

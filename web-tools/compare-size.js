@@ -178,6 +178,50 @@ const UNIT_SYSTEMS = {
 const metricUnits = UNIT_SYSTEMS['metric-length'].units;
 const imperialUnits = UNIT_SYSTEMS['imperial-length'].units;
 
+const scaleToMassUnit = {
+	1e-27: 'yg',
+	1e-24: 'zg',
+	1e-21: 'ag',
+	1e-18: 'fg',
+	1e-15: 'pg',
+	1e-12: 'ng',
+	1e-9: 'μg',
+	1e-6: 'mg',
+	1e-3: 'g',
+	1: 'kg',
+	1e3: 't',
+	5.9722e24: 'M🜨',
+	1.89813e27: 'MJ',
+	1.98847e30: 'M⊙',
+	0.028349523125: 'oz',
+	0.45359237: 'lb',
+	907.18474: 'ton',
+};
+
+const MASS_UNITS = {
+	metric:[
+		{ abbr: 'yg', scale: 1e-27, threshold: 1 },
+		{ abbr: 'zg', scale: 1e-24, threshold: 1 },
+		{ abbr: 'ag', scale: 1e-21, threshold: 1 },
+		{ abbr: 'fg', scale: 1e-18, threshold: 1 },
+		{ abbr: 'pg', scale: 1e-15, threshold: 1 },
+		{ abbr: 'ng', scale: 1e-12, threshold: 1 },
+		{ abbr: 'μg', scale: 1e-9, threshold: 1 },
+		{ abbr: 'mg', scale: 1e-6, threshold: 1 },
+		{ abbr: 'g', scale: 1e-3, threshold: 1 },
+		{ abbr: 'kg', scale: 1, threshold: 1 },
+		{ abbr: 't', scale: 1e3, threshold: 5 },
+		{ abbr: 'M🜨', scale: 5.9722e24, threshold: 1 },
+		{ abbr: 'MJ', scale: 1.89813e27, threshold: 1 },
+		{ abbr: 'M⊙', scale: 1.98847e30, threshold: 1 },
+	],
+	imperial:[
+		{ abbr: 'oz', scale: 0.028349523125, threshold: 1 },
+		{ abbr: 'lb', scale: 0.45359237, threshold: 1 },
+		{ abbr: 'ton', scale: 907.18474, threshold: 5 },
+	],
+}
+
 function getMeasurementCategory(measurementType) {
 	if (measurementType === 'volume') return 'volume';
 	if (measurementType === 'visual-area' || measurementType === 'surface-area') return 'area';
@@ -867,6 +911,7 @@ function getCatalogItem(obj, skipImage = true) {
 			<span class="catalog-item-hover"><img src="/static/images/icons/add.svg" alt="Add icon" loading="lazy" decoding="async"></span>
 			<div class="catalog-item-image"></div>
 			<b>${obj.name}</b>
+			${obj.unsureSize ? ` <img class="catalog-item-warning" src="/static/images/icons/info-warning2.svg" alt="Warning icon" title="WARNING: The size of this object is uncertain.">`:''}
 		`;
 		div.addEventListener('click', () => addObjectToCanvas(obj));
 	}
@@ -3237,7 +3282,7 @@ function convertDimension(value, fromScale, unitMode, precision = 0.005, origina
 			const candidate = units[i];
 			const val = meters / candidate.scale;
 			const rounded = Math.round(val);
-			const isExact = rounded === 1 && Math.abs(val - rounded) / Math.abs(val) <= precision; // rounded !== 0 && Math.abs(val - rounded) / Math.abs(val) <= precision;
+			const isExact = rounded === 1 && Math.abs(val - rounded) / Math.abs(val) <= precision;
 			if (isExact) {
 				best = candidate;
 			} else {
@@ -3297,10 +3342,68 @@ function formatDimensions(obj, unitMode, angle, precision = 0.005, originalUnits
 
 	const fns = { width: w, length: l, height: h };
 	const keys = dimsForAngle[angle] || dimsForAngle.all;
-	return keys
-		.filter(k => obj[k] !== undefined && obj[k] !== null)
-		.map(k => fns[k]())
-		.join(' × ');
+	return keys.filter(k => obj[k] !== undefined && obj[k] !== null).map(k => fns[k]()).join(' × ');
+}
+
+function formatMass(value, fromScale, unitMode, precision = 0.005, originalUnits = false, alreadyInKilograms = false) {
+	const kilograms = alreadyInKilograms ? value : value * fromScale;
+
+	if (originalUnits) {
+		const abbr = scaleToMassUnit[fromScale] ?? 'kg';
+		const exact = value; // value is already in original units
+		let formatted;
+		for (let sig = 1; sig <= 10; sig++) {
+			const rounded = Number(exact.toPrecision(sig));
+			const error = Math.abs((rounded - exact) / exact);
+			if (error <= precision) {
+				formatted = rounded.toLocaleString(undefined, {
+					maximumSignificantDigits: sig,
+					minimumSignificantDigits: sig
+				});
+				break;
+			}
+		}
+		return `${formatted} ${abbr}`;
+	}
+
+	const effectiveMode = (unitMode === 'imperial' && (kilograms / 0.028349523125 < 0.01 || kilograms / 907.18474 > 1000000000)) ? 'metric' : unitMode;
+	const units = effectiveMode === 'imperial' ? MASS_UNITS.imperial : MASS_UNITS.metric;
+	let best = units[0];
+	for (const unit of units) {
+		if (kilograms / unit.scale >= unit.threshold) best = unit;
+		else break;
+	}
+
+	if (effectiveMode === 'metric') {
+		const startIdx = units.indexOf(best);
+		for (let i = startIdx + 1; i < units.length; i++) {
+			const candidate = units[i];
+			const val = kilograms / candidate.scale;
+			const rounded = Math.round(val);
+			const isExact = rounded === 1 && Math.abs(val - rounded) / Math.abs(val) <= precision;
+			if (isExact) {
+				best = candidate;
+			} else {
+				break;
+			}
+		}
+	}
+
+	// Standard rounding to within precision
+	const exact = kilograms / best.scale;
+	let formatted;
+	for (let sig = 1; sig <= 10; sig++) {
+		const rounded = Number(exact.toPrecision(sig));
+		const error = Math.abs((rounded - exact) / exact);
+		if (error <= precision) {
+			formatted = rounded.toLocaleString(undefined, {
+				maximumSignificantDigits: sig,
+				minimumSignificantDigits: sig
+			});
+			break;
+		}
+	}
+	return `${formatted} ${best.abbr}`;
 }
 
 function modal(type = 'empty', args = {}) {
@@ -3313,9 +3416,10 @@ function modal(type = 'empty', args = {}) {
 			<div class="modal-grid">
 				<div class="modal-details" style="flex-basis: 350px">
 					<h1>Basic Details</h1>
-					${obj.width ? `<span><p>Width</p><b>${formatDimensions(obj, unitMode, 'width')} <i>(${formatDimensions(obj, unitMode === 'metric' ? 'imperial':'metric', 'width')})</i></b></span>`:''}
-					${obj.length ? `<span><p>Length</p><b>${formatDimensions(obj, unitMode, 'length')} <i>(${formatDimensions(obj, unitMode === 'metric' ? 'imperial':'metric', 'length')})</i></b></span>`:''}
-					${obj.height ? `<span><p>Height</p><b>${formatDimensions(obj, unitMode, 'height')} <i>(${formatDimensions(obj, unitMode === 'metric' ? 'imperial':'metric', 'height')})</i></b></span>`:''}
+					${obj.width ? `<span><p>Width</p><b>${formatDimensions(obj, unitMode, 'width')} <i>(${formatDimensions(obj, unitMode === 'metric' ? 'imperial':'metric', 'width')})</i>${obj.unsureSize ? ` <img src="/static/images/icons/info-warning2.svg" alt="Warning icon" title="WARNING: The size of this object is uncertain.">`:''}</b></span>`:''}
+					${obj.length ? `<span><p>Length</p><b>${formatDimensions(obj, unitMode, 'length')} <i>(${formatDimensions(obj, unitMode === 'metric' ? 'imperial':'metric', 'length')})</i>${obj.unsureSize ? ` <img src="/static/images/icons/info-warning2.svg" alt="Warning icon" title="WARNING: The size of this object is uncertain.">`:''}</b></span>`:''}
+					${obj.height ? `<span><p>Height</p><b>${formatDimensions(obj, unitMode, 'height')} <i>(${formatDimensions(obj, unitMode === 'metric' ? 'imperial':'metric', 'height')})</i>${obj.unsureSize ? ` <img src="/static/images/icons/info-warning2.svg" alt="Warning icon" title="WARNING: The size of this object is uncertain.">`:''}</b></span>`:''}
+					${obj.mass ? `<span><p>Mass/Weight</p><b>${formatMass(obj.mass, obj.massScale, unitMode)} <i>(${formatMass(obj.mass, obj.massScale, unitMode === 'metric' ? 'imperial':'metric')})</i>${obj.unsureMass ? ` <img src="/static/images/icons/info-warning2.svg" alt="Warning icon" title="WARNING: The mass of this object is uncertain.">`:''}</b></span>`:''}
 					<span><p>Category</p><b>${obj.category.replace(/>/g, ' > ')}</b></span>
 					<span><p>Created</p><b>${formatDate(obj.createdOn)}</b></stepspan>
 					${obj.modifiedOn ? `<span><p>Modified</p><b>${formatDate(obj.modifiedOn)}</b></span>`:''}
@@ -3331,10 +3435,11 @@ function modal(type = 'empty', args = {}) {
 					</div>
 				`:''}
 				<div class="modal-details" style="flex-basis: 250px">
-					<h1>Original Dimensions</h1>
-					${obj.width ? `<span><p>Width</p><b>${formatDimensions(obj, unitMode, 'width', 0, true)}</b></span>`:''}
-					${obj.length ? `<span><p>Length</p><b>${formatDimensions(obj, unitMode, 'length', 0, true)}</b></span>`:''}
-					${obj.height ? `<span><p>Height</p><b>${formatDimensions(obj, unitMode, 'height', 0, true)}</b></span>`:''}
+					<h1>Original Data</h1>
+					${obj.width ? `<span><p>Width</p><b>${formatDimensions(obj, unitMode, 'width', 0, true)}${obj.unsureSize ? ` <img src="/static/images/icons/info-warning2.svg" alt="Warning icon" title="WARNING: The size of this object is uncertain.">`:''}</b></span>`:''}
+					${obj.length ? `<span><p>Length</p><b>${formatDimensions(obj, unitMode, 'length', 0, true)}${obj.unsureSize ? ` <img src="/static/images/icons/info-warning2.svg" alt="Warning icon" title="WARNING: The size of this object is uncertain.">`:''}</b></span>`:''}
+					${obj.height ? `<span><p>Height</p><b>${formatDimensions(obj, unitMode, 'height', 0, true)}${obj.unsureSize ? ` <img src="/static/images/icons/info-warning2.svg" alt="Warning icon" title="WARNING: The size of this object is uncertain.">`:''}</b></span>`:''}
+					${obj.mass ? `<span><p>Mass/Weight</p><b>${formatMass(obj.mass, obj.massScale, unitMode, 0, true)}${obj.unsureMass ? ` <img src="/static/images/icons/info-warning2.svg" alt="Warning icon" title="WARNING: The mass of this object is uncertain.">`:''}</b></span>`:''}
 				</div>
 				${obj.tags ? `
 					<div class="modal-details" style="flex-basis: 200px">
@@ -3342,10 +3447,10 @@ function modal(type = 'empty', args = {}) {
 						<div class="mim-tags">${obj.tags.map(t => `<b>${t}</b>`).join('')}</div>
 					</div>
 				`:''}
-				${obj.notes ? `
+				${obj.notes || obj.unsureSize ? `
 					<div class="modal-details" style="flex-basis: 400px">
 						<h1>Notes</h1>
-						<p>${obj.notes}</p>
+						<p>${obj.notes || (obj.unsureSize ? `The size of this object is uncertain.`:'')}</p>
 					</div>
 				`:''}
 			</div>

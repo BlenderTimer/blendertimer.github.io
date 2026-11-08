@@ -482,6 +482,12 @@ header {
 	user-select: none;
 }
 
+.catalog-item-warning {
+	position: absolute;
+	width: 18px; height: 18px;
+	top: 5px; right: 5px;
+}
+
 /* CANVAS OBJECTS */
 #canvas-objects-controls {
 	display: flex;
@@ -1635,6 +1641,11 @@ input[type="color"]::-moz-color-swatch {border:none}
 	line-height: 1;
 	text-align: right;
 	color: var(--txtcol) !important;
+}
+
+.modal-details span b img {
+	width: 18px; height: 18px;
+	margin: -5px 0px -3px 5px;
 }
 
 .modal-overview {

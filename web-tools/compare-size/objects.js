@@ -10,6 +10,8 @@ const objects = [
 		width:12756,
 		length:12756,
 		height:12714,
+		massScale:1,
+		mass:5.97217e24,
 		front:{
 			keys:['default'],
 			artist:'Daniel Roberts (BlenderTimer)',
@@ -69,6 +71,8 @@ const objects = [
 		width:48.7,
 		length:27.7,
 		height:171,
+		massScale:1,
+		mass:62,
 		side:{
 			keys:['on-ground'],
 			artist:'Daniel Roberts (BlenderTimer)',
@@ -107,6 +111,8 @@ const objects = [
 		width:4881,
 		length:4881,
 		height:4876.6,
+		massScale:1,
+		mass:3.3011e23,
 		front:{
 			keys:['default'],
 			artist:'Daniel Roberts (BlenderTimer)',
@@ -125,6 +131,8 @@ const objects = [
 		width:12104,
 		length:12104,
 		height:12104,
+		massScale:1,
+		mass:4.86731e24,
 		front:{
 			keys:['default'],
 			artist:'Daniel Roberts (BlenderTimer)',
@@ -140,6 +148,8 @@ const objects = [
 		width:6792.4,
 		length:6792.4,
 		height:6752.4,
+		massScale:1,
+		mass:6.4171e23,
 		front:{
 			keys:['default'],
 			artist:'Daniel Roberts (BlenderTimer)',
@@ -158,6 +168,8 @@ const objects = [
 		width:142980,
 		length:142980,
 		height:133710,
+		massScale:1,
+		mass:1.898e27,
 		front:{
 			keys:['default'],
 			artist:'Daniel Roberts (BlenderTimer)',
@@ -176,6 +188,8 @@ const objects = [
 		width:120540,
 		length:120540,
 		height:108730,
+		massScale:1,
+		mass:5.68317e26,
 		front:{
 			keys:['default'],
 			artist:'Daniel Roberts (BlenderTimer)',
@@ -194,6 +208,8 @@ const objects = [
 		width:51118,
 		length:51118,
 		height:49946,
+		massScale:1,
+		mass:8.68099e25,
 		front:{
 			keys:['default'],
 			artist:'Daniel Roberts (BlenderTimer)',
@@ -212,6 +228,8 @@ const objects = [
 		width:49528,
 		length:49528,
 		height:48682,
+		massScale:1,
+		mass:1.024092e26,
 		front:{
 			keys:['default'],
 			artist:'Daniel Roberts (BlenderTimer)',
@@ -230,6 +248,8 @@ const objects = [
 		width:2,
 		length:2,
 		height:2,
+		massScale:1,
+		mass:1.988475e30,
 		front:{
 			keys:['default'],
 			artist:'Daniel Roberts (BlenderTimer)',
@@ -260,6 +280,8 @@ const objects = [
 		width:964.3,
 		length:964.3,
 		height:891.8,
+		massScale:1,
+		mass:9.38392e20,
 		front:{
 			keys:['default'],
 			artist:'Daniel Roberts (BlenderTimer)',
@@ -278,6 +300,8 @@ const objects = [
 		width:2376.6,
 		length:2376.6,
 		height:2376.6,
+		massScale:1,
+		mass:1.3025e22,
 		front:{
 			keys:['default'],
 			artist:'Daniel Roberts (BlenderTimer)',
@@ -293,6 +317,8 @@ const objects = [
 		width:1430,
 		length:1430,
 		height:1416,
+		massScale:1,
+		mass:2.69e21,
 		front:{
 			keys:['default'],
 			artist:'Daniel Roberts (BlenderTimer)',
@@ -311,6 +337,8 @@ const objects = [
 		width:2122,
 		length:1688,
 		height:1036,
+		massScale:1,
+		mass:3.952e21,
 		side:{
 			keys:['default'],
 			artist:'Daniel Roberts (BlenderTimer)',
@@ -332,6 +360,8 @@ const objects = [
 		width:2326,
 		length:2326,
 		height:2326,
+		massScale:1,
+		mass:1.6466e22,
 		front:{
 			keys:['default'],
 			artist:'Daniel Roberts (BlenderTimer)',
@@ -392,6 +422,7 @@ const objects = [
 		width:4300,
 		length:4300,
 		height:4300,
+		unsureSize:true,
 		notes:`Astronomers are very uncertain about the size and distance of this star. The size used here may be extremely inaccurate.`,
 		front:{
 			keys:['default'],
@@ -408,6 +439,8 @@ const objects = [
 		width:51.1,
 		length:37.9,
 		height:160,
+		massScale:1,
+		mass:62,
 		side:{
 			keys:['on-ground'],
 			artist:'Daniel Roberts (BlenderTimer)',
@@ -446,13 +479,15 @@ const objects = [
 	},
 	{
 		id:26,
-		name:'Giraffe',
+		name:'Angolan Giraffe',
 		category:'animals>mammals',
-		tags:['adult','giraffa camelopardalis','tall'],
+		tags:['namibian','southern','adult','giraffa', 'angolensis', 'camelopardalis','tall'],
 		createdOn:'2023-08-07',
 		scale:1,
 		length:3.56,
 		height:5,
+		massScale:1,
+		mass:1100,
 		side:{
 			keys:['on-ground','default'],
 			artist:'Daniel Roberts (BlenderTimer)',
@@ -467,6 +502,8 @@ const objects = [
 		scale:1,
 		length:16,
 		height:3.07,
+		massScale:1000,
+		mass:55,
 		side:{
 			keys:['default'],
 			artist:'Daniel Roberts (BlenderTimer)',
@@ -495,6 +532,8 @@ const objects = [
 		scale:1,
 		length:4.5,
 		height:1.55,
+		massScale:1,
+		mass:1000,
 		side:{
 			keys:['default'],
 			artist:'Daniel Roberts (BlenderTimer)',
@@ -7147,6 +7186,8 @@ const objects = [
 		scale:0.01,
 		length:135,
 		height:72.5,
+		massScale:1,
+		mass:250,
 		side:{
 			keys:['on-ground','default'],
 			artist:'Daniel Roberts (BlenderTimer)',
