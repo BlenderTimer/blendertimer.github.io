@@ -190,6 +190,7 @@ const supporters = [
 	{name:`Valkyrie Enterprises`,tier:0},
 	{name:`Victoria Carlie`,tier:0},
 	{name:`Viktor Karlsson`,tier:0},
+	{name:`Vincent paul Navarro`,tier:0},
 	{name:`White Criss Wilson`,tier:0},
 	{name:`Willy Chen`,tier:0},
 	{name:`Woodys Originals Inc.`,tier:0},
