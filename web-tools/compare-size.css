@@ -808,6 +808,43 @@ input[type="color"]::-moz-color-swatch {border:none}
 	text-wrap-mode: nowrap;
 }
 
+.olicg-variation {
+	position: relative;
+	display: flex;
+	justify-content: space-between;
+	padding: 3px;
+	border-radius: var(--cors);
+	cursor: pointer;
+	transition: var(--trans-fast);
+}
+
+.olicg-variation:hover {
+	background: var(--wincol-light);
+}
+
+.olicg-variation::after {
+	position: absolute;
+	content: "";
+	bottom: 0;
+	width: 100%; height: 1px;
+	background: linear-gradient(to right, transparent, var(--wincol-lighter) 0%, var(--wincol-lighter), transparent);
+	pointer-events: none;
+}
+
+.olicg-variation.active {
+	background: var(--pricol);
+}
+
+.olicg-variation b {
+	font-family: 'Barlow', sans-serif !important;
+	font-weight: 500 !important;
+	font-size: 12pt !important;
+	line-height: 1;
+	text-wrap-mode: nowrap;
+	color: var(--txtcol) !important;
+	pointer-events: none;
+}
+
 .angle-selector {
 	display: flex;
 	justify-content: stretch;

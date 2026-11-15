@@ -538,6 +538,19 @@ const objects = [
 			keys:['default'],
 			artist:'Daniel Roberts (BlenderTimer)',
 		},
+		variations:[
+			{
+				name:'Largest Recorded',
+				description:'The largest accepted record is a catch during a 2014 study. It was 6.02m (19ft 9in) long and the heaviest weighed 2,530kg (5,580lb).',
+				length:6.02,
+				mass:2530,
+			},
+			{
+				name:'Largest Claimed',
+				description:'The largest claimed was supposedly around 11m (36ft) long.',
+				length:11,
+			},
+		],
 	},
 	{
 		id:30,
@@ -7527,6 +7540,20 @@ const objects = [
 			keys:['default'],
 			artist:'Daniel Roberts (BlenderTimer)',
 		},
+		variations:[
+			{
+				name:'Largest Recorded',
+				description:'The largest accepted record is of a female taken in 1827 in the Volga estuary. It was 7.2m (23ft 7in) long and weighed 1,571kg (3,463lb).',
+				length:7.2,
+				mass:1571,
+			},
+			{
+				name:'Largest Claimed',
+				description:'The largest claimed was supposedly around 12m (39ft 4in) long and weighed 3,000kg (6,600lb).',
+				length:12,
+				mass:3000,
+			},
+		],
 	},
 	{
 		id:499,

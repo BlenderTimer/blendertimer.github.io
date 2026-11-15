@@ -1040,7 +1040,6 @@ function getObjectImageData(obj, angle = 'default') {
 	}
 }
 
-function getObject(id) {return objects[id-1]};
 function getCustomObject(tag) {return customObjects.filter(obj => obj.tag === tag)[0]};
 
 // —————————— CONTRIBUTORS ——————————
@@ -1599,6 +1598,8 @@ async function addObjectToCanvas(obj, updateUI = true) {
 		rotation: canvasObjects[canvasObjects.length - 1].rotation || 0,
 		cScale: null,
 		docElement: null,
+		variationIndex: -1,
+		variationFactor: 1,
 	});
 	hideCanvasWelcomeStarter();
 	hideCanvasObjectsEmpty();
@@ -1703,7 +1704,6 @@ function getObjectListItem(obj) {
 	}
 	const angleGroup = crypto.randomUUID();
 	const extraGroup = crypto.randomUUID();
-	const custdimGroup = crypto.randomUUID();
 	const xid = `x-${crypto.randomUUID()}`;
 	const yid = `y-${crypto.randomUUID()}`;
 	const rotid = `y-${crypto.randomUUID()}`;
@@ -1847,7 +1847,18 @@ function getObjectListItem(obj) {
 						<input type="color" id="${colorid}" name="${extraGroup}" value="${obj.color || '#ffffff'}">
 					</div>
 				</div>
-			</div>${!obj.id ? `
+			</div>${obj.variations ? `
+			<div class="object-list-item-main" style="padding: 3px; width: calc(100% - 6px); height: auto">
+				<div class="olicg-rows">
+					<div class="object-list-item-control-group olicg-rows">
+						<label>Size Variations (${(obj.variations.length + 1).toLocaleString()})</label>
+						<div class="olicg-variations-list" data-object="${obj.id}">
+							<div class="olicg-variation active" data-index="-1"><b>Default</b></div>
+							${obj.variations.map((v, i) => `<div class="olicg-variation" data-index="${i}"><b>${v.name}</b></div>`).join('')}
+						</div>
+					</div>
+				</div>
+			</div>` : ''}${!obj.id ? `
 			<div class="object-list-item-main" style="padding: 0 7px 7px 7px; width: calc(100% - 14px); height: auto">
 				<div class="olicg-rows custdim">
 					<div class="object-list-item-control-group olicg-rows">
@@ -1893,6 +1904,17 @@ function getObjectListItem(obj) {
 			</div>` : ''}
 		</div>
 	`;
+
+	if (obj.variations) {
+		const variationButtons = div.querySelectorAll('.olicg-variation');
+		variationButtons.forEach(btn => btn.addEventListener('click', async () => {
+			const objID = parseInt(div.getAttribute('can-obj').substring(3));
+			const index = parseInt(btn.dataset.index);
+			variationButtons.forEach(b => b.classList.toggle('active', b === btn));
+			await applyObjectVariation(objID, index);
+		}));
+	}
+
 	if (isCustomObject) {
 		const getSelectedValue = (groupName) => {
 			const checked = div.querySelector(`input[name="${groupName}"]:checked`);
@@ -2188,7 +2210,9 @@ function getObjectListItem(obj) {
 			event.target.classList.contains('checkbox') ||
 			event.target.parentNode.classList.contains('checkbox') ||
 			event.target.tagName === 'INPUT' ||
-			event.target.tagName === 'LABEL'
+			event.target.tagName === 'LABEL' ||
+			event.target.classList.contains('olicg-variation') ||
+			event.target.closest('.olicg-variation')
 			) { return; }
 
 		const id = parseInt(event.currentTarget.getAttribute('can-obj').substring(3));
@@ -2310,6 +2334,30 @@ function attachCanvasObjectInteraction(el, obj) {
 		window.addEventListener('mousemove', onMove);
 		window.addEventListener('mouseup', onUp);
 	});
+}
+
+async function applyObjectVariation(objID, index) {
+	const obj = canvasObjects[objID];
+	if (!obj || !obj.variations) return;
+
+	let factor = 1;
+	if (index >= 0) {
+		const v = obj.variations[index];
+		if (!v) return;
+		// Only one dimension differs; compare it to the default value of that dimension.
+		const dim = ['width', 'length', 'height'].find(d => v[d] != null && obj[d]);
+		if (dim) factor = v[dim] / obj[dim];
+	}
+
+	obj.variationIndex = index;
+	obj.variationFactor = factor;
+	obj.scaleX = obj.scaleY = (obj.scale || 1) * factor;
+
+	setCanvasScale();
+	await reRenderAllSVGs();
+	autoPositionObjects();
+	autoFitCanvas();
+	updateCanvas();
 }
 
 async function updateObjectMeasurement(objID, { measurementType, unitSystem, unit, valueType, value }) {
@@ -2567,7 +2615,9 @@ async function getObjectSVG(obj, angle = 'default') {
 		scaleX = obj.scaleX / canvasData.scale;
 		scaleY = obj.scaleY / canvasData.scale;
 	} else {
-		scaleX = scaleY = (obj.scale || 1) / canvasData.scale;
+		obj.scaleX = obj.scaleY = (obj.scale || 1) * (obj.variationFactor ?? 1);
+		scaleX = obj.scaleX / canvasData.scale;
+		scaleY = obj.scaleY / canvasData.scale;
 	}
 
 	const translation = { x: -natW / 2, y: -natH / 2 };
@@ -2950,8 +3000,9 @@ function updateLabels() {
 
 	orderedObjects.forEach(obj => {
 		const objBox = objBoxes.find(b => b.obj === obj);
+		const labelName = getLabelName(obj);
 		const dimStr = showDims ? formatDimensions(obj, unitMode, obj.angle ?? 'all') : '';
-		const nameWidth = measureTextWidth(obj.name, nameSize, canvasData.labelFont, true);
+		const nameWidth = measureTextWidth(labelName, nameSize, canvasData.labelFont, true);
 		const dimWidth = showDims ? measureTextWidth(dimStr, dimSize, canvasData.labelFont, false) : 0;
 		const w = Math.max(nameWidth, dimWidth) + 8;
 		const h = showDims ? nameSize + dimSize + 8 : nameSize + 4;
@@ -3100,13 +3151,13 @@ function updateLabels() {
 		g.style.pointerEvents = 'none';
 
 		const nameText = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+		nameText.textContent = getLabelName(obj);
 		nameText.setAttribute('text-anchor', 'middle');
 		nameText.setAttribute('dominant-baseline', 'middle');
 		nameText.setAttribute('font-size', nameSize);
 		nameText.setAttribute('font-weight', 'bold');
 		nameText.setAttribute('font-family', canvasData.labelFont);
 		nameText.setAttribute('fill', canvasData.labelObjColor ? (obj.color || canvasData.labelColor) : canvasData.labelColor);
-		nameText.textContent = obj.name;
 		nameText.setAttribute('x', cx);
 		nameText.setAttribute('y', cy + r.nameOffset);
 		g.appendChild(nameText);
@@ -3341,13 +3392,14 @@ function convertDimension(value, fromScale, unitMode, precision = 0.005, origina
 
 function formatDimensions(obj, unitMode, angle, precision = 0.005, originalUnits = false) {
 	const scale = obj.scale || 1;
-	const w = () => convertDimension(obj.width, scale, unitMode, precision, originalUnits);
-	const l = () => convertDimension(obj.length, scale, unitMode, precision, originalUnits);
-	const h = () => convertDimension(obj.height, scale, unitMode, precision, originalUnits);
+	const factor = originalUnits ? 1 : (obj.variationFactor ?? 1);
+	const w = () => convertDimension(obj.width * factor, scale, unitMode, precision, originalUnits);
+	const l = () => convertDimension(obj.length * factor, scale, unitMode, precision, originalUnits);
+	const h = () => convertDimension(obj.height * factor, scale, unitMode, precision, originalUnits);
 
 	const dimsForAngle = {
 		front:	['width', 'height'],
-		side:	 ['length', 'height'],
+		side:	['length', 'height'],
 		top:	['width', 'length'],
 		width:	['width'],
 		length: ['length'],
@@ -3421,10 +3473,15 @@ function formatMass(value, fromScale, unitMode, precision = 0.005, originalUnits
 	return `${formatted} ${best.abbr}`;
 }
 
+function getLabelName(obj) {
+	const v = obj.variations?.[obj.variationIndex];
+	return v ? `${obj.name} (${v.name})` : obj.name;
+}
+
 function modal(type = 'empty', args = {}) {
 	if (type === 'more-info') {
 		const m = newModal(true);
-		const obj = args.obj;
+		const obj = { ...args.obj, variationFactor: 1 };
 		m.innerHTML = `
 			<h1 class="modal-title">${obj.name}</h1>
 			<b class="mim-id">ID: ${obj.id}</b>
@@ -3466,6 +3523,23 @@ function modal(type = 'empty', args = {}) {
 					<div class="modal-details" style="flex-basis: 400px">
 						<h1>Notes</h1>
 						<p>${obj.notes || (obj.unsureSize ? `The size of this object is uncertain.`:'')}</p>
+					</div>
+				`:''}
+				${obj.variations ? `
+					<div class="modal-details" style="flex-basis: 400px">
+						<h1>${obj.variations.length.toLocaleString()} Additional Size Variations</h1>
+						<div class="modal-grid">
+							${obj.variations.map(v => `
+								<div class="modal-details" style="flex-basis: 300px; background: var(--wincol-darken);">
+									<h1>${v.name}</h1>
+									${v.description ? `<p>${v.description}</p>`:''}
+									${v.width ? `<span><p>Width</p><b>${convertDimension(v.width, obj.scale, unitMode, 0, true)} <i>${convertDimension(v.width, obj.scale, unitMode === 'metric' ? 'imperial':'metric')}</i></b></span>`:''}
+									${v.length ? `<span><p>Length</p><b>${convertDimension(v.length, obj.scale, unitMode, 0, true)} <i>${convertDimension(v.length, obj.scale, unitMode === 'metric' ? 'imperial':'metric')}</i></b></span>`:''}
+									${v.height ? `<span><p>Height</p><b>${convertDimension(v.height, obj.scale, unitMode, 0, true)} <i>${convertDimension(v.height, obj.scale, unitMode === 'metric' ? 'imperial':'metric')}</i></b></span>`:''}
+									${v.mass ? `<span><p>Mass</p><b>${formatMass(v.mass, obj.massScale, unitMode, 0, true)} <i>${formatMass(v.mass, obj.massScale, unitMode === 'metric' ? 'imperial':'metric')}</i></b></span>`:''}
+								</div>
+							`).join('')}
+						</div>
 					</div>
 				`:''}
 			</div>
