@@ -284,6 +284,9 @@ const surprises = [
 		{title:'A Man, the Statue of Liberty, and the Statue of Unity', ids:[4,88,237]},
 		{title:'A Man and a California Redwood', ids:[4,138]},
 		{title:'A Man, a California Redwood, and a Ponderosa Pine', ids:[4,138,90]},
+		{title:'A Man, a California Redwood, and a Douglas-fir', ids:[4,138,485]},
+		{title:'A Douglas-fir and a Man', ids:[485,4]},
+		{title:'A Man and a Red Maple', ids:[4,486]},
 		{title:'A Man and Jackfruit', ids:[4,198]},
 		// YOU vs ANIMAL
 		{title:'A Man and an Amphicoelias Fragillimus', ids:[4,392]},
@@ -294,7 +297,7 @@ const surprises = [
 		{title:'A Man and a Ostrich', ids:[4,269]},
 		{title:'A Man and a Dodo', ids:[4,313]},
 		{title:'A Man and a Wandering Albatross', ids:[4,180]},
-		{title:'A Man and a Emperor Penguin', ids:[4,184]},
+		{title:'A Man and an Emperor Penguin', ids:[4,184]},
 		{title:'A Man and a Hippopotamus', ids:[4,267]},
 		{title:'A Man and a Capybara', ids:[4,295]},
 		{title:'A Man and a Moose', ids:[4,464]},
@@ -316,6 +319,7 @@ const surprises = [
 		{title:'A Man and an Oarfish', ids:[4,466]},
 		{title:'A Man and a Tyrannosaurus Rex', ids:[4,108]},
 		{title:'A Man and a Titanoboa Cerrejonensis', ids:[4,405]},
+		{title:`A Man, a Giraffe, and Noah's Ark`, ids:[4,26,181]},
 		// ANIMAL vs ANIMAL
 		{title:'An African Bush Elephant and a Giraffe', ids:[177,26]},
 		{title:'A Hippopotamus and an African Bush Elephant', ids:[267,177]},
@@ -323,6 +327,10 @@ const surprises = [
 		{title:'A White Rhinoceros and an African Bush Elephant', ids:[443,177]},
 		{title:'A Male Lion and an African Bush Elephant', ids:[185,177]},
 		{title:'An African Bush Elephant and a Woolly Mammoth', ids:[177,178]},
+		{title:'A Moose and an African Bush Elephant', ids:[464,177]},
+		{title:'A Moose and an Ostrich', ids:[464,269]},
+		{title:'A Black Bear and a Grizzly Bear', ids:[490,182]},
+		{title:'A Grizzly Bear and a Moose', ids:[182,464]},
 		{title:'A Triceratops Horridus and a Tyrannosaurus Rex', ids:[271,108]},
 		{title:'A Great White Shark and Megalodon', ids:[29,201]},
 		{title:'A Great White Shark and an Oarfish', ids:[29,466]},
@@ -333,7 +341,7 @@ const surprises = [
 		{title:'The Titanic and a Blue Whale', ids:[84,93]},
 		{title:'A Boeing 747 and a Blue Whale', ids:[113,93]},
 		{title:'A House and Tyrannosaurus Rex', ids:[417,108]},
-		{title:`A Man, a Giraffe, and Noah's Ark`, ids:[4,26,181]},
+		{title:'A House and a Bigfin Squid', ids:[417,421]},
 		// SPACE
 		{title:'Earth and the Moon', ids:[1,49]},
 		{title:'Earth and Jupiter', ids:[1,9]},
@@ -357,10 +365,17 @@ const surprises = [
 		{title:'The Statue of Liberty and a California Redwood', ids:[88,138]},
 		{title:'Lightning and the Eiffel Tower', ids:[190,70]},
 		{title:'Lightning and the Statue of Liberty', ids:[190,88]},
+		{title:'A Spruce, a Red Maple, a Ponderosa Pine, an Oak, a Douglas-fir, and a California Redwood', ids:[60,486,90,89,485,138]},
+		{title:'A Douglas-fir, SpaceX Starship, and a California Redwood', ids:[485,450,138]},
 		{title:'The Falcon 9 and a Boeing 747', ids:[171,113]},
-		{title:'The Space Shuttle, Falcon 9, and Saturn V', ids:[73,171,72]},
+		{title:'The Space Shuttle, Falcon 9, Saturn V, and SpaceX Starship', ids:[73,171,72,450]},
+		{title:'The SpaceX Starship and the International Space Station', ids:[450,194]},
+		{title:'The SpaceX Starship and a House', ids:[450,417]},
+		{title:'The SpaceX Starship and a Toyota Corolla', ids:[450,25]},
+		{title:'The SpaceX Starship and the Space Needle', ids:[450,111]},
 		{title:'A Boeing 747 and the Bagger 293', ids:[113,103]},
 		{title:'A Boeing 747 and the International Space Station', ids:[113,194]},
+		{title:'A House and a Boeing 747', ids:[417,113]},
 		{title:'A Bell 206L4 and a Mil Mi-26', ids:[135,136]},
 		{title:'A Cessna 172 Skyhawk and a Boeing 747', ids:[74,113]},
 		{title:'The Titanic and a Cruise Ship', ids:[84,87]},
@@ -373,6 +388,8 @@ const surprises = [
 		{title:'Mt. Everest and Olympus Mons', ids:[192,104]},
 		{title:'Russia and the United States', ids:[420,230]},
 		{title:'The James Webb Space Telescope and the Hubble Space Telescope', ids:[110,451]},
+		{title:'A House and the Hubble Space Telescope', ids:[417,451]},
+		{title:'A House and the James Webb Space Telescope', ids:[417,110]},
 	];
 
 async function surpriseMe() {
@@ -560,16 +577,9 @@ function loadCatalogItemImage(div) {
 
 			const rotatedWidth = width * cos + height * sin;
 			const rotatedHeight = width * sin + height * cos;
+			const rotationScale = Math.min(containerWidth / rotatedWidth, containerHeight / rotatedHeight);
 
-			// Additional scale needed to keep rotated image inside container
-			const rotationScale = Math.min(
-				1,
-				containerWidth / rotatedWidth,
-				containerHeight / rotatedHeight
-			);
-
-			img.style.transform =
-				`rotate(${obj.rotation}deg) scale(${rotationScale})`;
+			img.style.transform = `rotate(${obj.rotation}deg) scale(${rotationScale})`;
 		});
 	};
 	imageContainer.appendChild(img);
@@ -633,6 +643,11 @@ const SYNONYM_GROUPS = [
 const EXCLUDED_PAIRS = [
 	[["plane", "planes"], ["planet", "planets", "plant", "plants"]],
 	[["planet", "planets"], ["plant", "plants"]],
+
+	[["cell", "cells"], ["cellphone", "cellphones", "cellphon", "cellpho", "cellph"]],
+	[["one", "ones"], ["phone", "phones", "smartphone", "smartphones"]],
+	
+	[["bat"], ["battery", "batteries", "bath", "bathtub", "albatross"]],
 ];
 
 const synonymWeight = opts.synonymWeight ?? 0.85;
