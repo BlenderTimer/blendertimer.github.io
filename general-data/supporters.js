@@ -140,6 +140,7 @@ const supporters = [
 	{name:`PIERRE perrenoud`,tier:0},
 	{name:`Pike-Attack`,tier:0},
 	{name:`R.-Andreas Klein`,tier:0},
+	{name:`Ralph Blanning`,tier:0},
 	{name:`Randy Hall`,tier:0},
 	{name:`Ravelle Suban London`,tier:0},
 	{name:`Richard Murray`,tier:0},
