@@ -6601,10 +6601,20 @@ const objects = [
 		width:3.3,
 		length:2.7,
 		rotation:90,
+		massScale:1,
+		mass:450,
 		top:{
 			keys:['default'],
 			artist:'Daniel Roberts (BlenderTimer)',
 		},
+		variations:[
+			{
+				name:'Largest Recorded',
+				description:'The largest recorded was a male found dead on the beach at Harlech, Gwynedd, Wales. It measured 2.91m (9ft 7in) over the carapace and weighed 961.1kg (2,120lb).',
+				length:3.6,
+				mass:961.1,
+			},
+		],
 	},
 	{
 		id:443,
@@ -6615,6 +6625,8 @@ const objects = [
 		scale:1,
 		length:3.9,
 		height:1.95,
+		massScale:1,
+		mass:2200,
 		side:{
 			keys:['on-ground','default'],
 			artist:'MasterNeonlight',
@@ -6644,6 +6656,8 @@ const objects = [
 		width:1.677,
 		length:1.68,
 		height:1.68,
+		massScale:0.001,
+		mass:45.93,
 		front:{
 			keys:['on-ground','default'],
 			artist:'Daniel Roberts (BlenderTimer)',
@@ -6673,6 +6687,8 @@ const objects = [
 		scale:0.01,
 		length:102.3,
 		height:110,
+		massScale:1,
+		mass:180,
 		side:{
 			keys:['on-ground','default'],
 			artist:'Daniel Roberts (BlenderTimer)',
@@ -6741,6 +6757,8 @@ const objects = [
 		scale:0.3048,
 		length:45,
 		height:11.3,
+		massScale:1,
+		mass:9000,
 		side:{
 			keys:['on-ground','default'],
 			artist:'Daniel Roberts (BlenderTimer)',
@@ -6755,6 +6773,8 @@ const objects = [
 		scale:0.01,
 		length:170,
 		height:99,
+		massScale:1,
+		mass:10,
 		side:{
 			keys:['on-ground','default'],
 			artist:'Daniel Roberts (BlenderTimer)',
@@ -6938,10 +6958,20 @@ const objects = [
 		scale:1,
 		length:2.74,
 		height:2.1,
+		massScale:1,
+		mass:500,
 		side:{
 			keys:['on-ground','default'],
 			artist:'Daniel Roberts (BlenderTimer)',
 		},
+		variations:[
+			{
+				name:'Largest Recorded',
+				description:'The largest recorded moose was an Alaska Moose that was shot in western Yukon in 1897. It stood 2.33m (7ft 8in) tall at the shoulder and weighed 820kg (1,808lb).',
+				height:2.6,
+				mass:820,
+			},
+		],
 	},
 	{
 		id:465,
@@ -6965,10 +6995,20 @@ const objects = [
 		scale:1,
 		length:8,
 		height:1.95,
+		massScale:1,
+		mass:160,
 		side:{
 			keys:['default'],
 			artist:'Daniel Roberts (BlenderTimer)',
 		},
+		variations:[
+			{
+				name:'Largest Estimated',
+				description:'It is estimated that Oarfish can reach up to 11m (36ft) and weigh 272kg (600lb).',
+				length:11,
+				mass:272,
+			},
+		],
 	},
 	{
 		id:467,
@@ -6978,10 +7018,20 @@ const objects = [
 		scale:0.0254,
 		length:22,
 		height:8.75,
+		massScale:0.45359237,
+		mass:3,
 		side:{
 			keys:['default'],
 			artist:'Daniel Roberts (BlenderTimer)',
 		},
+		variations:[
+			{
+				name:'Largest Recorded',
+				description:'The heaviest ever recorded was caught in 1964 in South Carolina, USA. It weighed 58lb (26kg). The longest ones were about 35ft 5in (90cm) long and were also caught in the USA.',
+				length:35.4,
+				mass:58,
+			},
+		],
 	},
 	{
 		id:468,
@@ -7217,11 +7267,19 @@ const objects = [
 		length:135,
 		height:72.5,
 		massScale:1,
-		mass:250,
+		mass:200,
 		side:{
 			keys:['on-ground','default'],
 			artist:'Daniel Roberts (BlenderTimer)',
 		},
+		variations:[
+			{
+				name:'Largest Recorded',
+				description:'The largest ever recorded was discovered around 1817 on the north-western coast of Sumatra, Indonesia. It measured 137cm (4ft 6in) long and it\'s alive weight was estimated to be about 250kg (550lb).',
+				length:137,
+				mass:250,
+			},
+		],
 	},
 	{
 		id:481,
@@ -7346,6 +7404,14 @@ const objects = [
 			keys:['on-ground','default'],
 			artist:'Daniel Roberts (BlenderTimer)',
 		},
+		variations:[
+			{
+				name:'Largest Recorded',
+				description:'The largest ever recorded was a bull shot in the Garo Hills of Assam, India, in 1924. It stood about 3.43m (11ft 3in) tall at the shoulder and weighed about 7 tons (7.7 short tons).',
+				height:3.43,
+				mass:7,
+			},
+		],
 	},
 	{
 		id:488,
@@ -7506,6 +7572,14 @@ const objects = [
 			keys:['default'],
 			artist:'Daniel Roberts (BlenderTimer)',
 		},
+		variations:[
+			{
+				name:'Largest Recorded',
+				description:'The largest accepted record is from a specimen which washed ashore in New Zealand in 2006. It was 3.3m (10ft 10in) long and weighed 2,300kg (5,100lb).',
+				length:330,
+				mass:2300,
+			},
+		],
 	},
 	{
 		id:497,
@@ -7515,14 +7589,22 @@ const objects = [
 		createdOn:'2026-11-14',
 		description:`One of the largest bony fish and one of the fastest.`,
 		scale:1,
-		length:4.5,
-		height:1.4,
+		length:2.2,
+		height:0.684,
 		massScale:1,
-		mass:750,
+		mass:250,
 		side:{
 			keys:['default'],
 			artist:'Daniel Roberts (BlenderTimer)',
 		},
+		variations:[
+			{
+				name:'Largest Recorded',
+				description:'The largest accepted record is 4.65m (15ft 3in) in length and weights can get up to 900kg (2,000lb).',
+				length:4.65,
+				mass:707,
+			},
+		],
 	},
 	{
 		id:498,
