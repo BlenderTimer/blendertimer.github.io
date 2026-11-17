@@ -562,10 +562,7 @@ function loadCatalogItemImage(div) {
 			const imageWidth = img.naturalWidth;
 			const imageHeight = img.naturalHeight;
 
-			const baseScale = Math.min(
-				containerWidth / imageWidth,
-				containerHeight / imageHeight
-			);
+			const baseScale = Math.min(containerWidth / imageWidth, containerHeight / imageHeight);
 
 			const width = imageWidth * baseScale;
 			const height = imageHeight * baseScale;
@@ -579,7 +576,7 @@ function loadCatalogItemImage(div) {
 			const rotatedHeight = width * sin + height * cos;
 			const rotationScale = Math.min(containerWidth / rotatedWidth, containerHeight / rotatedHeight);
 
-			img.style.transform = `rotate(${obj.rotation}deg) scale(${rotationScale})`;
+			img.style.transform = `rotate(${obj.rotation}deg) scale(${rotationScale*0.9})`; // 90% to avoid clipping on imprecise image dimensions
 		});
 	};
 	imageContainer.appendChild(img);
@@ -630,7 +627,7 @@ function toggleCatalogSortDropdown(e) {
 // —————————— SEARCH ——————————
 
 const opts = {};
-		const weights = Object.assign({ name: 10, category: 9, tags: 4 }, opts.weights);
+		const weights = Object.assign({ name: 10, category: 9, tags: 9 }, opts.weights);
 		const fuzzyMax = opts.fuzzyMaxDistance ?? 2;
 		const fuzzyMinLen = opts.minTokenLenForFuzzy ?? 4;
 		const minSubstringLen = opts.minSubstringLen ?? 3; // shorter token must be at least this long
