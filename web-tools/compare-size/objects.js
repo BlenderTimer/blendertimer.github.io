@@ -7655,4 +7655,20 @@ const objects = [
 			artist:'Daniel Roberts (BlenderTimer)',
 		},
 	},
+	{
+		id:500,
+		name:'Deinosuchus Hatcheri',
+		category:'animals>reptiles',
+		tags:['alligatoroid crocodilian'],
+		createdOn:'2026-11-18',
+		scale:1,
+		length:9.2,
+		height:1.63,
+		massScale:1000,
+		mass:4.7,
+		side:{
+			keys:['on-ground','default'],
+			artist:'Sandweech',
+		},
+	},
 ]
