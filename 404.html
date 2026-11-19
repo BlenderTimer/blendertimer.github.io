@@ -141,7 +141,7 @@
 			else if (url.endsWith("/shop") || url.endsWith("/store") || url.endsWith("/merch")) {newURL = "https://blendertimer.store";redirect=true}
 			else if (url.endsWith("/compare-size") || url.endsWith("/compare") || url.endsWith("/compare-size-and-shape")) {newURL = "/web-tools/compare-size";redirect=true}
 			else if (url.endsWith("/tos") || url.endsWith("/terms")) {newURL = "/terms-of-service";redirect=true}
-			else if (url.endsWith("/")) {newURL = url.substring(0, substring.length-1);redirect=true}
+			else if (url.endsWith("/")) {newURL = url.substring(0, url.length-1);redirect=true}
 			if (redirect == true) {window.location = newURL};
 		</script>
 		<div id="content-main" class="limwidth" style="opacity: 0; transition: 0.5s">
